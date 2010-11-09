@@ -27,7 +27,7 @@ public abstract class im {
       }
    }
 
-   public static im a(int var0) {
+   public static im a(int var0) throws IOException {
       try {
     	  Class<? extends im> var1 = a.get(Integer.valueOf(var0));
          return var1 == null?null:(im)var1.newInstance();
@@ -42,7 +42,7 @@ public abstract class im {
       return ((Integer)b.get(this.getClass())).intValue();
    }
 
-   public static im b(DataInputStream var0) {
+   public static im b(DataInputStream var0) throws IOException {
       int var1 = var0.read();
       if(var1 == -1) {
          return null;
@@ -57,14 +57,14 @@ public abstract class im {
       }
    }
 
-   public static void a(im var0, DataOutputStream var1) {
+   public static void a(im var0, DataOutputStream var1) throws IOException {
       var1.write(var0.b());
       var0.a(var1);
    }
 
-   public abstract void a(DataInputStream var1);
+   public abstract void a(DataInputStream var1) throws IOException;
 
-   public abstract void a(DataOutputStream var1);
+   public abstract void a(DataOutputStream var1) throws IOException;
 
    public abstract void a(ex var1);
 

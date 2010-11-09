@@ -23,7 +23,6 @@ class ah {
 
 
    public ah(ia var1, int var2, int var3) {
-      this.a = var1;
       super();
       this.b = new ArrayList();
       this.f = new short[10];
