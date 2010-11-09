@@ -19,7 +19,7 @@ import net.minecraft.server.MinecraftServer;
 public class gl {
 
    public static Logger a = Logger.getLogger("Minecraft");
-   public List b = new ArrayList();
+   public List<eo> b = new ArrayList<eo>();
    private MinecraftServer c;
    private ia d;
    private int e;
