@@ -9,9 +9,9 @@ import net.minecraft.server.MinecraftServer;
 
 public class ia {
 
-   private List a = new ArrayList();
+   private List<eo> a = new ArrayList<eo>();
    private fa b = new fa();
-   private List c = new ArrayList();
+   private List<ah> c = new ArrayList<ah>();
    private MinecraftServer d;
 
 
@@ -21,7 +21,7 @@ public class ia {
 
    public void a() {
       for(int var1 = 0; var1 < this.c.size(); ++var1) {
-         ((ah)this.c.get(var1)).a();
+         (this.c.get(var1)).a();
       }
 
       this.c.clear();
