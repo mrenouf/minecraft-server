@@ -23,9 +23,9 @@ public class gl {
    private MinecraftServer c;
    private ia d;
    private int e;
-   private Set f = new HashSet();
-   private Set g = new HashSet();
-   private Set h = new HashSet();
+   private Set<String> f = new HashSet<String>();
+   private Set<String> g = new HashSet<String>();
+   private Set<String> h = new HashSet<String>();
    private File i;
    private File j;
    private File k;
@@ -166,10 +166,10 @@ public class gl {
    private void f() {
       try {
          PrintWriter var1 = new PrintWriter(new FileWriter(this.i, false));
-         Iterator var2 = this.f.iterator();
+         Iterator<String> var2 = this.f.iterator();
 
          while(var2.hasNext()) {
-            String var3 = (String)var2.next();
+            String var3 = var2.next();
             var1.println(var3);
          }
 
@@ -210,7 +210,7 @@ public class gl {
    private void h() {
       try {
          PrintWriter var1 = new PrintWriter(new FileWriter(this.j, false));
-         Iterator var2 = this.g.iterator();
+         Iterator<String> var2 = this.g.iterator();
 
          while(var2.hasNext()) {
             String var3 = (String)var2.next();
@@ -254,7 +254,7 @@ public class gl {
    private void j() {
       try {
          PrintWriter var1 = new PrintWriter(new FileWriter(this.k, false));
-         Iterator var2 = this.h.iterator();
+         Iterator<String> var2 = this.h.iterator();
 
          while(var2.hasNext()) {
             String var3 = (String)var2.next();
