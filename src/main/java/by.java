@@ -3,12 +3,10 @@
 // Copyright:           2008-2009, Stiver
 // Home page:           http://www.reversed-java.com
 
-import net.minecraft.server.MinecraftServer;
 
 public class by extends Thread {
 
    public by(MinecraftServer var1) {
-      this.a = var1;
       super();
       this.setDaemon(true);
       this.start();

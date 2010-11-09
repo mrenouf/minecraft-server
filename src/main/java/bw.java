@@ -6,13 +6,14 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import net.minecraft.server.MinecraftServer;
 
 public class bw extends Thread {
 
-   public bw(MinecraftServer var1) {
-      this.a = var1;
+   private MinecraftServer a;
+
+public bw(MinecraftServer var1) {
       super();
+      this.a = var1;
    }
 
    public void run() {

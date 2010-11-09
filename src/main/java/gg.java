@@ -16,7 +16,6 @@ import javax.swing.JTextField;
 import javax.swing.UIManager;
 import javax.swing.border.EtchedBorder;
 import javax.swing.border.TitledBorder;
-import net.minecraft.server.MinecraftServer;
 
 public class gg extends JComponent implements et {
 

@@ -3,7 +3,7 @@
 // Copyright:           2008-2009, Stiver
 // Home page:           http://www.reversed-java.com
 
-package net.minecraft.server;
+
 
 import java.awt.GraphicsEnvironment;
 import java.io.File;
