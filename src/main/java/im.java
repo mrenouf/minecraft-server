@@ -11,12 +11,12 @@ import java.util.Map;
 
 public abstract class im {
 
-   private static Map a = new HashMap();
-   private static Map b = new HashMap();
+   private static Map<Integer, Class<? extends im>> a = new HashMap<Integer, Class<? extends im>>();
+   private static Map<Class<? extends im>, Integer> b = new HashMap<Class<? extends im>, Integer>();
    public boolean j = false;
 
 
-   static void a(int var0, Class var1) {
+   static void a(int var0, Class<? extends im> var1) {
       if(a.containsKey(Integer.valueOf(var0))) {
          throw new IllegalArgumentException("Duplicate packet id:" + var0);
       } else if(b.containsKey(var1)) {
@@ -29,7 +29,7 @@ public abstract class im {
 
    public static im a(int var0) {
       try {
-         Class var1 = (Class)a.get(Integer.valueOf(var0));
+    	  Class<? extends im> var1 = a.get(Integer.valueOf(var0));
          return var1 == null?null:(im)var1.newInstance();
       } catch (Exception var2) {
          var2.printStackTrace();
