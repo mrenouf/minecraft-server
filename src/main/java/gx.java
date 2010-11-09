@@ -5,6 +5,7 @@
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
+import java.io.IOException;
 
 public class gx extends im {
 
@@ -23,11 +24,11 @@ public class gx extends im {
       var1.a(this);
    }
 
-   public void a(DataInputStream var1) {
+   public void a(DataInputStream var1) throws IOException {
       this.g = var1.read() != 0;
    }
 
-   public void a(DataOutputStream var1) {
+   public void a(DataOutputStream var1) throws IOException {
       var1.write(this.g?1:0);
    }
 
