@@ -6,9 +6,11 @@
 
 class ij extends Thread {
 
+   private bf a;
+
    ij(bf var1) {
-      this.a = var1;
       super();
+      this.a = var1;
    }
 
    public void run() {

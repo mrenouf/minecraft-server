@@ -69,7 +69,7 @@ public class t extends ha {
    }
 
    public void a(String var1, String var2) {
-      this.a.put(var1, (new _if(var2)).m(var1));
+      this.a.put(var1, (new if_(var2)).m(var1));
    }
 
    public void a(String var1, byte[] var2) {
@@ -113,7 +113,7 @@ public class t extends ha {
    }
 
    public String h(String var1) {
-      return !this.a.containsKey(var1)?"":((_if)this.a.get(var1)).a;
+      return !this.a.containsKey(var1)?"":((if_)this.a.get(var1)).a;
    }
 
    public byte[] i(String var1) {

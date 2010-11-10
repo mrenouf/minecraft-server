@@ -160,7 +160,7 @@ public abstract class cx extends fw {
    }
 
    public void a(el var1, int var2, int var3, int var4, dv var5, ba var6) {
-      ba var7 = this.c(var1, var2, var3, var4);
+      ba var7 = this.c((io)var1, var2, var3, var4);
       var6.a += var7.a;
       var6.b += var7.b;
       var6.c += var7.c;

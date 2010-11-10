@@ -197,5 +197,28 @@ public class bf {
    public int d() {
       return this.k.size();
    }
+   
+   static java.lang.Thread f(bf var1) {
+      return var1.n;
+   }
 
+   public static boolean a(bf var1) {
+	 return var1.h;
+   }
+
+   public static boolean b(bf var1) {
+      return var1.m;
+   }
+
+   public static void c(bf var1) {
+      var1.f();
+   }
+
+   public static void d(bf var1) {
+      bf.e(var1);
+   }
+
+   public static Thread e(bf var1) {
+      return var1.o;
+   }
 }

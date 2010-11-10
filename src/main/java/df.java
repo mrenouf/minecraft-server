@@ -8,10 +8,10 @@ import java.net.Socket;
 
 class df extends Thread {
 
-   private _do b;
+   private do_ b;
 private MinecraftServer a;
 
-df(_do var1, String var2, MinecraftServer var3) {
+df(do_ var1, String var2, MinecraftServer var3) {
       super(var2);
       this.b = var1;
       this.a = var3;
@@ -20,10 +20,10 @@ df(_do var1, String var2, MinecraftServer var3) {
    public void run() {
       while(this.b.b) {
          try {
-            Socket var1 = _do.a(this.b).accept();
+            Socket var1 = do_.a(this.b).accept();
             if(var1 != null) {
-               fn var2 = new fn(this.a, var1, "Connection #" + do.b(this.b));
-               _do.a(this.b, var2);
+               fn var2 = new fn(this.a, var1, "Connection #" + do_.b(this.b));
+               do_.a(this.b, var2);
             }
          } catch (IOException var3) {
             var3.printStackTrace();

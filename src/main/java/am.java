@@ -17,12 +17,12 @@ import java.util.zip.GZIPOutputStream;
 
 public class am {
 
-   public static t a(InputStream var0) {
+   public static t a(InputStream var0) throws IOException {
       DataInputStream var1 = new DataInputStream(new GZIPInputStream(var0));
 
       t var2;
       try {
-         var2 = a(var1);
+         var2 = a((DataInput) var1);
       } finally {
          var1.close();
       }
@@ -30,23 +30,23 @@ public class am {
       return var2;
    }
 
-   public static void a(t var0, OutputStream var1) {
+   public static void a(t var0, OutputStream var1) throws IOException {
       DataOutputStream var2 = new DataOutputStream(new GZIPOutputStream(var1));
 
       try {
-         a(var0, var2);
+         a(var0, (DataOutput) var2);
       } finally {
          var2.close();
       }
 
    }
 
-   public static t a(byte[] var0) {
+   public static t a(byte[] var0) throws IOException {
       DataInputStream var1 = new DataInputStream(new GZIPInputStream(new ByteArrayInputStream(var0)));
 
       t var2;
       try {
-         var2 = a(var1);
+         var2 = a((DataInput) var1);
       } finally {
          var1.close();
       }
@@ -54,12 +54,12 @@ public class am {
       return var2;
    }
 
-   public static byte[] a(t var0) {
+   public static byte[] a(t var0) throws IOException {
       ByteArrayOutputStream var1 = new ByteArrayOutputStream();
       DataOutputStream var2 = new DataOutputStream(new GZIPOutputStream(var1));
 
       try {
-         a(var0, var2);
+         a(var0, (DataOutput) var2);
       } finally {
          var2.close();
       }

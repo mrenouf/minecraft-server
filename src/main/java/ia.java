@@ -132,4 +132,16 @@ public class ia {
    public int b() {
       return 144;
    }
+
+   public static MinecraftServer a(ia var1) {
+      return var1.d;
+   }
+
+   public static fa b(ia var1) {
+	  return var1.b;
+   }
+
+   public static List c(ia var1) {
+      return var1.c;
+   }
 }

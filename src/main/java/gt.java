@@ -11,9 +11,11 @@ import java.util.logging.LogRecord;
 
 class gt extends Formatter {
 
+   private cz a;
+
    gt(cz var1) {
+	  super();
       this.a = var1;
-      super();
    }
 
    public String format(LogRecord var1) {

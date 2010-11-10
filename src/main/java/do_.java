@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class _do {
+public class do_ {
 
    public static Logger a = Logger.getLogger("Minecraft");
    private ServerSocket d;
@@ -22,7 +22,7 @@ public class _do {
    public MinecraftServer c;
 
 
-   public _do(MinecraftServer var1, InetAddress var2, int var3) throws IOException {
+   public do_(MinecraftServer var1, InetAddress var2, int var3) throws IOException {
       this.c = var1;
       this.d = new ServerSocket(var3, 0, var2);
       this.d.setPerformancePreferences(0, 2, 1);
@@ -77,4 +77,17 @@ public class _do {
 
    }
 
+   public static void a(do_ var1, fn var2) {
+	  var1.a(var2);
+   }
+
+   public static int b(do_ var1) {
+      int val = var1.f;
+      var1.f++;
+      return val;
+   }
+
+   public static ServerSocket a(do_ var1) {
+      return var1.d;
+   }
 }

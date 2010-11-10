@@ -108,7 +108,7 @@ public class fw {
    public static final fw aX = (new dg(82, 72)).c(0.6F).a(g);
    public static final fw aY = (new cr(83, 73)).c(0.0F).a(h);
    public static final fw aZ = (new ev(84, 74)).c(2.0F).b(10.0F).a(i);
-   public static final fw ba = (new hy(85, 4)).c(2.0F).b(5.0F).a(f);
+   public static final fw ba_ = (new hy(85, 4)).c(2.0F).b(5.0F).a(f);
    public static final fw bb = (new ej(86, 102, false)).c(1.0F).a(f);
    public static final fw bc = (new jd(87, 103)).c(0.4F).a(i);
    public static final fw bd = (new aa(88, 104)).c(0.5F).a(m);

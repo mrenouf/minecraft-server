@@ -5,10 +5,10 @@
 
 
 class ik extends Thread {
-
+   final bf a;
    ik(bf var1, String var2) {
-      this.a = var1;
       super(var2);
+      this.a = var1;
    }
 
    public void run() {

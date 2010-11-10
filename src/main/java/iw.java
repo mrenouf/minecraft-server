@@ -54,4 +54,8 @@ public class iw extends JComponent {
       }
 
    }
+   
+   public static void a(iw var1) {
+	   var1.a();
+   }
 }

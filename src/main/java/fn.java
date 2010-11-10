@@ -102,4 +102,12 @@ public class fn extends ex {
       return this.g != null?this.g + " [" + this.b.b().toString() + "]":this.b.b().toString();
    }
 
+   public static String a(fn var1) {
+	  return var1.i;
+   }
+
+   public static ab a(fn var1, ab var2) {
+	 var1.h = var2;
+	 return var2;
+   }
 }

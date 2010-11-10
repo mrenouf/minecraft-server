@@ -9,10 +9,13 @@ import javax.swing.JTextField;
 
 class w implements ActionListener {
 
+   private gg b;
+   private JTextField a;
+
    w(gg var1, JTextField var2) {
+      super();
       this.b = var1;
       this.a = var2;
-      super();
    }
 
    public void actionPerformed(ActionEvent var1) {

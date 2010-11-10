@@ -20,10 +20,12 @@ class ah {
    private int k;
    private int l;
    private int m;
+   final ia a;
 
 
    public ah(ia var1, int var2, int var3) {
       super();
+      this.a = var1;
       this.b = new ArrayList<eo>();
       this.f = new short[10];
       this.g = 0;

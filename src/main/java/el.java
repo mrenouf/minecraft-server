@@ -1545,7 +1545,7 @@ public class el implements io {
          return this.m(var1, var2, var3);
       } else {
          int var5 = this.a(var1, var2, var3);
-         return var5 == 0?false:fw.n[var5].b(this, var1, var2, var3, var4);
+         return var5 == 0?false:fw.n[var5].b((io)this, var1, var2, var3, var4);
       }
    }
 

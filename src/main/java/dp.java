@@ -8,11 +8,13 @@ import java.io.InputStreamReader;
 import java.net.URL;
 
 class dp extends Thread {
+	final ab a;
+	final fn b;
 
    dp(fn var1, ab var2) {
+      super();
       this.b = var1;
       this.a = var2;
-      super();
    }
 
    public void run() {

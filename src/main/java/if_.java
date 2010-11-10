@@ -7,15 +7,15 @@ import java.io.DataInput;
 import java.io.DataOutput;
 import java.io.IOException;
 
-public class _if extends ha {
+public class if_ extends ha {
 
    public String a;
 
 
-   public _if() {
+   public if_() {
    }
 
-   public _if(String var1) {
+   public if_(String var1) {
       this.a = var1;
       if(var1 == null) {
          throw new IllegalArgumentException("Empty string not allowed");

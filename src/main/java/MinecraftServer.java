@@ -22,7 +22,7 @@ public class MinecraftServer implements et, Runnable {
 
    public static Logger a = Logger.getLogger("Minecraft");
    public static HashMap b = new HashMap();
-   public _do c;
+   public do_ c;
    public dc d;
    public es e;
    public gl f;
@@ -65,7 +65,7 @@ public class MinecraftServer implements et, Runnable {
       a.info("Starting Minecraft server on " + (var2.length() == 0?"*":var2) + ":" + var4);
 
       try {
-         this.c = new _do(this, var3, var4);
+         this.c = new do_(this, var3, var4);
       } catch (IOException var6) {
          a.warning("**** FAILED TO BIND TO PORT!");
          a.log(Level.WARNING, "The exception was: " + var6.toString());
@@ -452,6 +452,10 @@ public class MinecraftServer implements et, Runnable {
       this.n.add(var1);
    }
 
+   static boolean a(MinecraftServer var1) {
+      return var1.m;
+   }   
+   
    public static void main(String[] var0) {
       try {
          MinecraftServer var1 = new MinecraftServer();

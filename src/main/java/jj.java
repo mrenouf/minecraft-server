@@ -124,12 +124,12 @@ public class jj implements br {
 
    private void b(jn var1) {
       if(this.d != null) {
-         try {
+//         try {
             var1.s = this.g.e;
             this.d.a(this.g, var1);
-         } catch (IOException var3) {
-            var3.printStackTrace();
-         }
+//         } catch (IOException var3) {
+//            var3.printStackTrace();
+//         }
 
       }
    }

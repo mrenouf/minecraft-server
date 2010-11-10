@@ -44,5 +44,8 @@ public class ci implements Comparable {
    public int a(ci var1) {
       return this.e < var1.e?-1:(this.e > var1.e?1:(this.g < var1.g?-1:(this.g > var1.g?1:0)));
    }
-
+   
+   public int compareTo(Object var1) {
+      return ((ci) var1).a(this);
+   }
 }

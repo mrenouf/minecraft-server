@@ -121,12 +121,12 @@ public class iu implements br {
 
    private void b(jn var1) {
       if(this.e != null) {
-         try {
+//         try {
             var1.s = this.g.e;
             this.e.a(this.g, var1);
-         } catch (IOException var3) {
-            var3.printStackTrace();
-         }
+//         } catch (IOException var3) {
+//            var3.printStackTrace();
+//         }
 
       }
    }

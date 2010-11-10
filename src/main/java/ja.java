@@ -26,11 +26,11 @@ public class ja extends im {
       this.e = new t();
       var4.b(this.e);
 
-//      try {
+      try {
          this.d = am.a(this.e);
-//      } catch (IOException var6) {
-//         var6.printStackTrace();
-//      }
+      } catch (IOException var6) {
+         var6.printStackTrace();
+      }
 
    }
 

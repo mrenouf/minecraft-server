@@ -91,4 +91,7 @@ public class gg extends JComponent implements et {
       return "CONSOLE";
    }
 
+   public static MinecraftServer a(gg var1) {
+      return var1.b;
+   }
 }

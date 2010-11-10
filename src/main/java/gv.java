@@ -8,6 +8,7 @@ import java.util.List;
 
 class gv {
 
+   private ay a;
    private el b;
    private int c;
    private int d;
@@ -17,8 +18,8 @@ class gv {
 
 
    public gv(ay var1, el var2, int var3, int var4, int var5) {
+	  super();
       this.a = var1;
-      super();
       this.g = new ArrayList();
       this.b = var2;
       this.c = var3;
@@ -320,5 +321,9 @@ class gv {
          }
       }
 
+   }
+
+   public static int a(gv var1) {
+	  return var1.c();
    }
 }

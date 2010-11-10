@@ -56,7 +56,7 @@ public class jm extends fw {
             var1.d(var2, var3, var4, 0);
          }
 
-      } else if(!var6 && !this.b(var1, var2, var3 - 1, var4) && var7 == 15 && var5.nextInt(4) == 0) {
+      } else if(!var6 && !this.b((io)var1, var2, var3 - 1, var4) && var7 == 15 && var5.nextInt(4) == 0) {
          var1.d(var2, var3, var4, 0);
       } else {
          if(var7 % 2 == 0 && var7 > 2) {
@@ -107,7 +107,7 @@ public class jm extends fw {
    }
 
    private boolean g(el var1, int var2, int var3, int var4) {
-      return this.b(var1, var2 + 1, var3, var4)?true:(this.b(var1, var2 - 1, var3, var4)?true:(this.b(var1, var2, var3 - 1, var4)?true:(this.b(var1, var2, var3 + 1, var4)?true:(this.b(var1, var2, var3, var4 - 1)?true:this.b(var1, var2, var3, var4 + 1)))));
+      return this.b((io)var1, var2 + 1, var3, var4)?true:(this.b((io)var1, var2 - 1, var3, var4)?true:(this.b((io)var1, var2, var3 - 1, var4)?true:(this.b((io)var1, var2, var3 + 1, var4)?true:(this.b((io)var1, var2, var3, var4 - 1)?true:this.b((io)var1, var2, var3, var4 + 1)))));
    }
 
    private int h(el var1, int var2, int var3, int var4) {

@@ -127,4 +127,8 @@ public class fa {
       }
 
    }
+
+   public static int d(long var1) {
+      return e(var1);
+   }
 }

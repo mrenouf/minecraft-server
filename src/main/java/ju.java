@@ -7,10 +7,10 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 class ju implements ActionListener {
-
+   final iw a;
    ju(iw var1) {
-      this.a = var1;
       super();
+      this.a = var1;
    }
 
    public void actionPerformed(ActionEvent var1) {
