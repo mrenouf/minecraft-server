@@ -3,25 +3,26 @@
 // Copyright:           2008-2009, Stiver
 // Home page:           http://www.reversed-java.com
 
+import java.io.IOException;
 import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class do {
+public class _do {
 
    public static Logger a = Logger.getLogger("Minecraft");
    private ServerSocket d;
    private Thread e;
    public volatile boolean b = false;
    private int f = 0;
-   private ArrayList g = new ArrayList();
-   private ArrayList h = new ArrayList();
+   private ArrayList<fn> g = new ArrayList<fn>();
+   private ArrayList<jc> h = new ArrayList<jc>();
    public MinecraftServer c;
 
 
-   public do(MinecraftServer var1, InetAddress var2, int var3) {
+   public _do(MinecraftServer var1, InetAddress var2, int var3) throws IOException {
       this.c = var1;
       this.d = new ServerSocket(var3, 0, var2);
       this.d.setPerformancePreferences(0, 2, 1);

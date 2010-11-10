@@ -26,15 +26,15 @@ public class ja extends im {
       this.e = new t();
       var4.b(this.e);
 
-      try {
+//      try {
          this.d = am.a(this.e);
-      } catch (IOException var6) {
-         var6.printStackTrace();
-      }
+//      } catch (IOException var6) {
+//         var6.printStackTrace();
+//      }
 
    }
 
-   public void a(DataInputStream var1) {
+   public void a(DataInputStream var1) throws IOException {
       this.a = var1.readInt();
       this.b = var1.readShort();
       this.c = var1.readInt();
@@ -44,7 +44,7 @@ public class ja extends im {
       this.e = am.a(this.d);
    }
 
-   public void a(DataOutputStream var1) {
+   public void a(DataOutputStream var1) throws IOException {
       var1.writeInt(this.a);
       var1.writeShort(this.b);
       var1.writeInt(this.c);

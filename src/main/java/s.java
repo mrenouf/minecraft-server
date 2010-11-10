@@ -5,6 +5,7 @@
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
+import java.io.IOException;
 
 public class s extends im {
 
@@ -25,7 +26,7 @@ public class s extends im {
 
    }
 
-   public void a(DataInputStream var1) {
+   public void a(DataInputStream var1) throws IOException {
       this.a = var1.readInt();
       short var2 = var1.readShort();
       this.b = new hh[var2];
@@ -41,7 +42,7 @@ public class s extends im {
 
    }
 
-   public void a(DataOutputStream var1) {
+   public void a(DataOutputStream var1) throws IOException {
       var1.writeInt(this.a);
       var1.writeShort(this.b.length);
 

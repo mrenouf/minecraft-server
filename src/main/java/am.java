@@ -67,7 +67,7 @@ public class am {
       return var1.toByteArray();
    }
 
-   public static t a(DataInput var0) {
+   public static t a(DataInput var0) throws IOException {
       ha var1 = ha.b(var0);
       if(var1 instanceof t) {
          return (t)var1;
@@ -76,7 +76,7 @@ public class am {
       }
    }
 
-   public static void a(t var0, DataOutput var1) {
+   public static void a(t var0, DataOutput var1) throws IOException {
       ha.a(var0, var1);
    }
 }

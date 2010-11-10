@@ -5,8 +5,10 @@
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
+import java.io.IOException;
 import java.net.Socket;
 import java.net.SocketAddress;
+import java.net.SocketException;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
@@ -35,7 +37,7 @@ public class bf {
    private int t = 0;
 
 
-   public bf(Socket var1, String var2, ex var3) {
+   public bf(Socket var1, String var2, ex var3) throws IOException {
       this.e = var1;
       this.l = var3;
       var1.setTrafficClass(24);

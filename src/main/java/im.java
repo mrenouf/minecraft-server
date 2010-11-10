@@ -61,9 +61,9 @@ public abstract class im {
       var1.write(var0.b());
       var0.a(var1);
    }
-
+   /** read */
    public abstract void a(DataInputStream var1) throws IOException;
-
+   /** write */
    public abstract void a(DataOutputStream var1) throws IOException;
 
    public abstract void a(ex var1);

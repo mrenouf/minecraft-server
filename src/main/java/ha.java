@@ -5,15 +5,16 @@
 
 import java.io.DataInput;
 import java.io.DataOutput;
+import java.io.IOException;
 
 public abstract class ha {
 
    private String a = null;
 
-
-   abstract void a(DataOutput var1);
-
-   abstract void a(DataInput var1);
+   /** write */
+   abstract void a(DataOutput var1) throws IOException;
+   /** read */
+   abstract void a(DataInput var1) throws IOException;
 
    public abstract byte a();
 
@@ -26,7 +27,7 @@ public abstract class ha {
       return this;
    }
 
-   public static ha b(DataInput var0) {
+   public static ha b(DataInput var0) throws IOException {
       byte var1 = var0.readByte();
       if(var1 == 0) {
          return new ji();
@@ -38,7 +39,7 @@ public abstract class ha {
       }
    }
 
-   public static void a(ha var0, DataOutput var1) {
+   public static void a(ha var0, DataOutput var1) throws IOException {
       var1.writeByte(var0.a());
       if(var0.a() != 0) {
          var1.writeUTF(var0.c());
@@ -65,7 +66,7 @@ public abstract class ha {
       case 7:
          return new gh();
       case 8:
-         return new if();
+         return new _if();
       case 9:
          return new dy();
       case 10:

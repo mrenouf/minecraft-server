@@ -8,7 +8,7 @@ import java.util.List;
 
 class ah {
 
-   private List b;
+   private List<eo> b;
    private int c;
    private int d;
    private ka e;
@@ -24,7 +24,7 @@ class ah {
 
    public ah(ia var1, int var2, int var3) {
       super();
-      this.b = new ArrayList();
+      this.b = new ArrayList<eo>();
       this.f = new short[10];
       this.g = 0;
       this.c = var2;

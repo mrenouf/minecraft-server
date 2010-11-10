@@ -5,6 +5,7 @@
 
 import java.io.DataInput;
 import java.io.DataOutput;
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
@@ -14,7 +15,7 @@ public class t extends ha {
    private Map a = new HashMap();
 
 
-   void a(DataOutput var1) {
+   void a(DataOutput var1) throws IOException {
       Iterator var2 = this.a.values().iterator();
 
       while(var2.hasNext()) {
@@ -25,7 +26,7 @@ public class t extends ha {
       var1.writeByte(0);
    }
 
-   void a(DataInput var1) {
+   void a(DataInput var1) throws IOException {
       this.a.clear();
 
       ha var2;
@@ -68,7 +69,7 @@ public class t extends ha {
    }
 
    public void a(String var1, String var2) {
-      this.a.put(var1, (new if(var2)).m(var1));
+      this.a.put(var1, (new _if(var2)).m(var1));
    }
 
    public void a(String var1, byte[] var2) {
@@ -112,7 +113,7 @@ public class t extends ha {
    }
 
    public String h(String var1) {
-      return !this.a.containsKey(var1)?"":((if)this.a.get(var1)).a;
+      return !this.a.containsKey(var1)?"":((_if)this.a.get(var1)).a;
    }
 
    public byte[] i(String var1) {

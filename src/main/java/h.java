@@ -5,7 +5,6 @@
 
 import java.util.Vector;
 import javax.swing.JList;
-import net.minecraft.server.MinecraftServer;
 
 public class h extends JList implements ei {
 

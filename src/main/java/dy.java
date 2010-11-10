@@ -5,6 +5,7 @@
 
 import java.io.DataInput;
 import java.io.DataOutput;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,7 +15,7 @@ public class dy extends ha {
    private byte b;
 
 
-   void a(DataOutput var1) {
+   void a(DataOutput var1) throws IOException {
       if(this.a.size() > 0) {
          this.b = ((ha)this.a.get(0)).a();
       } else {
@@ -30,7 +31,7 @@ public class dy extends ha {
 
    }
 
-   void a(DataInput var1) {
+   void a(DataInput var1) throws IOException {
       this.b = var1.readByte();
       int var2 = var1.readInt();
       this.a = new ArrayList();

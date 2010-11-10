@@ -3,10 +3,11 @@
 // Copyright:           2008-2009, Stiver
 // Home page:           http://www.reversed-java.com
 
+import java.io.IOException;
 import java.net.Socket;
 import java.util.Random;
 import java.util.logging.Logger;
-import net.minecraft.server.MinecraftServer;
+
 
 public class fn extends ex {
 
@@ -21,7 +22,7 @@ public class fn extends ex {
    private String i = "";
 
 
-   public fn(MinecraftServer var1, Socket var2, String var3) {
+   public fn(MinecraftServer var1, Socket var2, String var3) throws IOException {
       this.e = var1;
       this.b = new bf(var2, var3, this);
    }

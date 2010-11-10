@@ -40,7 +40,7 @@ public class jt extends dv {
    public float aX;
    protected boolean aY = false;
    public int aZ = -1;
-   public float ba = (float)(Math.random() * 0.8999999761581421D + 0.10000000149011612D);
+   public float _ba = (float)(Math.random() * 0.8999999761581421D + 0.10000000149011612D);
    public float bb;
    public float bc;
    public float bd;

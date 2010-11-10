@@ -5,6 +5,7 @@
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
+import java.io.IOException;
 
 public class bn extends fo {
 
@@ -22,7 +23,7 @@ public class bn extends fo {
       this.g = true;
    }
 
-   public void a(DataInputStream var1) {
+   public void a(DataInputStream var1) throws IOException {
       super.a(var1);
       this.b = var1.readByte();
       this.c = var1.readByte();
@@ -31,7 +32,7 @@ public class bn extends fo {
       this.f = var1.readByte();
    }
 
-   public void a(DataOutputStream var1) {
+   public void a(DataOutputStream var1) throws IOException {
       super.a(var1);
       var1.writeByte(this.b);
       var1.writeByte(this.c);

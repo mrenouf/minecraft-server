@@ -5,6 +5,7 @@
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
+import java.io.IOException;
 
 public class k extends im {
 
@@ -34,7 +35,7 @@ public class k extends im {
       this.g = (byte)((int)(var1.u * 128.0D));
    }
 
-   public void a(DataInputStream var1) {
+   public void a(DataInputStream var1) throws IOException {
       this.a = var1.readInt();
       this.h = var1.readShort();
       this.i = var1.readByte();
@@ -46,7 +47,7 @@ public class k extends im {
       this.g = var1.readByte();
    }
 
-   public void a(DataOutputStream var1) {
+   public void a(DataOutputStream var1) throws IOException {
       var1.writeInt(this.a);
       var1.writeShort(this.h);
       var1.writeByte(this.i);

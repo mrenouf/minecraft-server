@@ -9,6 +9,7 @@ import java.awt.GraphicsEnvironment;
 import java.io.File;
 import java.io.IOException;
 import java.net.InetAddress;
+import java.net.UnknownHostException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -21,7 +22,7 @@ public class MinecraftServer implements et, Runnable {
 
    public static Logger a = Logger.getLogger("Minecraft");
    public static HashMap b = new HashMap();
-   public do c;
+   public _do c;
    public dc d;
    public es e;
    public gl f;
@@ -40,7 +41,7 @@ public class MinecraftServer implements et, Runnable {
       new by(this);
    }
 
-   private boolean d() {
+   private boolean d() throws UnknownHostException {
       bw var1 = new bw(this);
       var1.setDaemon(true);
       var1.start();
@@ -64,7 +65,7 @@ public class MinecraftServer implements et, Runnable {
       a.info("Starting Minecraft server on " + (var2.length() == 0?"*":var2) + ":" + var4);
 
       try {
-         this.c = new do(this, var3, var4);
+         this.c = new _do(this, var3, var4);
       } catch (IOException var6) {
          a.warning("**** FAILED TO BIND TO PORT!");
          a.log(Level.WARNING, "The exception was: " + var6.toString());

@@ -7,7 +7,6 @@ import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
-import net.minecraft.server.MinecraftServer;
 
 public class eo extends ft {
 
@@ -16,8 +15,8 @@ public class eo extends ft {
    public jo c;
    public double d;
    public double e;
-   public List f = new LinkedList();
-   public Set ai = new HashSet();
+   public List<ka> f = new LinkedList<ka>();
+   public Set<ka> ai = new HashSet<ka>();
    public double aj;
 
 
