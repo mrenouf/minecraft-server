@@ -1,0 +1,19 @@
+This is a decompilation of the Minecraft Server, for experimental 
+purposes only.
+
+I love Minecraft and I love Java so it's only natural for me to want to
+peek under the hood and see how it works. There is also a large 
+community interested in modding.
+
+I felt the current situation involving partially decompiled and heavily 
+obfuscated code was far less than ideal. Many of the mods have severe 
+bugs that I could help resolve, if the full source for the server was
+visible.
+
+This is an attempt to rectify the situation. As of now I have fully
+reversed the class files into compilable java source. The server 
+starts and runs, however there are still issues so don't expect this 
+to work as-is. I could use some help tracking down mistakes I may have 
+made.
+
+tweakt
