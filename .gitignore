@@ -1,0 +1,8 @@
+target/
+world/
+server.log
+server.log.lck
+ops.txt
+banned-ips.txt
+banned-players.txt
+server.properties
