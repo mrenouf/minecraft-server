@@ -97,7 +97,7 @@ public class gp {
 
    }
 
-   public void a(dv var1, im var2) {
+   public void a(dv var1, BaseObject var2) {
       gq var3 = (gq)this.b.a(var1.g);
       if(var3 != null) {
          var3.a(var2);

@@ -9,30 +9,30 @@ import java.util.Random;
 import java.util.logging.Logger;
 
 
-public class fn extends ex {
+public class PendingConnection extends Connection {
 
    public static Logger a = Logger.getLogger("Minecraft");
    private static Random d = new Random();
    public bf b;
-   public boolean c = false;
+   public boolean disconnected = false; // disconnected
    private MinecraftServer e;
    private int f = 0;
-   private String g = null;
+   private String clientId = null;
    private ab h = null;
-   private String i = "";
+   private String serverId = "";
 
 
-   public fn(MinecraftServer var1, Socket var2, String var3) throws IOException {
-      this.e = var1;
-      this.b = new bf(var2, var3, this);
+   public PendingConnection(MinecraftServer server, Socket socket, String description) throws IOException {
+      this.e = server;
+      this.b = new bf(socket, description, this);
    }
 
-   public void a() {
+   public void checkStatus() {
       if(this.h != null) {
-         this.b(this.h);
+         this.checkLogin(this.h);
          this.h = null;
       }
-
+      
       if(this.f++ == 100) {
          this.b("Took too long to log in");
       } else {
@@ -42,16 +42,16 @@ public class fn extends ex {
    }
 
    public void b(String var1) {
-      a.info("Disconnecting " + this.b() + ": " + var1);
+      a.info("Disconnecting " + this.toString() + ": " + var1);
       this.b.a(new jp(var1));
       this.b.c();
-      this.c = true;
+      this.disconnected = true;
    }
 
    public void a(e var1) {
       if(this.e.l) {
-         this.i = Long.toHexString(d.nextLong());
-         this.b.a(new e(this.i));
+         this.serverId = Long.toHexString(d.nextLong());
+         this.b.a(new e(this.serverId));
       } else {
          this.b.a(new e("-"));
       }
@@ -59,12 +59,12 @@ public class fn extends ex {
    }
 
    public void a(ab var1) {
-      this.g = var1.b;
+      this.clientId = var1.b;
       if(var1.a != 3) {
          this.b("Outdated client!");
       } else {
          if(!this.e.l) {
-            this.b(var1);
+            this.checkLogin(var1);
          } else {
             (new dp(this, var1)).start();
          }
@@ -72,11 +72,11 @@ public class fn extends ex {
       }
    }
 
-   public void b(ab var1) {
+   public void checkLogin(ab var1) {
       eo var2 = this.e.f.a(this, var1.b, var1.c);
       if(var2 != null) {
-         a.info(this.b() + " logged in");
-         jc var3 = new jc(this.e, this.b, var2);
+         a.info(this.toString() + " logged in");
+         ActiveConnection var3 = new ActiveConnection(this.e, this.b, var2);
          var3.b(new ab("", "", 0, this.e.e.u, (byte)this.e.e.q.e));
          var3.b(new cm(this.e.e.m, this.e.e.n, this.e.e.o));
          this.e.f.a(var2);
@@ -86,27 +86,27 @@ public class fn extends ex {
          var3.b(new gd(this.e.e.e));
       }
 
-      this.c = true;
+      this.disconnected = true;
    }
 
    public void a(String var1) {
-      a.info(this.b() + " lost connection");
-      this.c = true;
+      a.info(this.toString() + " lost connection");
+      this.disconnected = true;
    }
 
-   public void a(im var1) {
+   public void a(BaseObject var1) {
       this.b("Protocol error");
    }
 
-   public String b() {
-      return this.g != null?this.g + " [" + this.b.b().toString() + "]":this.b.b().toString();
+   public String toString() {
+      return this.clientId != null ? this.clientId + " [" + this.b.getRemoteSocketAddress().toString() + "]" : this.b.getRemoteSocketAddress().toString();
    }
 
-   public static String a(fn var1) {
-	  return var1.i;
+   public static String getServerId(PendingConnection conn) {
+	  return conn.serverId;
    }
 
-   public static ab a(fn var1, ab var2) {
+   public static ab setServerAuthSomething(PendingConnection var1, ab var2) {
 	 var1.h = var2;
 	 return var2;
    }

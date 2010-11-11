@@ -115,7 +115,7 @@ class ah {
 
    }
 
-   public void a(im var1) {
+   public void a(BaseObject var1) {
       for(int var2 = 0; var2 < this.b.size(); ++var2) {
          eo var3 = (eo)this.b.get(var2);
          if(var3.ai.contains(this.e)) {

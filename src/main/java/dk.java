@@ -10,7 +10,7 @@ import java.util.zip.DataFormatException;
 import java.util.zip.Deflater;
 import java.util.zip.Inflater;
 
-public class dk extends im {
+public class dk extends BaseObject {
 
    public int a;
    public int b;
@@ -46,7 +46,7 @@ public class dk extends im {
 
    }
 
-   public void a(DataInputStream var1) throws IOException {
+   public void readObject(DataInputStream var1) throws IOException {
       this.a = var1.readInt();
       this.b = var1.readShort();
       this.c = var1.readInt();
@@ -70,7 +70,7 @@ public class dk extends im {
 
    }
 
-   public void a(DataOutputStream var1) throws IOException {
+   public void writeObject(DataOutputStream var1) throws IOException {
       var1.writeInt(this.a);
       var1.writeShort(this.b);
       var1.writeInt(this.c);
@@ -81,7 +81,7 @@ public class dk extends im {
       var1.write(this.g, 0, this.h);
    }
 
-   public void a(ex var1) {
+   public void a(Connection var1) {
       var1.a(this);
    }
 

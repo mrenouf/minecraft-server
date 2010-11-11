@@ -84,7 +84,7 @@ public class gq {
          }
 
          if(var12 != null) {
-            this.a((im)var12);
+            this.a((BaseObject)var12);
          }
 
          this.d = var2;
@@ -96,7 +96,7 @@ public class gq {
 
    }
 
-   public void a(im var1) {
+   public void a(BaseObject var1) {
       Iterator var2 = this.k.iterator();
 
       while(var2.hasNext()) {
@@ -134,7 +134,7 @@ public class gq {
 
    }
 
-   private im b() {
+   private BaseObject b() {
       if(this.a instanceof gf) {
          gf var3 = (gf)this.a;
          k var2 = new k(var3);

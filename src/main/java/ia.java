@@ -37,7 +37,7 @@ public class ia {
       return var6;
    }
 
-   public void a(im var1, int var2, int var3, int var4) {
+   public void a(BaseObject var1, int var2, int var3, int var4) {
       int var5 = var2 >> 4;
       int var6 = var4 >> 4;
       ah var7 = this.a(var5, var6, false);

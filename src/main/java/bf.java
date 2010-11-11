@@ -23,10 +23,10 @@ public class bf {
    private DataInputStream f;
    private DataOutputStream g;
    private boolean h = true;
-   private List i = Collections.synchronizedList(new LinkedList());
-   private List j = Collections.synchronizedList(new LinkedList());
-   private List k = Collections.synchronizedList(new LinkedList());
-   private ex l;
+   private List<BaseObject> i = Collections.synchronizedList(new LinkedList<BaseObject>());
+   private List<BaseObject> j = Collections.synchronizedList(new LinkedList<BaseObject>());
+   private List<BaseObject> k = Collections.synchronizedList(new LinkedList<BaseObject>());
+   private Connection connection;
    private boolean m = false;
    private Thread n;
    private Thread o;
@@ -37,23 +37,23 @@ public class bf {
    private int t = 0;
 
 
-   public bf(Socket var1, String var2, ex var3) throws IOException {
+   public bf(Socket var1, String description, Connection var3) throws IOException {
       this.e = var1;
-      this.l = var3;
+      this.connection = var3;
       var1.setTrafficClass(24);
       this.f = new DataInputStream(var1.getInputStream());
       this.g = new DataOutputStream(var1.getOutputStream());
-      this.o = new ik(this, var2 + " read thread");
-      this.n = new il(this, var2 + " write thread");
+      this.o = new ik(this, description + " read thread");
+      this.n = new il(this, description + " write thread");
       this.o.start();
       this.n.start();
    }
 
-   public void a(ex var1) {
-      this.l = var1;
+   public void setConnection(Connection connection) {
+      this.connection = connection;
    }
 
-   public void a(im var1) {
+   public void a(BaseObject var1) {
       if(!this.m) {
          Object var2 = this.d;
          synchronized(this.d) {
@@ -71,28 +71,28 @@ public class bf {
    private void e() {
       try {
          boolean var1 = true;
-         im var2;
+         BaseObject var2;
          Object var3;
          if(!this.j.isEmpty()) {
             var1 = false;
             var3 = this.d;
             synchronized(this.d) {
-               var2 = (im)this.j.remove(0);
+               var2 = (BaseObject)this.j.remove(0);
                this.s -= var2.a() + 1;
             }
 
-            im.a(var2, this.g);
+            BaseObject.write(var2, this.g);
          }
 
          if((var1 || this.t-- <= 0) && !this.k.isEmpty()) {
             var1 = false;
             var3 = this.d;
             synchronized(this.d) {
-               var2 = (im)this.k.remove(0);
+               var2 = (BaseObject)this.k.remove(0);
                this.s -= var2.a() + 1;
             }
 
-            im.a(var2, this.g);
+            BaseObject.write(var2, this.g);
             this.t = 50;
          }
 
@@ -111,7 +111,7 @@ public class bf {
 
    private void f() {
       try {
-         im var1 = im.b(this.f);
+         BaseObject var1 = BaseObject.read(this.f);
          if(var1 != null) {
             this.i.add(var1);
          } else {
@@ -174,17 +174,17 @@ public class bf {
       int var1 = 100;
 
       while(!this.i.isEmpty() && var1-- >= 0) {
-         im var2 = (im)this.i.remove(0);
-         var2.a(this.l);
+         BaseObject baseObj = (BaseObject)this.i.remove(0);
+         baseObj.a(this.connection);
       }
 
       if(this.p && this.i.isEmpty()) {
-         this.l.a(this.q);
+         this.connection.a(this.q);
       }
 
    }
 
-   public SocketAddress b() {
+   public SocketAddress getRemoteSocketAddress() {
       return this.e.getRemoteSocketAddress();
    }
 

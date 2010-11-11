@@ -6,15 +6,15 @@
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 
-public class kc extends im {
+public class kc extends BaseObject {
 
-   public void a(ex var1) {
+   public void a(Connection var1) {
    }
 
-   public void a(DataInputStream var1) {
+   public void readObject(DataInputStream var1) {
    }
 
-   public void a(DataOutputStream var1) {
+   public void writeObject(DataOutputStream var1) {
    }
 
    public int a() {

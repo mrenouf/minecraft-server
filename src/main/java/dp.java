@@ -9,26 +9,26 @@ import java.net.URL;
 
 class dp extends Thread {
 	final ab a;
-	final fn b;
+	final PendingConnection connection;
 
-   dp(fn var1, ab var2) {
+   dp(PendingConnection var1, ab var2) {
       super();
-      this.b = var1;
+      this.connection = var1;
       this.a = var2;
    }
 
    public void run() {
       try {
-         String var1 = fn.a(this.b);
-         URL var2 = new URL("http://www.minecraft.net/game/checkserver.jsp?user=" + this.a.b + "&serverId=" + var1);
+         String serverId = PendingConnection.getServerId(this.connection);
+         URL var2 = new URL("http://www.minecraft.net/game/checkserver.jsp?user=" + this.a.b + "&serverId=" + serverId);
          BufferedReader var3 = new BufferedReader(new InputStreamReader(var2.openStream()));
-         String var4 = var3.readLine();
+         String reply = var3.readLine();
          var3.close();
-         System.out.println("THE REPLY IS " + var4);
-         if(var4.equals("YES")) {
-            fn.a(this.b, this.a);
+         System.out.println("THE REPLY IS " + reply);
+         if(reply.equals("YES")) {
+            PendingConnection.setServerAuthSomething(this.connection, this.a);
          } else {
-            this.b.b("Failed to verify username!");
+            this.connection.b("Failed to verify username!");
          }
       } catch (Exception var5) {
          var5.printStackTrace();

@@ -10,7 +10,7 @@ import java.util.Set;
 
 public class eo extends ft {
 
-   public jc a;
+   public ActiveConnection a;
    public MinecraftServer b;
    public jo c;
    public double d;

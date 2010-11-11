@@ -4,12 +4,12 @@
 // Home page:           http://www.reversed-java.com
 
 
-public class ex {
+public class Connection {
 
    public void a(dk var1) {
    }
 
-   public void a(im var1) {
+   public void a(BaseObject var1) {
    }
 
    public void a(String var1) {
@@ -20,7 +20,7 @@ public class ex {
    }
 
    public void a(ab var1) {
-      this.a(var1);
+      this.a((BaseObject)var1);
    }
 
    public void a(gx var1) {

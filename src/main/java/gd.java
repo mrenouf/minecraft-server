@@ -7,7 +7,7 @@ import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
 
-public class gd extends im {
+public class gd extends BaseObject {
 
    public long a;
 
@@ -19,15 +19,15 @@ public class gd extends im {
       this.a = var1;
    }
 
-   public void a(DataInputStream var1) throws IOException {
+   public void readObject(DataInputStream var1) throws IOException {
       this.a = var1.readLong();
    }
 
-   public void a(DataOutputStream var1) throws IOException {
+   public void writeObject(DataOutputStream var1) throws IOException {
       var1.writeLong(this.a);
    }
 
-   public void a(ex var1) {
+   public void a(Connection var1) {
       var1.a(this);
    }
 

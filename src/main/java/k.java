@@ -7,7 +7,7 @@ import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
 
-public class k extends im {
+public class k extends BaseObject {
 
    public int a;
    public int b;
@@ -35,7 +35,7 @@ public class k extends im {
       this.g = (byte)((int)(var1.u * 128.0D));
    }
 
-   public void a(DataInputStream var1) throws IOException {
+   public void readObject(DataInputStream var1) throws IOException {
       this.a = var1.readInt();
       this.h = var1.readShort();
       this.i = var1.readByte();
@@ -47,7 +47,7 @@ public class k extends im {
       this.g = var1.readByte();
    }
 
-   public void a(DataOutputStream var1) throws IOException {
+   public void writeObject(DataOutputStream var1) throws IOException {
       var1.writeInt(this.a);
       var1.writeShort(this.h);
       var1.writeByte(this.i);
@@ -59,7 +59,7 @@ public class k extends im {
       var1.writeByte(this.g);
    }
 
-   public void a(ex var1) {
+   public void a(Connection var1) {
       var1.a(this);
    }
 

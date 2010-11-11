@@ -14,11 +14,11 @@ public class do_ {
 
    public static Logger a = Logger.getLogger("Minecraft");
    private ServerSocket d;
-   private Thread e;
+   private ClientListenThread e;
    public volatile boolean b = false;
    private int f = 0;
-   private ArrayList<fn> g = new ArrayList<fn>();
-   private ArrayList<jc> h = new ArrayList<jc>();
+   private ArrayList<PendingConnection> pendingConnections = new ArrayList<PendingConnection>(); // pending connections
+   private ArrayList<ActiveConnection> h = new ArrayList<ActiveConnection>();
    public MinecraftServer c;
 
 
@@ -27,41 +27,41 @@ public class do_ {
       this.d = new ServerSocket(var3, 0, var2);
       this.d.setPerformancePreferences(0, 2, 1);
       this.b = true;
-      this.e = new df(this, "Listen thread", var1);
+      this.e = new ClientListenThread(this, "Listen thread", var1);
       this.e.start();
    }
 
-   public void a(jc var1) {
+   public void a(ActiveConnection var1) {
       this.h.add(var1);
    }
 
-   private void a(fn var1) {
-      if(var1 == null) {
+   private void a(PendingConnection pendingConnection) {
+      if(pendingConnection == null) {
          throw new IllegalArgumentException("Got null pendingconnection!");
       } else {
-         this.g.add(var1);
+         this.pendingConnections.add(pendingConnection);
       }
    }
 
    public void a() {
       int var1;
-      for(var1 = 0; var1 < this.g.size(); ++var1) {
-         fn var2 = (fn)this.g.get(var1);
+      for(var1 = 0; var1 < this.pendingConnections.size(); ++var1) {
+         PendingConnection connection = this.pendingConnections.get(var1);
 
          try {
-            var2.a();
+            connection.checkStatus();
          } catch (Exception var5) {
-            var2.b("Internal server error");
+            connection.b("Internal server error");
             a.log(Level.WARNING, "Failed to handle packet: " + var5, var5);
          }
 
-         if(var2.c) {
-            this.g.remove(var1--);
+         if(connection.disconnected) {
+            this.pendingConnections.remove(var1--);
          }
       }
 
       for(var1 = 0; var1 < this.h.size(); ++var1) {
-         jc var6 = (jc)this.h.get(var1);
+         ActiveConnection var6 = (ActiveConnection)this.h.get(var1);
 
          try {
             var6.a();
@@ -77,7 +77,7 @@ public class do_ {
 
    }
 
-   public static void a(do_ var1, fn var2) {
+   public static void a(do_ var1, PendingConnection var2) {
 	  var1.a(var2);
    }
 

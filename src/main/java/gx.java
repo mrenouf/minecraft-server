@@ -7,7 +7,7 @@ import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
 
-public class gx extends im {
+public class gx extends BaseObject {
 
    public double a;
    public double b;
@@ -20,15 +20,15 @@ public class gx extends im {
    public boolean i;
 
 
-   public void a(ex var1) {
+   public void a(Connection var1) {
       var1.a(this);
    }
 
-   public void a(DataInputStream var1) throws IOException {
+   public void readObject(DataInputStream var1) throws IOException {
       this.g = var1.read() != 0;
    }
 
-   public void a(DataOutputStream var1) throws IOException {
+   public void writeObject(DataOutputStream var1) throws IOException {
       var1.write(this.g?1:0);
    }
 

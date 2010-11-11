@@ -9,16 +9,16 @@ import java.io.IOException;
 
 public class go extends gx {
 
-   public void a(DataInputStream var1) throws IOException {
+   public void readObject(DataInputStream var1) throws IOException {
       this.e = var1.readFloat();
       this.f = var1.readFloat();
-      super.a(var1);
+      super.readObject(var1);
    }
 
-   public void a(DataOutputStream var1) throws IOException {
+   public void writeObject(DataOutputStream var1) throws IOException {
       var1.writeFloat(this.e);
       var1.writeFloat(this.f);
-      super.a(var1);
+      super.writeObject(var1);
    }
 
    public int a() {

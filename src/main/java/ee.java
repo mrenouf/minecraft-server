@@ -19,15 +19,15 @@ public class ee extends fo {
       this.d = var4;
    }
 
-   public void a(DataInputStream var1) throws IOException {
-      super.a(var1);
+   public void readObject(DataInputStream var1) throws IOException {
+      super.readObject(var1);
       this.b = var1.readByte();
       this.c = var1.readByte();
       this.d = var1.readByte();
    }
 
-   public void a(DataOutputStream var1) throws IOException {
-      super.a(var1);
+   public void writeObject(DataOutputStream var1) throws IOException {
+      super.writeObject(var1);
       var1.writeByte(this.b);
       var1.writeByte(this.c);
       var1.writeByte(this.d);

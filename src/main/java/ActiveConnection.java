@@ -5,7 +5,7 @@
 
 import java.util.logging.Logger;
 
-public class jc extends ex implements et {
+public class ActiveConnection extends Connection implements et {
 
    public static Logger a = Logger.getLogger("Minecraft");
    public bf b;
@@ -20,10 +20,10 @@ public class jc extends ex implements et {
    private hh k = null;
 
 
-   public jc(MinecraftServer var1, bf var2, eo var3) {
+   public ActiveConnection(MinecraftServer var1, bf var2, eo var3) {
       this.d = var1;
       this.b = var2;
-      var2.a(this);
+      var2.setConnection(this);
       this.e = var3;
       var3.a = this;
    }
@@ -211,12 +211,12 @@ public class jc extends ex implements et {
       this.c = true;
    }
 
-   public void a(im var1) {
+   public void a(BaseObject var1) {
       a.warning(this.getClass() + " wasn\'t prepared to deal with a " + var1.getClass());
       this.c("Protocol error, unexpected packet");
    }
 
-   public void b(im var1) {
+   public void b(BaseObject var1) {
       this.b.a(var1);
    }
 

@@ -78,12 +78,12 @@ public class gl {
       this.b.remove(var1);
    }
 
-   public eo a(fn var1, String var2, String var3) {
+   public eo a(PendingConnection var1, String var2, String var3) {
       if(this.f.contains(var2.trim().toLowerCase())) {
          var1.b("You are banned from this server!");
          return null;
       } else {
-         String var4 = var1.b.b().toString();
+         String var4 = var1.b.getRemoteSocketAddress().toString();
          var4 = var4.substring(var4.indexOf("/") + 1);
          var4 = var4.substring(0, var4.indexOf(":"));
          if(this.g.contains(var4)) {
@@ -113,7 +113,7 @@ public class gl {
       this.d.a(var1, var2, var3);
    }
 
-   public void a(im var1) {
+   public void a(BaseObject var1) {
       for(int var2 = 0; var2 < this.b.size(); ++var2) {
          eo var3 = (eo)this.b.get(var2);
          var3.a.b(var1);
@@ -302,7 +302,7 @@ public class gl {
 
    }
 
-   public boolean a(String var1, im var2) {
+   public boolean a(String var1, BaseObject var2) {
       eo var3 = this.h(var1);
       if(var3 != null) {
          var3.a.b(var2);
