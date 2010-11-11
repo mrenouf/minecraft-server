@@ -8,7 +8,6 @@ import java.io.DataOutputStream;
 import java.io.IOException;
 import java.net.Socket;
 import java.net.SocketAddress;
-import java.net.SocketException;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
@@ -215,7 +214,7 @@ public class bf {
    }
 
    public static void d(bf var1) {
-      bf.e(var1);
+	   var1.e();
    }
 
    public static Thread e(bf var1) {
