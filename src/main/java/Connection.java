@@ -19,7 +19,7 @@ public class Connection {
       this.a(var1);
    }
 
-   public void a(ab var1) {
+   public void a(ClientHello var1) {
       this.a((BaseObject)var1);
    }
 
@@ -91,7 +91,7 @@ public class Connection {
       this.a(var1);
    }
 
-   public void a(e var1) {
+   public void a(UserId var1) {
       this.a(var1);
    }
 

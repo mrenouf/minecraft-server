@@ -7,15 +7,15 @@ import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
 
-public class e extends BaseObject {
+public class UserId extends BaseObject {
 
    public String a;
 
 
-   public e() {
+   public UserId() {
    }
 
-   public e(String var1) {
+   public UserId(String var1) {
       this.a = var1;
    }
 

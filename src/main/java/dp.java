@@ -8,10 +8,10 @@ import java.io.InputStreamReader;
 import java.net.URL;
 
 class dp extends Thread {
-	final ab a;
+	final ClientHello a;
 	final PendingConnection connection;
 
-   dp(PendingConnection var1, ab var2) {
+   dp(PendingConnection var1, ClientHello var2) {
       super();
       this.connection = var1;
       this.a = var2;

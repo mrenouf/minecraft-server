@@ -8,15 +8,15 @@ import java.util.logging.Handler;
 import java.util.logging.LogRecord;
 import javax.swing.JTextArea;
 
-public class cz extends Handler {
+public class JTextAreaLogHandler extends Handler {
 
    private int[] b = new int[1024];
    private int c = 0;
-   Formatter a = new gt(this);
+   Formatter a = new SingleLineFormatter();
    private JTextArea d;
 
 
-   public cz(JTextArea var1) {
+   public JTextAreaLogHandler(JTextArea var1) {
       this.setFormatter(this.a);
       this.d = var1;
    }

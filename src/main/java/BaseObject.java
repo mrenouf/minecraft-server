@@ -72,8 +72,8 @@ public abstract class BaseObject {
 
    static {
       registerObject(0, kc.class);
-      registerObject(1, ab.class);
-      registerObject(2, e.class);
+      registerObject(1, ClientHello.class);
+      registerObject(2, UserId.class);
       registerObject(3, be.class);
       registerObject(4, gd.class);
       registerObject(5, s.class);

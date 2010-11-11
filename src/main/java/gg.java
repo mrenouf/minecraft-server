@@ -71,7 +71,7 @@ public class gg extends JComponent implements et {
    private JComponent d() {
       JPanel var1 = new JPanel(new BorderLayout());
       JTextArea var2 = new JTextArea();
-      a.addHandler(new cz(var2));
+      a.addHandler(new JTextAreaLogHandler(var2));
       JScrollPane var3 = new JScrollPane(var2, 22, 30);
       var2.setEditable(false);
       JTextField var4 = new JTextField();

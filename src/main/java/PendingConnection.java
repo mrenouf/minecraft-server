@@ -18,7 +18,7 @@ public class PendingConnection extends Connection {
    private MinecraftServer e;
    private int f = 0;
    private String clientId = null;
-   private ab h = null;
+   private ClientHello h = null;
    private String serverId = "";
 
 
@@ -48,17 +48,17 @@ public class PendingConnection extends Connection {
       this.disconnected = true;
    }
 
-   public void a(e var1) {
+   public void a(UserId var1) {
       if(this.e.l) {
          this.serverId = Long.toHexString(d.nextLong());
-         this.b.a(new e(this.serverId));
+         this.b.a(new UserId(this.serverId));
       } else {
-         this.b.a(new e("-"));
+         this.b.a(new UserId("-"));
       }
 
    }
 
-   public void a(ab var1) {
+   public void a(ClientHello var1) {
       this.clientId = var1.b;
       if(var1.a != 3) {
          this.b("Outdated client!");
@@ -72,12 +72,12 @@ public class PendingConnection extends Connection {
       }
    }
 
-   public void checkLogin(ab var1) {
+   public void checkLogin(ClientHello var1) {
       eo var2 = this.e.f.a(this, var1.b, var1.c);
       if(var2 != null) {
          a.info(this.toString() + " logged in");
          ActiveConnection var3 = new ActiveConnection(this.e, this.b, var2);
-         var3.b(new ab("", "", 0, this.e.e.u, (byte)this.e.e.q.e));
+         var3.b(new ClientHello("", "", 0, this.e.e.u, (byte)this.e.e.q.e));
          var3.b(new cm(this.e.e.m, this.e.e.n, this.e.e.o));
          this.e.f.a(var2);
          var3.a(var2.p, var2.q, var2.r, var2.v, var2.w);
@@ -106,7 +106,7 @@ public class PendingConnection extends Connection {
 	  return conn.serverId;
    }
 
-   public static ab setServerAuthSomething(PendingConnection var1, ab var2) {
+   public static ClientHello setServerAuthSomething(PendingConnection var1, ClientHello var2) {
 	 var1.h = var2;
 	 return var2;
    }

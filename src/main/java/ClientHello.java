@@ -7,7 +7,7 @@ import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
 
-public class ab extends BaseObject {
+public class ClientHello extends BaseObject {
 
    public int a;
    public String b;
@@ -16,10 +16,10 @@ public class ab extends BaseObject {
    public byte e;
 
 
-   public ab() {
+   public ClientHello() {
    }
 
-   public ab(String var1, String var2, int var3, long var4, byte var6) {
+   public ClientHello(String var1, String var2, int var3, long var4, byte var6) {
       this.b = var1;
       this.c = var2;
       this.a = var3;
