@@ -1,0 +1,62 @@
+Compiled from SourceFile
+public class gp extends io{
+public int a;
+
+public int b;
+
+public gp();
+  Code:
+   0:	aload_0
+   1:	invokespecial	#10; //Method io."<init>":()V
+   4:	return
+
+public gp(int, int);
+  Code:
+   0:	aload_0
+   1:	invokespecial	#10; //Method io."<init>":()V
+   4:	aload_0
+   5:	iload_1
+   6:	putfield	#7; //Field a:I
+   9:	aload_0
+   10:	iload_2
+   11:	putfield	#8; //Field b:I
+   14:	return
+
+public void a(java.io.DataInputStream);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	invokevirtual	#11; //Method java/io/DataInputStream.readInt:()I
+   5:	putfield	#7; //Field a:I
+   8:	aload_0
+   9:	aload_1
+   10:	invokevirtual	#12; //Method java/io/DataInputStream.readShort:()S
+   13:	putfield	#8; //Field b:I
+   16:	return
+
+public void a(java.io.DataOutputStream);
+  Code:
+   0:	aload_1
+   1:	aload_0
+   2:	getfield	#7; //Field a:I
+   5:	invokevirtual	#13; //Method java/io/DataOutputStream.writeInt:(I)V
+   8:	aload_1
+   9:	aload_0
+   10:	getfield	#8; //Field b:I
+   13:	invokevirtual	#14; //Method java/io/DataOutputStream.writeShort:(I)V
+   16:	return
+
+public void a(ey);
+  Code:
+   0:	aload_1
+   1:	aload_0
+   2:	invokevirtual	#9; //Method ey.a:(Lgp;)V
+   5:	return
+
+public int a();
+  Code:
+   0:	bipush	6
+   2:	ireturn
+
+}
+

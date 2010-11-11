@@ -1,0 +1,352 @@
+Compiled from SourceFile
+class gv extends java.lang.Object{
+final ay a;
+
+public gv(ay, el, int, int, int);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	putfield	#9; //Field a:Lay;
+   5:	aload_0
+   6:	invokespecial	#34; //Method java/lang/Object."<init>":()V
+   9:	aload_0
+   10:	new	#6; //class java/util/ArrayList
+   13:	dup
+   14:	invokespecial	#35; //Method java/util/ArrayList."<init>":()V
+   17:	putfield	#15; //Field g:Ljava/util/List;
+   20:	aload_0
+   21:	aload_2
+   22:	putfield	#10; //Field b:Lel;
+   25:	aload_0
+   26:	iload_3
+   27:	putfield	#11; //Field c:I
+   30:	aload_0
+   31:	iload	4
+   33:	putfield	#12; //Field d:I
+   36:	aload_0
+   37:	iload	5
+   39:	putfield	#13; //Field e:I
+   42:	aload_0
+   43:	aload_2
+   44:	iload_3
+   45:	iload	4
+   47:	iload	5
+   49:	invokevirtual	#20; //Method el.b:(III)I
+   52:	putfield	#14; //Field f:I
+   55:	aload_0
+   56:	invokespecial	#23; //Method a:()V
+   59:	return
+
+public void a(boolean);
+  Code:
+   0:	aload_0
+   1:	aload_0
+   2:	getfield	#11; //Field c:I
+   5:	aload_0
+   6:	getfield	#12; //Field d:I
+   9:	aload_0
+   10:	getfield	#13; //Field e:I
+   13:	iconst_1
+   14:	isub
+   15:	invokespecial	#30; //Method c:(III)Z
+   18:	istore_2
+   19:	aload_0
+   20:	aload_0
+   21:	getfield	#11; //Field c:I
+   24:	aload_0
+   25:	getfield	#12; //Field d:I
+   28:	aload_0
+   29:	getfield	#13; //Field e:I
+   32:	iconst_1
+   33:	iadd
+   34:	invokespecial	#30; //Method c:(III)Z
+   37:	istore_3
+   38:	aload_0
+   39:	aload_0
+   40:	getfield	#11; //Field c:I
+   43:	iconst_1
+   44:	isub
+   45:	aload_0
+   46:	getfield	#12; //Field d:I
+   49:	aload_0
+   50:	getfield	#13; //Field e:I
+   53:	invokespecial	#30; //Method c:(III)Z
+   56:	istore	4
+   58:	aload_0
+   59:	aload_0
+   60:	getfield	#11; //Field c:I
+   63:	iconst_1
+   64:	iadd
+   65:	aload_0
+   66:	getfield	#12; //Field d:I
+   69:	aload_0
+   70:	getfield	#13; //Field e:I
+   73:	invokespecial	#30; //Method c:(III)Z
+   76:	istore	5
+   78:	iconst_m1
+   79:	istore	6
+   81:	iload_2
+   82:	ifne	89
+   85:	iload_3
+   86:	ifeq	102
+   89:	iload	4
+   91:	ifne	102
+   94:	iload	5
+   96:	ifne	102
+   99:	iconst_0
+   100:	istore	6
+   102:	iload	4
+   104:	ifne	112
+   107:	iload	5
+   109:	ifeq	123
+   112:	iload_2
+   113:	ifne	123
+   116:	iload_3
+   117:	ifne	123
+   120:	iconst_1
+   121:	istore	6
+   123:	iload_3
+   124:	ifeq	145
+   127:	iload	5
+   129:	ifeq	145
+   132:	iload_2
+   133:	ifne	145
+   136:	iload	4
+   138:	ifne	145
+   141:	bipush	6
+   143:	istore	6
+   145:	iload_3
+   146:	ifeq	167
+   149:	iload	4
+   151:	ifeq	167
+   154:	iload_2
+   155:	ifne	167
+   158:	iload	5
+   160:	ifne	167
+   163:	bipush	7
+   165:	istore	6
+   167:	iload_2
+   168:	ifeq	189
+   171:	iload	4
+   173:	ifeq	189
+   176:	iload_3
+   177:	ifne	189
+   180:	iload	5
+   182:	ifne	189
+   185:	bipush	8
+   187:	istore	6
+   189:	iload_2
+   190:	ifeq	211
+   193:	iload	5
+   195:	ifeq	211
+   198:	iload_3
+   199:	ifne	211
+   202:	iload	4
+   204:	ifne	211
+   207:	bipush	9
+   209:	istore	6
+   211:	iload	6
+   213:	iconst_m1
+   214:	if_icmpne	352
+   217:	iload_2
+   218:	ifne	225
+   221:	iload_3
+   222:	ifeq	228
+   225:	iconst_0
+   226:	istore	6
+   228:	iload	4
+   230:	ifne	238
+   233:	iload	5
+   235:	ifeq	241
+   238:	iconst_1
+   239:	istore	6
+   241:	iload_1
+   242:	ifeq	300
+   245:	iload_3
+   246:	ifeq	258
+   249:	iload	5
+   251:	ifeq	258
+   254:	bipush	6
+   256:	istore	6
+   258:	iload	4
+   260:	ifeq	271
+   263:	iload_3
+   264:	ifeq	271
+   267:	bipush	7
+   269:	istore	6
+   271:	iload	5
+   273:	ifeq	284
+   276:	iload_2
+   277:	ifeq	284
+   280:	bipush	9
+   282:	istore	6
+   284:	iload_2
+   285:	ifeq	352
+   288:	iload	4
+   290:	ifeq	352
+   293:	bipush	8
+   295:	istore	6
+   297:	goto	352
+   300:	iload_2
+   301:	ifeq	313
+   304:	iload	4
+   306:	ifeq	313
+   309:	bipush	8
+   311:	istore	6
+   313:	iload	5
+   315:	ifeq	326
+   318:	iload_2
+   319:	ifeq	326
+   322:	bipush	9
+   324:	istore	6
+   326:	iload	4
+   328:	ifeq	339
+   331:	iload_3
+   332:	ifeq	339
+   335:	bipush	7
+   337:	istore	6
+   339:	iload_3
+   340:	ifeq	352
+   343:	iload	5
+   345:	ifeq	352
+   348:	bipush	6
+   350:	istore	6
+   352:	iload	6
+   354:	ifne	429
+   357:	aload_0
+   358:	getfield	#10; //Field b:Lel;
+   361:	aload_0
+   362:	getfield	#11; //Field c:I
+   365:	aload_0
+   366:	getfield	#12; //Field d:I
+   369:	iconst_1
+   370:	iadd
+   371:	aload_0
+   372:	getfield	#13; //Field e:I
+   375:	iconst_1
+   376:	isub
+   377:	invokevirtual	#19; //Method el.a:(III)I
+   380:	aload_0
+   381:	getfield	#9; //Field a:Lay;
+   384:	getfield	#8; //Field ay.bi:I
+   387:	if_icmpne	393
+   390:	iconst_4
+   391:	istore	6
+   393:	aload_0
+   394:	getfield	#10; //Field b:Lel;
+   397:	aload_0
+   398:	getfield	#11; //Field c:I
+   401:	aload_0
+   402:	getfield	#12; //Field d:I
+   405:	iconst_1
+   406:	iadd
+   407:	aload_0
+   408:	getfield	#13; //Field e:I
+   411:	iconst_1
+   412:	iadd
+   413:	invokevirtual	#19; //Method el.a:(III)I
+   416:	aload_0
+   417:	getfield	#9; //Field a:Lay;
+   420:	getfield	#8; //Field ay.bi:I
+   423:	if_icmpne	429
+   426:	iconst_5
+   427:	istore	6
+   429:	iload	6
+   431:	iconst_1
+   432:	if_icmpne	507
+   435:	aload_0
+   436:	getfield	#10; //Field b:Lel;
+   439:	aload_0
+   440:	getfield	#11; //Field c:I
+   443:	iconst_1
+   444:	iadd
+   445:	aload_0
+   446:	getfield	#12; //Field d:I
+   449:	iconst_1
+   450:	iadd
+   451:	aload_0
+   452:	getfield	#13; //Field e:I
+   455:	invokevirtual	#19; //Method el.a:(III)I
+   458:	aload_0
+   459:	getfield	#9; //Field a:Lay;
+   462:	getfield	#8; //Field ay.bi:I
+   465:	if_icmpne	471
+   468:	iconst_2
+   469:	istore	6
+   471:	aload_0
+   472:	getfield	#10; //Field b:Lel;
+   475:	aload_0
+   476:	getfield	#11; //Field c:I
+   479:	iconst_1
+   480:	isub
+   481:	aload_0
+   482:	getfield	#12; //Field d:I
+   485:	iconst_1
+   486:	iadd
+   487:	aload_0
+   488:	getfield	#13; //Field e:I
+   491:	invokevirtual	#19; //Method el.a:(III)I
+   494:	aload_0
+   495:	getfield	#9; //Field a:Lay;
+   498:	getfield	#8; //Field ay.bi:I
+   501:	if_icmpne	507
+   504:	iconst_3
+   505:	istore	6
+   507:	iload	6
+   509:	ifge	515
+   512:	iconst_0
+   513:	istore	6
+   515:	aload_0
+   516:	iload	6
+   518:	putfield	#14; //Field f:I
+   521:	aload_0
+   522:	invokespecial	#23; //Method a:()V
+   525:	aload_0
+   526:	getfield	#10; //Field b:Lel;
+   529:	aload_0
+   530:	getfield	#11; //Field c:I
+   533:	aload_0
+   534:	getfield	#12; //Field d:I
+   537:	aload_0
+   538:	getfield	#13; //Field e:I
+   541:	iload	6
+   543:	invokevirtual	#21; //Method el.b:(IIII)V
+   546:	iconst_0
+   547:	istore	7
+   549:	iload	7
+   551:	aload_0
+   552:	getfield	#15; //Field g:Ljava/util/List;
+   555:	invokeinterface	#41,  1; //InterfaceMethod java/util/List.size:()I
+   560:	if_icmpge	617
+   563:	aload_0
+   564:	aload_0
+   565:	getfield	#15; //Field g:Ljava/util/List;
+   568:	iload	7
+   570:	invokeinterface	#38,  2; //InterfaceMethod java/util/List.get:(I)Ljava/lang/Object;
+   575:	checkcast	#4; //class hl
+   578:	invokespecial	#25; //Method a:(Lhl;)Lgv;
+   581:	astore	8
+   583:	aload	8
+   585:	ifnonnull	591
+   588:	goto	611
+   591:	aload	8
+   593:	invokespecial	#26; //Method b:()V
+   596:	aload	8
+   598:	aload_0
+   599:	invokespecial	#31; //Method c:(Lgv;)Z
+   602:	ifeq	611
+   605:	aload	8
+   607:	aload_0
+   608:	invokespecial	#32; //Method d:(Lgv;)V
+   611:	iinc	7, 1
+   614:	goto	549
+   617:	return
+
+static int a(gv);
+  Code:
+   0:	aload_0
+   1:	invokespecial	#29; //Method c:()I
+   4:	ireturn
+
+}
+

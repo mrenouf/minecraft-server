@@ -1,0 +1,113 @@
+Compiled from SourceFile
+public class ab extends im{
+public int a;
+
+public java.lang.String b;
+
+public java.lang.String c;
+
+public long d;
+
+public byte e;
+
+public ab();
+  Code:
+   0:	aload_0
+   1:	invokespecial	#14; //Method im."<init>":()V
+   4:	return
+
+public ab(java.lang.String, java.lang.String, int, long, byte);
+  Code:
+   0:	aload_0
+   1:	invokespecial	#14; //Method im."<init>":()V
+   4:	aload_0
+   5:	aload_1
+   6:	putfield	#9; //Field b:Ljava/lang/String;
+   9:	aload_0
+   10:	aload_2
+   11:	putfield	#10; //Field c:Ljava/lang/String;
+   14:	aload_0
+   15:	iload_3
+   16:	putfield	#8; //Field a:I
+   19:	aload_0
+   20:	lload	4
+   22:	putfield	#11; //Field d:J
+   25:	aload_0
+   26:	iload	6
+   28:	putfield	#12; //Field e:B
+   31:	return
+
+public void a(java.io.DataInputStream);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	invokevirtual	#16; //Method java/io/DataInputStream.readInt:()I
+   5:	putfield	#8; //Field a:I
+   8:	aload_0
+   9:	aload_1
+   10:	invokevirtual	#18; //Method java/io/DataInputStream.readUTF:()Ljava/lang/String;
+   13:	putfield	#9; //Field b:Ljava/lang/String;
+   16:	aload_0
+   17:	aload_1
+   18:	invokevirtual	#18; //Method java/io/DataInputStream.readUTF:()Ljava/lang/String;
+   21:	putfield	#10; //Field c:Ljava/lang/String;
+   24:	aload_0
+   25:	aload_1
+   26:	invokevirtual	#17; //Method java/io/DataInputStream.readLong:()J
+   29:	putfield	#11; //Field d:J
+   32:	aload_0
+   33:	aload_1
+   34:	invokevirtual	#15; //Method java/io/DataInputStream.readByte:()B
+   37:	putfield	#12; //Field e:B
+   40:	return
+
+public void a(java.io.DataOutputStream);
+  Code:
+   0:	aload_1
+   1:	aload_0
+   2:	getfield	#8; //Field a:I
+   5:	invokevirtual	#20; //Method java/io/DataOutputStream.writeInt:(I)V
+   8:	aload_1
+   9:	aload_0
+   10:	getfield	#9; //Field b:Ljava/lang/String;
+   13:	invokevirtual	#22; //Method java/io/DataOutputStream.writeUTF:(Ljava/lang/String;)V
+   16:	aload_1
+   17:	aload_0
+   18:	getfield	#10; //Field c:Ljava/lang/String;
+   21:	invokevirtual	#22; //Method java/io/DataOutputStream.writeUTF:(Ljava/lang/String;)V
+   24:	aload_1
+   25:	aload_0
+   26:	getfield	#11; //Field d:J
+   29:	invokevirtual	#21; //Method java/io/DataOutputStream.writeLong:(J)V
+   32:	aload_1
+   33:	aload_0
+   34:	getfield	#12; //Field e:B
+   37:	invokevirtual	#19; //Method java/io/DataOutputStream.writeByte:(I)V
+   40:	return
+
+public void a(ex);
+  Code:
+   0:	aload_1
+   1:	aload_0
+   2:	invokevirtual	#13; //Method ex.a:(Lab;)V
+   5:	return
+
+public int a();
+  Code:
+   0:	iconst_4
+   1:	aload_0
+   2:	getfield	#9; //Field b:Ljava/lang/String;
+   5:	invokevirtual	#23; //Method java/lang/String.length:()I
+   8:	iadd
+   9:	aload_0
+   10:	getfield	#10; //Field c:Ljava/lang/String;
+   13:	invokevirtual	#23; //Method java/lang/String.length:()I
+   16:	iadd
+   17:	iconst_4
+   18:	iadd
+   19:	iconst_5
+   20:	iadd
+   21:	ireturn
+
+}
+

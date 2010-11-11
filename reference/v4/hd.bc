@@ -1,0 +1,149 @@
+Compiled from SourceFile
+public class hd extends java.lang.Object{
+public hd();
+  Code:
+   0:	aload_0
+   1:	invokespecial	#17; //Method java/lang/Object."<init>":()V
+   4:	return
+
+public static final float a(float);
+  Code:
+   0:	getstatic	#14; //Field a:[F
+   3:	fload_0
+   4:	ldc	#3; //float 10430.378f
+   6:	fmul
+   7:	f2i
+   8:	ldc	#1; //int 65535
+   10:	iand
+   11:	faload
+   12:	freturn
+
+public static final float b(float);
+  Code:
+   0:	getstatic	#14; //Field a:[F
+   3:	fload_0
+   4:	ldc	#3; //float 10430.378f
+   6:	fmul
+   7:	ldc	#4; //float 16384.0f
+   9:	fadd
+   10:	f2i
+   11:	ldc	#1; //int 65535
+   13:	iand
+   14:	faload
+   15:	freturn
+
+public static final float c(float);
+  Code:
+   0:	fload_0
+   1:	f2d
+   2:	invokestatic	#16; //Method java/lang/Math.sqrt:(D)D
+   5:	d2f
+   6:	freturn
+
+public static final float a(double);
+  Code:
+   0:	dload_0
+   1:	invokestatic	#16; //Method java/lang/Math.sqrt:(D)D
+   4:	d2f
+   5:	freturn
+
+public static int d(float);
+  Code:
+   0:	fload_0
+   1:	f2i
+   2:	istore_1
+   3:	fload_0
+   4:	iload_1
+   5:	i2f
+   6:	fcmpg
+   7:	ifge	16
+   10:	iload_1
+   11:	iconst_1
+   12:	isub
+   13:	goto	17
+   16:	iload_1
+   17:	ireturn
+
+public static int b(double);
+  Code:
+   0:	dload_0
+   1:	d2i
+   2:	istore_2
+   3:	dload_0
+   4:	iload_2
+   5:	i2d
+   6:	dcmpg
+   7:	ifge	16
+   10:	iload_2
+   11:	iconst_1
+   12:	isub
+   13:	goto	17
+   16:	iload_2
+   17:	ireturn
+
+public static float e(float);
+  Code:
+   0:	fload_0
+   1:	fconst_0
+   2:	fcmpl
+   3:	iflt	10
+   6:	fload_0
+   7:	goto	12
+   10:	fload_0
+   11:	fneg
+   12:	freturn
+
+public static double a(double, double);
+  Code:
+   0:	dload_0
+   1:	dconst_0
+   2:	dcmpg
+   3:	ifge	9
+   6:	dload_0
+   7:	dneg
+   8:	dstore_0
+   9:	dload_2
+   10:	dconst_0
+   11:	dcmpg
+   12:	ifge	18
+   15:	dload_2
+   16:	dneg
+   17:	dstore_2
+   18:	dload_0
+   19:	dload_2
+   20:	dcmpl
+   21:	ifle	28
+   24:	dload_0
+   25:	goto	29
+   28:	dload_2
+   29:	dreturn
+
+static {};
+  Code:
+   0:	ldc	#2; //int 65536
+   2:	newarray float
+   4:	putstatic	#14; //Field a:[F
+   7:	iconst_0
+   8:	istore_0
+   9:	iload_0
+   10:	ldc	#2; //int 65536
+   12:	if_icmpge	44
+   15:	getstatic	#14; //Field a:[F
+   18:	iload_0
+   19:	iload_0
+   20:	i2d
+   21:	ldc2_w	#10; //double 3.141592653589793d
+   24:	dmul
+   25:	ldc2_w	#8; //double 2.0d
+   28:	dmul
+   29:	ldc2_w	#12; //double 65536.0d
+   32:	ddiv
+   33:	invokestatic	#15; //Method java/lang/Math.sin:(D)D
+   36:	d2f
+   37:	fastore
+   38:	iinc	0, 1
+   41:	goto	9
+   44:	return
+
+}
+

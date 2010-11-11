@@ -1,0 +1,54 @@
+Compiled from SourceFile
+public final class dk extends java.lang.Enum{
+public static final dk a;
+
+public static final dk b;
+
+public final int c;
+
+public static dk[] values();
+  Code:
+   0:	getstatic	#9; //Field d:[Ldk;
+   3:	invokevirtual	#10; //Method "[Ldk;".clone:()Ljava/lang/Object;
+   6:	checkcast	#3; //class "[Ldk;"
+   9:	areturn
+
+public static dk valueOf(java.lang.String);
+  Code:
+   0:	ldc_w	#4; //class dk
+   3:	aload_0
+   4:	invokestatic	#13; //Method java/lang/Enum.valueOf:(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+   7:	checkcast	#4; //class dk
+   10:	areturn
+
+static {};
+  Code:
+   0:	new	#4; //class dk
+   3:	dup
+   4:	ldc	#2; //String Sky
+   6:	iconst_0
+   7:	bipush	15
+   9:	invokespecial	#11; //Method "<init>":(Ljava/lang/String;II)V
+   12:	putstatic	#6; //Field a:Ldk;
+   15:	new	#4; //class dk
+   18:	dup
+   19:	ldc	#1; //String Block
+   21:	iconst_1
+   22:	iconst_0
+   23:	invokespecial	#11; //Method "<init>":(Ljava/lang/String;II)V
+   26:	putstatic	#7; //Field b:Ldk;
+   29:	iconst_2
+   30:	anewarray	#4; //class dk
+   33:	dup
+   34:	iconst_0
+   35:	getstatic	#6; //Field a:Ldk;
+   38:	aastore
+   39:	dup
+   40:	iconst_1
+   41:	getstatic	#7; //Field b:Ldk;
+   44:	aastore
+   45:	putstatic	#9; //Field d:[Ldk;
+   48:	return
+
+}
+

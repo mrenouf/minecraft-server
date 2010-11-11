@@ -1,0 +1,11 @@
+Compiled from SourceFile
+public class fw extends java.lang.RuntimeException{
+public fw(java.lang.String);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	invokespecial	#3; //Method java/lang/RuntimeException."<init>":(Ljava/lang/String;)V
+   5:	return
+
+}
+

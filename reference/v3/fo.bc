@@ -1,0 +1,67 @@
+Compiled from SourceFile
+public class fo extends im{
+public int a;
+
+public byte b;
+
+public byte c;
+
+public byte d;
+
+public byte e;
+
+public byte f;
+
+public boolean g;
+
+public fo();
+  Code:
+   0:	aload_0
+   1:	invokespecial	#13; //Method im."<init>":()V
+   4:	aload_0
+   5:	iconst_0
+   6:	putfield	#11; //Field g:Z
+   9:	return
+
+public fo(int);
+  Code:
+   0:	aload_0
+   1:	invokespecial	#13; //Method im."<init>":()V
+   4:	aload_0
+   5:	iconst_0
+   6:	putfield	#11; //Field g:Z
+   9:	aload_0
+   10:	iload_1
+   11:	putfield	#10; //Field a:I
+   14:	return
+
+public void a(java.io.DataInputStream);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	invokevirtual	#14; //Method java/io/DataInputStream.readInt:()I
+   5:	putfield	#10; //Field a:I
+   8:	return
+
+public void a(java.io.DataOutputStream);
+  Code:
+   0:	aload_1
+   1:	aload_0
+   2:	getfield	#10; //Field a:I
+   5:	invokevirtual	#15; //Method java/io/DataOutputStream.writeInt:(I)V
+   8:	return
+
+public void a(ex);
+  Code:
+   0:	aload_1
+   1:	aload_0
+   2:	invokevirtual	#12; //Method ex.a:(Lfo;)V
+   5:	return
+
+public int a();
+  Code:
+   0:	iconst_4
+   1:	ireturn
+
+}
+

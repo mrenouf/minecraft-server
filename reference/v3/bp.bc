@@ -1,0 +1,47 @@
+Compiled from SourceFile
+public class bp extends fq{
+public bp(int, int);
+  Code:
+   0:	aload_0
+   1:	iload_1
+   2:	invokespecial	#8; //Method fq."<init>":(I)V
+   5:	aload_0
+   6:	iconst_1
+   7:	putfield	#6; //Field aX:I
+   10:	aload_0
+   11:	bipush	32
+   13:	iload_2
+   14:	ishl
+   15:	putfield	#7; //Field aY:I
+   18:	iload_2
+   19:	iconst_3
+   20:	if_icmpne	33
+   23:	aload_0
+   24:	dup
+   25:	getfield	#7; //Field aY:I
+   28:	iconst_4
+   29:	imul
+   30:	putfield	#7; //Field aY:I
+   33:	aload_0
+   34:	iconst_4
+   35:	iload_2
+   36:	iconst_2
+   37:	imul
+   38:	iadd
+   39:	putfield	#5; //Field a:I
+   42:	return
+
+public float a(hh, fw);
+  Code:
+   0:	ldc	#1; //float 1.5f
+   2:	freturn
+
+public void a(hh, int, int, int, int);
+  Code:
+   0:	aload_1
+   1:	iconst_2
+   2:	invokevirtual	#9; //Method hh.a:(I)V
+   5:	return
+
+}
+

@@ -1,0 +1,63 @@
+Compiled from SourceFile
+public class bc extends aw{
+public boolean a;
+
+public bc(el);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	invokespecial	#14; //Method aw."<init>":(Lel;)V
+   5:	aload_0
+   6:	iconst_0
+   7:	putfield	#10; //Field a:Z
+   10:	aload_0
+   11:	ldc	#4; //String /mob/cow.png
+   13:	putfield	#11; //Field aF:Ljava/lang/String;
+   16:	aload_0
+   17:	ldc	#2; //float 0.9f
+   19:	ldc	#3; //float 1.3f
+   21:	invokevirtual	#17; //Method a:(FF)V
+   24:	return
+
+public void a(t);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	invokespecial	#15; //Method aw.a:(Lt;)V
+   5:	return
+
+public void b(t);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	invokespecial	#16; //Method aw.b:(Lt;)V
+   5:	return
+
+protected java.lang.String d();
+  Code:
+   0:	ldc	#5; //String mob.cow
+   2:	areturn
+
+protected java.lang.String e();
+  Code:
+   0:	ldc	#6; //String mob.cowhurt
+   2:	areturn
+
+protected java.lang.String f();
+  Code:
+   0:	ldc	#6; //String mob.cowhurt
+   2:	areturn
+
+protected float h();
+  Code:
+   0:	ldc	#1; //float 0.4f
+   2:	freturn
+
+protected int g();
+  Code:
+   0:	getstatic	#12; //Field fq.aD:Lfq;
+   3:	getfield	#13; //Field fq.aW:I
+   6:	ireturn
+
+}
+

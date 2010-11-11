@@ -1,0 +1,1127 @@
+Compiled from SourceFile
+public class ak extends co{
+public double a;
+
+public double b;
+
+public double c;
+
+public ak();
+  Code:
+   0:	aload_0
+   1:	new	#3; //class java/util/Random
+   4:	dup
+   5:	invokespecial	#22; //Method java/util/Random."<init>":()V
+   8:	invokespecial	#16; //Method "<init>":(Ljava/util/Random;)V
+   11:	return
+
+public ak(java.util.Random);
+  Code:
+   0:	aload_0
+   1:	invokespecial	#21; //Method co."<init>":()V
+   4:	aload_0
+   5:	sipush	512
+   8:	newarray int
+   10:	putfield	#15; //Field d:[I
+   13:	aload_0
+   14:	aload_1
+   15:	invokevirtual	#23; //Method java/util/Random.nextDouble:()D
+   18:	ldc2_w	#10; //double 256.0d
+   21:	dmul
+   22:	putfield	#12; //Field a:D
+   25:	aload_0
+   26:	aload_1
+   27:	invokevirtual	#23; //Method java/util/Random.nextDouble:()D
+   30:	ldc2_w	#10; //double 256.0d
+   33:	dmul
+   34:	putfield	#13; //Field b:D
+   37:	aload_0
+   38:	aload_1
+   39:	invokevirtual	#23; //Method java/util/Random.nextDouble:()D
+   42:	ldc2_w	#10; //double 256.0d
+   45:	dmul
+   46:	putfield	#14; //Field c:D
+   49:	iconst_0
+   50:	istore_2
+   51:	iload_2
+   52:	sipush	256
+   55:	if_icmpge	71
+   58:	aload_0
+   59:	getfield	#15; //Field d:[I
+   62:	iload_2
+   63:	iload_2
+   64:	iastore
+   65:	iinc	2, 1
+   68:	goto	51
+   71:	iconst_0
+   72:	istore_2
+   73:	iload_2
+   74:	sipush	256
+   77:	if_icmpge	142
+   80:	aload_1
+   81:	sipush	256
+   84:	iload_2
+   85:	isub
+   86:	invokevirtual	#24; //Method java/util/Random.nextInt:(I)I
+   89:	iload_2
+   90:	iadd
+   91:	istore_3
+   92:	aload_0
+   93:	getfield	#15; //Field d:[I
+   96:	iload_2
+   97:	iaload
+   98:	istore	4
+   100:	aload_0
+   101:	getfield	#15; //Field d:[I
+   104:	iload_2
+   105:	aload_0
+   106:	getfield	#15; //Field d:[I
+   109:	iload_3
+   110:	iaload
+   111:	iastore
+   112:	aload_0
+   113:	getfield	#15; //Field d:[I
+   116:	iload_3
+   117:	iload	4
+   119:	iastore
+   120:	aload_0
+   121:	getfield	#15; //Field d:[I
+   124:	iload_2
+   125:	sipush	256
+   128:	iadd
+   129:	aload_0
+   130:	getfield	#15; //Field d:[I
+   133:	iload_2
+   134:	iaload
+   135:	iastore
+   136:	iinc	2, 1
+   139:	goto	73
+   142:	return
+
+public double a(double, double, double);
+  Code:
+   0:	dload_1
+   1:	aload_0
+   2:	getfield	#12; //Field a:D
+   5:	dadd
+   6:	dstore	7
+   8:	dload_3
+   9:	aload_0
+   10:	getfield	#13; //Field b:D
+   13:	dadd
+   14:	dstore	9
+   16:	dload	5
+   18:	aload_0
+   19:	getfield	#14; //Field c:D
+   22:	dadd
+   23:	dstore	11
+   25:	dload	7
+   27:	d2i
+   28:	istore	13
+   30:	dload	9
+   32:	d2i
+   33:	istore	14
+   35:	dload	11
+   37:	d2i
+   38:	istore	15
+   40:	dload	7
+   42:	iload	13
+   44:	i2d
+   45:	dcmpg
+   46:	ifge	52
+   49:	iinc	13, -1
+   52:	dload	9
+   54:	iload	14
+   56:	i2d
+   57:	dcmpg
+   58:	ifge	64
+   61:	iinc	14, -1
+   64:	dload	11
+   66:	iload	15
+   68:	i2d
+   69:	dcmpg
+   70:	ifge	76
+   73:	iinc	15, -1
+   76:	iload	13
+   78:	sipush	255
+   81:	iand
+   82:	istore	16
+   84:	iload	14
+   86:	sipush	255
+   89:	iand
+   90:	istore	17
+   92:	iload	15
+   94:	sipush	255
+   97:	iand
+   98:	istore	18
+   100:	dload	7
+   102:	iload	13
+   104:	i2d
+   105:	dsub
+   106:	dstore	7
+   108:	dload	9
+   110:	iload	14
+   112:	i2d
+   113:	dsub
+   114:	dstore	9
+   116:	dload	11
+   118:	iload	15
+   120:	i2d
+   121:	dsub
+   122:	dstore	11
+   124:	dload	7
+   126:	dload	7
+   128:	dmul
+   129:	dload	7
+   131:	dmul
+   132:	dload	7
+   134:	dload	7
+   136:	ldc2_w	#4; //double 6.0d
+   139:	dmul
+   140:	ldc2_w	#8; //double 15.0d
+   143:	dsub
+   144:	dmul
+   145:	ldc2_w	#6; //double 10.0d
+   148:	dadd
+   149:	dmul
+   150:	dstore	19
+   152:	dload	9
+   154:	dload	9
+   156:	dmul
+   157:	dload	9
+   159:	dmul
+   160:	dload	9
+   162:	dload	9
+   164:	ldc2_w	#4; //double 6.0d
+   167:	dmul
+   168:	ldc2_w	#8; //double 15.0d
+   171:	dsub
+   172:	dmul
+   173:	ldc2_w	#6; //double 10.0d
+   176:	dadd
+   177:	dmul
+   178:	dstore	21
+   180:	dload	11
+   182:	dload	11
+   184:	dmul
+   185:	dload	11
+   187:	dmul
+   188:	dload	11
+   190:	dload	11
+   192:	ldc2_w	#4; //double 6.0d
+   195:	dmul
+   196:	ldc2_w	#8; //double 15.0d
+   199:	dsub
+   200:	dmul
+   201:	ldc2_w	#6; //double 10.0d
+   204:	dadd
+   205:	dmul
+   206:	dstore	23
+   208:	aload_0
+   209:	getfield	#15; //Field d:[I
+   212:	iload	16
+   214:	iaload
+   215:	iload	17
+   217:	iadd
+   218:	istore	25
+   220:	aload_0
+   221:	getfield	#15; //Field d:[I
+   224:	iload	25
+   226:	iaload
+   227:	iload	18
+   229:	iadd
+   230:	istore	26
+   232:	aload_0
+   233:	getfield	#15; //Field d:[I
+   236:	iload	25
+   238:	iconst_1
+   239:	iadd
+   240:	iaload
+   241:	iload	18
+   243:	iadd
+   244:	istore	27
+   246:	aload_0
+   247:	getfield	#15; //Field d:[I
+   250:	iload	16
+   252:	iconst_1
+   253:	iadd
+   254:	iaload
+   255:	iload	17
+   257:	iadd
+   258:	istore	28
+   260:	aload_0
+   261:	getfield	#15; //Field d:[I
+   264:	iload	28
+   266:	iaload
+   267:	iload	18
+   269:	iadd
+   270:	istore	29
+   272:	aload_0
+   273:	getfield	#15; //Field d:[I
+   276:	iload	28
+   278:	iconst_1
+   279:	iadd
+   280:	iaload
+   281:	iload	18
+   283:	iadd
+   284:	istore	30
+   286:	aload_0
+   287:	dload	23
+   289:	aload_0
+   290:	dload	21
+   292:	aload_0
+   293:	dload	19
+   295:	aload_0
+   296:	aload_0
+   297:	getfield	#15; //Field d:[I
+   300:	iload	26
+   302:	iaload
+   303:	dload	7
+   305:	dload	9
+   307:	dload	11
+   309:	invokevirtual	#19; //Method a:(IDDD)D
+   312:	aload_0
+   313:	aload_0
+   314:	getfield	#15; //Field d:[I
+   317:	iload	29
+   319:	iaload
+   320:	dload	7
+   322:	dconst_1
+   323:	dsub
+   324:	dload	9
+   326:	dload	11
+   328:	invokevirtual	#19; //Method a:(IDDD)D
+   331:	invokevirtual	#20; //Method b:(DDD)D
+   334:	aload_0
+   335:	dload	19
+   337:	aload_0
+   338:	aload_0
+   339:	getfield	#15; //Field d:[I
+   342:	iload	27
+   344:	iaload
+   345:	dload	7
+   347:	dload	9
+   349:	dconst_1
+   350:	dsub
+   351:	dload	11
+   353:	invokevirtual	#19; //Method a:(IDDD)D
+   356:	aload_0
+   357:	aload_0
+   358:	getfield	#15; //Field d:[I
+   361:	iload	30
+   363:	iaload
+   364:	dload	7
+   366:	dconst_1
+   367:	dsub
+   368:	dload	9
+   370:	dconst_1
+   371:	dsub
+   372:	dload	11
+   374:	invokevirtual	#19; //Method a:(IDDD)D
+   377:	invokevirtual	#20; //Method b:(DDD)D
+   380:	invokevirtual	#20; //Method b:(DDD)D
+   383:	aload_0
+   384:	dload	21
+   386:	aload_0
+   387:	dload	19
+   389:	aload_0
+   390:	aload_0
+   391:	getfield	#15; //Field d:[I
+   394:	iload	26
+   396:	iconst_1
+   397:	iadd
+   398:	iaload
+   399:	dload	7
+   401:	dload	9
+   403:	dload	11
+   405:	dconst_1
+   406:	dsub
+   407:	invokevirtual	#19; //Method a:(IDDD)D
+   410:	aload_0
+   411:	aload_0
+   412:	getfield	#15; //Field d:[I
+   415:	iload	29
+   417:	iconst_1
+   418:	iadd
+   419:	iaload
+   420:	dload	7
+   422:	dconst_1
+   423:	dsub
+   424:	dload	9
+   426:	dload	11
+   428:	dconst_1
+   429:	dsub
+   430:	invokevirtual	#19; //Method a:(IDDD)D
+   433:	invokevirtual	#20; //Method b:(DDD)D
+   436:	aload_0
+   437:	dload	19
+   439:	aload_0
+   440:	aload_0
+   441:	getfield	#15; //Field d:[I
+   444:	iload	27
+   446:	iconst_1
+   447:	iadd
+   448:	iaload
+   449:	dload	7
+   451:	dload	9
+   453:	dconst_1
+   454:	dsub
+   455:	dload	11
+   457:	dconst_1
+   458:	dsub
+   459:	invokevirtual	#19; //Method a:(IDDD)D
+   462:	aload_0
+   463:	aload_0
+   464:	getfield	#15; //Field d:[I
+   467:	iload	30
+   469:	iconst_1
+   470:	iadd
+   471:	iaload
+   472:	dload	7
+   474:	dconst_1
+   475:	dsub
+   476:	dload	9
+   478:	dconst_1
+   479:	dsub
+   480:	dload	11
+   482:	dconst_1
+   483:	dsub
+   484:	invokevirtual	#19; //Method a:(IDDD)D
+   487:	invokevirtual	#20; //Method b:(DDD)D
+   490:	invokevirtual	#20; //Method b:(DDD)D
+   493:	invokevirtual	#20; //Method b:(DDD)D
+   496:	dreturn
+
+public final double b(double, double, double);
+  Code:
+   0:	dload_3
+   1:	dload_1
+   2:	dload	5
+   4:	dload_3
+   5:	dsub
+   6:	dmul
+   7:	dadd
+   8:	dreturn
+
+public final double a(int, double, double);
+  Code:
+   0:	iload_1
+   1:	bipush	15
+   3:	iand
+   4:	istore	6
+   6:	iconst_1
+   7:	iload	6
+   9:	bipush	8
+   11:	iand
+   12:	iconst_3
+   13:	ishr
+   14:	isub
+   15:	i2d
+   16:	dload_2
+   17:	dmul
+   18:	dstore	7
+   20:	iload	6
+   22:	iconst_4
+   23:	if_icmpge	30
+   26:	dconst_0
+   27:	goto	50
+   30:	iload	6
+   32:	bipush	12
+   34:	if_icmpeq	44
+   37:	iload	6
+   39:	bipush	14
+   41:	if_icmpne	48
+   44:	dload_2
+   45:	goto	50
+   48:	dload	4
+   50:	dstore	9
+   52:	iload	6
+   54:	iconst_1
+   55:	iand
+   56:	ifne	64
+   59:	dload	7
+   61:	goto	67
+   64:	dload	7
+   66:	dneg
+   67:	iload	6
+   69:	iconst_2
+   70:	iand
+   71:	ifne	79
+   74:	dload	9
+   76:	goto	82
+   79:	dload	9
+   81:	dneg
+   82:	dadd
+   83:	dreturn
+
+public final double a(int, double, double, double);
+  Code:
+   0:	iload_1
+   1:	bipush	15
+   3:	iand
+   4:	istore	8
+   6:	iload	8
+   8:	bipush	8
+   10:	if_icmpge	17
+   13:	dload_2
+   14:	goto	19
+   17:	dload	4
+   19:	dstore	9
+   21:	iload	8
+   23:	iconst_4
+   24:	if_icmpge	32
+   27:	dload	4
+   29:	goto	52
+   32:	iload	8
+   34:	bipush	12
+   36:	if_icmpeq	46
+   39:	iload	8
+   41:	bipush	14
+   43:	if_icmpne	50
+   46:	dload_2
+   47:	goto	52
+   50:	dload	6
+   52:	dstore	11
+   54:	iload	8
+   56:	iconst_1
+   57:	iand
+   58:	ifne	66
+   61:	dload	9
+   63:	goto	69
+   66:	dload	9
+   68:	dneg
+   69:	iload	8
+   71:	iconst_2
+   72:	iand
+   73:	ifne	81
+   76:	dload	11
+   78:	goto	84
+   81:	dload	11
+   83:	dneg
+   84:	dadd
+   85:	dreturn
+
+public double a(double, double);
+  Code:
+   0:	aload_0
+   1:	dload_1
+   2:	dload_3
+   3:	dconst_0
+   4:	invokevirtual	#17; //Method a:(DDD)D
+   7:	dreturn
+
+public void a(double[], double, double, double, int, int, int, double, double, double, double);
+  Code:
+   0:	iload	9
+   2:	iconst_1
+   3:	if_icmpne	385
+   6:	iconst_0
+   7:	istore	19
+   9:	iconst_0
+   10:	istore	20
+   12:	iconst_0
+   13:	istore	21
+   15:	iconst_0
+   16:	istore	22
+   18:	dconst_0
+   19:	dstore	23
+   21:	dconst_0
+   22:	dstore	25
+   24:	iconst_0
+   25:	istore	27
+   27:	dconst_1
+   28:	dload	17
+   30:	ddiv
+   31:	dstore	28
+   33:	iconst_0
+   34:	istore	30
+   36:	iload	30
+   38:	iload	8
+   40:	if_icmpge	384
+   43:	dload_2
+   44:	iload	30
+   46:	i2d
+   47:	dadd
+   48:	dload	11
+   50:	dmul
+   51:	aload_0
+   52:	getfield	#12; //Field a:D
+   55:	dadd
+   56:	dstore	31
+   58:	dload	31
+   60:	d2i
+   61:	istore	33
+   63:	dload	31
+   65:	iload	33
+   67:	i2d
+   68:	dcmpg
+   69:	ifge	75
+   72:	iinc	33, -1
+   75:	iload	33
+   77:	sipush	255
+   80:	iand
+   81:	istore	34
+   83:	dload	31
+   85:	iload	33
+   87:	i2d
+   88:	dsub
+   89:	dstore	31
+   91:	dload	31
+   93:	dload	31
+   95:	dmul
+   96:	dload	31
+   98:	dmul
+   99:	dload	31
+   101:	dload	31
+   103:	ldc2_w	#4; //double 6.0d
+   106:	dmul
+   107:	ldc2_w	#8; //double 15.0d
+   110:	dsub
+   111:	dmul
+   112:	ldc2_w	#6; //double 10.0d
+   115:	dadd
+   116:	dmul
+   117:	dstore	35
+   119:	iconst_0
+   120:	istore	37
+   122:	iload	37
+   124:	iload	10
+   126:	if_icmpge	378
+   129:	dload	6
+   131:	iload	37
+   133:	i2d
+   134:	dadd
+   135:	dload	15
+   137:	dmul
+   138:	aload_0
+   139:	getfield	#14; //Field c:D
+   142:	dadd
+   143:	dstore	38
+   145:	dload	38
+   147:	d2i
+   148:	istore	40
+   150:	dload	38
+   152:	iload	40
+   154:	i2d
+   155:	dcmpg
+   156:	ifge	162
+   159:	iinc	40, -1
+   162:	iload	40
+   164:	sipush	255
+   167:	iand
+   168:	istore	41
+   170:	dload	38
+   172:	iload	40
+   174:	i2d
+   175:	dsub
+   176:	dstore	38
+   178:	dload	38
+   180:	dload	38
+   182:	dmul
+   183:	dload	38
+   185:	dmul
+   186:	dload	38
+   188:	dload	38
+   190:	ldc2_w	#4; //double 6.0d
+   193:	dmul
+   194:	ldc2_w	#8; //double 15.0d
+   197:	dsub
+   198:	dmul
+   199:	ldc2_w	#6; //double 10.0d
+   202:	dadd
+   203:	dmul
+   204:	dstore	42
+   206:	aload_0
+   207:	getfield	#15; //Field d:[I
+   210:	iload	34
+   212:	iaload
+   213:	iconst_0
+   214:	iadd
+   215:	istore	19
+   217:	aload_0
+   218:	getfield	#15; //Field d:[I
+   221:	iload	19
+   223:	iaload
+   224:	iload	41
+   226:	iadd
+   227:	istore	20
+   229:	aload_0
+   230:	getfield	#15; //Field d:[I
+   233:	iload	34
+   235:	iconst_1
+   236:	iadd
+   237:	iaload
+   238:	iconst_0
+   239:	iadd
+   240:	istore	21
+   242:	aload_0
+   243:	getfield	#15; //Field d:[I
+   246:	iload	21
+   248:	iaload
+   249:	iload	41
+   251:	iadd
+   252:	istore	22
+   254:	aload_0
+   255:	dload	35
+   257:	aload_0
+   258:	aload_0
+   259:	getfield	#15; //Field d:[I
+   262:	iload	20
+   264:	iaload
+   265:	dload	31
+   267:	dload	38
+   269:	invokevirtual	#18; //Method a:(IDD)D
+   272:	aload_0
+   273:	aload_0
+   274:	getfield	#15; //Field d:[I
+   277:	iload	22
+   279:	iaload
+   280:	dload	31
+   282:	dconst_1
+   283:	dsub
+   284:	dconst_0
+   285:	dload	38
+   287:	invokevirtual	#19; //Method a:(IDDD)D
+   290:	invokevirtual	#20; //Method b:(DDD)D
+   293:	dstore	23
+   295:	aload_0
+   296:	dload	35
+   298:	aload_0
+   299:	aload_0
+   300:	getfield	#15; //Field d:[I
+   303:	iload	20
+   305:	iconst_1
+   306:	iadd
+   307:	iaload
+   308:	dload	31
+   310:	dconst_0
+   311:	dload	38
+   313:	dconst_1
+   314:	dsub
+   315:	invokevirtual	#19; //Method a:(IDDD)D
+   318:	aload_0
+   319:	aload_0
+   320:	getfield	#15; //Field d:[I
+   323:	iload	22
+   325:	iconst_1
+   326:	iadd
+   327:	iaload
+   328:	dload	31
+   330:	dconst_1
+   331:	dsub
+   332:	dconst_0
+   333:	dload	38
+   335:	dconst_1
+   336:	dsub
+   337:	invokevirtual	#19; //Method a:(IDDD)D
+   340:	invokevirtual	#20; //Method b:(DDD)D
+   343:	dstore	25
+   345:	aload_0
+   346:	dload	42
+   348:	dload	23
+   350:	dload	25
+   352:	invokevirtual	#20; //Method b:(DDD)D
+   355:	dstore	44
+   357:	aload_1
+   358:	iload	27
+   360:	iinc	27, 1
+   363:	dup2
+   364:	daload
+   365:	dload	44
+   367:	dload	28
+   369:	dmul
+   370:	dadd
+   371:	dastore
+   372:	iinc	37, 1
+   375:	goto	122
+   378:	iinc	30, 1
+   381:	goto	36
+   384:	return
+   385:	iconst_0
+   386:	istore	19
+   388:	dconst_1
+   389:	dload	17
+   391:	ddiv
+   392:	dstore	20
+   394:	iconst_m1
+   395:	istore	22
+   397:	iconst_0
+   398:	istore	23
+   400:	iconst_0
+   401:	istore	24
+   403:	iconst_0
+   404:	istore	25
+   406:	iconst_0
+   407:	istore	26
+   409:	iconst_0
+   410:	istore	27
+   412:	iconst_0
+   413:	istore	28
+   415:	dconst_0
+   416:	dstore	29
+   418:	dconst_0
+   419:	dstore	31
+   421:	dconst_0
+   422:	dstore	33
+   424:	dconst_0
+   425:	dstore	35
+   427:	iconst_0
+   428:	istore	37
+   430:	iload	37
+   432:	iload	8
+   434:	if_icmpge	1050
+   437:	dload_2
+   438:	iload	37
+   440:	i2d
+   441:	dadd
+   442:	dload	11
+   444:	dmul
+   445:	aload_0
+   446:	getfield	#12; //Field a:D
+   449:	dadd
+   450:	dstore	38
+   452:	dload	38
+   454:	d2i
+   455:	istore	40
+   457:	dload	38
+   459:	iload	40
+   461:	i2d
+   462:	dcmpg
+   463:	ifge	469
+   466:	iinc	40, -1
+   469:	iload	40
+   471:	sipush	255
+   474:	iand
+   475:	istore	41
+   477:	dload	38
+   479:	iload	40
+   481:	i2d
+   482:	dsub
+   483:	dstore	38
+   485:	dload	38
+   487:	dload	38
+   489:	dmul
+   490:	dload	38
+   492:	dmul
+   493:	dload	38
+   495:	dload	38
+   497:	ldc2_w	#4; //double 6.0d
+   500:	dmul
+   501:	ldc2_w	#8; //double 15.0d
+   504:	dsub
+   505:	dmul
+   506:	ldc2_w	#6; //double 10.0d
+   509:	dadd
+   510:	dmul
+   511:	dstore	42
+   513:	iconst_0
+   514:	istore	44
+   516:	iload	44
+   518:	iload	10
+   520:	if_icmpge	1044
+   523:	dload	6
+   525:	iload	44
+   527:	i2d
+   528:	dadd
+   529:	dload	15
+   531:	dmul
+   532:	aload_0
+   533:	getfield	#14; //Field c:D
+   536:	dadd
+   537:	dstore	45
+   539:	dload	45
+   541:	d2i
+   542:	istore	47
+   544:	dload	45
+   546:	iload	47
+   548:	i2d
+   549:	dcmpg
+   550:	ifge	556
+   553:	iinc	47, -1
+   556:	iload	47
+   558:	sipush	255
+   561:	iand
+   562:	istore	48
+   564:	dload	45
+   566:	iload	47
+   568:	i2d
+   569:	dsub
+   570:	dstore	45
+   572:	dload	45
+   574:	dload	45
+   576:	dmul
+   577:	dload	45
+   579:	dmul
+   580:	dload	45
+   582:	dload	45
+   584:	ldc2_w	#4; //double 6.0d
+   587:	dmul
+   588:	ldc2_w	#8; //double 15.0d
+   591:	dsub
+   592:	dmul
+   593:	ldc2_w	#6; //double 10.0d
+   596:	dadd
+   597:	dmul
+   598:	dstore	49
+   600:	iconst_0
+   601:	istore	51
+   603:	iload	51
+   605:	iload	9
+   607:	if_icmpge	1038
+   610:	dload	4
+   612:	iload	51
+   614:	i2d
+   615:	dadd
+   616:	dload	13
+   618:	dmul
+   619:	aload_0
+   620:	getfield	#13; //Field b:D
+   623:	dadd
+   624:	dstore	52
+   626:	dload	52
+   628:	d2i
+   629:	istore	54
+   631:	dload	52
+   633:	iload	54
+   635:	i2d
+   636:	dcmpg
+   637:	ifge	643
+   640:	iinc	54, -1
+   643:	iload	54
+   645:	sipush	255
+   648:	iand
+   649:	istore	55
+   651:	dload	52
+   653:	iload	54
+   655:	i2d
+   656:	dsub
+   657:	dstore	52
+   659:	dload	52
+   661:	dload	52
+   663:	dmul
+   664:	dload	52
+   666:	dmul
+   667:	dload	52
+   669:	dload	52
+   671:	ldc2_w	#4; //double 6.0d
+   674:	dmul
+   675:	ldc2_w	#8; //double 15.0d
+   678:	dsub
+   679:	dmul
+   680:	ldc2_w	#6; //double 10.0d
+   683:	dadd
+   684:	dmul
+   685:	dstore	56
+   687:	iload	51
+   689:	ifeq	699
+   692:	iload	55
+   694:	iload	22
+   696:	if_icmpeq	981
+   699:	iload	55
+   701:	istore	22
+   703:	aload_0
+   704:	getfield	#15; //Field d:[I
+   707:	iload	41
+   709:	iaload
+   710:	iload	55
+   712:	iadd
+   713:	istore	23
+   715:	aload_0
+   716:	getfield	#15; //Field d:[I
+   719:	iload	23
+   721:	iaload
+   722:	iload	48
+   724:	iadd
+   725:	istore	24
+   727:	aload_0
+   728:	getfield	#15; //Field d:[I
+   731:	iload	23
+   733:	iconst_1
+   734:	iadd
+   735:	iaload
+   736:	iload	48
+   738:	iadd
+   739:	istore	25
+   741:	aload_0
+   742:	getfield	#15; //Field d:[I
+   745:	iload	41
+   747:	iconst_1
+   748:	iadd
+   749:	iaload
+   750:	iload	55
+   752:	iadd
+   753:	istore	26
+   755:	aload_0
+   756:	getfield	#15; //Field d:[I
+   759:	iload	26
+   761:	iaload
+   762:	iload	48
+   764:	iadd
+   765:	istore	27
+   767:	aload_0
+   768:	getfield	#15; //Field d:[I
+   771:	iload	26
+   773:	iconst_1
+   774:	iadd
+   775:	iaload
+   776:	iload	48
+   778:	iadd
+   779:	istore	28
+   781:	aload_0
+   782:	dload	42
+   784:	aload_0
+   785:	aload_0
+   786:	getfield	#15; //Field d:[I
+   789:	iload	24
+   791:	iaload
+   792:	dload	38
+   794:	dload	52
+   796:	dload	45
+   798:	invokevirtual	#19; //Method a:(IDDD)D
+   801:	aload_0
+   802:	aload_0
+   803:	getfield	#15; //Field d:[I
+   806:	iload	27
+   808:	iaload
+   809:	dload	38
+   811:	dconst_1
+   812:	dsub
+   813:	dload	52
+   815:	dload	45
+   817:	invokevirtual	#19; //Method a:(IDDD)D
+   820:	invokevirtual	#20; //Method b:(DDD)D
+   823:	dstore	29
+   825:	aload_0
+   826:	dload	42
+   828:	aload_0
+   829:	aload_0
+   830:	getfield	#15; //Field d:[I
+   833:	iload	25
+   835:	iaload
+   836:	dload	38
+   838:	dload	52
+   840:	dconst_1
+   841:	dsub
+   842:	dload	45
+   844:	invokevirtual	#19; //Method a:(IDDD)D
+   847:	aload_0
+   848:	aload_0
+   849:	getfield	#15; //Field d:[I
+   852:	iload	28
+   854:	iaload
+   855:	dload	38
+   857:	dconst_1
+   858:	dsub
+   859:	dload	52
+   861:	dconst_1
+   862:	dsub
+   863:	dload	45
+   865:	invokevirtual	#19; //Method a:(IDDD)D
+   868:	invokevirtual	#20; //Method b:(DDD)D
+   871:	dstore	31
+   873:	aload_0
+   874:	dload	42
+   876:	aload_0
+   877:	aload_0
+   878:	getfield	#15; //Field d:[I
+   881:	iload	24
+   883:	iconst_1
+   884:	iadd
+   885:	iaload
+   886:	dload	38
+   888:	dload	52
+   890:	dload	45
+   892:	dconst_1
+   893:	dsub
+   894:	invokevirtual	#19; //Method a:(IDDD)D
+   897:	aload_0
+   898:	aload_0
+   899:	getfield	#15; //Field d:[I
+   902:	iload	27
+   904:	iconst_1
+   905:	iadd
+   906:	iaload
+   907:	dload	38
+   909:	dconst_1
+   910:	dsub
+   911:	dload	52
+   913:	dload	45
+   915:	dconst_1
+   916:	dsub
+   917:	invokevirtual	#19; //Method a:(IDDD)D
+   920:	invokevirtual	#20; //Method b:(DDD)D
+   923:	dstore	33
+   925:	aload_0
+   926:	dload	42
+   928:	aload_0
+   929:	aload_0
+   930:	getfield	#15; //Field d:[I
+   933:	iload	25
+   935:	iconst_1
+   936:	iadd
+   937:	iaload
+   938:	dload	38
+   940:	dload	52
+   942:	dconst_1
+   943:	dsub
+   944:	dload	45
+   946:	dconst_1
+   947:	dsub
+   948:	invokevirtual	#19; //Method a:(IDDD)D
+   951:	aload_0
+   952:	aload_0
+   953:	getfield	#15; //Field d:[I
+   956:	iload	28
+   958:	iconst_1
+   959:	iadd
+   960:	iaload
+   961:	dload	38
+   963:	dconst_1
+   964:	dsub
+   965:	dload	52
+   967:	dconst_1
+   968:	dsub
+   969:	dload	45
+   971:	dconst_1
+   972:	dsub
+   973:	invokevirtual	#19; //Method a:(IDDD)D
+   976:	invokevirtual	#20; //Method b:(DDD)D
+   979:	dstore	35
+   981:	aload_0
+   982:	dload	56
+   984:	dload	29
+   986:	dload	31
+   988:	invokevirtual	#20; //Method b:(DDD)D
+   991:	dstore	58
+   993:	aload_0
+   994:	dload	56
+   996:	dload	33
+   998:	dload	35
+   1000:	invokevirtual	#20; //Method b:(DDD)D
+   1003:	dstore	60
+   1005:	aload_0
+   1006:	dload	49
+   1008:	dload	58
+   1010:	dload	60
+   1012:	invokevirtual	#20; //Method b:(DDD)D
+   1015:	dstore	62
+   1017:	aload_1
+   1018:	iload	19
+   1020:	iinc	19, 1
+   1023:	dup2
+   1024:	daload
+   1025:	dload	62
+   1027:	dload	20
+   1029:	dmul
+   1030:	dadd
+   1031:	dastore
+   1032:	iinc	51, 1
+   1035:	goto	603
+   1038:	iinc	44, 1
+   1041:	goto	516
+   1044:	iinc	37, 1
+   1047:	goto	430
+   1050:	return
+
+}
+

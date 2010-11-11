@@ -1,0 +1,261 @@
+Compiled from SourceFile
+public class ht extends jt{
+public ht(el);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	invokespecial	#42; //Method jt."<init>":(Lel;)V
+   5:	return
+
+protected void a(float);
+  Code:
+   0:	return
+
+public void c(float, float);
+  Code:
+   0:	aload_0
+   1:	invokevirtual	#40; //Method r:()Z
+   4:	ifeq	70
+   7:	aload_0
+   8:	fload_1
+   9:	fload_2
+   10:	ldc	#1; //float 0.02f
+   12:	invokevirtual	#38; //Method a:(FFF)V
+   15:	aload_0
+   16:	aload_0
+   17:	getfield	#31; //Field s:D
+   20:	aload_0
+   21:	getfield	#32; //Field t:D
+   24:	aload_0
+   25:	getfield	#33; //Field u:D
+   28:	invokevirtual	#39; //Method c:(DDD)V
+   31:	aload_0
+   32:	dup
+   33:	getfield	#31; //Field s:D
+   36:	ldc2_w	#16; //double 0.800000011920929d
+   39:	dmul
+   40:	putfield	#31; //Field s:D
+   43:	aload_0
+   44:	dup
+   45:	getfield	#32; //Field t:D
+   48:	ldc2_w	#16; //double 0.800000011920929d
+   51:	dmul
+   52:	putfield	#32; //Field t:D
+   55:	aload_0
+   56:	dup
+   57:	getfield	#33; //Field u:D
+   60:	ldc2_w	#16; //double 0.800000011920929d
+   63:	dmul
+   64:	putfield	#33; //Field u:D
+   67:	goto	359
+   70:	aload_0
+   71:	invokevirtual	#41; //Method t:()Z
+   74:	ifeq	145
+   77:	aload_0
+   78:	getfield	#29; //Field q:D
+   81:	dstore_3
+   82:	aload_0
+   83:	fload_1
+   84:	fload_2
+   85:	ldc	#1; //float 0.02f
+   87:	invokevirtual	#38; //Method a:(FFF)V
+   90:	aload_0
+   91:	aload_0
+   92:	getfield	#31; //Field s:D
+   95:	aload_0
+   96:	getfield	#32; //Field t:D
+   99:	aload_0
+   100:	getfield	#33; //Field u:D
+   103:	invokevirtual	#39; //Method c:(DDD)V
+   106:	aload_0
+   107:	dup
+   108:	getfield	#31; //Field s:D
+   111:	ldc2_w	#14; //double 0.5d
+   114:	dmul
+   115:	putfield	#31; //Field s:D
+   118:	aload_0
+   119:	dup
+   120:	getfield	#32; //Field t:D
+   123:	ldc2_w	#14; //double 0.5d
+   126:	dmul
+   127:	putfield	#32; //Field t:D
+   130:	aload_0
+   131:	dup
+   132:	getfield	#33; //Field u:D
+   135:	ldc2_w	#14; //double 0.5d
+   138:	dmul
+   139:	putfield	#33; //Field u:D
+   142:	goto	359
+   145:	ldc	#6; //float 0.91f
+   147:	fstore_3
+   148:	aload_0
+   149:	getfield	#21; //Field A:Z
+   152:	ifeq	211
+   155:	ldc	#5; //float 0.54600006f
+   157:	fstore_3
+   158:	aload_0
+   159:	getfield	#25; //Field l:Lel;
+   162:	aload_0
+   163:	getfield	#28; //Field p:D
+   166:	invokestatic	#37; //Method hb.b:(D)I
+   169:	aload_0
+   170:	getfield	#34; //Field z:Lds;
+   173:	getfield	#18; //Field ds.b:D
+   176:	invokestatic	#37; //Method hb.b:(D)I
+   179:	iconst_1
+   180:	isub
+   181:	aload_0
+   182:	getfield	#30; //Field r:D
+   185:	invokestatic	#37; //Method hb.b:(D)I
+   188:	invokevirtual	#35; //Method el.a:(III)I
+   191:	istore	4
+   193:	iload	4
+   195:	ifle	211
+   198:	getstatic	#20; //Field fw.n:[Lfw;
+   201:	iload	4
+   203:	aaload
+   204:	getfield	#19; //Field fw.bu:F
+   207:	ldc	#6; //float 0.91f
+   209:	fmul
+   210:	fstore_3
+   211:	ldc	#3; //float 0.16277136f
+   213:	fload_3
+   214:	fload_3
+   215:	fmul
+   216:	fload_3
+   217:	fmul
+   218:	fdiv
+   219:	fstore	4
+   221:	aload_0
+   222:	fload_1
+   223:	fload_2
+   224:	aload_0
+   225:	getfield	#21; //Field A:Z
+   228:	ifeq	239
+   231:	ldc	#2; //float 0.1f
+   233:	fload	4
+   235:	fmul
+   236:	goto	241
+   239:	ldc	#1; //float 0.02f
+   241:	invokevirtual	#38; //Method a:(FFF)V
+   244:	ldc	#6; //float 0.91f
+   246:	fstore_3
+   247:	aload_0
+   248:	getfield	#21; //Field A:Z
+   251:	ifeq	310
+   254:	ldc	#5; //float 0.54600006f
+   256:	fstore_3
+   257:	aload_0
+   258:	getfield	#25; //Field l:Lel;
+   261:	aload_0
+   262:	getfield	#28; //Field p:D
+   265:	invokestatic	#37; //Method hb.b:(D)I
+   268:	aload_0
+   269:	getfield	#34; //Field z:Lds;
+   272:	getfield	#18; //Field ds.b:D
+   275:	invokestatic	#37; //Method hb.b:(D)I
+   278:	iconst_1
+   279:	isub
+   280:	aload_0
+   281:	getfield	#30; //Field r:D
+   284:	invokestatic	#37; //Method hb.b:(D)I
+   287:	invokevirtual	#35; //Method el.a:(III)I
+   290:	istore	5
+   292:	iload	5
+   294:	ifle	310
+   297:	getstatic	#20; //Field fw.n:[Lfw;
+   300:	iload	5
+   302:	aaload
+   303:	getfield	#19; //Field fw.bu:F
+   306:	ldc	#6; //float 0.91f
+   308:	fmul
+   309:	fstore_3
+   310:	aload_0
+   311:	aload_0
+   312:	getfield	#31; //Field s:D
+   315:	aload_0
+   316:	getfield	#32; //Field t:D
+   319:	aload_0
+   320:	getfield	#33; //Field u:D
+   323:	invokevirtual	#39; //Method c:(DDD)V
+   326:	aload_0
+   327:	dup
+   328:	getfield	#31; //Field s:D
+   331:	fload_3
+   332:	f2d
+   333:	dmul
+   334:	putfield	#31; //Field s:D
+   337:	aload_0
+   338:	dup
+   339:	getfield	#32; //Field t:D
+   342:	fload_3
+   343:	f2d
+   344:	dmul
+   345:	putfield	#32; //Field t:D
+   348:	aload_0
+   349:	dup
+   350:	getfield	#33; //Field u:D
+   353:	fload_3
+   354:	f2d
+   355:	dmul
+   356:	putfield	#33; //Field u:D
+   359:	aload_0
+   360:	aload_0
+   361:	getfield	#23; //Field bc:F
+   364:	putfield	#22; //Field bb:F
+   367:	aload_0
+   368:	getfield	#28; //Field p:D
+   371:	aload_0
+   372:	getfield	#26; //Field m:D
+   375:	dsub
+   376:	dstore_3
+   377:	aload_0
+   378:	getfield	#30; //Field r:D
+   381:	aload_0
+   382:	getfield	#27; //Field o:D
+   385:	dsub
+   386:	dstore	5
+   388:	dload_3
+   389:	dload_3
+   390:	dmul
+   391:	dload	5
+   393:	dload	5
+   395:	dmul
+   396:	dadd
+   397:	invokestatic	#36; //Method hb.a:(D)F
+   400:	ldc	#7; //float 4.0f
+   402:	fmul
+   403:	fstore	7
+   405:	fload	7
+   407:	fconst_1
+   408:	fcmpl
+   409:	ifle	415
+   412:	fconst_1
+   413:	fstore	7
+   415:	aload_0
+   416:	dup
+   417:	getfield	#23; //Field bc:F
+   420:	fload	7
+   422:	aload_0
+   423:	getfield	#23; //Field bc:F
+   426:	fsub
+   427:	ldc	#4; //float 0.4f
+   429:	fmul
+   430:	fadd
+   431:	putfield	#23; //Field bc:F
+   434:	aload_0
+   435:	dup
+   436:	getfield	#24; //Field bd:F
+   439:	aload_0
+   440:	getfield	#23; //Field bc:F
+   443:	fadd
+   444:	putfield	#24; //Field bd:F
+   447:	return
+
+public boolean d_();
+  Code:
+   0:	iconst_0
+   1:	ireturn
+
+}
+

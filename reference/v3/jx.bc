@@ -1,0 +1,8 @@
+Compiled from SourceFile
+public interface jx{
+public abstract int a();
+
+public abstract hh a(int);
+
+}
+

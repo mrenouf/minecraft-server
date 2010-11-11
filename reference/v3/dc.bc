@@ -1,0 +1,209 @@
+Compiled from SourceFile
+public class dc extends java.lang.Object{
+public static java.util.logging.Logger a;
+
+public dc(java.io.File);
+  Code:
+   0:	aload_0
+   1:	invokespecial	#33; //Method java/lang/Object."<init>":()V
+   4:	aload_0
+   5:	new	#17; //class java/util/Properties
+   8:	dup
+   9:	invokespecial	#40; //Method java/util/Properties."<init>":()V
+   12:	putfield	#21; //Field b:Ljava/util/Properties;
+   15:	aload_0
+   16:	aload_1
+   17:	putfield	#22; //Field c:Ljava/io/File;
+   20:	aload_1
+   21:	invokevirtual	#28; //Method java/io/File.exists:()Z
+   24:	ifeq	82
+   27:	aload_0
+   28:	getfield	#21; //Field b:Ljava/util/Properties;
+   31:	new	#10; //class java/io/FileInputStream
+   34:	dup
+   35:	aload_1
+   36:	invokespecial	#29; //Method java/io/FileInputStream."<init>":(Ljava/io/File;)V
+   39:	invokevirtual	#43; //Method java/util/Properties.load:(Ljava/io/InputStream;)V
+   42:	goto	114
+   45:	astore_2
+   46:	getstatic	#20; //Field a:Ljava/util/logging/Logger;
+   49:	getstatic	#24; //Field java/util/logging/Level.WARNING:Ljava/util/logging/Level;
+   52:	new	#16; //class java/lang/StringBuilder
+   55:	dup
+   56:	invokespecial	#34; //Method java/lang/StringBuilder."<init>":()V
+   59:	ldc	#3; //String Failed to load 
+   61:	invokevirtual	#37; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   64:	aload_1
+   65:	invokevirtual	#36; //Method java/lang/StringBuilder.append:(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+   68:	invokevirtual	#39; //Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+   71:	aload_2
+   72:	invokevirtual	#48; //Method java/util/logging/Logger.log:(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/Throwable;)V
+   75:	aload_0
+   76:	invokevirtual	#25; //Method a:()V
+   79:	goto	114
+   82:	getstatic	#20; //Field a:Ljava/util/logging/Logger;
+   85:	getstatic	#24; //Field java/util/logging/Level.WARNING:Ljava/util/logging/Level;
+   88:	new	#16; //class java/lang/StringBuilder
+   91:	dup
+   92:	invokespecial	#34; //Method java/lang/StringBuilder."<init>":()V
+   95:	aload_1
+   96:	invokevirtual	#36; //Method java/lang/StringBuilder.append:(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+   99:	ldc	#2; //String  does not exist
+   101:	invokevirtual	#37; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   104:	invokevirtual	#39; //Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+   107:	invokevirtual	#47; //Method java/util/logging/Logger.log:(Ljava/util/logging/Level;Ljava/lang/String;)V
+   110:	aload_0
+   111:	invokevirtual	#25; //Method a:()V
+   114:	return
+  Exception table:
+   from   to  target type
+    27    42    45   Class java/lang/Exception
+
+
+public void a();
+  Code:
+   0:	getstatic	#20; //Field a:Ljava/util/logging/Logger;
+   3:	getstatic	#23; //Field java/util/logging/Level.INFO:Ljava/util/logging/Level;
+   6:	ldc	#5; //String Generating new properties file
+   8:	invokevirtual	#47; //Method java/util/logging/Logger.log:(Ljava/util/logging/Level;Ljava/lang/String;)V
+   11:	aload_0
+   12:	invokevirtual	#27; //Method b:()V
+   15:	return
+
+public void b();
+  Code:
+   0:	aload_0
+   1:	getfield	#21; //Field b:Ljava/util/Properties;
+   4:	new	#11; //class java/io/FileOutputStream
+   7:	dup
+   8:	aload_0
+   9:	getfield	#22; //Field c:Ljava/io/File;
+   12:	invokespecial	#30; //Method java/io/FileOutputStream."<init>":(Ljava/io/File;)V
+   15:	ldc	#7; //String Minecraft server properties
+   17:	invokevirtual	#45; //Method java/util/Properties.store:(Ljava/io/OutputStream;Ljava/lang/String;)V
+   20:	goto	60
+   23:	astore_1
+   24:	getstatic	#20; //Field a:Ljava/util/logging/Logger;
+   27:	getstatic	#24; //Field java/util/logging/Level.WARNING:Ljava/util/logging/Level;
+   30:	new	#16; //class java/lang/StringBuilder
+   33:	dup
+   34:	invokespecial	#34; //Method java/lang/StringBuilder."<init>":()V
+   37:	ldc	#4; //String Failed to save 
+   39:	invokevirtual	#37; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   42:	aload_0
+   43:	getfield	#22; //Field c:Ljava/io/File;
+   46:	invokevirtual	#36; //Method java/lang/StringBuilder.append:(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+   49:	invokevirtual	#39; //Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+   52:	aload_1
+   53:	invokevirtual	#48; //Method java/util/logging/Logger.log:(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/Throwable;)V
+   56:	aload_0
+   57:	invokevirtual	#25; //Method a:()V
+   60:	return
+  Exception table:
+   from   to  target type
+     0    20    23   Class java/lang/Exception
+
+
+public java.lang.String a(java.lang.String, java.lang.String);
+  Code:
+   0:	aload_0
+   1:	getfield	#21; //Field b:Ljava/util/Properties;
+   4:	aload_1
+   5:	invokevirtual	#41; //Method java/util/Properties.containsKey:(Ljava/lang/Object;)Z
+   8:	ifne	25
+   11:	aload_0
+   12:	getfield	#21; //Field b:Ljava/util/Properties;
+   15:	aload_1
+   16:	aload_2
+   17:	invokevirtual	#44; //Method java/util/Properties.setProperty:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
+   20:	pop
+   21:	aload_0
+   22:	invokevirtual	#27; //Method b:()V
+   25:	aload_0
+   26:	getfield	#21; //Field b:Ljava/util/Properties;
+   29:	aload_1
+   30:	aload_2
+   31:	invokevirtual	#42; //Method java/util/Properties.getProperty:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+   34:	areturn
+
+public int a(java.lang.String, int);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	new	#16; //class java/lang/StringBuilder
+   5:	dup
+   6:	invokespecial	#34; //Method java/lang/StringBuilder."<init>":()V
+   9:	ldc	#1; //String 
+   11:	invokevirtual	#37; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   14:	iload_2
+   15:	invokevirtual	#35; //Method java/lang/StringBuilder.append:(I)Ljava/lang/StringBuilder;
+   18:	invokevirtual	#39; //Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+   21:	invokevirtual	#26; //Method a:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+   24:	invokestatic	#32; //Method java/lang/Integer.parseInt:(Ljava/lang/String;)I
+   27:	ireturn
+   28:	astore_3
+   29:	aload_0
+   30:	getfield	#21; //Field b:Ljava/util/Properties;
+   33:	aload_1
+   34:	new	#16; //class java/lang/StringBuilder
+   37:	dup
+   38:	invokespecial	#34; //Method java/lang/StringBuilder."<init>":()V
+   41:	ldc	#1; //String 
+   43:	invokevirtual	#37; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   46:	iload_2
+   47:	invokevirtual	#35; //Method java/lang/StringBuilder.append:(I)Ljava/lang/StringBuilder;
+   50:	invokevirtual	#39; //Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+   53:	invokevirtual	#44; //Method java/util/Properties.setProperty:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
+   56:	pop
+   57:	iload_2
+   58:	ireturn
+  Exception table:
+   from   to  target type
+     0    27    28   Class java/lang/Exception
+
+
+public boolean a(java.lang.String, boolean);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	new	#16; //class java/lang/StringBuilder
+   5:	dup
+   6:	invokespecial	#34; //Method java/lang/StringBuilder."<init>":()V
+   9:	ldc	#1; //String 
+   11:	invokevirtual	#37; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   14:	iload_2
+   15:	invokevirtual	#38; //Method java/lang/StringBuilder.append:(Z)Ljava/lang/StringBuilder;
+   18:	invokevirtual	#39; //Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+   21:	invokevirtual	#26; //Method a:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+   24:	invokestatic	#31; //Method java/lang/Boolean.parseBoolean:(Ljava/lang/String;)Z
+   27:	ireturn
+   28:	astore_3
+   29:	aload_0
+   30:	getfield	#21; //Field b:Ljava/util/Properties;
+   33:	aload_1
+   34:	new	#16; //class java/lang/StringBuilder
+   37:	dup
+   38:	invokespecial	#34; //Method java/lang/StringBuilder."<init>":()V
+   41:	ldc	#1; //String 
+   43:	invokevirtual	#37; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   46:	iload_2
+   47:	invokevirtual	#38; //Method java/lang/StringBuilder.append:(Z)Ljava/lang/StringBuilder;
+   50:	invokevirtual	#39; //Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+   53:	invokevirtual	#44; //Method java/util/Properties.setProperty:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
+   56:	pop
+   57:	iload_2
+   58:	ireturn
+  Exception table:
+   from   to  target type
+     0    27    28   Class java/lang/Exception
+
+
+static {};
+  Code:
+   0:	ldc	#6; //String Minecraft
+   2:	invokestatic	#46; //Method java/util/logging/Logger.getLogger:(Ljava/lang/String;)Ljava/util/logging/Logger;
+   5:	putstatic	#20; //Field a:Ljava/util/logging/Logger;
+   8:	return
+
+}
+

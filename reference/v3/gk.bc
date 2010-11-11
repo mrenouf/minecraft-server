@@ -1,0 +1,69 @@
+Compiled from SourceFile
+public class gk extends java.lang.Object{
+public int a;
+
+public int b;
+
+public int c;
+
+public int d;
+
+public int e;
+
+public ba f;
+
+public dv g;
+
+public gk(int, int, int, int, ba);
+  Code:
+   0:	aload_0
+   1:	invokespecial	#19; //Method java/lang/Object."<init>":()V
+   4:	aload_0
+   5:	iconst_0
+   6:	putfield	#11; //Field a:I
+   9:	aload_0
+   10:	iload_1
+   11:	putfield	#12; //Field b:I
+   14:	aload_0
+   15:	iload_2
+   16:	putfield	#13; //Field c:I
+   19:	aload_0
+   20:	iload_3
+   21:	putfield	#14; //Field d:I
+   24:	aload_0
+   25:	iload	4
+   27:	putfield	#15; //Field e:I
+   30:	aload_0
+   31:	aload	5
+   33:	getfield	#5; //Field ba.a:D
+   36:	aload	5
+   38:	getfield	#6; //Field ba.b:D
+   41:	aload	5
+   43:	getfield	#7; //Field ba.c:D
+   46:	invokestatic	#18; //Method ba.b:(DDD)Lba;
+   49:	putfield	#16; //Field f:Lba;
+   52:	return
+
+public gk(dv);
+  Code:
+   0:	aload_0
+   1:	invokespecial	#19; //Method java/lang/Object."<init>":()V
+   4:	aload_0
+   5:	iconst_1
+   6:	putfield	#11; //Field a:I
+   9:	aload_0
+   10:	aload_1
+   11:	putfield	#17; //Field g:Ldv;
+   14:	aload_0
+   15:	aload_1
+   16:	getfield	#8; //Field dv.p:D
+   19:	aload_1
+   20:	getfield	#9; //Field dv.q:D
+   23:	aload_1
+   24:	getfield	#10; //Field dv.r:D
+   27:	invokestatic	#18; //Method ba.b:(DDD)Lba;
+   30:	putfield	#16; //Field f:Lba;
+   33:	return
+
+}
+

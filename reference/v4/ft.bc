@@ -1,0 +1,267 @@
+Compiled from SourceFile
+public class ft extends de{
+protected ft(int, java.lang.Class, boolean);
+  Code:
+   0:	aload_0
+   1:	iload_1
+   2:	getstatic	#21; //Field jt.c:Ljt;
+   5:	invokespecial	#22; //Method de."<init>":(ILjt;)V
+   8:	aload_0
+   9:	iload_3
+   10:	putfield	#19; //Field b:Z
+   13:	aload_0
+   14:	iconst_4
+   15:	putfield	#20; //Field bg:I
+   18:	aload_0
+   19:	aload_2
+   20:	putfield	#18; //Field a:Ljava/lang/Class;
+   23:	ldc	#2; //float 0.25f
+   25:	fstore	4
+   27:	fconst_1
+   28:	fstore	5
+   30:	aload_0
+   31:	ldc	#4; //float 0.5f
+   33:	fload	4
+   35:	fsub
+   36:	fconst_0
+   37:	ldc	#4; //float 0.5f
+   39:	fload	4
+   41:	fsub
+   42:	ldc	#4; //float 0.5f
+   44:	fload	4
+   46:	fadd
+   47:	fload	5
+   49:	ldc	#4; //float 0.5f
+   51:	fload	4
+   53:	fadd
+   54:	invokevirtual	#27; //Method a:(FFFFFF)V
+   57:	return
+
+public dt d(em, int, int, int);
+  Code:
+   0:	aconst_null
+   1:	areturn
+
+public void a(iq, int, int, int);
+  Code:
+   0:	aload_0
+   1:	getfield	#19; //Field b:Z
+   4:	ifeq	8
+   7:	return
+   8:	aload_1
+   9:	iload_2
+   10:	iload_3
+   11:	iload	4
+   13:	invokeinterface	#32,  4; //InterfaceMethod iq.b:(III)I
+   18:	istore	5
+   20:	ldc	#3; //float 0.28125f
+   22:	fstore	6
+   24:	ldc	#5; //float 0.78125f
+   26:	fstore	7
+   28:	fconst_0
+   29:	fstore	8
+   31:	fconst_1
+   32:	fstore	9
+   34:	ldc	#1; //float 0.125f
+   36:	fstore	10
+   38:	aload_0
+   39:	fconst_0
+   40:	fconst_0
+   41:	fconst_0
+   42:	fconst_1
+   43:	fconst_1
+   44:	fconst_1
+   45:	invokevirtual	#27; //Method a:(FFFFFF)V
+   48:	iload	5
+   50:	iconst_2
+   51:	if_icmpne	71
+   54:	aload_0
+   55:	fload	8
+   57:	fload	6
+   59:	fconst_1
+   60:	fload	10
+   62:	fsub
+   63:	fload	9
+   65:	fload	7
+   67:	fconst_1
+   68:	invokevirtual	#27; //Method a:(FFFFFF)V
+   71:	iload	5
+   73:	iconst_3
+   74:	if_icmpne	92
+   77:	aload_0
+   78:	fload	8
+   80:	fload	6
+   82:	fconst_0
+   83:	fload	9
+   85:	fload	7
+   87:	fload	10
+   89:	invokevirtual	#27; //Method a:(FFFFFF)V
+   92:	iload	5
+   94:	iconst_4
+   95:	if_icmpne	115
+   98:	aload_0
+   99:	fconst_1
+   100:	fload	10
+   102:	fsub
+   103:	fload	6
+   105:	fload	8
+   107:	fconst_1
+   108:	fload	7
+   110:	fload	9
+   112:	invokevirtual	#27; //Method a:(FFFFFF)V
+   115:	iload	5
+   117:	iconst_5
+   118:	if_icmpne	136
+   121:	aload_0
+   122:	fconst_0
+   123:	fload	6
+   125:	fload	8
+   127:	fload	10
+   129:	fload	7
+   131:	fload	9
+   133:	invokevirtual	#27; //Method a:(FFFFFF)V
+   136:	return
+
+public boolean a();
+  Code:
+   0:	iconst_0
+   1:	ireturn
+
+protected ay a_();
+  Code:
+   0:	aload_0
+   1:	getfield	#18; //Field a:Ljava/lang/Class;
+   4:	invokevirtual	#29; //Method java/lang/Class.newInstance:()Ljava/lang/Object;
+   7:	checkcast	#6; //class ay
+   10:	areturn
+   11:	astore_1
+   12:	new	#14; //class java/lang/RuntimeException
+   15:	dup
+   16:	aload_1
+   17:	invokespecial	#30; //Method java/lang/RuntimeException."<init>":(Ljava/lang/Throwable;)V
+   20:	athrow
+  Exception table:
+   from   to  target type
+     0    10    11   Class java/lang/Exception
+
+
+public int a(int, java.util.Random);
+  Code:
+   0:	getstatic	#17; //Field fs.as:Lfs;
+   3:	getfield	#16; //Field fs.aW:I
+   6:	ireturn
+
+public void b(em, int, int, int, int);
+  Code:
+   0:	iconst_0
+   1:	istore	6
+   3:	aload_0
+   4:	getfield	#19; //Field b:Z
+   7:	ifeq	32
+   10:	aload_1
+   11:	iload_2
+   12:	iload_3
+   13:	iconst_1
+   14:	isub
+   15:	iload	4
+   17:	invokevirtual	#25; //Method em.c:(III)Ljt;
+   20:	invokevirtual	#31; //Method jt.a:()Z
+   23:	ifne	145
+   26:	iconst_1
+   27:	istore	6
+   29:	goto	145
+   32:	aload_1
+   33:	iload_2
+   34:	iload_3
+   35:	iload	4
+   37:	invokevirtual	#24; //Method em.b:(III)I
+   40:	istore	7
+   42:	iconst_1
+   43:	istore	6
+   45:	iload	7
+   47:	iconst_2
+   48:	if_icmpne	70
+   51:	aload_1
+   52:	iload_2
+   53:	iload_3
+   54:	iload	4
+   56:	iconst_1
+   57:	iadd
+   58:	invokevirtual	#25; //Method em.c:(III)Ljt;
+   61:	invokevirtual	#31; //Method jt.a:()Z
+   64:	ifeq	70
+   67:	iconst_0
+   68:	istore	6
+   70:	iload	7
+   72:	iconst_3
+   73:	if_icmpne	95
+   76:	aload_1
+   77:	iload_2
+   78:	iload_3
+   79:	iload	4
+   81:	iconst_1
+   82:	isub
+   83:	invokevirtual	#25; //Method em.c:(III)Ljt;
+   86:	invokevirtual	#31; //Method jt.a:()Z
+   89:	ifeq	95
+   92:	iconst_0
+   93:	istore	6
+   95:	iload	7
+   97:	iconst_4
+   98:	if_icmpne	120
+   101:	aload_1
+   102:	iload_2
+   103:	iconst_1
+   104:	iadd
+   105:	iload_3
+   106:	iload	4
+   108:	invokevirtual	#25; //Method em.c:(III)Ljt;
+   111:	invokevirtual	#31; //Method jt.a:()Z
+   114:	ifeq	120
+   117:	iconst_0
+   118:	istore	6
+   120:	iload	7
+   122:	iconst_5
+   123:	if_icmpne	145
+   126:	aload_1
+   127:	iload_2
+   128:	iconst_1
+   129:	isub
+   130:	iload_3
+   131:	iload	4
+   133:	invokevirtual	#25; //Method em.c:(III)Ljt;
+   136:	invokevirtual	#31; //Method jt.a:()Z
+   139:	ifeq	145
+   142:	iconst_0
+   143:	istore	6
+   145:	iload	6
+   147:	ifeq	177
+   150:	aload_0
+   151:	aload_1
+   152:	iload_2
+   153:	iload_3
+   154:	iload	4
+   156:	aload_1
+   157:	iload_2
+   158:	iload_3
+   159:	iload	4
+   161:	invokevirtual	#24; //Method em.b:(III)I
+   164:	invokevirtual	#28; //Method a_:(Lem;IIII)V
+   167:	aload_1
+   168:	iload_2
+   169:	iload_3
+   170:	iload	4
+   172:	iconst_0
+   173:	invokevirtual	#26; //Method em.d:(IIII)Z
+   176:	pop
+   177:	aload_0
+   178:	aload_1
+   179:	iload_2
+   180:	iload_3
+   181:	iload	4
+   183:	iload	5
+   185:	invokespecial	#23; //Method de.b:(Lem;IIII)V
+   188:	return
+
+}
+

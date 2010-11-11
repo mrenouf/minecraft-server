@@ -1,0 +1,120 @@
+Compiled from SourceFile
+public class ji extends ay{
+public java.lang.String[] e;
+
+public int f;
+
+public ji();
+  Code:
+   0:	aload_0
+   1:	invokespecial	#14; //Method ay."<init>":()V
+   4:	aload_0
+   5:	iconst_4
+   6:	anewarray	#8; //class java/lang/String
+   9:	dup
+   10:	iconst_0
+   11:	ldc	#1; //String 
+   13:	aastore
+   14:	dup
+   15:	iconst_1
+   16:	ldc	#1; //String 
+   18:	aastore
+   19:	dup
+   20:	iconst_2
+   21:	ldc	#1; //String 
+   23:	aastore
+   24:	dup
+   25:	iconst_3
+   26:	ldc	#1; //String 
+   28:	aastore
+   29:	putfield	#12; //Field e:[Ljava/lang/String;
+   32:	aload_0
+   33:	iconst_m1
+   34:	putfield	#13; //Field f:I
+   37:	return
+
+public void b(v);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	invokespecial	#16; //Method ay.b:(Lv;)V
+   5:	aload_1
+   6:	ldc	#3; //String Text1
+   8:	aload_0
+   9:	getfield	#12; //Field e:[Ljava/lang/String;
+   12:	iconst_0
+   13:	aaload
+   14:	invokevirtual	#23; //Method v.a:(Ljava/lang/String;Ljava/lang/String;)V
+   17:	aload_1
+   18:	ldc	#4; //String Text2
+   20:	aload_0
+   21:	getfield	#12; //Field e:[Ljava/lang/String;
+   24:	iconst_1
+   25:	aaload
+   26:	invokevirtual	#23; //Method v.a:(Ljava/lang/String;Ljava/lang/String;)V
+   29:	aload_1
+   30:	ldc	#5; //String Text3
+   32:	aload_0
+   33:	getfield	#12; //Field e:[Ljava/lang/String;
+   36:	iconst_2
+   37:	aaload
+   38:	invokevirtual	#23; //Method v.a:(Ljava/lang/String;Ljava/lang/String;)V
+   41:	aload_1
+   42:	ldc	#6; //String Text4
+   44:	aload_0
+   45:	getfield	#12; //Field e:[Ljava/lang/String;
+   48:	iconst_3
+   49:	aaload
+   50:	invokevirtual	#23; //Method v.a:(Ljava/lang/String;Ljava/lang/String;)V
+   53:	return
+
+public void a(v);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	invokespecial	#15; //Method ay.a:(Lv;)V
+   5:	iconst_0
+   6:	istore_2
+   7:	iload_2
+   8:	iconst_4
+   9:	if_icmpge	81
+   12:	aload_0
+   13:	getfield	#12; //Field e:[Ljava/lang/String;
+   16:	iload_2
+   17:	aload_1
+   18:	new	#9; //class java/lang/StringBuilder
+   21:	dup
+   22:	invokespecial	#19; //Method java/lang/StringBuilder."<init>":()V
+   25:	ldc	#2; //String Text
+   27:	invokevirtual	#21; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   30:	iload_2
+   31:	iconst_1
+   32:	iadd
+   33:	invokevirtual	#20; //Method java/lang/StringBuilder.append:(I)Ljava/lang/StringBuilder;
+   36:	invokevirtual	#22; //Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+   39:	invokevirtual	#24; //Method v.h:(Ljava/lang/String;)Ljava/lang/String;
+   42:	aastore
+   43:	aload_0
+   44:	getfield	#12; //Field e:[Ljava/lang/String;
+   47:	iload_2
+   48:	aaload
+   49:	invokevirtual	#17; //Method java/lang/String.length:()I
+   52:	bipush	15
+   54:	if_icmple	75
+   57:	aload_0
+   58:	getfield	#12; //Field e:[Ljava/lang/String;
+   61:	iload_2
+   62:	aload_0
+   63:	getfield	#12; //Field e:[Ljava/lang/String;
+   66:	iload_2
+   67:	aaload
+   68:	iconst_0
+   69:	bipush	15
+   71:	invokevirtual	#18; //Method java/lang/String.substring:(II)Ljava/lang/String;
+   74:	aastore
+   75:	iinc	2, 1
+   78:	goto	7
+   81:	return
+
+}
+

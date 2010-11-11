@@ -1,0 +1,63 @@
+Compiled from SourceFile
+public class fg extends fq{
+protected fg(int, java.lang.String);
+  Code:
+   0:	aload_0
+   1:	iload_1
+   2:	invokespecial	#18; //Method fq."<init>":(I)V
+   5:	aload_0
+   6:	aload_2
+   7:	putfield	#6; //Field a:Ljava/lang/String;
+   10:	aload_0
+   11:	iconst_1
+   12:	putfield	#8; //Field aX:I
+   15:	return
+
+public boolean a(hh, ft, el, int, int, int, int);
+  Code:
+   0:	aload_3
+   1:	iload	4
+   3:	iload	5
+   5:	iload	6
+   7:	invokevirtual	#14; //Method el.a:(III)I
+   10:	getstatic	#11; //Field fw.aZ:Lfw;
+   13:	getfield	#12; //Field fw.bi:I
+   16:	if_icmpne	81
+   19:	aload_3
+   20:	iload	4
+   22:	iload	5
+   24:	iload	6
+   26:	invokevirtual	#16; //Method el.b:(III)I
+   29:	ifne	81
+   32:	aload_3
+   33:	iload	4
+   35:	iload	5
+   37:	iload	6
+   39:	aload_0
+   40:	getfield	#7; //Field aW:I
+   43:	getstatic	#9; //Field fq.aU:Lfq;
+   46:	getfield	#10; //Field fq.aW:I
+   49:	isub
+   50:	iconst_1
+   51:	iadd
+   52:	invokevirtual	#17; //Method el.b:(IIII)V
+   55:	aload_3
+   56:	aload_0
+   57:	getfield	#6; //Field a:Ljava/lang/String;
+   60:	iload	4
+   62:	iload	5
+   64:	iload	6
+   66:	invokevirtual	#15; //Method el.a:(Ljava/lang/String;III)V
+   69:	aload_1
+   70:	dup
+   71:	getfield	#13; //Field hh.a:I
+   74:	iconst_1
+   75:	isub
+   76:	putfield	#13; //Field hh.a:I
+   79:	iconst_1
+   80:	ireturn
+   81:	iconst_0
+   82:	ireturn
+
+}
+

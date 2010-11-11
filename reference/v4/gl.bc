@@ -1,0 +1,199 @@
+Compiled from SourceFile
+public class gl extends fs{
+public gl(int);
+  Code:
+   0:	aload_0
+   1:	iload_1
+   2:	invokespecial	#41; //Method fs."<init>":(I)V
+   5:	aload_0
+   6:	iconst_1
+   7:	putfield	#30; //Field aX:I
+   10:	return
+
+public hj a(hj, em, fv);
+  Code:
+   0:	fconst_1
+   1:	fstore	4
+   3:	aload_3
+   4:	getfield	#29; //Field fv.y:F
+   7:	aload_3
+   8:	getfield	#27; //Field fv.w:F
+   11:	aload_3
+   12:	getfield	#29; //Field fv.y:F
+   15:	fsub
+   16:	fload	4
+   18:	fmul
+   19:	fadd
+   20:	fstore	5
+   22:	aload_3
+   23:	getfield	#28; //Field fv.x:F
+   26:	aload_3
+   27:	getfield	#26; //Field fv.v:F
+   30:	aload_3
+   31:	getfield	#28; //Field fv.x:F
+   34:	fsub
+   35:	fload	4
+   37:	fmul
+   38:	fadd
+   39:	fstore	6
+   41:	aload_3
+   42:	getfield	#20; //Field fv.m:D
+   45:	aload_3
+   46:	getfield	#23; //Field fv.p:D
+   49:	aload_3
+   50:	getfield	#20; //Field fv.m:D
+   53:	dsub
+   54:	fload	4
+   56:	f2d
+   57:	dmul
+   58:	dadd
+   59:	dstore	7
+   61:	aload_3
+   62:	getfield	#21; //Field fv.n:D
+   65:	aload_3
+   66:	getfield	#24; //Field fv.q:D
+   69:	aload_3
+   70:	getfield	#21; //Field fv.n:D
+   73:	dsub
+   74:	fload	4
+   76:	f2d
+   77:	dmul
+   78:	dadd
+   79:	ldc2_w	#14; //double 1.62d
+   82:	dadd
+   83:	aload_3
+   84:	getfield	#19; //Field fv.G:F
+   87:	f2d
+   88:	dsub
+   89:	dstore	9
+   91:	aload_3
+   92:	getfield	#22; //Field fv.o:D
+   95:	aload_3
+   96:	getfield	#25; //Field fv.r:D
+   99:	aload_3
+   100:	getfield	#22; //Field fv.o:D
+   103:	dsub
+   104:	fload	4
+   106:	f2d
+   107:	dmul
+   108:	dadd
+   109:	dstore	11
+   111:	dload	7
+   113:	dload	9
+   115:	dload	11
+   117:	invokestatic	#36; //Method bc.b:(DDD)Lbc;
+   120:	astore	13
+   122:	fload	6
+   124:	fneg
+   125:	ldc	#1; //float 0.017453292f
+   127:	fmul
+   128:	ldc	#4; //float 3.1415927f
+   130:	fsub
+   131:	invokestatic	#43; //Method hd.b:(F)F
+   134:	fstore	14
+   136:	fload	6
+   138:	fneg
+   139:	ldc	#1; //float 0.017453292f
+   141:	fmul
+   142:	ldc	#4; //float 3.1415927f
+   144:	fsub
+   145:	invokestatic	#42; //Method hd.a:(F)F
+   148:	fstore	15
+   150:	fload	5
+   152:	fneg
+   153:	ldc	#1; //float 0.017453292f
+   155:	fmul
+   156:	invokestatic	#43; //Method hd.b:(F)F
+   159:	fneg
+   160:	fstore	16
+   162:	fload	5
+   164:	fneg
+   165:	ldc	#1; //float 0.017453292f
+   167:	fmul
+   168:	invokestatic	#42; //Method hd.a:(F)F
+   171:	fstore	17
+   173:	fload	15
+   175:	fload	16
+   177:	fmul
+   178:	fstore	18
+   180:	fload	17
+   182:	fstore	19
+   184:	fload	14
+   186:	fload	16
+   188:	fmul
+   189:	fstore	20
+   191:	ldc2_w	#16; //double 5.0d
+   194:	dstore	21
+   196:	aload	13
+   198:	fload	18
+   200:	f2d
+   201:	dload	21
+   203:	dmul
+   204:	fload	19
+   206:	f2d
+   207:	dload	21
+   209:	dmul
+   210:	fload	20
+   212:	f2d
+   213:	dload	21
+   215:	dmul
+   216:	invokevirtual	#37; //Method bc.c:(DDD)Lbc;
+   219:	astore	23
+   221:	aload_2
+   222:	aload	13
+   224:	aload	23
+   226:	iconst_1
+   227:	invokevirtual	#38; //Method em.a:(Lbc;Lbc;Z)Lgm;
+   230:	astore	24
+   232:	aload	24
+   234:	ifnonnull	239
+   237:	aload_1
+   238:	areturn
+   239:	aload	24
+   241:	getfield	#31; //Field gm.a:I
+   244:	ifne	319
+   247:	aload	24
+   249:	getfield	#32; //Field gm.b:I
+   252:	istore	25
+   254:	aload	24
+   256:	getfield	#33; //Field gm.c:I
+   259:	istore	26
+   261:	aload	24
+   263:	getfield	#34; //Field gm.d:I
+   266:	istore	27
+   268:	aload_2
+   269:	getfield	#18; //Field em.z:Z
+   272:	ifne	309
+   275:	aload_2
+   276:	new	#7; //class fi
+   279:	dup
+   280:	aload_2
+   281:	iload	25
+   283:	i2f
+   284:	ldc	#2; //float 0.5f
+   286:	fadd
+   287:	f2d
+   288:	iload	26
+   290:	i2f
+   291:	ldc	#3; //float 1.5f
+   293:	fadd
+   294:	f2d
+   295:	iload	27
+   297:	i2f
+   298:	ldc	#2; //float 0.5f
+   300:	fadd
+   301:	f2d
+   302:	invokespecial	#40; //Method fi."<init>":(Lem;DDD)V
+   305:	invokevirtual	#39; //Method em.a:(Ldw;)Z
+   308:	pop
+   309:	aload_1
+   310:	dup
+   311:	getfield	#35; //Field hj.a:I
+   314:	iconst_1
+   315:	isub
+   316:	putfield	#35; //Field hj.a:I
+   319:	aload_1
+   320:	areturn
+
+}
+

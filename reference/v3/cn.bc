@@ -1,0 +1,10 @@
+Compiled from SourceFile
+public abstract class cn extends java.lang.Object{
+public cn();
+  Code:
+   0:	aload_0
+   1:	invokespecial	#3; //Method java/lang/Object."<init>":()V
+   4:	return
+
+}
+

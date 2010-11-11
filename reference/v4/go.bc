@@ -1,0 +1,40 @@
+Compiled from SourceFile
+public class go extends fy{
+protected go(int);
+  Code:
+   0:	aload_0
+   1:	iload_1
+   2:	getstatic	#7; //Field jt.c:Ljt;
+   5:	invokespecial	#8; //Method fy."<init>":(ILjt;)V
+   8:	aload_0
+   9:	bipush	20
+   11:	putfield	#6; //Field bg:I
+   14:	return
+
+public int a(java.util.Random);
+  Code:
+   0:	iconst_1
+   1:	ireturn
+
+public int a(int, java.util.Random);
+  Code:
+   0:	getstatic	#4; //Field fy.J:Lfy;
+   3:	getfield	#5; //Field fy.bh:I
+   6:	ireturn
+
+public int a(int);
+  Code:
+   0:	iload_1
+   1:	iconst_1
+   2:	if_icmpne	8
+   5:	bipush	21
+   7:	ireturn
+   8:	iload_1
+   9:	ifne	15
+   12:	bipush	21
+   14:	ireturn
+   15:	bipush	20
+   17:	ireturn
+
+}
+

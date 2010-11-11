@@ -1,0 +1,91 @@
+Compiled from SourceFile
+public class be extends ax{
+public boolean a;
+
+public be(em);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	invokespecial	#22; //Method ax."<init>":(Lem;)V
+   5:	aload_0
+   6:	iconst_0
+   7:	putfield	#13; //Field a:Z
+   10:	aload_0
+   11:	ldc	#4; //String /mob/cow.png
+   13:	putfield	#14; //Field aF:Ljava/lang/String;
+   16:	aload_0
+   17:	ldc	#2; //float 0.9f
+   19:	ldc	#3; //float 1.3f
+   21:	invokevirtual	#25; //Method a:(FF)V
+   24:	return
+
+public void a(v);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	invokespecial	#23; //Method ax.a:(Lv;)V
+   5:	return
+
+public void b(v);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	invokespecial	#24; //Method ax.b:(Lv;)V
+   5:	return
+
+protected java.lang.String d();
+  Code:
+   0:	ldc	#5; //String mob.cow
+   2:	areturn
+
+protected java.lang.String e();
+  Code:
+   0:	ldc	#6; //String mob.cowhurt
+   2:	areturn
+
+protected java.lang.String f();
+  Code:
+   0:	ldc	#6; //String mob.cowhurt
+   2:	areturn
+
+protected float h();
+  Code:
+   0:	ldc	#1; //float 0.4f
+   2:	freturn
+
+protected int g();
+  Code:
+   0:	getstatic	#15; //Field fs.aD:Lfs;
+   3:	getfield	#17; //Field fs.aW:I
+   6:	ireturn
+
+public boolean a(fv);
+  Code:
+   0:	aload_1
+   1:	getfield	#19; //Field fv.ak:Lhg;
+   4:	invokevirtual	#27; //Method hg.b:()Lhj;
+   7:	astore_2
+   8:	aload_2
+   9:	ifnull	51
+   12:	aload_2
+   13:	getfield	#21; //Field hj.c:I
+   16:	getstatic	#18; //Field fs.au:Lfs;
+   19:	getfield	#17; //Field fs.aW:I
+   22:	if_icmpne	51
+   25:	aload_1
+   26:	getfield	#19; //Field fv.ak:Lhg;
+   29:	aload_1
+   30:	getfield	#19; //Field fv.ak:Lhg;
+   33:	getfield	#20; //Field hg.d:I
+   36:	new	#12; //class hj
+   39:	dup
+   40:	getstatic	#16; //Field fs.aE:Lfs;
+   43:	invokespecial	#28; //Method hj."<init>":(Lfs;)V
+   46:	invokevirtual	#26; //Method hg.a:(ILhj;)V
+   49:	iconst_1
+   50:	ireturn
+   51:	iconst_0
+   52:	ireturn
+
+}
+

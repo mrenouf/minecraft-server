@@ -1,0 +1,14 @@
+Compiled from SourceFile
+public class ck extends fq{
+public ck(int);
+  Code:
+   0:	aload_0
+   1:	iload_1
+   2:	invokespecial	#4; //Method fq."<init>":(I)V
+   5:	aload_0
+   6:	iconst_1
+   7:	putfield	#3; //Field aX:I
+   10:	return
+
+}
+

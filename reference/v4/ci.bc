@@ -1,0 +1,222 @@
+Compiled from SourceFile
+public class ci extends dw{
+public int a;
+
+public ci(em);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	invokespecial	#53; //Method dw."<init>":(Lem;)V
+   5:	aload_0
+   6:	iconst_0
+   7:	putfield	#35; //Field a:I
+   10:	aload_0
+   11:	iconst_1
+   12:	putfield	#36; //Field i:Z
+   15:	aload_0
+   16:	ldc	#2; //float 0.98f
+   18:	ldc	#2; //float 0.98f
+   20:	invokevirtual	#49; //Method a:(FF)V
+   23:	aload_0
+   24:	aload_0
+   25:	getfield	#33; //Field I:F
+   28:	fconst_2
+   29:	fdiv
+   30:	putfield	#32; //Field G:F
+   33:	return
+
+public ci(em, float, float, float);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	invokespecial	#47; //Method "<init>":(Lem;)V
+   5:	aload_0
+   6:	fload_2
+   7:	f2d
+   8:	fload_3
+   9:	f2d
+   10:	fload	4
+   12:	f2d
+   13:	invokevirtual	#48; //Method a:(DDD)V
+   16:	invokestatic	#58; //Method java/lang/Math.random:()D
+   19:	ldc2_w	#28; //double 3.1415927410125732d
+   22:	dmul
+   23:	ldc2_w	#26; //double 2.0d
+   26:	dmul
+   27:	d2f
+   28:	fstore	5
+   30:	aload_0
+   31:	fload	5
+   33:	ldc	#3; //float 3.1415927f
+   35:	fmul
+   36:	ldc	#5; //float 180.0f
+   38:	fdiv
+   39:	invokestatic	#56; //Method hd.a:(F)F
+   42:	fneg
+   43:	ldc	#1; //float 0.02f
+   45:	fmul
+   46:	f2d
+   47:	putfield	#44; //Field s:D
+   50:	aload_0
+   51:	ldc2_w	#18; //double 0.20000000298023224d
+   54:	putfield	#45; //Field t:D
+   57:	aload_0
+   58:	fload	5
+   60:	ldc	#3; //float 3.1415927f
+   62:	fmul
+   63:	ldc	#5; //float 180.0f
+   65:	fdiv
+   66:	invokestatic	#57; //Method hd.b:(F)F
+   69:	fneg
+   70:	ldc	#1; //float 0.02f
+   72:	fmul
+   73:	f2d
+   74:	putfield	#46; //Field u:D
+   77:	aload_0
+   78:	iconst_0
+   79:	putfield	#34; //Field L:Z
+   82:	aload_0
+   83:	bipush	80
+   85:	putfield	#35; //Field a:I
+   88:	aload_0
+   89:	fload_2
+   90:	f2d
+   91:	putfield	#38; //Field m:D
+   94:	aload_0
+   95:	fload_3
+   96:	f2d
+   97:	putfield	#39; //Field n:D
+   100:	aload_0
+   101:	fload	4
+   103:	f2d
+   104:	putfield	#40; //Field o:D
+   107:	return
+
+public boolean c_();
+  Code:
+   0:	aload_0
+   1:	getfield	#31; //Field F:Z
+   4:	ifne	11
+   7:	iconst_1
+   8:	goto	12
+   11:	iconst_0
+   12:	ireturn
+
+public void b_();
+  Code:
+   0:	aload_0
+   1:	aload_0
+   2:	getfield	#41; //Field p:D
+   5:	putfield	#38; //Field m:D
+   8:	aload_0
+   9:	aload_0
+   10:	getfield	#42; //Field q:D
+   13:	putfield	#39; //Field n:D
+   16:	aload_0
+   17:	aload_0
+   18:	getfield	#43; //Field r:D
+   21:	putfield	#40; //Field o:D
+   24:	aload_0
+   25:	dup
+   26:	getfield	#45; //Field t:D
+   29:	ldc2_w	#16; //double 0.03999999910593033d
+   32:	dsub
+   33:	putfield	#45; //Field t:D
+   36:	aload_0
+   37:	aload_0
+   38:	getfield	#44; //Field s:D
+   41:	aload_0
+   42:	getfield	#45; //Field t:D
+   45:	aload_0
+   46:	getfield	#46; //Field u:D
+   49:	invokevirtual	#51; //Method c:(DDD)V
+   52:	aload_0
+   53:	dup
+   54:	getfield	#44; //Field s:D
+   57:	ldc2_w	#24; //double 0.9800000190734863d
+   60:	dmul
+   61:	putfield	#44; //Field s:D
+   64:	aload_0
+   65:	dup
+   66:	getfield	#45; //Field t:D
+   69:	ldc2_w	#24; //double 0.9800000190734863d
+   72:	dmul
+   73:	putfield	#45; //Field t:D
+   76:	aload_0
+   77:	dup
+   78:	getfield	#46; //Field u:D
+   81:	ldc2_w	#24; //double 0.9800000190734863d
+   84:	dmul
+   85:	putfield	#46; //Field u:D
+   88:	aload_0
+   89:	getfield	#30; //Field A:Z
+   92:	ifeq	131
+   95:	aload_0
+   96:	dup
+   97:	getfield	#44; //Field s:D
+   100:	ldc2_w	#22; //double 0.699999988079071d
+   103:	dmul
+   104:	putfield	#44; //Field s:D
+   107:	aload_0
+   108:	dup
+   109:	getfield	#46; //Field u:D
+   112:	ldc2_w	#22; //double 0.699999988079071d
+   115:	dmul
+   116:	putfield	#46; //Field u:D
+   119:	aload_0
+   120:	dup
+   121:	getfield	#45; //Field t:D
+   124:	ldc2_w	#14; //double -0.5d
+   127:	dmul
+   128:	putfield	#45; //Field t:D
+   131:	aload_0
+   132:	dup
+   133:	getfield	#35; //Field a:I
+   136:	dup_x1
+   137:	iconst_1
+   138:	isub
+   139:	putfield	#35; //Field a:I
+   142:	ifgt	156
+   145:	aload_0
+   146:	invokevirtual	#52; //Method l:()V
+   149:	aload_0
+   150:	invokespecial	#50; //Method c:()V
+   153:	goto	184
+   156:	aload_0
+   157:	getfield	#37; //Field l:Lem;
+   160:	ldc	#7; //String smoke
+   162:	aload_0
+   163:	getfield	#41; //Field p:D
+   166:	aload_0
+   167:	getfield	#42; //Field q:D
+   170:	ldc2_w	#20; //double 0.5d
+   173:	dadd
+   174:	aload_0
+   175:	getfield	#43; //Field r:D
+   178:	dconst_0
+   179:	dconst_0
+   180:	dconst_0
+   181:	invokevirtual	#55; //Method em.a:(Ljava/lang/String;DDDDDD)V
+   184:	return
+
+protected void a(v);
+  Code:
+   0:	aload_1
+   1:	ldc	#6; //String Fuse
+   3:	aload_0
+   4:	getfield	#35; //Field a:I
+   7:	i2b
+   8:	invokevirtual	#59; //Method v.a:(Ljava/lang/String;B)V
+   11:	return
+
+protected void b(v);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	ldc	#6; //String Fuse
+   4:	invokevirtual	#60; //Method v.b:(Ljava/lang/String;)B
+   7:	putfield	#35; //Field a:I
+   10:	return
+
+}
+

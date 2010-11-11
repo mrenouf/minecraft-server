@@ -1,0 +1,109 @@
+Compiled from SourceFile
+public class bb extends fy{
+public bb(int, int, boolean);
+  Code:
+   0:	aload_0
+   1:	iload_1
+   2:	iload_2
+   3:	getstatic	#18; //Field jt.d:Ljt;
+   6:	invokespecial	#25; //Method fy."<init>":(IILjt;)V
+   9:	iload_3
+   10:	ifeq	18
+   13:	aload_0
+   14:	iconst_1
+   15:	invokevirtual	#19; //Method a:(Z)V
+   18:	aload_0
+   19:	iload_3
+   20:	putfield	#10; //Field a:Z
+   23:	return
+
+public int b();
+  Code:
+   0:	bipush	30
+   2:	ireturn
+
+public void b(em, int, int, int, fv);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	iload_2
+   3:	iload_3
+   4:	iload	4
+   6:	invokespecial	#20; //Method g:(Lem;III)V
+   9:	aload_0
+   10:	aload_1
+   11:	iload_2
+   12:	iload_3
+   13:	iload	4
+   15:	aload	5
+   17:	invokespecial	#28; //Method fy.b:(Lem;IIILfv;)V
+   20:	return
+
+public void b(em, int, int, int, dw);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	iload_2
+   3:	iload_3
+   4:	iload	4
+   6:	invokespecial	#20; //Method g:(Lem;III)V
+   9:	aload_0
+   10:	aload_1
+   11:	iload_2
+   12:	iload_3
+   13:	iload	4
+   15:	aload	5
+   17:	invokespecial	#27; //Method fy.b:(Lem;IIILdw;)V
+   20:	return
+
+public boolean a(em, int, int, int, fv);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	iload_2
+   3:	iload_3
+   4:	iload	4
+   6:	invokespecial	#20; //Method g:(Lem;III)V
+   9:	aload_0
+   10:	aload_1
+   11:	iload_2
+   12:	iload_3
+   13:	iload	4
+   15:	aload	5
+   17:	invokespecial	#26; //Method fy.a:(Lem;IIILfv;)Z
+   20:	ireturn
+
+public void a(em, int, int, int, java.util.Random);
+  Code:
+   0:	aload_0
+   1:	getfield	#11; //Field bh:I
+   4:	getstatic	#16; //Field fy.aO:Lfy;
+   7:	getfield	#17; //Field fy.bh:I
+   10:	if_icmpne	28
+   13:	aload_1
+   14:	iload_2
+   15:	iload_3
+   16:	iload	4
+   18:	getstatic	#15; //Field fy.aN:Lfy;
+   21:	getfield	#17; //Field fy.bh:I
+   24:	invokevirtual	#24; //Method em.d:(IIII)Z
+   27:	pop
+   28:	return
+
+public int a(int, java.util.Random);
+  Code:
+   0:	getstatic	#13; //Field fs.aA:Lfs;
+   3:	getfield	#14; //Field fs.aW:I
+   6:	ireturn
+
+public int a(java.util.Random);
+  Code:
+   0:	iconst_4
+   1:	aload_1
+   2:	iconst_2
+   3:	invokevirtual	#30; //Method java/util/Random.nextInt:(I)I
+   6:	iadd
+   7:	ireturn
+
+}
+

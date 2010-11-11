@@ -1,0 +1,16 @@
+Compiled from SourceFile
+public abstract class bi extends java.lang.Object{
+public bi();
+  Code:
+   0:	aload_0
+   1:	invokespecial	#3; //Method java/lang/Object."<init>":()V
+   4:	return
+
+public abstract boolean a(em, java.util.Random, int, int, int);
+
+public void a(double, double, double);
+  Code:
+   0:	return
+
+}
+

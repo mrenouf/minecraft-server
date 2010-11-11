@@ -1,0 +1,14 @@
+Compiled from SourceFile
+public class bz extends fq{
+public bz(int);
+  Code:
+   0:	aload_0
+   1:	iload_1
+   2:	invokespecial	#4; //Method fq."<init>":(I)V
+   5:	aload_0
+   6:	bipush	64
+   8:	putfield	#3; //Field aY:I
+   11:	return
+
+}
+

@@ -1,0 +1,62 @@
+#!/bin/bash
+if [[ -z $1 ]]; then
+  echo "Usage: $0 <jarfile>"
+  exit 1;
+fi
+
+target=$PWD
+if [[ ! -z $2 ]]; then
+  mkdir -p $2
+  target=$2
+fi
+
+pushd $target
+
+cat << END_HEADER > index.html
+<!DOCTYPE html>
+<head>
+  <title>Disassembled Classes</title>
+  <style>
+    body { margin:0;padding:0; }
+    #main { position:absolute;margin:0;padding:0;height:100%; }
+    #index { font-family: monospace; }
+    #wrapper { margin:0;padding:0;width:100%;height:100%; }
+    #source { margin-left: 0.5%;width:99%;height:99.5%;border:0;padding:0;background:#f0f0f0; }
+  </style>
+</head>
+<body>
+<table id="main" cellpadding="0" cellspacing="0">
+<tr>
+<td id="index">
+END_HEADER
+
+tmpdir=$(mktemp -d)
+cp $1 $tmpdir
+orig=$PWD
+pushd $tmpdir
+jar xf $1
+classes=$(find . -name "*.class")
+for cls in $classes; do
+  base=${cls%.class}
+  mkdir -p $orig/$(dirname $base)
+  echo "Disassembling: ${cls}"
+  javap -c ${base} > $orig/${base}.bc
+  echo "<a href=\"${base#./}\" target=\"source\">${base#./}</a>" >> $orig/index.html
+done; 
+popd
+rm -rf $tmpdir
+
+cat << END_FOOTER >> index.html
+</td>
+</tr>
+<tr>
+<td id="wrapper">
+<iframe id="source"></iframe>
+</td>
+</tr>
+</table>
+</body>
+</html>
+END_FOOTER
+
+popd

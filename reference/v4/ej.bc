@@ -1,0 +1,6 @@
+Compiled from SourceFile
+public interface ej{
+public abstract void a();
+
+}
+

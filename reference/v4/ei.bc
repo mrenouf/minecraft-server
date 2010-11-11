@@ -1,0 +1,186 @@
+Compiled from SourceFile
+public class ei extends de{
+protected ei(int, boolean);
+  Code:
+   0:	aload_0
+   1:	iload_1
+   2:	getstatic	#21; //Field jt.d:Ljt;
+   5:	invokespecial	#23; //Method de."<init>":(ILjt;)V
+   8:	aload_0
+   9:	iload_2
+   10:	putfield	#14; //Field a:Z
+   13:	aload_0
+   14:	bipush	45
+   16:	putfield	#15; //Field bg:I
+   19:	return
+
+public int a(int, java.util.Random);
+  Code:
+   0:	getstatic	#16; //Field fy.aB:Lfy;
+   3:	getfield	#18; //Field fy.bh:I
+   6:	ireturn
+
+public void e(em, int, int, int);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	iload_2
+   3:	iload_3
+   4:	iload	4
+   6:	invokespecial	#24; //Method de.e:(Lem;III)V
+   9:	aload_0
+   10:	aload_1
+   11:	iload_2
+   12:	iload_3
+   13:	iload	4
+   15:	invokespecial	#26; //Method g:(Lem;III)V
+   18:	return
+
+public int a(int);
+  Code:
+   0:	iload_1
+   1:	iconst_1
+   2:	if_icmpne	12
+   5:	getstatic	#20; //Field fy.t:Lfy;
+   8:	getfield	#18; //Field fy.bh:I
+   11:	ireturn
+   12:	iload_1
+   13:	ifne	23
+   16:	getstatic	#20; //Field fy.t:Lfy;
+   19:	getfield	#18; //Field fy.bh:I
+   22:	ireturn
+   23:	iload_1
+   24:	iconst_3
+   25:	if_icmpne	35
+   28:	aload_0
+   29:	getfield	#15; //Field bg:I
+   32:	iconst_1
+   33:	isub
+   34:	ireturn
+   35:	aload_0
+   36:	getfield	#15; //Field bg:I
+   39:	ireturn
+
+public boolean a(em, int, int, int, fv);
+  Code:
+   0:	aload_1
+   1:	iload_2
+   2:	iload_3
+   3:	iload	4
+   5:	invokevirtual	#32; //Method em.k:(III)Lay;
+   8:	checkcast	#4; //class ds
+   11:	astore	6
+   13:	aload	5
+   15:	aload	6
+   17:	invokevirtual	#33; //Method fv.a:(Lds;)V
+   20:	iconst_1
+   21:	ireturn
+
+public static void a(boolean, em, int, int, int);
+  Code:
+   0:	aload_1
+   1:	iload_2
+   2:	iload_3
+   3:	iload	4
+   5:	invokevirtual	#29; //Method em.b:(III)I
+   8:	istore	5
+   10:	aload_1
+   11:	iload_2
+   12:	iload_3
+   13:	iload	4
+   15:	invokevirtual	#32; //Method em.k:(III)Lay;
+   18:	astore	6
+   20:	iload_0
+   21:	ifeq	42
+   24:	aload_1
+   25:	iload_2
+   26:	iload_3
+   27:	iload	4
+   29:	getstatic	#17; //Field fy.aC:Lfy;
+   32:	getfield	#18; //Field fy.bh:I
+   35:	invokevirtual	#31; //Method em.d:(IIII)Z
+   38:	pop
+   39:	goto	57
+   42:	aload_1
+   43:	iload_2
+   44:	iload_3
+   45:	iload	4
+   47:	getstatic	#16; //Field fy.aB:Lfy;
+   50:	getfield	#18; //Field fy.bh:I
+   53:	invokevirtual	#31; //Method em.d:(IIII)Z
+   56:	pop
+   57:	aload_1
+   58:	iload_2
+   59:	iload_3
+   60:	iload	4
+   62:	iload	5
+   64:	invokevirtual	#30; //Method em.b:(IIII)V
+   67:	aload_1
+   68:	iload_2
+   69:	iload_3
+   70:	iload	4
+   72:	aload	6
+   74:	invokevirtual	#28; //Method em.a:(IIILay;)V
+   77:	return
+
+protected ay a_();
+  Code:
+   0:	new	#4; //class ds
+   3:	dup
+   4:	invokespecial	#25; //Method ds."<init>":()V
+   7:	areturn
+
+public void a(em, int, int, int, jv);
+  Code:
+   0:	aload	5
+   2:	getfield	#22; //Field jv.v:F
+   5:	ldc	#1; //float 4.0f
+   7:	fmul
+   8:	ldc	#2; //float 360.0f
+   10:	fdiv
+   11:	f2d
+   12:	ldc2_w	#12; //double 0.5d
+   15:	dadd
+   16:	invokestatic	#34; //Method hd.b:(D)I
+   19:	iconst_3
+   20:	iand
+   21:	istore	6
+   23:	iload	6
+   25:	ifne	37
+   28:	aload_1
+   29:	iload_2
+   30:	iload_3
+   31:	iload	4
+   33:	iconst_2
+   34:	invokevirtual	#30; //Method em.b:(IIII)V
+   37:	iload	6
+   39:	iconst_1
+   40:	if_icmpne	52
+   43:	aload_1
+   44:	iload_2
+   45:	iload_3
+   46:	iload	4
+   48:	iconst_5
+   49:	invokevirtual	#30; //Method em.b:(IIII)V
+   52:	iload	6
+   54:	iconst_2
+   55:	if_icmpne	67
+   58:	aload_1
+   59:	iload_2
+   60:	iload_3
+   61:	iload	4
+   63:	iconst_3
+   64:	invokevirtual	#30; //Method em.b:(IIII)V
+   67:	iload	6
+   69:	iconst_3
+   70:	if_icmpne	82
+   73:	aload_1
+   74:	iload_2
+   75:	iload_3
+   76:	iload	4
+   78:	iconst_4
+   79:	invokevirtual	#30; //Method em.b:(IIII)V
+   82:	return
+
+}
+

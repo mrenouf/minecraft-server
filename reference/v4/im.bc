@@ -1,0 +1,94 @@
+Compiled from SourceFile
+class im extends java.lang.Thread{
+final bh a;
+
+im(bh, java.lang.String);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	putfield	#6; //Field a:Lbh;
+   5:	aload_0
+   6:	aload_2
+   7:	invokespecial	#10; //Method java/lang/Thread."<init>":(Ljava/lang/String;)V
+   10:	return
+
+public void run();
+  Code:
+   0:	getstatic	#4; //Field bh.a:Ljava/lang/Object;
+   3:	dup
+   4:	astore_1
+   5:	monitorenter
+   6:	getstatic	#5; //Field bh.b:I
+   9:	iconst_1
+   10:	iadd
+   11:	putstatic	#5; //Field bh.b:I
+   14:	aload_1
+   15:	monitorexit
+   16:	goto	24
+   19:	astore_2
+   20:	aload_1
+   21:	monitorexit
+   22:	aload_2
+   23:	athrow
+   24:	aload_0
+   25:	getfield	#6; //Field a:Lbh;
+   28:	invokestatic	#7; //Method bh.a:(Lbh;)Z
+   31:	ifeq	54
+   34:	aload_0
+   35:	getfield	#6; //Field a:Lbh;
+   38:	invokestatic	#8; //Method bh.b:(Lbh;)Z
+   41:	ifne	54
+   44:	aload_0
+   45:	getfield	#6; //Field a:Lbh;
+   48:	invokestatic	#9; //Method bh.c:(Lbh;)V
+   51:	goto	24
+   54:	getstatic	#4; //Field bh.a:Ljava/lang/Object;
+   57:	dup
+   58:	astore_1
+   59:	monitorenter
+   60:	getstatic	#5; //Field bh.b:I
+   63:	iconst_1
+   64:	isub
+   65:	putstatic	#5; //Field bh.b:I
+   68:	aload_1
+   69:	monitorexit
+   70:	goto	78
+   73:	astore_3
+   74:	aload_1
+   75:	monitorexit
+   76:	aload_3
+   77:	athrow
+   78:	goto	115
+   81:	astore	4
+   83:	getstatic	#4; //Field bh.a:Ljava/lang/Object;
+   86:	dup
+   87:	astore	5
+   89:	monitorenter
+   90:	getstatic	#5; //Field bh.b:I
+   93:	iconst_1
+   94:	isub
+   95:	putstatic	#5; //Field bh.b:I
+   98:	aload	5
+   100:	monitorexit
+   101:	goto	112
+   104:	astore	6
+   106:	aload	5
+   108:	monitorexit
+   109:	aload	6
+   111:	athrow
+   112:	aload	4
+   114:	athrow
+   115:	return
+  Exception table:
+   from   to  target type
+     6    16    19   any
+    19    22    19   any
+    60    70    73   any
+    73    76    73   any
+    24    54    81   any
+    90   101   104   any
+   104   109   104   any
+    81    83    81   any
+
+}
+

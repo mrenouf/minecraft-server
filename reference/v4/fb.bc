@@ -1,0 +1,177 @@
+Compiled from SourceFile
+public class fb extends java.lang.Object{
+public fb();
+  Code:
+   0:	aload_0
+   1:	invokespecial	#24; //Method java/lang/Object."<init>":()V
+   4:	aload_0
+   5:	ldc	#3; //float 0.75f
+   7:	putfield	#14; //Field d:F
+   10:	aload_0
+   11:	bipush	12
+   13:	putfield	#13; //Field c:I
+   16:	aload_0
+   17:	bipush	16
+   19:	anewarray	#4; //class cf
+   22:	putfield	#11; //Field a:[Lcf;
+   25:	return
+
+public java.lang.Object a(long);
+  Code:
+   0:	lload_1
+   1:	invokestatic	#23; //Method e:(J)I
+   4:	istore_3
+   5:	aload_0
+   6:	getfield	#11; //Field a:[Lcf;
+   9:	iload_3
+   10:	aload_0
+   11:	getfield	#11; //Field a:[Lcf;
+   14:	arraylength
+   15:	invokestatic	#18; //Method a:(II)I
+   18:	aaload
+   19:	astore	4
+   21:	aload	4
+   23:	ifnull	52
+   26:	aload	4
+   28:	getfield	#7; //Field cf.a:J
+   31:	lload_1
+   32:	lcmp
+   33:	ifne	42
+   36:	aload	4
+   38:	getfield	#8; //Field cf.b:Ljava/lang/Object;
+   41:	areturn
+   42:	aload	4
+   44:	getfield	#9; //Field cf.c:Lcf;
+   47:	astore	4
+   49:	goto	21
+   52:	aconst_null
+   53:	areturn
+
+public void a(long, java.lang.Object);
+  Code:
+   0:	lload_1
+   1:	invokestatic	#23; //Method e:(J)I
+   4:	istore	4
+   6:	iload	4
+   8:	aload_0
+   9:	getfield	#11; //Field a:[Lcf;
+   12:	arraylength
+   13:	invokestatic	#18; //Method a:(II)I
+   16:	istore	5
+   18:	aload_0
+   19:	getfield	#11; //Field a:[Lcf;
+   22:	iload	5
+   24:	aaload
+   25:	astore	6
+   27:	aload	6
+   29:	ifnull	58
+   32:	aload	6
+   34:	getfield	#7; //Field cf.a:J
+   37:	lload_1
+   38:	lcmp
+   39:	ifne	48
+   42:	aload	6
+   44:	aload_3
+   45:	putfield	#8; //Field cf.b:Ljava/lang/Object;
+   48:	aload	6
+   50:	getfield	#9; //Field cf.c:Lcf;
+   53:	astore	6
+   55:	goto	27
+   58:	aload_0
+   59:	dup
+   60:	getfield	#15; //Field e:I
+   63:	iconst_1
+   64:	iadd
+   65:	putfield	#15; //Field e:I
+   68:	aload_0
+   69:	iload	4
+   71:	lload_1
+   72:	aload_3
+   73:	iload	5
+   75:	invokespecial	#19; //Method a:(IJLjava/lang/Object;I)V
+   78:	return
+
+public java.lang.Object b(long);
+  Code:
+   0:	aload_0
+   1:	lload_1
+   2:	invokevirtual	#22; //Method c:(J)Lcf;
+   5:	astore_3
+   6:	aload_3
+   7:	ifnonnull	14
+   10:	aconst_null
+   11:	goto	18
+   14:	aload_3
+   15:	getfield	#8; //Field cf.b:Ljava/lang/Object;
+   18:	areturn
+
+final cf c(long);
+  Code:
+   0:	lload_1
+   1:	invokestatic	#23; //Method e:(J)I
+   4:	istore_3
+   5:	iload_3
+   6:	aload_0
+   7:	getfield	#11; //Field a:[Lcf;
+   10:	arraylength
+   11:	invokestatic	#18; //Method a:(II)I
+   14:	istore	4
+   16:	aload_0
+   17:	getfield	#11; //Field a:[Lcf;
+   20:	iload	4
+   22:	aaload
+   23:	astore	5
+   25:	aload	5
+   27:	astore	6
+   29:	aload	6
+   31:	ifnull	111
+   34:	aload	6
+   36:	getfield	#9; //Field cf.c:Lcf;
+   39:	astore	7
+   41:	aload	6
+   43:	getfield	#7; //Field cf.a:J
+   46:	lload_1
+   47:	lcmp
+   48:	ifne	100
+   51:	aload_0
+   52:	dup
+   53:	getfield	#15; //Field e:I
+   56:	iconst_1
+   57:	iadd
+   58:	putfield	#15; //Field e:I
+   61:	aload_0
+   62:	dup
+   63:	getfield	#12; //Field b:I
+   66:	iconst_1
+   67:	isub
+   68:	putfield	#12; //Field b:I
+   71:	aload	5
+   73:	aload	6
+   75:	if_acmpne	90
+   78:	aload_0
+   79:	getfield	#11; //Field a:[Lcf;
+   82:	iload	4
+   84:	aload	7
+   86:	aastore
+   87:	goto	97
+   90:	aload	5
+   92:	aload	7
+   94:	putfield	#9; //Field cf.c:Lcf;
+   97:	aload	6
+   99:	areturn
+   100:	aload	6
+   102:	astore	5
+   104:	aload	7
+   106:	astore	6
+   108:	goto	29
+   111:	aload	6
+   113:	areturn
+
+static int d(long);
+  Code:
+   0:	lload_0
+   1:	invokestatic	#23; //Method e:(J)I
+   4:	ireturn
+
+}
+

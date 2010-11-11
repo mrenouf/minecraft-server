@@ -1,0 +1,78 @@
+Compiled from SourceFile
+public class iq extends bg{
+public iq();
+  Code:
+   0:	aload_0
+   1:	invokespecial	#11; //Method bg."<init>":()V
+   4:	return
+
+public boolean a(el, java.util.Random, int, int, int);
+  Code:
+   0:	iconst_0
+   1:	istore	6
+   3:	iload	6
+   5:	bipush	64
+   7:	if_icmpge	124
+   10:	iload_3
+   11:	aload_2
+   12:	bipush	8
+   14:	invokevirtual	#14; //Method java/util/Random.nextInt:(I)I
+   17:	iadd
+   18:	aload_2
+   19:	bipush	8
+   21:	invokevirtual	#14; //Method java/util/Random.nextInt:(I)I
+   24:	isub
+   25:	istore	7
+   27:	iload	4
+   29:	aload_2
+   30:	iconst_4
+   31:	invokevirtual	#14; //Method java/util/Random.nextInt:(I)I
+   34:	iadd
+   35:	aload_2
+   36:	iconst_4
+   37:	invokevirtual	#14; //Method java/util/Random.nextInt:(I)I
+   40:	isub
+   41:	istore	8
+   43:	iload	5
+   45:	aload_2
+   46:	bipush	8
+   48:	invokevirtual	#14; //Method java/util/Random.nextInt:(I)I
+   51:	iadd
+   52:	aload_2
+   53:	bipush	8
+   55:	invokevirtual	#14; //Method java/util/Random.nextInt:(I)I
+   58:	isub
+   59:	istore	9
+   61:	aload_1
+   62:	iload	7
+   64:	iload	8
+   66:	iload	9
+   68:	invokevirtual	#12; //Method el.a:(III)I
+   71:	ifeq	77
+   74:	goto	118
+   77:	aload_1
+   78:	iload	7
+   80:	iload	8
+   82:	iconst_1
+   83:	isub
+   84:	iload	9
+   86:	invokevirtual	#12; //Method el.a:(III)I
+   89:	getstatic	#8; //Field fw.bc:Lfw;
+   92:	getfield	#9; //Field fw.bi:I
+   95:	if_icmpeq	101
+   98:	goto	118
+   101:	aload_1
+   102:	iload	7
+   104:	iload	8
+   106:	iload	9
+   108:	getstatic	#7; //Field fw.as:Ljm;
+   111:	getfield	#10; //Field jm.bi:I
+   114:	invokevirtual	#13; //Method el.d:(IIII)Z
+   117:	pop
+   118:	iinc	6, 1
+   121:	goto	3
+   124:	iconst_1
+   125:	ireturn
+
+}
+

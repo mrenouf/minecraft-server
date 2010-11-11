@@ -1,0 +1,320 @@
+Compiled from SourceFile
+public class g extends bi{
+public g(int);
+  Code:
+   0:	aload_0
+   1:	invokespecial	#22; //Method bi."<init>":()V
+   4:	aload_0
+   5:	getstatic	#17; //Field fy.aW:Lfy;
+   8:	getfield	#18; //Field fy.bh:I
+   11:	putfield	#19; //Field a:I
+   14:	aload_0
+   15:	iload_1
+   16:	putfield	#20; //Field b:I
+   19:	return
+
+public boolean a(em, java.util.Random, int, int, int);
+  Code:
+   0:	aload_1
+   1:	iload_3
+   2:	iload	4
+   4:	iload	5
+   6:	invokevirtual	#25; //Method em.c:(III)Ljt;
+   9:	getstatic	#21; //Field jt.f:Ljt;
+   12:	if_acmpeq	17
+   15:	iconst_0
+   16:	ireturn
+   17:	aload_2
+   18:	invokevirtual	#29; //Method java/util/Random.nextFloat:()F
+   21:	ldc	#1; //float 3.1415927f
+   23:	fmul
+   24:	fstore	6
+   26:	iload_3
+   27:	bipush	8
+   29:	iadd
+   30:	i2f
+   31:	fload	6
+   33:	invokestatic	#26; //Method hd.a:(F)F
+   36:	aload_0
+   37:	getfield	#20; //Field b:I
+   40:	i2f
+   41:	fmul
+   42:	ldc	#2; //float 8.0f
+   44:	fdiv
+   45:	fadd
+   46:	f2d
+   47:	dstore	7
+   49:	iload_3
+   50:	bipush	8
+   52:	iadd
+   53:	i2f
+   54:	fload	6
+   56:	invokestatic	#26; //Method hd.a:(F)F
+   59:	aload_0
+   60:	getfield	#20; //Field b:I
+   63:	i2f
+   64:	fmul
+   65:	ldc	#2; //float 8.0f
+   67:	fdiv
+   68:	fsub
+   69:	f2d
+   70:	dstore	9
+   72:	iload	5
+   74:	bipush	8
+   76:	iadd
+   77:	i2f
+   78:	fload	6
+   80:	invokestatic	#27; //Method hd.b:(F)F
+   83:	aload_0
+   84:	getfield	#20; //Field b:I
+   87:	i2f
+   88:	fmul
+   89:	ldc	#2; //float 8.0f
+   91:	fdiv
+   92:	fadd
+   93:	f2d
+   94:	dstore	11
+   96:	iload	5
+   98:	bipush	8
+   100:	iadd
+   101:	i2f
+   102:	fload	6
+   104:	invokestatic	#27; //Method hd.b:(F)F
+   107:	aload_0
+   108:	getfield	#20; //Field b:I
+   111:	i2f
+   112:	fmul
+   113:	ldc	#2; //float 8.0f
+   115:	fdiv
+   116:	fsub
+   117:	f2d
+   118:	dstore	13
+   120:	iload	4
+   122:	aload_2
+   123:	iconst_3
+   124:	invokevirtual	#30; //Method java/util/Random.nextInt:(I)I
+   127:	iadd
+   128:	iconst_2
+   129:	iadd
+   130:	i2d
+   131:	dstore	15
+   133:	iload	4
+   135:	aload_2
+   136:	iconst_3
+   137:	invokevirtual	#30; //Method java/util/Random.nextInt:(I)I
+   140:	iadd
+   141:	iconst_2
+   142:	iadd
+   143:	i2d
+   144:	dstore	17
+   146:	iconst_0
+   147:	istore	19
+   149:	iload	19
+   151:	aload_0
+   152:	getfield	#20; //Field b:I
+   155:	if_icmpgt	506
+   158:	dload	7
+   160:	dload	9
+   162:	dload	7
+   164:	dsub
+   165:	iload	19
+   167:	i2d
+   168:	dmul
+   169:	aload_0
+   170:	getfield	#20; //Field b:I
+   173:	i2d
+   174:	ddiv
+   175:	dadd
+   176:	dstore	20
+   178:	dload	15
+   180:	dload	17
+   182:	dload	15
+   184:	dsub
+   185:	iload	19
+   187:	i2d
+   188:	dmul
+   189:	aload_0
+   190:	getfield	#20; //Field b:I
+   193:	i2d
+   194:	ddiv
+   195:	dadd
+   196:	dstore	22
+   198:	dload	11
+   200:	dload	13
+   202:	dload	11
+   204:	dsub
+   205:	iload	19
+   207:	i2d
+   208:	dmul
+   209:	aload_0
+   210:	getfield	#20; //Field b:I
+   213:	i2d
+   214:	ddiv
+   215:	dadd
+   216:	dstore	24
+   218:	aload_2
+   219:	invokevirtual	#28; //Method java/util/Random.nextDouble:()D
+   222:	aload_0
+   223:	getfield	#20; //Field b:I
+   226:	i2d
+   227:	dmul
+   228:	ldc2_w	#14; //double 16.0d
+   231:	ddiv
+   232:	dstore	26
+   234:	iload	19
+   236:	i2f
+   237:	ldc	#1; //float 3.1415927f
+   239:	fmul
+   240:	aload_0
+   241:	getfield	#20; //Field b:I
+   244:	i2f
+   245:	fdiv
+   246:	invokestatic	#26; //Method hd.a:(F)F
+   249:	fconst_1
+   250:	fadd
+   251:	f2d
+   252:	dload	26
+   254:	dmul
+   255:	dconst_1
+   256:	dadd
+   257:	dstore	28
+   259:	iload	19
+   261:	i2f
+   262:	ldc	#1; //float 3.1415927f
+   264:	fmul
+   265:	aload_0
+   266:	getfield	#20; //Field b:I
+   269:	i2f
+   270:	fdiv
+   271:	invokestatic	#26; //Method hd.a:(F)F
+   274:	fconst_1
+   275:	fadd
+   276:	f2d
+   277:	dload	26
+   279:	dmul
+   280:	dconst_1
+   281:	dadd
+   282:	dstore	30
+   284:	dload	20
+   286:	dload	28
+   288:	ldc2_w	#12; //double 2.0d
+   291:	ddiv
+   292:	dsub
+   293:	d2i
+   294:	istore	32
+   296:	iload	32
+   298:	dload	20
+   300:	dload	28
+   302:	ldc2_w	#12; //double 2.0d
+   305:	ddiv
+   306:	dadd
+   307:	d2i
+   308:	if_icmpgt	500
+   311:	dload	22
+   313:	dload	30
+   315:	ldc2_w	#12; //double 2.0d
+   318:	ddiv
+   319:	dsub
+   320:	d2i
+   321:	istore	33
+   323:	iload	33
+   325:	dload	22
+   327:	dload	30
+   329:	ldc2_w	#12; //double 2.0d
+   332:	ddiv
+   333:	dadd
+   334:	d2i
+   335:	if_icmpgt	494
+   338:	dload	24
+   340:	dload	28
+   342:	ldc2_w	#12; //double 2.0d
+   345:	ddiv
+   346:	dsub
+   347:	d2i
+   348:	istore	34
+   350:	iload	34
+   352:	dload	24
+   354:	dload	28
+   356:	ldc2_w	#12; //double 2.0d
+   359:	ddiv
+   360:	dadd
+   361:	d2i
+   362:	if_icmpgt	488
+   365:	iload	32
+   367:	i2d
+   368:	ldc2_w	#10; //double 0.5d
+   371:	dadd
+   372:	dload	20
+   374:	dsub
+   375:	dload	28
+   377:	ldc2_w	#12; //double 2.0d
+   380:	ddiv
+   381:	ddiv
+   382:	dstore	35
+   384:	iload	33
+   386:	i2d
+   387:	ldc2_w	#10; //double 0.5d
+   390:	dadd
+   391:	dload	22
+   393:	dsub
+   394:	dload	30
+   396:	ldc2_w	#12; //double 2.0d
+   399:	ddiv
+   400:	ddiv
+   401:	dstore	37
+   403:	iload	34
+   405:	i2d
+   406:	ldc2_w	#10; //double 0.5d
+   409:	dadd
+   410:	dload	24
+   412:	dsub
+   413:	dload	28
+   415:	ldc2_w	#12; //double 2.0d
+   418:	ddiv
+   419:	ddiv
+   420:	dstore	39
+   422:	dload	35
+   424:	dload	35
+   426:	dmul
+   427:	dload	37
+   429:	dload	37
+   431:	dmul
+   432:	dadd
+   433:	dload	39
+   435:	dload	39
+   437:	dmul
+   438:	dadd
+   439:	dconst_1
+   440:	dcmpg
+   441:	ifge	482
+   444:	aload_1
+   445:	iload	32
+   447:	iload	33
+   449:	iload	34
+   451:	invokevirtual	#23; //Method em.a:(III)I
+   454:	istore	41
+   456:	iload	41
+   458:	getstatic	#16; //Field fy.E:Lfy;
+   461:	getfield	#18; //Field fy.bh:I
+   464:	if_icmpne	482
+   467:	aload_1
+   468:	iload	32
+   470:	iload	33
+   472:	iload	34
+   474:	aload_0
+   475:	getfield	#19; //Field a:I
+   478:	invokevirtual	#24; //Method em.a:(IIII)Z
+   481:	pop
+   482:	iinc	34, 1
+   485:	goto	350
+   488:	iinc	33, 1
+   491:	goto	323
+   494:	iinc	32, 1
+   497:	goto	296
+   500:	iinc	19, 1
+   503:	goto	149
+   506:	iconst_1
+   507:	ireturn
+
+}
+

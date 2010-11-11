@@ -1,0 +1,81 @@
+Compiled from SourceFile
+public class fd extends io{
+public int a;
+
+public int b;
+
+public int c;
+
+public fd();
+  Code:
+   0:	aload_0
+   1:	invokespecial	#14; //Method io."<init>":()V
+   4:	return
+
+public fd(hj, int);
+  Code:
+   0:	aload_0
+   1:	invokespecial	#14; //Method io."<init>":()V
+   4:	aload_0
+   5:	aload_1
+   6:	getfield	#11; //Field hj.c:I
+   9:	putfield	#8; //Field a:I
+   12:	aload_0
+   13:	iload_2
+   14:	putfield	#9; //Field b:I
+   17:	aload_0
+   18:	aload_1
+   19:	getfield	#12; //Field hj.d:I
+   22:	putfield	#10; //Field c:I
+   25:	iload_2
+   26:	ifne	31
+   29:	iconst_1
+   30:	istore_2
+   31:	return
+
+public void a(java.io.DataInputStream);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	invokevirtual	#16; //Method java/io/DataInputStream.readShort:()S
+   5:	putfield	#8; //Field a:I
+   8:	aload_0
+   9:	aload_1
+   10:	invokevirtual	#15; //Method java/io/DataInputStream.readByte:()B
+   13:	putfield	#9; //Field b:I
+   16:	aload_0
+   17:	aload_1
+   18:	invokevirtual	#16; //Method java/io/DataInputStream.readShort:()S
+   21:	putfield	#10; //Field c:I
+   24:	return
+
+public void a(java.io.DataOutputStream);
+  Code:
+   0:	aload_1
+   1:	aload_0
+   2:	getfield	#8; //Field a:I
+   5:	invokevirtual	#18; //Method java/io/DataOutputStream.writeShort:(I)V
+   8:	aload_1
+   9:	aload_0
+   10:	getfield	#9; //Field b:I
+   13:	invokevirtual	#17; //Method java/io/DataOutputStream.writeByte:(I)V
+   16:	aload_1
+   17:	aload_0
+   18:	getfield	#10; //Field c:I
+   21:	invokevirtual	#18; //Method java/io/DataOutputStream.writeShort:(I)V
+   24:	return
+
+public void a(ey);
+  Code:
+   0:	aload_1
+   1:	aload_0
+   2:	invokevirtual	#13; //Method ey.a:(Lfd;)V
+   5:	return
+
+public int a();
+  Code:
+   0:	iconst_5
+   1:	ireturn
+
+}
+

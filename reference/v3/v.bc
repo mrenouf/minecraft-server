@@ -1,0 +1,57 @@
+Compiled from SourceFile
+public class v extends fw{
+protected v(int, int);
+  Code:
+   0:	aload_0
+   1:	iload_1
+   2:	iload_2
+   3:	getstatic	#10; //Field jr.t:Ljr;
+   6:	invokespecial	#14; //Method fw."<init>":(IILjr;)V
+   9:	aload_0
+   10:	iconst_1
+   11:	invokevirtual	#15; //Method a:(Z)V
+   14:	return
+
+public int a(int, java.util.Random);
+  Code:
+   0:	getstatic	#8; //Field fq.aB:Lfq;
+   3:	getfield	#9; //Field fq.aW:I
+   6:	ireturn
+
+public int a(java.util.Random);
+  Code:
+   0:	iconst_4
+   1:	ireturn
+
+public void a(el, int, int, int, java.util.Random);
+  Code:
+   0:	aload_1
+   1:	getstatic	#7; //Field dj.b:Ldj;
+   4:	iload_2
+   5:	iload_3
+   6:	iload	4
+   8:	invokevirtual	#11; //Method el.a:(Ldj;III)I
+   11:	bipush	11
+   13:	if_icmple	43
+   16:	aload_0
+   17:	aload_1
+   18:	iload_2
+   19:	iload_3
+   20:	iload	4
+   22:	aload_1
+   23:	iload_2
+   24:	iload_3
+   25:	iload	4
+   27:	invokevirtual	#12; //Method el.b:(III)I
+   30:	invokevirtual	#16; //Method a_:(Lel;IIII)V
+   33:	aload_1
+   34:	iload_2
+   35:	iload_3
+   36:	iload	4
+   38:	iconst_0
+   39:	invokevirtual	#13; //Method el.d:(IIII)Z
+   42:	pop
+   43:	return
+
+}
+

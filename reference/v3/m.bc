@@ -1,0 +1,207 @@
+Compiled from SourceFile
+public class m extends hg{
+protected m(int, int);
+  Code:
+   0:	aload_0
+   1:	iload_1
+   2:	iload_2
+   3:	invokespecial	#30; //Method hg."<init>":(II)V
+   6:	aload_0
+   7:	iload_2
+   8:	putfield	#22; //Field bh:I
+   11:	aload_0
+   12:	iconst_1
+   13:	invokevirtual	#37; //Method a:(Z)V
+   16:	ldc	#2; //float 0.5f
+   18:	fstore_3
+   19:	aload_0
+   20:	ldc	#2; //float 0.5f
+   22:	fload_3
+   23:	fsub
+   24:	fconst_0
+   25:	ldc	#2; //float 0.5f
+   27:	fload_3
+   28:	fsub
+   29:	ldc	#2; //float 0.5f
+   31:	fload_3
+   32:	fadd
+   33:	ldc	#1; //float 0.25f
+   35:	ldc	#2; //float 0.5f
+   37:	fload_3
+   38:	fadd
+   39:	invokevirtual	#36; //Method a:(FFFFFF)V
+   42:	return
+
+protected boolean b(int);
+  Code:
+   0:	iload_1
+   1:	getstatic	#19; //Field fw.aB:Lfw;
+   4:	getfield	#20; //Field fw.bi:I
+   7:	if_icmpne	14
+   10:	iconst_1
+   11:	goto	15
+   14:	iconst_0
+   15:	ireturn
+
+public void a(el, int, int, int, java.util.Random);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	iload_2
+   3:	iload_3
+   4:	iload	4
+   6:	aload	5
+   8:	invokespecial	#32; //Method hg.a:(Lel;IIILjava/util/Random;)V
+   11:	aload_1
+   12:	iload_2
+   13:	iload_3
+   14:	iconst_1
+   15:	iadd
+   16:	iload	4
+   18:	invokevirtual	#28; //Method el.h:(III)I
+   21:	bipush	9
+   23:	if_icmplt	81
+   26:	aload_1
+   27:	iload_2
+   28:	iload_3
+   29:	iload	4
+   31:	invokevirtual	#26; //Method el.b:(III)I
+   34:	istore	6
+   36:	iload	6
+   38:	bipush	7
+   40:	if_icmpge	81
+   43:	aload_0
+   44:	aload_1
+   45:	iload_2
+   46:	iload_3
+   47:	iload	4
+   49:	invokespecial	#38; //Method h:(Lel;III)F
+   52:	fstore	7
+   54:	aload	5
+   56:	ldc	#6; //float 100.0f
+   58:	fload	7
+   60:	fdiv
+   61:	f2i
+   62:	invokevirtual	#35; //Method java/util/Random.nextInt:(I)I
+   65:	ifne	81
+   68:	iinc	6, 1
+   71:	aload_1
+   72:	iload_2
+   73:	iload_3
+   74:	iload	4
+   76:	iload	6
+   78:	invokevirtual	#27; //Method el.b:(IIII)V
+   81:	return
+
+public void a(el, int, int, int, int);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	iload_2
+   3:	iload_3
+   4:	iload	4
+   6:	iload	5
+   8:	invokespecial	#31; //Method hg.a:(Lel;IIII)V
+   11:	iconst_0
+   12:	istore	6
+   14:	iload	6
+   16:	iconst_3
+   17:	if_icmpge	160
+   20:	aload_1
+   21:	getfield	#15; //Field el.l:Ljava/util/Random;
+   24:	bipush	15
+   26:	invokevirtual	#35; //Method java/util/Random.nextInt:(I)I
+   29:	iload	5
+   31:	if_icmple	37
+   34:	goto	154
+   37:	ldc	#3; //float 0.7f
+   39:	fstore	7
+   41:	aload_1
+   42:	getfield	#15; //Field el.l:Ljava/util/Random;
+   45:	invokevirtual	#34; //Method java/util/Random.nextFloat:()F
+   48:	fload	7
+   50:	fmul
+   51:	fconst_1
+   52:	fload	7
+   54:	fsub
+   55:	ldc	#2; //float 0.5f
+   57:	fmul
+   58:	fadd
+   59:	fstore	8
+   61:	aload_1
+   62:	getfield	#15; //Field el.l:Ljava/util/Random;
+   65:	invokevirtual	#34; //Method java/util/Random.nextFloat:()F
+   68:	fload	7
+   70:	fmul
+   71:	fconst_1
+   72:	fload	7
+   74:	fsub
+   75:	ldc	#2; //float 0.5f
+   77:	fmul
+   78:	fadd
+   79:	fstore	9
+   81:	aload_1
+   82:	getfield	#15; //Field el.l:Ljava/util/Random;
+   85:	invokevirtual	#34; //Method java/util/Random.nextFloat:()F
+   88:	fload	7
+   90:	fmul
+   91:	fconst_1
+   92:	fload	7
+   94:	fsub
+   95:	ldc	#2; //float 0.5f
+   97:	fmul
+   98:	fadd
+   99:	fstore	10
+   101:	new	#10; //class gf
+   104:	dup
+   105:	aload_1
+   106:	iload_2
+   107:	i2f
+   108:	fload	8
+   110:	fadd
+   111:	f2d
+   112:	iload_3
+   113:	i2f
+   114:	fload	9
+   116:	fadd
+   117:	f2d
+   118:	iload	4
+   120:	i2f
+   121:	fload	10
+   123:	fadd
+   124:	f2d
+   125:	new	#12; //class hh
+   128:	dup
+   129:	getstatic	#16; //Field fq.Q:Lfq;
+   132:	invokespecial	#33; //Method hh."<init>":(Lfq;)V
+   135:	invokespecial	#29; //Method gf."<init>":(Lel;DDDLhh;)V
+   138:	astore	11
+   140:	aload	11
+   142:	bipush	10
+   144:	putfield	#21; //Field gf.c:I
+   147:	aload_1
+   148:	aload	11
+   150:	invokevirtual	#25; //Method el.a:(Ldv;)Z
+   153:	pop
+   154:	iinc	6, 1
+   157:	goto	14
+   160:	return
+
+public int a(int, java.util.Random);
+  Code:
+   0:	iload_1
+   1:	bipush	7
+   3:	if_icmpne	13
+   6:	getstatic	#17; //Field fq.R:Lfq;
+   9:	getfield	#18; //Field fq.aW:I
+   12:	ireturn
+   13:	iconst_m1
+   14:	ireturn
+
+public int a(java.util.Random);
+  Code:
+   0:	iconst_1
+   1:	ireturn
+
+}
+

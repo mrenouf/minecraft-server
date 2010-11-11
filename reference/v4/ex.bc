@@ -1,0 +1,63 @@
+Compiled from SourceFile
+public class ex extends hi{
+protected ex(int, int);
+  Code:
+   0:	aload_0
+   1:	iload_1
+   2:	iload_2
+   3:	invokespecial	#12; //Method hi."<init>":(II)V
+   6:	ldc	#1; //float 0.2f
+   8:	fstore_3
+   9:	aload_0
+   10:	ldc	#2; //float 0.5f
+   12:	fload_3
+   13:	fsub
+   14:	fconst_0
+   15:	ldc	#2; //float 0.5f
+   17:	fload_3
+   18:	fsub
+   19:	ldc	#2; //float 0.5f
+   21:	fload_3
+   22:	fadd
+   23:	fload_3
+   24:	fconst_2
+   25:	fmul
+   26:	ldc	#2; //float 0.5f
+   28:	fload_3
+   29:	fadd
+   30:	invokevirtual	#10; //Method a:(FFFFFF)V
+   33:	return
+
+protected boolean b(int);
+  Code:
+   0:	getstatic	#7; //Field fy.o:[Z
+   3:	iload_1
+   4:	baload
+   5:	ireturn
+
+public boolean f(em, int, int, int);
+  Code:
+   0:	aload_1
+   1:	iload_2
+   2:	iload_3
+   3:	iload	4
+   5:	invokevirtual	#9; //Method em.h:(III)I
+   8:	bipush	13
+   10:	if_icmpgt	34
+   13:	aload_0
+   14:	aload_1
+   15:	iload_2
+   16:	iload_3
+   17:	iconst_1
+   18:	isub
+   19:	iload	4
+   21:	invokevirtual	#8; //Method em.a:(III)I
+   24:	invokevirtual	#11; //Method b:(I)Z
+   27:	ifeq	34
+   30:	iconst_1
+   31:	goto	35
+   34:	iconst_0
+   35:	ireturn
+
+}
+

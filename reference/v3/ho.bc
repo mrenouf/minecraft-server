@@ -1,0 +1,156 @@
+Compiled from SourceFile
+public class ho extends im{
+public int a;
+
+public byte b;
+
+public int c;
+
+public int d;
+
+public int e;
+
+public byte f;
+
+public byte g;
+
+public ho();
+  Code:
+   0:	aload_0
+   1:	invokespecial	#30; //Method im."<init>":()V
+   4:	return
+
+public ho(jt);
+  Code:
+   0:	aload_0
+   1:	invokespecial	#30; //Method im."<init>":()V
+   4:	aload_0
+   5:	aload_1
+   6:	getfield	#21; //Field jt.g:I
+   9:	putfield	#14; //Field a:I
+   12:	aload_0
+   13:	aload_1
+   14:	invokestatic	#29; //Method hj.a:(Ldv;)I
+   17:	i2b
+   18:	putfield	#15; //Field b:B
+   21:	aload_0
+   22:	aload_1
+   23:	getfield	#22; //Field jt.p:D
+   26:	ldc2_w	#12; //double 32.0d
+   29:	dmul
+   30:	invokestatic	#28; //Method hb.b:(D)I
+   33:	putfield	#16; //Field c:I
+   36:	aload_0
+   37:	aload_1
+   38:	getfield	#23; //Field jt.q:D
+   41:	ldc2_w	#12; //double 32.0d
+   44:	dmul
+   45:	invokestatic	#28; //Method hb.b:(D)I
+   48:	putfield	#17; //Field d:I
+   51:	aload_0
+   52:	aload_1
+   53:	getfield	#24; //Field jt.r:D
+   56:	ldc2_w	#12; //double 32.0d
+   59:	dmul
+   60:	invokestatic	#28; //Method hb.b:(D)I
+   63:	putfield	#18; //Field e:I
+   66:	aload_0
+   67:	aload_1
+   68:	getfield	#25; //Field jt.v:F
+   71:	ldc	#1; //float 256.0f
+   73:	fmul
+   74:	ldc	#2; //float 360.0f
+   76:	fdiv
+   77:	f2i
+   78:	i2b
+   79:	putfield	#19; //Field f:B
+   82:	aload_0
+   83:	aload_1
+   84:	getfield	#26; //Field jt.w:F
+   87:	ldc	#1; //float 256.0f
+   89:	fmul
+   90:	ldc	#2; //float 360.0f
+   92:	fdiv
+   93:	f2i
+   94:	i2b
+   95:	putfield	#20; //Field g:B
+   98:	return
+
+public void a(java.io.DataInputStream);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	invokevirtual	#32; //Method java/io/DataInputStream.readInt:()I
+   5:	putfield	#14; //Field a:I
+   8:	aload_0
+   9:	aload_1
+   10:	invokevirtual	#31; //Method java/io/DataInputStream.readByte:()B
+   13:	putfield	#15; //Field b:B
+   16:	aload_0
+   17:	aload_1
+   18:	invokevirtual	#32; //Method java/io/DataInputStream.readInt:()I
+   21:	putfield	#16; //Field c:I
+   24:	aload_0
+   25:	aload_1
+   26:	invokevirtual	#32; //Method java/io/DataInputStream.readInt:()I
+   29:	putfield	#17; //Field d:I
+   32:	aload_0
+   33:	aload_1
+   34:	invokevirtual	#32; //Method java/io/DataInputStream.readInt:()I
+   37:	putfield	#18; //Field e:I
+   40:	aload_0
+   41:	aload_1
+   42:	invokevirtual	#31; //Method java/io/DataInputStream.readByte:()B
+   45:	putfield	#19; //Field f:B
+   48:	aload_0
+   49:	aload_1
+   50:	invokevirtual	#31; //Method java/io/DataInputStream.readByte:()B
+   53:	putfield	#20; //Field g:B
+   56:	return
+
+public void a(java.io.DataOutputStream);
+  Code:
+   0:	aload_1
+   1:	aload_0
+   2:	getfield	#14; //Field a:I
+   5:	invokevirtual	#34; //Method java/io/DataOutputStream.writeInt:(I)V
+   8:	aload_1
+   9:	aload_0
+   10:	getfield	#15; //Field b:B
+   13:	invokevirtual	#33; //Method java/io/DataOutputStream.writeByte:(I)V
+   16:	aload_1
+   17:	aload_0
+   18:	getfield	#16; //Field c:I
+   21:	invokevirtual	#34; //Method java/io/DataOutputStream.writeInt:(I)V
+   24:	aload_1
+   25:	aload_0
+   26:	getfield	#17; //Field d:I
+   29:	invokevirtual	#34; //Method java/io/DataOutputStream.writeInt:(I)V
+   32:	aload_1
+   33:	aload_0
+   34:	getfield	#18; //Field e:I
+   37:	invokevirtual	#34; //Method java/io/DataOutputStream.writeInt:(I)V
+   40:	aload_1
+   41:	aload_0
+   42:	getfield	#19; //Field f:B
+   45:	invokevirtual	#33; //Method java/io/DataOutputStream.writeByte:(I)V
+   48:	aload_1
+   49:	aload_0
+   50:	getfield	#20; //Field g:B
+   53:	invokevirtual	#33; //Method java/io/DataOutputStream.writeByte:(I)V
+   56:	return
+
+public void a(ex);
+  Code:
+   0:	aload_1
+   1:	aload_0
+   2:	invokevirtual	#27; //Method ex.a:(Lho;)V
+   5:	return
+
+public int a();
+  Code:
+   0:	bipush	19
+   2:	ireturn
+
+}
+

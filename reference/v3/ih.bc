@@ -1,0 +1,410 @@
+Compiled from SourceFile
+public class ih extends java.lang.Object{
+public static final ih a;
+
+public static final ih b;
+
+public static final ih c;
+
+public static final ih d;
+
+public static final ih e;
+
+public static final ih f;
+
+public static final ih g;
+
+public static final ih h;
+
+public static final ih i;
+
+public static final ih j;
+
+public static final ih k;
+
+public static final ih l;
+
+public java.lang.String m;
+
+public int n;
+
+public byte o;
+
+public byte p;
+
+public int q;
+
+protected java.lang.Class[] r;
+
+protected java.lang.Class[] s;
+
+public ih();
+  Code:
+   0:	aload_0
+   1:	invokespecial	#98; //Method java/lang/Object."<init>":()V
+   4:	aload_0
+   5:	getstatic	#62; //Field fw.v:Lhs;
+   8:	getfield	#64; //Field hs.bi:I
+   11:	i2b
+   12:	putfield	#79; //Field o:B
+   15:	aload_0
+   16:	getstatic	#63; //Field fw.w:Lfw;
+   19:	getfield	#61; //Field fw.bi:I
+   22:	i2b
+   23:	putfield	#80; //Field p:B
+   26:	aload_0
+   27:	ldc	#7; //int 5169201
+   29:	putfield	#81; //Field q:I
+   32:	aload_0
+   33:	iconst_4
+   34:	anewarray	#54; //class java/lang/Class
+   37:	dup
+   38:	iconst_0
+   39:	ldc	#42; //class bs
+   41:	aastore
+   42:	dup
+   43:	iconst_1
+   44:	ldc	#49; //class ge
+   46:	aastore
+   47:	dup
+   48:	iconst_2
+   49:	ldc	#45; //class ey
+   51:	aastore
+   52:	dup
+   53:	iconst_3
+   54:	ldc	#47; //class fj
+   56:	aastore
+   57:	putfield	#82; //Field r:[Ljava/lang/Class;
+   60:	aload_0
+   61:	iconst_4
+   62:	anewarray	#54; //class java/lang/Class
+   65:	dup
+   66:	iconst_0
+   67:	ldc	#43; //class cs
+   69:	aastore
+   70:	dup
+   71:	iconst_1
+   72:	ldc	#50; //class hn
+   74:	aastore
+   75:	dup
+   76:	iconst_2
+   77:	ldc	#52; //class id
+   79:	aastore
+   80:	dup
+   81:	iconst_3
+   82:	ldc	#41; //class bc
+   84:	aastore
+   85:	putfield	#83; //Field s:[Ljava/lang/Class;
+   88:	return
+
+public static void a();
+  Code:
+   0:	iconst_0
+   1:	istore_0
+   2:	iload_0
+   3:	bipush	64
+   5:	if_icmpge	51
+   8:	iconst_0
+   9:	istore_1
+   10:	iload_1
+   11:	bipush	64
+   13:	if_icmpge	45
+   16:	getstatic	#84; //Field t:[Lih;
+   19:	iload_0
+   20:	iload_1
+   21:	bipush	64
+   23:	imul
+   24:	iadd
+   25:	iload_0
+   26:	i2f
+   27:	ldc	#28; //float 63.0f
+   29:	fdiv
+   30:	iload_1
+   31:	i2f
+   32:	ldc	#28; //float 63.0f
+   34:	fdiv
+   35:	invokestatic	#93; //Method a:(FF)Lih;
+   38:	aastore
+   39:	iinc	1, 1
+   42:	goto	10
+   45:	iinc	0, 1
+   48:	goto	2
+   51:	getstatic	#72; //Field h:Lih;
+   54:	getstatic	#72; //Field h:Lih;
+   57:	getstatic	#60; //Field fw.F:Lfw;
+   60:	getfield	#61; //Field fw.bi:I
+   63:	i2b
+   64:	dup_x1
+   65:	putfield	#80; //Field p:B
+   68:	putfield	#79; //Field o:B
+   71:	getstatic	#74; //Field j:Lih;
+   74:	getstatic	#74; //Field j:Lih;
+   77:	getstatic	#60; //Field fw.F:Lfw;
+   80:	getfield	#61; //Field fw.bi:I
+   83:	i2b
+   84:	dup_x1
+   85:	putfield	#80; //Field p:B
+   88:	putfield	#79; //Field o:B
+   91:	return
+
+protected ih b();
+  Code:
+   0:	aload_0
+   1:	areturn
+
+protected ih a(java.lang.String);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	putfield	#77; //Field m:Ljava/lang/String;
+   5:	aload_0
+   6:	areturn
+
+protected ih a(int);
+  Code:
+   0:	aload_0
+   1:	iload_1
+   2:	putfield	#81; //Field q:I
+   5:	aload_0
+   6:	areturn
+
+protected ih b(int);
+  Code:
+   0:	aload_0
+   1:	iload_1
+   2:	putfield	#78; //Field n:I
+   5:	aload_0
+   6:	areturn
+
+public static ih a(double, double);
+  Code:
+   0:	dload_0
+   1:	ldc2_w	#58; //double 63.0d
+   4:	dmul
+   5:	d2i
+   6:	istore	4
+   8:	dload_2
+   9:	ldc2_w	#58; //double 63.0d
+   12:	dmul
+   13:	d2i
+   14:	istore	5
+   16:	getstatic	#84; //Field t:[Lih;
+   19:	iload	4
+   21:	iload	5
+   23:	bipush	64
+   25:	imul
+   26:	iadd
+   27:	aaload
+   28:	areturn
+
+public static ih a(float, float);
+  Code:
+   0:	fload_1
+   1:	fload_0
+   2:	fmul
+   3:	fstore_1
+   4:	fload_0
+   5:	ldc	#19; //float 0.1f
+   7:	fcmpg
+   8:	ifge	15
+   11:	getstatic	#75; //Field k:Lih;
+   14:	areturn
+   15:	fload_1
+   16:	ldc	#20; //float 0.2f
+   18:	fcmpg
+   19:	ifge	48
+   22:	fload_0
+   23:	ldc	#23; //float 0.5f
+   25:	fcmpg
+   26:	ifge	33
+   29:	getstatic	#75; //Field k:Lih;
+   32:	areturn
+   33:	fload_0
+   34:	ldc	#26; //float 0.95f
+   36:	fcmpg
+   37:	ifge	44
+   40:	getstatic	#69; //Field e:Lih;
+   43:	areturn
+   44:	getstatic	#72; //Field h:Lih;
+   47:	areturn
+   48:	fload_1
+   49:	ldc	#23; //float 0.5f
+   51:	fcmpl
+   52:	ifle	66
+   55:	fload_0
+   56:	ldc	#24; //float 0.7f
+   58:	fcmpg
+   59:	ifge	66
+   62:	getstatic	#66; //Field b:Lih;
+   65:	areturn
+   66:	fload_0
+   67:	ldc	#23; //float 0.5f
+   69:	fcmpg
+   70:	ifge	77
+   73:	getstatic	#71; //Field g:Lih;
+   76:	areturn
+   77:	fload_0
+   78:	ldc	#27; //float 0.97f
+   80:	fcmpg
+   81:	ifge	99
+   84:	fload_1
+   85:	ldc	#21; //float 0.35f
+   87:	fcmpg
+   88:	ifge	95
+   91:	getstatic	#70; //Field f:Lih;
+   94:	areturn
+   95:	getstatic	#68; //Field d:Lih;
+   98:	areturn
+   99:	fload_1
+   100:	ldc	#22; //float 0.45f
+   102:	fcmpg
+   103:	ifge	110
+   106:	getstatic	#73; //Field i:Lih;
+   109:	areturn
+   110:	fload_1
+   111:	ldc	#25; //float 0.9f
+   113:	fcmpg
+   114:	ifge	121
+   117:	getstatic	#67; //Field c:Lih;
+   120:	areturn
+   121:	getstatic	#65; //Field a:Lih;
+   124:	areturn
+
+public java.lang.Class[] a(jl);
+  Code:
+   0:	aload_1
+   1:	getstatic	#85; //Field jl.a:Ljl;
+   4:	if_acmpne	12
+   7:	aload_0
+   8:	getfield	#82; //Field r:[Ljava/lang/Class;
+   11:	areturn
+   12:	aload_1
+   13:	getstatic	#86; //Field jl.b:Ljl;
+   16:	if_acmpne	24
+   19:	aload_0
+   20:	getfield	#83; //Field s:[Ljava/lang/Class;
+   23:	areturn
+   24:	aconst_null
+   25:	areturn
+
+static {};
+  Code:
+   0:	new	#53; //class ih
+   3:	dup
+   4:	invokespecial	#91; //Method "<init>":()V
+   7:	ldc	#3; //int 588342
+   9:	invokevirtual	#97; //Method b:(I)Lih;
+   12:	ldc	#34; //String Rainforest
+   14:	invokevirtual	#95; //Method a:(Ljava/lang/String;)Lih;
+   17:	ldc	#4; //int 2094168
+   19:	invokevirtual	#94; //Method a:(I)Lih;
+   22:	putstatic	#65; //Field a:Lih;
+   25:	new	#44; //class en
+   28:	dup
+   29:	invokespecial	#87; //Method en."<init>":()V
+   32:	ldc	#2; //int 522674
+   34:	invokevirtual	#88; //Method en.b:(I)Lih;
+   37:	ldc	#38; //String Swampland
+   39:	invokevirtual	#95; //Method a:(Ljava/lang/String;)Lih;
+   42:	ldc	#10; //int 9154376
+   44:	invokevirtual	#94; //Method a:(I)Lih;
+   47:	putstatic	#66; //Field b:Lih;
+   50:	new	#53; //class ih
+   53:	dup
+   54:	invokespecial	#91; //Method "<init>":()V
+   57:	ldc	#11; //int 10215459
+   59:	invokevirtual	#97; //Method b:(I)Lih;
+   62:	ldc	#36; //String Seasonal Forest
+   64:	invokevirtual	#95; //Method a:(Ljava/lang/String;)Lih;
+   67:	putstatic	#67; //Field c:Lih;
+   70:	new	#53; //class ih
+   73:	dup
+   74:	invokespecial	#91; //Method "<init>":()V
+   77:	ldc	#1; //int 353825
+   79:	invokevirtual	#97; //Method b:(I)Lih;
+   82:	ldc	#30; //String Forest
+   84:	invokevirtual	#95; //Method a:(Ljava/lang/String;)Lih;
+   87:	ldc	#6; //int 5159473
+   89:	invokevirtual	#94; //Method a:(I)Lih;
+   92:	putstatic	#68; //Field d:Lih;
+   95:	new	#46; //class ez
+   98:	dup
+   99:	invokespecial	#89; //Method ez."<init>":()V
+   102:	ldc	#14; //int 14278691
+   104:	invokevirtual	#90; //Method ez.b:(I)Lih;
+   107:	ldc	#35; //String Savanna
+   109:	invokevirtual	#95; //Method a:(Ljava/lang/String;)Lih;
+   112:	putstatic	#69; //Field e:Lih;
+   115:	new	#53; //class ih
+   118:	dup
+   119:	invokespecial	#91; //Method "<init>":()V
+   122:	ldc	#12; //int 10595616
+   124:	invokevirtual	#97; //Method b:(I)Lih;
+   127:	ldc	#37; //String Shrubland
+   129:	invokevirtual	#95; //Method a:(Ljava/lang/String;)Lih;
+   132:	putstatic	#70; //Field f:Lih;
+   135:	new	#53; //class ih
+   138:	dup
+   139:	invokespecial	#91; //Method "<init>":()V
+   142:	ldc	#5; //int 3060051
+   144:	invokevirtual	#97; //Method b:(I)Lih;
+   147:	ldc	#39; //String Taiga
+   149:	invokevirtual	#95; //Method a:(Ljava/lang/String;)Lih;
+   152:	invokevirtual	#96; //Method b:()Lih;
+   155:	ldc	#9; //int 8107825
+   157:	invokevirtual	#94; //Method a:(I)Lih;
+   160:	putstatic	#71; //Field g:Lih;
+   163:	new	#46; //class ez
+   166:	dup
+   167:	invokespecial	#89; //Method ez."<init>":()V
+   170:	ldc	#15; //int 16421912
+   172:	invokevirtual	#90; //Method ez.b:(I)Lih;
+   175:	ldc	#29; //String Desert
+   177:	invokevirtual	#95; //Method a:(Ljava/lang/String;)Lih;
+   180:	putstatic	#72; //Field h:Lih;
+   183:	new	#46; //class ez
+   186:	dup
+   187:	invokespecial	#89; //Method ez."<init>":()V
+   190:	ldc	#17; //int 16767248
+   192:	invokevirtual	#90; //Method ez.b:(I)Lih;
+   195:	ldc	#33; //String Plains
+   197:	invokevirtual	#95; //Method a:(Ljava/lang/String;)Lih;
+   200:	putstatic	#73; //Field i:Lih;
+   203:	new	#46; //class ez
+   206:	dup
+   207:	invokespecial	#89; //Method ez."<init>":()V
+   210:	ldc	#18; //int 16772499
+   212:	invokevirtual	#90; //Method ez.b:(I)Lih;
+   215:	ldc	#32; //String Ice Desert
+   217:	invokevirtual	#95; //Method a:(Ljava/lang/String;)Lih;
+   220:	invokevirtual	#96; //Method b:()Lih;
+   223:	ldc	#13; //int 12899129
+   225:	invokevirtual	#94; //Method a:(I)Lih;
+   228:	putstatic	#74; //Field j:Lih;
+   231:	new	#53; //class ih
+   234:	dup
+   235:	invokespecial	#91; //Method "<init>":()V
+   238:	ldc	#8; //int 5762041
+   240:	invokevirtual	#97; //Method b:(I)Lih;
+   243:	ldc	#40; //String Tundra
+   245:	invokevirtual	#95; //Method a:(Ljava/lang/String;)Lih;
+   248:	invokevirtual	#96; //Method b:()Lih;
+   251:	ldc	#13; //int 12899129
+   253:	invokevirtual	#94; //Method a:(I)Lih;
+   256:	putstatic	#75; //Field k:Lih;
+   259:	new	#57; //class o
+   262:	dup
+   263:	invokespecial	#99; //Method o."<init>":()V
+   266:	ldc	#16; //int 16711680
+   268:	invokevirtual	#100; //Method o.b:(I)Lih;
+   271:	ldc	#31; //String Hell
+   273:	invokevirtual	#95; //Method a:(Ljava/lang/String;)Lih;
+   276:	putstatic	#76; //Field l:Lih;
+   279:	sipush	4096
+   282:	anewarray	#53; //class ih
+   285:	putstatic	#84; //Field t:[Lih;
+   288:	invokestatic	#92; //Method a:()V
+   291:	return
+
+}
+

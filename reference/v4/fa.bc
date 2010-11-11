@@ -1,0 +1,10 @@
+Compiled from SourceFile
+public class fa extends ij{
+public fa();
+  Code:
+   0:	aload_0
+   1:	invokespecial	#3; //Method ij."<init>":()V
+   4:	return
+
+}
+

@@ -1,0 +1,12 @@
+Compiled from SourceFile
+public interface io{
+public abstract int a(int, int, int);
+
+public abstract int b(int, int, int);
+
+public abstract jr c(int, int, int);
+
+public abstract boolean d(int, int, int);
+
+}
+

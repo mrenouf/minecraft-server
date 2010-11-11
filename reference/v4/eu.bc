@@ -1,0 +1,8 @@
+Compiled from SourceFile
+public interface eu{
+public abstract void b(java.lang.String);
+
+public abstract java.lang.String c();
+
+}
+

@@ -1,0 +1,47 @@
+Compiled from SourceFile
+public class ht extends fy{
+protected ht(int, int, jt, boolean);
+  Code:
+   0:	aload_0
+   1:	iload_1
+   2:	iload_2
+   3:	aload_3
+   4:	invokespecial	#6; //Method fy."<init>":(IILjt;)V
+   7:	aload_0
+   8:	iload	4
+   10:	putfield	#4; //Field a:Z
+   13:	return
+
+public boolean a();
+  Code:
+   0:	iconst_0
+   1:	ireturn
+
+public boolean a(iq, int, int, int, int);
+  Code:
+   0:	aload_1
+   1:	iload_2
+   2:	iload_3
+   3:	iload	4
+   5:	invokeinterface	#8,  4; //InterfaceMethod iq.a:(III)I
+   10:	istore	6
+   12:	aload_0
+   13:	getfield	#4; //Field a:Z
+   16:	ifne	30
+   19:	iload	6
+   21:	aload_0
+   22:	getfield	#5; //Field bh:I
+   25:	if_icmpne	30
+   28:	iconst_0
+   29:	ireturn
+   30:	aload_0
+   31:	aload_1
+   32:	iload_2
+   33:	iload_3
+   34:	iload	4
+   36:	iload	5
+   38:	invokespecial	#7; //Method fy.a:(Liq;IIII)Z
+   41:	ireturn
+
+}
+

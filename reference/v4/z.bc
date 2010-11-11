@@ -1,0 +1,160 @@
+Compiled from SourceFile
+public class z extends cy{
+protected z(int, jt);
+  Code:
+   0:	aload_0
+   1:	iload_1
+   2:	aload_2
+   3:	invokespecial	#16; //Method cy."<init>":(ILjt;)V
+   6:	aload_0
+   7:	iconst_0
+   8:	invokevirtual	#28; //Method a:(Z)V
+   11:	aload_2
+   12:	getstatic	#13; //Field jt.g:Ljt;
+   15:	if_acmpne	23
+   18:	aload_0
+   19:	iconst_1
+   20:	invokevirtual	#28; //Method a:(Z)V
+   23:	return
+
+public void b(em, int, int, int, int);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	iload_2
+   3:	iload_3
+   4:	iload	4
+   6:	iload	5
+   8:	invokespecial	#17; //Method cy.b:(Lem;IIII)V
+   11:	aload_1
+   12:	iload_2
+   13:	iload_3
+   14:	iload	4
+   16:	invokevirtual	#18; //Method em.a:(III)I
+   19:	aload_0
+   20:	getfield	#14; //Field bh:I
+   23:	if_icmpne	35
+   26:	aload_0
+   27:	aload_1
+   28:	iload_2
+   29:	iload_3
+   30:	iload	4
+   32:	invokespecial	#29; //Method i:(Lem;III)V
+   35:	return
+
+public void a(em, int, int, int, java.util.Random);
+  Code:
+   0:	aload_0
+   1:	getfield	#15; //Field bs:Ljt;
+   4:	getstatic	#13; //Field jt.g:Ljt;
+   7:	if_acmpne	192
+   10:	aload	5
+   12:	iconst_3
+   13:	invokevirtual	#25; //Method java/util/Random.nextInt:(I)I
+   16:	istore	6
+   18:	iconst_0
+   19:	istore	7
+   21:	iload	7
+   23:	iload	6
+   25:	if_icmpge	192
+   28:	iload_2
+   29:	aload	5
+   31:	iconst_3
+   32:	invokevirtual	#25; //Method java/util/Random.nextInt:(I)I
+   35:	iconst_1
+   36:	isub
+   37:	iadd
+   38:	istore_2
+   39:	iinc	3, 1
+   42:	iload	4
+   44:	aload	5
+   46:	iconst_3
+   47:	invokevirtual	#25; //Method java/util/Random.nextInt:(I)I
+   50:	iconst_1
+   51:	isub
+   52:	iadd
+   53:	istore	4
+   55:	aload_1
+   56:	iload_2
+   57:	iload_3
+   58:	iload	4
+   60:	invokevirtual	#18; //Method em.a:(III)I
+   63:	istore	8
+   65:	iload	8
+   67:	ifne	170
+   70:	aload_0
+   71:	aload_1
+   72:	iload_2
+   73:	iconst_1
+   74:	isub
+   75:	iload_3
+   76:	iload	4
+   78:	invokespecial	#30; //Method j:(Lem;III)Z
+   81:	ifne	154
+   84:	aload_0
+   85:	aload_1
+   86:	iload_2
+   87:	iconst_1
+   88:	iadd
+   89:	iload_3
+   90:	iload	4
+   92:	invokespecial	#30; //Method j:(Lem;III)Z
+   95:	ifne	154
+   98:	aload_0
+   99:	aload_1
+   100:	iload_2
+   101:	iload_3
+   102:	iload	4
+   104:	iconst_1
+   105:	isub
+   106:	invokespecial	#30; //Method j:(Lem;III)Z
+   109:	ifne	154
+   112:	aload_0
+   113:	aload_1
+   114:	iload_2
+   115:	iload_3
+   116:	iload	4
+   118:	iconst_1
+   119:	iadd
+   120:	invokespecial	#30; //Method j:(Lem;III)Z
+   123:	ifne	154
+   126:	aload_0
+   127:	aload_1
+   128:	iload_2
+   129:	iload_3
+   130:	iconst_1
+   131:	isub
+   132:	iload	4
+   134:	invokespecial	#30; //Method j:(Lem;III)Z
+   137:	ifne	154
+   140:	aload_0
+   141:	aload_1
+   142:	iload_2
+   143:	iload_3
+   144:	iconst_1
+   145:	iadd
+   146:	iload	4
+   148:	invokespecial	#30; //Method j:(Lem;III)Z
+   151:	ifeq	186
+   154:	aload_1
+   155:	iload_2
+   156:	iload_3
+   157:	iload	4
+   159:	getstatic	#9; //Field fy.ar:Ljo;
+   162:	getfield	#12; //Field jo.bh:I
+   165:	invokevirtual	#23; //Method em.d:(IIII)Z
+   168:	pop
+   169:	return
+   170:	getstatic	#11; //Field fy.m:[Lfy;
+   173:	iload	8
+   175:	aaload
+   176:	getfield	#10; //Field fy.bs:Ljt;
+   179:	invokevirtual	#26; //Method jt.c:()Z
+   182:	ifeq	186
+   185:	return
+   186:	iinc	7, 1
+   189:	goto	21
+   192:	return
+
+}
+

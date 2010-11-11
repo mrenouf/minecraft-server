@@ -1,0 +1,55 @@
+Compiled from SourceFile
+public class fu extends hc{
+public short a;
+
+public fu();
+  Code:
+   0:	aload_0
+   1:	invokespecial	#9; //Method hc."<init>":()V
+   4:	return
+
+public fu(short);
+  Code:
+   0:	aload_0
+   1:	invokespecial	#9; //Method hc."<init>":()V
+   4:	aload_0
+   5:	iload_1
+   6:	putfield	#8; //Field a:S
+   9:	return
+
+void a(java.io.DataOutput);
+  Code:
+   0:	aload_1
+   1:	aload_0
+   2:	getfield	#8; //Field a:S
+   5:	invokeinterface	#15,  2; //InterfaceMethod java/io/DataOutput.writeShort:(I)V
+   10:	return
+
+void a(java.io.DataInput);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	invokeinterface	#14,  1; //InterfaceMethod java/io/DataInput.readShort:()S
+   7:	putfield	#8; //Field a:S
+   10:	return
+
+public byte a();
+  Code:
+   0:	iconst_2
+   1:	ireturn
+
+public java.lang.String toString();
+  Code:
+   0:	new	#7; //class java/lang/StringBuilder
+   3:	dup
+   4:	invokespecial	#10; //Method java/lang/StringBuilder."<init>":()V
+   7:	ldc	#1; //String 
+   9:	invokevirtual	#12; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   12:	aload_0
+   13:	getfield	#8; //Field a:S
+   16:	invokevirtual	#11; //Method java/lang/StringBuilder.append:(I)Ljava/lang/StringBuilder;
+   19:	invokevirtual	#13; //Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+   22:	areturn
+
+}
+

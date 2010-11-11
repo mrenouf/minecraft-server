@@ -1,0 +1,69 @@
+Compiled from SourceFile
+public class gm extends java.lang.Object{
+public int a;
+
+public int b;
+
+public int c;
+
+public int d;
+
+public int e;
+
+public bc f;
+
+public dw g;
+
+public gm(int, int, int, int, bc);
+  Code:
+   0:	aload_0
+   1:	invokespecial	#19; //Method java/lang/Object."<init>":()V
+   4:	aload_0
+   5:	iconst_0
+   6:	putfield	#11; //Field a:I
+   9:	aload_0
+   10:	iload_1
+   11:	putfield	#12; //Field b:I
+   14:	aload_0
+   15:	iload_2
+   16:	putfield	#13; //Field c:I
+   19:	aload_0
+   20:	iload_3
+   21:	putfield	#14; //Field d:I
+   24:	aload_0
+   25:	iload	4
+   27:	putfield	#15; //Field e:I
+   30:	aload_0
+   31:	aload	5
+   33:	getfield	#5; //Field bc.a:D
+   36:	aload	5
+   38:	getfield	#6; //Field bc.b:D
+   41:	aload	5
+   43:	getfield	#7; //Field bc.c:D
+   46:	invokestatic	#18; //Method bc.b:(DDD)Lbc;
+   49:	putfield	#16; //Field f:Lbc;
+   52:	return
+
+public gm(dw);
+  Code:
+   0:	aload_0
+   1:	invokespecial	#19; //Method java/lang/Object."<init>":()V
+   4:	aload_0
+   5:	iconst_1
+   6:	putfield	#11; //Field a:I
+   9:	aload_0
+   10:	aload_1
+   11:	putfield	#17; //Field g:Ldw;
+   14:	aload_0
+   15:	aload_1
+   16:	getfield	#8; //Field dw.p:D
+   19:	aload_1
+   20:	getfield	#9; //Field dw.q:D
+   23:	aload_1
+   24:	getfield	#10; //Field dw.r:D
+   27:	invokestatic	#18; //Method bc.b:(DDD)Lbc;
+   30:	putfield	#16; //Field f:Lbc;
+   33:	return
+
+}
+

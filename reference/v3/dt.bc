@@ -1,0 +1,815 @@
+Compiled from SourceFile
+public class dt extends fw{
+public dt(int, int);
+  Code:
+   0:	aload_0
+   1:	iload_1
+   2:	iload_2
+   3:	getstatic	#16; //Field jr.n:Ljr;
+   6:	invokespecial	#33; //Method fw."<init>":(IILjr;)V
+   9:	aload_0
+   10:	iconst_1
+   11:	putfield	#8; //Field a:Z
+   14:	aload_0
+   15:	fconst_0
+   16:	fconst_0
+   17:	fconst_0
+   18:	fconst_1
+   19:	ldc	#1; //float 0.0625f
+   21:	fconst_1
+   22:	invokevirtual	#17; //Method a:(FFFFFF)V
+   25:	return
+
+public ds d(el, int, int, int);
+  Code:
+   0:	aconst_null
+   1:	areturn
+
+public boolean a();
+  Code:
+   0:	iconst_0
+   1:	ireturn
+
+public boolean a(el, int, int, int);
+  Code:
+   0:	aload_1
+   1:	iload_2
+   2:	iload_3
+   3:	iconst_1
+   4:	isub
+   5:	iload	4
+   7:	invokevirtual	#29; //Method el.d:(III)Z
+   10:	ireturn
+
+public void e(el, int, int, int);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	iload_2
+   3:	iload_3
+   4:	iload	4
+   6:	invokespecial	#37; //Method fw.e:(Lel;III)V
+   9:	aload_1
+   10:	getfield	#10; //Field el.z:Z
+   13:	ifeq	17
+   16:	return
+   17:	aload_0
+   18:	aload_1
+   19:	iload_2
+   20:	iload_3
+   21:	iload	4
+   23:	invokespecial	#23; //Method g:(Lel;III)V
+   26:	aload_1
+   27:	iload_2
+   28:	iload_3
+   29:	iconst_1
+   30:	iadd
+   31:	iload	4
+   33:	aload_0
+   34:	getfield	#9; //Field bi:I
+   37:	invokevirtual	#31; //Method el.g:(IIII)V
+   40:	aload_1
+   41:	iload_2
+   42:	iload_3
+   43:	iconst_1
+   44:	isub
+   45:	iload	4
+   47:	aload_0
+   48:	getfield	#9; //Field bi:I
+   51:	invokevirtual	#31; //Method el.g:(IIII)V
+   54:	aload_0
+   55:	aload_1
+   56:	iload_2
+   57:	iconst_1
+   58:	isub
+   59:	iload_3
+   60:	iload	4
+   62:	invokespecial	#24; //Method h:(Lel;III)V
+   65:	aload_0
+   66:	aload_1
+   67:	iload_2
+   68:	iconst_1
+   69:	iadd
+   70:	iload_3
+   71:	iload	4
+   73:	invokespecial	#24; //Method h:(Lel;III)V
+   76:	aload_0
+   77:	aload_1
+   78:	iload_2
+   79:	iload_3
+   80:	iload	4
+   82:	iconst_1
+   83:	isub
+   84:	invokespecial	#24; //Method h:(Lel;III)V
+   87:	aload_0
+   88:	aload_1
+   89:	iload_2
+   90:	iload_3
+   91:	iload	4
+   93:	iconst_1
+   94:	iadd
+   95:	invokespecial	#24; //Method h:(Lel;III)V
+   98:	aload_1
+   99:	iload_2
+   100:	iconst_1
+   101:	isub
+   102:	iload_3
+   103:	iload	4
+   105:	invokevirtual	#29; //Method el.d:(III)Z
+   108:	ifeq	127
+   111:	aload_0
+   112:	aload_1
+   113:	iload_2
+   114:	iconst_1
+   115:	isub
+   116:	iload_3
+   117:	iconst_1
+   118:	iadd
+   119:	iload	4
+   121:	invokespecial	#24; //Method h:(Lel;III)V
+   124:	goto	140
+   127:	aload_0
+   128:	aload_1
+   129:	iload_2
+   130:	iconst_1
+   131:	isub
+   132:	iload_3
+   133:	iconst_1
+   134:	isub
+   135:	iload	4
+   137:	invokespecial	#24; //Method h:(Lel;III)V
+   140:	aload_1
+   141:	iload_2
+   142:	iconst_1
+   143:	iadd
+   144:	iload_3
+   145:	iload	4
+   147:	invokevirtual	#29; //Method el.d:(III)Z
+   150:	ifeq	169
+   153:	aload_0
+   154:	aload_1
+   155:	iload_2
+   156:	iconst_1
+   157:	iadd
+   158:	iload_3
+   159:	iconst_1
+   160:	iadd
+   161:	iload	4
+   163:	invokespecial	#24; //Method h:(Lel;III)V
+   166:	goto	182
+   169:	aload_0
+   170:	aload_1
+   171:	iload_2
+   172:	iconst_1
+   173:	iadd
+   174:	iload_3
+   175:	iconst_1
+   176:	isub
+   177:	iload	4
+   179:	invokespecial	#24; //Method h:(Lel;III)V
+   182:	aload_1
+   183:	iload_2
+   184:	iload_3
+   185:	iload	4
+   187:	iconst_1
+   188:	isub
+   189:	invokevirtual	#29; //Method el.d:(III)Z
+   192:	ifeq	211
+   195:	aload_0
+   196:	aload_1
+   197:	iload_2
+   198:	iload_3
+   199:	iconst_1
+   200:	iadd
+   201:	iload	4
+   203:	iconst_1
+   204:	isub
+   205:	invokespecial	#24; //Method h:(Lel;III)V
+   208:	goto	224
+   211:	aload_0
+   212:	aload_1
+   213:	iload_2
+   214:	iload_3
+   215:	iconst_1
+   216:	isub
+   217:	iload	4
+   219:	iconst_1
+   220:	isub
+   221:	invokespecial	#24; //Method h:(Lel;III)V
+   224:	aload_1
+   225:	iload_2
+   226:	iload_3
+   227:	iload	4
+   229:	iconst_1
+   230:	iadd
+   231:	invokevirtual	#29; //Method el.d:(III)Z
+   234:	ifeq	253
+   237:	aload_0
+   238:	aload_1
+   239:	iload_2
+   240:	iload_3
+   241:	iconst_1
+   242:	iadd
+   243:	iload	4
+   245:	iconst_1
+   246:	iadd
+   247:	invokespecial	#24; //Method h:(Lel;III)V
+   250:	goto	266
+   253:	aload_0
+   254:	aload_1
+   255:	iload_2
+   256:	iload_3
+   257:	iconst_1
+   258:	isub
+   259:	iload	4
+   261:	iconst_1
+   262:	iadd
+   263:	invokespecial	#24; //Method h:(Lel;III)V
+   266:	return
+
+public void b(el, int, int, int);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	iload_2
+   3:	iload_3
+   4:	iload	4
+   6:	invokespecial	#34; //Method fw.b:(Lel;III)V
+   9:	aload_1
+   10:	getfield	#10; //Field el.z:Z
+   13:	ifeq	17
+   16:	return
+   17:	aload_1
+   18:	iload_2
+   19:	iload_3
+   20:	iconst_1
+   21:	iadd
+   22:	iload	4
+   24:	aload_0
+   25:	getfield	#9; //Field bi:I
+   28:	invokevirtual	#31; //Method el.g:(IIII)V
+   31:	aload_1
+   32:	iload_2
+   33:	iload_3
+   34:	iconst_1
+   35:	isub
+   36:	iload	4
+   38:	aload_0
+   39:	getfield	#9; //Field bi:I
+   42:	invokevirtual	#31; //Method el.g:(IIII)V
+   45:	aload_0
+   46:	aload_1
+   47:	iload_2
+   48:	iload_3
+   49:	iload	4
+   51:	invokespecial	#23; //Method g:(Lel;III)V
+   54:	aload_0
+   55:	aload_1
+   56:	iload_2
+   57:	iconst_1
+   58:	isub
+   59:	iload_3
+   60:	iload	4
+   62:	invokespecial	#24; //Method h:(Lel;III)V
+   65:	aload_0
+   66:	aload_1
+   67:	iload_2
+   68:	iconst_1
+   69:	iadd
+   70:	iload_3
+   71:	iload	4
+   73:	invokespecial	#24; //Method h:(Lel;III)V
+   76:	aload_0
+   77:	aload_1
+   78:	iload_2
+   79:	iload_3
+   80:	iload	4
+   82:	iconst_1
+   83:	isub
+   84:	invokespecial	#24; //Method h:(Lel;III)V
+   87:	aload_0
+   88:	aload_1
+   89:	iload_2
+   90:	iload_3
+   91:	iload	4
+   93:	iconst_1
+   94:	iadd
+   95:	invokespecial	#24; //Method h:(Lel;III)V
+   98:	aload_1
+   99:	iload_2
+   100:	iconst_1
+   101:	isub
+   102:	iload_3
+   103:	iload	4
+   105:	invokevirtual	#29; //Method el.d:(III)Z
+   108:	ifeq	127
+   111:	aload_0
+   112:	aload_1
+   113:	iload_2
+   114:	iconst_1
+   115:	isub
+   116:	iload_3
+   117:	iconst_1
+   118:	iadd
+   119:	iload	4
+   121:	invokespecial	#24; //Method h:(Lel;III)V
+   124:	goto	140
+   127:	aload_0
+   128:	aload_1
+   129:	iload_2
+   130:	iconst_1
+   131:	isub
+   132:	iload_3
+   133:	iconst_1
+   134:	isub
+   135:	iload	4
+   137:	invokespecial	#24; //Method h:(Lel;III)V
+   140:	aload_1
+   141:	iload_2
+   142:	iconst_1
+   143:	iadd
+   144:	iload_3
+   145:	iload	4
+   147:	invokevirtual	#29; //Method el.d:(III)Z
+   150:	ifeq	169
+   153:	aload_0
+   154:	aload_1
+   155:	iload_2
+   156:	iconst_1
+   157:	iadd
+   158:	iload_3
+   159:	iconst_1
+   160:	iadd
+   161:	iload	4
+   163:	invokespecial	#24; //Method h:(Lel;III)V
+   166:	goto	182
+   169:	aload_0
+   170:	aload_1
+   171:	iload_2
+   172:	iconst_1
+   173:	iadd
+   174:	iload_3
+   175:	iconst_1
+   176:	isub
+   177:	iload	4
+   179:	invokespecial	#24; //Method h:(Lel;III)V
+   182:	aload_1
+   183:	iload_2
+   184:	iload_3
+   185:	iload	4
+   187:	iconst_1
+   188:	isub
+   189:	invokevirtual	#29; //Method el.d:(III)Z
+   192:	ifeq	211
+   195:	aload_0
+   196:	aload_1
+   197:	iload_2
+   198:	iload_3
+   199:	iconst_1
+   200:	iadd
+   201:	iload	4
+   203:	iconst_1
+   204:	isub
+   205:	invokespecial	#24; //Method h:(Lel;III)V
+   208:	goto	224
+   211:	aload_0
+   212:	aload_1
+   213:	iload_2
+   214:	iload_3
+   215:	iconst_1
+   216:	isub
+   217:	iload	4
+   219:	iconst_1
+   220:	isub
+   221:	invokespecial	#24; //Method h:(Lel;III)V
+   224:	aload_1
+   225:	iload_2
+   226:	iload_3
+   227:	iload	4
+   229:	iconst_1
+   230:	iadd
+   231:	invokevirtual	#29; //Method el.d:(III)Z
+   234:	ifeq	253
+   237:	aload_0
+   238:	aload_1
+   239:	iload_2
+   240:	iload_3
+   241:	iconst_1
+   242:	iadd
+   243:	iload	4
+   245:	iconst_1
+   246:	iadd
+   247:	invokespecial	#24; //Method h:(Lel;III)V
+   250:	goto	266
+   253:	aload_0
+   254:	aload_1
+   255:	iload_2
+   256:	iload_3
+   257:	iconst_1
+   258:	isub
+   259:	iload	4
+   261:	iconst_1
+   262:	iadd
+   263:	invokespecial	#24; //Method h:(Lel;III)V
+   266:	return
+
+public void b(el, int, int, int, int);
+  Code:
+   0:	aload_1
+   1:	getfield	#10; //Field el.z:Z
+   4:	ifeq	8
+   7:	return
+   8:	aload_1
+   9:	iload_2
+   10:	iload_3
+   11:	iload	4
+   13:	invokevirtual	#26; //Method el.b:(III)I
+   16:	istore	6
+   18:	aload_0
+   19:	aload_1
+   20:	iload_2
+   21:	iload_3
+   22:	iload	4
+   24:	invokevirtual	#18; //Method a:(Lel;III)Z
+   27:	istore	7
+   29:	iload	7
+   31:	ifne	58
+   34:	aload_0
+   35:	aload_1
+   36:	iload_2
+   37:	iload_3
+   38:	iload	4
+   40:	iload	6
+   42:	invokevirtual	#19; //Method a_:(Lel;IIII)V
+   45:	aload_1
+   46:	iload_2
+   47:	iload_3
+   48:	iload	4
+   50:	iconst_0
+   51:	invokevirtual	#30; //Method el.d:(IIII)Z
+   54:	pop
+   55:	goto	67
+   58:	aload_0
+   59:	aload_1
+   60:	iload_2
+   61:	iload_3
+   62:	iload	4
+   64:	invokespecial	#23; //Method g:(Lel;III)V
+   67:	aload_0
+   68:	aload_1
+   69:	iload_2
+   70:	iload_3
+   71:	iload	4
+   73:	iload	5
+   75:	invokespecial	#35; //Method fw.b:(Lel;IIII)V
+   78:	return
+
+public int a(int, java.util.Random);
+  Code:
+   0:	getstatic	#11; //Field fq.aA:Lfq;
+   3:	getfield	#12; //Field fq.aW:I
+   6:	ireturn
+
+public boolean d(el, int, int, int, int);
+  Code:
+   0:	aload_0
+   1:	getfield	#8; //Field a:Z
+   4:	ifne	9
+   7:	iconst_0
+   8:	ireturn
+   9:	aload_0
+   10:	aload_1
+   11:	iload_2
+   12:	iload_3
+   13:	iload	4
+   15:	iload	5
+   17:	invokevirtual	#21; //Method b:(Lio;IIII)Z
+   20:	ireturn
+
+public boolean b(io, int, int, int, int);
+  Code:
+   0:	aload_0
+   1:	getfield	#8; //Field a:Z
+   4:	ifne	9
+   7:	iconst_0
+   8:	ireturn
+   9:	aload_1
+   10:	iload_2
+   11:	iload_3
+   12:	iload	4
+   14:	invokeinterface	#39,  4; //InterfaceMethod io.b:(III)I
+   19:	ifne	24
+   22:	iconst_0
+   23:	ireturn
+   24:	iload	5
+   26:	iconst_1
+   27:	if_icmpne	32
+   30:	iconst_1
+   31:	ireturn
+   32:	aload_1
+   33:	iload_2
+   34:	iconst_1
+   35:	isub
+   36:	iload_3
+   37:	iload	4
+   39:	invokestatic	#20; //Method b:(Lio;III)Z
+   42:	ifne	75
+   45:	aload_1
+   46:	iload_2
+   47:	iconst_1
+   48:	isub
+   49:	iload_3
+   50:	iload	4
+   52:	invokeinterface	#40,  4; //InterfaceMethod io.d:(III)Z
+   57:	ifne	79
+   60:	aload_1
+   61:	iload_2
+   62:	iconst_1
+   63:	isub
+   64:	iload_3
+   65:	iconst_1
+   66:	isub
+   67:	iload	4
+   69:	invokestatic	#20; //Method b:(Lio;III)Z
+   72:	ifeq	79
+   75:	iconst_1
+   76:	goto	80
+   79:	iconst_0
+   80:	istore	6
+   82:	aload_1
+   83:	iload_2
+   84:	iconst_1
+   85:	iadd
+   86:	iload_3
+   87:	iload	4
+   89:	invokestatic	#20; //Method b:(Lio;III)Z
+   92:	ifne	125
+   95:	aload_1
+   96:	iload_2
+   97:	iconst_1
+   98:	iadd
+   99:	iload_3
+   100:	iload	4
+   102:	invokeinterface	#40,  4; //InterfaceMethod io.d:(III)Z
+   107:	ifne	129
+   110:	aload_1
+   111:	iload_2
+   112:	iconst_1
+   113:	iadd
+   114:	iload_3
+   115:	iconst_1
+   116:	isub
+   117:	iload	4
+   119:	invokestatic	#20; //Method b:(Lio;III)Z
+   122:	ifeq	129
+   125:	iconst_1
+   126:	goto	130
+   129:	iconst_0
+   130:	istore	7
+   132:	aload_1
+   133:	iload_2
+   134:	iload_3
+   135:	iload	4
+   137:	iconst_1
+   138:	isub
+   139:	invokestatic	#20; //Method b:(Lio;III)Z
+   142:	ifne	175
+   145:	aload_1
+   146:	iload_2
+   147:	iload_3
+   148:	iload	4
+   150:	iconst_1
+   151:	isub
+   152:	invokeinterface	#40,  4; //InterfaceMethod io.d:(III)Z
+   157:	ifne	179
+   160:	aload_1
+   161:	iload_2
+   162:	iload_3
+   163:	iconst_1
+   164:	isub
+   165:	iload	4
+   167:	iconst_1
+   168:	isub
+   169:	invokestatic	#20; //Method b:(Lio;III)Z
+   172:	ifeq	179
+   175:	iconst_1
+   176:	goto	180
+   179:	iconst_0
+   180:	istore	8
+   182:	aload_1
+   183:	iload_2
+   184:	iload_3
+   185:	iload	4
+   187:	iconst_1
+   188:	iadd
+   189:	invokestatic	#20; //Method b:(Lio;III)Z
+   192:	ifne	225
+   195:	aload_1
+   196:	iload_2
+   197:	iload_3
+   198:	iload	4
+   200:	iconst_1
+   201:	iadd
+   202:	invokeinterface	#40,  4; //InterfaceMethod io.d:(III)Z
+   207:	ifne	229
+   210:	aload_1
+   211:	iload_2
+   212:	iload_3
+   213:	iconst_1
+   214:	isub
+   215:	iload	4
+   217:	iconst_1
+   218:	iadd
+   219:	invokestatic	#20; //Method b:(Lio;III)Z
+   222:	ifeq	229
+   225:	iconst_1
+   226:	goto	230
+   229:	iconst_0
+   230:	istore	9
+   232:	aload_1
+   233:	iload_2
+   234:	iload_3
+   235:	iconst_1
+   236:	iadd
+   237:	iload	4
+   239:	invokeinterface	#40,  4; //InterfaceMethod io.d:(III)Z
+   244:	ifne	379
+   247:	aload_1
+   248:	iload_2
+   249:	iconst_1
+   250:	isub
+   251:	iload_3
+   252:	iload	4
+   254:	invokeinterface	#40,  4; //InterfaceMethod io.d:(III)Z
+   259:	ifeq	280
+   262:	aload_1
+   263:	iload_2
+   264:	iconst_1
+   265:	isub
+   266:	iload_3
+   267:	iconst_1
+   268:	iadd
+   269:	iload	4
+   271:	invokestatic	#20; //Method b:(Lio;III)Z
+   274:	ifeq	280
+   277:	iconst_1
+   278:	istore	6
+   280:	aload_1
+   281:	iload_2
+   282:	iconst_1
+   283:	iadd
+   284:	iload_3
+   285:	iload	4
+   287:	invokeinterface	#40,  4; //InterfaceMethod io.d:(III)Z
+   292:	ifeq	313
+   295:	aload_1
+   296:	iload_2
+   297:	iconst_1
+   298:	iadd
+   299:	iload_3
+   300:	iconst_1
+   301:	iadd
+   302:	iload	4
+   304:	invokestatic	#20; //Method b:(Lio;III)Z
+   307:	ifeq	313
+   310:	iconst_1
+   311:	istore	7
+   313:	aload_1
+   314:	iload_2
+   315:	iload_3
+   316:	iload	4
+   318:	iconst_1
+   319:	isub
+   320:	invokeinterface	#40,  4; //InterfaceMethod io.d:(III)Z
+   325:	ifeq	346
+   328:	aload_1
+   329:	iload_2
+   330:	iload_3
+   331:	iconst_1
+   332:	iadd
+   333:	iload	4
+   335:	iconst_1
+   336:	isub
+   337:	invokestatic	#20; //Method b:(Lio;III)Z
+   340:	ifeq	346
+   343:	iconst_1
+   344:	istore	8
+   346:	aload_1
+   347:	iload_2
+   348:	iload_3
+   349:	iload	4
+   351:	iconst_1
+   352:	iadd
+   353:	invokeinterface	#40,  4; //InterfaceMethod io.d:(III)Z
+   358:	ifeq	379
+   361:	aload_1
+   362:	iload_2
+   363:	iload_3
+   364:	iconst_1
+   365:	iadd
+   366:	iload	4
+   368:	iconst_1
+   369:	iadd
+   370:	invokestatic	#20; //Method b:(Lio;III)Z
+   373:	ifeq	379
+   376:	iconst_1
+   377:	istore	9
+   379:	iload	8
+   381:	ifne	413
+   384:	iload	7
+   386:	ifne	413
+   389:	iload	6
+   391:	ifne	413
+   394:	iload	9
+   396:	ifne	413
+   399:	iload	5
+   401:	iconst_2
+   402:	if_icmplt	413
+   405:	iload	5
+   407:	iconst_5
+   408:	if_icmpgt	413
+   411:	iconst_1
+   412:	ireturn
+   413:	iload	5
+   415:	iconst_2
+   416:	if_icmpne	436
+   419:	iload	8
+   421:	ifeq	436
+   424:	iload	6
+   426:	ifne	436
+   429:	iload	7
+   431:	ifne	436
+   434:	iconst_1
+   435:	ireturn
+   436:	iload	5
+   438:	iconst_3
+   439:	if_icmpne	459
+   442:	iload	9
+   444:	ifeq	459
+   447:	iload	6
+   449:	ifne	459
+   452:	iload	7
+   454:	ifne	459
+   457:	iconst_1
+   458:	ireturn
+   459:	iload	5
+   461:	iconst_4
+   462:	if_icmpne	482
+   465:	iload	6
+   467:	ifeq	482
+   470:	iload	8
+   472:	ifne	482
+   475:	iload	9
+   477:	ifne	482
+   480:	iconst_1
+   481:	ireturn
+   482:	iload	5
+   484:	iconst_5
+   485:	if_icmpne	505
+   488:	iload	7
+   490:	ifeq	505
+   493:	iload	8
+   495:	ifne	505
+   498:	iload	9
+   500:	ifne	505
+   503:	iconst_1
+   504:	ireturn
+   505:	iconst_0
+   506:	ireturn
+
+public boolean c();
+  Code:
+   0:	aload_0
+   1:	getfield	#8; //Field a:Z
+   4:	ireturn
+
+public static boolean b(io, int, int, int);
+  Code:
+   0:	aload_0
+   1:	iload_1
+   2:	iload_2
+   3:	iload_3
+   4:	invokeinterface	#38,  4; //InterfaceMethod io.a:(III)I
+   9:	istore	4
+   11:	iload	4
+   13:	getstatic	#13; //Field fw.aw:Lfw;
+   16:	getfield	#14; //Field fw.bi:I
+   19:	if_icmpne	24
+   22:	iconst_1
+   23:	ireturn
+   24:	iload	4
+   26:	ifne	31
+   29:	iconst_0
+   30:	ireturn
+   31:	getstatic	#15; //Field fw.n:[Lfw;
+   34:	iload	4
+   36:	aaload
+   37:	invokevirtual	#36; //Method fw.c:()Z
+   40:	ifeq	45
+   43:	iconst_1
+   44:	ireturn
+   45:	iconst_0
+   46:	ireturn
+
+}
+

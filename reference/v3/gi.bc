@@ -1,0 +1,117 @@
+Compiled from SourceFile
+public class gi extends fq{
+public gi(int);
+  Code:
+   0:	aload_0
+   1:	iload_1
+   2:	invokespecial	#25; //Method fq."<init>":(I)V
+   5:	aload_0
+   6:	bipush	64
+   8:	putfield	#20; //Field aY:I
+   11:	aload_0
+   12:	iconst_1
+   13:	putfield	#19; //Field aX:I
+   16:	return
+
+public boolean a(hh, ft, el, int, int, int, int);
+  Code:
+   0:	iload	7
+   2:	ifne	7
+   5:	iconst_0
+   6:	ireturn
+   7:	aload_3
+   8:	iload	4
+   10:	iload	5
+   12:	iload	6
+   14:	invokevirtual	#23; //Method el.c:(III)Ljr;
+   17:	invokevirtual	#29; //Method jr.a:()Z
+   20:	ifne	25
+   23:	iconst_0
+   24:	ireturn
+   25:	iload	7
+   27:	iconst_1
+   28:	if_icmpne	34
+   31:	iinc	5, 1
+   34:	iload	7
+   36:	iconst_2
+   37:	if_icmpne	43
+   40:	iinc	6, -1
+   43:	iload	7
+   45:	iconst_3
+   46:	if_icmpne	52
+   49:	iinc	6, 1
+   52:	iload	7
+   54:	iconst_4
+   55:	if_icmpne	61
+   58:	iinc	4, -1
+   61:	iload	7
+   63:	iconst_5
+   64:	if_icmpne	70
+   67:	iinc	4, 1
+   70:	getstatic	#16; //Field fw.aE:Lfw;
+   73:	aload_3
+   74:	iload	4
+   76:	iload	5
+   78:	iload	6
+   80:	invokevirtual	#27; //Method fw.a:(Lel;III)Z
+   83:	ifne	88
+   86:	iconst_0
+   87:	ireturn
+   88:	iload	7
+   90:	iconst_1
+   91:	if_icmpne	138
+   94:	aload_3
+   95:	iload	4
+   97:	iload	5
+   99:	iload	6
+   101:	getstatic	#16; //Field fw.aE:Lfw;
+   104:	getfield	#18; //Field fw.bi:I
+   107:	aload_2
+   108:	getfield	#15; //Field ft.v:F
+   111:	ldc	#2; //float 180.0f
+   113:	fadd
+   114:	ldc	#1; //float 16.0f
+   116:	fmul
+   117:	ldc	#3; //float 360.0f
+   119:	fdiv
+   120:	f2d
+   121:	ldc2_w	#13; //double 0.5d
+   124:	dadd
+   125:	invokestatic	#28; //Method hb.b:(D)I
+   128:	bipush	15
+   130:	iand
+   131:	invokevirtual	#22; //Method el.b:(IIIII)Z
+   134:	pop
+   135:	goto	157
+   138:	aload_3
+   139:	iload	4
+   141:	iload	5
+   143:	iload	6
+   145:	getstatic	#17; //Field fw.aJ:Lfw;
+   148:	getfield	#18; //Field fw.bi:I
+   151:	iload	7
+   153:	invokevirtual	#22; //Method el.b:(IIIII)Z
+   156:	pop
+   157:	aload_1
+   158:	dup
+   159:	getfield	#21; //Field hh.a:I
+   162:	iconst_1
+   163:	isub
+   164:	putfield	#21; //Field hh.a:I
+   167:	aload_3
+   168:	iload	4
+   170:	iload	5
+   172:	iload	6
+   174:	invokevirtual	#24; //Method el.k:(III)Lav;
+   177:	checkcast	#11; //class jg
+   180:	astore	8
+   182:	aload	8
+   184:	ifnull	193
+   187:	aload_2
+   188:	aload	8
+   190:	invokevirtual	#26; //Method ft.a:(Ljg;)V
+   193:	iconst_1
+   194:	ireturn
+
+}
+

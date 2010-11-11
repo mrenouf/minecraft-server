@@ -1,0 +1,27 @@
+Compiled from SourceFile
+public class ke extends io{
+public ke();
+  Code:
+   0:	aload_0
+   1:	invokespecial	#4; //Method io."<init>":()V
+   4:	return
+
+public void a(ey);
+  Code:
+   0:	return
+
+public void a(java.io.DataInputStream);
+  Code:
+   0:	return
+
+public void a(java.io.DataOutputStream);
+  Code:
+   0:	return
+
+public int a();
+  Code:
+   0:	iconst_0
+   1:	ireturn
+
+}
+

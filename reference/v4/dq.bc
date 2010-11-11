@@ -1,0 +1,93 @@
+Compiled from SourceFile
+class dq extends java.lang.Thread{
+final ad a;
+
+final fo b;
+
+dq(fo, ad);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	putfield	#20; //Field b:Lfo;
+   5:	aload_0
+   6:	aload_2
+   7:	putfield	#19; //Field a:Lad;
+   10:	aload_0
+   11:	invokespecial	#35; //Method java/lang/Thread."<init>":()V
+   14:	return
+
+public void run();
+  Code:
+   0:	aload_0
+   1:	getfield	#20; //Field b:Lfo;
+   4:	invokestatic	#22; //Method fo.a:(Lfo;)Ljava/lang/String;
+   7:	astore_1
+   8:	new	#17; //class java/net/URL
+   11:	dup
+   12:	new	#14; //class java/lang/StringBuilder
+   15:	dup
+   16:	invokespecial	#32; //Method java/lang/StringBuilder."<init>":()V
+   19:	ldc	#5; //String http://www.minecraft.net/game/checkserver.jsp?user=
+   21:	invokevirtual	#33; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   24:	aload_0
+   25:	getfield	#19; //Field a:Lad;
+   28:	getfield	#18; //Field ad.b:Ljava/lang/String;
+   31:	invokevirtual	#33; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   34:	ldc	#1; //String &serverId=
+   36:	invokevirtual	#33; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   39:	aload_1
+   40:	invokevirtual	#33; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   43:	invokevirtual	#34; //Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+   46:	invokespecial	#36; //Method java/net/URL."<init>":(Ljava/lang/String;)V
+   49:	astore_2
+   50:	new	#9; //class java/io/BufferedReader
+   53:	dup
+   54:	new	#10; //class java/io/InputStreamReader
+   57:	dup
+   58:	aload_2
+   59:	invokevirtual	#37; //Method java/net/URL.openStream:()Ljava/io/InputStream;
+   62:	invokespecial	#28; //Method java/io/InputStreamReader."<init>":(Ljava/io/InputStream;)V
+   65:	invokespecial	#25; //Method java/io/BufferedReader."<init>":(Ljava/io/Reader;)V
+   68:	astore_3
+   69:	aload_3
+   70:	invokevirtual	#27; //Method java/io/BufferedReader.readLine:()Ljava/lang/String;
+   73:	astore	4
+   75:	aload_3
+   76:	invokevirtual	#26; //Method java/io/BufferedReader.close:()V
+   79:	getstatic	#21; //Field java/lang/System.out:Ljava/io/PrintStream;
+   82:	new	#14; //class java/lang/StringBuilder
+   85:	dup
+   86:	invokespecial	#32; //Method java/lang/StringBuilder."<init>":()V
+   89:	ldc	#3; //String THE REPLY IS 
+   91:	invokevirtual	#33; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   94:	aload	4
+   96:	invokevirtual	#33; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   99:	invokevirtual	#34; //Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+   102:	invokevirtual	#29; //Method java/io/PrintStream.println:(Ljava/lang/String;)V
+   105:	aload	4
+   107:	ldc	#4; //String YES
+   109:	invokevirtual	#31; //Method java/lang/String.equals:(Ljava/lang/Object;)Z
+   112:	ifeq	130
+   115:	aload_0
+   116:	getfield	#20; //Field b:Lfo;
+   119:	aload_0
+   120:	getfield	#19; //Field a:Lad;
+   123:	invokestatic	#23; //Method fo.a:(Lfo;Lad;)Lad;
+   126:	pop
+   127:	goto	139
+   130:	aload_0
+   131:	getfield	#20; //Field b:Lfo;
+   134:	ldc	#2; //String Failed to verify username!
+   136:	invokevirtual	#24; //Method fo.b:(Ljava/lang/String;)V
+   139:	goto	147
+   142:	astore_1
+   143:	aload_1
+   144:	invokevirtual	#30; //Method java/lang/Exception.printStackTrace:()V
+   147:	return
+  Exception table:
+   from   to  target type
+     0   139   142   Class java/lang/Exception
+
+
+}
+

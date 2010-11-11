@@ -1,0 +1,139 @@
+Compiled from SourceFile
+public class iy extends javax.swing.JComponent{
+public iy();
+  Code:
+   0:	aload_0
+   1:	invokespecial	#50; //Method javax/swing/JComponent."<init>":()V
+   4:	aload_0
+   5:	sipush	256
+   8:	newarray int
+   10:	putfield	#25; //Field a:[I
+   13:	aload_0
+   14:	iconst_0
+   15:	putfield	#26; //Field b:I
+   18:	aload_0
+   19:	bipush	10
+   21:	anewarray	#13; //class java/lang/String
+   24:	putfield	#27; //Field c:[Ljava/lang/String;
+   27:	aload_0
+   28:	new	#10; //class java/awt/Dimension
+   31:	dup
+   32:	sipush	256
+   35:	sipush	196
+   38:	invokespecial	#36; //Method java/awt/Dimension."<init>":(II)V
+   41:	invokevirtual	#34; //Method setPreferredSize:(Ljava/awt/Dimension;)V
+   44:	aload_0
+   45:	new	#10; //class java/awt/Dimension
+   48:	dup
+   49:	sipush	256
+   52:	sipush	196
+   55:	invokespecial	#36; //Method java/awt/Dimension."<init>":(II)V
+   58:	invokevirtual	#33; //Method setMinimumSize:(Ljava/awt/Dimension;)V
+   61:	aload_0
+   62:	new	#10; //class java/awt/Dimension
+   65:	dup
+   66:	sipush	256
+   69:	sipush	196
+   72:	invokespecial	#36; //Method java/awt/Dimension."<init>":(II)V
+   75:	invokevirtual	#32; //Method setMaximumSize:(Ljava/awt/Dimension;)V
+   78:	new	#17; //class javax/swing/Timer
+   81:	dup
+   82:	sipush	500
+   85:	new	#18; //class jw
+   88:	dup
+   89:	aload_0
+   90:	invokespecial	#53; //Method jw."<init>":(Liy;)V
+   93:	invokespecial	#51; //Method javax/swing/Timer."<init>":(ILjava/awt/event/ActionListener;)V
+   96:	invokevirtual	#52; //Method javax/swing/Timer.start:()V
+   99:	aload_0
+   100:	getstatic	#28; //Field java/awt/Color.BLACK:Ljava/awt/Color;
+   103:	invokevirtual	#31; //Method setBackground:(Ljava/awt/Color;)V
+   106:	return
+
+public void paint(java.awt.Graphics);
+  Code:
+   0:	aload_1
+   1:	new	#9; //class java/awt/Color
+   4:	dup
+   5:	ldc	#1; //int 16777215
+   7:	invokespecial	#35; //Method java/awt/Color."<init>":(I)V
+   10:	invokevirtual	#39; //Method java/awt/Graphics.setColor:(Ljava/awt/Color;)V
+   13:	aload_1
+   14:	iconst_0
+   15:	iconst_0
+   16:	sipush	256
+   19:	sipush	192
+   22:	invokevirtual	#38; //Method java/awt/Graphics.fillRect:(IIII)V
+   25:	iconst_0
+   26:	istore_2
+   27:	iload_2
+   28:	sipush	256
+   31:	if_icmpge	85
+   34:	aload_0
+   35:	getfield	#25; //Field a:[I
+   38:	iload_2
+   39:	aload_0
+   40:	getfield	#26; //Field b:I
+   43:	iadd
+   44:	sipush	255
+   47:	iand
+   48:	iaload
+   49:	istore_3
+   50:	aload_1
+   51:	new	#9; //class java/awt/Color
+   54:	dup
+   55:	iload_3
+   56:	bipush	28
+   58:	iadd
+   59:	bipush	16
+   61:	ishl
+   62:	invokespecial	#35; //Method java/awt/Color."<init>":(I)V
+   65:	invokevirtual	#39; //Method java/awt/Graphics.setColor:(Ljava/awt/Color;)V
+   68:	aload_1
+   69:	iload_2
+   70:	bipush	100
+   72:	iload_3
+   73:	isub
+   74:	iconst_1
+   75:	iload_3
+   76:	invokevirtual	#38; //Method java/awt/Graphics.fillRect:(IIII)V
+   79:	iinc	2, 1
+   82:	goto	27
+   85:	aload_1
+   86:	getstatic	#28; //Field java/awt/Color.BLACK:Ljava/awt/Color;
+   89:	invokevirtual	#39; //Method java/awt/Graphics.setColor:(Ljava/awt/Color;)V
+   92:	iconst_0
+   93:	istore_2
+   94:	iload_2
+   95:	aload_0
+   96:	getfield	#27; //Field c:[Ljava/lang/String;
+   99:	arraylength
+   100:	if_icmpge	134
+   103:	aload_0
+   104:	getfield	#27; //Field c:[Ljava/lang/String;
+   107:	iload_2
+   108:	aaload
+   109:	astore_3
+   110:	aload_3
+   111:	ifnull	128
+   114:	aload_1
+   115:	aload_3
+   116:	bipush	32
+   118:	bipush	116
+   120:	iload_2
+   121:	bipush	16
+   123:	imul
+   124:	iadd
+   125:	invokevirtual	#37; //Method java/awt/Graphics.drawString:(Ljava/lang/String;II)V
+   128:	iinc	2, 1
+   131:	goto	94
+   134:	return
+
+static void a(iy);
+  Code:
+   0:	aload_0
+   1:	invokespecial	#29; //Method a:()V
+   4:	return
+
+}
+

@@ -1,0 +1,169 @@
+Compiled from SourceFile
+public class ay extends java.lang.Object{
+public em a;
+
+public int b;
+
+public int c;
+
+public int d;
+
+public ay();
+  Code:
+   0:	aload_0
+   1:	invokespecial	#44; //Method java/lang/Object."<init>":()V
+   4:	return
+
+public void a(v);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	ldc	#9; //String x
+   4:	invokevirtual	#54; //Method v.d:(Ljava/lang/String;)I
+   7:	putfield	#31; //Field b:I
+   10:	aload_0
+   11:	aload_1
+   12:	ldc	#10; //String y
+   14:	invokevirtual	#54; //Method v.d:(Ljava/lang/String;)I
+   17:	putfield	#32; //Field c:I
+   20:	aload_0
+   21:	aload_1
+   22:	ldc	#11; //String z
+   24:	invokevirtual	#54; //Method v.d:(Ljava/lang/String;)I
+   27:	putfield	#33; //Field d:I
+   30:	return
+
+public void b(v);
+  Code:
+   0:	getstatic	#35; //Field f:Ljava/util/Map;
+   3:	aload_0
+   4:	invokevirtual	#45; //Method java/lang/Object.getClass:()Ljava/lang/Class;
+   7:	invokeinterface	#57,  2; //InterfaceMethod java/util/Map.get:(Ljava/lang/Object;)Ljava/lang/Object;
+   12:	checkcast	#23; //class java/lang/String
+   15:	astore_2
+   16:	aload_2
+   17:	ifnonnull	50
+   20:	new	#22; //class java/lang/RuntimeException
+   23:	dup
+   24:	new	#24; //class java/lang/StringBuilder
+   27:	dup
+   28:	invokespecial	#47; //Method java/lang/StringBuilder."<init>":()V
+   31:	aload_0
+   32:	invokevirtual	#45; //Method java/lang/Object.getClass:()Ljava/lang/Class;
+   35:	invokevirtual	#48; //Method java/lang/StringBuilder.append:(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+   38:	ldc	#1; //String  is missing a mapping! This is a bug!
+   40:	invokevirtual	#49; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   43:	invokevirtual	#50; //Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+   46:	invokespecial	#46; //Method java/lang/RuntimeException."<init>":(Ljava/lang/String;)V
+   49:	athrow
+   50:	aload_1
+   51:	ldc	#8; //String id
+   53:	aload_2
+   54:	invokevirtual	#53; //Method v.a:(Ljava/lang/String;Ljava/lang/String;)V
+   57:	aload_1
+   58:	ldc	#9; //String x
+   60:	aload_0
+   61:	getfield	#31; //Field b:I
+   64:	invokevirtual	#52; //Method v.a:(Ljava/lang/String;I)V
+   67:	aload_1
+   68:	ldc	#10; //String y
+   70:	aload_0
+   71:	getfield	#32; //Field c:I
+   74:	invokevirtual	#52; //Method v.a:(Ljava/lang/String;I)V
+   77:	aload_1
+   78:	ldc	#11; //String z
+   80:	aload_0
+   81:	getfield	#33; //Field d:I
+   84:	invokevirtual	#52; //Method v.a:(Ljava/lang/String;I)V
+   87:	return
+
+public void b();
+  Code:
+   0:	return
+
+public static ay c(v);
+  Code:
+   0:	aconst_null
+   1:	astore_1
+   2:	getstatic	#34; //Field e:Ljava/util/Map;
+   5:	aload_0
+   6:	ldc	#8; //String id
+   8:	invokevirtual	#55; //Method v.h:(Ljava/lang/String;)Ljava/lang/String;
+   11:	invokeinterface	#57,  2; //InterfaceMethod java/util/Map.get:(Ljava/lang/Object;)Ljava/lang/Object;
+   16:	checkcast	#18; //class java/lang/Class
+   19:	astore_2
+   20:	aload_2
+   21:	ifnull	32
+   24:	aload_2
+   25:	invokevirtual	#41; //Method java/lang/Class.newInstance:()Ljava/lang/Object;
+   28:	checkcast	#12; //class ay
+   31:	astore_1
+   32:	goto	40
+   35:	astore_2
+   36:	aload_2
+   37:	invokevirtual	#42; //Method java/lang/Exception.printStackTrace:()V
+   40:	aload_1
+   41:	ifnull	52
+   44:	aload_1
+   45:	aload_0
+   46:	invokevirtual	#38; //Method a:(Lv;)V
+   49:	goto	82
+   52:	getstatic	#36; //Field java/lang/System.out:Ljava/io/PrintStream;
+   55:	new	#24; //class java/lang/StringBuilder
+   58:	dup
+   59:	invokespecial	#47; //Method java/lang/StringBuilder."<init>":()V
+   62:	ldc	#7; //String Skipping TileEntity with id 
+   64:	invokevirtual	#49; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   67:	aload_0
+   68:	ldc	#8; //String id
+   70:	invokevirtual	#55; //Method v.h:(Ljava/lang/String;)Ljava/lang/String;
+   73:	invokevirtual	#49; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   76:	invokevirtual	#50; //Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+   79:	invokevirtual	#40; //Method java/io/PrintStream.println:(Ljava/lang/String;)V
+   82:	aload_1
+   83:	areturn
+  Exception table:
+   from   to  target type
+     2    32    35   Class java/lang/Exception
+
+
+public void c();
+  Code:
+   0:	aload_0
+   1:	getfield	#30; //Field a:Lem;
+   4:	aload_0
+   5:	getfield	#31; //Field b:I
+   8:	aload_0
+   9:	getfield	#32; //Field c:I
+   12:	aload_0
+   13:	getfield	#33; //Field d:I
+   16:	aload_0
+   17:	invokevirtual	#39; //Method em.b:(IIILay;)V
+   20:	return
+
+static {};
+  Code:
+   0:	new	#26; //class java/util/HashMap
+   3:	dup
+   4:	invokespecial	#51; //Method java/util/HashMap."<init>":()V
+   7:	putstatic	#34; //Field e:Ljava/util/Map;
+   10:	new	#26; //class java/util/HashMap
+   13:	dup
+   14:	invokespecial	#51; //Method java/util/HashMap."<init>":()V
+   17:	putstatic	#35; //Field f:Ljava/util/Map;
+   20:	ldc	#14; //class ds
+   22:	ldc	#4; //String Furnace
+   24:	invokestatic	#37; //Method a:(Ljava/lang/Class;Ljava/lang/String;)V
+   27:	ldc	#16; //class hx
+   29:	ldc	#2; //String Chest
+   31:	invokestatic	#37; //Method a:(Ljava/lang/Class;Ljava/lang/String;)V
+   34:	ldc	#28; //class ji
+   36:	ldc	#6; //String Sign
+   38:	invokestatic	#37; //Method a:(Ljava/lang/Class;Ljava/lang/String;)V
+   41:	ldc	#13; //class ce
+   43:	ldc	#5; //String MobSpawner
+   45:	invokestatic	#37; //Method a:(Ljava/lang/Class;Ljava/lang/String;)V
+   48:	return
+
+}
+

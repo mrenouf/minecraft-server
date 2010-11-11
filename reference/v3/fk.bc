@@ -1,0 +1,175 @@
+Compiled from SourceFile
+public class fk extends bg{
+public fk();
+  Code:
+   0:	aload_0
+   1:	invokespecial	#9; //Method bg."<init>":()V
+   4:	return
+
+public boolean a(el, java.util.Random, int, int, int);
+  Code:
+   0:	aload_1
+   1:	iload_3
+   2:	iload	4
+   4:	iload	5
+   6:	invokevirtual	#10; //Method el.a:(III)I
+   9:	ifeq	14
+   12:	iconst_0
+   13:	ireturn
+   14:	aload_1
+   15:	iload_3
+   16:	iload	4
+   18:	iconst_1
+   19:	iadd
+   20:	iload	5
+   22:	invokevirtual	#10; //Method el.a:(III)I
+   25:	getstatic	#6; //Field fw.bc:Lfw;
+   28:	getfield	#8; //Field fw.bi:I
+   31:	if_icmpeq	36
+   34:	iconst_0
+   35:	ireturn
+   36:	aload_1
+   37:	iload_3
+   38:	iload	4
+   40:	iload	5
+   42:	getstatic	#7; //Field fw.be:Lfw;
+   45:	getfield	#8; //Field fw.bi:I
+   48:	invokevirtual	#11; //Method el.d:(IIII)Z
+   51:	pop
+   52:	iconst_0
+   53:	istore	6
+   55:	iload	6
+   57:	sipush	1500
+   60:	if_icmpge	309
+   63:	iload_3
+   64:	aload_2
+   65:	bipush	8
+   67:	invokevirtual	#12; //Method java/util/Random.nextInt:(I)I
+   70:	iadd
+   71:	aload_2
+   72:	bipush	8
+   74:	invokevirtual	#12; //Method java/util/Random.nextInt:(I)I
+   77:	isub
+   78:	istore	7
+   80:	iload	4
+   82:	aload_2
+   83:	bipush	12
+   85:	invokevirtual	#12; //Method java/util/Random.nextInt:(I)I
+   88:	isub
+   89:	istore	8
+   91:	iload	5
+   93:	aload_2
+   94:	bipush	8
+   96:	invokevirtual	#12; //Method java/util/Random.nextInt:(I)I
+   99:	iadd
+   100:	aload_2
+   101:	bipush	8
+   103:	invokevirtual	#12; //Method java/util/Random.nextInt:(I)I
+   106:	isub
+   107:	istore	9
+   109:	aload_1
+   110:	iload	7
+   112:	iload	8
+   114:	iload	9
+   116:	invokevirtual	#10; //Method el.a:(III)I
+   119:	ifeq	125
+   122:	goto	303
+   125:	iconst_0
+   126:	istore	10
+   128:	iconst_0
+   129:	istore	11
+   131:	iload	11
+   133:	bipush	6
+   135:	if_icmpge	280
+   138:	iconst_0
+   139:	istore	12
+   141:	iload	11
+   143:	ifne	160
+   146:	aload_1
+   147:	iload	7
+   149:	iconst_1
+   150:	isub
+   151:	iload	8
+   153:	iload	9
+   155:	invokevirtual	#10; //Method el.a:(III)I
+   158:	istore	12
+   160:	iload	11
+   162:	iconst_1
+   163:	if_icmpne	180
+   166:	aload_1
+   167:	iload	7
+   169:	iconst_1
+   170:	iadd
+   171:	iload	8
+   173:	iload	9
+   175:	invokevirtual	#10; //Method el.a:(III)I
+   178:	istore	12
+   180:	iload	11
+   182:	iconst_2
+   183:	if_icmpne	200
+   186:	aload_1
+   187:	iload	7
+   189:	iload	8
+   191:	iconst_1
+   192:	isub
+   193:	iload	9
+   195:	invokevirtual	#10; //Method el.a:(III)I
+   198:	istore	12
+   200:	iload	11
+   202:	iconst_3
+   203:	if_icmpne	220
+   206:	aload_1
+   207:	iload	7
+   209:	iload	8
+   211:	iconst_1
+   212:	iadd
+   213:	iload	9
+   215:	invokevirtual	#10; //Method el.a:(III)I
+   218:	istore	12
+   220:	iload	11
+   222:	iconst_4
+   223:	if_icmpne	240
+   226:	aload_1
+   227:	iload	7
+   229:	iload	8
+   231:	iload	9
+   233:	iconst_1
+   234:	isub
+   235:	invokevirtual	#10; //Method el.a:(III)I
+   238:	istore	12
+   240:	iload	11
+   242:	iconst_5
+   243:	if_icmpne	260
+   246:	aload_1
+   247:	iload	7
+   249:	iload	8
+   251:	iload	9
+   253:	iconst_1
+   254:	iadd
+   255:	invokevirtual	#10; //Method el.a:(III)I
+   258:	istore	12
+   260:	iload	12
+   262:	getstatic	#7; //Field fw.be:Lfw;
+   265:	getfield	#8; //Field fw.bi:I
+   268:	if_icmpne	274
+   271:	iinc	10, 1
+   274:	iinc	11, 1
+   277:	goto	131
+   280:	iload	10
+   282:	iconst_1
+   283:	if_icmpne	303
+   286:	aload_1
+   287:	iload	7
+   289:	iload	8
+   291:	iload	9
+   293:	getstatic	#7; //Field fw.be:Lfw;
+   296:	getfield	#8; //Field fw.bi:I
+   299:	invokevirtual	#11; //Method el.d:(IIII)Z
+   302:	pop
+   303:	iinc	6, 1
+   306:	goto	55
+   309:	iconst_1
+   310:	ireturn
+
+}
+

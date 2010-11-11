@@ -1,0 +1,122 @@
+Compiled from SourceFile
+class gt extends java.util.logging.Formatter{
+final cz a;
+
+gt(cz);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	putfield	#18; //Field a:Lcz;
+   5:	aload_0
+   6:	invokespecial	#33; //Method java/util/logging/Formatter."<init>":()V
+   9:	return
+
+public java.lang.String format(java.util.logging.LogRecord);
+  Code:
+   0:	new	#13; //class java/lang/StringBuilder
+   3:	dup
+   4:	invokespecial	#28; //Method java/lang/StringBuilder."<init>":()V
+   7:	astore_2
+   8:	aload_1
+   9:	invokevirtual	#35; //Method java/util/logging/LogRecord.getLevel:()Ljava/util/logging/Level;
+   12:	astore_3
+   13:	aload_3
+   14:	getstatic	#21; //Field java/util/logging/Level.FINEST:Ljava/util/logging/Level;
+   17:	if_acmpne	30
+   20:	aload_2
+   21:	ldc	#3; //String [FINEST] 
+   23:	invokevirtual	#30; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   26:	pop
+   27:	goto	154
+   30:	aload_3
+   31:	getstatic	#20; //Field java/util/logging/Level.FINER:Ljava/util/logging/Level;
+   34:	if_acmpne	47
+   37:	aload_2
+   38:	ldc	#2; //String [FINER] 
+   40:	invokevirtual	#30; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   43:	pop
+   44:	goto	154
+   47:	aload_3
+   48:	getstatic	#19; //Field java/util/logging/Level.FINE:Ljava/util/logging/Level;
+   51:	if_acmpne	64
+   54:	aload_2
+   55:	ldc	#4; //String [FINE] 
+   57:	invokevirtual	#30; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   60:	pop
+   61:	goto	154
+   64:	aload_3
+   65:	getstatic	#22; //Field java/util/logging/Level.INFO:Ljava/util/logging/Level;
+   68:	if_acmpne	81
+   71:	aload_2
+   72:	ldc	#5; //String [INFO] 
+   74:	invokevirtual	#30; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   77:	pop
+   78:	goto	154
+   81:	aload_3
+   82:	getstatic	#24; //Field java/util/logging/Level.WARNING:Ljava/util/logging/Level;
+   85:	if_acmpne	98
+   88:	aload_2
+   89:	ldc	#7; //String [WARNING] 
+   91:	invokevirtual	#30; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   94:	pop
+   95:	goto	154
+   98:	aload_3
+   99:	getstatic	#23; //Field java/util/logging/Level.SEVERE:Ljava/util/logging/Level;
+   102:	if_acmpne	115
+   105:	aload_2
+   106:	ldc	#6; //String [SEVERE] 
+   108:	invokevirtual	#30; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   111:	pop
+   112:	goto	154
+   115:	aload_3
+   116:	getstatic	#23; //Field java/util/logging/Level.SEVERE:Ljava/util/logging/Level;
+   119:	if_acmpne	154
+   122:	aload_2
+   123:	new	#13; //class java/lang/StringBuilder
+   126:	dup
+   127:	invokespecial	#28; //Method java/lang/StringBuilder."<init>":()V
+   130:	ldc	#1; //String [
+   132:	invokevirtual	#30; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   135:	aload_3
+   136:	invokevirtual	#34; //Method java/util/logging/Level.getLocalizedName:()Ljava/lang/String;
+   139:	invokevirtual	#30; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   142:	ldc	#8; //String ] 
+   144:	invokevirtual	#30; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   147:	invokevirtual	#31; //Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+   150:	invokevirtual	#30; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   153:	pop
+   154:	aload_2
+   155:	aload_1
+   156:	invokevirtual	#36; //Method java/util/logging/LogRecord.getMessage:()Ljava/lang/String;
+   159:	invokevirtual	#30; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   162:	pop
+   163:	aload_2
+   164:	bipush	10
+   166:	invokevirtual	#29; //Method java/lang/StringBuilder.append:(C)Ljava/lang/StringBuilder;
+   169:	pop
+   170:	aload_1
+   171:	invokevirtual	#37; //Method java/util/logging/LogRecord.getThrown:()Ljava/lang/Throwable;
+   174:	astore	4
+   176:	aload	4
+   178:	ifnull	214
+   181:	new	#12; //class java/io/StringWriter
+   184:	dup
+   185:	invokespecial	#26; //Method java/io/StringWriter."<init>":()V
+   188:	astore	5
+   190:	aload	4
+   192:	new	#11; //class java/io/PrintWriter
+   195:	dup
+   196:	aload	5
+   198:	invokespecial	#25; //Method java/io/PrintWriter."<init>":(Ljava/io/Writer;)V
+   201:	invokevirtual	#32; //Method java/lang/Throwable.printStackTrace:(Ljava/io/PrintWriter;)V
+   204:	aload_2
+   205:	aload	5
+   207:	invokevirtual	#27; //Method java/io/StringWriter.toString:()Ljava/lang/String;
+   210:	invokevirtual	#30; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   213:	pop
+   214:	aload_2
+   215:	invokevirtual	#31; //Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+   218:	areturn
+
+}
+

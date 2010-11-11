@@ -1,0 +1,143 @@
+Compiled from SourceFile
+public class b extends java.lang.Object{
+public final int a;
+
+public final int b;
+
+public final int c;
+
+public final int d;
+
+int e;
+
+float f;
+
+float g;
+
+float h;
+
+b i;
+
+public boolean j;
+
+public b(int, int, int);
+  Code:
+   0:	aload_0
+   1:	invokespecial	#13; //Method java/lang/Object."<init>":()V
+   4:	aload_0
+   5:	iconst_m1
+   6:	putfield	#10; //Field e:I
+   9:	aload_0
+   10:	iconst_0
+   11:	putfield	#11; //Field j:Z
+   14:	aload_0
+   15:	iload_1
+   16:	putfield	#6; //Field a:I
+   19:	aload_0
+   20:	iload_2
+   21:	putfield	#7; //Field b:I
+   24:	aload_0
+   25:	iload_3
+   26:	putfield	#8; //Field c:I
+   29:	aload_0
+   30:	iload_1
+   31:	iload_2
+   32:	bipush	10
+   34:	ishl
+   35:	ior
+   36:	iload_3
+   37:	bipush	20
+   39:	ishl
+   40:	ior
+   41:	putfield	#9; //Field d:I
+   44:	return
+
+public float a(b);
+  Code:
+   0:	aload_1
+   1:	getfield	#6; //Field a:I
+   4:	aload_0
+   5:	getfield	#6; //Field a:I
+   8:	isub
+   9:	i2f
+   10:	fstore_2
+   11:	aload_1
+   12:	getfield	#7; //Field b:I
+   15:	aload_0
+   16:	getfield	#7; //Field b:I
+   19:	isub
+   20:	i2f
+   21:	fstore_3
+   22:	aload_1
+   23:	getfield	#8; //Field c:I
+   26:	aload_0
+   27:	getfield	#8; //Field c:I
+   30:	isub
+   31:	i2f
+   32:	fstore	4
+   34:	fload_2
+   35:	fload_2
+   36:	fmul
+   37:	fload_3
+   38:	fload_3
+   39:	fmul
+   40:	fadd
+   41:	fload	4
+   43:	fload	4
+   45:	fmul
+   46:	fadd
+   47:	invokestatic	#12; //Method hd.c:(F)F
+   50:	freturn
+
+public boolean equals(java.lang.Object);
+  Code:
+   0:	aload_1
+   1:	checkcast	#2; //class b
+   4:	getfield	#9; //Field d:I
+   7:	aload_0
+   8:	getfield	#9; //Field d:I
+   11:	if_icmpne	18
+   14:	iconst_1
+   15:	goto	19
+   18:	iconst_0
+   19:	ireturn
+
+public int hashCode();
+  Code:
+   0:	aload_0
+   1:	getfield	#9; //Field d:I
+   4:	ireturn
+
+public boolean a();
+  Code:
+   0:	aload_0
+   1:	getfield	#10; //Field e:I
+   4:	iflt	11
+   7:	iconst_1
+   8:	goto	12
+   11:	iconst_0
+   12:	ireturn
+
+public java.lang.String toString();
+  Code:
+   0:	new	#5; //class java/lang/StringBuilder
+   3:	dup
+   4:	invokespecial	#14; //Method java/lang/StringBuilder."<init>":()V
+   7:	aload_0
+   8:	getfield	#6; //Field a:I
+   11:	invokevirtual	#15; //Method java/lang/StringBuilder.append:(I)Ljava/lang/StringBuilder;
+   14:	ldc	#1; //String , 
+   16:	invokevirtual	#16; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   19:	aload_0
+   20:	getfield	#7; //Field b:I
+   23:	invokevirtual	#15; //Method java/lang/StringBuilder.append:(I)Ljava/lang/StringBuilder;
+   26:	ldc	#1; //String , 
+   28:	invokevirtual	#16; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   31:	aload_0
+   32:	getfield	#8; //Field c:I
+   35:	invokevirtual	#15; //Method java/lang/StringBuilder.append:(I)Ljava/lang/StringBuilder;
+   38:	invokevirtual	#17; //Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+   41:	areturn
+
+}
+

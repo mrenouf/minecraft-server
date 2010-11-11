@@ -1,0 +1,48 @@
+Compiled from SourceFile
+public class go extends gx{
+public go();
+  Code:
+   0:	aload_0
+   1:	invokespecial	#9; //Method gx."<init>":()V
+   4:	aload_0
+   5:	iconst_1
+   6:	putfield	#8; //Field i:Z
+   9:	return
+
+public void a(java.io.DataInputStream);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	invokevirtual	#12; //Method java/io/DataInputStream.readFloat:()F
+   5:	putfield	#6; //Field e:F
+   8:	aload_0
+   9:	aload_1
+   10:	invokevirtual	#12; //Method java/io/DataInputStream.readFloat:()F
+   13:	putfield	#7; //Field f:F
+   16:	aload_0
+   17:	aload_1
+   18:	invokespecial	#10; //Method gx.a:(Ljava/io/DataInputStream;)V
+   21:	return
+
+public void a(java.io.DataOutputStream);
+  Code:
+   0:	aload_1
+   1:	aload_0
+   2:	getfield	#6; //Field e:F
+   5:	invokevirtual	#13; //Method java/io/DataOutputStream.writeFloat:(F)V
+   8:	aload_1
+   9:	aload_0
+   10:	getfield	#7; //Field f:F
+   13:	invokevirtual	#13; //Method java/io/DataOutputStream.writeFloat:(F)V
+   16:	aload_0
+   17:	aload_1
+   18:	invokespecial	#11; //Method gx.a:(Ljava/io/DataOutputStream;)V
+   21:	return
+
+public int a();
+  Code:
+   0:	bipush	9
+   2:	ireturn
+
+}
+

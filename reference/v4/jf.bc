@@ -1,0 +1,13 @@
+Compiled from SourceFile
+public class jf extends fy{
+public jf(int, int);
+  Code:
+   0:	aload_0
+   1:	iload_1
+   2:	iload_2
+   3:	getstatic	#4; //Field jt.d:Ljt;
+   6:	invokespecial	#5; //Method fy."<init>":(IILjt;)V
+   9:	return
+
+}
+

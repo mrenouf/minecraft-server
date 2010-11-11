@@ -1,0 +1,433 @@
+Compiled from SourceFile
+public class gf extends dv{
+public hh a;
+
+public int b;
+
+public int c;
+
+public float d;
+
+public gf(el, double, double, double, hh);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	invokespecial	#76; //Method dv."<init>":(Lel;)V
+   5:	aload_0
+   6:	iconst_0
+   7:	putfield	#56; //Field b:I
+   10:	aload_0
+   11:	iconst_5
+   12:	putfield	#60; //Field f:I
+   15:	aload_0
+   16:	invokestatic	#94; //Method java/lang/Math.random:()D
+   19:	ldc2_w	#38; //double 3.141592653589793d
+   22:	dmul
+   23:	ldc2_w	#36; //double 2.0d
+   26:	dmul
+   27:	d2f
+   28:	putfield	#58; //Field d:F
+   31:	aload_0
+   32:	ldc	#3; //float 0.25f
+   34:	ldc	#3; //float 0.25f
+   36:	invokevirtual	#84; //Method a:(FF)V
+   39:	aload_0
+   40:	aload_0
+   41:	getfield	#52; //Field I:F
+   44:	fconst_2
+   45:	fdiv
+   46:	putfield	#51; //Field G:F
+   49:	aload_0
+   50:	dload_2
+   51:	dload	4
+   53:	dload	6
+   55:	invokevirtual	#83; //Method a:(DDD)V
+   58:	aload_0
+   59:	aload	8
+   61:	putfield	#55; //Field a:Lhh;
+   64:	aload_0
+   65:	invokestatic	#94; //Method java/lang/Math.random:()D
+   68:	ldc2_w	#40; //double 360.0d
+   71:	dmul
+   72:	d2f
+   73:	putfield	#71; //Field v:F
+   76:	aload_0
+   77:	invokestatic	#94; //Method java/lang/Math.random:()D
+   80:	ldc2_w	#32; //double 0.20000000298023224d
+   83:	dmul
+   84:	ldc2_w	#30; //double 0.10000000149011612d
+   87:	dsub
+   88:	d2f
+   89:	f2d
+   90:	putfield	#68; //Field s:D
+   93:	aload_0
+   94:	ldc2_w	#32; //double 0.20000000298023224d
+   97:	putfield	#69; //Field t:D
+   100:	aload_0
+   101:	invokestatic	#94; //Method java/lang/Math.random:()D
+   104:	ldc2_w	#32; //double 0.20000000298023224d
+   107:	dmul
+   108:	ldc2_w	#30; //double 0.10000000149011612d
+   111:	dsub
+   112:	d2f
+   113:	f2d
+   114:	putfield	#70; //Field u:D
+   117:	aload_0
+   118:	iconst_0
+   119:	putfield	#53; //Field L:Z
+   122:	return
+
+public gf(el);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	invokespecial	#76; //Method dv."<init>":(Lel;)V
+   5:	aload_0
+   6:	iconst_0
+   7:	putfield	#56; //Field b:I
+   10:	aload_0
+   11:	iconst_5
+   12:	putfield	#60; //Field f:I
+   15:	aload_0
+   16:	invokestatic	#94; //Method java/lang/Math.random:()D
+   19:	ldc2_w	#38; //double 3.141592653589793d
+   22:	dmul
+   23:	ldc2_w	#36; //double 2.0d
+   26:	dmul
+   27:	d2f
+   28:	putfield	#58; //Field d:F
+   31:	aload_0
+   32:	ldc	#3; //float 0.25f
+   34:	ldc	#3; //float 0.25f
+   36:	invokevirtual	#84; //Method a:(FF)V
+   39:	aload_0
+   40:	aload_0
+   41:	getfield	#52; //Field I:F
+   44:	fconst_2
+   45:	fdiv
+   46:	putfield	#51; //Field G:F
+   49:	return
+
+public void b_();
+  Code:
+   0:	aload_0
+   1:	invokespecial	#77; //Method dv.b_:()V
+   4:	aload_0
+   5:	getfield	#57; //Field c:I
+   8:	ifle	21
+   11:	aload_0
+   12:	dup
+   13:	getfield	#57; //Field c:I
+   16:	iconst_1
+   17:	isub
+   18:	putfield	#57; //Field c:I
+   21:	aload_0
+   22:	aload_0
+   23:	getfield	#65; //Field p:D
+   26:	putfield	#62; //Field m:D
+   29:	aload_0
+   30:	aload_0
+   31:	getfield	#66; //Field q:D
+   34:	putfield	#63; //Field n:D
+   37:	aload_0
+   38:	aload_0
+   39:	getfield	#67; //Field r:D
+   42:	putfield	#64; //Field o:D
+   45:	aload_0
+   46:	dup
+   47:	getfield	#69; //Field t:D
+   50:	ldc2_w	#28; //double 0.03999999910593033d
+   53:	dsub
+   54:	putfield	#69; //Field t:D
+   57:	aload_0
+   58:	getfield	#61; //Field l:Lel;
+   61:	aload_0
+   62:	getfield	#65; //Field p:D
+   65:	invokestatic	#90; //Method hb.b:(D)I
+   68:	aload_0
+   69:	getfield	#66; //Field q:D
+   72:	invokestatic	#90; //Method hb.b:(D)I
+   75:	aload_0
+   76:	getfield	#67; //Field r:D
+   79:	invokestatic	#90; //Method hb.b:(D)I
+   82:	invokevirtual	#81; //Method el.c:(III)Ljr;
+   85:	getstatic	#75; //Field jr.g:Ljr;
+   88:	if_acmpne	168
+   91:	aload_0
+   92:	ldc2_w	#32; //double 0.20000000298023224d
+   95:	putfield	#69; //Field t:D
+   98:	aload_0
+   99:	aload_0
+   100:	getfield	#54; //Field V:Ljava/util/Random;
+   103:	invokevirtual	#95; //Method java/util/Random.nextFloat:()F
+   106:	aload_0
+   107:	getfield	#54; //Field V:Ljava/util/Random;
+   110:	invokevirtual	#95; //Method java/util/Random.nextFloat:()F
+   113:	fsub
+   114:	ldc	#2; //float 0.2f
+   116:	fmul
+   117:	f2d
+   118:	putfield	#68; //Field s:D
+   121:	aload_0
+   122:	aload_0
+   123:	getfield	#54; //Field V:Ljava/util/Random;
+   126:	invokevirtual	#95; //Method java/util/Random.nextFloat:()F
+   129:	aload_0
+   130:	getfield	#54; //Field V:Ljava/util/Random;
+   133:	invokevirtual	#95; //Method java/util/Random.nextFloat:()F
+   136:	fsub
+   137:	ldc	#2; //float 0.2f
+   139:	fmul
+   140:	f2d
+   141:	putfield	#70; //Field u:D
+   144:	aload_0
+   145:	getfield	#61; //Field l:Lel;
+   148:	aload_0
+   149:	ldc	#11; //String random.fizz
+   151:	ldc	#4; //float 0.4f
+   153:	fconst_2
+   154:	aload_0
+   155:	getfield	#54; //Field V:Ljava/util/Random;
+   158:	invokevirtual	#95; //Method java/util/Random.nextFloat:()F
+   161:	ldc	#4; //float 0.4f
+   163:	fmul
+   164:	fadd
+   165:	invokevirtual	#80; //Method el.a:(Ldv;Ljava/lang/String;FF)V
+   168:	aload_0
+   169:	aload_0
+   170:	getfield	#65; //Field p:D
+   173:	aload_0
+   174:	getfield	#66; //Field q:D
+   177:	aload_0
+   178:	getfield	#67; //Field r:D
+   181:	invokespecial	#87; //Method g:(DDD)Z
+   184:	pop
+   185:	aload_0
+   186:	invokevirtual	#89; //Method r:()Z
+   189:	pop
+   190:	aload_0
+   191:	aload_0
+   192:	getfield	#68; //Field s:D
+   195:	aload_0
+   196:	getfield	#69; //Field t:D
+   199:	aload_0
+   200:	getfield	#70; //Field u:D
+   203:	invokevirtual	#86; //Method c:(DDD)V
+   206:	ldc	#7; //float 0.98f
+   208:	fstore_1
+   209:	aload_0
+   210:	getfield	#50; //Field A:Z
+   213:	ifeq	269
+   216:	ldc	#5; //float 0.58800006f
+   218:	fstore_1
+   219:	aload_0
+   220:	getfield	#61; //Field l:Lel;
+   223:	aload_0
+   224:	getfield	#65; //Field p:D
+   227:	invokestatic	#90; //Method hb.b:(D)I
+   230:	aload_0
+   231:	getfield	#72; //Field z:Lds;
+   234:	getfield	#44; //Field ds.b:D
+   237:	invokestatic	#90; //Method hb.b:(D)I
+   240:	iconst_1
+   241:	isub
+   242:	aload_0
+   243:	getfield	#67; //Field r:D
+   246:	invokestatic	#90; //Method hb.b:(D)I
+   249:	invokevirtual	#78; //Method el.a:(III)I
+   252:	istore_2
+   253:	iload_2
+   254:	ifle	269
+   257:	getstatic	#48; //Field fw.n:[Lfw;
+   260:	iload_2
+   261:	aaload
+   262:	getfield	#47; //Field fw.bu:F
+   265:	ldc	#7; //float 0.98f
+   267:	fmul
+   268:	fstore_1
+   269:	aload_0
+   270:	dup
+   271:	getfield	#68; //Field s:D
+   274:	fload_1
+   275:	f2d
+   276:	dmul
+   277:	putfield	#68; //Field s:D
+   280:	aload_0
+   281:	dup
+   282:	getfield	#69; //Field t:D
+   285:	ldc2_w	#34; //double 0.9800000190734863d
+   288:	dmul
+   289:	putfield	#69; //Field t:D
+   292:	aload_0
+   293:	dup
+   294:	getfield	#70; //Field u:D
+   297:	fload_1
+   298:	f2d
+   299:	dmul
+   300:	putfield	#70; //Field u:D
+   303:	aload_0
+   304:	getfield	#50; //Field A:Z
+   307:	ifeq	322
+   310:	aload_0
+   311:	dup
+   312:	getfield	#69; //Field t:D
+   315:	ldc2_w	#26; //double -0.5d
+   318:	dmul
+   319:	putfield	#69; //Field t:D
+   322:	aload_0
+   323:	dup
+   324:	getfield	#59; //Field e:I
+   327:	iconst_1
+   328:	iadd
+   329:	putfield	#59; //Field e:I
+   332:	aload_0
+   333:	dup
+   334:	getfield	#56; //Field b:I
+   337:	iconst_1
+   338:	iadd
+   339:	putfield	#56; //Field b:I
+   342:	aload_0
+   343:	getfield	#56; //Field b:I
+   346:	sipush	6000
+   349:	if_icmplt	356
+   352:	aload_0
+   353:	invokevirtual	#88; //Method l:()V
+   356:	return
+
+public boolean r();
+  Code:
+   0:	aload_0
+   1:	getfield	#61; //Field l:Lel;
+   4:	aload_0
+   5:	getfield	#72; //Field z:Lds;
+   8:	getstatic	#74; //Field jr.f:Ljr;
+   11:	aload_0
+   12:	invokevirtual	#79; //Method el.a:(Lds;Ljr;Ldv;)Z
+   15:	ireturn
+
+protected void b(int);
+  Code:
+   0:	aload_0
+   1:	aconst_null
+   2:	iload_1
+   3:	invokevirtual	#85; //Method a:(Ldv;I)Z
+   6:	pop
+   7:	return
+
+public boolean a(dv, int);
+  Code:
+   0:	aload_0
+   1:	dup
+   2:	getfield	#60; //Field f:I
+   5:	iload_2
+   6:	isub
+   7:	putfield	#60; //Field f:I
+   10:	aload_0
+   11:	getfield	#60; //Field f:I
+   14:	ifgt	21
+   17:	aload_0
+   18:	invokevirtual	#88; //Method l:()V
+   21:	iconst_0
+   22:	ireturn
+
+public void a(t);
+  Code:
+   0:	aload_1
+   1:	ldc	#9; //String Health
+   3:	aload_0
+   4:	getfield	#60; //Field f:I
+   7:	i2b
+   8:	i2s
+   9:	invokevirtual	#98; //Method t.a:(Ljava/lang/String;S)V
+   12:	aload_1
+   13:	ldc	#8; //String Age
+   15:	aload_0
+   16:	getfield	#56; //Field b:I
+   19:	i2s
+   20:	invokevirtual	#98; //Method t.a:(Ljava/lang/String;S)V
+   23:	aload_1
+   24:	ldc	#10; //String Item
+   26:	aload_0
+   27:	getfield	#55; //Field a:Lhh;
+   30:	new	#25; //class t
+   33:	dup
+   34:	invokespecial	#96; //Method t."<init>":()V
+   37:	invokevirtual	#93; //Method hh.a:(Lt;)Lt;
+   40:	invokevirtual	#97; //Method t.a:(Ljava/lang/String;Lt;)V
+   43:	return
+
+public void b(t);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	ldc	#9; //String Health
+   4:	invokevirtual	#99; //Method t.c:(Ljava/lang/String;)S
+   7:	sipush	255
+   10:	iand
+   11:	putfield	#60; //Field f:I
+   14:	aload_0
+   15:	aload_1
+   16:	ldc	#8; //String Age
+   18:	invokevirtual	#99; //Method t.c:(Ljava/lang/String;)S
+   21:	putfield	#56; //Field b:I
+   24:	aload_1
+   25:	ldc	#10; //String Item
+   27:	invokevirtual	#100; //Method t.j:(Ljava/lang/String;)Lt;
+   30:	astore_2
+   31:	aload_0
+   32:	new	#21; //class hh
+   35:	dup
+   36:	aload_2
+   37:	invokespecial	#92; //Method hh."<init>":(Lt;)V
+   40:	putfield	#55; //Field a:Lhh;
+   43:	return
+
+public void a(ft);
+  Code:
+   0:	aload_0
+   1:	getfield	#61; //Field l:Lel;
+   4:	getfield	#45; //Field el.z:Z
+   7:	ifeq	11
+   10:	return
+   11:	aload_0
+   12:	getfield	#55; //Field a:Lhh;
+   15:	getfield	#73; //Field hh.a:I
+   18:	istore_2
+   19:	aload_0
+   20:	getfield	#57; //Field c:I
+   23:	ifne	84
+   26:	aload_1
+   27:	getfield	#46; //Field ft.ak:Lhe;
+   30:	aload_0
+   31:	getfield	#55; //Field a:Lhh;
+   34:	invokevirtual	#91; //Method he.a:(Lhh;)Z
+   37:	ifeq	84
+   40:	aload_0
+   41:	getfield	#61; //Field l:Lel;
+   44:	aload_0
+   45:	ldc	#12; //String random.pop
+   47:	ldc	#2; //float 0.2f
+   49:	aload_0
+   50:	getfield	#54; //Field V:Ljava/util/Random;
+   53:	invokevirtual	#95; //Method java/util/Random.nextFloat:()F
+   56:	aload_0
+   57:	getfield	#54; //Field V:Ljava/util/Random;
+   60:	invokevirtual	#95; //Method java/util/Random.nextFloat:()F
+   63:	fsub
+   64:	ldc	#6; //float 0.7f
+   66:	fmul
+   67:	fconst_1
+   68:	fadd
+   69:	fconst_2
+   70:	fmul
+   71:	invokevirtual	#80; //Method el.a:(Ldv;Ljava/lang/String;FF)V
+   74:	aload_1
+   75:	aload_0
+   76:	iload_2
+   77:	invokevirtual	#82; //Method ft.c:(Ldv;I)V
+   80:	aload_0
+   81:	invokevirtual	#88; //Method l:()V
+   84:	return
+
+}
+

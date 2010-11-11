@@ -1,0 +1,112 @@
+Compiled from SourceFile
+public class ej extends fw{
+protected ej(int, int, boolean);
+  Code:
+   0:	aload_0
+   1:	iload_1
+   2:	getstatic	#15; //Field jr.w:Ljr;
+   5:	invokespecial	#21; //Method fw."<init>":(ILjr;)V
+   8:	aload_0
+   9:	iload_2
+   10:	putfield	#12; //Field bh:I
+   13:	aload_0
+   14:	iconst_1
+   15:	invokevirtual	#17; //Method a:(Z)V
+   18:	aload_0
+   19:	iload_3
+   20:	putfield	#11; //Field a:Z
+   23:	return
+
+public int a(int);
+  Code:
+   0:	iload_1
+   1:	iconst_1
+   2:	if_icmpne	10
+   5:	aload_0
+   6:	getfield	#12; //Field bh:I
+   9:	ireturn
+   10:	iload_1
+   11:	ifne	19
+   14:	aload_0
+   15:	getfield	#12; //Field bh:I
+   18:	ireturn
+   19:	iload_1
+   20:	iconst_3
+   21:	if_icmpne	34
+   24:	aload_0
+   25:	getfield	#12; //Field bh:I
+   28:	iconst_1
+   29:	iadd
+   30:	bipush	16
+   32:	iadd
+   33:	ireturn
+   34:	aload_0
+   35:	getfield	#12; //Field bh:I
+   38:	bipush	16
+   40:	iadd
+   41:	ireturn
+
+public void e(el, int, int, int);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	iload_2
+   3:	iload_3
+   4:	iload	4
+   6:	invokespecial	#22; //Method fw.e:(Lel;III)V
+   9:	return
+
+public boolean a(el, int, int, int);
+  Code:
+   0:	aload_1
+   1:	iload_2
+   2:	iload_3
+   3:	iload	4
+   5:	invokevirtual	#18; //Method el.a:(III)I
+   8:	istore	5
+   10:	iload	5
+   12:	ifeq	30
+   15:	getstatic	#14; //Field fw.n:[Lfw;
+   18:	iload	5
+   20:	aaload
+   21:	getfield	#13; //Field fw.bt:Ljr;
+   24:	invokevirtual	#24; //Method jr.d:()Z
+   27:	ifeq	47
+   30:	aload_1
+   31:	iload_2
+   32:	iload_3
+   33:	iconst_1
+   34:	isub
+   35:	iload	4
+   37:	invokevirtual	#20; //Method el.d:(III)Z
+   40:	ifeq	47
+   43:	iconst_1
+   44:	goto	48
+   47:	iconst_0
+   48:	ireturn
+
+public void a(el, int, int, int, jt);
+  Code:
+   0:	aload	5
+   2:	getfield	#16; //Field jt.v:F
+   5:	ldc	#1; //float 4.0f
+   7:	fmul
+   8:	ldc	#2; //float 360.0f
+   10:	fdiv
+   11:	f2d
+   12:	ldc2_w	#9; //double 0.5d
+   15:	dadd
+   16:	invokestatic	#23; //Method hb.b:(D)I
+   19:	iconst_3
+   20:	iand
+   21:	istore	6
+   23:	aload_1
+   24:	iload_2
+   25:	iload_3
+   26:	iload	4
+   28:	iload	6
+   30:	invokevirtual	#19; //Method el.b:(IIII)V
+   33:	return
+
+}
+

@@ -1,0 +1,65 @@
+Compiled from SourceFile
+public class fd extends java.lang.Object{
+public fd(io);
+  Code:
+   0:	aload_0
+   1:	invokespecial	#53; //Method java/lang/Object."<init>":()V
+   4:	aload_0
+   5:	new	#11; //class jf
+   8:	dup
+   9:	invokespecial	#54; //Method jf."<init>":()V
+   12:	putfield	#31; //Field b:Ljf;
+   15:	aload_0
+   16:	new	#8; //class hz
+   19:	dup
+   20:	invokespecial	#49; //Method hz."<init>":()V
+   23:	putfield	#32; //Field c:Lhz;
+   26:	aload_0
+   27:	bipush	32
+   29:	anewarray	#2; //class a
+   32:	putfield	#33; //Field d:[La;
+   35:	aload_0
+   36:	aload_1
+   37:	putfield	#30; //Field a:Lio;
+   40:	return
+
+public co a(dv, dv, float);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	aload_2
+   3:	getfield	#27; //Field dv.p:D
+   6:	aload_2
+   7:	getfield	#29; //Field dv.z:Lds;
+   10:	getfield	#23; //Field ds.b:D
+   13:	aload_2
+   14:	getfield	#28; //Field dv.r:D
+   17:	fload_3
+   18:	invokespecial	#42; //Method a:(Ldv;DDDF)Lco;
+   21:	areturn
+
+public co a(dv, int, int, int, float);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	iload_2
+   3:	i2f
+   4:	ldc	#1; //float 0.5f
+   6:	fadd
+   7:	f2d
+   8:	iload_3
+   9:	i2f
+   10:	ldc	#1; //float 0.5f
+   12:	fadd
+   13:	f2d
+   14:	iload	4
+   16:	i2f
+   17:	ldc	#1; //float 0.5f
+   19:	fadd
+   20:	f2d
+   21:	fload	5
+   23:	invokespecial	#42; //Method a:(Ldv;DDDF)Lco;
+   26:	areturn
+
+}
+

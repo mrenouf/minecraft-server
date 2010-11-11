@@ -1,0 +1,260 @@
+Compiled from SourceFile
+public class gp extends java.lang.Object{
+public gp(net.minecraft.server.MinecraftServer);
+  Code:
+   0:	aload_0
+   1:	invokespecial	#46; //Method java/lang/Object."<init>":()V
+   4:	aload_0
+   5:	new	#15; //class java/util/HashSet
+   8:	dup
+   9:	invokespecial	#48; //Method java/util/HashSet."<init>":()V
+   12:	putfield	#24; //Field a:Ljava/util/Set;
+   15:	aload_0
+   16:	new	#11; //class hz
+   19:	dup
+   20:	invokespecial	#40; //Method hz."<init>":()V
+   23:	putfield	#25; //Field b:Lhz;
+   26:	aload_0
+   27:	aload_1
+   28:	putfield	#26; //Field c:Lnet/minecraft/server/MinecraftServer;
+   31:	aload_0
+   32:	aload_1
+   33:	getfield	#31; //Field net/minecraft/server/MinecraftServer.f:Lgl;
+   36:	invokevirtual	#32; //Method gl.a:()I
+   39:	putfield	#27; //Field d:I
+   42:	return
+
+public void a(dv);
+  Code:
+   0:	aload_1
+   1:	instanceof	#4; //class eo
+   4:	ifeq	72
+   7:	aload_0
+   8:	aload_1
+   9:	sipush	512
+   12:	iconst_2
+   13:	invokevirtual	#33; //Method a:(Ldv;II)V
+   16:	aload_1
+   17:	checkcast	#4; //class eo
+   20:	astore_2
+   21:	aload_0
+   22:	getfield	#24; //Field a:Ljava/util/Set;
+   25:	invokeinterface	#55,  1; //InterfaceMethod java/util/Set.iterator:()Ljava/util/Iterator;
+   30:	astore_3
+   31:	aload_3
+   32:	invokeinterface	#49,  1; //InterfaceMethod java/util/Iterator.hasNext:()Z
+   37:	ifeq	69
+   40:	aload_3
+   41:	invokeinterface	#50,  1; //InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+   46:	checkcast	#10; //class gq
+   49:	astore	4
+   51:	aload	4
+   53:	getfield	#28; //Field gq.a:Ldv;
+   56:	aload_2
+   57:	if_acmpeq	66
+   60:	aload	4
+   62:	aload_2
+   63:	invokevirtual	#36; //Method gq.a:(Leo;)V
+   66:	goto	31
+   69:	goto	164
+   72:	aload_1
+   73:	instanceof	#20; //class jz
+   76:	ifeq	91
+   79:	aload_0
+   80:	aload_1
+   81:	bipush	64
+   83:	bipush	20
+   85:	invokevirtual	#33; //Method a:(Ldv;II)V
+   88:	goto	164
+   91:	aload_1
+   92:	instanceof	#7; //class gf
+   95:	ifeq	110
+   98:	aload_0
+   99:	aload_1
+   100:	bipush	64
+   102:	bipush	20
+   104:	invokevirtual	#33; //Method a:(Ldv;II)V
+   107:	goto	164
+   110:	aload_1
+   111:	instanceof	#19; //class jh
+   114:	ifeq	129
+   117:	aload_0
+   118:	aload_1
+   119:	sipush	160
+   122:	iconst_4
+   123:	invokevirtual	#33; //Method a:(Ldv;II)V
+   126:	goto	164
+   129:	aload_1
+   130:	instanceof	#6; //class fh
+   133:	ifeq	148
+   136:	aload_0
+   137:	aload_1
+   138:	sipush	160
+   141:	iconst_4
+   142:	invokevirtual	#33; //Method a:(Ldv;II)V
+   145:	goto	164
+   148:	aload_1
+   149:	instanceof	#2; //class ad
+   152:	ifeq	164
+   155:	aload_0
+   156:	aload_1
+   157:	sipush	160
+   160:	iconst_2
+   161:	invokevirtual	#33; //Method a:(Ldv;II)V
+   164:	return
+
+public void a(dv, int, int);
+  Code:
+   0:	iload_2
+   1:	aload_0
+   2:	getfield	#27; //Field d:I
+   5:	if_icmple	13
+   8:	aload_0
+   9:	getfield	#27; //Field d:I
+   12:	istore_2
+   13:	aload_0
+   14:	getfield	#25; //Field b:Lhz;
+   17:	aload_1
+   18:	getfield	#22; //Field dv.g:I
+   21:	invokevirtual	#43; //Method hz.b:(I)Z
+   24:	ifeq	37
+   27:	new	#12; //class java/lang/IllegalStateException
+   30:	dup
+   31:	ldc	#1; //String Entity is already tracked!
+   33:	invokespecial	#45; //Method java/lang/IllegalStateException."<init>":(Ljava/lang/String;)V
+   36:	athrow
+   37:	new	#10; //class gq
+   40:	dup
+   41:	aload_1
+   42:	iload_2
+   43:	iload_3
+   44:	invokespecial	#34; //Method gq."<init>":(Ldv;II)V
+   47:	astore	4
+   49:	aload_0
+   50:	getfield	#24; //Field a:Ljava/util/Set;
+   53:	aload	4
+   55:	invokeinterface	#54,  2; //InterfaceMethod java/util/Set.add:(Ljava/lang/Object;)Z
+   60:	pop
+   61:	aload_0
+   62:	getfield	#25; //Field b:Lhz;
+   65:	aload_1
+   66:	getfield	#22; //Field dv.g:I
+   69:	aload	4
+   71:	invokevirtual	#42; //Method hz.a:(ILjava/lang/Object;)V
+   74:	aload	4
+   76:	aload_0
+   77:	getfield	#26; //Field c:Lnet/minecraft/server/MinecraftServer;
+   80:	getfield	#30; //Field net/minecraft/server/MinecraftServer.e:Les;
+   83:	getfield	#23; //Field es.d:Ljava/util/List;
+   86:	invokevirtual	#39; //Method gq.b:(Ljava/util/List;)V
+   89:	return
+
+public void b(dv);
+  Code:
+   0:	aload_0
+   1:	getfield	#25; //Field b:Lhz;
+   4:	aload_1
+   5:	getfield	#22; //Field dv.g:I
+   8:	invokevirtual	#44; //Method hz.d:(I)Ljava/lang/Object;
+   11:	checkcast	#10; //class gq
+   14:	astore_2
+   15:	aload_2
+   16:	ifnull	34
+   19:	aload_0
+   20:	getfield	#24; //Field a:Ljava/util/Set;
+   23:	aload_2
+   24:	invokeinterface	#56,  2; //InterfaceMethod java/util/Set.remove:(Ljava/lang/Object;)Z
+   29:	pop
+   30:	aload_2
+   31:	invokevirtual	#35; //Method gq.a:()V
+   34:	return
+
+public void a();
+  Code:
+   0:	new	#14; //class java/util/ArrayList
+   3:	dup
+   4:	invokespecial	#47; //Method java/util/ArrayList."<init>":()V
+   7:	astore_1
+   8:	aload_0
+   9:	getfield	#24; //Field a:Ljava/util/Set;
+   12:	invokeinterface	#55,  1; //InterfaceMethod java/util/Set.iterator:()Ljava/util/Iterator;
+   17:	astore_2
+   18:	aload_2
+   19:	invokeinterface	#49,  1; //InterfaceMethod java/util/Iterator.hasNext:()Z
+   24:	ifeq	85
+   27:	aload_2
+   28:	invokeinterface	#50,  1; //InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+   33:	checkcast	#10; //class gq
+   36:	astore_3
+   37:	aload_3
+   38:	aload_0
+   39:	getfield	#26; //Field c:Lnet/minecraft/server/MinecraftServer;
+   42:	getfield	#30; //Field net/minecraft/server/MinecraftServer.e:Les;
+   45:	getfield	#23; //Field es.d:Ljava/util/List;
+   48:	invokevirtual	#38; //Method gq.a:(Ljava/util/List;)V
+   51:	aload_3
+   52:	getfield	#29; //Field gq.j:Z
+   55:	ifeq	82
+   58:	aload_3
+   59:	getfield	#28; //Field gq.a:Ldv;
+   62:	instanceof	#4; //class eo
+   65:	ifeq	82
+   68:	aload_1
+   69:	aload_3
+   70:	getfield	#28; //Field gq.a:Ldv;
+   73:	checkcast	#4; //class eo
+   76:	invokeinterface	#51,  2; //InterfaceMethod java/util/List.add:(Ljava/lang/Object;)Z
+   81:	pop
+   82:	goto	18
+   85:	iconst_0
+   86:	istore_2
+   87:	iload_2
+   88:	aload_1
+   89:	invokeinterface	#53,  1; //InterfaceMethod java/util/List.size:()I
+   94:	if_icmpge	165
+   97:	aload_1
+   98:	iload_2
+   99:	invokeinterface	#52,  2; //InterfaceMethod java/util/List.get:(I)Ljava/lang/Object;
+   104:	checkcast	#4; //class eo
+   107:	astore_3
+   108:	aload_0
+   109:	getfield	#24; //Field a:Ljava/util/Set;
+   112:	invokeinterface	#55,  1; //InterfaceMethod java/util/Set.iterator:()Ljava/util/Iterator;
+   117:	astore	4
+   119:	aload	4
+   121:	invokeinterface	#49,  1; //InterfaceMethod java/util/Iterator.hasNext:()Z
+   126:	ifeq	159
+   129:	aload	4
+   131:	invokeinterface	#50,  1; //InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+   136:	checkcast	#10; //class gq
+   139:	astore	5
+   141:	aload	5
+   143:	getfield	#28; //Field gq.a:Ldv;
+   146:	aload_3
+   147:	if_acmpeq	156
+   150:	aload	5
+   152:	aload_3
+   153:	invokevirtual	#36; //Method gq.a:(Leo;)V
+   156:	goto	119
+   159:	iinc	2, 1
+   162:	goto	87
+   165:	return
+
+public void a(dv, im);
+  Code:
+   0:	aload_0
+   1:	getfield	#25; //Field b:Lhz;
+   4:	aload_1
+   5:	getfield	#22; //Field dv.g:I
+   8:	invokevirtual	#41; //Method hz.a:(I)Ljava/lang/Object;
+   11:	checkcast	#10; //class gq
+   14:	astore_3
+   15:	aload_3
+   16:	ifnull	24
+   19:	aload_3
+   20:	aload_2
+   21:	invokevirtual	#37; //Method gq.a:(Lim;)V
+   24:	return
+
+}
+

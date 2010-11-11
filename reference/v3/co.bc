@@ -1,0 +1,92 @@
+Compiled from SourceFile
+public class co extends java.lang.Object{
+public final int a;
+
+public co(a[]);
+  Code:
+   0:	aload_0
+   1:	invokespecial	#16; //Method java/lang/Object."<init>":()V
+   4:	aload_0
+   5:	aload_1
+   6:	putfield	#12; //Field b:[La;
+   9:	aload_0
+   10:	aload_1
+   11:	arraylength
+   12:	putfield	#11; //Field a:I
+   15:	return
+
+public void a();
+  Code:
+   0:	aload_0
+   1:	dup
+   2:	getfield	#13; //Field c:I
+   5:	iconst_1
+   6:	iadd
+   7:	putfield	#13; //Field c:I
+   10:	return
+
+public boolean b();
+  Code:
+   0:	aload_0
+   1:	getfield	#13; //Field c:I
+   4:	aload_0
+   5:	getfield	#12; //Field b:[La;
+   8:	arraylength
+   9:	if_icmplt	16
+   12:	iconst_1
+   13:	goto	17
+   16:	iconst_0
+   17:	ireturn
+
+public ba a(dv);
+  Code:
+   0:	aload_0
+   1:	getfield	#12; //Field b:[La;
+   4:	aload_0
+   5:	getfield	#13; //Field c:I
+   8:	aaload
+   9:	getfield	#8; //Field a.a:I
+   12:	i2d
+   13:	aload_1
+   14:	getfield	#14; //Field dv.H:F
+   17:	fconst_1
+   18:	fadd
+   19:	f2i
+   20:	i2d
+   21:	ldc2_w	#6; //double 0.5d
+   24:	dmul
+   25:	dadd
+   26:	dstore_2
+   27:	aload_0
+   28:	getfield	#12; //Field b:[La;
+   31:	aload_0
+   32:	getfield	#13; //Field c:I
+   35:	aaload
+   36:	getfield	#9; //Field a.b:I
+   39:	i2d
+   40:	dstore	4
+   42:	aload_0
+   43:	getfield	#12; //Field b:[La;
+   46:	aload_0
+   47:	getfield	#13; //Field c:I
+   50:	aaload
+   51:	getfield	#10; //Field a.c:I
+   54:	i2d
+   55:	aload_1
+   56:	getfield	#14; //Field dv.H:F
+   59:	fconst_1
+   60:	fadd
+   61:	f2i
+   62:	i2d
+   63:	ldc2_w	#6; //double 0.5d
+   66:	dmul
+   67:	dadd
+   68:	dstore	6
+   70:	dload_2
+   71:	dload	4
+   73:	dload	6
+   75:	invokestatic	#15; //Method ba.b:(DDD)Lba;
+   78:	areturn
+
+}
+

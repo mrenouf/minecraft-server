@@ -1,0 +1,32 @@
+Compiled from SourceFile
+public class ca extends java.lang.Thread{
+final net.minecraft.server.MinecraftServer a;
+
+public ca(net.minecraft.server.MinecraftServer);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	putfield	#7; //Field a:Lnet/minecraft/server/MinecraftServer;
+   5:	aload_0
+   6:	invokespecial	#10; //Method java/lang/Thread."<init>":()V
+   9:	aload_0
+   10:	iconst_1
+   11:	invokevirtual	#8; //Method setDaemon:(Z)V
+   14:	aload_0
+   15:	invokevirtual	#9; //Method start:()V
+   18:	return
+
+public void run();
+  Code:
+   0:	ldc2_w	#5; //long 2147483647l
+   3:	invokestatic	#11; //Method java/lang/Thread.sleep:(J)V
+   6:	goto	0
+   9:	astore_1
+   10:	goto	0
+  Exception table:
+   from   to  target type
+     0     6     9   Class java/lang/InterruptedException
+
+
+}
+

@@ -1,0 +1,269 @@
+Compiled from SourceFile
+public final class hj extends java.lang.Object{
+public int a;
+
+public int b;
+
+public int c;
+
+public int d;
+
+public hj(fy);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	iconst_1
+   3:	invokespecial	#25; //Method "<init>":(Lfy;I)V
+   6:	return
+
+public hj(fy, int);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	getfield	#11; //Field fy.bh:I
+   5:	iload_2
+   6:	invokespecial	#22; //Method "<init>":(II)V
+   9:	return
+
+public hj(fs);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	iconst_1
+   3:	invokespecial	#24; //Method "<init>":(Lfs;I)V
+   6:	return
+
+public hj(fs, int);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	getfield	#9; //Field fs.aW:I
+   5:	iload_2
+   6:	invokespecial	#22; //Method "<init>":(II)V
+   9:	return
+
+public hj(int);
+  Code:
+   0:	aload_0
+   1:	iload_1
+   2:	iconst_1
+   3:	invokespecial	#22; //Method "<init>":(II)V
+   6:	return
+
+public hj(int, int);
+  Code:
+   0:	aload_0
+   1:	invokespecial	#29; //Method java/lang/Object."<init>":()V
+   4:	aload_0
+   5:	iconst_0
+   6:	putfield	#12; //Field a:I
+   9:	aload_0
+   10:	iload_1
+   11:	putfield	#13; //Field c:I
+   14:	aload_0
+   15:	iload_2
+   16:	putfield	#12; //Field a:I
+   19:	return
+
+public hj(int, int, int);
+  Code:
+   0:	aload_0
+   1:	invokespecial	#29; //Method java/lang/Object."<init>":()V
+   4:	aload_0
+   5:	iconst_0
+   6:	putfield	#12; //Field a:I
+   9:	aload_0
+   10:	iload_1
+   11:	putfield	#13; //Field c:I
+   14:	aload_0
+   15:	iload_2
+   16:	putfield	#12; //Field a:I
+   19:	aload_0
+   20:	iload_3
+   21:	putfield	#14; //Field d:I
+   24:	return
+
+public hj(v);
+  Code:
+   0:	aload_0
+   1:	invokespecial	#29; //Method java/lang/Object."<init>":()V
+   4:	aload_0
+   5:	iconst_0
+   6:	putfield	#12; //Field a:I
+   9:	aload_0
+   10:	aload_1
+   11:	invokevirtual	#27; //Method b:(Lv;)V
+   14:	return
+
+public fs a();
+  Code:
+   0:	getstatic	#10; //Field fs.c:[Lfs;
+   3:	aload_0
+   4:	getfield	#13; //Field c:I
+   7:	aaload
+   8:	areturn
+
+public boolean a(fv, em, int, int, int, int);
+  Code:
+   0:	aload_0
+   1:	invokevirtual	#26; //Method a:()Lfs;
+   4:	aload_0
+   5:	aload_1
+   6:	aload_2
+   7:	iload_3
+   8:	iload	4
+   10:	iload	5
+   12:	iload	6
+   14:	invokevirtual	#19; //Method fs.a:(Lhj;Lfv;Lem;IIII)Z
+   17:	ireturn
+
+public float a(fy);
+  Code:
+   0:	aload_0
+   1:	invokevirtual	#26; //Method a:()Lfs;
+   4:	aload_0
+   5:	aload_1
+   6:	invokevirtual	#20; //Method fs.a:(Lhj;Lfy;)F
+   9:	freturn
+
+public hj a(em, fv);
+  Code:
+   0:	aload_0
+   1:	invokevirtual	#26; //Method a:()Lfs;
+   4:	aload_0
+   5:	aload_1
+   6:	aload_2
+   7:	invokevirtual	#18; //Method fs.a:(Lhj;Lem;Lfv;)Lhj;
+   10:	areturn
+
+public v a(v);
+  Code:
+   0:	aload_1
+   1:	ldc	#3; //String id
+   3:	aload_0
+   4:	getfield	#13; //Field c:I
+   7:	i2s
+   8:	invokevirtual	#31; //Method v.a:(Ljava/lang/String;S)V
+   11:	aload_1
+   12:	ldc	#1; //String Count
+   14:	aload_0
+   15:	getfield	#12; //Field a:I
+   18:	i2b
+   19:	invokevirtual	#30; //Method v.a:(Ljava/lang/String;B)V
+   22:	aload_1
+   23:	ldc	#2; //String Damage
+   25:	aload_0
+   26:	getfield	#14; //Field d:I
+   29:	i2s
+   30:	invokevirtual	#31; //Method v.a:(Ljava/lang/String;S)V
+   33:	aload_1
+   34:	areturn
+
+public void b(v);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	ldc	#3; //String id
+   4:	invokevirtual	#33; //Method v.c:(Ljava/lang/String;)S
+   7:	putfield	#13; //Field c:I
+   10:	aload_0
+   11:	aload_1
+   12:	ldc	#1; //String Count
+   14:	invokevirtual	#32; //Method v.b:(Ljava/lang/String;)B
+   17:	putfield	#12; //Field a:I
+   20:	aload_0
+   21:	aload_1
+   22:	ldc	#2; //String Damage
+   24:	invokevirtual	#33; //Method v.c:(Ljava/lang/String;)S
+   27:	putfield	#14; //Field d:I
+   30:	return
+
+public int b();
+  Code:
+   0:	aload_0
+   1:	invokevirtual	#26; //Method a:()Lfs;
+   4:	invokevirtual	#15; //Method fs.a:()I
+   7:	ireturn
+
+public int c();
+  Code:
+   0:	getstatic	#10; //Field fs.c:[Lfs;
+   3:	aload_0
+   4:	getfield	#13; //Field c:I
+   7:	aaload
+   8:	invokevirtual	#21; //Method fs.b:()I
+   11:	ireturn
+
+public void a(int);
+  Code:
+   0:	aload_0
+   1:	dup
+   2:	getfield	#14; //Field d:I
+   5:	iload_1
+   6:	iadd
+   7:	putfield	#14; //Field d:I
+   10:	aload_0
+   11:	getfield	#14; //Field d:I
+   14:	aload_0
+   15:	invokevirtual	#28; //Method c:()I
+   18:	if_icmple	48
+   21:	aload_0
+   22:	dup
+   23:	getfield	#12; //Field a:I
+   26:	iconst_1
+   27:	isub
+   28:	putfield	#12; //Field a:I
+   31:	aload_0
+   32:	getfield	#12; //Field a:I
+   35:	ifge	43
+   38:	aload_0
+   39:	iconst_0
+   40:	putfield	#12; //Field a:I
+   43:	aload_0
+   44:	iconst_0
+   45:	putfield	#14; //Field d:I
+   48:	return
+
+public void a(int, int, int, int);
+  Code:
+   0:	getstatic	#10; //Field fs.c:[Lfs;
+   3:	aload_0
+   4:	getfield	#13; //Field c:I
+   7:	aaload
+   8:	aload_0
+   9:	iload_1
+   10:	iload_2
+   11:	iload_3
+   12:	iload	4
+   14:	invokevirtual	#17; //Method fs.a:(Lhj;IIII)V
+   17:	return
+
+public boolean b(fy);
+  Code:
+   0:	getstatic	#10; //Field fs.c:[Lfs;
+   3:	aload_0
+   4:	getfield	#13; //Field c:I
+   7:	aaload
+   8:	aload_1
+   9:	invokevirtual	#16; //Method fs.a:(Lfy;)Z
+   12:	ireturn
+
+public void a(fv);
+  Code:
+   0:	return
+
+public hj d();
+  Code:
+   0:	new	#6; //class hj
+   3:	dup
+   4:	aload_0
+   5:	getfield	#13; //Field c:I
+   8:	aload_0
+   9:	getfield	#12; //Field a:I
+   12:	aload_0
+   13:	getfield	#14; //Field d:I
+   16:	invokespecial	#23; //Method "<init>":(III)V
+   19:	areturn
+
+}
+

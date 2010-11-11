@@ -1,0 +1,444 @@
+Compiled from SourceFile
+public final class hc extends java.lang.Enum{
+public static final hc a;
+
+public static final hc b;
+
+public static final hc c;
+
+public static final hc d;
+
+public static final hc e;
+
+public static final hc f;
+
+public static final hc g;
+
+public static final hc h;
+
+public static final hc i;
+
+public static final hc j;
+
+public static final hc k;
+
+public static final hc l;
+
+public static final hc m;
+
+public static final hc n;
+
+public static final hc o;
+
+public static final hc p;
+
+public static final hc q;
+
+public static final hc r;
+
+public static final hc s;
+
+public static final hc t;
+
+public static final hc u;
+
+public static final hc v;
+
+public static final hc w;
+
+public static final hc x;
+
+public final java.lang.String y;
+
+public final int z;
+
+public final int A;
+
+public final int B;
+
+public final int C;
+
+public static hc[] values();
+  Code:
+   0:	getstatic	#32; //Field D:[Lhc;
+   3:	invokevirtual	#59; //Method "[Lhc;".clone:()Ljava/lang/Object;
+   6:	checkcast	#25; //class "[Lhc;"
+   9:	areturn
+
+public static hc valueOf(java.lang.String);
+  Code:
+   0:	ldc	#27; //class hc
+   2:	aload_0
+   3:	invokestatic	#62; //Method java/lang/Enum.valueOf:(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+   6:	checkcast	#27; //class hc
+   9:	areturn
+
+static {};
+  Code:
+   0:	new	#27; //class hc
+   3:	dup
+   4:	ldc	#11; //String Kebab
+   6:	iconst_0
+   7:	ldc	#11; //String Kebab
+   9:	bipush	16
+   11:	bipush	16
+   13:	iconst_0
+   14:	iconst_0
+   15:	invokespecial	#60; //Method "<init>":(Ljava/lang/String;ILjava/lang/String;IIII)V
+   18:	putstatic	#33; //Field a:Lhc;
+   21:	new	#27; //class hc
+   24:	dup
+   25:	ldc	#2; //String Aztec
+   27:	iconst_1
+   28:	ldc	#2; //String Aztec
+   30:	bipush	16
+   32:	bipush	16
+   34:	bipush	16
+   36:	iconst_0
+   37:	invokespecial	#60; //Method "<init>":(Ljava/lang/String;ILjava/lang/String;IIII)V
+   40:	putstatic	#34; //Field b:Lhc;
+   43:	new	#27; //class hc
+   46:	dup
+   47:	ldc	#1; //String Alban
+   49:	iconst_2
+   50:	ldc	#1; //String Alban
+   52:	bipush	16
+   54:	bipush	16
+   56:	bipush	32
+   58:	iconst_0
+   59:	invokespecial	#60; //Method "<init>":(Ljava/lang/String;ILjava/lang/String;IIII)V
+   62:	putstatic	#35; //Field c:Lhc;
+   65:	new	#27; //class hc
+   68:	dup
+   69:	ldc	#3; //String Aztec2
+   71:	iconst_3
+   72:	ldc	#3; //String Aztec2
+   74:	bipush	16
+   76:	bipush	16
+   78:	bipush	48
+   80:	iconst_0
+   81:	invokespecial	#60; //Method "<init>":(Ljava/lang/String;ILjava/lang/String;IIII)V
+   84:	putstatic	#36; //Field d:Lhc;
+   87:	new	#27; //class hc
+   90:	dup
+   91:	ldc	#4; //String Bomb
+   93:	iconst_4
+   94:	ldc	#4; //String Bomb
+   96:	bipush	16
+   98:	bipush	16
+   100:	bipush	64
+   102:	iconst_0
+   103:	invokespecial	#60; //Method "<init>":(Ljava/lang/String;ILjava/lang/String;IIII)V
+   106:	putstatic	#37; //Field e:Lhc;
+   109:	new	#27; //class hc
+   112:	dup
+   113:	ldc	#14; //String Plant
+   115:	iconst_5
+   116:	ldc	#14; //String Plant
+   118:	bipush	16
+   120:	bipush	16
+   122:	bipush	80
+   124:	iconst_0
+   125:	invokespecial	#60; //Method "<init>":(Ljava/lang/String;ILjava/lang/String;IIII)V
+   128:	putstatic	#38; //Field f:Lhc;
+   131:	new	#27; //class hc
+   134:	dup
+   135:	ldc	#24; //String Wasteland
+   137:	bipush	6
+   139:	ldc	#24; //String Wasteland
+   141:	bipush	16
+   143:	bipush	16
+   145:	bipush	96
+   147:	iconst_0
+   148:	invokespecial	#60; //Method "<init>":(Ljava/lang/String;ILjava/lang/String;IIII)V
+   151:	putstatic	#39; //Field g:Lhc;
+   154:	new	#27; //class hc
+   157:	dup
+   158:	ldc	#16; //String Pool
+   160:	bipush	7
+   162:	ldc	#16; //String Pool
+   164:	bipush	32
+   166:	bipush	16
+   168:	iconst_0
+   169:	bipush	32
+   171:	invokespecial	#60; //Method "<init>":(Ljava/lang/String;ILjava/lang/String;IIII)V
+   174:	putstatic	#40; //Field h:Lhc;
+   177:	new	#27; //class hc
+   180:	dup
+   181:	ldc	#6; //String Courbet
+   183:	bipush	8
+   185:	ldc	#6; //String Courbet
+   187:	bipush	32
+   189:	bipush	16
+   191:	bipush	32
+   193:	bipush	32
+   195:	invokespecial	#60; //Method "<init>":(Ljava/lang/String;ILjava/lang/String;IIII)V
+   198:	putstatic	#41; //Field i:Lhc;
+   201:	new	#27; //class hc
+   204:	dup
+   205:	ldc	#17; //String Sea
+   207:	bipush	9
+   209:	ldc	#17; //String Sea
+   211:	bipush	32
+   213:	bipush	16
+   215:	bipush	64
+   217:	bipush	32
+   219:	invokespecial	#60; //Method "<init>":(Ljava/lang/String;ILjava/lang/String;IIII)V
+   222:	putstatic	#42; //Field j:Lhc;
+   225:	new	#27; //class hc
+   228:	dup
+   229:	ldc	#21; //String Sunset
+   231:	bipush	10
+   233:	ldc	#21; //String Sunset
+   235:	bipush	32
+   237:	bipush	16
+   239:	bipush	96
+   241:	bipush	32
+   243:	invokespecial	#60; //Method "<init>":(Ljava/lang/String;ILjava/lang/String;IIII)V
+   246:	putstatic	#43; //Field k:Lhc;
+   249:	new	#27; //class hc
+   252:	dup
+   253:	ldc	#7; //String Creebet
+   255:	bipush	11
+   257:	ldc	#7; //String Creebet
+   259:	bipush	32
+   261:	bipush	16
+   263:	sipush	128
+   266:	bipush	32
+   268:	invokespecial	#60; //Method "<init>":(Ljava/lang/String;ILjava/lang/String;IIII)V
+   271:	putstatic	#44; //Field l:Lhc;
+   274:	new	#27; //class hc
+   277:	dup
+   278:	ldc	#23; //String Wanderer
+   280:	bipush	12
+   282:	ldc	#23; //String Wanderer
+   284:	bipush	16
+   286:	bipush	32
+   288:	iconst_0
+   289:	bipush	64
+   291:	invokespecial	#60; //Method "<init>":(Ljava/lang/String;ILjava/lang/String;IIII)V
+   294:	putstatic	#45; //Field m:Lhc;
+   297:	new	#27; //class hc
+   300:	dup
+   301:	ldc	#10; //String Graham
+   303:	bipush	13
+   305:	ldc	#10; //String Graham
+   307:	bipush	16
+   309:	bipush	32
+   311:	bipush	16
+   313:	bipush	64
+   315:	invokespecial	#60; //Method "<init>":(Ljava/lang/String;ILjava/lang/String;IIII)V
+   318:	putstatic	#46; //Field n:Lhc;
+   321:	new	#27; //class hc
+   324:	dup
+   325:	ldc	#12; //String Match
+   327:	bipush	14
+   329:	ldc	#12; //String Match
+   331:	bipush	32
+   333:	bipush	32
+   335:	iconst_0
+   336:	sipush	128
+   339:	invokespecial	#60; //Method "<init>":(Ljava/lang/String;ILjava/lang/String;IIII)V
+   342:	putstatic	#47; //Field o:Lhc;
+   345:	new	#27; //class hc
+   348:	dup
+   349:	ldc	#5; //String Bust
+   351:	bipush	15
+   353:	ldc	#5; //String Bust
+   355:	bipush	32
+   357:	bipush	32
+   359:	bipush	32
+   361:	sipush	128
+   364:	invokespecial	#60; //Method "<init>":(Ljava/lang/String;ILjava/lang/String;IIII)V
+   367:	putstatic	#48; //Field p:Lhc;
+   370:	new	#27; //class hc
+   373:	dup
+   374:	ldc	#20; //String Stage
+   376:	bipush	16
+   378:	ldc	#20; //String Stage
+   380:	bipush	32
+   382:	bipush	32
+   384:	bipush	64
+   386:	sipush	128
+   389:	invokespecial	#60; //Method "<init>":(Ljava/lang/String;ILjava/lang/String;IIII)V
+   392:	putstatic	#49; //Field q:Lhc;
+   395:	new	#27; //class hc
+   398:	dup
+   399:	ldc	#22; //String Void
+   401:	bipush	17
+   403:	ldc	#22; //String Void
+   405:	bipush	32
+   407:	bipush	32
+   409:	bipush	96
+   411:	sipush	128
+   414:	invokespecial	#60; //Method "<init>":(Ljava/lang/String;ILjava/lang/String;IIII)V
+   417:	putstatic	#50; //Field r:Lhc;
+   420:	new	#27; //class hc
+   423:	dup
+   424:	ldc	#19; //String SkullAndRoses
+   426:	bipush	18
+   428:	ldc	#19; //String SkullAndRoses
+   430:	bipush	32
+   432:	bipush	32
+   434:	sipush	128
+   437:	sipush	128
+   440:	invokespecial	#60; //Method "<init>":(Ljava/lang/String;ILjava/lang/String;IIII)V
+   443:	putstatic	#51; //Field s:Lhc;
+   446:	new	#27; //class hc
+   449:	dup
+   450:	ldc	#9; //String Fighters
+   452:	bipush	19
+   454:	ldc	#9; //String Fighters
+   456:	bipush	64
+   458:	bipush	32
+   460:	iconst_0
+   461:	bipush	96
+   463:	invokespecial	#60; //Method "<init>":(Ljava/lang/String;ILjava/lang/String;IIII)V
+   466:	putstatic	#52; //Field t:Lhc;
+   469:	new	#27; //class hc
+   472:	dup
+   473:	ldc	#15; //String Pointer
+   475:	bipush	20
+   477:	ldc	#15; //String Pointer
+   479:	bipush	64
+   481:	bipush	64
+   483:	iconst_0
+   484:	sipush	192
+   487:	invokespecial	#60; //Method "<init>":(Ljava/lang/String;ILjava/lang/String;IIII)V
+   490:	putstatic	#53; //Field u:Lhc;
+   493:	new	#27; //class hc
+   496:	dup
+   497:	ldc	#13; //String Pigscene
+   499:	bipush	21
+   501:	ldc	#13; //String Pigscene
+   503:	bipush	64
+   505:	bipush	64
+   507:	bipush	64
+   509:	sipush	192
+   512:	invokespecial	#60; //Method "<init>":(Ljava/lang/String;ILjava/lang/String;IIII)V
+   515:	putstatic	#54; //Field v:Lhc;
+   518:	new	#27; //class hc
+   521:	dup
+   522:	ldc	#18; //String Skeleton
+   524:	bipush	22
+   526:	ldc	#18; //String Skeleton
+   528:	bipush	64
+   530:	bipush	48
+   532:	sipush	192
+   535:	bipush	64
+   537:	invokespecial	#60; //Method "<init>":(Ljava/lang/String;ILjava/lang/String;IIII)V
+   540:	putstatic	#55; //Field w:Lhc;
+   543:	new	#27; //class hc
+   546:	dup
+   547:	ldc	#8; //String DonkeyKong
+   549:	bipush	23
+   551:	ldc	#8; //String DonkeyKong
+   553:	bipush	64
+   555:	bipush	48
+   557:	sipush	192
+   560:	bipush	112
+   562:	invokespecial	#60; //Method "<init>":(Ljava/lang/String;ILjava/lang/String;IIII)V
+   565:	putstatic	#56; //Field x:Lhc;
+   568:	bipush	24
+   570:	anewarray	#27; //class hc
+   573:	dup
+   574:	iconst_0
+   575:	getstatic	#33; //Field a:Lhc;
+   578:	aastore
+   579:	dup
+   580:	iconst_1
+   581:	getstatic	#34; //Field b:Lhc;
+   584:	aastore
+   585:	dup
+   586:	iconst_2
+   587:	getstatic	#35; //Field c:Lhc;
+   590:	aastore
+   591:	dup
+   592:	iconst_3
+   593:	getstatic	#36; //Field d:Lhc;
+   596:	aastore
+   597:	dup
+   598:	iconst_4
+   599:	getstatic	#37; //Field e:Lhc;
+   602:	aastore
+   603:	dup
+   604:	iconst_5
+   605:	getstatic	#38; //Field f:Lhc;
+   608:	aastore
+   609:	dup
+   610:	bipush	6
+   612:	getstatic	#39; //Field g:Lhc;
+   615:	aastore
+   616:	dup
+   617:	bipush	7
+   619:	getstatic	#40; //Field h:Lhc;
+   622:	aastore
+   623:	dup
+   624:	bipush	8
+   626:	getstatic	#41; //Field i:Lhc;
+   629:	aastore
+   630:	dup
+   631:	bipush	9
+   633:	getstatic	#42; //Field j:Lhc;
+   636:	aastore
+   637:	dup
+   638:	bipush	10
+   640:	getstatic	#43; //Field k:Lhc;
+   643:	aastore
+   644:	dup
+   645:	bipush	11
+   647:	getstatic	#44; //Field l:Lhc;
+   650:	aastore
+   651:	dup
+   652:	bipush	12
+   654:	getstatic	#45; //Field m:Lhc;
+   657:	aastore
+   658:	dup
+   659:	bipush	13
+   661:	getstatic	#46; //Field n:Lhc;
+   664:	aastore
+   665:	dup
+   666:	bipush	14
+   668:	getstatic	#47; //Field o:Lhc;
+   671:	aastore
+   672:	dup
+   673:	bipush	15
+   675:	getstatic	#48; //Field p:Lhc;
+   678:	aastore
+   679:	dup
+   680:	bipush	16
+   682:	getstatic	#49; //Field q:Lhc;
+   685:	aastore
+   686:	dup
+   687:	bipush	17
+   689:	getstatic	#50; //Field r:Lhc;
+   692:	aastore
+   693:	dup
+   694:	bipush	18
+   696:	getstatic	#51; //Field s:Lhc;
+   699:	aastore
+   700:	dup
+   701:	bipush	19
+   703:	getstatic	#52; //Field t:Lhc;
+   706:	aastore
+   707:	dup
+   708:	bipush	20
+   710:	getstatic	#53; //Field u:Lhc;
+   713:	aastore
+   714:	dup
+   715:	bipush	21
+   717:	getstatic	#54; //Field v:Lhc;
+   720:	aastore
+   721:	dup
+   722:	bipush	22
+   724:	getstatic	#55; //Field w:Lhc;
+   727:	aastore
+   728:	dup
+   729:	bipush	23
+   731:	getstatic	#56; //Field x:Lhc;
+   734:	aastore
+   735:	putstatic	#32; //Field D:[Lhc;
+   738:	return
+
+}
+

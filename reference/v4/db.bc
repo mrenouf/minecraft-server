@@ -1,0 +1,82 @@
+Compiled from SourceFile
+public class db extends fs{
+protected int a;
+
+public db(int, int, int, fy[]);
+  Code:
+   0:	aload_0
+   1:	iload_1
+   2:	invokespecial	#11; //Method fs."<init>":(I)V
+   5:	aload_0
+   6:	ldc	#1; //float 4.0f
+   8:	putfield	#9; //Field bc:F
+   11:	aload_0
+   12:	iload_3
+   13:	putfield	#5; //Field a:I
+   16:	aload_0
+   17:	aload	4
+   19:	putfield	#8; //Field bb:[Lfy;
+   22:	aload_0
+   23:	iconst_1
+   24:	putfield	#6; //Field aX:I
+   27:	aload_0
+   28:	bipush	32
+   30:	iload_3
+   31:	ishl
+   32:	putfield	#7; //Field aY:I
+   35:	iload_3
+   36:	iconst_3
+   37:	if_icmpne	50
+   40:	aload_0
+   41:	dup
+   42:	getfield	#7; //Field aY:I
+   45:	iconst_4
+   46:	imul
+   47:	putfield	#7; //Field aY:I
+   50:	aload_0
+   51:	iload_3
+   52:	iconst_1
+   53:	iadd
+   54:	iconst_2
+   55:	imul
+   56:	i2f
+   57:	putfield	#9; //Field bc:F
+   60:	aload_0
+   61:	iload_2
+   62:	iload_3
+   63:	iadd
+   64:	putfield	#10; //Field bd:I
+   67:	return
+
+public float a(hj, fy);
+  Code:
+   0:	iconst_0
+   1:	istore_3
+   2:	iload_3
+   3:	aload_0
+   4:	getfield	#8; //Field bb:[Lfy;
+   7:	arraylength
+   8:	if_icmpge	32
+   11:	aload_0
+   12:	getfield	#8; //Field bb:[Lfy;
+   15:	iload_3
+   16:	aaload
+   17:	aload_2
+   18:	if_acmpne	26
+   21:	aload_0
+   22:	getfield	#9; //Field bc:F
+   25:	freturn
+   26:	iinc	3, 1
+   29:	goto	2
+   32:	fconst_1
+   33:	freturn
+
+public void a(hj, int, int, int, int);
+  Code:
+   0:	aload_1
+   1:	iconst_1
+   2:	invokevirtual	#12; //Method hj.a:(I)V
+   5:	return
+
+}
+

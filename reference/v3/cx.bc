@@ -1,0 +1,341 @@
+Compiled from SourceFile
+public abstract class cx extends fw{
+protected int d;
+
+protected cx(int, jr);
+  Code:
+   0:	aload_0
+   1:	iload_1
+   2:	aload_2
+   3:	getstatic	#31; //Field jr.g:Ljr;
+   6:	if_acmpne	14
+   9:	bipush	14
+   11:	goto	16
+   14:	bipush	12
+   16:	bipush	16
+   18:	imul
+   19:	bipush	13
+   21:	iadd
+   22:	aload_2
+   23:	invokespecial	#49; //Method fw."<init>":(IILjr;)V
+   26:	aload_0
+   27:	iconst_1
+   28:	putfield	#25; //Field d:I
+   31:	fconst_0
+   32:	fstore_3
+   33:	fconst_0
+   34:	fstore	4
+   36:	aload_2
+   37:	getstatic	#31; //Field jr.g:Ljr;
+   40:	if_acmpne	48
+   43:	aload_0
+   44:	iconst_2
+   45:	putfield	#25; //Field d:I
+   48:	aload_0
+   49:	fconst_0
+   50:	fload	4
+   52:	fadd
+   53:	fconst_0
+   54:	fload_3
+   55:	fadd
+   56:	fconst_0
+   57:	fload	4
+   59:	fadd
+   60:	fconst_1
+   61:	fload	4
+   63:	fadd
+   64:	fconst_1
+   65:	fload_3
+   66:	fadd
+   67:	fconst_1
+   68:	fload	4
+   70:	fadd
+   71:	invokevirtual	#36; //Method a:(FFFFFF)V
+   74:	aload_0
+   75:	iconst_1
+   76:	invokevirtual	#38; //Method a:(Z)V
+   79:	return
+
+public static float b(int);
+  Code:
+   0:	iload_0
+   1:	bipush	8
+   3:	if_icmplt	8
+   6:	iconst_0
+   7:	istore_0
+   8:	iload_0
+   9:	iconst_1
+   10:	iadd
+   11:	i2f
+   12:	ldc	#4; //float 9.0f
+   14:	fdiv
+   15:	fstore_1
+   16:	fload_1
+   17:	freturn
+
+public int a(int);
+  Code:
+   0:	iload_1
+   1:	ifeq	9
+   4:	iload_1
+   5:	iconst_1
+   6:	if_icmpne	14
+   9:	aload_0
+   10:	getfield	#22; //Field bh:I
+   13:	ireturn
+   14:	aload_0
+   15:	getfield	#22; //Field bh:I
+   18:	iconst_1
+   19:	iadd
+   20:	ireturn
+
+protected int g(el, int, int, int);
+  Code:
+   0:	aload_1
+   1:	iload_2
+   2:	iload_3
+   3:	iload	4
+   5:	invokevirtual	#47; //Method el.c:(III)Ljr;
+   8:	aload_0
+   9:	getfield	#24; //Field bt:Ljr;
+   12:	if_acmpeq	17
+   15:	iconst_m1
+   16:	ireturn
+   17:	aload_1
+   18:	iload_2
+   19:	iload_3
+   20:	iload	4
+   22:	invokevirtual	#46; //Method el.b:(III)I
+   25:	ireturn
+
+protected int b(io, int, int, int);
+  Code:
+   0:	aload_1
+   1:	iload_2
+   2:	iload_3
+   3:	iload	4
+   5:	invokeinterface	#56,  4; //InterfaceMethod io.c:(III)Ljr;
+   10:	aload_0
+   11:	getfield	#24; //Field bt:Ljr;
+   14:	if_acmpeq	19
+   17:	iconst_m1
+   18:	ireturn
+   19:	aload_1
+   20:	iload_2
+   21:	iload_3
+   22:	iload	4
+   24:	invokeinterface	#55,  4; //InterfaceMethod io.b:(III)I
+   29:	istore	5
+   31:	iload	5
+   33:	bipush	8
+   35:	if_icmplt	41
+   38:	iconst_0
+   39:	istore	5
+   41:	iload	5
+   43:	ireturn
+
+public boolean a();
+  Code:
+   0:	iconst_0
+   1:	ireturn
+
+public boolean a(int, boolean);
+  Code:
+   0:	iload_2
+   1:	ifeq	12
+   4:	iload_1
+   5:	ifne	12
+   8:	iconst_1
+   9:	goto	13
+   12:	iconst_0
+   13:	ireturn
+
+public boolean a(io, int, int, int, int);
+  Code:
+   0:	aload_1
+   1:	iload_2
+   2:	iload_3
+   3:	iload	4
+   5:	invokeinterface	#56,  4; //InterfaceMethod io.c:(III)Ljr;
+   10:	astore	6
+   12:	aload	6
+   14:	aload_0
+   15:	getfield	#24; //Field bt:Ljr;
+   18:	if_acmpne	23
+   21:	iconst_0
+   22:	ireturn
+   23:	aload	6
+   25:	getstatic	#32; //Field jr.r:Ljr;
+   28:	if_acmpne	33
+   31:	iconst_0
+   32:	ireturn
+   33:	iload	5
+   35:	iconst_1
+   36:	if_icmpne	41
+   39:	iconst_1
+   40:	ireturn
+   41:	aload_0
+   42:	aload_1
+   43:	iload_2
+   44:	iload_3
+   45:	iload	4
+   47:	iload	5
+   49:	invokespecial	#51; //Method fw.a:(Lio;IIII)Z
+   52:	ireturn
+
+public ds d(el, int, int, int);
+  Code:
+   0:	aconst_null
+   1:	areturn
+
+public int a(int, java.util.Random);
+  Code:
+   0:	iconst_0
+   1:	ireturn
+
+public int a(java.util.Random);
+  Code:
+   0:	iconst_0
+   1:	ireturn
+
+public void a(el, int, int, int, dv, ba);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	iload_2
+   3:	iload_3
+   4:	iload	4
+   6:	invokespecial	#40; //Method c:(Lio;III)Lba;
+   9:	astore	7
+   11:	aload	6
+   13:	dup
+   14:	getfield	#19; //Field ba.a:D
+   17:	aload	7
+   19:	getfield	#19; //Field ba.a:D
+   22:	dadd
+   23:	putfield	#19; //Field ba.a:D
+   26:	aload	6
+   28:	dup
+   29:	getfield	#20; //Field ba.b:D
+   32:	aload	7
+   34:	getfield	#20; //Field ba.b:D
+   37:	dadd
+   38:	putfield	#20; //Field ba.b:D
+   41:	aload	6
+   43:	dup
+   44:	getfield	#21; //Field ba.c:D
+   47:	aload	7
+   49:	getfield	#21; //Field ba.c:D
+   52:	dadd
+   53:	putfield	#21; //Field ba.c:D
+   56:	return
+
+public int b();
+  Code:
+   0:	aload_0
+   1:	getfield	#24; //Field bt:Ljr;
+   4:	getstatic	#30; //Field jr.f:Ljr;
+   7:	if_acmpne	12
+   10:	iconst_5
+   11:	ireturn
+   12:	aload_0
+   13:	getfield	#24; //Field bt:Ljr;
+   16:	getstatic	#31; //Field jr.g:Ljr;
+   19:	if_acmpne	25
+   22:	bipush	30
+   24:	ireturn
+   25:	iconst_0
+   26:	ireturn
+
+public void a(el, int, int, int, java.util.Random);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	iload_2
+   3:	iload_3
+   4:	iload	4
+   6:	aload	5
+   8:	invokespecial	#50; //Method fw.a:(Lel;IIILjava/util/Random;)V
+   11:	return
+
+public void e(el, int, int, int);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	iload_2
+   3:	iload_3
+   4:	iload	4
+   6:	invokespecial	#42; //Method i:(Lel;III)V
+   9:	return
+
+public void b(el, int, int, int, int);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	iload_2
+   3:	iload_3
+   4:	iload	4
+   6:	invokespecial	#42; //Method i:(Lel;III)V
+   9:	return
+
+protected void h(el, int, int, int);
+  Code:
+   0:	aload_1
+   1:	iload_2
+   2:	i2f
+   3:	ldc	#1; //float 0.5f
+   5:	fadd
+   6:	f2d
+   7:	iload_3
+   8:	i2f
+   9:	ldc	#1; //float 0.5f
+   11:	fadd
+   12:	f2d
+   13:	iload	4
+   15:	i2f
+   16:	ldc	#1; //float 0.5f
+   18:	fadd
+   19:	f2d
+   20:	ldc	#6; //String random.fizz
+   22:	ldc	#1; //float 0.5f
+   24:	ldc	#3; //float 2.6f
+   26:	aload_1
+   27:	getfield	#26; //Field el.l:Ljava/util/Random;
+   30:	invokevirtual	#53; //Method java/util/Random.nextFloat:()F
+   33:	aload_1
+   34:	getfield	#26; //Field el.l:Ljava/util/Random;
+   37:	invokevirtual	#53; //Method java/util/Random.nextFloat:()F
+   40:	fsub
+   41:	ldc	#2; //float 0.8f
+   43:	fmul
+   44:	fadd
+   45:	invokevirtual	#43; //Method el.a:(DDDLjava/lang/String;FF)V
+   48:	iconst_0
+   49:	istore	5
+   51:	iload	5
+   53:	bipush	8
+   55:	if_icmpge	92
+   58:	aload_1
+   59:	ldc	#5; //String largesmoke
+   61:	iload_2
+   62:	i2d
+   63:	invokestatic	#52; //Method java/lang/Math.random:()D
+   66:	dadd
+   67:	iload_3
+   68:	i2d
+   69:	ldc2_w	#17; //double 1.2d
+   72:	dadd
+   73:	iload	4
+   75:	i2d
+   76:	invokestatic	#52; //Method java/lang/Math.random:()D
+   79:	dadd
+   80:	dconst_0
+   81:	dconst_0
+   82:	dconst_0
+   83:	invokevirtual	#45; //Method el.a:(Ljava/lang/String;DDDDDD)V
+   86:	iinc	5, 1
+   89:	goto	51
+   92:	return
+
+}
+

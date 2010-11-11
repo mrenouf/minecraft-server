@@ -1,0 +1,77 @@
+Compiled from SourceFile
+public class ia extends fy{
+public ia(int, int);
+  Code:
+   0:	aload_0
+   1:	iload_1
+   2:	iload_2
+   3:	getstatic	#10; //Field jt.c:Ljt;
+   6:	invokespecial	#14; //Method fy."<init>":(IILjt;)V
+   9:	return
+
+public void a(em, int, int, int, dt, java.util.ArrayList);
+  Code:
+   0:	aload	6
+   2:	iload_2
+   3:	i2d
+   4:	iload_3
+   5:	i2d
+   6:	iload	4
+   8:	i2d
+   9:	iload_2
+   10:	iconst_1
+   11:	iadd
+   12:	i2d
+   13:	iload_3
+   14:	i2d
+   15:	ldc2_w	#7; //double 1.5d
+   18:	dadd
+   19:	iload	4
+   21:	iconst_1
+   22:	iadd
+   23:	i2d
+   24:	invokestatic	#11; //Method dt.b:(DDDDDD)Ldt;
+   27:	invokevirtual	#16; //Method java/util/ArrayList.add:(Ljava/lang/Object;)Z
+   30:	pop
+   31:	return
+
+public boolean a(em, int, int, int);
+  Code:
+   0:	aload_1
+   1:	iload_2
+   2:	iload_3
+   3:	iconst_1
+   4:	isub
+   5:	iload	4
+   7:	invokevirtual	#12; //Method em.a:(III)I
+   10:	aload_0
+   11:	getfield	#9; //Field bh:I
+   14:	if_icmpne	19
+   17:	iconst_0
+   18:	ireturn
+   19:	aload_1
+   20:	iload_2
+   21:	iload_3
+   22:	iconst_1
+   23:	isub
+   24:	iload	4
+   26:	invokevirtual	#13; //Method em.c:(III)Ljt;
+   29:	invokevirtual	#17; //Method jt.a:()Z
+   32:	ifne	37
+   35:	iconst_0
+   36:	ireturn
+   37:	aload_0
+   38:	aload_1
+   39:	iload_2
+   40:	iload_3
+   41:	iload	4
+   43:	invokespecial	#15; //Method fy.a:(Lem;III)Z
+   46:	ireturn
+
+public boolean a();
+  Code:
+   0:	iconst_0
+   1:	ireturn
+
+}
+

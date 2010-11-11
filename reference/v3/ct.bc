@@ -1,0 +1,52 @@
+Compiled from SourceFile
+public class ct extends fq{
+public ct(int, int);
+  Code:
+   0:	aload_0
+   1:	iload_1
+   2:	invokespecial	#12; //Method fq."<init>":(I)V
+   5:	aload_0
+   6:	iload_2
+   7:	putfield	#6; //Field a:I
+   10:	return
+
+public boolean a(hh, ft, el, int, int, int, int);
+  Code:
+   0:	iload	7
+   2:	iconst_1
+   3:	if_icmpeq	8
+   6:	iconst_0
+   7:	ireturn
+   8:	aload_3
+   9:	iload	4
+   11:	iload	5
+   13:	iload	6
+   15:	invokevirtual	#10; //Method el.a:(III)I
+   18:	istore	8
+   20:	iload	8
+   22:	getstatic	#7; //Field fw.aB:Lfw;
+   25:	getfield	#8; //Field fw.bi:I
+   28:	if_icmpne	60
+   31:	aload_3
+   32:	iload	4
+   34:	iload	5
+   36:	iconst_1
+   37:	iadd
+   38:	iload	6
+   40:	aload_0
+   41:	getfield	#6; //Field a:I
+   44:	invokevirtual	#11; //Method el.d:(IIII)Z
+   47:	pop
+   48:	aload_1
+   49:	dup
+   50:	getfield	#9; //Field hh.a:I
+   53:	iconst_1
+   54:	isub
+   55:	putfield	#9; //Field hh.a:I
+   58:	iconst_1
+   59:	ireturn
+   60:	iconst_0
+   61:	ireturn
+
+}
+

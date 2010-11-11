@@ -1,0 +1,37 @@
+Compiled from SourceFile
+public class eh extends db{
+public eh(int, int);
+  Code:
+   0:	aload_0
+   1:	iload_1
+   2:	iconst_3
+   3:	iload_2
+   4:	getstatic	#4; //Field bb:[Lfy;
+   7:	invokespecial	#9; //Method db."<init>":(III[Lfy;)V
+   10:	return
+
+static {};
+  Code:
+   0:	iconst_4
+   1:	anewarray	#3; //class fy
+   4:	dup
+   5:	iconst_0
+   6:	getstatic	#8; //Field fy.x:Lfy;
+   9:	aastore
+   10:	dup
+   11:	iconst_1
+   12:	getstatic	#6; //Field fy.an:Lfy;
+   15:	aastore
+   16:	dup
+   17:	iconst_2
+   18:	getstatic	#5; //Field fy.J:Lfy;
+   21:	aastore
+   22:	dup
+   23:	iconst_3
+   24:	getstatic	#7; //Field fy.au:Lfy;
+   27:	aastore
+   28:	putstatic	#4; //Field bb:[Lfy;
+   31:	return
+
+}
+

@@ -1,0 +1,66 @@
+Compiled from SourceFile
+class df extends java.lang.Thread{
+final net.minecraft.server.MinecraftServer a;
+
+final do b;
+
+df(do, java.lang.String, net.minecraft.server.MinecraftServer);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	putfield	#10; //Field b:Ldo;
+   5:	aload_0
+   6:	aload_3
+   7:	putfield	#9; //Field a:Lnet/minecraft/server/MinecraftServer;
+   10:	aload_0
+   11:	aload_2
+   12:	invokespecial	#21; //Method java/lang/Thread."<init>":(Ljava/lang/String;)V
+   15:	return
+
+public void run();
+  Code:
+   0:	aload_0
+   1:	getfield	#10; //Field b:Ldo;
+   4:	getfield	#11; //Field do.b:Z
+   7:	ifeq	82
+   10:	aload_0
+   11:	getfield	#10; //Field b:Ldo;
+   14:	invokestatic	#12; //Method do.a:(Ldo;)Ljava/net/ServerSocket;
+   17:	invokevirtual	#22; //Method java/net/ServerSocket.accept:()Ljava/net/Socket;
+   20:	astore_1
+   21:	aload_1
+   22:	ifnull	71
+   25:	new	#4; //class fn
+   28:	dup
+   29:	aload_0
+   30:	getfield	#9; //Field a:Lnet/minecraft/server/MinecraftServer;
+   33:	aload_1
+   34:	new	#6; //class java/lang/StringBuilder
+   37:	dup
+   38:	invokespecial	#17; //Method java/lang/StringBuilder."<init>":()V
+   41:	ldc	#1; //String Connection #
+   43:	invokevirtual	#19; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   46:	aload_0
+   47:	getfield	#10; //Field b:Ldo;
+   50:	invokestatic	#14; //Method do.b:(Ldo;)I
+   53:	invokevirtual	#18; //Method java/lang/StringBuilder.append:(I)Ljava/lang/StringBuilder;
+   56:	invokevirtual	#20; //Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+   59:	invokespecial	#15; //Method fn."<init>":(Lnet/minecraft/server/MinecraftServer;Ljava/net/Socket;Ljava/lang/String;)V
+   62:	astore_2
+   63:	aload_0
+   64:	getfield	#10; //Field b:Ldo;
+   67:	aload_2
+   68:	invokestatic	#13; //Method do.a:(Ldo;Lfn;)V
+   71:	goto	0
+   74:	astore_1
+   75:	aload_1
+   76:	invokevirtual	#16; //Method java/io/IOException.printStackTrace:()V
+   79:	goto	0
+   82:	return
+  Exception table:
+   from   to  target type
+    10    71    74   Class java/io/IOException
+
+
+}
+

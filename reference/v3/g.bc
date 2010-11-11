@@ -1,0 +1,40 @@
+Compiled from SourceFile
+public class g extends fw{
+public g(int, int);
+  Code:
+   0:	aload_0
+   1:	iload_1
+   2:	iload_2
+   3:	getstatic	#12; //Field jr.d:Ljr;
+   6:	invokespecial	#13; //Method fw."<init>":(IILjr;)V
+   9:	return
+
+public int a(int, java.util.Random);
+  Code:
+   0:	aload_0
+   1:	getfield	#11; //Field bi:I
+   4:	getstatic	#8; //Field fw.J:Lfw;
+   7:	getfield	#10; //Field fw.bi:I
+   10:	if_icmpne	20
+   13:	getstatic	#6; //Field fq.k:Lfq;
+   16:	getfield	#5; //Field fq.aW:I
+   19:	ireturn
+   20:	aload_0
+   21:	getfield	#11; //Field bi:I
+   24:	getstatic	#9; //Field fw.ax:Lfw;
+   27:	getfield	#10; //Field fw.bi:I
+   30:	if_icmpne	40
+   33:	getstatic	#7; //Field fq.l:Lfq;
+   36:	getfield	#5; //Field fq.aW:I
+   39:	ireturn
+   40:	aload_0
+   41:	getfield	#11; //Field bi:I
+   44:	ireturn
+
+public int a(java.util.Random);
+  Code:
+   0:	iconst_1
+   1:	ireturn
+
+}
+

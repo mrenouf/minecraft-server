@@ -1,0 +1,615 @@
+Compiled from SourceFile
+public class bk extends java.lang.Object{
+public double a;
+
+public double b;
+
+public double c;
+
+public bk();
+  Code:
+   0:	aload_0
+   1:	new	#5; //class java/util/Random
+   4:	dup
+   5:	invokespecial	#30; //Method java/util/Random."<init>":()V
+   8:	invokespecial	#25; //Method "<init>":(Ljava/util/Random;)V
+   11:	return
+
+public bk(java.util.Random);
+  Code:
+   0:	aload_0
+   1:	invokespecial	#29; //Method java/lang/Object."<init>":()V
+   4:	aload_0
+   5:	sipush	512
+   8:	newarray int
+   10:	putfield	#22; //Field e:[I
+   13:	aload_0
+   14:	aload_1
+   15:	invokevirtual	#31; //Method java/util/Random.nextDouble:()D
+   18:	ldc2_w	#16; //double 256.0d
+   21:	dmul
+   22:	putfield	#18; //Field a:D
+   25:	aload_0
+   26:	aload_1
+   27:	invokevirtual	#31; //Method java/util/Random.nextDouble:()D
+   30:	ldc2_w	#16; //double 256.0d
+   33:	dmul
+   34:	putfield	#19; //Field b:D
+   37:	aload_0
+   38:	aload_1
+   39:	invokevirtual	#31; //Method java/util/Random.nextDouble:()D
+   42:	ldc2_w	#16; //double 256.0d
+   45:	dmul
+   46:	putfield	#20; //Field c:D
+   49:	iconst_0
+   50:	istore_2
+   51:	iload_2
+   52:	sipush	256
+   55:	if_icmpge	71
+   58:	aload_0
+   59:	getfield	#22; //Field e:[I
+   62:	iload_2
+   63:	iload_2
+   64:	iastore
+   65:	iinc	2, 1
+   68:	goto	51
+   71:	iconst_0
+   72:	istore_2
+   73:	iload_2
+   74:	sipush	256
+   77:	if_icmpge	142
+   80:	aload_1
+   81:	sipush	256
+   84:	iload_2
+   85:	isub
+   86:	invokevirtual	#32; //Method java/util/Random.nextInt:(I)I
+   89:	iload_2
+   90:	iadd
+   91:	istore_3
+   92:	aload_0
+   93:	getfield	#22; //Field e:[I
+   96:	iload_2
+   97:	iaload
+   98:	istore	4
+   100:	aload_0
+   101:	getfield	#22; //Field e:[I
+   104:	iload_2
+   105:	aload_0
+   106:	getfield	#22; //Field e:[I
+   109:	iload_3
+   110:	iaload
+   111:	iastore
+   112:	aload_0
+   113:	getfield	#22; //Field e:[I
+   116:	iload_3
+   117:	iload	4
+   119:	iastore
+   120:	aload_0
+   121:	getfield	#22; //Field e:[I
+   124:	iload_2
+   125:	sipush	256
+   128:	iadd
+   129:	aload_0
+   130:	getfield	#22; //Field e:[I
+   133:	iload_2
+   134:	iaload
+   135:	iastore
+   136:	iinc	2, 1
+   139:	goto	73
+   142:	return
+
+public void a(double[], double, double, int, int, double, double, double);
+  Code:
+   0:	iconst_0
+   1:	istore	14
+   3:	iconst_0
+   4:	istore	15
+   6:	iload	15
+   8:	iload	6
+   10:	if_icmpge	499
+   13:	dload_2
+   14:	iload	15
+   16:	i2d
+   17:	dadd
+   18:	dload	8
+   20:	dmul
+   21:	aload_0
+   22:	getfield	#18; //Field a:D
+   25:	dadd
+   26:	dstore	16
+   28:	iconst_0
+   29:	istore	18
+   31:	iload	18
+   33:	iload	7
+   35:	if_icmpge	493
+   38:	dload	4
+   40:	iload	18
+   42:	i2d
+   43:	dadd
+   44:	dload	10
+   46:	dmul
+   47:	aload_0
+   48:	getfield	#19; //Field b:D
+   51:	dadd
+   52:	dstore	19
+   54:	dload	16
+   56:	dload	19
+   58:	dadd
+   59:	getstatic	#23; //Field f:D
+   62:	dmul
+   63:	dstore	27
+   65:	dload	16
+   67:	dload	27
+   69:	dadd
+   70:	invokestatic	#26; //Method a:(D)I
+   73:	istore	29
+   75:	dload	19
+   77:	dload	27
+   79:	dadd
+   80:	invokestatic	#26; //Method a:(D)I
+   83:	istore	30
+   85:	iload	29
+   87:	iload	30
+   89:	iadd
+   90:	i2d
+   91:	getstatic	#24; //Field g:D
+   94:	dmul
+   95:	dstore	31
+   97:	iload	29
+   99:	i2d
+   100:	dload	31
+   102:	dsub
+   103:	dstore	33
+   105:	iload	30
+   107:	i2d
+   108:	dload	31
+   110:	dsub
+   111:	dstore	35
+   113:	dload	16
+   115:	dload	33
+   117:	dsub
+   118:	dstore	37
+   120:	dload	19
+   122:	dload	35
+   124:	dsub
+   125:	dstore	39
+   127:	dload	37
+   129:	dload	39
+   131:	dcmpl
+   132:	ifle	144
+   135:	iconst_1
+   136:	istore	41
+   138:	iconst_0
+   139:	istore	42
+   141:	goto	150
+   144:	iconst_0
+   145:	istore	41
+   147:	iconst_1
+   148:	istore	42
+   150:	dload	37
+   152:	iload	41
+   154:	i2d
+   155:	dsub
+   156:	getstatic	#24; //Field g:D
+   159:	dadd
+   160:	dstore	43
+   162:	dload	39
+   164:	iload	42
+   166:	i2d
+   167:	dsub
+   168:	getstatic	#24; //Field g:D
+   171:	dadd
+   172:	dstore	45
+   174:	dload	37
+   176:	dconst_1
+   177:	dsub
+   178:	ldc2_w	#8; //double 2.0d
+   181:	getstatic	#24; //Field g:D
+   184:	dmul
+   185:	dadd
+   186:	dstore	47
+   188:	dload	39
+   190:	dconst_1
+   191:	dsub
+   192:	ldc2_w	#8; //double 2.0d
+   195:	getstatic	#24; //Field g:D
+   198:	dmul
+   199:	dadd
+   200:	dstore	49
+   202:	iload	29
+   204:	sipush	255
+   207:	iand
+   208:	istore	51
+   210:	iload	30
+   212:	sipush	255
+   215:	iand
+   216:	istore	52
+   218:	aload_0
+   219:	getfield	#22; //Field e:[I
+   222:	iload	51
+   224:	aload_0
+   225:	getfield	#22; //Field e:[I
+   228:	iload	52
+   230:	iaload
+   231:	iadd
+   232:	iaload
+   233:	bipush	12
+   235:	irem
+   236:	istore	53
+   238:	aload_0
+   239:	getfield	#22; //Field e:[I
+   242:	iload	51
+   244:	iload	41
+   246:	iadd
+   247:	aload_0
+   248:	getfield	#22; //Field e:[I
+   251:	iload	52
+   253:	iload	42
+   255:	iadd
+   256:	iaload
+   257:	iadd
+   258:	iaload
+   259:	bipush	12
+   261:	irem
+   262:	istore	54
+   264:	aload_0
+   265:	getfield	#22; //Field e:[I
+   268:	iload	51
+   270:	iconst_1
+   271:	iadd
+   272:	aload_0
+   273:	getfield	#22; //Field e:[I
+   276:	iload	52
+   278:	iconst_1
+   279:	iadd
+   280:	iaload
+   281:	iadd
+   282:	iaload
+   283:	bipush	12
+   285:	irem
+   286:	istore	55
+   288:	ldc2_w	#6; //double 0.5d
+   291:	dload	37
+   293:	dload	37
+   295:	dmul
+   296:	dsub
+   297:	dload	39
+   299:	dload	39
+   301:	dmul
+   302:	dsub
+   303:	dstore	56
+   305:	dload	56
+   307:	dconst_0
+   308:	dcmpg
+   309:	ifge	318
+   312:	dconst_0
+   313:	dstore	21
+   315:	goto	346
+   318:	dload	56
+   320:	dload	56
+   322:	dmul
+   323:	dstore	56
+   325:	dload	56
+   327:	dload	56
+   329:	dmul
+   330:	getstatic	#21; //Field d:[[I
+   333:	iload	53
+   335:	aaload
+   336:	dload	37
+   338:	dload	39
+   340:	invokestatic	#27; //Method a:([IDD)D
+   343:	dmul
+   344:	dstore	21
+   346:	ldc2_w	#6; //double 0.5d
+   349:	dload	43
+   351:	dload	43
+   353:	dmul
+   354:	dsub
+   355:	dload	45
+   357:	dload	45
+   359:	dmul
+   360:	dsub
+   361:	dstore	58
+   363:	dload	58
+   365:	dconst_0
+   366:	dcmpg
+   367:	ifge	376
+   370:	dconst_0
+   371:	dstore	23
+   373:	goto	404
+   376:	dload	58
+   378:	dload	58
+   380:	dmul
+   381:	dstore	58
+   383:	dload	58
+   385:	dload	58
+   387:	dmul
+   388:	getstatic	#21; //Field d:[[I
+   391:	iload	54
+   393:	aaload
+   394:	dload	43
+   396:	dload	45
+   398:	invokestatic	#27; //Method a:([IDD)D
+   401:	dmul
+   402:	dstore	23
+   404:	ldc2_w	#6; //double 0.5d
+   407:	dload	47
+   409:	dload	47
+   411:	dmul
+   412:	dsub
+   413:	dload	49
+   415:	dload	49
+   417:	dmul
+   418:	dsub
+   419:	dstore	60
+   421:	dload	60
+   423:	dconst_0
+   424:	dcmpg
+   425:	ifge	434
+   428:	dconst_0
+   429:	dstore	25
+   431:	goto	462
+   434:	dload	60
+   436:	dload	60
+   438:	dmul
+   439:	dstore	60
+   441:	dload	60
+   443:	dload	60
+   445:	dmul
+   446:	getstatic	#21; //Field d:[[I
+   449:	iload	55
+   451:	aaload
+   452:	dload	47
+   454:	dload	49
+   456:	invokestatic	#27; //Method a:([IDD)D
+   459:	dmul
+   460:	dstore	25
+   462:	aload_1
+   463:	iload	14
+   465:	iinc	14, 1
+   468:	dup2
+   469:	daload
+   470:	ldc2_w	#14; //double 70.0d
+   473:	dload	21
+   475:	dload	23
+   477:	dadd
+   478:	dload	25
+   480:	dadd
+   481:	dmul
+   482:	dload	12
+   484:	dmul
+   485:	dadd
+   486:	dastore
+   487:	iinc	18, 1
+   490:	goto	31
+   493:	iinc	15, 1
+   496:	goto	6
+   499:	return
+
+static {};
+  Code:
+   0:	bipush	12
+   2:	anewarray	#1; //class "[I"
+   5:	dup
+   6:	iconst_0
+   7:	iconst_3
+   8:	newarray int
+   10:	dup
+   11:	iconst_0
+   12:	iconst_1
+   13:	iastore
+   14:	dup
+   15:	iconst_1
+   16:	iconst_1
+   17:	iastore
+   18:	dup
+   19:	iconst_2
+   20:	iconst_0
+   21:	iastore
+   22:	aastore
+   23:	dup
+   24:	iconst_1
+   25:	iconst_3
+   26:	newarray int
+   28:	dup
+   29:	iconst_0
+   30:	iconst_m1
+   31:	iastore
+   32:	dup
+   33:	iconst_1
+   34:	iconst_1
+   35:	iastore
+   36:	dup
+   37:	iconst_2
+   38:	iconst_0
+   39:	iastore
+   40:	aastore
+   41:	dup
+   42:	iconst_2
+   43:	iconst_3
+   44:	newarray int
+   46:	dup
+   47:	iconst_0
+   48:	iconst_1
+   49:	iastore
+   50:	dup
+   51:	iconst_1
+   52:	iconst_m1
+   53:	iastore
+   54:	dup
+   55:	iconst_2
+   56:	iconst_0
+   57:	iastore
+   58:	aastore
+   59:	dup
+   60:	iconst_3
+   61:	iconst_3
+   62:	newarray int
+   64:	dup
+   65:	iconst_0
+   66:	iconst_m1
+   67:	iastore
+   68:	dup
+   69:	iconst_1
+   70:	iconst_m1
+   71:	iastore
+   72:	dup
+   73:	iconst_2
+   74:	iconst_0
+   75:	iastore
+   76:	aastore
+   77:	dup
+   78:	iconst_4
+   79:	iconst_3
+   80:	newarray int
+   82:	dup
+   83:	iconst_0
+   84:	iconst_1
+   85:	iastore
+   86:	dup
+   87:	iconst_1
+   88:	iconst_0
+   89:	iastore
+   90:	dup
+   91:	iconst_2
+   92:	iconst_1
+   93:	iastore
+   94:	aastore
+   95:	dup
+   96:	iconst_5
+   97:	iconst_3
+   98:	newarray int
+   100:	dup
+   101:	iconst_0
+   102:	iconst_m1
+   103:	iastore
+   104:	dup
+   105:	iconst_1
+   106:	iconst_0
+   107:	iastore
+   108:	dup
+   109:	iconst_2
+   110:	iconst_1
+   111:	iastore
+   112:	aastore
+   113:	dup
+   114:	bipush	6
+   116:	iconst_3
+   117:	newarray int
+   119:	dup
+   120:	iconst_0
+   121:	iconst_1
+   122:	iastore
+   123:	dup
+   124:	iconst_1
+   125:	iconst_0
+   126:	iastore
+   127:	dup
+   128:	iconst_2
+   129:	iconst_m1
+   130:	iastore
+   131:	aastore
+   132:	dup
+   133:	bipush	7
+   135:	iconst_3
+   136:	newarray int
+   138:	dup
+   139:	iconst_0
+   140:	iconst_m1
+   141:	iastore
+   142:	dup
+   143:	iconst_1
+   144:	iconst_0
+   145:	iastore
+   146:	dup
+   147:	iconst_2
+   148:	iconst_m1
+   149:	iastore
+   150:	aastore
+   151:	dup
+   152:	bipush	8
+   154:	iconst_3
+   155:	newarray int
+   157:	dup
+   158:	iconst_0
+   159:	iconst_0
+   160:	iastore
+   161:	dup
+   162:	iconst_1
+   163:	iconst_1
+   164:	iastore
+   165:	dup
+   166:	iconst_2
+   167:	iconst_1
+   168:	iastore
+   169:	aastore
+   170:	dup
+   171:	bipush	9
+   173:	iconst_3
+   174:	newarray int
+   176:	dup
+   177:	iconst_0
+   178:	iconst_0
+   179:	iastore
+   180:	dup
+   181:	iconst_1
+   182:	iconst_m1
+   183:	iastore
+   184:	dup
+   185:	iconst_2
+   186:	iconst_1
+   187:	iastore
+   188:	aastore
+   189:	dup
+   190:	bipush	10
+   192:	iconst_3
+   193:	newarray int
+   195:	dup
+   196:	iconst_0
+   197:	iconst_0
+   198:	iastore
+   199:	dup
+   200:	iconst_1
+   201:	iconst_1
+   202:	iastore
+   203:	dup
+   204:	iconst_2
+   205:	iconst_m1
+   206:	iastore
+   207:	aastore
+   208:	dup
+   209:	bipush	11
+   211:	iconst_3
+   212:	newarray int
+   214:	dup
+   215:	iconst_0
+   216:	iconst_0
+   217:	iastore
+   218:	dup
+   219:	iconst_1
+   220:	iconst_m1
+   221:	iastore
+   222:	dup
+   223:	iconst_2
+   224:	iconst_m1
+   225:	iastore
+   226:	aastore
+   227:	putstatic	#21; //Field d:[[I
+   230:	ldc2_w	#6; //double 0.5d
+   233:	ldc2_w	#10; //double 3.0d
+   236:	invokestatic	#28; //Method java/lang/Math.sqrt:(D)D
+   239:	dconst_1
+   240:	dsub
+   241:	dmul
+   242:	putstatic	#23; //Field f:D
+   245:	ldc2_w	#10; //double 3.0d
+   248:	ldc2_w	#10; //double 3.0d
+   251:	invokestatic	#28; //Method java/lang/Math.sqrt:(D)D
+   254:	dsub
+   255:	ldc2_w	#12; //double 6.0d
+   258:	ddiv
+   259:	putstatic	#24; //Field g:D
+   262:	return
+
+}
+

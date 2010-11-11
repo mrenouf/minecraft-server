@@ -1,0 +1,22 @@
+Compiled from SourceFile
+class ju extends java.lang.Object implements java.awt.event.ActionListener{
+final iw a;
+
+ju(iw);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	putfield	#5; //Field a:Liw;
+   5:	aload_0
+   6:	invokespecial	#7; //Method java/lang/Object."<init>":()V
+   9:	return
+
+public void actionPerformed(java.awt.event.ActionEvent);
+  Code:
+   0:	aload_0
+   1:	getfield	#5; //Field a:Liw;
+   4:	invokestatic	#6; //Method iw.a:(Liw;)V
+   7:	return
+
+}
+

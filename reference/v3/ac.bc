@@ -1,0 +1,64 @@
+Compiled from SourceFile
+public class ac extends gx{
+public ac();
+  Code:
+   0:	aload_0
+   1:	invokespecial	#11; //Method gx."<init>":()V
+   4:	aload_0
+   5:	iconst_1
+   6:	putfield	#10; //Field h:Z
+   9:	return
+
+public void a(java.io.DataInputStream);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	invokevirtual	#14; //Method java/io/DataInputStream.readDouble:()D
+   5:	putfield	#6; //Field a:D
+   8:	aload_0
+   9:	aload_1
+   10:	invokevirtual	#14; //Method java/io/DataInputStream.readDouble:()D
+   13:	putfield	#7; //Field b:D
+   16:	aload_0
+   17:	aload_1
+   18:	invokevirtual	#14; //Method java/io/DataInputStream.readDouble:()D
+   21:	putfield	#9; //Field d:D
+   24:	aload_0
+   25:	aload_1
+   26:	invokevirtual	#14; //Method java/io/DataInputStream.readDouble:()D
+   29:	putfield	#8; //Field c:D
+   32:	aload_0
+   33:	aload_1
+   34:	invokespecial	#12; //Method gx.a:(Ljava/io/DataInputStream;)V
+   37:	return
+
+public void a(java.io.DataOutputStream);
+  Code:
+   0:	aload_1
+   1:	aload_0
+   2:	getfield	#6; //Field a:D
+   5:	invokevirtual	#15; //Method java/io/DataOutputStream.writeDouble:(D)V
+   8:	aload_1
+   9:	aload_0
+   10:	getfield	#7; //Field b:D
+   13:	invokevirtual	#15; //Method java/io/DataOutputStream.writeDouble:(D)V
+   16:	aload_1
+   17:	aload_0
+   18:	getfield	#9; //Field d:D
+   21:	invokevirtual	#15; //Method java/io/DataOutputStream.writeDouble:(D)V
+   24:	aload_1
+   25:	aload_0
+   26:	getfield	#8; //Field c:D
+   29:	invokevirtual	#15; //Method java/io/DataOutputStream.writeDouble:(D)V
+   32:	aload_0
+   33:	aload_1
+   34:	invokespecial	#13; //Method gx.a:(Ljava/io/DataOutputStream;)V
+   37:	return
+
+public int a();
+  Code:
+   0:	bipush	33
+   2:	ireturn
+
+}
+

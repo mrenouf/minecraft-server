@@ -1,0 +1,527 @@
+Compiled from SourceFile
+public class gb extends jv implements en{
+public float a;
+
+public float b;
+
+public int c;
+
+public gb(em);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	invokespecial	#76; //Method jv."<init>":(Lem;)V
+   5:	aload_0
+   6:	iconst_0
+   7:	putfield	#49; //Field d:I
+   10:	aload_0
+   11:	iconst_1
+   12:	putfield	#48; //Field c:I
+   15:	aload_0
+   16:	ldc	#10; //String /mob/slime.png
+   18:	putfield	#42; //Field aF:Ljava/lang/String;
+   21:	aload_0
+   22:	iconst_1
+   23:	aload_0
+   24:	getfield	#40; //Field V:Ljava/util/Random;
+   27:	iconst_3
+   28:	invokevirtual	#74; //Method java/util/Random.nextInt:(I)I
+   31:	ishl
+   32:	putfield	#48; //Field c:I
+   35:	aload_0
+   36:	fconst_0
+   37:	putfield	#39; //Field G:F
+   40:	aload_0
+   41:	aload_0
+   42:	getfield	#40; //Field V:Ljava/util/Random;
+   45:	bipush	20
+   47:	invokevirtual	#74; //Method java/util/Random.nextInt:(I)I
+   50:	bipush	10
+   52:	iadd
+   53:	putfield	#49; //Field d:I
+   56:	aload_0
+   57:	aload_0
+   58:	getfield	#48; //Field c:I
+   61:	invokevirtual	#67; //Method d:(I)V
+   64:	return
+
+public void d(int);
+  Code:
+   0:	aload_0
+   1:	iload_1
+   2:	putfield	#48; //Field c:I
+   5:	aload_0
+   6:	ldc	#4; //float 0.6f
+   8:	iload_1
+   9:	i2f
+   10:	fmul
+   11:	ldc	#4; //float 0.6f
+   13:	iload_1
+   14:	i2f
+   15:	fmul
+   16:	invokevirtual	#63; //Method a:(FF)V
+   19:	aload_0
+   20:	iload_1
+   21:	iload_1
+   22:	imul
+   23:	putfield	#43; //Field aP:I
+   26:	aload_0
+   27:	aload_0
+   28:	getfield	#51; //Field p:D
+   31:	aload_0
+   32:	getfield	#52; //Field q:D
+   35:	aload_0
+   36:	getfield	#53; //Field r:D
+   39:	invokevirtual	#62; //Method a:(DDD)V
+   42:	return
+
+public void a(v);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	invokespecial	#77; //Method jv.a:(Lv;)V
+   5:	aload_1
+   6:	ldc	#11; //String Size
+   8:	aload_0
+   9:	getfield	#48; //Field c:I
+   12:	iconst_1
+   13:	isub
+   14:	invokevirtual	#81; //Method v.a:(Ljava/lang/String;I)V
+   17:	return
+
+public void b(v);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	invokespecial	#78; //Method jv.b:(Lv;)V
+   5:	aload_0
+   6:	aload_1
+   7:	ldc	#11; //String Size
+   9:	invokevirtual	#82; //Method v.d:(Ljava/lang/String;)I
+   12:	iconst_1
+   13:	iadd
+   14:	putfield	#48; //Field c:I
+   17:	return
+
+public void b_();
+  Code:
+   0:	aload_0
+   1:	aload_0
+   2:	getfield	#41; //Field a:F
+   5:	putfield	#44; //Field b:F
+   8:	aload_0
+   9:	getfield	#38; //Field A:Z
+   12:	istore_1
+   13:	aload_0
+   14:	invokespecial	#79; //Method jv.b_:()V
+   17:	aload_0
+   18:	getfield	#38; //Field A:Z
+   21:	ifeq	197
+   24:	iload_1
+   25:	ifne	197
+   28:	iconst_0
+   29:	istore_2
+   30:	iload_2
+   31:	aload_0
+   32:	getfield	#48; //Field c:I
+   35:	bipush	8
+   37:	imul
+   38:	if_icmpge	146
+   41:	aload_0
+   42:	getfield	#40; //Field V:Ljava/util/Random;
+   45:	invokevirtual	#73; //Method java/util/Random.nextFloat:()F
+   48:	ldc	#6; //float 3.1415927f
+   50:	fmul
+   51:	fconst_2
+   52:	fmul
+   53:	fstore_3
+   54:	aload_0
+   55:	getfield	#40; //Field V:Ljava/util/Random;
+   58:	invokevirtual	#73; //Method java/util/Random.nextFloat:()F
+   61:	ldc	#3; //float 0.5f
+   63:	fmul
+   64:	ldc	#3; //float 0.5f
+   66:	fadd
+   67:	fstore	4
+   69:	fload_3
+   70:	invokestatic	#70; //Method hd.a:(F)F
+   73:	aload_0
+   74:	getfield	#48; //Field c:I
+   77:	i2f
+   78:	fmul
+   79:	ldc	#3; //float 0.5f
+   81:	fmul
+   82:	fload	4
+   84:	fmul
+   85:	fstore	5
+   87:	fload_3
+   88:	invokestatic	#72; //Method hd.b:(F)F
+   91:	aload_0
+   92:	getfield	#48; //Field c:I
+   95:	i2f
+   96:	fmul
+   97:	ldc	#3; //float 0.5f
+   99:	fmul
+   100:	fload	4
+   102:	fmul
+   103:	fstore	6
+   105:	aload_0
+   106:	getfield	#50; //Field l:Lem;
+   109:	ldc	#14; //String slime
+   111:	aload_0
+   112:	getfield	#51; //Field p:D
+   115:	fload	5
+   117:	f2d
+   118:	dadd
+   119:	aload_0
+   120:	getfield	#54; //Field z:Ldt;
+   123:	getfield	#34; //Field dt.b:D
+   126:	aload_0
+   127:	getfield	#53; //Field r:D
+   130:	fload	6
+   132:	f2d
+   133:	dadd
+   134:	dconst_0
+   135:	dconst_0
+   136:	dconst_0
+   137:	invokevirtual	#58; //Method em.a:(Ljava/lang/String;DDDDDD)V
+   140:	iinc	2, 1
+   143:	goto	30
+   146:	aload_0
+   147:	getfield	#48; //Field c:I
+   150:	iconst_2
+   151:	if_icmple	191
+   154:	aload_0
+   155:	getfield	#50; //Field l:Lem;
+   158:	aload_0
+   159:	ldc	#12; //String mob.slime
+   161:	aload_0
+   162:	invokevirtual	#69; //Method h:()F
+   165:	aload_0
+   166:	getfield	#40; //Field V:Ljava/util/Random;
+   169:	invokevirtual	#73; //Method java/util/Random.nextFloat:()F
+   172:	aload_0
+   173:	getfield	#40; //Field V:Ljava/util/Random;
+   176:	invokevirtual	#73; //Method java/util/Random.nextFloat:()F
+   179:	fsub
+   180:	ldc	#2; //float 0.2f
+   182:	fmul
+   183:	fconst_1
+   184:	fadd
+   185:	ldc	#5; //float 0.8f
+   187:	fdiv
+   188:	invokevirtual	#57; //Method em.a:(Ldw;Ljava/lang/String;FF)V
+   191:	aload_0
+   192:	ldc	#1; //float -0.5f
+   194:	putfield	#41; //Field a:F
+   197:	aload_0
+   198:	aload_0
+   199:	getfield	#41; //Field a:F
+   202:	ldc	#4; //float 0.6f
+   204:	fmul
+   205:	putfield	#41; //Field a:F
+   208:	return
+
+protected void c();
+  Code:
+   0:	aload_0
+   1:	getfield	#50; //Field l:Lem;
+   4:	aload_0
+   5:	ldc2_w	#32; //double 16.0d
+   8:	invokevirtual	#56; //Method em.a:(Ldw;D)Lfv;
+   11:	astore_1
+   12:	aload_1
+   13:	ifnull	23
+   16:	aload_0
+   17:	aload_1
+   18:	ldc	#8; //float 10.0f
+   20:	invokevirtual	#65; //Method b:(Ldw;F)V
+   23:	aload_0
+   24:	getfield	#38; //Field A:Z
+   27:	ifeq	158
+   30:	aload_0
+   31:	dup
+   32:	getfield	#49; //Field d:I
+   35:	dup_x1
+   36:	iconst_1
+   37:	isub
+   38:	putfield	#49; //Field d:I
+   41:	ifgt	158
+   44:	aload_0
+   45:	aload_0
+   46:	getfield	#40; //Field V:Ljava/util/Random;
+   49:	bipush	20
+   51:	invokevirtual	#74; //Method java/util/Random.nextInt:(I)I
+   54:	bipush	10
+   56:	iadd
+   57:	putfield	#49; //Field d:I
+   60:	aload_1
+   61:	ifnull	74
+   64:	aload_0
+   65:	dup
+   66:	getfield	#49; //Field d:I
+   69:	iconst_3
+   70:	idiv
+   71:	putfield	#49; //Field d:I
+   74:	aload_0
+   75:	iconst_1
+   76:	putfield	#47; //Field bp:Z
+   79:	aload_0
+   80:	getfield	#48; //Field c:I
+   83:	iconst_1
+   84:	if_icmple	124
+   87:	aload_0
+   88:	getfield	#50; //Field l:Lem;
+   91:	aload_0
+   92:	ldc	#12; //String mob.slime
+   94:	aload_0
+   95:	invokevirtual	#69; //Method h:()F
+   98:	aload_0
+   99:	getfield	#40; //Field V:Ljava/util/Random;
+   102:	invokevirtual	#73; //Method java/util/Random.nextFloat:()F
+   105:	aload_0
+   106:	getfield	#40; //Field V:Ljava/util/Random;
+   109:	invokevirtual	#73; //Method java/util/Random.nextFloat:()F
+   112:	fsub
+   113:	ldc	#2; //float 0.2f
+   115:	fmul
+   116:	fconst_1
+   117:	fadd
+   118:	ldc	#5; //float 0.8f
+   120:	fmul
+   121:	invokevirtual	#57; //Method em.a:(Ldw;Ljava/lang/String;FF)V
+   124:	aload_0
+   125:	fconst_1
+   126:	putfield	#41; //Field a:F
+   129:	aload_0
+   130:	fconst_1
+   131:	aload_0
+   132:	getfield	#40; //Field V:Ljava/util/Random;
+   135:	invokevirtual	#73; //Method java/util/Random.nextFloat:()F
+   138:	fconst_2
+   139:	fmul
+   140:	fsub
+   141:	putfield	#45; //Field bm:F
+   144:	aload_0
+   145:	iconst_1
+   146:	aload_0
+   147:	getfield	#48; //Field c:I
+   150:	imul
+   151:	i2f
+   152:	putfield	#46; //Field bn:F
+   155:	goto	180
+   158:	aload_0
+   159:	iconst_0
+   160:	putfield	#47; //Field bp:Z
+   163:	aload_0
+   164:	getfield	#38; //Field A:Z
+   167:	ifeq	180
+   170:	aload_0
+   171:	aload_0
+   172:	fconst_0
+   173:	dup_x1
+   174:	putfield	#46; //Field bn:F
+   177:	putfield	#45; //Field bm:F
+   180:	return
+
+public void l();
+  Code:
+   0:	aload_0
+   1:	getfield	#48; //Field c:I
+   4:	iconst_1
+   5:	if_icmple	134
+   8:	aload_0
+   9:	getfield	#43; //Field aP:I
+   12:	ifne	134
+   15:	iconst_0
+   16:	istore_1
+   17:	iload_1
+   18:	iconst_4
+   19:	if_icmpge	134
+   22:	iload_1
+   23:	iconst_2
+   24:	irem
+   25:	i2f
+   26:	ldc	#3; //float 0.5f
+   28:	fsub
+   29:	aload_0
+   30:	getfield	#48; //Field c:I
+   33:	i2f
+   34:	fmul
+   35:	ldc	#7; //float 4.0f
+   37:	fdiv
+   38:	fstore_2
+   39:	iload_1
+   40:	iconst_2
+   41:	idiv
+   42:	i2f
+   43:	ldc	#3; //float 0.5f
+   45:	fsub
+   46:	aload_0
+   47:	getfield	#48; //Field c:I
+   50:	i2f
+   51:	fmul
+   52:	ldc	#7; //float 4.0f
+   54:	fdiv
+   55:	fstore_3
+   56:	new	#20; //class gb
+   59:	dup
+   60:	aload_0
+   61:	getfield	#50; //Field l:Lem;
+   64:	invokespecial	#61; //Method "<init>":(Lem;)V
+   67:	astore	4
+   69:	aload	4
+   71:	aload_0
+   72:	getfield	#48; //Field c:I
+   75:	iconst_2
+   76:	idiv
+   77:	invokevirtual	#67; //Method d:(I)V
+   80:	aload	4
+   82:	aload_0
+   83:	getfield	#51; //Field p:D
+   86:	fload_2
+   87:	f2d
+   88:	dadd
+   89:	aload_0
+   90:	getfield	#52; //Field q:D
+   93:	ldc2_w	#28; //double 0.5d
+   96:	dadd
+   97:	aload_0
+   98:	getfield	#53; //Field r:D
+   101:	fload_3
+   102:	f2d
+   103:	dadd
+   104:	aload_0
+   105:	getfield	#40; //Field V:Ljava/util/Random;
+   108:	invokevirtual	#73; //Method java/util/Random.nextFloat:()F
+   111:	ldc	#9; //float 360.0f
+   113:	fmul
+   114:	fconst_0
+   115:	invokevirtual	#66; //Method c:(DDDFF)V
+   118:	aload_0
+   119:	getfield	#50; //Field l:Lem;
+   122:	aload	4
+   124:	invokevirtual	#55; //Method em.a:(Ldw;)Z
+   127:	pop
+   128:	iinc	1, 1
+   131:	goto	17
+   134:	aload_0
+   135:	invokespecial	#80; //Method jv.l:()V
+   138:	return
+
+public void b(fv);
+  Code:
+   0:	aload_0
+   1:	getfield	#48; //Field c:I
+   4:	iconst_1
+   5:	if_icmple	78
+   8:	aload_0
+   9:	aload_1
+   10:	invokevirtual	#68; //Method g:(Ldw;)Z
+   13:	ifeq	78
+   16:	aload_0
+   17:	aload_1
+   18:	invokevirtual	#64; //Method a:(Ldw;)F
+   21:	f2d
+   22:	ldc2_w	#30; //double 0.6d
+   25:	aload_0
+   26:	getfield	#48; //Field c:I
+   29:	i2d
+   30:	dmul
+   31:	dcmpg
+   32:	ifge	78
+   35:	aload_1
+   36:	aload_0
+   37:	aload_0
+   38:	getfield	#48; //Field c:I
+   41:	invokevirtual	#60; //Method fv.a:(Ldw;I)Z
+   44:	ifeq	78
+   47:	aload_0
+   48:	getfield	#50; //Field l:Lem;
+   51:	aload_0
+   52:	ldc	#13; //String mob.slimeattack
+   54:	fconst_1
+   55:	aload_0
+   56:	getfield	#40; //Field V:Ljava/util/Random;
+   59:	invokevirtual	#73; //Method java/util/Random.nextFloat:()F
+   62:	aload_0
+   63:	getfield	#40; //Field V:Ljava/util/Random;
+   66:	invokevirtual	#73; //Method java/util/Random.nextFloat:()F
+   69:	fsub
+   70:	ldc	#2; //float 0.2f
+   72:	fmul
+   73:	fconst_1
+   74:	fadd
+   75:	invokevirtual	#57; //Method em.a:(Ldw;Ljava/lang/String;FF)V
+   78:	return
+
+protected java.lang.String e();
+  Code:
+   0:	ldc	#12; //String mob.slime
+   2:	areturn
+
+protected java.lang.String f();
+  Code:
+   0:	ldc	#12; //String mob.slime
+   2:	areturn
+
+protected int g();
+  Code:
+   0:	aload_0
+   1:	getfield	#48; //Field c:I
+   4:	iconst_1
+   5:	if_icmpne	15
+   8:	getstatic	#36; //Field fs.aK:Lfs;
+   11:	getfield	#37; //Field fs.aW:I
+   14:	ireturn
+   15:	iconst_0
+   16:	ireturn
+
+public boolean a();
+  Code:
+   0:	aload_0
+   1:	getfield	#50; //Field l:Lem;
+   4:	aload_0
+   5:	getfield	#51; //Field p:D
+   8:	invokestatic	#71; //Method hd.b:(D)I
+   11:	aload_0
+   12:	getfield	#53; //Field r:D
+   15:	invokestatic	#71; //Method hd.b:(D)I
+   18:	invokevirtual	#59; //Method em.b:(II)Ljp;
+   21:	astore_1
+   22:	aload_0
+   23:	getfield	#48; //Field c:I
+   26:	iconst_1
+   27:	if_icmpeq	40
+   30:	aload_0
+   31:	getfield	#50; //Field l:Lem;
+   34:	getfield	#35; //Field em.k:I
+   37:	ifle	82
+   40:	aload_0
+   41:	getfield	#40; //Field V:Ljava/util/Random;
+   44:	bipush	10
+   46:	invokevirtual	#74; //Method java/util/Random.nextInt:(I)I
+   49:	ifne	82
+   52:	aload_1
+   53:	ldc2_w	#26; //long 987234911l
+   56:	invokevirtual	#75; //Method jp.a:(J)Ljava/util/Random;
+   59:	bipush	10
+   61:	invokevirtual	#74; //Method java/util/Random.nextInt:(I)I
+   64:	ifne	82
+   67:	aload_0
+   68:	getfield	#52; //Field q:D
+   71:	ldc2_w	#32; //double 16.0d
+   74:	dcmpg
+   75:	ifge	82
+   78:	iconst_1
+   79:	goto	83
+   82:	iconst_0
+   83:	ireturn
+
+protected float h();
+  Code:
+   0:	ldc	#4; //float 0.6f
+   2:	freturn
+
+}
+

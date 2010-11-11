@@ -1,0 +1,67 @@
+Compiled from SourceFile
+public class jm extends fs{
+public jm(int);
+  Code:
+   0:	aload_0
+   1:	iload_1
+   2:	invokespecial	#11; //Method fs."<init>":(I)V
+   5:	aload_0
+   6:	bipush	64
+   8:	putfield	#7; //Field aY:I
+   11:	return
+
+public boolean a(hj, fv, em, int, int, int, int);
+  Code:
+   0:	iload	7
+   2:	ifne	7
+   5:	iconst_0
+   6:	ireturn
+   7:	iload	7
+   9:	iconst_1
+   10:	if_icmpne	15
+   13:	iconst_0
+   14:	ireturn
+   15:	iconst_0
+   16:	istore	8
+   18:	iload	7
+   20:	iconst_4
+   21:	if_icmpne	27
+   24:	iconst_1
+   25:	istore	8
+   27:	iload	7
+   29:	iconst_3
+   30:	if_icmpne	36
+   33:	iconst_2
+   34:	istore	8
+   36:	iload	7
+   38:	iconst_5
+   39:	if_icmpne	45
+   42:	iconst_3
+   43:	istore	8
+   45:	new	#1; //class cg
+   48:	dup
+   49:	aload_3
+   50:	iload	4
+   52:	iload	5
+   54:	iload	6
+   56:	iload	8
+   58:	invokespecial	#8; //Method cg."<init>":(Lem;IIII)V
+   61:	astore	9
+   63:	aload	9
+   65:	invokevirtual	#9; //Method cg.c:()Z
+   68:	ifeq	88
+   71:	aload_3
+   72:	aload	9
+   74:	invokevirtual	#10; //Method em.a:(Ldw;)Z
+   77:	pop
+   78:	aload_1
+   79:	dup
+   80:	getfield	#6; //Field hj.a:I
+   83:	iconst_1
+   84:	isub
+   85:	putfield	#6; //Field hj.a:I
+   88:	iconst_1
+   89:	ireturn
+
+}
+

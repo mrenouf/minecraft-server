@@ -1,0 +1,26 @@
+Compiled from SourceFile
+public class bj extends ka{
+public bj(int, int);
+  Code:
+   0:	aload_0
+   1:	iload_1
+   2:	iload_2
+   3:	invokespecial	#7; //Method ka."<init>":(II)V
+   6:	return
+
+public hj a(hj, em, fv);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	aload_2
+   3:	aload_3
+   4:	invokespecial	#8; //Method ka.a:(Lhj;Lem;Lfv;)Lhj;
+   7:	pop
+   8:	new	#3; //class hj
+   11:	dup
+   12:	getstatic	#5; //Field fs.C:Lfs;
+   15:	invokespecial	#6; //Method hj."<init>":(Lfs;)V
+   18:	areturn
+
+}
+

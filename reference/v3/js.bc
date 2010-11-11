@@ -1,0 +1,56 @@
+Compiled from SourceFile
+final class js extends java.lang.Object{
+public final int a;
+
+public final int b;
+
+public js(int, int);
+  Code:
+   0:	aload_0
+   1:	invokespecial	#6; //Method java/lang/Object."<init>":()V
+   4:	aload_0
+   5:	iload_1
+   6:	putfield	#4; //Field a:I
+   9:	aload_0
+   10:	iload_2
+   11:	putfield	#5; //Field b:I
+   14:	return
+
+public boolean equals(java.lang.Object);
+  Code:
+   0:	aload_1
+   1:	instanceof	#3; //class js
+   4:	ifeq	40
+   7:	aload_1
+   8:	checkcast	#3; //class js
+   11:	astore_2
+   12:	aload_0
+   13:	getfield	#4; //Field a:I
+   16:	aload_2
+   17:	getfield	#4; //Field a:I
+   20:	if_icmpne	38
+   23:	aload_0
+   24:	getfield	#5; //Field b:I
+   27:	aload_2
+   28:	getfield	#5; //Field b:I
+   31:	if_icmpne	38
+   34:	iconst_1
+   35:	goto	39
+   38:	iconst_0
+   39:	ireturn
+   40:	iconst_0
+   41:	ireturn
+
+public int hashCode();
+  Code:
+   0:	aload_0
+   1:	getfield	#4; //Field a:I
+   4:	bipush	16
+   6:	ishl
+   7:	aload_0
+   8:	getfield	#5; //Field b:I
+   11:	ixor
+   12:	ireturn
+
+}
+

@@ -1,0 +1,19 @@
+Compiled from SourceFile
+class aa extends java.awt.event.FocusAdapter{
+final gi a;
+
+aa(gi);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	putfield	#4; //Field a:Lgi;
+   5:	aload_0
+   6:	invokespecial	#5; //Method java/awt/event/FocusAdapter."<init>":()V
+   9:	return
+
+public void focusGained(java.awt.event.FocusEvent);
+  Code:
+   0:	return
+
+}
+

@@ -1,0 +1,103 @@
+Compiled from SourceFile
+public class fb extends java.lang.Object{
+protected int a;
+
+protected java.util.Random b;
+
+public fb();
+  Code:
+   0:	aload_0
+   1:	invokespecial	#11; //Method java/lang/Object."<init>":()V
+   4:	aload_0
+   5:	bipush	8
+   7:	putfield	#8; //Field a:I
+   10:	aload_0
+   11:	new	#4; //class java/util/Random
+   14:	dup
+   15:	invokespecial	#12; //Method java/util/Random."<init>":()V
+   18:	putfield	#9; //Field b:Ljava/util/Random;
+   21:	return
+
+public void a(br, el, int, int, byte[]);
+  Code:
+   0:	aload_0
+   1:	getfield	#8; //Field a:I
+   4:	istore	6
+   6:	aload_0
+   7:	getfield	#9; //Field b:Ljava/util/Random;
+   10:	aload_2
+   11:	getfield	#7; //Field el.u:J
+   14:	invokevirtual	#14; //Method java/util/Random.setSeed:(J)V
+   17:	aload_0
+   18:	getfield	#9; //Field b:Ljava/util/Random;
+   21:	invokevirtual	#13; //Method java/util/Random.nextLong:()J
+   24:	ldc2_w	#5; //long 2l
+   27:	ldiv
+   28:	ldc2_w	#5; //long 2l
+   31:	lmul
+   32:	lconst_1
+   33:	ladd
+   34:	lstore	7
+   36:	aload_0
+   37:	getfield	#9; //Field b:Ljava/util/Random;
+   40:	invokevirtual	#13; //Method java/util/Random.nextLong:()J
+   43:	ldc2_w	#5; //long 2l
+   46:	ldiv
+   47:	ldc2_w	#5; //long 2l
+   50:	lmul
+   51:	lconst_1
+   52:	ladd
+   53:	lstore	9
+   55:	iload_3
+   56:	iload	6
+   58:	isub
+   59:	istore	11
+   61:	iload	11
+   63:	iload_3
+   64:	iload	6
+   66:	iadd
+   67:	if_icmpgt	138
+   70:	iload	4
+   72:	iload	6
+   74:	isub
+   75:	istore	12
+   77:	iload	12
+   79:	iload	4
+   81:	iload	6
+   83:	iadd
+   84:	if_icmpgt	132
+   87:	aload_0
+   88:	getfield	#9; //Field b:Ljava/util/Random;
+   91:	iload	11
+   93:	i2l
+   94:	lload	7
+   96:	lmul
+   97:	iload	12
+   99:	i2l
+   100:	lload	9
+   102:	lmul
+   103:	ladd
+   104:	aload_2
+   105:	getfield	#7; //Field el.u:J
+   108:	lxor
+   109:	invokevirtual	#14; //Method java/util/Random.setSeed:(J)V
+   112:	aload_0
+   113:	aload_2
+   114:	iload	11
+   116:	iload	12
+   118:	iload_3
+   119:	iload	4
+   121:	aload	5
+   123:	invokevirtual	#10; //Method a:(Lel;IIII[B)V
+   126:	iinc	12, 1
+   129:	goto	77
+   132:	iinc	11, 1
+   135:	goto	61
+   138:	return
+
+protected void a(el, int, int, int, int, byte[]);
+  Code:
+   0:	return
+
+}
+

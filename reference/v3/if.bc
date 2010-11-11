@@ -1,0 +1,62 @@
+Compiled from SourceFile
+public class if extends ha{
+public java.lang.String a;
+
+public if();
+  Code:
+   0:	aload_0
+   1:	invokespecial	#11; //Method ha."<init>":()V
+   4:	return
+
+public if(java.lang.String);
+  Code:
+   0:	aload_0
+   1:	invokespecial	#11; //Method ha."<init>":()V
+   4:	aload_0
+   5:	aload_1
+   6:	putfield	#10; //Field a:Ljava/lang/String;
+   9:	aload_1
+   10:	ifnonnull	23
+   13:	new	#8; //class java/lang/IllegalArgumentException
+   16:	dup
+   17:	ldc	#2; //String Empty string not allowed
+   19:	invokespecial	#12; //Method java/lang/IllegalArgumentException."<init>":(Ljava/lang/String;)V
+   22:	athrow
+   23:	return
+
+void a(java.io.DataOutput);
+  Code:
+   0:	aload_1
+   1:	aload_0
+   2:	getfield	#10; //Field a:Ljava/lang/String;
+   5:	invokeinterface	#17,  2; //InterfaceMethod java/io/DataOutput.writeUTF:(Ljava/lang/String;)V
+   10:	return
+
+void a(java.io.DataInput);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	invokeinterface	#16,  1; //InterfaceMethod java/io/DataInput.readUTF:()Ljava/lang/String;
+   7:	putfield	#10; //Field a:Ljava/lang/String;
+   10:	return
+
+public byte a();
+  Code:
+   0:	bipush	8
+   2:	ireturn
+
+public java.lang.String toString();
+  Code:
+   0:	new	#9; //class java/lang/StringBuilder
+   3:	dup
+   4:	invokespecial	#13; //Method java/lang/StringBuilder."<init>":()V
+   7:	ldc	#1; //String 
+   9:	invokevirtual	#14; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   12:	aload_0
+   13:	getfield	#10; //Field a:Ljava/lang/String;
+   16:	invokevirtual	#14; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   19:	invokevirtual	#15; //Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+   22:	areturn
+
+}
+

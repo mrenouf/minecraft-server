@@ -1,0 +1,74 @@
+Compiled from SourceFile
+public class eq extends java.lang.Object implements bl{
+public eq(net.minecraft.server.MinecraftServer);
+  Code:
+   0:	aload_0
+   1:	invokespecial	#14; //Method java/lang/Object."<init>":()V
+   4:	aload_0
+   5:	aload_1
+   6:	putfield	#7; //Field a:Lnet/minecraft/server/MinecraftServer;
+   9:	return
+
+public void a(java.lang.String, double, double, double, double, double, double);
+  Code:
+   0:	return
+
+public void a(dw);
+  Code:
+   0:	aload_0
+   1:	getfield	#7; //Field a:Lnet/minecraft/server/MinecraftServer;
+   4:	getfield	#9; //Field net/minecraft/server/MinecraftServer.k:Lgr;
+   7:	aload_1
+   8:	invokevirtual	#12; //Method gr.a:(Ldw;)V
+   11:	return
+
+public void b(dw);
+  Code:
+   0:	aload_0
+   1:	getfield	#7; //Field a:Lnet/minecraft/server/MinecraftServer;
+   4:	getfield	#9; //Field net/minecraft/server/MinecraftServer.k:Lgr;
+   7:	aload_1
+   8:	invokevirtual	#13; //Method gr.b:(Ldw;)V
+   11:	return
+
+public void a(java.lang.String, double, double, double, float, float);
+  Code:
+   0:	return
+
+public void a(int, int, int, int, int, int);
+  Code:
+   0:	return
+
+public void a();
+  Code:
+   0:	return
+
+public void a(int, int, int);
+  Code:
+   0:	aload_0
+   1:	getfield	#7; //Field a:Lnet/minecraft/server/MinecraftServer;
+   4:	getfield	#8; //Field net/minecraft/server/MinecraftServer.f:Lgn;
+   7:	iload_1
+   8:	iload_2
+   9:	iload_3
+   10:	invokevirtual	#10; //Method gn.a:(III)V
+   13:	return
+
+public void a(java.lang.String, int, int, int);
+  Code:
+   0:	return
+
+public void a(int, int, int, ay);
+  Code:
+   0:	aload_0
+   1:	getfield	#7; //Field a:Lnet/minecraft/server/MinecraftServer;
+   4:	getfield	#8; //Field net/minecraft/server/MinecraftServer.f:Lgn;
+   7:	iload_1
+   8:	iload_2
+   9:	iload_3
+   10:	aload	4
+   12:	invokevirtual	#11; //Method gn.a:(IIILay;)V
+   15:	return
+
+}
+

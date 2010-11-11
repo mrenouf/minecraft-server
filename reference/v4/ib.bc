@@ -1,0 +1,242 @@
+Compiled from SourceFile
+public class ib extends java.lang.Object{
+public ib();
+  Code:
+   0:	aload_0
+   1:	invokespecial	#24; //Method java/lang/Object."<init>":()V
+   4:	aload_0
+   5:	ldc	#3; //float 0.75f
+   7:	putfield	#14; //Field d:F
+   10:	aload_0
+   11:	bipush	12
+   13:	putfield	#13; //Field c:I
+   16:	aload_0
+   17:	bipush	16
+   19:	anewarray	#4; //class hr
+   22:	putfield	#11; //Field a:[Lhr;
+   25:	return
+
+public java.lang.Object a(int);
+  Code:
+   0:	iload_1
+   1:	invokestatic	#22; //Method g:(I)I
+   4:	istore_2
+   5:	aload_0
+   6:	getfield	#11; //Field a:[Lhr;
+   9:	iload_2
+   10:	aload_0
+   11:	getfield	#11; //Field a:[Lhr;
+   14:	arraylength
+   15:	invokestatic	#17; //Method a:(II)I
+   18:	aaload
+   19:	astore_3
+   20:	aload_3
+   21:	ifnull	45
+   24:	aload_3
+   25:	getfield	#7; //Field hr.a:I
+   28:	iload_1
+   29:	if_icmpne	37
+   32:	aload_3
+   33:	getfield	#8; //Field hr.b:Ljava/lang/Object;
+   36:	areturn
+   37:	aload_3
+   38:	getfield	#9; //Field hr.c:Lhr;
+   41:	astore_3
+   42:	goto	20
+   45:	aconst_null
+   46:	areturn
+
+public boolean b(int);
+  Code:
+   0:	aload_0
+   1:	iload_1
+   2:	invokevirtual	#20; //Method c:(I)Lhr;
+   5:	ifnull	12
+   8:	iconst_1
+   9:	goto	13
+   12:	iconst_0
+   13:	ireturn
+
+final hr c(int);
+  Code:
+   0:	iload_1
+   1:	invokestatic	#22; //Method g:(I)I
+   4:	istore_2
+   5:	aload_0
+   6:	getfield	#11; //Field a:[Lhr;
+   9:	iload_2
+   10:	aload_0
+   11:	getfield	#11; //Field a:[Lhr;
+   14:	arraylength
+   15:	invokestatic	#17; //Method a:(II)I
+   18:	aaload
+   19:	astore_3
+   20:	aload_3
+   21:	ifnull	42
+   24:	aload_3
+   25:	getfield	#7; //Field hr.a:I
+   28:	iload_1
+   29:	if_icmpne	34
+   32:	aload_3
+   33:	areturn
+   34:	aload_3
+   35:	getfield	#9; //Field hr.c:Lhr;
+   38:	astore_3
+   39:	goto	20
+   42:	aconst_null
+   43:	areturn
+
+public void a(int, java.lang.Object);
+  Code:
+   0:	iload_1
+   1:	invokestatic	#22; //Method g:(I)I
+   4:	istore_3
+   5:	iload_3
+   6:	aload_0
+   7:	getfield	#11; //Field a:[Lhr;
+   10:	arraylength
+   11:	invokestatic	#17; //Method a:(II)I
+   14:	istore	4
+   16:	aload_0
+   17:	getfield	#11; //Field a:[Lhr;
+   20:	iload	4
+   22:	aaload
+   23:	astore	5
+   25:	aload	5
+   27:	ifnull	55
+   30:	aload	5
+   32:	getfield	#7; //Field hr.a:I
+   35:	iload_1
+   36:	if_icmpne	45
+   39:	aload	5
+   41:	aload_2
+   42:	putfield	#8; //Field hr.b:Ljava/lang/Object;
+   45:	aload	5
+   47:	getfield	#9; //Field hr.c:Lhr;
+   50:	astore	5
+   52:	goto	25
+   55:	aload_0
+   56:	dup
+   57:	getfield	#15; //Field e:I
+   60:	iconst_1
+   61:	iadd
+   62:	putfield	#15; //Field e:I
+   65:	aload_0
+   66:	iload_3
+   67:	iload_1
+   68:	aload_2
+   69:	iload	4
+   71:	invokespecial	#18; //Method a:(IILjava/lang/Object;I)V
+   74:	return
+
+public java.lang.Object d(int);
+  Code:
+   0:	aload_0
+   1:	iload_1
+   2:	invokevirtual	#21; //Method e:(I)Lhr;
+   5:	astore_2
+   6:	aload_2
+   7:	ifnonnull	14
+   10:	aconst_null
+   11:	goto	18
+   14:	aload_2
+   15:	getfield	#8; //Field hr.b:Ljava/lang/Object;
+   18:	areturn
+
+final hr e(int);
+  Code:
+   0:	iload_1
+   1:	invokestatic	#22; //Method g:(I)I
+   4:	istore_2
+   5:	iload_2
+   6:	aload_0
+   7:	getfield	#11; //Field a:[Lhr;
+   10:	arraylength
+   11:	invokestatic	#17; //Method a:(II)I
+   14:	istore_3
+   15:	aload_0
+   16:	getfield	#11; //Field a:[Lhr;
+   19:	iload_3
+   20:	aaload
+   21:	astore	4
+   23:	aload	4
+   25:	astore	5
+   27:	aload	5
+   29:	ifnull	107
+   32:	aload	5
+   34:	getfield	#9; //Field hr.c:Lhr;
+   37:	astore	6
+   39:	aload	5
+   41:	getfield	#7; //Field hr.a:I
+   44:	iload_1
+   45:	if_icmpne	96
+   48:	aload_0
+   49:	dup
+   50:	getfield	#15; //Field e:I
+   53:	iconst_1
+   54:	iadd
+   55:	putfield	#15; //Field e:I
+   58:	aload_0
+   59:	dup
+   60:	getfield	#12; //Field b:I
+   63:	iconst_1
+   64:	isub
+   65:	putfield	#12; //Field b:I
+   68:	aload	4
+   70:	aload	5
+   72:	if_acmpne	86
+   75:	aload_0
+   76:	getfield	#11; //Field a:[Lhr;
+   79:	iload_3
+   80:	aload	6
+   82:	aastore
+   83:	goto	93
+   86:	aload	4
+   88:	aload	6
+   90:	putfield	#9; //Field hr.c:Lhr;
+   93:	aload	5
+   95:	areturn
+   96:	aload	5
+   98:	astore	4
+   100:	aload	6
+   102:	astore	5
+   104:	goto	27
+   107:	aload	5
+   109:	areturn
+
+public void a();
+  Code:
+   0:	aload_0
+   1:	dup
+   2:	getfield	#15; //Field e:I
+   5:	iconst_1
+   6:	iadd
+   7:	putfield	#15; //Field e:I
+   10:	aload_0
+   11:	getfield	#11; //Field a:[Lhr;
+   14:	astore_1
+   15:	iconst_0
+   16:	istore_2
+   17:	iload_2
+   18:	aload_1
+   19:	arraylength
+   20:	if_icmpge	33
+   23:	aload_1
+   24:	iload_2
+   25:	aconst_null
+   26:	aastore
+   27:	iinc	2, 1
+   30:	goto	17
+   33:	aload_0
+   34:	iconst_0
+   35:	putfield	#12; //Field b:I
+   38:	return
+
+static int f(int);
+  Code:
+   0:	iload_0
+   1:	invokestatic	#22; //Method g:(I)I
+   4:	ireturn
+
+}
+

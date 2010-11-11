@@ -1,0 +1,23 @@
+Compiled from SourceFile
+public class ek extends dq{
+public ek(int, int);
+  Code:
+   0:	aload_0
+   1:	iload_1
+   2:	iload_2
+   3:	invokespecial	#6; //Method dq."<init>":(II)V
+   6:	return
+
+public int a(java.util.Random);
+  Code:
+   0:	iconst_1
+   1:	ireturn
+
+public int a(int, java.util.Random);
+  Code:
+   0:	getstatic	#4; //Field fw.aq:Lfw;
+   3:	getfield	#5; //Field fw.bi:I
+   6:	ireturn
+
+}
+

@@ -1,0 +1,53 @@
+Compiled from SourceFile
+public class eq extends fw{
+protected eq(int);
+  Code:
+   0:	aload_0
+   1:	iload_1
+   2:	getstatic	#7; //Field jr.c:Ljr;
+   5:	invokespecial	#9; //Method fw."<init>":(ILjr;)V
+   8:	aload_0
+   9:	bipush	59
+   11:	putfield	#5; //Field bh:I
+   14:	return
+
+public int a(int);
+  Code:
+   0:	iload_1
+   1:	iconst_1
+   2:	if_icmpne	13
+   5:	aload_0
+   6:	getfield	#5; //Field bh:I
+   9:	bipush	16
+   11:	isub
+   12:	ireturn
+   13:	iload_1
+   14:	ifne	25
+   17:	getstatic	#6; //Field fw.y:Lfw;
+   20:	iconst_0
+   21:	invokevirtual	#10; //Method fw.a:(I)I
+   24:	ireturn
+   25:	iload_1
+   26:	iconst_2
+   27:	if_icmpeq	35
+   30:	iload_1
+   31:	iconst_4
+   32:	if_icmpne	42
+   35:	aload_0
+   36:	getfield	#5; //Field bh:I
+   39:	iconst_1
+   40:	iadd
+   41:	ireturn
+   42:	aload_0
+   43:	getfield	#5; //Field bh:I
+   46:	ireturn
+
+public boolean a(el, int, int, int, ft);
+  Code:
+   0:	aload	5
+   2:	invokevirtual	#8; //Method ft.F:()V
+   5:	iconst_1
+   6:	ireturn
+
+}
+

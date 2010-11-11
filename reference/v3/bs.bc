@@ -1,0 +1,184 @@
+Compiled from SourceFile
+public class bs extends fx{
+public bs(el);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	invokespecial	#47; //Method fx."<init>":(Lel;)V
+   5:	aload_0
+   6:	ldc	#6; //String /mob/spider.png
+   8:	putfield	#31; //Field aF:Ljava/lang/String;
+   11:	aload_0
+   12:	ldc	#4; //float 1.4f
+   14:	ldc	#3; //float 0.9f
+   16:	invokevirtual	#44; //Method a:(FF)V
+   19:	aload_0
+   20:	ldc	#2; //float 0.8f
+   22:	putfield	#32; //Field bl:F
+   25:	return
+
+public double j();
+  Code:
+   0:	aload_0
+   1:	getfield	#29; //Field I:F
+   4:	f2d
+   5:	ldc2_w	#22; //double 0.75d
+   8:	dmul
+   9:	ldc2_w	#20; //double 0.5d
+   12:	dsub
+   13:	dreturn
+
+protected dv k();
+  Code:
+   0:	aload_0
+   1:	fconst_1
+   2:	invokevirtual	#45; //Method b:(F)F
+   5:	fstore_1
+   6:	fload_1
+   7:	ldc	#1; //float 0.5f
+   9:	fcmpg
+   10:	ifge	27
+   13:	ldc2_w	#26; //double 16.0d
+   16:	dstore_2
+   17:	aload_0
+   18:	getfield	#34; //Field l:Lel;
+   21:	aload_0
+   22:	dload_2
+   23:	invokevirtual	#46; //Method el.a:(Ldv;D)Lft;
+   26:	areturn
+   27:	aconst_null
+   28:	areturn
+
+protected java.lang.String d();
+  Code:
+   0:	ldc	#7; //String mob.spider
+   2:	areturn
+
+protected java.lang.String e();
+  Code:
+   0:	ldc	#7; //String mob.spider
+   2:	areturn
+
+protected java.lang.String f();
+  Code:
+   0:	ldc	#8; //String mob.spiderdeath
+   2:	areturn
+
+protected void a(dv, float);
+  Code:
+   0:	aload_0
+   1:	fconst_1
+   2:	invokevirtual	#45; //Method b:(F)F
+   5:	fstore_3
+   6:	fload_3
+   7:	ldc	#1; //float 0.5f
+   9:	fcmpl
+   10:	ifle	31
+   13:	aload_0
+   14:	getfield	#30; //Field V:Ljava/util/Random;
+   17:	bipush	100
+   19:	invokevirtual	#52; //Method java/util/Random.nextInt:(I)I
+   22:	ifne	31
+   25:	aload_0
+   26:	aconst_null
+   27:	putfield	#33; //Field f:Ldv;
+   30:	return
+   31:	fload_2
+   32:	fconst_2
+   33:	fcmpl
+   34:	ifle	165
+   37:	fload_2
+   38:	ldc	#5; //float 6.0f
+   40:	fcmpg
+   41:	ifge	165
+   44:	aload_0
+   45:	getfield	#30; //Field V:Ljava/util/Random;
+   48:	bipush	10
+   50:	invokevirtual	#52; //Method java/util/Random.nextInt:(I)I
+   53:	ifne	165
+   56:	aload_0
+   57:	getfield	#28; //Field A:Z
+   60:	ifeq	171
+   63:	aload_1
+   64:	getfield	#40; //Field dv.p:D
+   67:	aload_0
+   68:	getfield	#35; //Field p:D
+   71:	dsub
+   72:	dstore	4
+   74:	aload_1
+   75:	getfield	#41; //Field dv.r:D
+   78:	aload_0
+   79:	getfield	#36; //Field r:D
+   82:	dsub
+   83:	dstore	6
+   85:	dload	4
+   87:	dload	4
+   89:	dmul
+   90:	dload	6
+   92:	dload	6
+   94:	dmul
+   95:	dadd
+   96:	invokestatic	#51; //Method hb.a:(D)F
+   99:	fstore	8
+   101:	aload_0
+   102:	dload	4
+   104:	fload	8
+   106:	f2d
+   107:	ddiv
+   108:	ldc2_w	#20; //double 0.5d
+   111:	dmul
+   112:	ldc2_w	#24; //double 0.800000011920929d
+   115:	dmul
+   116:	aload_0
+   117:	getfield	#37; //Field s:D
+   120:	ldc2_w	#16; //double 0.20000000298023224d
+   123:	dmul
+   124:	dadd
+   125:	putfield	#37; //Field s:D
+   128:	aload_0
+   129:	dload	6
+   131:	fload	8
+   133:	f2d
+   134:	ddiv
+   135:	ldc2_w	#20; //double 0.5d
+   138:	dmul
+   139:	ldc2_w	#24; //double 0.800000011920929d
+   142:	dmul
+   143:	aload_0
+   144:	getfield	#39; //Field u:D
+   147:	ldc2_w	#16; //double 0.20000000298023224d
+   150:	dmul
+   151:	dadd
+   152:	putfield	#39; //Field u:D
+   155:	aload_0
+   156:	ldc2_w	#18; //double 0.4000000059604645d
+   159:	putfield	#38; //Field t:D
+   162:	goto	171
+   165:	aload_0
+   166:	aload_1
+   167:	fload_2
+   168:	invokespecial	#48; //Method fx.a:(Ldv;F)V
+   171:	return
+
+public void a(t);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	invokespecial	#49; //Method fx.a:(Lt;)V
+   5:	return
+
+public void b(t);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	invokespecial	#50; //Method fx.b:(Lt;)V
+   5:	return
+
+protected int g();
+  Code:
+   0:	getstatic	#42; //Field fq.I:Lfq;
+   3:	getfield	#43; //Field fq.aW:I
+   6:	ireturn
+
+}
+

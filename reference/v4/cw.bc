@@ -1,0 +1,69 @@
+Compiled from SourceFile
+public class cw extends fs{
+public int a;
+
+public cw(int, int);
+  Code:
+   0:	aload_0
+   1:	iload_1
+   2:	invokespecial	#16; //Method fs."<init>":(I)V
+   5:	aload_0
+   6:	iconst_1
+   7:	putfield	#9; //Field aX:I
+   10:	aload_0
+   11:	iload_2
+   12:	putfield	#8; //Field a:I
+   15:	return
+
+public boolean a(hj, fv, em, int, int, int, int);
+  Code:
+   0:	aload_3
+   1:	iload	4
+   3:	iload	5
+   5:	iload	6
+   7:	invokevirtual	#14; //Method em.a:(III)I
+   10:	istore	8
+   12:	iload	8
+   14:	getstatic	#11; //Field fy.aG:Lfy;
+   17:	getfield	#12; //Field fy.bh:I
+   20:	if_icmpne	80
+   23:	aload_3
+   24:	getfield	#10; //Field em.z:Z
+   27:	ifne	68
+   30:	aload_3
+   31:	new	#7; //class jj
+   34:	dup
+   35:	aload_3
+   36:	iload	4
+   38:	i2f
+   39:	ldc	#1; //float 0.5f
+   41:	fadd
+   42:	f2d
+   43:	iload	5
+   45:	i2f
+   46:	ldc	#1; //float 0.5f
+   48:	fadd
+   49:	f2d
+   50:	iload	6
+   52:	i2f
+   53:	ldc	#1; //float 0.5f
+   55:	fadd
+   56:	f2d
+   57:	aload_0
+   58:	getfield	#8; //Field a:I
+   61:	invokespecial	#17; //Method jj."<init>":(Lem;DDDI)V
+   64:	invokevirtual	#15; //Method em.a:(Ldw;)Z
+   67:	pop
+   68:	aload_1
+   69:	dup
+   70:	getfield	#13; //Field hj.a:I
+   73:	iconst_1
+   74:	isub
+   75:	putfield	#13; //Field hj.a:I
+   78:	iconst_1
+   79:	ireturn
+   80:	iconst_0
+   81:	ireturn
+
+}
+

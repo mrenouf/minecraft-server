@@ -1,0 +1,164 @@
+Compiled from SourceFile
+public class ao extends da{
+public ao(int, int);
+  Code:
+   0:	aload_0
+   1:	iload_1
+   2:	iconst_2
+   3:	iload_2
+   4:	getstatic	#5; //Field bb:[Lfw;
+   7:	invokespecial	#27; //Method da."<init>":(III[Lfw;)V
+   10:	aload_0
+   11:	iload_2
+   12:	putfield	#6; //Field bc:I
+   15:	return
+
+public boolean a(fw);
+  Code:
+   0:	aload_1
+   1:	getstatic	#18; //Field fw.aq:Lfw;
+   4:	if_acmpne	21
+   7:	aload_0
+   8:	getfield	#6; //Field bc:I
+   11:	iconst_3
+   12:	if_icmpne	19
+   15:	iconst_1
+   16:	goto	20
+   19:	iconst_0
+   20:	ireturn
+   21:	aload_1
+   22:	getstatic	#20; //Field fw.ay:Lfw;
+   25:	if_acmpeq	35
+   28:	aload_1
+   29:	getstatic	#19; //Field fw.ax:Lfw;
+   32:	if_acmpne	49
+   35:	aload_0
+   36:	getfield	#6; //Field bc:I
+   39:	iconst_2
+   40:	if_icmplt	47
+   43:	iconst_1
+   44:	goto	48
+   47:	iconst_0
+   48:	ireturn
+   49:	aload_1
+   50:	getstatic	#13; //Field fw.ai:Lfw;
+   53:	if_acmpeq	63
+   56:	aload_1
+   57:	getstatic	#7; //Field fw.H:Lfw;
+   60:	if_acmpne	77
+   63:	aload_0
+   64:	getfield	#6; //Field bc:I
+   67:	iconst_2
+   68:	if_icmplt	75
+   71:	iconst_1
+   72:	goto	76
+   75:	iconst_0
+   76:	ireturn
+   77:	aload_1
+   78:	getstatic	#14; //Field fw.aj:Lfw;
+   81:	if_acmpeq	91
+   84:	aload_1
+   85:	getstatic	#8; //Field fw.I:Lfw;
+   88:	if_acmpne	105
+   91:	aload_0
+   92:	getfield	#6; //Field bc:I
+   95:	iconst_1
+   96:	if_icmplt	103
+   99:	iconst_1
+   100:	goto	104
+   103:	iconst_0
+   104:	ireturn
+   105:	aload_1
+   106:	getstatic	#10; //Field fw.aO:Lfw;
+   109:	if_acmpeq	119
+   112:	aload_1
+   113:	getstatic	#11; //Field fw.aP:Lfw;
+   116:	if_acmpne	133
+   119:	aload_0
+   120:	getfield	#6; //Field bc:I
+   123:	iconst_2
+   124:	if_icmplt	131
+   127:	iconst_1
+   128:	goto	132
+   131:	iconst_0
+   132:	ireturn
+   133:	aload_1
+   134:	getfield	#22; //Field fw.bt:Ljr;
+   137:	getstatic	#25; //Field jr.d:Ljr;
+   140:	if_acmpne	145
+   143:	iconst_1
+   144:	ireturn
+   145:	aload_1
+   146:	getfield	#22; //Field fw.bt:Ljr;
+   149:	getstatic	#26; //Field jr.e:Ljr;
+   152:	if_acmpne	157
+   155:	iconst_1
+   156:	ireturn
+   157:	iconst_0
+   158:	ireturn
+
+static {};
+  Code:
+   0:	bipush	14
+   2:	anewarray	#3; //class fw
+   5:	dup
+   6:	iconst_0
+   7:	getstatic	#24; //Field fw.x:Lfw;
+   10:	aastore
+   11:	dup
+   12:	iconst_1
+   13:	getstatic	#15; //Field fw.ak:Lfw;
+   16:	aastore
+   17:	dup
+   18:	iconst_2
+   19:	getstatic	#16; //Field fw.al:Lfw;
+   22:	aastore
+   23:	dup
+   24:	iconst_3
+   25:	getstatic	#23; //Field fw.u:Lfw;
+   28:	aastore
+   29:	dup
+   30:	iconst_4
+   31:	getstatic	#17; //Field fw.ap:Lfw;
+   34:	aastore
+   35:	dup
+   36:	iconst_5
+   37:	getstatic	#8; //Field fw.I:Lfw;
+   40:	aastore
+   41:	dup
+   42:	bipush	6
+   44:	getstatic	#14; //Field fw.aj:Lfw;
+   47:	aastore
+   48:	dup
+   49:	bipush	7
+   51:	getstatic	#9; //Field fw.J:Lfw;
+   54:	aastore
+   55:	dup
+   56:	bipush	8
+   58:	getstatic	#13; //Field fw.ai:Lfw;
+   61:	aastore
+   62:	dup
+   63:	bipush	9
+   65:	getstatic	#7; //Field fw.H:Lfw;
+   68:	aastore
+   69:	dup
+   70:	bipush	10
+   72:	getstatic	#19; //Field fw.ax:Lfw;
+   75:	aastore
+   76:	dup
+   77:	bipush	11
+   79:	getstatic	#20; //Field fw.ay:Lfw;
+   82:	aastore
+   83:	dup
+   84:	bipush	12
+   86:	getstatic	#12; //Field fw.aU:Lfw;
+   89:	aastore
+   90:	dup
+   91:	bipush	13
+   93:	getstatic	#21; //Field fw.bc:Lfw;
+   96:	aastore
+   97:	putstatic	#5; //Field bb:[Lfw;
+   100:	return
+
+}
+

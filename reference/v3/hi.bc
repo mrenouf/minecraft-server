@@ -1,0 +1,64 @@
+Compiled from SourceFile
+public class hi extends da{
+public hi(int, int);
+  Code:
+   0:	aload_0
+   1:	iload_1
+   2:	iconst_1
+   3:	iload_2
+   4:	getstatic	#11; //Field bb:[Lfw;
+   7:	invokespecial	#12; //Method da."<init>":(III[Lfw;)V
+   10:	return
+
+public boolean a(fw);
+  Code:
+   0:	aload_1
+   1:	getstatic	#6; //Field fw.aT:Lfw;
+   4:	if_acmpne	9
+   7:	iconst_1
+   8:	ireturn
+   9:	aload_1
+   10:	getstatic	#7; //Field fw.aV:Lfw;
+   13:	if_acmpne	18
+   16:	iconst_1
+   17:	ireturn
+   18:	iconst_0
+   19:	ireturn
+
+static {};
+  Code:
+   0:	bipush	7
+   2:	anewarray	#2; //class fw
+   5:	dup
+   6:	iconst_0
+   7:	getstatic	#9; //Field fw.v:Lhs;
+   10:	aastore
+   11:	dup
+   12:	iconst_1
+   13:	getstatic	#10; //Field fw.w:Lfw;
+   16:	aastore
+   17:	dup
+   18:	iconst_2
+   19:	getstatic	#4; //Field fw.F:Lfw;
+   22:	aastore
+   23:	dup
+   24:	iconst_3
+   25:	getstatic	#5; //Field fw.G:Lfw;
+   28:	aastore
+   29:	dup
+   30:	iconst_4
+   31:	getstatic	#6; //Field fw.aT:Lfw;
+   34:	aastore
+   35:	dup
+   36:	iconst_5
+   37:	getstatic	#7; //Field fw.aV:Lfw;
+   40:	aastore
+   41:	dup
+   42:	bipush	6
+   44:	getstatic	#8; //Field fw.aX:Lfw;
+   47:	aastore
+   48:	putstatic	#11; //Field bb:[Lfw;
+   51:	return
+
+}
+

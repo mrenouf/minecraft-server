@@ -1,0 +1,90 @@
+Compiled from SourceFile
+class il extends java.lang.Thread{
+final bf a;
+
+il(bf, java.lang.String);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	putfield	#6; //Field a:Lbf;
+   5:	aload_0
+   6:	aload_2
+   7:	invokespecial	#9; //Method java/lang/Thread."<init>":(Ljava/lang/String;)V
+   10:	return
+
+public void run();
+  Code:
+   0:	getstatic	#4; //Field bf.a:Ljava/lang/Object;
+   3:	dup
+   4:	astore_1
+   5:	monitorenter
+   6:	getstatic	#5; //Field bf.c:I
+   9:	iconst_1
+   10:	iadd
+   11:	putstatic	#5; //Field bf.c:I
+   14:	aload_1
+   15:	monitorexit
+   16:	goto	24
+   19:	astore_2
+   20:	aload_1
+   21:	monitorexit
+   22:	aload_2
+   23:	athrow
+   24:	aload_0
+   25:	getfield	#6; //Field a:Lbf;
+   28:	invokestatic	#7; //Method bf.a:(Lbf;)Z
+   31:	ifeq	44
+   34:	aload_0
+   35:	getfield	#6; //Field a:Lbf;
+   38:	invokestatic	#8; //Method bf.d:(Lbf;)V
+   41:	goto	24
+   44:	getstatic	#4; //Field bf.a:Ljava/lang/Object;
+   47:	dup
+   48:	astore_1
+   49:	monitorenter
+   50:	getstatic	#5; //Field bf.c:I
+   53:	iconst_1
+   54:	isub
+   55:	putstatic	#5; //Field bf.c:I
+   58:	aload_1
+   59:	monitorexit
+   60:	goto	68
+   63:	astore_3
+   64:	aload_1
+   65:	monitorexit
+   66:	aload_3
+   67:	athrow
+   68:	goto	105
+   71:	astore	4
+   73:	getstatic	#4; //Field bf.a:Ljava/lang/Object;
+   76:	dup
+   77:	astore	5
+   79:	monitorenter
+   80:	getstatic	#5; //Field bf.c:I
+   83:	iconst_1
+   84:	isub
+   85:	putstatic	#5; //Field bf.c:I
+   88:	aload	5
+   90:	monitorexit
+   91:	goto	102
+   94:	astore	6
+   96:	aload	5
+   98:	monitorexit
+   99:	aload	6
+   101:	athrow
+   102:	aload	4
+   104:	athrow
+   105:	return
+  Exception table:
+   from   to  target type
+     6    16    19   any
+    19    22    19   any
+    50    60    63   any
+    63    66    63   any
+    24    44    71   any
+    80    91    94   any
+    94    99    94   any
+    71    73    71   any
+
+}
+

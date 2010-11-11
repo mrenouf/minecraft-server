@@ -1,0 +1,110 @@
+Compiled from SourceFile
+public class ig extends fw{
+protected ig(int);
+  Code:
+   0:	aload_0
+   1:	iload_1
+   2:	getstatic	#7; //Field jr.j:Ljr;
+   5:	invokespecial	#11; //Method fw."<init>":(ILjr;)V
+   8:	aload_0
+   9:	bipush	48
+   11:	putfield	#5; //Field bh:I
+   14:	return
+
+public void e(el, int, int, int);
+  Code:
+   0:	iconst_2
+   1:	istore	5
+   3:	iload_2
+   4:	iload	5
+   6:	isub
+   7:	istore	6
+   9:	iload	6
+   11:	iload_2
+   12:	iload	5
+   14:	iadd
+   15:	if_icmpgt	84
+   18:	iload_3
+   19:	iload	5
+   21:	isub
+   22:	istore	7
+   24:	iload	7
+   26:	iload_3
+   27:	iload	5
+   29:	iadd
+   30:	if_icmpgt	78
+   33:	iload	4
+   35:	iload	5
+   37:	isub
+   38:	istore	8
+   40:	iload	8
+   42:	iload	4
+   44:	iload	5
+   46:	iadd
+   47:	if_icmpgt	72
+   50:	aload_1
+   51:	iload	6
+   53:	iload	7
+   55:	iload	8
+   57:	invokevirtual	#9; //Method el.c:(III)Ljr;
+   60:	getstatic	#6; //Field jr.f:Ljr;
+   63:	if_acmpne	66
+   66:	iinc	8, 1
+   69:	goto	40
+   72:	iinc	7, 1
+   75:	goto	24
+   78:	iinc	6, 1
+   81:	goto	9
+   84:	return
+
+public void b(el, int, int, int);
+  Code:
+   0:	iconst_2
+   1:	istore	5
+   3:	iload_2
+   4:	iload	5
+   6:	isub
+   7:	istore	6
+   9:	iload	6
+   11:	iload_2
+   12:	iload	5
+   14:	iadd
+   15:	if_icmpgt	88
+   18:	iload_3
+   19:	iload	5
+   21:	isub
+   22:	istore	7
+   24:	iload	7
+   26:	iload_3
+   27:	iload	5
+   29:	iadd
+   30:	if_icmpgt	82
+   33:	iload	4
+   35:	iload	5
+   37:	isub
+   38:	istore	8
+   40:	iload	8
+   42:	iload	4
+   44:	iload	5
+   46:	iadd
+   47:	if_icmpgt	76
+   50:	aload_1
+   51:	iload	6
+   53:	iload	7
+   55:	iload	8
+   57:	aload_1
+   58:	iload	6
+   60:	iload	7
+   62:	iload	8
+   64:	invokevirtual	#8; //Method el.a:(III)I
+   67:	invokevirtual	#10; //Method el.g:(IIII)V
+   70:	iinc	8, 1
+   73:	goto	40
+   76:	iinc	7, 1
+   79:	goto	24
+   82:	iinc	6, 1
+   85:	goto	9
+   88:	return
+
+}
+

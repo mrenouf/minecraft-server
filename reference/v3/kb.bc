@@ -1,0 +1,19 @@
+Compiled from SourceFile
+public class kb extends fw{
+public kb(int, int, jr);
+  Code:
+   0:	aload_0
+   1:	iload_1
+   2:	iload_2
+   3:	aload_3
+   4:	invokespecial	#6; //Method fw."<init>":(IILjr;)V
+   7:	return
+
+public int a(int, java.util.Random);
+  Code:
+   0:	getstatic	#4; //Field fq.aR:Lfq;
+   3:	getfield	#5; //Field fq.aW:I
+   6:	ireturn
+
+}
+

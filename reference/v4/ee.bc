@@ -1,0 +1,196 @@
+Compiled from SourceFile
+public class ee extends java.lang.Object implements iq{
+public ee(em, int, int, int, int, int, int);
+  Code:
+   0:	aload_0
+   1:	invokespecial	#19; //Method java/lang/Object."<init>":()V
+   4:	aload_0
+   5:	aload_1
+   6:	putfield	#12; //Field d:Lem;
+   9:	aload_0
+   10:	iload_2
+   11:	iconst_4
+   12:	ishr
+   13:	putfield	#9; //Field a:I
+   16:	aload_0
+   17:	iload	4
+   19:	iconst_4
+   20:	ishr
+   21:	putfield	#10; //Field b:I
+   24:	iload	5
+   26:	iconst_4
+   27:	ishr
+   28:	istore	8
+   30:	iload	7
+   32:	iconst_4
+   33:	ishr
+   34:	istore	9
+   36:	aload_0
+   37:	iload	8
+   39:	aload_0
+   40:	getfield	#9; //Field a:I
+   43:	isub
+   44:	iconst_1
+   45:	iadd
+   46:	iload	9
+   48:	aload_0
+   49:	getfield	#10; //Field b:I
+   52:	isub
+   53:	iconst_1
+   54:	iadd
+   55:	multianewarray	#1,  2; //class "[[Ljp;"
+   59:	putfield	#11; //Field c:[[Ljp;
+   62:	aload_0
+   63:	getfield	#9; //Field a:I
+   66:	istore	10
+   68:	iload	10
+   70:	iload	8
+   72:	if_icmpgt	128
+   75:	aload_0
+   76:	getfield	#10; //Field b:I
+   79:	istore	11
+   81:	iload	11
+   83:	iload	9
+   85:	if_icmpgt	122
+   88:	aload_0
+   89:	getfield	#11; //Field c:[[Ljp;
+   92:	iload	10
+   94:	aload_0
+   95:	getfield	#9; //Field a:I
+   98:	isub
+   99:	aaload
+   100:	iload	11
+   102:	aload_0
+   103:	getfield	#10; //Field b:I
+   106:	isub
+   107:	aload_1
+   108:	iload	10
+   110:	iload	11
+   112:	invokevirtual	#17; //Method em.c:(II)Ljp;
+   115:	aastore
+   116:	iinc	11, 1
+   119:	goto	81
+   122:	iinc	10, 1
+   125:	goto	68
+   128:	return
+
+public int a(int, int, int);
+  Code:
+   0:	iload_2
+   1:	ifge	6
+   4:	iconst_0
+   5:	ireturn
+   6:	iload_2
+   7:	sipush	128
+   10:	if_icmplt	15
+   13:	iconst_0
+   14:	ireturn
+   15:	iload_1
+   16:	iconst_4
+   17:	ishr
+   18:	aload_0
+   19:	getfield	#9; //Field a:I
+   22:	isub
+   23:	istore	4
+   25:	iload_3
+   26:	iconst_4
+   27:	ishr
+   28:	aload_0
+   29:	getfield	#10; //Field b:I
+   32:	isub
+   33:	istore	5
+   35:	aload_0
+   36:	getfield	#11; //Field c:[[Ljp;
+   39:	iload	4
+   41:	aaload
+   42:	iload	5
+   44:	aaload
+   45:	iload_1
+   46:	bipush	15
+   48:	iand
+   49:	iload_2
+   50:	iload_3
+   51:	bipush	15
+   53:	iand
+   54:	invokevirtual	#20; //Method jp.a:(III)I
+   57:	ireturn
+
+public int b(int, int, int);
+  Code:
+   0:	iload_2
+   1:	ifge	6
+   4:	iconst_0
+   5:	ireturn
+   6:	iload_2
+   7:	sipush	128
+   10:	if_icmplt	15
+   13:	iconst_0
+   14:	ireturn
+   15:	iload_1
+   16:	iconst_4
+   17:	ishr
+   18:	aload_0
+   19:	getfield	#9; //Field a:I
+   22:	isub
+   23:	istore	4
+   25:	iload_3
+   26:	iconst_4
+   27:	ishr
+   28:	aload_0
+   29:	getfield	#10; //Field b:I
+   32:	isub
+   33:	istore	5
+   35:	aload_0
+   36:	getfield	#11; //Field c:[[Ljp;
+   39:	iload	4
+   41:	aaload
+   42:	iload	5
+   44:	aaload
+   45:	iload_1
+   46:	bipush	15
+   48:	iand
+   49:	iload_2
+   50:	iload_3
+   51:	bipush	15
+   53:	iand
+   54:	invokevirtual	#21; //Method jp.b:(III)I
+   57:	ireturn
+
+public jt c(int, int, int);
+  Code:
+   0:	aload_0
+   1:	iload_1
+   2:	iload_2
+   3:	iload_3
+   4:	invokevirtual	#16; //Method a:(III)I
+   7:	istore	4
+   9:	iload	4
+   11:	ifne	18
+   14:	getstatic	#15; //Field jt.a:Ljt;
+   17:	areturn
+   18:	getstatic	#14; //Field fy.m:[Lfy;
+   21:	iload	4
+   23:	aaload
+   24:	getfield	#13; //Field fy.bs:Ljt;
+   27:	areturn
+
+public boolean d(int, int, int);
+  Code:
+   0:	getstatic	#14; //Field fy.m:[Lfy;
+   3:	aload_0
+   4:	iload_1
+   5:	iload_2
+   6:	iload_3
+   7:	invokevirtual	#16; //Method a:(III)I
+   10:	aaload
+   11:	astore	4
+   13:	aload	4
+   15:	ifnonnull	20
+   18:	iconst_0
+   19:	ireturn
+   20:	aload	4
+   22:	invokevirtual	#18; //Method fy.a:()Z
+   25:	ireturn
+
+}
+

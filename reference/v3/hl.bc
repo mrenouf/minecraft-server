@@ -1,0 +1,71 @@
+Compiled from SourceFile
+public class hl extends java.lang.Object{
+public final int a;
+
+public final int b;
+
+public final int c;
+
+public hl(int, int, int);
+  Code:
+   0:	aload_0
+   1:	invokespecial	#8; //Method java/lang/Object."<init>":()V
+   4:	aload_0
+   5:	iload_1
+   6:	putfield	#5; //Field a:I
+   9:	aload_0
+   10:	iload_2
+   11:	putfield	#6; //Field b:I
+   14:	aload_0
+   15:	iload_3
+   16:	putfield	#7; //Field c:I
+   19:	return
+
+public boolean equals(java.lang.Object);
+  Code:
+   0:	aload_1
+   1:	instanceof	#3; //class hl
+   4:	ifeq	51
+   7:	aload_1
+   8:	checkcast	#3; //class hl
+   11:	astore_2
+   12:	aload_2
+   13:	getfield	#5; //Field a:I
+   16:	aload_0
+   17:	getfield	#5; //Field a:I
+   20:	if_icmpne	49
+   23:	aload_2
+   24:	getfield	#6; //Field b:I
+   27:	aload_0
+   28:	getfield	#6; //Field b:I
+   31:	if_icmpne	49
+   34:	aload_2
+   35:	getfield	#7; //Field c:I
+   38:	aload_0
+   39:	getfield	#7; //Field c:I
+   42:	if_icmpne	49
+   45:	iconst_1
+   46:	goto	50
+   49:	iconst_0
+   50:	ireturn
+   51:	iconst_0
+   52:	ireturn
+
+public int hashCode();
+  Code:
+   0:	aload_0
+   1:	getfield	#5; //Field a:I
+   4:	ldc	#2; //int 8976890
+   6:	imul
+   7:	aload_0
+   8:	getfield	#6; //Field b:I
+   11:	ldc	#1; //int 981131
+   13:	imul
+   14:	iadd
+   15:	aload_0
+   16:	getfield	#7; //Field c:I
+   19:	iadd
+   20:	ireturn
+
+}
+

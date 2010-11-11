@@ -1,0 +1,19 @@
+Compiled from SourceFile
+public class dq extends fw{
+public dq(int, int);
+  Code:
+   0:	aload_0
+   1:	iload_1
+   2:	iload_2
+   3:	getstatic	#6; //Field jr.d:Ljr;
+   6:	invokespecial	#7; //Method fw."<init>":(IILjr;)V
+   9:	return
+
+public int a(int, java.util.Random);
+  Code:
+   0:	getstatic	#5; //Field fw.x:Lfw;
+   3:	getfield	#4; //Field fw.bi:I
+   6:	ireturn
+
+}
+

@@ -1,0 +1,114 @@
+Compiled from SourceFile
+public class dz extends io{
+public int a;
+
+public int b;
+
+public int c;
+
+public int d;
+
+public int e;
+
+public dz();
+  Code:
+   0:	aload_0
+   1:	invokespecial	#22; //Method io."<init>":()V
+   4:	return
+
+public dz(dw, int);
+  Code:
+   0:	aload_0
+   1:	invokespecial	#22; //Method io."<init>":()V
+   4:	aload_0
+   5:	aload_1
+   6:	getfield	#11; //Field dw.g:I
+   9:	putfield	#15; //Field a:I
+   12:	aload_0
+   13:	aload_1
+   14:	getfield	#12; //Field dw.p:D
+   17:	ldc2_w	#9; //double 32.0d
+   20:	dmul
+   21:	invokestatic	#21; //Method hd.b:(D)I
+   24:	putfield	#16; //Field b:I
+   27:	aload_0
+   28:	aload_1
+   29:	getfield	#13; //Field dw.q:D
+   32:	ldc2_w	#9; //double 32.0d
+   35:	dmul
+   36:	invokestatic	#21; //Method hd.b:(D)I
+   39:	putfield	#17; //Field c:I
+   42:	aload_0
+   43:	aload_1
+   44:	getfield	#14; //Field dw.r:D
+   47:	ldc2_w	#9; //double 32.0d
+   50:	dmul
+   51:	invokestatic	#21; //Method hd.b:(D)I
+   54:	putfield	#18; //Field d:I
+   57:	aload_0
+   58:	iload_2
+   59:	putfield	#19; //Field e:I
+   62:	return
+
+public void a(java.io.DataInputStream);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	invokevirtual	#24; //Method java/io/DataInputStream.readInt:()I
+   5:	putfield	#15; //Field a:I
+   8:	aload_0
+   9:	aload_1
+   10:	invokevirtual	#23; //Method java/io/DataInputStream.readByte:()B
+   13:	putfield	#19; //Field e:I
+   16:	aload_0
+   17:	aload_1
+   18:	invokevirtual	#24; //Method java/io/DataInputStream.readInt:()I
+   21:	putfield	#16; //Field b:I
+   24:	aload_0
+   25:	aload_1
+   26:	invokevirtual	#24; //Method java/io/DataInputStream.readInt:()I
+   29:	putfield	#17; //Field c:I
+   32:	aload_0
+   33:	aload_1
+   34:	invokevirtual	#24; //Method java/io/DataInputStream.readInt:()I
+   37:	putfield	#18; //Field d:I
+   40:	return
+
+public void a(java.io.DataOutputStream);
+  Code:
+   0:	aload_1
+   1:	aload_0
+   2:	getfield	#15; //Field a:I
+   5:	invokevirtual	#26; //Method java/io/DataOutputStream.writeInt:(I)V
+   8:	aload_1
+   9:	aload_0
+   10:	getfield	#19; //Field e:I
+   13:	invokevirtual	#25; //Method java/io/DataOutputStream.writeByte:(I)V
+   16:	aload_1
+   17:	aload_0
+   18:	getfield	#16; //Field b:I
+   21:	invokevirtual	#26; //Method java/io/DataOutputStream.writeInt:(I)V
+   24:	aload_1
+   25:	aload_0
+   26:	getfield	#17; //Field c:I
+   29:	invokevirtual	#26; //Method java/io/DataOutputStream.writeInt:(I)V
+   32:	aload_1
+   33:	aload_0
+   34:	getfield	#18; //Field d:I
+   37:	invokevirtual	#26; //Method java/io/DataOutputStream.writeInt:(I)V
+   40:	return
+
+public void a(ey);
+  Code:
+   0:	aload_1
+   1:	aload_0
+   2:	invokevirtual	#20; //Method ey.a:(Ldz;)V
+   5:	return
+
+public int a();
+  Code:
+   0:	bipush	17
+   2:	ireturn
+
+}
+

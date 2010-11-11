@@ -1,0 +1,235 @@
+Compiled from SourceFile
+public class hl extends java.lang.Object{
+public hl();
+  Code:
+   0:	aload_0
+   1:	invokespecial	#74; //Method java/lang/Object."<init>":()V
+   4:	return
+
+public static dw a(java.lang.String, em);
+  Code:
+   0:	aconst_null
+   1:	astore_2
+   2:	getstatic	#62; //Field a:Ljava/util/Map;
+   5:	aload_0
+   6:	invokeinterface	#82,  2; //InterfaceMethod java/util/Map.get:(Ljava/lang/Object;)Ljava/lang/Object;
+   11:	checkcast	#48; //class java/lang/Class
+   14:	astore_3
+   15:	aload_3
+   16:	ifnull	47
+   19:	aload_3
+   20:	iconst_1
+   21:	anewarray	#48; //class java/lang/Class
+   24:	dup
+   25:	iconst_0
+   26:	ldc	#34; //class em
+   28:	aastore
+   29:	invokevirtual	#70; //Method java/lang/Class.getConstructor:([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
+   32:	iconst_1
+   33:	anewarray	#51; //class java/lang/Object
+   36:	dup
+   37:	iconst_0
+   38:	aload_1
+   39:	aastore
+   40:	invokevirtual	#79; //Method java/lang/reflect/Constructor.newInstance:([Ljava/lang/Object;)Ljava/lang/Object;
+   43:	checkcast	#33; //class dw
+   46:	astore_2
+   47:	goto	55
+   50:	astore_3
+   51:	aload_3
+   52:	invokevirtual	#71; //Method java/lang/Exception.printStackTrace:()V
+   55:	aload_2
+   56:	areturn
+  Exception table:
+   from   to  target type
+     2    47    50   Class java/lang/Exception
+
+
+public static dw a(v, em);
+  Code:
+   0:	aconst_null
+   1:	astore_2
+   2:	getstatic	#62; //Field a:Ljava/util/Map;
+   5:	aload_0
+   6:	ldc	#24; //String id
+   8:	invokevirtual	#81; //Method v.h:(Ljava/lang/String;)Ljava/lang/String;
+   11:	invokeinterface	#82,  2; //InterfaceMethod java/util/Map.get:(Ljava/lang/Object;)Ljava/lang/Object;
+   16:	checkcast	#48; //class java/lang/Class
+   19:	astore_3
+   20:	aload_3
+   21:	ifnull	52
+   24:	aload_3
+   25:	iconst_1
+   26:	anewarray	#48; //class java/lang/Class
+   29:	dup
+   30:	iconst_0
+   31:	ldc	#34; //class em
+   33:	aastore
+   34:	invokevirtual	#70; //Method java/lang/Class.getConstructor:([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
+   37:	iconst_1
+   38:	anewarray	#51; //class java/lang/Object
+   41:	dup
+   42:	iconst_0
+   43:	aload_1
+   44:	aastore
+   45:	invokevirtual	#79; //Method java/lang/reflect/Constructor.newInstance:([Ljava/lang/Object;)Ljava/lang/Object;
+   48:	checkcast	#33; //class dw
+   51:	astore_2
+   52:	goto	60
+   55:	astore_3
+   56:	aload_3
+   57:	invokevirtual	#71; //Method java/lang/Exception.printStackTrace:()V
+   60:	aload_2
+   61:	ifnull	72
+   64:	aload_2
+   65:	aload_0
+   66:	invokevirtual	#67; //Method dw.e:(Lv;)V
+   69:	goto	102
+   72:	getstatic	#66; //Field java/lang/System.out:Ljava/io/PrintStream;
+   75:	new	#53; //class java/lang/StringBuilder
+   78:	dup
+   79:	invokespecial	#76; //Method java/lang/StringBuilder."<init>":()V
+   82:	ldc	#19; //String Skipping Entity with id 
+   84:	invokevirtual	#77; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   87:	aload_0
+   88:	ldc	#24; //String id
+   90:	invokevirtual	#81; //Method v.h:(Ljava/lang/String;)Ljava/lang/String;
+   93:	invokevirtual	#77; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   96:	invokevirtual	#78; //Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+   99:	invokevirtual	#69; //Method java/io/PrintStream.println:(Ljava/lang/String;)V
+   102:	aload_2
+   103:	areturn
+  Exception table:
+   from   to  target type
+     2    52    55   Class java/lang/Exception
+
+
+public static int a(dw);
+  Code:
+   0:	getstatic	#65; //Field d:Ljava/util/Map;
+   3:	aload_0
+   4:	invokevirtual	#75; //Method java/lang/Object.getClass:()Ljava/lang/Class;
+   7:	invokeinterface	#82,  2; //InterfaceMethod java/util/Map.get:(Ljava/lang/Object;)Ljava/lang/Object;
+   12:	checkcast	#50; //class java/lang/Integer
+   15:	invokevirtual	#72; //Method java/lang/Integer.intValue:()I
+   18:	ireturn
+
+public static java.lang.String b(dw);
+  Code:
+   0:	getstatic	#63; //Field b:Ljava/util/Map;
+   3:	aload_0
+   4:	invokevirtual	#75; //Method java/lang/Object.getClass:()Ljava/lang/Class;
+   7:	invokeinterface	#82,  2; //InterfaceMethod java/util/Map.get:(Ljava/lang/Object;)Ljava/lang/Object;
+   12:	checkcast	#52; //class java/lang/String
+   15:	areturn
+
+static {};
+  Code:
+   0:	new	#56; //class java/util/HashMap
+   3:	dup
+   4:	invokespecial	#80; //Method java/util/HashMap."<init>":()V
+   7:	putstatic	#62; //Field a:Ljava/util/Map;
+   10:	new	#56; //class java/util/HashMap
+   13:	dup
+   14:	invokespecial	#80; //Method java/util/HashMap."<init>":()V
+   17:	putstatic	#63; //Field b:Ljava/util/Map;
+   20:	new	#56; //class java/util/HashMap
+   23:	dup
+   24:	invokespecial	#80; //Method java/util/HashMap."<init>":()V
+   27:	putstatic	#64; //Field c:Ljava/util/Map;
+   30:	new	#56; //class java/util/HashMap
+   33:	dup
+   34:	invokespecial	#80; //Method java/util/HashMap."<init>":()V
+   37:	putstatic	#65; //Field d:Ljava/util/Map;
+   40:	ldc	#32; //class dv
+   42:	ldc	#1; //String Arrow
+   44:	bipush	10
+   46:	invokestatic	#68; //Method a:(Ljava/lang/Class;Ljava/lang/String;I)V
+   49:	ldc	#27; //class bf
+   51:	ldc	#21; //String Snowball
+   53:	bipush	11
+   55:	invokestatic	#68; //Method a:(Ljava/lang/Class;Ljava/lang/String;I)V
+   58:	ldc	#41; //class gh
+   60:	ldc	#9; //String Item
+   62:	iconst_1
+   63:	invokestatic	#68; //Method a:(Ljava/lang/Class;Ljava/lang/String;I)V
+   66:	ldc	#29; //class cg
+   68:	ldc	#13; //String Painting
+   70:	bipush	9
+   72:	invokestatic	#68; //Method a:(Ljava/lang/Class;Ljava/lang/String;I)V
+   75:	ldc	#59; //class jv
+   77:	ldc	#11; //String Mob
+   79:	bipush	48
+   81:	invokestatic	#68; //Method a:(Ljava/lang/Class;Ljava/lang/String;I)V
+   84:	ldc	#38; //class fz
+   86:	ldc	#12; //String Monster
+   88:	bipush	49
+   90:	invokestatic	#68; //Method a:(Ljava/lang/Class;Ljava/lang/String;I)V
+   93:	ldc	#37; //class fk
+   95:	ldc	#5; //String Creeper
+   97:	bipush	50
+   99:	invokestatic	#68; //Method a:(Ljava/lang/Class;Ljava/lang/String;I)V
+   102:	ldc	#35; //class ez
+   104:	ldc	#18; //String Skeleton
+   106:	bipush	51
+   108:	invokestatic	#68; //Method a:(Ljava/lang/Class;Ljava/lang/String;I)V
+   111:	ldc	#28; //class bu
+   113:	ldc	#22; //String Spider
+   115:	bipush	52
+   117:	invokestatic	#68; //Method a:(Ljava/lang/Class;Ljava/lang/String;I)V
+   120:	ldc	#60; //class t
+   122:	ldc	#8; //String Giant
+   124:	bipush	53
+   126:	invokestatic	#68; //Method a:(Ljava/lang/Class;Ljava/lang/String;I)V
+   129:	ldc	#40; //class gg
+   131:	ldc	#23; //String Zombie
+   133:	bipush	54
+   135:	invokestatic	#68; //Method a:(Ljava/lang/Class;Ljava/lang/String;I)V
+   138:	ldc	#39; //class gb
+   140:	ldc	#20; //String Slime
+   142:	bipush	55
+   144:	invokestatic	#68; //Method a:(Ljava/lang/Class;Ljava/lang/String;I)V
+   147:	ldc	#25; //class az
+   149:	ldc	#7; //String Ghast
+   151:	bipush	56
+   153:	invokestatic	#68; //Method a:(Ljava/lang/Class;Ljava/lang/String;I)V
+   156:	ldc	#46; //class iv
+   158:	ldc	#15; //String PigZombie
+   160:	bipush	57
+   162:	invokestatic	#68; //Method a:(Ljava/lang/Class;Ljava/lang/String;I)V
+   165:	ldc	#43; //class hp
+   167:	ldc	#14; //String Pig
+   169:	bipush	90
+   171:	invokestatic	#68; //Method a:(Ljava/lang/Class;Ljava/lang/String;I)V
+   174:	ldc	#31; //class ct
+   176:	ldc	#17; //String Sheep
+   178:	bipush	91
+   180:	invokestatic	#68; //Method a:(Ljava/lang/Class;Ljava/lang/String;I)V
+   183:	ldc	#26; //class be
+   185:	ldc	#4; //String Cow
+   187:	bipush	92
+   189:	invokestatic	#68; //Method a:(Ljava/lang/Class;Ljava/lang/String;I)V
+   192:	ldc	#45; //class if
+   194:	ldc	#3; //String Chicken
+   196:	bipush	93
+   198:	invokestatic	#68; //Method a:(Ljava/lang/Class;Ljava/lang/String;I)V
+   201:	ldc	#30; //class ci
+   203:	ldc	#16; //String PrimedTnt
+   205:	bipush	20
+   207:	invokestatic	#68; //Method a:(Ljava/lang/Class;Ljava/lang/String;I)V
+   210:	ldc	#44; //class hy
+   212:	ldc	#6; //String FallingSand
+   214:	bipush	21
+   216:	invokestatic	#68; //Method a:(Ljava/lang/Class;Ljava/lang/String;I)V
+   219:	ldc	#58; //class jj
+   221:	ldc	#10; //String Minecart
+   223:	bipush	40
+   225:	invokestatic	#68; //Method a:(Ljava/lang/Class;Ljava/lang/String;I)V
+   228:	ldc	#36; //class fi
+   230:	ldc	#2; //String Boat
+   232:	bipush	41
+   234:	invokestatic	#68; //Method a:(Ljava/lang/Class;Ljava/lang/String;I)V
+   237:	return
+
+}
+

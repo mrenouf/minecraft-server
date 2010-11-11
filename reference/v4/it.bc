@@ -1,0 +1,30 @@
+Compiled from SourceFile
+class it extends java.lang.Object{
+int a;
+
+int b;
+
+int c;
+
+long d;
+
+public it(int, int, int, long);
+  Code:
+   0:	aload_0
+   1:	invokespecial	#8; //Method java/lang/Object."<init>":()V
+   4:	aload_0
+   5:	iload_1
+   6:	putfield	#4; //Field a:I
+   9:	aload_0
+   10:	iload_2
+   11:	putfield	#5; //Field b:I
+   14:	aload_0
+   15:	iload_3
+   16:	putfield	#6; //Field c:I
+   19:	aload_0
+   20:	lload	4
+   22:	putfield	#7; //Field d:J
+   25:	return
+
+}
+

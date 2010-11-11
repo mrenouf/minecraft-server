@@ -1,0 +1,20 @@
+Compiled from SourceFile
+public class as extends fq{
+public as(int, int);
+  Code:
+   0:	aload_0
+   1:	iload_1
+   2:	invokespecial	#6; //Method fq."<init>":(I)V
+   5:	aload_0
+   6:	iconst_1
+   7:	putfield	#4; //Field aX:I
+   10:	aload_0
+   11:	bipush	64
+   13:	putfield	#5; //Field aY:I
+   16:	aload_0
+   17:	iload_2
+   18:	putfield	#3; //Field a:I
+   21:	return
+
+}
+

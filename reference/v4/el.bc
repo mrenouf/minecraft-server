@@ -1,0 +1,23 @@
+Compiled from SourceFile
+public class el extends dr{
+public el(int, int);
+  Code:
+   0:	aload_0
+   1:	iload_1
+   2:	iload_2
+   3:	invokespecial	#6; //Method dr."<init>":(II)V
+   6:	return
+
+public int a(java.util.Random);
+  Code:
+   0:	iconst_1
+   1:	ireturn
+
+public int a(int, java.util.Random);
+  Code:
+   0:	getstatic	#4; //Field fy.ap:Lfy;
+   3:	getfield	#5; //Field fy.bh:I
+   6:	ireturn
+
+}
+

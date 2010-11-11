@@ -1,0 +1,41 @@
+Compiled from SourceFile
+class ij extends java.lang.Thread{
+final bf a;
+
+ij(bf);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	putfield	#8; //Field a:Lbf;
+   5:	aload_0
+   6:	invokespecial	#13; //Method java/lang/Thread."<init>":()V
+   9:	return
+
+public void run();
+  Code:
+   0:	ldc2_w	#6; //long 2000l
+   3:	invokestatic	#15; //Method java/lang/Thread.sleep:(J)V
+   6:	aload_0
+   7:	getfield	#8; //Field a:Lbf;
+   10:	invokestatic	#9; //Method bf.a:(Lbf;)Z
+   13:	ifeq	35
+   16:	aload_0
+   17:	getfield	#8; //Field a:Lbf;
+   20:	invokestatic	#11; //Method bf.f:(Lbf;)Ljava/lang/Thread;
+   23:	invokevirtual	#14; //Method java/lang/Thread.interrupt:()V
+   26:	aload_0
+   27:	getfield	#8; //Field a:Lbf;
+   30:	ldc	#1; //String Connection closed
+   32:	invokevirtual	#10; //Method bf.a:(Ljava/lang/String;)V
+   35:	goto	43
+   38:	astore_1
+   39:	aload_1
+   40:	invokevirtual	#12; //Method java/lang/Exception.printStackTrace:()V
+   43:	return
+  Exception table:
+   from   to  target type
+     0    35    38   Class java/lang/Exception
+
+
+}
+

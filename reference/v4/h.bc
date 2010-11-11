@@ -1,0 +1,40 @@
+Compiled from SourceFile
+public class h extends fy{
+public h(int, int);
+  Code:
+   0:	aload_0
+   1:	iload_1
+   2:	iload_2
+   3:	getstatic	#12; //Field jt.d:Ljt;
+   6:	invokespecial	#13; //Method fy."<init>":(IILjt;)V
+   9:	return
+
+public int a(int, java.util.Random);
+  Code:
+   0:	aload_0
+   1:	getfield	#11; //Field bh:I
+   4:	getstatic	#8; //Field fy.I:Lfy;
+   7:	getfield	#10; //Field fy.bh:I
+   10:	if_icmpne	20
+   13:	getstatic	#6; //Field fs.k:Lfs;
+   16:	getfield	#5; //Field fs.aW:I
+   19:	ireturn
+   20:	aload_0
+   21:	getfield	#11; //Field bh:I
+   24:	getstatic	#9; //Field fy.aw:Lfy;
+   27:	getfield	#10; //Field fy.bh:I
+   30:	if_icmpne	40
+   33:	getstatic	#7; //Field fs.l:Lfs;
+   36:	getfield	#5; //Field fs.aW:I
+   39:	ireturn
+   40:	aload_0
+   41:	getfield	#11; //Field bh:I
+   44:	ireturn
+
+public int a(java.util.Random);
+  Code:
+   0:	iconst_1
+   1:	ireturn
+
+}
+

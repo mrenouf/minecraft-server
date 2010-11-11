@@ -1,0 +1,776 @@
+Compiled from SourceFile
+public class bk extends fc{
+public bk();
+  Code:
+   0:	aload_0
+   1:	invokespecial	#41; //Method fc."<init>":()V
+   4:	return
+
+protected void a(int, int, byte[], double, double, double);
+  Code:
+   0:	aload_0
+   1:	iload_1
+   2:	iload_2
+   3:	aload_3
+   4:	dload	4
+   6:	dload	6
+   8:	dload	8
+   10:	fconst_1
+   11:	aload_0
+   12:	getfield	#31; //Field b:Ljava/util/Random;
+   15:	invokevirtual	#46; //Method java/util/Random.nextFloat:()F
+   18:	ldc	#11; //float 6.0f
+   20:	fmul
+   21:	fadd
+   22:	fconst_0
+   23:	fconst_0
+   24:	iconst_m1
+   25:	iconst_m1
+   26:	ldc2_w	#22; //double 0.5d
+   29:	invokevirtual	#40; //Method a:(II[BDDDFFFIID)V
+   32:	return
+
+protected void a(int, int, byte[], double, double, double, float, float, float, int, int, double);
+  Code:
+   0:	iload_1
+   1:	bipush	16
+   3:	imul
+   4:	bipush	8
+   6:	iadd
+   7:	i2d
+   8:	dstore	17
+   10:	iload_2
+   11:	bipush	16
+   13:	imul
+   14:	bipush	8
+   16:	iadd
+   17:	i2d
+   18:	dstore	19
+   20:	fconst_0
+   21:	fstore	21
+   23:	fconst_0
+   24:	fstore	22
+   26:	new	#19; //class java/util/Random
+   29:	dup
+   30:	aload_0
+   31:	getfield	#31; //Field b:Ljava/util/Random;
+   34:	invokevirtual	#48; //Method java/util/Random.nextLong:()J
+   37:	invokespecial	#45; //Method java/util/Random."<init>":(J)V
+   40:	astore	23
+   42:	iload	14
+   44:	ifgt	73
+   47:	aload_0
+   48:	getfield	#30; //Field a:I
+   51:	bipush	16
+   53:	imul
+   54:	bipush	16
+   56:	isub
+   57:	istore	24
+   59:	iload	24
+   61:	aload	23
+   63:	iload	24
+   65:	iconst_4
+   66:	idiv
+   67:	invokevirtual	#47; //Method java/util/Random.nextInt:(I)I
+   70:	isub
+   71:	istore	14
+   73:	iconst_0
+   74:	istore	24
+   76:	iload	13
+   78:	iconst_m1
+   79:	if_icmpne	91
+   82:	iload	14
+   84:	iconst_2
+   85:	idiv
+   86:	istore	13
+   88:	iconst_1
+   89:	istore	24
+   91:	aload	23
+   93:	iload	14
+   95:	iconst_2
+   96:	idiv
+   97:	invokevirtual	#47; //Method java/util/Random.nextInt:(I)I
+   100:	iload	14
+   102:	iconst_4
+   103:	idiv
+   104:	iadd
+   105:	istore	25
+   107:	aload	23
+   109:	bipush	6
+   111:	invokevirtual	#47; //Method java/util/Random.nextInt:(I)I
+   114:	ifne	121
+   117:	iconst_1
+   118:	goto	122
+   121:	iconst_0
+   122:	istore	26
+   124:	iload	13
+   126:	iload	14
+   128:	if_icmpge	1126
+   131:	ldc2_w	#24; //double 1.5d
+   134:	iload	13
+   136:	i2f
+   137:	ldc	#9; //float 3.1415927f
+   139:	fmul
+   140:	iload	14
+   142:	i2f
+   143:	fdiv
+   144:	invokestatic	#42; //Method hd.a:(F)F
+   147:	fload	10
+   149:	fmul
+   150:	fconst_1
+   151:	fmul
+   152:	f2d
+   153:	dadd
+   154:	dstore	27
+   156:	dload	27
+   158:	dload	15
+   160:	dmul
+   161:	dstore	29
+   163:	fload	12
+   165:	invokestatic	#44; //Method hd.b:(F)F
+   168:	fstore	31
+   170:	fload	12
+   172:	invokestatic	#42; //Method hd.a:(F)F
+   175:	fstore	32
+   177:	dload	4
+   179:	fload	11
+   181:	invokestatic	#44; //Method hd.b:(F)F
+   184:	fload	31
+   186:	fmul
+   187:	f2d
+   188:	dadd
+   189:	dstore	4
+   191:	dload	6
+   193:	fload	32
+   195:	f2d
+   196:	dadd
+   197:	dstore	6
+   199:	dload	8
+   201:	fload	11
+   203:	invokestatic	#42; //Method hd.a:(F)F
+   206:	fload	31
+   208:	fmul
+   209:	f2d
+   210:	dadd
+   211:	dstore	8
+   213:	iload	26
+   215:	ifeq	228
+   218:	fload	12
+   220:	ldc	#6; //float 0.92f
+   222:	fmul
+   223:	fstore	12
+   225:	goto	235
+   228:	fload	12
+   230:	ldc	#3; //float 0.7f
+   232:	fmul
+   233:	fstore	12
+   235:	fload	12
+   237:	fload	22
+   239:	ldc	#1; //float 0.1f
+   241:	fmul
+   242:	fadd
+   243:	fstore	12
+   245:	fload	11
+   247:	fload	21
+   249:	ldc	#1; //float 0.1f
+   251:	fmul
+   252:	fadd
+   253:	fstore	11
+   255:	fload	22
+   257:	ldc	#5; //float 0.9f
+   259:	fmul
+   260:	fstore	22
+   262:	fload	21
+   264:	ldc	#4; //float 0.75f
+   266:	fmul
+   267:	fstore	21
+   269:	fload	22
+   271:	aload	23
+   273:	invokevirtual	#46; //Method java/util/Random.nextFloat:()F
+   276:	aload	23
+   278:	invokevirtual	#46; //Method java/util/Random.nextFloat:()F
+   281:	fsub
+   282:	aload	23
+   284:	invokevirtual	#46; //Method java/util/Random.nextFloat:()F
+   287:	fmul
+   288:	fconst_2
+   289:	fmul
+   290:	fadd
+   291:	fstore	22
+   293:	fload	21
+   295:	aload	23
+   297:	invokevirtual	#46; //Method java/util/Random.nextFloat:()F
+   300:	aload	23
+   302:	invokevirtual	#46; //Method java/util/Random.nextFloat:()F
+   305:	fsub
+   306:	aload	23
+   308:	invokevirtual	#46; //Method java/util/Random.nextFloat:()F
+   311:	fmul
+   312:	ldc	#10; //float 4.0f
+   314:	fmul
+   315:	fadd
+   316:	fstore	21
+   318:	iload	24
+   320:	ifne	416
+   323:	iload	13
+   325:	iload	25
+   327:	if_icmpne	416
+   330:	fload	10
+   332:	fconst_1
+   333:	fcmpl
+   334:	ifle	416
+   337:	aload_0
+   338:	iload_1
+   339:	iload_2
+   340:	aload_3
+   341:	dload	4
+   343:	dload	6
+   345:	dload	8
+   347:	aload	23
+   349:	invokevirtual	#46; //Method java/util/Random.nextFloat:()F
+   352:	ldc	#2; //float 0.5f
+   354:	fmul
+   355:	ldc	#2; //float 0.5f
+   357:	fadd
+   358:	fload	11
+   360:	ldc	#7; //float 1.5707964f
+   362:	fsub
+   363:	fload	12
+   365:	ldc	#8; //float 3.0f
+   367:	fdiv
+   368:	iload	13
+   370:	iload	14
+   372:	dconst_1
+   373:	invokevirtual	#40; //Method a:(II[BDDDFFFIID)V
+   376:	aload_0
+   377:	iload_1
+   378:	iload_2
+   379:	aload_3
+   380:	dload	4
+   382:	dload	6
+   384:	dload	8
+   386:	aload	23
+   388:	invokevirtual	#46; //Method java/util/Random.nextFloat:()F
+   391:	ldc	#2; //float 0.5f
+   393:	fmul
+   394:	ldc	#2; //float 0.5f
+   396:	fadd
+   397:	fload	11
+   399:	ldc	#7; //float 1.5707964f
+   401:	fadd
+   402:	fload	12
+   404:	ldc	#8; //float 3.0f
+   406:	fdiv
+   407:	iload	13
+   409:	iload	14
+   411:	dconst_1
+   412:	invokevirtual	#40; //Method a:(II[BDDDFFFIID)V
+   415:	return
+   416:	iload	24
+   418:	ifne	433
+   421:	aload	23
+   423:	iconst_4
+   424:	invokevirtual	#47; //Method java/util/Random.nextInt:(I)I
+   427:	ifne	433
+   430:	goto	1120
+   433:	dload	4
+   435:	dload	17
+   437:	dsub
+   438:	dstore	33
+   440:	dload	8
+   442:	dload	19
+   444:	dsub
+   445:	dstore	35
+   447:	iload	14
+   449:	iload	13
+   451:	isub
+   452:	i2d
+   453:	dstore	37
+   455:	fload	10
+   457:	fconst_2
+   458:	fadd
+   459:	ldc	#13; //float 16.0f
+   461:	fadd
+   462:	f2d
+   463:	dstore	39
+   465:	dload	33
+   467:	dload	33
+   469:	dmul
+   470:	dload	35
+   472:	dload	35
+   474:	dmul
+   475:	dadd
+   476:	dload	37
+   478:	dload	37
+   480:	dmul
+   481:	dsub
+   482:	dload	39
+   484:	dload	39
+   486:	dmul
+   487:	dcmpl
+   488:	ifle	492
+   491:	return
+   492:	dload	4
+   494:	dload	17
+   496:	ldc2_w	#28; //double 16.0d
+   499:	dsub
+   500:	dload	27
+   502:	ldc2_w	#26; //double 2.0d
+   505:	dmul
+   506:	dsub
+   507:	dcmpg
+   508:	iflt	1120
+   511:	dload	8
+   513:	dload	19
+   515:	ldc2_w	#28; //double 16.0d
+   518:	dsub
+   519:	dload	27
+   521:	ldc2_w	#26; //double 2.0d
+   524:	dmul
+   525:	dsub
+   526:	dcmpg
+   527:	iflt	1120
+   530:	dload	4
+   532:	dload	17
+   534:	ldc2_w	#28; //double 16.0d
+   537:	dadd
+   538:	dload	27
+   540:	ldc2_w	#26; //double 2.0d
+   543:	dmul
+   544:	dadd
+   545:	dcmpl
+   546:	ifgt	1120
+   549:	dload	8
+   551:	dload	19
+   553:	ldc2_w	#28; //double 16.0d
+   556:	dadd
+   557:	dload	27
+   559:	ldc2_w	#26; //double 2.0d
+   562:	dmul
+   563:	dadd
+   564:	dcmpl
+   565:	ifle	571
+   568:	goto	1120
+   571:	dload	4
+   573:	dload	27
+   575:	dsub
+   576:	invokestatic	#43; //Method hd.b:(D)I
+   579:	iload_1
+   580:	bipush	16
+   582:	imul
+   583:	isub
+   584:	iconst_1
+   585:	isub
+   586:	istore	33
+   588:	dload	4
+   590:	dload	27
+   592:	dadd
+   593:	invokestatic	#43; //Method hd.b:(D)I
+   596:	iload_1
+   597:	bipush	16
+   599:	imul
+   600:	isub
+   601:	iconst_1
+   602:	iadd
+   603:	istore	34
+   605:	dload	6
+   607:	dload	29
+   609:	dsub
+   610:	invokestatic	#43; //Method hd.b:(D)I
+   613:	iconst_1
+   614:	isub
+   615:	istore	35
+   617:	dload	6
+   619:	dload	29
+   621:	dadd
+   622:	invokestatic	#43; //Method hd.b:(D)I
+   625:	iconst_1
+   626:	iadd
+   627:	istore	36
+   629:	dload	8
+   631:	dload	27
+   633:	dsub
+   634:	invokestatic	#43; //Method hd.b:(D)I
+   637:	iload_2
+   638:	bipush	16
+   640:	imul
+   641:	isub
+   642:	iconst_1
+   643:	isub
+   644:	istore	37
+   646:	dload	8
+   648:	dload	27
+   650:	dadd
+   651:	invokestatic	#43; //Method hd.b:(D)I
+   654:	iload_2
+   655:	bipush	16
+   657:	imul
+   658:	isub
+   659:	iconst_1
+   660:	iadd
+   661:	istore	38
+   663:	iload	33
+   665:	ifge	671
+   668:	iconst_0
+   669:	istore	33
+   671:	iload	34
+   673:	bipush	16
+   675:	if_icmple	682
+   678:	bipush	16
+   680:	istore	34
+   682:	iload	35
+   684:	iconst_1
+   685:	if_icmpge	691
+   688:	iconst_1
+   689:	istore	35
+   691:	iload	36
+   693:	bipush	120
+   695:	if_icmple	702
+   698:	bipush	120
+   700:	istore	36
+   702:	iload	37
+   704:	ifge	710
+   707:	iconst_0
+   708:	istore	37
+   710:	iload	38
+   712:	bipush	16
+   714:	if_icmple	721
+   717:	bipush	16
+   719:	istore	38
+   721:	iconst_0
+   722:	istore	39
+   724:	iload	33
+   726:	istore	40
+   728:	iload	39
+   730:	ifne	901
+   733:	iload	40
+   735:	iload	34
+   737:	if_icmpge	901
+   740:	iload	37
+   742:	istore	41
+   744:	iload	39
+   746:	ifne	895
+   749:	iload	41
+   751:	iload	38
+   753:	if_icmpge	895
+   756:	iload	36
+   758:	iconst_1
+   759:	iadd
+   760:	istore	42
+   762:	iload	39
+   764:	ifne	889
+   767:	iload	42
+   769:	iload	35
+   771:	iconst_1
+   772:	isub
+   773:	if_icmplt	889
+   776:	iload	40
+   778:	bipush	16
+   780:	imul
+   781:	iload	41
+   783:	iadd
+   784:	sipush	128
+   787:	imul
+   788:	iload	42
+   790:	iadd
+   791:	istore	43
+   793:	iload	42
+   795:	iflt	883
+   798:	iload	42
+   800:	sipush	128
+   803:	if_icmplt	809
+   806:	goto	883
+   809:	aload_3
+   810:	iload	43
+   812:	baload
+   813:	getstatic	#32; //Field fy.C:Lfy;
+   816:	getfield	#35; //Field fy.bh:I
+   819:	if_icmpeq	835
+   822:	aload_3
+   823:	iload	43
+   825:	baload
+   826:	getstatic	#33; //Field fy.D:Lfy;
+   829:	getfield	#35; //Field fy.bh:I
+   832:	if_icmpne	838
+   835:	iconst_1
+   836:	istore	39
+   838:	iload	42
+   840:	iload	35
+   842:	iconst_1
+   843:	isub
+   844:	if_icmpeq	883
+   847:	iload	40
+   849:	iload	33
+   851:	if_icmpeq	883
+   854:	iload	40
+   856:	iload	34
+   858:	iconst_1
+   859:	isub
+   860:	if_icmpeq	883
+   863:	iload	41
+   865:	iload	37
+   867:	if_icmpeq	883
+   870:	iload	41
+   872:	iload	38
+   874:	iconst_1
+   875:	isub
+   876:	if_icmpeq	883
+   879:	iload	35
+   881:	istore	42
+   883:	iinc	42, -1
+   886:	goto	762
+   889:	iinc	41, 1
+   892:	goto	744
+   895:	iinc	40, 1
+   898:	goto	728
+   901:	iload	39
+   903:	ifeq	909
+   906:	goto	1120
+   909:	iload	33
+   911:	istore	40
+   913:	iload	40
+   915:	iload	34
+   917:	if_icmpge	1112
+   920:	iload	40
+   922:	iload_1
+   923:	bipush	16
+   925:	imul
+   926:	iadd
+   927:	i2d
+   928:	ldc2_w	#22; //double 0.5d
+   931:	dadd
+   932:	dload	4
+   934:	dsub
+   935:	dload	27
+   937:	ddiv
+   938:	dstore	41
+   940:	iload	37
+   942:	istore	43
+   944:	iload	43
+   946:	iload	38
+   948:	if_icmpge	1106
+   951:	iload	43
+   953:	iload_2
+   954:	bipush	16
+   956:	imul
+   957:	iadd
+   958:	i2d
+   959:	ldc2_w	#22; //double 0.5d
+   962:	dadd
+   963:	dload	8
+   965:	dsub
+   966:	dload	27
+   968:	ddiv
+   969:	dstore	44
+   971:	iload	40
+   973:	bipush	16
+   975:	imul
+   976:	iload	43
+   978:	iadd
+   979:	sipush	128
+   982:	imul
+   983:	iload	36
+   985:	iadd
+   986:	istore	46
+   988:	iload	36
+   990:	iconst_1
+   991:	isub
+   992:	istore	47
+   994:	iload	47
+   996:	iload	35
+   998:	if_icmplt	1100
+   1001:	iload	47
+   1003:	i2d
+   1004:	ldc2_w	#22; //double 0.5d
+   1007:	dadd
+   1008:	dload	6
+   1010:	dsub
+   1011:	dload	29
+   1013:	ddiv
+   1014:	dstore	48
+   1016:	dload	48
+   1018:	ldc2_w	#20; //double -0.7d
+   1021:	dcmpl
+   1022:	ifle	1091
+   1025:	dload	41
+   1027:	dload	41
+   1029:	dmul
+   1030:	dload	48
+   1032:	dload	48
+   1034:	dmul
+   1035:	dadd
+   1036:	dload	44
+   1038:	dload	44
+   1040:	dmul
+   1041:	dadd
+   1042:	dconst_1
+   1043:	dcmpg
+   1044:	ifge	1091
+   1047:	aload_3
+   1048:	iload	46
+   1050:	baload
+   1051:	istore	50
+   1053:	iload	50
+   1055:	getstatic	#34; //Field fy.bb:Lfy;
+   1058:	getfield	#35; //Field fy.bh:I
+   1061:	if_icmpeq	1086
+   1064:	iload	50
+   1066:	getstatic	#37; //Field fy.v:Lfy;
+   1069:	getfield	#35; //Field fy.bh:I
+   1072:	if_icmpeq	1086
+   1075:	iload	50
+   1077:	getstatic	#36; //Field fy.u:Lhu;
+   1080:	getfield	#38; //Field hu.bh:I
+   1083:	if_icmpne	1091
+   1086:	aload_3
+   1087:	iload	46
+   1089:	iconst_0
+   1090:	bastore
+   1091:	iinc	46, -1
+   1094:	iinc	47, -1
+   1097:	goto	994
+   1100:	iinc	43, 1
+   1103:	goto	944
+   1106:	iinc	40, 1
+   1109:	goto	913
+   1112:	iload	24
+   1114:	ifeq	1120
+   1117:	goto	1126
+   1120:	iinc	13, 1
+   1123:	goto	124
+   1126:	return
+
+protected void a(em, int, int, int, int, byte[]);
+  Code:
+   0:	aload_0
+   1:	getfield	#31; //Field b:Ljava/util/Random;
+   4:	aload_0
+   5:	getfield	#31; //Field b:Ljava/util/Random;
+   8:	aload_0
+   9:	getfield	#31; //Field b:Ljava/util/Random;
+   12:	bipush	10
+   14:	invokevirtual	#47; //Method java/util/Random.nextInt:(I)I
+   17:	iconst_1
+   18:	iadd
+   19:	invokevirtual	#47; //Method java/util/Random.nextInt:(I)I
+   22:	iconst_1
+   23:	iadd
+   24:	invokevirtual	#47; //Method java/util/Random.nextInt:(I)I
+   27:	istore	7
+   29:	aload_0
+   30:	getfield	#31; //Field b:Ljava/util/Random;
+   33:	iconst_5
+   34:	invokevirtual	#47; //Method java/util/Random.nextInt:(I)I
+   37:	ifeq	43
+   40:	iconst_0
+   41:	istore	7
+   43:	iconst_0
+   44:	istore	8
+   46:	iload	8
+   48:	iload	7
+   50:	if_icmpge	244
+   53:	iload_2
+   54:	bipush	16
+   56:	imul
+   57:	aload_0
+   58:	getfield	#31; //Field b:Ljava/util/Random;
+   61:	bipush	16
+   63:	invokevirtual	#47; //Method java/util/Random.nextInt:(I)I
+   66:	iadd
+   67:	i2d
+   68:	dstore	9
+   70:	aload_0
+   71:	getfield	#31; //Field b:Ljava/util/Random;
+   74:	sipush	128
+   77:	invokevirtual	#47; //Method java/util/Random.nextInt:(I)I
+   80:	i2d
+   81:	dstore	11
+   83:	iload_3
+   84:	bipush	16
+   86:	imul
+   87:	aload_0
+   88:	getfield	#31; //Field b:Ljava/util/Random;
+   91:	bipush	16
+   93:	invokevirtual	#47; //Method java/util/Random.nextInt:(I)I
+   96:	iadd
+   97:	i2d
+   98:	dstore	13
+   100:	iconst_1
+   101:	istore	15
+   103:	aload_0
+   104:	getfield	#31; //Field b:Ljava/util/Random;
+   107:	iconst_4
+   108:	invokevirtual	#47; //Method java/util/Random.nextInt:(I)I
+   111:	ifne	143
+   114:	aload_0
+   115:	iload	4
+   117:	iload	5
+   119:	aload	6
+   121:	dload	9
+   123:	dload	11
+   125:	dload	13
+   127:	invokevirtual	#39; //Method a:(II[BDDD)V
+   130:	iload	15
+   132:	aload_0
+   133:	getfield	#31; //Field b:Ljava/util/Random;
+   136:	iconst_4
+   137:	invokevirtual	#47; //Method java/util/Random.nextInt:(I)I
+   140:	iadd
+   141:	istore	15
+   143:	iconst_0
+   144:	istore	16
+   146:	iload	16
+   148:	iload	15
+   150:	if_icmpge	238
+   153:	aload_0
+   154:	getfield	#31; //Field b:Ljava/util/Random;
+   157:	invokevirtual	#46; //Method java/util/Random.nextFloat:()F
+   160:	ldc	#9; //float 3.1415927f
+   162:	fmul
+   163:	fconst_2
+   164:	fmul
+   165:	fstore	17
+   167:	aload_0
+   168:	getfield	#31; //Field b:Ljava/util/Random;
+   171:	invokevirtual	#46; //Method java/util/Random.nextFloat:()F
+   174:	ldc	#2; //float 0.5f
+   176:	fsub
+   177:	fconst_2
+   178:	fmul
+   179:	ldc	#12; //float 8.0f
+   181:	fdiv
+   182:	fstore	18
+   184:	aload_0
+   185:	getfield	#31; //Field b:Ljava/util/Random;
+   188:	invokevirtual	#46; //Method java/util/Random.nextFloat:()F
+   191:	fconst_2
+   192:	fmul
+   193:	aload_0
+   194:	getfield	#31; //Field b:Ljava/util/Random;
+   197:	invokevirtual	#46; //Method java/util/Random.nextFloat:()F
+   200:	fadd
+   201:	fstore	19
+   203:	aload_0
+   204:	iload	4
+   206:	iload	5
+   208:	aload	6
+   210:	dload	9
+   212:	dload	11
+   214:	dload	13
+   216:	fload	19
+   218:	fconst_2
+   219:	fmul
+   220:	fload	17
+   222:	fload	18
+   224:	iconst_0
+   225:	iconst_0
+   226:	ldc2_w	#22; //double 0.5d
+   229:	invokevirtual	#40; //Method a:(II[BDDDFFFIID)V
+   232:	iinc	16, 1
+   235:	goto	146
+   238:	iinc	8, 1
+   241:	goto	46
+   244:	return
+
+}
+

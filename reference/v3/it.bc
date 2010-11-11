@@ -1,0 +1,226 @@
+Compiled from SourceFile
+public class it extends ge{
+public it(el);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	invokespecial	#45; //Method ge."<init>":(Lel;)V
+   5:	aload_0
+   6:	iconst_0
+   7:	putfield	#29; //Field a:Z
+   10:	aload_0
+   11:	iconst_0
+   12:	putfield	#32; //Field b:I
+   15:	aload_0
+   16:	ldc	#5; //String /mob/pigzombie.png
+   18:	putfield	#30; //Field aF:Ljava/lang/String;
+   21:	aload_0
+   22:	ldc	#2; //float 0.5f
+   24:	putfield	#33; //Field bl:F
+   27:	aload_0
+   28:	iconst_5
+   29:	putfield	#35; //Field e:I
+   32:	aload_0
+   33:	iconst_1
+   34:	putfield	#31; //Field ad:Z
+   37:	return
+
+public void b_();
+  Code:
+   0:	aload_0
+   1:	aload_0
+   2:	getfield	#36; //Field f:Ldv;
+   5:	ifnull	13
+   8:	ldc	#3; //float 0.95f
+   10:	goto	15
+   13:	ldc	#2; //float 0.5f
+   15:	putfield	#33; //Field bl:F
+   18:	aload_0
+   19:	getfield	#32; //Field b:I
+   22:	ifle	78
+   25:	aload_0
+   26:	dup
+   27:	getfield	#32; //Field b:I
+   30:	iconst_1
+   31:	isub
+   32:	dup_x1
+   33:	putfield	#32; //Field b:I
+   36:	ifne	78
+   39:	aload_0
+   40:	getfield	#37; //Field l:Lel;
+   43:	aload_0
+   44:	ldc	#8; //String mob.zombiepig.zpigangry
+   46:	aload_0
+   47:	invokevirtual	#53; //Method h:()F
+   50:	fconst_2
+   51:	fmul
+   52:	aload_0
+   53:	getfield	#28; //Field V:Ljava/util/Random;
+   56:	invokevirtual	#55; //Method java/util/Random.nextFloat:()F
+   59:	aload_0
+   60:	getfield	#28; //Field V:Ljava/util/Random;
+   63:	invokevirtual	#55; //Method java/util/Random.nextFloat:()F
+   66:	fsub
+   67:	ldc	#1; //float 0.2f
+   69:	fmul
+   70:	fconst_1
+   71:	fadd
+   72:	ldc	#4; //float 1.8f
+   74:	fmul
+   75:	invokevirtual	#42; //Method el.a:(Ldv;Ljava/lang/String;FF)V
+   78:	aload_0
+   79:	invokespecial	#50; //Method ge.b_:()V
+   82:	return
+
+public boolean a();
+  Code:
+   0:	aload_0
+   1:	getfield	#37; //Field l:Lel;
+   4:	getfield	#24; //Field el.k:I
+   7:	ifle	62
+   10:	aload_0
+   11:	getfield	#37; //Field l:Lel;
+   14:	aload_0
+   15:	getfield	#38; //Field z:Lds;
+   18:	invokevirtual	#40; //Method el.a:(Lds;)Z
+   21:	ifeq	62
+   24:	aload_0
+   25:	getfield	#37; //Field l:Lel;
+   28:	aload_0
+   29:	aload_0
+   30:	getfield	#38; //Field z:Lds;
+   33:	invokevirtual	#41; //Method el.a:(Ldv;Lds;)Ljava/util/List;
+   36:	invokeinterface	#60,  1; //InterfaceMethod java/util/List.size:()I
+   41:	ifne	62
+   44:	aload_0
+   45:	getfield	#37; //Field l:Lel;
+   48:	aload_0
+   49:	getfield	#38; //Field z:Lds;
+   52:	invokevirtual	#43; //Method el.b:(Lds;)Z
+   55:	ifne	62
+   58:	iconst_1
+   59:	goto	63
+   62:	iconst_0
+   63:	ireturn
+
+public void a(t);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	invokespecial	#48; //Method ge.a:(Lt;)V
+   5:	aload_1
+   6:	ldc	#6; //String Angry
+   8:	aload_0
+   9:	getfield	#29; //Field a:Z
+   12:	invokevirtual	#57; //Method t.a:(Ljava/lang/String;Z)V
+   15:	return
+
+public void b(t);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	invokespecial	#49; //Method ge.b:(Lt;)V
+   5:	aload_0
+   6:	aload_1
+   7:	ldc	#6; //String Angry
+   9:	invokevirtual	#58; //Method t.l:(Ljava/lang/String;)Z
+   12:	putfield	#29; //Field a:Z
+   15:	return
+
+protected dv k();
+  Code:
+   0:	aload_0
+   1:	getfield	#29; //Field a:Z
+   4:	ifne	9
+   7:	aconst_null
+   8:	areturn
+   9:	aload_0
+   10:	invokespecial	#51; //Method ge.k:()Ldv;
+   13:	areturn
+
+public void D();
+  Code:
+   0:	aload_0
+   1:	invokespecial	#46; //Method ge.D:()V
+   4:	return
+
+public boolean a(dv, int);
+  Code:
+   0:	aload_1
+   1:	instanceof	#15; //class ft
+   4:	ifeq	91
+   7:	aload_0
+   8:	getfield	#37; //Field l:Lel;
+   11:	aload_0
+   12:	aload_0
+   13:	getfield	#38; //Field z:Lds;
+   16:	ldc2_w	#22; //double 32.0d
+   19:	ldc2_w	#22; //double 32.0d
+   22:	ldc2_w	#22; //double 32.0d
+   25:	invokevirtual	#39; //Method ds.b:(DDD)Lds;
+   28:	invokevirtual	#44; //Method el.b:(Ldv;Lds;)Ljava/util/List;
+   31:	astore_3
+   32:	iconst_0
+   33:	istore	4
+   35:	iload	4
+   37:	aload_3
+   38:	invokeinterface	#60,  1; //InterfaceMethod java/util/List.size:()I
+   43:	if_icmpge	86
+   46:	aload_3
+   47:	iload	4
+   49:	invokeinterface	#59,  2; //InterfaceMethod java/util/List.get:(I)Ljava/lang/Object;
+   54:	checkcast	#12; //class dv
+   57:	astore	5
+   59:	aload	5
+   61:	instanceof	#18; //class it
+   64:	ifeq	80
+   67:	aload	5
+   69:	checkcast	#18; //class it
+   72:	astore	6
+   74:	aload	6
+   76:	aload_1
+   77:	invokespecial	#54; //Method h:(Ldv;)V
+   80:	iinc	4, 1
+   83:	goto	35
+   86:	aload_0
+   87:	aload_1
+   88:	invokespecial	#54; //Method h:(Ldv;)V
+   91:	aload_0
+   92:	aload_1
+   93:	iload_2
+   94:	invokespecial	#47; //Method ge.a:(Ldv;I)Z
+   97:	ireturn
+
+protected java.lang.String d();
+  Code:
+   0:	ldc	#7; //String mob.zombiepig.zpig
+   2:	areturn
+
+protected java.lang.String e();
+  Code:
+   0:	ldc	#10; //String mob.zombiepig.zpighurt
+   2:	areturn
+
+protected java.lang.String f();
+  Code:
+   0:	ldc	#9; //String mob.zombiepig.zpigdeath
+   2:	areturn
+
+protected int g();
+  Code:
+   0:	getstatic	#27; //Field fq.ap:Lfq;
+   3:	getfield	#26; //Field fq.aW:I
+   6:	ireturn
+
+static {};
+  Code:
+   0:	new	#17; //class hh
+   3:	dup
+   4:	getstatic	#25; //Field fq.E:Lfq;
+   7:	iconst_1
+   8:	invokespecial	#52; //Method hh."<init>":(Lfq;I)V
+   11:	putstatic	#34; //Field c:Lhh;
+   14:	return
+
+}
+

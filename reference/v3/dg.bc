@@ -1,0 +1,24 @@
+Compiled from SourceFile
+public class dg extends fw{
+public dg(int, int);
+  Code:
+   0:	aload_0
+   1:	iload_1
+   2:	iload_2
+   3:	getstatic	#7; //Field jr.v:Ljr;
+   6:	invokespecial	#8; //Method fw."<init>":(IILjr;)V
+   9:	return
+
+public int a(int, java.util.Random);
+  Code:
+   0:	getstatic	#5; //Field fq.aG:Lfq;
+   3:	getfield	#6; //Field fq.aW:I
+   6:	ireturn
+
+public int a(java.util.Random);
+  Code:
+   0:	iconst_4
+   1:	ireturn
+
+}
+

@@ -1,0 +1,17 @@
+Compiled from SourceFile
+public class di extends fs{
+public di(int);
+  Code:
+   0:	aload_0
+   1:	iload_1
+   2:	invokespecial	#5; //Method fs."<init>":(I)V
+   5:	aload_0
+   6:	iconst_1
+   7:	putfield	#3; //Field aX:I
+   10:	aload_0
+   11:	bipush	64
+   13:	putfield	#4; //Field aY:I
+   16:	return
+
+}
+

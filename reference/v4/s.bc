@@ -1,0 +1,68 @@
+Compiled from SourceFile
+public class s extends io{
+public int a;
+
+public int b;
+
+public s();
+  Code:
+   0:	aload_0
+   1:	invokespecial	#12; //Method io."<init>":()V
+   4:	return
+
+public s(dw, dw);
+  Code:
+   0:	aload_0
+   1:	invokespecial	#12; //Method io."<init>":()V
+   4:	aload_0
+   5:	aload_1
+   6:	getfield	#8; //Field dw.g:I
+   9:	putfield	#9; //Field a:I
+   12:	aload_0
+   13:	aload_2
+   14:	ifnull	24
+   17:	aload_2
+   18:	getfield	#8; //Field dw.g:I
+   21:	goto	25
+   24:	iconst_m1
+   25:	putfield	#10; //Field b:I
+   28:	return
+
+public int a();
+  Code:
+   0:	bipush	8
+   2:	ireturn
+
+public void a(java.io.DataInputStream);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	invokevirtual	#13; //Method java/io/DataInputStream.readInt:()I
+   5:	putfield	#9; //Field a:I
+   8:	aload_0
+   9:	aload_1
+   10:	invokevirtual	#13; //Method java/io/DataInputStream.readInt:()I
+   13:	putfield	#10; //Field b:I
+   16:	return
+
+public void a(java.io.DataOutputStream);
+  Code:
+   0:	aload_1
+   1:	aload_0
+   2:	getfield	#9; //Field a:I
+   5:	invokevirtual	#14; //Method java/io/DataOutputStream.writeInt:(I)V
+   8:	aload_1
+   9:	aload_0
+   10:	getfield	#10; //Field b:I
+   13:	invokevirtual	#14; //Method java/io/DataOutputStream.writeInt:(I)V
+   16:	return
+
+public void a(ey);
+  Code:
+   0:	aload_1
+   1:	aload_0
+   2:	invokevirtual	#11; //Method ey.a:(Ls;)V
+   5:	return
+
+}
+

@@ -1,0 +1,12 @@
+Compiled from SourceFile
+public class bh extends jy{
+public bh(int, int);
+  Code:
+   0:	aload_0
+   1:	iload_1
+   2:	iload_2
+   3:	invokespecial	#3; //Method jy."<init>":(II)V
+   6:	return
+
+}
+

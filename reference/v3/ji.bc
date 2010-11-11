@@ -1,0 +1,28 @@
+Compiled from SourceFile
+public class ji extends ha{
+public ji();
+  Code:
+   0:	aload_0
+   1:	invokespecial	#5; //Method ha."<init>":()V
+   4:	return
+
+void a(java.io.DataInput);
+  Code:
+   0:	return
+
+void a(java.io.DataOutput);
+  Code:
+   0:	return
+
+public byte a();
+  Code:
+   0:	iconst_0
+   1:	ireturn
+
+public java.lang.String toString();
+  Code:
+   0:	ldc	#1; //String END
+   2:	areturn
+
+}
+

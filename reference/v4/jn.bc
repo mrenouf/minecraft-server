@@ -1,0 +1,58 @@
+Compiled from SourceFile
+public final class jn extends java.lang.Enum{
+public static final jn a;
+
+public static final jn b;
+
+public final java.lang.Class c;
+
+public final int d;
+
+public static jn[] values();
+  Code:
+   0:	getstatic	#12; //Field e:[Ljn;
+   3:	invokevirtual	#13; //Method "[Ljn;".clone:()Ljava/lang/Object;
+   6:	checkcast	#3; //class "[Ljn;"
+   9:	areturn
+
+public static jn valueOf(java.lang.String);
+  Code:
+   0:	ldc	#7; //class jn
+   2:	aload_0
+   3:	invokestatic	#15; //Method java/lang/Enum.valueOf:(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+   6:	checkcast	#7; //class jn
+   9:	areturn
+
+static {};
+  Code:
+   0:	new	#7; //class jn
+   3:	dup
+   4:	ldc	#2; //String monster
+   6:	iconst_0
+   7:	ldc	#5; //class en
+   9:	bipush	100
+   11:	invokespecial	#16; //Method "<init>":(Ljava/lang/String;ILjava/lang/Class;I)V
+   14:	putstatic	#8; //Field a:Ljn;
+   17:	new	#7; //class jn
+   20:	dup
+   21:	ldc	#1; //String creature
+   23:	iconst_1
+   24:	ldc	#4; //class ax
+   26:	bipush	20
+   28:	invokespecial	#16; //Method "<init>":(Ljava/lang/String;ILjava/lang/Class;I)V
+   31:	putstatic	#9; //Field b:Ljn;
+   34:	iconst_2
+   35:	anewarray	#7; //class jn
+   38:	dup
+   39:	iconst_0
+   40:	getstatic	#8; //Field a:Ljn;
+   43:	aastore
+   44:	dup
+   45:	iconst_1
+   46:	getstatic	#9; //Field b:Ljn;
+   49:	aastore
+   50:	putstatic	#12; //Field e:[Ljn;
+   53:	return
+
+}
+

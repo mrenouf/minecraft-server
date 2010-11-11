@@ -1,0 +1,39 @@
+Compiled from SourceFile
+final class u extends java.awt.event.WindowAdapter{
+final net.minecraft.server.MinecraftServer a;
+
+u(net.minecraft.server.MinecraftServer);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	putfield	#11; //Field a:Lnet/minecraft/server/MinecraftServer;
+   5:	aload_0
+   6:	invokespecial	#12; //Method java/awt/event/WindowAdapter."<init>":()V
+   9:	return
+
+public void windowClosing(java.awt.event.WindowEvent);
+  Code:
+   0:	aload_0
+   1:	getfield	#11; //Field a:Lnet/minecraft/server/MinecraftServer;
+   4:	invokevirtual	#16; //Method net/minecraft/server/MinecraftServer.a:()V
+   7:	aload_0
+   8:	getfield	#11; //Field a:Lnet/minecraft/server/MinecraftServer;
+   11:	getfield	#10; //Field net/minecraft/server/MinecraftServer.g:Z
+   14:	ifne	34
+   17:	ldc2_w	#8; //long 100l
+   20:	invokestatic	#15; //Method java/lang/Thread.sleep:(J)V
+   23:	goto	7
+   26:	astore_2
+   27:	aload_2
+   28:	invokevirtual	#13; //Method java/lang/InterruptedException.printStackTrace:()V
+   31:	goto	7
+   34:	iconst_0
+   35:	invokestatic	#14; //Method java/lang/System.exit:(I)V
+   38:	return
+  Exception table:
+   from   to  target type
+    17    23    26   Class java/lang/InterruptedException
+
+
+}
+

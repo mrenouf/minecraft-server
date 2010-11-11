@@ -1,0 +1,37 @@
+Compiled from SourceFile
+public class eg extends da{
+public eg(int, int);
+  Code:
+   0:	aload_0
+   1:	iload_1
+   2:	iconst_3
+   3:	iload_2
+   4:	getstatic	#4; //Field bb:[Lfw;
+   7:	invokespecial	#9; //Method da."<init>":(III[Lfw;)V
+   10:	return
+
+static {};
+  Code:
+   0:	iconst_4
+   1:	anewarray	#3; //class fw
+   4:	dup
+   5:	iconst_0
+   6:	getstatic	#8; //Field fw.y:Lfw;
+   9:	aastore
+   10:	dup
+   11:	iconst_1
+   12:	getstatic	#6; //Field fw.ao:Lfw;
+   15:	aastore
+   16:	dup
+   17:	iconst_2
+   18:	getstatic	#5; //Field fw.K:Lfw;
+   21:	aastore
+   22:	dup
+   23:	iconst_3
+   24:	getstatic	#7; //Field fw.av:Lfw;
+   27:	aastore
+   28:	putstatic	#4; //Field bb:[Lfw;
+   31:	return
+
+}
+

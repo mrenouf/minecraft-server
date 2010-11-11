@@ -1,0 +1,86 @@
+Compiled from SourceFile
+public class iz extends fs{
+public iz(int);
+  Code:
+   0:	aload_0
+   1:	iload_1
+   2:	invokespecial	#21; //Method fs."<init>":(I)V
+   5:	aload_0
+   6:	iconst_1
+   7:	putfield	#14; //Field aX:I
+   10:	aload_0
+   11:	bipush	64
+   13:	putfield	#15; //Field aY:I
+   16:	return
+
+public boolean a(hj, fv, em, int, int, int, int);
+  Code:
+   0:	iload	7
+   2:	ifne	8
+   5:	iinc	5, -1
+   8:	iload	7
+   10:	iconst_1
+   11:	if_icmpne	17
+   14:	iinc	5, 1
+   17:	iload	7
+   19:	iconst_2
+   20:	if_icmpne	26
+   23:	iinc	6, -1
+   26:	iload	7
+   28:	iconst_3
+   29:	if_icmpne	35
+   32:	iinc	6, 1
+   35:	iload	7
+   37:	iconst_4
+   38:	if_icmpne	44
+   41:	iinc	4, -1
+   44:	iload	7
+   46:	iconst_5
+   47:	if_icmpne	53
+   50:	iinc	4, 1
+   53:	aload_3
+   54:	iload	4
+   56:	iload	5
+   58:	iload	6
+   60:	invokevirtual	#19; //Method em.a:(III)I
+   63:	istore	8
+   65:	iload	8
+   67:	ifne	127
+   70:	aload_3
+   71:	iload	4
+   73:	i2d
+   74:	ldc2_w	#11; //double 0.5d
+   77:	dadd
+   78:	iload	5
+   80:	i2d
+   81:	ldc2_w	#11; //double 0.5d
+   84:	dadd
+   85:	iload	6
+   87:	i2d
+   88:	ldc2_w	#11; //double 0.5d
+   91:	dadd
+   92:	ldc	#3; //String fire.ignite
+   94:	fconst_1
+   95:	getstatic	#16; //Field b:Ljava/util/Random;
+   98:	invokevirtual	#23; //Method java/util/Random.nextFloat:()F
+   101:	ldc	#1; //float 0.4f
+   103:	fmul
+   104:	ldc	#2; //float 0.8f
+   106:	fadd
+   107:	invokevirtual	#18; //Method em.a:(DDDLjava/lang/String;FF)V
+   110:	aload_3
+   111:	iload	4
+   113:	iload	5
+   115:	iload	6
+   117:	getstatic	#13; //Field fy.ar:Ljo;
+   120:	getfield	#17; //Field jo.bh:I
+   123:	invokevirtual	#20; //Method em.d:(IIII)Z
+   126:	pop
+   127:	aload_1
+   128:	iconst_1
+   129:	invokevirtual	#22; //Method hj.a:(I)V
+   132:	iconst_1
+   133:	ireturn
+
+}
+

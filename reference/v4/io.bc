@@ -1,0 +1,284 @@
+Compiled from SourceFile
+public abstract class io extends java.lang.Object{
+public boolean j;
+
+public io();
+  Code:
+   0:	aload_0
+   1:	invokespecial	#73; //Method java/lang/Object."<init>":()V
+   4:	aload_0
+   5:	iconst_0
+   6:	putfield	#57; //Field j:Z
+   9:	return
+
+static void a(int, java.lang.Class);
+  Code:
+   0:	getstatic	#55; //Field a:Ljava/util/Map;
+   3:	iload_0
+   4:	invokestatic	#72; //Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+   7:	invokeinterface	#81,  2; //InterfaceMethod java/util/Map.containsKey:(Ljava/lang/Object;)Z
+   12:	ifeq	42
+   15:	new	#41; //class java/lang/IllegalArgumentException
+   18:	dup
+   19:	new	#44; //class java/lang/StringBuilder
+   22:	dup
+   23:	invokespecial	#75; //Method java/lang/StringBuilder."<init>":()V
+   26:	ldc	#3; //String Duplicate packet id:
+   28:	invokevirtual	#78; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   31:	iload_0
+   32:	invokevirtual	#76; //Method java/lang/StringBuilder.append:(I)Ljava/lang/StringBuilder;
+   35:	invokevirtual	#79; //Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+   38:	invokespecial	#70; //Method java/lang/IllegalArgumentException."<init>":(Ljava/lang/String;)V
+   41:	athrow
+   42:	getstatic	#56; //Field b:Ljava/util/Map;
+   45:	aload_1
+   46:	invokeinterface	#81,  2; //InterfaceMethod java/util/Map.containsKey:(Ljava/lang/Object;)Z
+   51:	ifeq	81
+   54:	new	#41; //class java/lang/IllegalArgumentException
+   57:	dup
+   58:	new	#44; //class java/lang/StringBuilder
+   61:	dup
+   62:	invokespecial	#75; //Method java/lang/StringBuilder."<init>":()V
+   65:	ldc	#2; //String Duplicate packet class:
+   67:	invokevirtual	#78; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   70:	aload_1
+   71:	invokevirtual	#77; //Method java/lang/StringBuilder.append:(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+   74:	invokevirtual	#79; //Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+   77:	invokespecial	#70; //Method java/lang/IllegalArgumentException."<init>":(Ljava/lang/String;)V
+   80:	athrow
+   81:	getstatic	#55; //Field a:Ljava/util/Map;
+   84:	iload_0
+   85:	invokestatic	#72; //Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+   88:	aload_1
+   89:	invokeinterface	#83,  3; //InterfaceMethod java/util/Map.put:(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+   94:	pop
+   95:	getstatic	#56; //Field b:Ljava/util/Map;
+   98:	aload_1
+   99:	iload_0
+   100:	invokestatic	#72; //Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+   103:	invokeinterface	#83,  3; //InterfaceMethod java/util/Map.put:(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+   108:	pop
+   109:	return
+
+public static io a(int);
+  Code:
+   0:	getstatic	#55; //Field a:Ljava/util/Map;
+   3:	iload_0
+   4:	invokestatic	#72; //Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+   7:	invokeinterface	#82,  2; //InterfaceMethod java/util/Map.get:(Ljava/lang/Object;)Ljava/lang/Object;
+   12:	checkcast	#39; //class java/lang/Class
+   15:	astore_1
+   16:	aload_1
+   17:	ifnonnull	22
+   20:	aconst_null
+   21:	areturn
+   22:	aload_1
+   23:	invokevirtual	#68; //Method java/lang/Class.newInstance:()Ljava/lang/Object;
+   26:	checkcast	#34; //class io
+   29:	areturn
+   30:	astore_1
+   31:	aload_1
+   32:	invokevirtual	#69; //Method java/lang/Exception.printStackTrace:()V
+   35:	getstatic	#58; //Field java/lang/System.out:Ljava/io/PrintStream;
+   38:	new	#44; //class java/lang/StringBuilder
+   41:	dup
+   42:	invokespecial	#75; //Method java/lang/StringBuilder."<init>":()V
+   45:	ldc	#4; //String Skipping packet with id 
+   47:	invokevirtual	#78; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   50:	iload_0
+   51:	invokevirtual	#76; //Method java/lang/StringBuilder.append:(I)Ljava/lang/StringBuilder;
+   54:	invokevirtual	#79; //Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+   57:	invokevirtual	#67; //Method java/io/PrintStream.println:(Ljava/lang/String;)V
+   60:	aconst_null
+   61:	areturn
+  Exception table:
+   from   to  target type
+     0    21    30   Class java/lang/Exception
+
+    22    29    30   Class java/lang/Exception
+
+
+public final int b();
+  Code:
+   0:	getstatic	#56; //Field b:Ljava/util/Map;
+   3:	aload_0
+   4:	invokevirtual	#74; //Method java/lang/Object.getClass:()Ljava/lang/Class;
+   7:	invokeinterface	#82,  2; //InterfaceMethod java/util/Map.get:(Ljava/lang/Object;)Ljava/lang/Object;
+   12:	checkcast	#42; //class java/lang/Integer
+   15:	invokevirtual	#71; //Method java/lang/Integer.intValue:()I
+   18:	ireturn
+
+public static io b(java.io.DataInputStream);
+  Code:
+   0:	aload_0
+   1:	invokevirtual	#64; //Method java/io/DataInputStream.read:()I
+   4:	istore_1
+   5:	iload_1
+   6:	iconst_m1
+   7:	if_icmpne	12
+   10:	aconst_null
+   11:	areturn
+   12:	iload_1
+   13:	invokestatic	#59; //Method a:(I)Lio;
+   16:	astore_2
+   17:	aload_2
+   18:	ifnonnull	48
+   21:	new	#37; //class java/io/IOException
+   24:	dup
+   25:	new	#44; //class java/lang/StringBuilder
+   28:	dup
+   29:	invokespecial	#75; //Method java/lang/StringBuilder."<init>":()V
+   32:	ldc	#1; //String Bad packet id 
+   34:	invokevirtual	#78; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   37:	iload_1
+   38:	invokevirtual	#76; //Method java/lang/StringBuilder.append:(I)Ljava/lang/StringBuilder;
+   41:	invokevirtual	#79; //Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+   44:	invokespecial	#66; //Method java/io/IOException."<init>":(Ljava/lang/String;)V
+   47:	athrow
+   48:	aload_2
+   49:	aload_0
+   50:	invokevirtual	#61; //Method a:(Ljava/io/DataInputStream;)V
+   53:	aload_2
+   54:	areturn
+
+public static void a(io, java.io.DataOutputStream);
+  Code:
+   0:	aload_1
+   1:	aload_0
+   2:	invokevirtual	#63; //Method b:()I
+   5:	invokevirtual	#65; //Method java/io/DataOutputStream.write:(I)V
+   8:	aload_0
+   9:	aload_1
+   10:	invokevirtual	#62; //Method a:(Ljava/io/DataOutputStream;)V
+   13:	return
+
+public abstract void a(java.io.DataInputStream);
+
+public abstract void a(java.io.DataOutputStream);
+
+public abstract void a(ey);
+
+public abstract int a();
+
+static {};
+  Code:
+   0:	new	#46; //class java/util/HashMap
+   3:	dup
+   4:	invokespecial	#80; //Method java/util/HashMap."<init>":()V
+   7:	putstatic	#55; //Field a:Ljava/util/Map;
+   10:	new	#46; //class java/util/HashMap
+   13:	dup
+   14:	invokespecial	#80; //Method java/util/HashMap."<init>":()V
+   17:	putstatic	#56; //Field b:Ljava/util/Map;
+   20:	iconst_0
+   21:	ldc	#50; //class ke
+   23:	invokestatic	#60; //Method a:(ILjava/lang/Class;)V
+   26:	iconst_1
+   27:	ldc	#6; //class ad
+   29:	invokestatic	#60; //Method a:(ILjava/lang/Class;)V
+   32:	iconst_2
+   33:	ldc	#21; //class f
+   35:	invokestatic	#60; //Method a:(ILjava/lang/Class;)V
+   38:	iconst_3
+   39:	ldc	#8; //class bg
+   41:	invokestatic	#60; //Method a:(ILjava/lang/Class;)V
+   44:	iconst_4
+   45:	ldc	#27; //class gf
+   47:	invokestatic	#60; //Method a:(ILjava/lang/Class;)V
+   50:	iconst_5
+   51:	ldc	#54; //class u
+   53:	invokestatic	#60; //Method a:(ILjava/lang/Class;)V
+   56:	bipush	6
+   58:	ldc	#10; //class cn
+   60:	invokestatic	#60; //Method a:(ILjava/lang/Class;)V
+   63:	bipush	7
+   65:	ldc	#5; //class a
+   67:	invokestatic	#60; //Method a:(ILjava/lang/Class;)V
+   70:	bipush	10
+   72:	ldc	#30; //class gz
+   74:	invokestatic	#60; //Method a:(ILjava/lang/Class;)V
+   77:	bipush	11
+   79:	ldc	#7; //class ae
+   81:	invokestatic	#60; //Method a:(ILjava/lang/Class;)V
+   84:	bipush	12
+   86:	ldc	#29; //class gq
+   88:	invokestatic	#60; //Method a:(ILjava/lang/Class;)V
+   91:	bipush	13
+   93:	ldc	#19; //class ed
+   95:	invokestatic	#60; //Method a:(ILjava/lang/Class;)V
+   98:	bipush	14
+   100:	ldc	#32; //class hz
+   102:	invokestatic	#60; //Method a:(ILjava/lang/Class;)V
+   105:	bipush	15
+   107:	ldc	#26; //class fx
+   109:	invokestatic	#60; //Method a:(ILjava/lang/Class;)V
+   112:	bipush	16
+   114:	ldc	#28; //class gp
+   116:	invokestatic	#60; //Method a:(ILjava/lang/Class;)V
+   119:	bipush	17
+   121:	ldc	#22; //class fd
+   123:	invokestatic	#60; //Method a:(ILjava/lang/Class;)V
+   126:	bipush	18
+   128:	ldc	#52; //class q
+   130:	invokestatic	#60; //Method a:(ILjava/lang/Class;)V
+   133:	bipush	20
+   135:	ldc	#13; //class d
+   137:	invokestatic	#60; //Method a:(ILjava/lang/Class;)V
+   140:	bipush	21
+   142:	ldc	#51; //class l
+   144:	invokestatic	#60; //Method a:(ILjava/lang/Class;)V
+   147:	bipush	22
+   149:	ldc	#11; //class cq
+   151:	invokestatic	#60; //Method a:(ILjava/lang/Class;)V
+   154:	bipush	23
+   156:	ldc	#18; //class dz
+   158:	invokestatic	#60; //Method a:(ILjava/lang/Class;)V
+   161:	bipush	24
+   163:	ldc	#31; //class hq
+   165:	invokestatic	#60; //Method a:(ILjava/lang/Class;)V
+   168:	bipush	28
+   170:	ldc	#25; //class fq
+   172:	invokestatic	#60; //Method a:(ILjava/lang/Class;)V
+   175:	bipush	29
+   177:	ldc	#14; //class df
+   179:	invokestatic	#60; //Method a:(ILjava/lang/Class;)V
+   182:	bipush	30
+   184:	ldc	#24; //class fp
+   186:	invokestatic	#60; //Method a:(ILjava/lang/Class;)V
+   189:	bipush	31
+   191:	ldc	#20; //class ef
+   193:	invokestatic	#60; //Method a:(ILjava/lang/Class;)V
+   196:	bipush	32
+   198:	ldc	#15; //class dj
+   200:	invokestatic	#60; //Method a:(ILjava/lang/Class;)V
+   203:	bipush	33
+   205:	ldc	#9; //class bp
+   207:	invokestatic	#60; //Method a:(ILjava/lang/Class;)V
+   210:	bipush	34
+   212:	ldc	#12; //class cr
+   214:	invokestatic	#60; //Method a:(ILjava/lang/Class;)V
+   217:	bipush	39
+   219:	ldc	#53; //class s
+   221:	invokestatic	#60; //Method a:(ILjava/lang/Class;)V
+   224:	bipush	50
+   226:	ldc	#17; //class dn
+   228:	invokestatic	#60; //Method a:(ILjava/lang/Class;)V
+   231:	bipush	51
+   233:	ldc	#16; //class dl
+   235:	invokestatic	#60; //Method a:(ILjava/lang/Class;)V
+   238:	bipush	52
+   240:	ldc	#33; //class ie
+   242:	invokestatic	#60; //Method a:(ILjava/lang/Class;)V
+   245:	bipush	53
+   247:	ldc	#23; //class fj
+   249:	invokestatic	#60; //Method a:(ILjava/lang/Class;)V
+   252:	bipush	59
+   254:	ldc	#48; //class jc
+   256:	invokestatic	#60; //Method a:(ILjava/lang/Class;)V
+   259:	sipush	255
+   262:	ldc	#49; //class jr
+   264:	invokestatic	#60; //Method a:(ILjava/lang/Class;)V
+   267:	return
+
+}
+

@@ -1,0 +1,13 @@
+Compiled from SourceFile
+final class ag extends cc{
+ag(java.lang.String, float, float);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	fload_2
+   3:	fload_3
+   4:	invokespecial	#4; //Method cc."<init>":(Ljava/lang/String;FF)V
+   7:	return
+
+}
+

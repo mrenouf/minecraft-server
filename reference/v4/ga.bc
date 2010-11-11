@@ -1,0 +1,29 @@
+Compiled from SourceFile
+public class ga extends fy{
+public ga(int, int);
+  Code:
+   0:	aload_0
+   1:	iload_1
+   2:	iload_2
+   3:	getstatic	#5; //Field jt.c:Ljt;
+   6:	invokespecial	#6; //Method fy."<init>":(IILjt;)V
+   9:	return
+
+public int a(int);
+  Code:
+   0:	iload_1
+   1:	iconst_1
+   2:	if_icmpgt	7
+   5:	iconst_4
+   6:	ireturn
+   7:	aload_0
+   8:	getfield	#4; //Field bg:I
+   11:	ireturn
+
+public int a(java.util.Random);
+  Code:
+   0:	iconst_0
+   1:	ireturn
+
+}
+

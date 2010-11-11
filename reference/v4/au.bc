@@ -1,0 +1,377 @@
+Compiled from SourceFile
+public class au extends fs{
+public au(int, int);
+  Code:
+   0:	aload_0
+   1:	iload_1
+   2:	invokespecial	#70; //Method fs."<init>":(I)V
+   5:	aload_0
+   6:	iconst_1
+   7:	putfield	#29; //Field aX:I
+   10:	aload_0
+   11:	bipush	64
+   13:	putfield	#30; //Field aY:I
+   16:	aload_0
+   17:	iload_2
+   18:	putfield	#28; //Field a:I
+   21:	return
+
+public hj a(hj, em, fv);
+  Code:
+   0:	fconst_1
+   1:	fstore	4
+   3:	aload_3
+   4:	getfield	#47; //Field fv.y:F
+   7:	aload_3
+   8:	getfield	#45; //Field fv.w:F
+   11:	aload_3
+   12:	getfield	#47; //Field fv.y:F
+   15:	fsub
+   16:	fload	4
+   18:	fmul
+   19:	fadd
+   20:	fstore	5
+   22:	aload_3
+   23:	getfield	#46; //Field fv.x:F
+   26:	aload_3
+   27:	getfield	#44; //Field fv.v:F
+   30:	aload_3
+   31:	getfield	#46; //Field fv.x:F
+   34:	fsub
+   35:	fload	4
+   37:	fmul
+   38:	fadd
+   39:	fstore	6
+   41:	aload_3
+   42:	getfield	#38; //Field fv.m:D
+   45:	aload_3
+   46:	getfield	#41; //Field fv.p:D
+   49:	aload_3
+   50:	getfield	#38; //Field fv.m:D
+   53:	dsub
+   54:	fload	4
+   56:	f2d
+   57:	dmul
+   58:	dadd
+   59:	dstore	7
+   61:	aload_3
+   62:	getfield	#39; //Field fv.n:D
+   65:	aload_3
+   66:	getfield	#42; //Field fv.q:D
+   69:	aload_3
+   70:	getfield	#39; //Field fv.n:D
+   73:	dsub
+   74:	fload	4
+   76:	f2d
+   77:	dmul
+   78:	dadd
+   79:	ldc2_w	#24; //double 1.62d
+   82:	dadd
+   83:	aload_3
+   84:	getfield	#37; //Field fv.G:F
+   87:	f2d
+   88:	dsub
+   89:	dstore	9
+   91:	aload_3
+   92:	getfield	#40; //Field fv.o:D
+   95:	aload_3
+   96:	getfield	#43; //Field fv.r:D
+   99:	aload_3
+   100:	getfield	#40; //Field fv.o:D
+   103:	dsub
+   104:	fload	4
+   106:	f2d
+   107:	dmul
+   108:	dadd
+   109:	dstore	11
+   111:	dload	7
+   113:	dload	9
+   115:	dload	11
+   117:	invokestatic	#59; //Method bc.b:(DDD)Lbc;
+   120:	astore	13
+   122:	fload	6
+   124:	fneg
+   125:	ldc	#1; //float 0.017453292f
+   127:	fmul
+   128:	ldc	#5; //float 3.1415927f
+   130:	fsub
+   131:	invokestatic	#72; //Method hd.b:(F)F
+   134:	fstore	14
+   136:	fload	6
+   138:	fneg
+   139:	ldc	#1; //float 0.017453292f
+   141:	fmul
+   142:	ldc	#5; //float 3.1415927f
+   144:	fsub
+   145:	invokestatic	#71; //Method hd.a:(F)F
+   148:	fstore	15
+   150:	fload	5
+   152:	fneg
+   153:	ldc	#1; //float 0.017453292f
+   155:	fmul
+   156:	invokestatic	#72; //Method hd.b:(F)F
+   159:	fneg
+   160:	fstore	16
+   162:	fload	5
+   164:	fneg
+   165:	ldc	#1; //float 0.017453292f
+   167:	fmul
+   168:	invokestatic	#71; //Method hd.a:(F)F
+   171:	fstore	17
+   173:	fload	15
+   175:	fload	16
+   177:	fmul
+   178:	fstore	18
+   180:	fload	17
+   182:	fstore	19
+   184:	fload	14
+   186:	fload	16
+   188:	fmul
+   189:	fstore	20
+   191:	ldc2_w	#26; //double 5.0d
+   194:	dstore	21
+   196:	aload	13
+   198:	fload	18
+   200:	f2d
+   201:	dload	21
+   203:	dmul
+   204:	fload	19
+   206:	f2d
+   207:	dload	21
+   209:	dmul
+   210:	fload	20
+   212:	f2d
+   213:	dload	21
+   215:	dmul
+   216:	invokevirtual	#60; //Method bc.c:(DDD)Lbc;
+   219:	astore	23
+   221:	aload_2
+   222:	aload	13
+   224:	aload	23
+   226:	aload_0
+   227:	getfield	#28; //Field a:I
+   230:	ifne	237
+   233:	iconst_1
+   234:	goto	238
+   237:	iconst_0
+   238:	invokevirtual	#63; //Method em.a:(Lbc;Lbc;Z)Lgm;
+   241:	astore	24
+   243:	aload	24
+   245:	ifnonnull	250
+   248:	aload_1
+   249:	areturn
+   250:	aload	24
+   252:	getfield	#50; //Field gm.a:I
+   255:	ifne	673
+   258:	aload	24
+   260:	getfield	#51; //Field gm.b:I
+   263:	istore	25
+   265:	aload	24
+   267:	getfield	#52; //Field gm.c:I
+   270:	istore	26
+   272:	aload	24
+   274:	getfield	#53; //Field gm.d:I
+   277:	istore	27
+   279:	aload_2
+   280:	aload_3
+   281:	iload	25
+   283:	iload	26
+   285:	iload	27
+   287:	invokevirtual	#64; //Method em.a:(Lfv;III)Z
+   290:	ifne	295
+   293:	aload_1
+   294:	areturn
+   295:	aload_0
+   296:	getfield	#28; //Field a:I
+   299:	ifne	406
+   302:	aload_2
+   303:	iload	25
+   305:	iload	26
+   307:	iload	27
+   309:	invokevirtual	#68; //Method em.c:(III)Ljt;
+   312:	getstatic	#57; //Field jt.f:Ljt;
+   315:	if_acmpne	354
+   318:	aload_2
+   319:	iload	25
+   321:	iload	26
+   323:	iload	27
+   325:	invokevirtual	#66; //Method em.b:(III)I
+   328:	ifne	354
+   331:	aload_2
+   332:	iload	25
+   334:	iload	26
+   336:	iload	27
+   338:	iconst_0
+   339:	invokevirtual	#69; //Method em.d:(IIII)Z
+   342:	pop
+   343:	new	#17; //class hj
+   346:	dup
+   347:	getstatic	#35; //Field fs.av:Lfs;
+   350:	invokespecial	#73; //Method hj."<init>":(Lfs;)V
+   353:	areturn
+   354:	aload_2
+   355:	iload	25
+   357:	iload	26
+   359:	iload	27
+   361:	invokevirtual	#68; //Method em.c:(III)Ljt;
+   364:	getstatic	#58; //Field jt.g:Ljt;
+   367:	if_acmpne	670
+   370:	aload_2
+   371:	iload	25
+   373:	iload	26
+   375:	iload	27
+   377:	invokevirtual	#66; //Method em.b:(III)I
+   380:	ifne	670
+   383:	aload_2
+   384:	iload	25
+   386:	iload	26
+   388:	iload	27
+   390:	iconst_0
+   391:	invokevirtual	#69; //Method em.d:(IIII)Z
+   394:	pop
+   395:	new	#17; //class hj
+   398:	dup
+   399:	getstatic	#36; //Field fs.aw:Lfs;
+   402:	invokespecial	#73; //Method hj."<init>":(Lfs;)V
+   405:	areturn
+   406:	aload_0
+   407:	getfield	#28; //Field a:I
+   410:	ifge	424
+   413:	new	#17; //class hj
+   416:	dup
+   417:	getstatic	#34; //Field fs.au:Lfs;
+   420:	invokespecial	#73; //Method hj."<init>":(Lfs;)V
+   423:	areturn
+   424:	aload	24
+   426:	getfield	#54; //Field gm.e:I
+   429:	ifne	435
+   432:	iinc	26, -1
+   435:	aload	24
+   437:	getfield	#54; //Field gm.e:I
+   440:	iconst_1
+   441:	if_icmpne	447
+   444:	iinc	26, 1
+   447:	aload	24
+   449:	getfield	#54; //Field gm.e:I
+   452:	iconst_2
+   453:	if_icmpne	459
+   456:	iinc	27, -1
+   459:	aload	24
+   461:	getfield	#54; //Field gm.e:I
+   464:	iconst_3
+   465:	if_icmpne	471
+   468:	iinc	27, 1
+   471:	aload	24
+   473:	getfield	#54; //Field gm.e:I
+   476:	iconst_4
+   477:	if_icmpne	483
+   480:	iinc	25, -1
+   483:	aload	24
+   485:	getfield	#54; //Field gm.e:I
+   488:	iconst_5
+   489:	if_icmpne	495
+   492:	iinc	25, 1
+   495:	aload_2
+   496:	iload	25
+   498:	iload	26
+   500:	iload	27
+   502:	invokevirtual	#62; //Method em.a:(III)I
+   505:	ifeq	524
+   508:	aload_2
+   509:	iload	25
+   511:	iload	26
+   513:	iload	27
+   515:	invokevirtual	#68; //Method em.c:(III)Ljt;
+   518:	invokevirtual	#76; //Method jt.a:()Z
+   521:	ifne	670
+   524:	aload_2
+   525:	getfield	#32; //Field em.q:Lig;
+   528:	getfield	#56; //Field ig.d:Z
+   531:	ifeq	643
+   534:	aload_0
+   535:	getfield	#28; //Field a:I
+   538:	getstatic	#48; //Field fy.A:Lfy;
+   541:	getfield	#49; //Field fy.bh:I
+   544:	if_icmpne	643
+   547:	aload_2
+   548:	dload	7
+   550:	ldc2_w	#22; //double 0.5d
+   553:	dadd
+   554:	dload	9
+   556:	ldc2_w	#22; //double 0.5d
+   559:	dadd
+   560:	dload	11
+   562:	ldc2_w	#22; //double 0.5d
+   565:	dadd
+   566:	ldc	#7; //String random.fizz
+   568:	ldc	#2; //float 0.5f
+   570:	ldc	#4; //float 2.6f
+   572:	aload_2
+   573:	getfield	#31; //Field em.l:Ljava/util/Random;
+   576:	invokevirtual	#75; //Method java/util/Random.nextFloat:()F
+   579:	aload_2
+   580:	getfield	#31; //Field em.l:Ljava/util/Random;
+   583:	invokevirtual	#75; //Method java/util/Random.nextFloat:()F
+   586:	fsub
+   587:	ldc	#3; //float 0.8f
+   589:	fmul
+   590:	fadd
+   591:	invokevirtual	#61; //Method em.a:(DDDLjava/lang/String;FF)V
+   594:	iconst_0
+   595:	istore	28
+   597:	iload	28
+   599:	bipush	8
+   601:	if_icmpge	640
+   604:	aload_2
+   605:	ldc	#6; //String largesmoke
+   607:	iload	25
+   609:	i2d
+   610:	invokestatic	#74; //Method java/lang/Math.random:()D
+   613:	dadd
+   614:	iload	26
+   616:	i2d
+   617:	invokestatic	#74; //Method java/lang/Math.random:()D
+   620:	dadd
+   621:	iload	27
+   623:	i2d
+   624:	invokestatic	#74; //Method java/lang/Math.random:()D
+   627:	dadd
+   628:	dconst_0
+   629:	dconst_0
+   630:	dconst_0
+   631:	invokevirtual	#65; //Method em.a:(Ljava/lang/String;DDDDDD)V
+   634:	iinc	28, 1
+   637:	goto	597
+   640:	goto	659
+   643:	aload_2
+   644:	iload	25
+   646:	iload	26
+   648:	iload	27
+   650:	aload_0
+   651:	getfield	#28; //Field a:I
+   654:	iconst_0
+   655:	invokevirtual	#67; //Method em.b:(IIIII)Z
+   658:	pop
+   659:	new	#17; //class hj
+   662:	dup
+   663:	getstatic	#34; //Field fs.au:Lfs;
+   666:	invokespecial	#73; //Method hj."<init>":(Lfs;)V
+   669:	areturn
+   670:	goto	702
+   673:	aload_0
+   674:	getfield	#28; //Field a:I
+   677:	ifne	702
+   680:	aload	24
+   682:	getfield	#55; //Field gm.g:Ldw;
+   685:	instanceof	#10; //class be
+   688:	ifeq	702
+   691:	new	#17; //class hj
+   694:	dup
+   695:	getstatic	#33; //Field fs.aE:Lfs;
+   698:	invokespecial	#73; //Method hj."<init>":(Lfs;)V
+   701:	areturn
+   702:	aload_1
+   703:	areturn
+
+}
+

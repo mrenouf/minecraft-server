@@ -1,0 +1,10 @@
+Compiled from SourceFile
+public class eo extends ij{
+public eo();
+  Code:
+   0:	aload_0
+   1:	invokespecial	#3; //Method ij."<init>":()V
+   4:	return
+
+}
+

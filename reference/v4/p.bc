@@ -1,0 +1,26 @@
+Compiled from SourceFile
+public class p extends ij{
+public p();
+  Code:
+   0:	aload_0
+   1:	invokespecial	#8; //Method ij."<init>":()V
+   4:	aload_0
+   5:	iconst_2
+   6:	anewarray	#4; //class java/lang/Class
+   9:	dup
+   10:	iconst_0
+   11:	ldc	#1; //class az
+   13:	aastore
+   14:	dup
+   15:	iconst_1
+   16:	ldc	#3; //class iv
+   18:	aastore
+   19:	putfield	#6; //Field r:[Ljava/lang/Class;
+   22:	aload_0
+   23:	iconst_0
+   24:	anewarray	#4; //class java/lang/Class
+   27:	putfield	#7; //Field s:[Ljava/lang/Class;
+   30:	return
+
+}
+

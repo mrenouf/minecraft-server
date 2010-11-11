@@ -1,0 +1,227 @@
+Compiled from SourceFile
+public class ic extends im{
+public int a;
+
+public int b;
+
+public short[] c;
+
+public byte[] d;
+
+public byte[] e;
+
+public int f;
+
+public ic();
+  Code:
+   0:	aload_0
+   1:	invokespecial	#19; //Method im."<init>":()V
+   4:	aload_0
+   5:	iconst_1
+   6:	putfield	#16; //Field j:Z
+   9:	return
+
+public ic(int, int, short[], int, el);
+  Code:
+   0:	aload_0
+   1:	invokespecial	#19; //Method im."<init>":()V
+   4:	aload_0
+   5:	iconst_1
+   6:	putfield	#16; //Field j:Z
+   9:	aload_0
+   10:	iload_1
+   11:	putfield	#10; //Field a:I
+   14:	aload_0
+   15:	iload_2
+   16:	putfield	#11; //Field b:I
+   19:	aload_0
+   20:	iload	4
+   22:	putfield	#15; //Field f:I
+   25:	aload_0
+   26:	iload	4
+   28:	newarray short
+   30:	putfield	#12; //Field c:[S
+   33:	aload_0
+   34:	iload	4
+   36:	newarray byte
+   38:	putfield	#13; //Field d:[B
+   41:	aload_0
+   42:	iload	4
+   44:	newarray byte
+   46:	putfield	#14; //Field e:[B
+   49:	aload	5
+   51:	iload_1
+   52:	iload_2
+   53:	invokevirtual	#17; //Method el.c:(II)Ljn;
+   56:	astore	6
+   58:	iconst_0
+   59:	istore	7
+   61:	iload	7
+   63:	iload	4
+   65:	if_icmpge	157
+   68:	aload_3
+   69:	iload	7
+   71:	saload
+   72:	bipush	12
+   74:	ishr
+   75:	bipush	15
+   77:	iand
+   78:	istore	8
+   80:	aload_3
+   81:	iload	7
+   83:	saload
+   84:	bipush	8
+   86:	ishr
+   87:	bipush	15
+   89:	iand
+   90:	istore	9
+   92:	aload_3
+   93:	iload	7
+   95:	saload
+   96:	sipush	255
+   99:	iand
+   100:	istore	10
+   102:	aload_0
+   103:	getfield	#12; //Field c:[S
+   106:	iload	7
+   108:	aload_3
+   109:	iload	7
+   111:	saload
+   112:	sastore
+   113:	aload_0
+   114:	getfield	#13; //Field d:[B
+   117:	iload	7
+   119:	aload	6
+   121:	iload	8
+   123:	iload	10
+   125:	iload	9
+   127:	invokevirtual	#26; //Method jn.a:(III)I
+   130:	i2b
+   131:	bastore
+   132:	aload_0
+   133:	getfield	#14; //Field e:[B
+   136:	iload	7
+   138:	aload	6
+   140:	iload	8
+   142:	iload	10
+   144:	iload	9
+   146:	invokevirtual	#27; //Method jn.b:(III)I
+   149:	i2b
+   150:	bastore
+   151:	iinc	7, 1
+   154:	goto	61
+   157:	return
+
+public void a(java.io.DataInputStream);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	invokevirtual	#21; //Method java/io/DataInputStream.readInt:()I
+   5:	putfield	#10; //Field a:I
+   8:	aload_0
+   9:	aload_1
+   10:	invokevirtual	#21; //Method java/io/DataInputStream.readInt:()I
+   13:	putfield	#11; //Field b:I
+   16:	aload_0
+   17:	aload_1
+   18:	invokevirtual	#22; //Method java/io/DataInputStream.readShort:()S
+   21:	ldc	#1; //int 65535
+   23:	iand
+   24:	putfield	#15; //Field f:I
+   27:	aload_0
+   28:	aload_0
+   29:	getfield	#15; //Field f:I
+   32:	newarray short
+   34:	putfield	#12; //Field c:[S
+   37:	aload_0
+   38:	aload_0
+   39:	getfield	#15; //Field f:I
+   42:	newarray byte
+   44:	putfield	#13; //Field d:[B
+   47:	aload_0
+   48:	aload_0
+   49:	getfield	#15; //Field f:I
+   52:	newarray byte
+   54:	putfield	#14; //Field e:[B
+   57:	iconst_0
+   58:	istore_2
+   59:	iload_2
+   60:	aload_0
+   61:	getfield	#15; //Field f:I
+   64:	if_icmpge	83
+   67:	aload_0
+   68:	getfield	#12; //Field c:[S
+   71:	iload_2
+   72:	aload_1
+   73:	invokevirtual	#22; //Method java/io/DataInputStream.readShort:()S
+   76:	sastore
+   77:	iinc	2, 1
+   80:	goto	59
+   83:	aload_1
+   84:	aload_0
+   85:	getfield	#13; //Field d:[B
+   88:	invokevirtual	#20; //Method java/io/DataInputStream.readFully:([B)V
+   91:	aload_1
+   92:	aload_0
+   93:	getfield	#14; //Field e:[B
+   96:	invokevirtual	#20; //Method java/io/DataInputStream.readFully:([B)V
+   99:	return
+
+public void a(java.io.DataOutputStream);
+  Code:
+   0:	aload_1
+   1:	aload_0
+   2:	getfield	#10; //Field a:I
+   5:	invokevirtual	#24; //Method java/io/DataOutputStream.writeInt:(I)V
+   8:	aload_1
+   9:	aload_0
+   10:	getfield	#11; //Field b:I
+   13:	invokevirtual	#24; //Method java/io/DataOutputStream.writeInt:(I)V
+   16:	aload_1
+   17:	aload_0
+   18:	getfield	#15; //Field f:I
+   21:	i2s
+   22:	invokevirtual	#25; //Method java/io/DataOutputStream.writeShort:(I)V
+   25:	iconst_0
+   26:	istore_2
+   27:	iload_2
+   28:	aload_0
+   29:	getfield	#15; //Field f:I
+   32:	if_icmpge	51
+   35:	aload_1
+   36:	aload_0
+   37:	getfield	#12; //Field c:[S
+   40:	iload_2
+   41:	saload
+   42:	invokevirtual	#25; //Method java/io/DataOutputStream.writeShort:(I)V
+   45:	iinc	2, 1
+   48:	goto	27
+   51:	aload_1
+   52:	aload_0
+   53:	getfield	#13; //Field d:[B
+   56:	invokevirtual	#23; //Method java/io/DataOutputStream.write:([B)V
+   59:	aload_1
+   60:	aload_0
+   61:	getfield	#14; //Field e:[B
+   64:	invokevirtual	#23; //Method java/io/DataOutputStream.write:([B)V
+   67:	return
+
+public void a(ex);
+  Code:
+   0:	aload_1
+   1:	aload_0
+   2:	invokevirtual	#18; //Method ex.a:(Lic;)V
+   5:	return
+
+public int a();
+  Code:
+   0:	bipush	10
+   2:	aload_0
+   3:	getfield	#15; //Field f:I
+   6:	iconst_4
+   7:	imul
+   8:	iadd
+   9:	ireturn
+
+}
+

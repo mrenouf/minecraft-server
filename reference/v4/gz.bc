@@ -1,0 +1,64 @@
+Compiled from SourceFile
+public class gz extends io{
+public double a;
+
+public double b;
+
+public double c;
+
+public double d;
+
+public float e;
+
+public float f;
+
+public boolean g;
+
+public boolean h;
+
+public boolean i;
+
+public gz();
+  Code:
+   0:	aload_0
+   1:	invokespecial	#12; //Method io."<init>":()V
+   4:	return
+
+public void a(ey);
+  Code:
+   0:	aload_1
+   1:	aload_0
+   2:	invokevirtual	#11; //Method ey.a:(Lgz;)V
+   5:	return
+
+public void a(java.io.DataInputStream);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	invokevirtual	#13; //Method java/io/DataInputStream.read:()I
+   5:	ifeq	12
+   8:	iconst_1
+   9:	goto	13
+   12:	iconst_0
+   13:	putfield	#10; //Field g:Z
+   16:	return
+
+public void a(java.io.DataOutputStream);
+  Code:
+   0:	aload_1
+   1:	aload_0
+   2:	getfield	#10; //Field g:Z
+   5:	ifeq	12
+   8:	iconst_1
+   9:	goto	13
+   12:	iconst_0
+   13:	invokevirtual	#14; //Method java/io/DataOutputStream.write:(I)V
+   16:	return
+
+public int a();
+  Code:
+   0:	iconst_1
+   1:	ireturn
+
+}
+

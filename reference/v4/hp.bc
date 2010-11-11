@@ -1,0 +1,84 @@
+Compiled from SourceFile
+public class hp extends ax{
+public boolean a;
+
+public hp(em);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	invokespecial	#15; //Method ax."<init>":(Lem;)V
+   5:	aload_0
+   6:	iconst_0
+   7:	putfield	#13; //Field a:Z
+   10:	aload_0
+   11:	ldc	#2; //String /mob/pig.png
+   13:	putfield	#14; //Field aF:Ljava/lang/String;
+   16:	aload_0
+   17:	ldc	#1; //float 0.9f
+   19:	ldc	#1; //float 0.9f
+   21:	invokevirtual	#19; //Method a:(FF)V
+   24:	aload_0
+   25:	iconst_0
+   26:	putfield	#13; //Field a:Z
+   29:	return
+
+public void a(v);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	invokespecial	#16; //Method ax.a:(Lv;)V
+   5:	aload_1
+   6:	ldc	#3; //String Saddle
+   8:	aload_0
+   9:	getfield	#13; //Field a:Z
+   12:	invokevirtual	#20; //Method v.a:(Ljava/lang/String;Z)V
+   15:	return
+
+public void b(v);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	invokespecial	#17; //Method ax.b:(Lv;)V
+   5:	aload_0
+   6:	aload_1
+   7:	ldc	#3; //String Saddle
+   9:	invokevirtual	#21; //Method v.l:(Ljava/lang/String;)Z
+   12:	putfield	#13; //Field a:Z
+   15:	return
+
+protected java.lang.String d();
+  Code:
+   0:	ldc	#4; //String mob.pig
+   2:	areturn
+
+protected java.lang.String e();
+  Code:
+   0:	ldc	#4; //String mob.pig
+   2:	areturn
+
+protected java.lang.String f();
+  Code:
+   0:	ldc	#5; //String mob.pigdeath
+   2:	areturn
+
+public boolean a(fv);
+  Code:
+   0:	aload_0
+   1:	getfield	#13; //Field a:Z
+   4:	ifeq	14
+   7:	aload_1
+   8:	aload_0
+   9:	invokevirtual	#18; //Method fv.e:(Ldw;)V
+   12:	iconst_1
+   13:	ireturn
+   14:	iconst_0
+   15:	ireturn
+
+protected int g();
+  Code:
+   0:	getstatic	#12; //Field fs.ao:Lfs;
+   3:	getfield	#11; //Field fs.aW:I
+   6:	ireturn
+
+}
+

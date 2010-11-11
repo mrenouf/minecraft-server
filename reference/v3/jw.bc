@@ -1,0 +1,25 @@
+Compiled from SourceFile
+public class jw extends jr{
+public jw();
+  Code:
+   0:	aload_0
+   1:	invokespecial	#3; //Method jr."<init>":()V
+   4:	return
+
+public boolean a();
+  Code:
+   0:	iconst_0
+   1:	ireturn
+
+public boolean b();
+  Code:
+   0:	iconst_0
+   1:	ireturn
+
+public boolean c();
+  Code:
+   0:	iconst_0
+   1:	ireturn
+
+}
+

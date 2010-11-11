@@ -1,0 +1,58 @@
+Compiled from SourceFile
+public class cb extends fs{
+public cb(int);
+  Code:
+   0:	aload_0
+   1:	iload_1
+   2:	invokespecial	#18; //Method fs."<init>":(I)V
+   5:	aload_0
+   6:	bipush	64
+   8:	putfield	#12; //Field aY:I
+   11:	return
+
+public hj a(hj, em, fv);
+  Code:
+   0:	aload_3
+   1:	getfield	#15; //Field fv.at:Lkb;
+   4:	ifnull	29
+   7:	aload_3
+   8:	getfield	#15; //Field fv.at:Lkb;
+   11:	invokevirtual	#23; //Method kb.c:()I
+   14:	istore	4
+   16:	aload_1
+   17:	iload	4
+   19:	invokevirtual	#20; //Method hj.a:(I)V
+   22:	aload_3
+   23:	invokevirtual	#19; //Method fv.E:()V
+   26:	goto	78
+   29:	aload_2
+   30:	aload_3
+   31:	ldc	#4; //String random.bow
+   33:	ldc	#2; //float 0.5f
+   35:	ldc	#1; //float 0.4f
+   37:	getstatic	#13; //Field b:Ljava/util/Random;
+   40:	invokevirtual	#21; //Method java/util/Random.nextFloat:()F
+   43:	ldc	#1; //float 0.4f
+   45:	fmul
+   46:	ldc	#3; //float 0.8f
+   48:	fadd
+   49:	fdiv
+   50:	invokevirtual	#17; //Method em.a:(Ldw;Ljava/lang/String;FF)V
+   53:	aload_2
+   54:	getfield	#14; //Field em.z:Z
+   57:	ifne	74
+   60:	aload_2
+   61:	new	#11; //class kb
+   64:	dup
+   65:	aload_2
+   66:	aload_3
+   67:	invokespecial	#22; //Method kb."<init>":(Lem;Lfv;)V
+   70:	invokevirtual	#16; //Method em.a:(Ldw;)Z
+   73:	pop
+   74:	aload_3
+   75:	invokevirtual	#19; //Method fv.E:()V
+   78:	aload_1
+   79:	areturn
+
+}
+

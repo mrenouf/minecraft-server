@@ -1,0 +1,185 @@
+Compiled from SourceFile
+public abstract class ha extends java.lang.Object{
+public ha();
+  Code:
+   0:	aload_0
+   1:	invokespecial	#44; //Method java/lang/Object."<init>":()V
+   4:	aload_0
+   5:	aconst_null
+   6:	putfield	#30; //Field a:Ljava/lang/String;
+   9:	return
+
+abstract void a(java.io.DataOutput);
+
+abstract void a(java.io.DataInput);
+
+public abstract byte a();
+
+public java.lang.String c();
+  Code:
+   0:	aload_0
+   1:	getfield	#30; //Field a:Ljava/lang/String;
+   4:	ifnonnull	10
+   7:	ldc	#1; //String 
+   9:	areturn
+   10:	aload_0
+   11:	getfield	#30; //Field a:Ljava/lang/String;
+   14:	areturn
+
+public ha m(java.lang.String);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	putfield	#30; //Field a:Ljava/lang/String;
+   5:	aload_0
+   6:	areturn
+
+public static ha b(java.io.DataInput);
+  Code:
+   0:	aload_0
+   1:	invokeinterface	#48,  1; //InterfaceMethod java/io/DataInput.readByte:()B
+   6:	istore_1
+   7:	iload_1
+   8:	ifne	19
+   11:	new	#27; //class ji
+   14:	dup
+   15:	invokespecial	#45; //Method ji."<init>":()V
+   18:	areturn
+   19:	iload_1
+   20:	invokestatic	#39; //Method a:(B)Lha;
+   23:	astore_2
+   24:	aload_2
+   25:	aload_0
+   26:	invokeinterface	#49,  1; //InterfaceMethod java/io/DataInput.readUTF:()Ljava/lang/String;
+   31:	putfield	#30; //Field a:Ljava/lang/String;
+   34:	aload_2
+   35:	aload_0
+   36:	invokevirtual	#40; //Method a:(Ljava/io/DataInput;)V
+   39:	aload_2
+   40:	areturn
+
+public static void a(ha, java.io.DataOutput);
+  Code:
+   0:	aload_1
+   1:	aload_0
+   2:	invokevirtual	#38; //Method a:()B
+   5:	invokeinterface	#50,  2; //InterfaceMethod java/io/DataOutput.writeByte:(I)V
+   10:	aload_0
+   11:	invokevirtual	#38; //Method a:()B
+   14:	ifne	18
+   17:	return
+   18:	aload_1
+   19:	aload_0
+   20:	invokevirtual	#42; //Method c:()Ljava/lang/String;
+   23:	invokeinterface	#51,  2; //InterfaceMethod java/io/DataOutput.writeUTF:(Ljava/lang/String;)V
+   28:	aload_0
+   29:	aload_1
+   30:	invokevirtual	#41; //Method a:(Ljava/io/DataOutput;)V
+   33:	return
+
+public static ha a(byte);
+  Code:
+   0:	iload_0
+   1:	tableswitch{ //0 to 10
+		0: 60;
+		1: 68;
+		2: 76;
+		3: 84;
+		4: 92;
+		5: 100;
+		6: 108;
+		7: 116;
+		8: 124;
+		9: 132;
+		10: 140;
+		default: 148 }
+   60:	new	#27; //class ji
+   63:	dup
+   64:	invokespecial	#45; //Method ji."<init>":()V
+   67:	areturn
+   68:	new	#15; //class bx
+   71:	dup
+   72:	invokespecial	#32; //Method bx."<init>":()V
+   75:	areturn
+   76:	new	#19; //class fs
+   79:	dup
+   80:	invokespecial	#36; //Method fs."<init>":()V
+   83:	areturn
+   84:	new	#14; //class bl
+   87:	dup
+   88:	invokespecial	#31; //Method bl."<init>":()V
+   91:	areturn
+   92:	new	#16; //class d
+   95:	dup
+   96:	invokespecial	#33; //Method d."<init>":()V
+   99:	areturn
+   100:	new	#28; //class l
+   103:	dup
+   104:	invokespecial	#46; //Method l."<init>":()V
+   107:	areturn
+   108:	new	#18; //class ef
+   111:	dup
+   112:	invokespecial	#35; //Method ef."<init>":()V
+   115:	areturn
+   116:	new	#20; //class gh
+   119:	dup
+   120:	invokespecial	#37; //Method gh."<init>":()V
+   123:	areturn
+   124:	new	#22; //class if
+   127:	dup
+   128:	invokespecial	#43; //Method if."<init>":()V
+   131:	areturn
+   132:	new	#17; //class dy
+   135:	dup
+   136:	invokespecial	#34; //Method dy."<init>":()V
+   139:	areturn
+   140:	new	#29; //class t
+   143:	dup
+   144:	invokespecial	#47; //Method t."<init>":()V
+   147:	areturn
+   148:	aconst_null
+   149:	areturn
+
+public static java.lang.String b(byte);
+  Code:
+   0:	iload_0
+   1:	tableswitch{ //0 to 10
+		0: 60;
+		1: 63;
+		2: 66;
+		3: 69;
+		4: 72;
+		5: 75;
+		6: 78;
+		7: 81;
+		8: 84;
+		9: 87;
+		10: 90;
+		default: 93 }
+   60:	ldc	#6; //String TAG_End
+   62:	areturn
+   63:	ldc	#2; //String TAG_Byte
+   65:	areturn
+   66:	ldc	#11; //String TAG_Short
+   68:	areturn
+   69:	ldc	#8; //String TAG_Int
+   71:	areturn
+   72:	ldc	#10; //String TAG_Long
+   74:	areturn
+   75:	ldc	#7; //String TAG_Float
+   77:	areturn
+   78:	ldc	#5; //String TAG_Double
+   80:	areturn
+   81:	ldc	#3; //String TAG_Byte_Array
+   83:	areturn
+   84:	ldc	#12; //String TAG_String
+   86:	areturn
+   87:	ldc	#9; //String TAG_List
+   89:	areturn
+   90:	ldc	#4; //String TAG_Compound
+   92:	areturn
+   93:	ldc	#13; //String UNKNOWN
+   95:	areturn
+
+}
+

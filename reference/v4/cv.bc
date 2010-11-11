@@ -1,0 +1,46 @@
+Compiled from SourceFile
+public class cv extends fs{
+public cv(int);
+  Code:
+   0:	aload_0
+   1:	iload_1
+   2:	invokespecial	#17; //Method fs."<init>":(I)V
+   5:	aload_0
+   6:	bipush	16
+   8:	putfield	#11; //Field aX:I
+   11:	return
+
+public hj a(hj, em, fv);
+  Code:
+   0:	aload_1
+   1:	dup
+   2:	getfield	#13; //Field hj.a:I
+   5:	iconst_1
+   6:	isub
+   7:	putfield	#13; //Field hj.a:I
+   10:	aload_2
+   11:	aload_3
+   12:	ldc	#4; //String random.bow
+   14:	ldc	#2; //float 0.5f
+   16:	ldc	#1; //float 0.4f
+   18:	getstatic	#12; //Field b:Ljava/util/Random;
+   21:	invokevirtual	#18; //Method java/util/Random.nextFloat:()F
+   24:	ldc	#1; //float 0.4f
+   26:	fmul
+   27:	ldc	#3; //float 0.8f
+   29:	fadd
+   30:	fdiv
+   31:	invokevirtual	#16; //Method em.a:(Ldw;Ljava/lang/String;FF)V
+   34:	aload_2
+   35:	new	#5; //class bf
+   38:	dup
+   39:	aload_2
+   40:	aload_3
+   41:	invokespecial	#14; //Method bf."<init>":(Lem;Ljv;)V
+   44:	invokevirtual	#15; //Method em.a:(Ldw;)Z
+   47:	pop
+   48:	aload_1
+   49:	areturn
+
+}
+

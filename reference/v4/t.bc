@@ -1,0 +1,54 @@
+Compiled from SourceFile
+public class t extends fz{
+public t(em);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	invokespecial	#16; //Method fz."<init>":(Lem;)V
+   5:	aload_0
+   6:	ldc	#3; //String /mob/zombie.png
+   8:	putfield	#10; //Field aF:Ljava/lang/String;
+   11:	aload_0
+   12:	ldc	#1; //float 0.5f
+   14:	putfield	#12; //Field br:F
+   17:	aload_0
+   18:	bipush	50
+   20:	putfield	#13; //Field e:I
+   23:	aload_0
+   24:	dup
+   25:	getfield	#11; //Field aP:I
+   28:	bipush	10
+   30:	imul
+   31:	putfield	#11; //Field aP:I
+   34:	aload_0
+   35:	dup
+   36:	getfield	#7; //Field G:F
+   39:	ldc	#2; //float 6.0f
+   41:	fmul
+   42:	putfield	#7; //Field G:F
+   45:	aload_0
+   46:	aload_0
+   47:	getfield	#8; //Field H:F
+   50:	ldc	#2; //float 6.0f
+   52:	fmul
+   53:	aload_0
+   54:	getfield	#9; //Field I:F
+   57:	ldc	#2; //float 6.0f
+   59:	fmul
+   60:	invokevirtual	#17; //Method a:(FF)V
+   63:	return
+
+protected float a(int, int, int);
+  Code:
+   0:	aload_0
+   1:	getfield	#14; //Field l:Lem;
+   4:	iload_1
+   5:	iload_2
+   6:	iload_3
+   7:	invokevirtual	#15; //Method em.j:(III)F
+   10:	ldc	#1; //float 0.5f
+   12:	fsub
+   13:	freturn
+
+}
+

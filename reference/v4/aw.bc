@@ -1,0 +1,80 @@
+Compiled from SourceFile
+public class aw extends bi{
+public aw(int);
+  Code:
+   0:	aload_0
+   1:	invokespecial	#9; //Method bi."<init>":()V
+   4:	aload_0
+   5:	iload_1
+   6:	putfield	#7; //Field a:I
+   9:	return
+
+public boolean a(em, java.util.Random, int, int, int);
+  Code:
+   0:	iconst_0
+   1:	istore	6
+   3:	iload	6
+   5:	bipush	64
+   7:	if_icmpge	119
+   10:	iload_3
+   11:	aload_2
+   12:	bipush	8
+   14:	invokevirtual	#13; //Method java/util/Random.nextInt:(I)I
+   17:	iadd
+   18:	aload_2
+   19:	bipush	8
+   21:	invokevirtual	#13; //Method java/util/Random.nextInt:(I)I
+   24:	isub
+   25:	istore	7
+   27:	iload	4
+   29:	aload_2
+   30:	iconst_4
+   31:	invokevirtual	#13; //Method java/util/Random.nextInt:(I)I
+   34:	iadd
+   35:	aload_2
+   36:	iconst_4
+   37:	invokevirtual	#13; //Method java/util/Random.nextInt:(I)I
+   40:	isub
+   41:	istore	8
+   43:	iload	5
+   45:	aload_2
+   46:	bipush	8
+   48:	invokevirtual	#13; //Method java/util/Random.nextInt:(I)I
+   51:	iadd
+   52:	aload_2
+   53:	bipush	8
+   55:	invokevirtual	#13; //Method java/util/Random.nextInt:(I)I
+   58:	isub
+   59:	istore	9
+   61:	aload_1
+   62:	iload	7
+   64:	iload	8
+   66:	iload	9
+   68:	invokevirtual	#10; //Method em.a:(III)I
+   71:	ifne	113
+   74:	getstatic	#8; //Field fy.m:[Lfy;
+   77:	aload_0
+   78:	getfield	#7; //Field a:I
+   81:	aaload
+   82:	checkcast	#5; //class hi
+   85:	aload_1
+   86:	iload	7
+   88:	iload	8
+   90:	iload	9
+   92:	invokevirtual	#12; //Method hi.f:(Lem;III)Z
+   95:	ifeq	113
+   98:	aload_1
+   99:	iload	7
+   101:	iload	8
+   103:	iload	9
+   105:	aload_0
+   106:	getfield	#7; //Field a:I
+   109:	invokevirtual	#11; //Method em.a:(IIII)Z
+   112:	pop
+   113:	iinc	6, 1
+   116:	goto	3
+   119:	iconst_1
+   120:	ireturn
+
+}
+

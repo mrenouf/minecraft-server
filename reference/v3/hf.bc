@@ -1,0 +1,87 @@
+Compiled from SourceFile
+public class hf extends fq{
+public final int a;
+
+public final int bb;
+
+public final int bc;
+
+public final int bd;
+
+public hf(int, int, int, int);
+  Code:
+   0:	aload_0
+   1:	iload_1
+   2:	invokespecial	#11; //Method fq."<init>":(I)V
+   5:	aload_0
+   6:	iload_2
+   7:	putfield	#3; //Field a:I
+   10:	aload_0
+   11:	iload	4
+   13:	putfield	#6; //Field bb:I
+   16:	aload_0
+   17:	iload_3
+   18:	putfield	#8; //Field bd:I
+   21:	aload_0
+   22:	getstatic	#9; //Field be:[I
+   25:	iload	4
+   27:	iaload
+   28:	putfield	#7; //Field bc:I
+   31:	aload_0
+   32:	getstatic	#10; //Field bf:[I
+   35:	iload	4
+   37:	iaload
+   38:	iconst_3
+   39:	imul
+   40:	iload_2
+   41:	ishl
+   42:	putfield	#5; //Field aY:I
+   45:	aload_0
+   46:	iconst_1
+   47:	putfield	#4; //Field aX:I
+   50:	return
+
+static {};
+  Code:
+   0:	iconst_4
+   1:	newarray int
+   3:	dup
+   4:	iconst_0
+   5:	iconst_3
+   6:	iastore
+   7:	dup
+   8:	iconst_1
+   9:	bipush	8
+   11:	iastore
+   12:	dup
+   13:	iconst_2
+   14:	bipush	6
+   16:	iastore
+   17:	dup
+   18:	iconst_3
+   19:	iconst_3
+   20:	iastore
+   21:	putstatic	#9; //Field be:[I
+   24:	iconst_4
+   25:	newarray int
+   27:	dup
+   28:	iconst_0
+   29:	bipush	11
+   31:	iastore
+   32:	dup
+   33:	iconst_1
+   34:	bipush	16
+   36:	iastore
+   37:	dup
+   38:	iconst_2
+   39:	bipush	15
+   41:	iastore
+   42:	dup
+   43:	iconst_3
+   44:	bipush	13
+   46:	iastore
+   47:	putstatic	#10; //Field bf:[I
+   50:	return
+
+}
+

@@ -1,0 +1,199 @@
+Compiled from SourceFile
+public class dp extends java.lang.Object{
+public static java.util.logging.Logger a;
+
+public volatile boolean b;
+
+public net.minecraft.server.MinecraftServer c;
+
+public dp(net.minecraft.server.MinecraftServer, java.net.InetAddress, int);
+  Code:
+   0:	aload_0
+   1:	invokespecial	#36; //Method java/lang/Object."<init>":()V
+   4:	aload_0
+   5:	iconst_0
+   6:	putfield	#21; //Field b:Z
+   9:	aload_0
+   10:	iconst_0
+   11:	putfield	#25; //Field f:I
+   14:	aload_0
+   15:	new	#16; //class java/util/ArrayList
+   18:	dup
+   19:	invokespecial	#44; //Method java/util/ArrayList."<init>":()V
+   22:	putfield	#26; //Field g:Ljava/util/ArrayList;
+   25:	aload_0
+   26:	new	#16; //class java/util/ArrayList
+   29:	dup
+   30:	invokespecial	#44; //Method java/util/ArrayList."<init>":()V
+   33:	putfield	#27; //Field h:Ljava/util/ArrayList;
+   36:	aload_0
+   37:	aload_1
+   38:	putfield	#22; //Field c:Lnet/minecraft/server/MinecraftServer;
+   41:	aload_0
+   42:	new	#15; //class java/net/ServerSocket
+   45:	dup
+   46:	iload_3
+   47:	iconst_0
+   48:	aload_2
+   49:	invokespecial	#42; //Method java/net/ServerSocket."<init>":(IILjava/net/InetAddress;)V
+   52:	putfield	#23; //Field d:Ljava/net/ServerSocket;
+   55:	aload_0
+   56:	getfield	#23; //Field d:Ljava/net/ServerSocket;
+   59:	iconst_0
+   60:	iconst_2
+   61:	iconst_1
+   62:	invokevirtual	#43; //Method java/net/ServerSocket.setPerformancePreferences:(III)V
+   65:	aload_0
+   66:	iconst_1
+   67:	putfield	#21; //Field b:Z
+   70:	aload_0
+   71:	new	#6; //class dg
+   74:	dup
+   75:	aload_0
+   76:	ldc	#4; //String Listen thread
+   78:	aload_1
+   79:	invokespecial	#31; //Method dg."<init>":(Ldp;Ljava/lang/String;Lnet/minecraft/server/MinecraftServer;)V
+   82:	putfield	#24; //Field e:Ljava/lang/Thread;
+   85:	aload_0
+   86:	getfield	#24; //Field e:Ljava/lang/Thread;
+   89:	invokevirtual	#41; //Method java/lang/Thread.start:()V
+   92:	return
+
+public void a(je);
+  Code:
+   0:	aload_0
+   1:	getfield	#27; //Field h:Ljava/util/ArrayList;
+   4:	aload_1
+   5:	invokevirtual	#45; //Method java/util/ArrayList.add:(Ljava/lang/Object;)Z
+   8:	pop
+   9:	return
+
+public void a();
+  Code:
+   0:	iconst_0
+   1:	istore_1
+   2:	iload_1
+   3:	aload_0
+   4:	getfield	#26; //Field g:Ljava/util/ArrayList;
+   7:	invokevirtual	#48; //Method java/util/ArrayList.size:()I
+   10:	if_icmpge	93
+   13:	aload_0
+   14:	getfield	#26; //Field g:Ljava/util/ArrayList;
+   17:	iload_1
+   18:	invokevirtual	#46; //Method java/util/ArrayList.get:(I)Ljava/lang/Object;
+   21:	checkcast	#8; //class fo
+   24:	astore_2
+   25:	aload_2
+   26:	invokevirtual	#33; //Method fo.a:()V
+   29:	goto	68
+   32:	astore_3
+   33:	aload_2
+   34:	ldc	#3; //String Internal server error
+   36:	invokevirtual	#34; //Method fo.b:(Ljava/lang/String;)V
+   39:	getstatic	#20; //Field a:Ljava/util/logging/Logger;
+   42:	getstatic	#29; //Field java/util/logging/Level.WARNING:Ljava/util/logging/Level;
+   45:	new	#13; //class java/lang/StringBuilder
+   48:	dup
+   49:	invokespecial	#37; //Method java/lang/StringBuilder."<init>":()V
+   52:	ldc	#1; //String Failed to handle packet: 
+   54:	invokevirtual	#39; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   57:	aload_3
+   58:	invokevirtual	#38; //Method java/lang/StringBuilder.append:(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+   61:	invokevirtual	#40; //Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+   64:	aload_3
+   65:	invokevirtual	#50; //Method java/util/logging/Logger.log:(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/Throwable;)V
+   68:	aload_2
+   69:	getfield	#28; //Field fo.c:Z
+   72:	ifeq	87
+   75:	aload_0
+   76:	getfield	#26; //Field g:Ljava/util/ArrayList;
+   79:	iload_1
+   80:	iinc	1, -1
+   83:	invokevirtual	#47; //Method java/util/ArrayList.remove:(I)Ljava/lang/Object;
+   86:	pop
+   87:	iinc	1, 1
+   90:	goto	2
+   93:	iconst_0
+   94:	istore_1
+   95:	iload_1
+   96:	aload_0
+   97:	getfield	#27; //Field h:Ljava/util/ArrayList;
+   100:	invokevirtual	#48; //Method java/util/ArrayList.size:()I
+   103:	if_icmpge	186
+   106:	aload_0
+   107:	getfield	#27; //Field h:Ljava/util/ArrayList;
+   110:	iload_1
+   111:	invokevirtual	#46; //Method java/util/ArrayList.get:(I)Ljava/lang/Object;
+   114:	checkcast	#19; //class je
+   117:	astore_2
+   118:	aload_2
+   119:	invokevirtual	#51; //Method je.a:()V
+   122:	goto	161
+   125:	astore_3
+   126:	aload_2
+   127:	ldc	#3; //String Internal server error
+   129:	invokevirtual	#52; //Method je.c:(Ljava/lang/String;)V
+   132:	getstatic	#20; //Field a:Ljava/util/logging/Logger;
+   135:	getstatic	#29; //Field java/util/logging/Level.WARNING:Ljava/util/logging/Level;
+   138:	new	#13; //class java/lang/StringBuilder
+   141:	dup
+   142:	invokespecial	#37; //Method java/lang/StringBuilder."<init>":()V
+   145:	ldc	#1; //String Failed to handle packet: 
+   147:	invokevirtual	#39; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   150:	aload_3
+   151:	invokevirtual	#38; //Method java/lang/StringBuilder.append:(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+   154:	invokevirtual	#40; //Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+   157:	aload_3
+   158:	invokevirtual	#50; //Method java/util/logging/Logger.log:(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/Throwable;)V
+   161:	aload_2
+   162:	getfield	#30; //Field je.c:Z
+   165:	ifeq	180
+   168:	aload_0
+   169:	getfield	#27; //Field h:Ljava/util/ArrayList;
+   172:	iload_1
+   173:	iinc	1, -1
+   176:	invokevirtual	#47; //Method java/util/ArrayList.remove:(I)Ljava/lang/Object;
+   179:	pop
+   180:	iinc	1, 1
+   183:	goto	95
+   186:	return
+  Exception table:
+   from   to  target type
+    25    29    32   Class java/lang/Exception
+
+   118   122   125   Class java/lang/Exception
+
+
+static java.net.ServerSocket a(dp);
+  Code:
+   0:	aload_0
+   1:	getfield	#23; //Field d:Ljava/net/ServerSocket;
+   4:	areturn
+
+static int b(dp);
+  Code:
+   0:	aload_0
+   1:	dup
+   2:	getfield	#25; //Field f:I
+   5:	dup_x1
+   6:	iconst_1
+   7:	iadd
+   8:	putfield	#25; //Field f:I
+   11:	ireturn
+
+static void a(dp, fo);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	invokespecial	#32; //Method a:(Lfo;)V
+   5:	return
+
+static {};
+  Code:
+   0:	ldc	#5; //String Minecraft
+   2:	invokestatic	#49; //Method java/util/logging/Logger.getLogger:(Ljava/lang/String;)Ljava/util/logging/Logger;
+   5:	putstatic	#20; //Field a:Ljava/util/logging/Logger;
+   8:	return
+
+}
+

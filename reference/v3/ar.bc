@@ -1,0 +1,13 @@
+Compiled from SourceFile
+public class ar extends fw{
+protected ar(int, int);
+  Code:
+   0:	aload_0
+   1:	iload_1
+   2:	iload_2
+   3:	getstatic	#4; //Field jr.b:Ljr;
+   6:	invokespecial	#5; //Method fw."<init>":(IILjr;)V
+   9:	return
+
+}
+

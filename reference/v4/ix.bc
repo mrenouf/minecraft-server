@@ -1,0 +1,10 @@
+Compiled from SourceFile
+public interface ix{
+public abstract void a(java.lang.String);
+
+public abstract void b(java.lang.String);
+
+public abstract void a(int);
+
+}
+

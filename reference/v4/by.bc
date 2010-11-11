@@ -1,0 +1,57 @@
+Compiled from SourceFile
+public class by extends java.lang.Thread{
+final net.minecraft.server.MinecraftServer a;
+
+public by(net.minecraft.server.MinecraftServer);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	putfield	#8; //Field a:Lnet/minecraft/server/MinecraftServer;
+   5:	aload_0
+   6:	invokespecial	#15; //Method java/lang/Thread."<init>":()V
+   9:	return
+
+public void run();
+  Code:
+   0:	new	#2; //class java/io/BufferedReader
+   3:	dup
+   4:	new	#4; //class java/io/InputStreamReader
+   7:	dup
+   8:	getstatic	#9; //Field java/lang/System.in:Ljava/io/InputStream;
+   11:	invokespecial	#14; //Method java/io/InputStreamReader."<init>":(Ljava/io/InputStream;)V
+   14:	invokespecial	#11; //Method java/io/BufferedReader."<init>":(Ljava/io/Reader;)V
+   17:	astore_1
+   18:	aconst_null
+   19:	astore_2
+   20:	aload_0
+   21:	getfield	#8; //Field a:Lnet/minecraft/server/MinecraftServer;
+   24:	getfield	#10; //Field net/minecraft/server/MinecraftServer.g:Z
+   27:	ifne	64
+   30:	aload_0
+   31:	getfield	#8; //Field a:Lnet/minecraft/server/MinecraftServer;
+   34:	invokestatic	#17; //Method net/minecraft/server/MinecraftServer.a:(Lnet/minecraft/server/MinecraftServer;)Z
+   37:	ifeq	64
+   40:	aload_1
+   41:	invokevirtual	#12; //Method java/io/BufferedReader.readLine:()Ljava/lang/String;
+   44:	dup
+   45:	astore_2
+   46:	ifnull	64
+   49:	aload_0
+   50:	getfield	#8; //Field a:Lnet/minecraft/server/MinecraftServer;
+   53:	aload_2
+   54:	aload_0
+   55:	getfield	#8; //Field a:Lnet/minecraft/server/MinecraftServer;
+   58:	invokevirtual	#16; //Method net/minecraft/server/MinecraftServer.a:(Ljava/lang/String;Leu;)V
+   61:	goto	20
+   64:	goto	72
+   67:	astore_3
+   68:	aload_3
+   69:	invokevirtual	#13; //Method java/io/IOException.printStackTrace:()V
+   72:	return
+  Exception table:
+   from   to  target type
+    20    64    67   Class java/io/IOException
+
+
+}
+

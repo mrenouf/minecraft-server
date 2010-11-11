@@ -1,0 +1,8 @@
+Compiled from SourceFile
+public interface jz{
+public abstract int a();
+
+public abstract hj a(int);
+
+}
+

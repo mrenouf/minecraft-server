@@ -1,0 +1,16 @@
+Compiled from SourceFile
+public interface bt{
+public abstract boolean a(int, int);
+
+public abstract jp b(int, int);
+
+public abstract void a(bt, int, int);
+
+public abstract boolean a(boolean, ix);
+
+public abstract boolean a();
+
+public abstract boolean b();
+
+}
+

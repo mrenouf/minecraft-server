@@ -1,0 +1,133 @@
+Compiled from SourceFile
+public class hm extends java.lang.Object{
+public final byte[] a;
+
+public hm(int);
+  Code:
+   0:	aload_0
+   1:	invokespecial	#4; //Method java/lang/Object."<init>":()V
+   4:	aload_0
+   5:	iload_1
+   6:	iconst_1
+   7:	ishr
+   8:	newarray byte
+   10:	putfield	#3; //Field a:[B
+   13:	return
+
+public hm(byte[]);
+  Code:
+   0:	aload_0
+   1:	invokespecial	#4; //Method java/lang/Object."<init>":()V
+   4:	aload_0
+   5:	aload_1
+   6:	putfield	#3; //Field a:[B
+   9:	return
+
+public int a(int, int, int);
+  Code:
+   0:	iload_1
+   1:	bipush	11
+   3:	ishl
+   4:	iload_3
+   5:	bipush	7
+   7:	ishl
+   8:	ior
+   9:	iload_2
+   10:	ior
+   11:	istore	4
+   13:	iload	4
+   15:	iconst_1
+   16:	ishr
+   17:	istore	5
+   19:	iload	4
+   21:	iconst_1
+   22:	iand
+   23:	istore	6
+   25:	iload	6
+   27:	ifne	41
+   30:	aload_0
+   31:	getfield	#3; //Field a:[B
+   34:	iload	5
+   36:	baload
+   37:	bipush	15
+   39:	iand
+   40:	ireturn
+   41:	aload_0
+   42:	getfield	#3; //Field a:[B
+   45:	iload	5
+   47:	baload
+   48:	iconst_4
+   49:	ishr
+   50:	bipush	15
+   52:	iand
+   53:	ireturn
+
+public void a(int, int, int, int);
+  Code:
+   0:	iload_1
+   1:	bipush	11
+   3:	ishl
+   4:	iload_3
+   5:	bipush	7
+   7:	ishl
+   8:	ior
+   9:	iload_2
+   10:	ior
+   11:	istore	5
+   13:	iload	5
+   15:	iconst_1
+   16:	ishr
+   17:	istore	6
+   19:	iload	5
+   21:	iconst_1
+   22:	iand
+   23:	istore	7
+   25:	iload	7
+   27:	ifne	58
+   30:	aload_0
+   31:	getfield	#3; //Field a:[B
+   34:	iload	6
+   36:	aload_0
+   37:	getfield	#3; //Field a:[B
+   40:	iload	6
+   42:	baload
+   43:	sipush	240
+   46:	iand
+   47:	iload	4
+   49:	bipush	15
+   51:	iand
+   52:	ior
+   53:	i2b
+   54:	bastore
+   55:	goto	84
+   58:	aload_0
+   59:	getfield	#3; //Field a:[B
+   62:	iload	6
+   64:	aload_0
+   65:	getfield	#3; //Field a:[B
+   68:	iload	6
+   70:	baload
+   71:	bipush	15
+   73:	iand
+   74:	iload	4
+   76:	bipush	15
+   78:	iand
+   79:	iconst_4
+   80:	ishl
+   81:	ior
+   82:	i2b
+   83:	bastore
+   84:	return
+
+public boolean a();
+  Code:
+   0:	aload_0
+   1:	getfield	#3; //Field a:[B
+   4:	ifnull	11
+   7:	iconst_1
+   8:	goto	12
+   11:	iconst_0
+   12:	ireturn
+
+}
+

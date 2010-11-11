@@ -1,0 +1,253 @@
+Compiled from SourceFile
+public class dl extends io{
+public int a;
+
+public int b;
+
+public int c;
+
+public int d;
+
+public int e;
+
+public int f;
+
+public byte[] g;
+
+public dl();
+  Code:
+   0:	aload_0
+   1:	invokespecial	#23; //Method io."<init>":()V
+   4:	aload_0
+   5:	iconst_1
+   6:	putfield	#20; //Field j:Z
+   9:	return
+
+public dl(int, int, int, int, int, int, em);
+  Code:
+   0:	aload_0
+   1:	invokespecial	#23; //Method io."<init>":()V
+   4:	aload_0
+   5:	iconst_1
+   6:	putfield	#20; //Field j:Z
+   9:	aload_0
+   10:	iload_1
+   11:	putfield	#12; //Field a:I
+   14:	aload_0
+   15:	iload_2
+   16:	putfield	#13; //Field b:I
+   19:	aload_0
+   20:	iload_3
+   21:	putfield	#14; //Field c:I
+   24:	aload_0
+   25:	iload	4
+   27:	putfield	#15; //Field d:I
+   30:	aload_0
+   31:	iload	5
+   33:	putfield	#16; //Field e:I
+   36:	aload_0
+   37:	iload	6
+   39:	putfield	#17; //Field f:I
+   42:	aload	7
+   44:	iload_1
+   45:	iload_2
+   46:	iload_3
+   47:	iload	4
+   49:	iload	5
+   51:	iload	6
+   53:	invokevirtual	#21; //Method em.c:(IIIIII)[B
+   56:	astore	8
+   58:	new	#10; //class java/util/zip/Deflater
+   61:	dup
+   62:	iconst_1
+   63:	invokespecial	#33; //Method java/util/zip/Deflater."<init>":(I)V
+   66:	astore	9
+   68:	aload	9
+   70:	aload	8
+   72:	invokevirtual	#37; //Method java/util/zip/Deflater.setInput:([B)V
+   75:	aload	9
+   77:	invokevirtual	#36; //Method java/util/zip/Deflater.finish:()V
+   80:	aload_0
+   81:	iload	4
+   83:	iload	5
+   85:	imul
+   86:	iload	6
+   88:	imul
+   89:	iconst_5
+   90:	imul
+   91:	iconst_2
+   92:	idiv
+   93:	newarray byte
+   95:	putfield	#18; //Field g:[B
+   98:	aload_0
+   99:	aload	9
+   101:	aload_0
+   102:	getfield	#18; //Field g:[B
+   105:	invokevirtual	#34; //Method java/util/zip/Deflater.deflate:([B)I
+   108:	putfield	#19; //Field h:I
+   111:	aload	9
+   113:	invokevirtual	#35; //Method java/util/zip/Deflater.end:()V
+   116:	goto	129
+   119:	astore	10
+   121:	aload	9
+   123:	invokevirtual	#35; //Method java/util/zip/Deflater.end:()V
+   126:	aload	10
+   128:	athrow
+   129:	return
+  Exception table:
+   from   to  target type
+    68   111   119   any
+   119   121   119   any
+
+public void a(java.io.DataInputStream);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	invokevirtual	#26; //Method java/io/DataInputStream.readInt:()I
+   5:	putfield	#12; //Field a:I
+   8:	aload_0
+   9:	aload_1
+   10:	invokevirtual	#27; //Method java/io/DataInputStream.readShort:()S
+   13:	putfield	#13; //Field b:I
+   16:	aload_0
+   17:	aload_1
+   18:	invokevirtual	#26; //Method java/io/DataInputStream.readInt:()I
+   21:	putfield	#14; //Field c:I
+   24:	aload_0
+   25:	aload_1
+   26:	invokevirtual	#24; //Method java/io/DataInputStream.read:()I
+   29:	iconst_1
+   30:	iadd
+   31:	putfield	#15; //Field d:I
+   34:	aload_0
+   35:	aload_1
+   36:	invokevirtual	#24; //Method java/io/DataInputStream.read:()I
+   39:	iconst_1
+   40:	iadd
+   41:	putfield	#16; //Field e:I
+   44:	aload_0
+   45:	aload_1
+   46:	invokevirtual	#24; //Method java/io/DataInputStream.read:()I
+   49:	iconst_1
+   50:	iadd
+   51:	putfield	#17; //Field f:I
+   54:	aload_1
+   55:	invokevirtual	#26; //Method java/io/DataInputStream.readInt:()I
+   58:	istore_2
+   59:	iload_2
+   60:	newarray byte
+   62:	astore_3
+   63:	aload_1
+   64:	aload_3
+   65:	invokevirtual	#25; //Method java/io/DataInputStream.readFully:([B)V
+   68:	aload_0
+   69:	aload_0
+   70:	getfield	#15; //Field d:I
+   73:	aload_0
+   74:	getfield	#16; //Field e:I
+   77:	imul
+   78:	aload_0
+   79:	getfield	#17; //Field f:I
+   82:	imul
+   83:	iconst_5
+   84:	imul
+   85:	iconst_2
+   86:	idiv
+   87:	newarray byte
+   89:	putfield	#18; //Field g:[B
+   92:	new	#11; //class java/util/zip/Inflater
+   95:	dup
+   96:	invokespecial	#38; //Method java/util/zip/Inflater."<init>":()V
+   99:	astore	4
+   101:	aload	4
+   103:	aload_3
+   104:	invokevirtual	#41; //Method java/util/zip/Inflater.setInput:([B)V
+   107:	aload	4
+   109:	aload_0
+   110:	getfield	#18; //Field g:[B
+   113:	invokevirtual	#40; //Method java/util/zip/Inflater.inflate:([B)I
+   116:	pop
+   117:	aload	4
+   119:	invokevirtual	#39; //Method java/util/zip/Inflater.end:()V
+   122:	goto	147
+   125:	astore	5
+   127:	new	#8; //class java/io/IOException
+   130:	dup
+   131:	ldc	#1; //String Bad compressed data format
+   133:	invokespecial	#32; //Method java/io/IOException."<init>":(Ljava/lang/String;)V
+   136:	athrow
+   137:	astore	6
+   139:	aload	4
+   141:	invokevirtual	#39; //Method java/util/zip/Inflater.end:()V
+   144:	aload	6
+   146:	athrow
+   147:	return
+  Exception table:
+   from   to  target type
+   107   117   125   Class java/util/zip/DataFormatException
+
+   107   117   137   any
+   125   139   137   any
+
+public void a(java.io.DataOutputStream);
+  Code:
+   0:	aload_1
+   1:	aload_0
+   2:	getfield	#12; //Field a:I
+   5:	invokevirtual	#30; //Method java/io/DataOutputStream.writeInt:(I)V
+   8:	aload_1
+   9:	aload_0
+   10:	getfield	#13; //Field b:I
+   13:	invokevirtual	#31; //Method java/io/DataOutputStream.writeShort:(I)V
+   16:	aload_1
+   17:	aload_0
+   18:	getfield	#14; //Field c:I
+   21:	invokevirtual	#30; //Method java/io/DataOutputStream.writeInt:(I)V
+   24:	aload_1
+   25:	aload_0
+   26:	getfield	#15; //Field d:I
+   29:	iconst_1
+   30:	isub
+   31:	invokevirtual	#28; //Method java/io/DataOutputStream.write:(I)V
+   34:	aload_1
+   35:	aload_0
+   36:	getfield	#16; //Field e:I
+   39:	iconst_1
+   40:	isub
+   41:	invokevirtual	#28; //Method java/io/DataOutputStream.write:(I)V
+   44:	aload_1
+   45:	aload_0
+   46:	getfield	#17; //Field f:I
+   49:	iconst_1
+   50:	isub
+   51:	invokevirtual	#28; //Method java/io/DataOutputStream.write:(I)V
+   54:	aload_1
+   55:	aload_0
+   56:	getfield	#19; //Field h:I
+   59:	invokevirtual	#30; //Method java/io/DataOutputStream.writeInt:(I)V
+   62:	aload_1
+   63:	aload_0
+   64:	getfield	#18; //Field g:[B
+   67:	iconst_0
+   68:	aload_0
+   69:	getfield	#19; //Field h:I
+   72:	invokevirtual	#29; //Method java/io/DataOutputStream.write:([BII)V
+   75:	return
+
+public void a(ey);
+  Code:
+   0:	aload_1
+   1:	aload_0
+   2:	invokevirtual	#22; //Method ey.a:(Ldl;)V
+   5:	return
+
+public int a();
+  Code:
+   0:	bipush	17
+   2:	aload_0
+   3:	getfield	#19; //Field h:I
+   6:	iadd
+   7:	ireturn
+
+}
+

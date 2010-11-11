@@ -1,0 +1,64 @@
+Compiled from SourceFile
+public class di extends fo{
+public di();
+  Code:
+   0:	aload_0
+   1:	invokespecial	#9; //Method fo."<init>":()V
+   4:	aload_0
+   5:	iconst_1
+   6:	putfield	#8; //Field g:Z
+   9:	return
+
+public di(int, byte, byte);
+  Code:
+   0:	aload_0
+   1:	iload_1
+   2:	invokespecial	#10; //Method fo."<init>":(I)V
+   5:	aload_0
+   6:	iload_2
+   7:	putfield	#6; //Field e:B
+   10:	aload_0
+   11:	iload_3
+   12:	putfield	#7; //Field f:B
+   15:	aload_0
+   16:	iconst_1
+   17:	putfield	#8; //Field g:Z
+   20:	return
+
+public void a(java.io.DataInputStream);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	invokespecial	#11; //Method fo.a:(Ljava/io/DataInputStream;)V
+   5:	aload_0
+   6:	aload_1
+   7:	invokevirtual	#13; //Method java/io/DataInputStream.readByte:()B
+   10:	putfield	#6; //Field e:B
+   13:	aload_0
+   14:	aload_1
+   15:	invokevirtual	#13; //Method java/io/DataInputStream.readByte:()B
+   18:	putfield	#7; //Field f:B
+   21:	return
+
+public void a(java.io.DataOutputStream);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	invokespecial	#12; //Method fo.a:(Ljava/io/DataOutputStream;)V
+   5:	aload_1
+   6:	aload_0
+   7:	getfield	#6; //Field e:B
+   10:	invokevirtual	#14; //Method java/io/DataOutputStream.writeByte:(I)V
+   13:	aload_1
+   14:	aload_0
+   15:	getfield	#7; //Field f:B
+   18:	invokevirtual	#14; //Method java/io/DataOutputStream.writeByte:(I)V
+   21:	return
+
+public int a();
+  Code:
+   0:	bipush	6
+   2:	ireturn
+
+}
+

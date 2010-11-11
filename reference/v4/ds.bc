@@ -1,0 +1,376 @@
+Compiled from SourceFile
+public class ds extends ay implements jz{
+public ds();
+  Code:
+   0:	aload_0
+   1:	invokespecial	#52; //Method ay."<init>":()V
+   4:	aload_0
+   5:	iconst_3
+   6:	anewarray	#12; //class hj
+   9:	putfield	#20; //Field e:[Lhj;
+   12:	aload_0
+   13:	iconst_0
+   14:	putfield	#21; //Field f:I
+   17:	aload_0
+   18:	iconst_0
+   19:	putfield	#22; //Field g:I
+   22:	aload_0
+   23:	iconst_0
+   24:	putfield	#23; //Field h:I
+   27:	return
+
+public int a();
+  Code:
+   0:	aload_0
+   1:	getfield	#20; //Field e:[Lhj;
+   4:	arraylength
+   5:	ireturn
+
+public hj a(int);
+  Code:
+   0:	aload_0
+   1:	getfield	#20; //Field e:[Lhj;
+   4:	iload_1
+   5:	aaload
+   6:	areturn
+
+public void a(v);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	invokespecial	#53; //Method ay.a:(Lv;)V
+   5:	aload_1
+   6:	ldc	#3; //String Items
+   8:	invokevirtual	#80; //Method v.k:(Ljava/lang/String;)Lea;
+   11:	astore_2
+   12:	aload_0
+   13:	aload_0
+   14:	invokevirtual	#55; //Method a:()I
+   17:	anewarray	#12; //class hj
+   20:	putfield	#20; //Field e:[Lhj;
+   23:	iconst_0
+   24:	istore_3
+   25:	iload_3
+   26:	aload_2
+   27:	invokevirtual	#66; //Method ea.b:()I
+   30:	if_icmpge	89
+   33:	aload_2
+   34:	iload_3
+   35:	invokevirtual	#64; //Method ea.a:(I)Lhc;
+   38:	checkcast	#15; //class v
+   41:	astore	4
+   43:	aload	4
+   45:	ldc	#4; //String Slot
+   47:	invokevirtual	#78; //Method v.b:(Ljava/lang/String;)B
+   50:	istore	5
+   52:	iload	5
+   54:	iflt	83
+   57:	iload	5
+   59:	aload_0
+   60:	getfield	#20; //Field e:[Lhj;
+   63:	arraylength
+   64:	if_icmpge	83
+   67:	aload_0
+   68:	getfield	#20; //Field e:[Lhj;
+   71:	iload	5
+   73:	new	#12; //class hj
+   76:	dup
+   77:	aload	4
+   79:	invokespecial	#70; //Method hj."<init>":(Lv;)V
+   82:	aastore
+   83:	iinc	3, 1
+   86:	goto	25
+   89:	aload_0
+   90:	aload_1
+   91:	ldc	#1; //String BurnTime
+   93:	invokevirtual	#79; //Method v.c:(Ljava/lang/String;)S
+   96:	putfield	#21; //Field f:I
+   99:	aload_0
+   100:	aload_1
+   101:	ldc	#2; //String CookTime
+   103:	invokevirtual	#79; //Method v.c:(Ljava/lang/String;)S
+   106:	putfield	#23; //Field h:I
+   109:	aload_0
+   110:	aload_0
+   111:	aload_0
+   112:	getfield	#20; //Field e:[Lhj;
+   115:	iconst_1
+   116:	aaload
+   117:	invokespecial	#56; //Method a:(Lhj;)I
+   120:	putfield	#22; //Field g:I
+   123:	return
+
+public void b(v);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	invokespecial	#54; //Method ay.b:(Lv;)V
+   5:	aload_1
+   6:	ldc	#1; //String BurnTime
+   8:	aload_0
+   9:	getfield	#21; //Field f:I
+   12:	i2s
+   13:	invokevirtual	#77; //Method v.a:(Ljava/lang/String;S)V
+   16:	aload_1
+   17:	ldc	#2; //String CookTime
+   19:	aload_0
+   20:	getfield	#23; //Field h:I
+   23:	i2s
+   24:	invokevirtual	#77; //Method v.a:(Ljava/lang/String;S)V
+   27:	new	#7; //class ea
+   30:	dup
+   31:	invokespecial	#63; //Method ea."<init>":()V
+   34:	astore_2
+   35:	iconst_0
+   36:	istore_3
+   37:	iload_3
+   38:	aload_0
+   39:	getfield	#20; //Field e:[Lhj;
+   42:	arraylength
+   43:	if_icmpge	97
+   46:	aload_0
+   47:	getfield	#20; //Field e:[Lhj;
+   50:	iload_3
+   51:	aaload
+   52:	ifnull	91
+   55:	new	#15; //class v
+   58:	dup
+   59:	invokespecial	#74; //Method v."<init>":()V
+   62:	astore	4
+   64:	aload	4
+   66:	ldc	#4; //String Slot
+   68:	iload_3
+   69:	i2b
+   70:	invokevirtual	#75; //Method v.a:(Ljava/lang/String;B)V
+   73:	aload_0
+   74:	getfield	#20; //Field e:[Lhj;
+   77:	iload_3
+   78:	aaload
+   79:	aload	4
+   81:	invokevirtual	#72; //Method hj.a:(Lv;)Lv;
+   84:	pop
+   85:	aload_2
+   86:	aload	4
+   88:	invokevirtual	#65; //Method ea.a:(Lhc;)V
+   91:	iinc	3, 1
+   94:	goto	37
+   97:	aload_1
+   98:	ldc	#3; //String Items
+   100:	aload_2
+   101:	invokevirtual	#76; //Method v.a:(Ljava/lang/String;Lhc;)V
+   104:	return
+
+public int d();
+  Code:
+   0:	bipush	64
+   2:	ireturn
+
+public boolean e();
+  Code:
+   0:	aload_0
+   1:	getfield	#21; //Field f:I
+   4:	ifle	11
+   7:	iconst_1
+   8:	goto	12
+   11:	iconst_0
+   12:	ireturn
+
+public void b();
+  Code:
+   0:	aload_0
+   1:	getfield	#21; //Field f:I
+   4:	ifle	11
+   7:	iconst_1
+   8:	goto	12
+   11:	iconst_0
+   12:	istore_1
+   13:	iconst_0
+   14:	istore_2
+   15:	aload_0
+   16:	getfield	#21; //Field f:I
+   19:	ifle	32
+   22:	aload_0
+   23:	dup
+   24:	getfield	#21; //Field f:I
+   27:	iconst_1
+   28:	isub
+   29:	putfield	#21; //Field f:I
+   32:	aload_0
+   33:	getfield	#16; //Field a:Lem;
+   36:	getfield	#24; //Field em.z:Z
+   39:	ifne	229
+   42:	aload_0
+   43:	getfield	#21; //Field f:I
+   46:	ifne	127
+   49:	aload_0
+   50:	invokespecial	#62; //Method g:()Z
+   53:	ifeq	127
+   56:	aload_0
+   57:	aload_0
+   58:	aload_0
+   59:	aload_0
+   60:	getfield	#20; //Field e:[Lhj;
+   63:	iconst_1
+   64:	aaload
+   65:	invokespecial	#56; //Method a:(Lhj;)I
+   68:	dup_x1
+   69:	putfield	#21; //Field f:I
+   72:	putfield	#22; //Field g:I
+   75:	aload_0
+   76:	getfield	#21; //Field f:I
+   79:	ifle	127
+   82:	iconst_1
+   83:	istore_2
+   84:	aload_0
+   85:	getfield	#20; //Field e:[Lhj;
+   88:	iconst_1
+   89:	aaload
+   90:	ifnull	127
+   93:	aload_0
+   94:	getfield	#20; //Field e:[Lhj;
+   97:	iconst_1
+   98:	aaload
+   99:	dup
+   100:	getfield	#49; //Field hj.a:I
+   103:	iconst_1
+   104:	isub
+   105:	putfield	#49; //Field hj.a:I
+   108:	aload_0
+   109:	getfield	#20; //Field e:[Lhj;
+   112:	iconst_1
+   113:	aaload
+   114:	getfield	#49; //Field hj.a:I
+   117:	ifne	127
+   120:	aload_0
+   121:	getfield	#20; //Field e:[Lhj;
+   124:	iconst_1
+   125:	aconst_null
+   126:	aastore
+   127:	aload_0
+   128:	invokevirtual	#60; //Method e:()Z
+   131:	ifeq	175
+   134:	aload_0
+   135:	invokespecial	#62; //Method g:()Z
+   138:	ifeq	175
+   141:	aload_0
+   142:	dup
+   143:	getfield	#23; //Field h:I
+   146:	iconst_1
+   147:	iadd
+   148:	putfield	#23; //Field h:I
+   151:	aload_0
+   152:	getfield	#23; //Field h:I
+   155:	sipush	200
+   158:	if_icmpne	180
+   161:	aload_0
+   162:	iconst_0
+   163:	putfield	#23; //Field h:I
+   166:	aload_0
+   167:	invokevirtual	#61; //Method f:()V
+   170:	iconst_1
+   171:	istore_2
+   172:	goto	180
+   175:	aload_0
+   176:	iconst_0
+   177:	putfield	#23; //Field h:I
+   180:	iload_1
+   181:	aload_0
+   182:	getfield	#21; //Field f:I
+   185:	ifle	192
+   188:	iconst_1
+   189:	goto	193
+   192:	iconst_0
+   193:	if_icmpeq	229
+   196:	iconst_1
+   197:	istore_2
+   198:	aload_0
+   199:	getfield	#21; //Field f:I
+   202:	ifle	209
+   205:	iconst_1
+   206:	goto	210
+   209:	iconst_0
+   210:	aload_0
+   211:	getfield	#16; //Field a:Lem;
+   214:	aload_0
+   215:	getfield	#17; //Field b:I
+   218:	aload_0
+   219:	getfield	#18; //Field c:I
+   222:	aload_0
+   223:	getfield	#19; //Field d:I
+   226:	invokestatic	#67; //Method ei.a:(ZLem;III)V
+   229:	iload_2
+   230:	ifeq	237
+   233:	aload_0
+   234:	invokevirtual	#58; //Method c:()V
+   237:	return
+
+public void f();
+  Code:
+   0:	aload_0
+   1:	invokespecial	#62; //Method g:()Z
+   4:	ifne	8
+   7:	return
+   8:	aload_0
+   9:	aload_0
+   10:	getfield	#20; //Field e:[Lhj;
+   13:	iconst_0
+   14:	aaload
+   15:	invokevirtual	#71; //Method hj.a:()Lfs;
+   18:	getfield	#30; //Field fs.aW:I
+   21:	invokespecial	#57; //Method b:(I)I
+   24:	istore_1
+   25:	aload_0
+   26:	getfield	#20; //Field e:[Lhj;
+   29:	iconst_2
+   30:	aaload
+   31:	ifnonnull	52
+   34:	aload_0
+   35:	getfield	#20; //Field e:[Lhj;
+   38:	iconst_2
+   39:	new	#12; //class hj
+   42:	dup
+   43:	iload_1
+   44:	iconst_1
+   45:	invokespecial	#69; //Method hj."<init>":(II)V
+   48:	aastore
+   49:	goto	80
+   52:	aload_0
+   53:	getfield	#20; //Field e:[Lhj;
+   56:	iconst_2
+   57:	aaload
+   58:	getfield	#50; //Field hj.c:I
+   61:	iload_1
+   62:	if_icmpne	80
+   65:	aload_0
+   66:	getfield	#20; //Field e:[Lhj;
+   69:	iconst_2
+   70:	aaload
+   71:	dup
+   72:	getfield	#49; //Field hj.a:I
+   75:	iconst_1
+   76:	iadd
+   77:	putfield	#49; //Field hj.a:I
+   80:	aload_0
+   81:	getfield	#20; //Field e:[Lhj;
+   84:	iconst_0
+   85:	aaload
+   86:	dup
+   87:	getfield	#49; //Field hj.a:I
+   90:	iconst_1
+   91:	isub
+   92:	putfield	#49; //Field hj.a:I
+   95:	aload_0
+   96:	getfield	#20; //Field e:[Lhj;
+   99:	iconst_0
+   100:	aaload
+   101:	getfield	#49; //Field hj.a:I
+   104:	ifgt	114
+   107:	aload_0
+   108:	getfield	#20; //Field e:[Lhj;
+   111:	iconst_0
+   112:	aconst_null
+   113:	aastore
+   114:	return
+
+}
+

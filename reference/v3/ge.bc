@@ -1,0 +1,87 @@
+Compiled from SourceFile
+public class ge extends fx{
+public ge(el);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	invokespecial	#27; //Method fx."<init>":(Lel;)V
+   5:	aload_0
+   6:	ldc	#4; //String /mob/zombie.png
+   8:	putfield	#18; //Field aF:Ljava/lang/String;
+   11:	aload_0
+   12:	ldc	#2; //float 0.5f
+   14:	putfield	#19; //Field bl:F
+   17:	aload_0
+   18:	iconst_5
+   19:	putfield	#20; //Field e:I
+   22:	return
+
+public void D();
+  Code:
+   0:	aload_0
+   1:	getfield	#21; //Field l:Lel;
+   4:	invokevirtual	#25; //Method el.b:()Z
+   7:	ifeq	81
+   10:	aload_0
+   11:	fconst_1
+   12:	invokevirtual	#29; //Method b:(F)F
+   15:	fstore_1
+   16:	fload_1
+   17:	ldc	#2; //float 0.5f
+   19:	fcmpl
+   20:	ifle	81
+   23:	aload_0
+   24:	getfield	#21; //Field l:Lel;
+   27:	aload_0
+   28:	getfield	#22; //Field p:D
+   31:	invokestatic	#30; //Method hb.b:(D)I
+   34:	aload_0
+   35:	getfield	#23; //Field q:D
+   38:	invokestatic	#30; //Method hb.b:(D)I
+   41:	aload_0
+   42:	getfield	#24; //Field r:D
+   45:	invokestatic	#30; //Method hb.b:(D)I
+   48:	invokevirtual	#26; //Method el.g:(III)Z
+   51:	ifeq	81
+   54:	aload_0
+   55:	getfield	#16; //Field V:Ljava/util/Random;
+   58:	invokevirtual	#31; //Method java/util/Random.nextFloat:()F
+   61:	ldc	#3; //float 30.0f
+   63:	fmul
+   64:	fload_1
+   65:	ldc	#1; //float 0.4f
+   67:	fsub
+   68:	fconst_2
+   69:	fmul
+   70:	fcmpg
+   71:	ifge	81
+   74:	aload_0
+   75:	sipush	300
+   78:	putfield	#17; //Field Y:I
+   81:	aload_0
+   82:	invokespecial	#28; //Method fx.D:()V
+   85:	return
+
+protected java.lang.String d();
+  Code:
+   0:	ldc	#5; //String mob.zombie
+   2:	areturn
+
+protected java.lang.String e();
+  Code:
+   0:	ldc	#7; //String mob.zombiehurt
+   2:	areturn
+
+protected java.lang.String f();
+  Code:
+   0:	ldc	#6; //String mob.zombiedeath
+   2:	areturn
+
+protected int g();
+  Code:
+   0:	getstatic	#14; //Field fq.J:Lfq;
+   3:	getfield	#15; //Field fq.aW:I
+   6:	ireturn
+
+}
+

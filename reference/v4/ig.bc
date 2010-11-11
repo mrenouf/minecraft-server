@@ -1,0 +1,219 @@
+Compiled from SourceFile
+public class ig extends java.lang.Object{
+public em a;
+
+public iu b;
+
+public boolean c;
+
+public boolean d;
+
+public boolean e;
+
+public float[] f;
+
+public int g;
+
+public ig();
+  Code:
+   0:	aload_0
+   1:	invokespecial	#41; //Method java/lang/Object."<init>":()V
+   4:	aload_0
+   5:	iconst_0
+   6:	putfield	#26; //Field c:Z
+   9:	aload_0
+   10:	iconst_0
+   11:	putfield	#27; //Field d:Z
+   14:	aload_0
+   15:	iconst_0
+   16:	putfield	#28; //Field e:Z
+   19:	aload_0
+   20:	bipush	16
+   22:	newarray float
+   24:	putfield	#29; //Field f:[F
+   27:	aload_0
+   28:	iconst_0
+   29:	putfield	#30; //Field g:I
+   32:	aload_0
+   33:	iconst_4
+   34:	newarray float
+   36:	putfield	#31; //Field h:[F
+   39:	return
+
+public final void a(em);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	putfield	#24; //Field a:Lem;
+   5:	aload_0
+   6:	invokevirtual	#36; //Method a:()V
+   9:	aload_0
+   10:	invokevirtual	#37; //Method b:()V
+   13:	return
+
+protected void b();
+  Code:
+   0:	ldc	#1; //float 0.05f
+   2:	fstore_1
+   3:	iconst_0
+   4:	istore_2
+   5:	iload_2
+   6:	bipush	15
+   8:	if_icmpgt	47
+   11:	fconst_1
+   12:	iload_2
+   13:	i2f
+   14:	ldc	#4; //float 15.0f
+   16:	fdiv
+   17:	fsub
+   18:	fstore_3
+   19:	aload_0
+   20:	getfield	#29; //Field f:[F
+   23:	iload_2
+   24:	fconst_1
+   25:	fload_3
+   26:	fsub
+   27:	fload_3
+   28:	ldc	#3; //float 3.0f
+   30:	fmul
+   31:	fconst_1
+   32:	fadd
+   33:	fdiv
+   34:	fconst_1
+   35:	fload_1
+   36:	fsub
+   37:	fmul
+   38:	fload_1
+   39:	fadd
+   40:	fastore
+   41:	iinc	2, 1
+   44:	goto	5
+   47:	return
+
+protected void a();
+  Code:
+   0:	aload_0
+   1:	new	#11; //class iu
+   4:	dup
+   5:	aload_0
+   6:	getfield	#24; //Field a:Lem;
+   9:	invokespecial	#38; //Method iu."<init>":(Lem;)V
+   12:	putfield	#25; //Field b:Liu;
+   15:	return
+
+public bt c();
+  Code:
+   0:	new	#12; //class ja
+   3:	dup
+   4:	aload_0
+   5:	getfield	#24; //Field a:Lem;
+   8:	aload_0
+   9:	getfield	#24; //Field a:Lem;
+   12:	getfield	#21; //Field em.u:J
+   15:	invokespecial	#39; //Method ja."<init>":(Lem;J)V
+   18:	areturn
+
+public av a(java.io.File);
+  Code:
+   0:	new	#7; //class ff
+   3:	dup
+   4:	aload_1
+   5:	iconst_1
+   6:	invokespecial	#33; //Method ff."<init>":(Ljava/io/File;Z)V
+   9:	areturn
+
+public boolean a(int, int);
+  Code:
+   0:	aload_0
+   1:	getfield	#24; //Field a:Lem;
+   4:	iload_1
+   5:	iload_2
+   6:	invokevirtual	#32; //Method em.a:(II)I
+   9:	istore_3
+   10:	iload_3
+   11:	getstatic	#22; //Field fy.E:Lfy;
+   14:	getfield	#23; //Field fy.bh:I
+   17:	if_icmpeq	22
+   20:	iconst_0
+   21:	ireturn
+   22:	iconst_1
+   23:	ireturn
+
+public float a(long, float);
+  Code:
+   0:	lload_1
+   1:	ldc2_w	#15; //long 24000l
+   4:	lrem
+   5:	l2i
+   6:	istore	4
+   8:	iload	4
+   10:	i2f
+   11:	fload_3
+   12:	fadd
+   13:	ldc	#5; //float 24000.0f
+   15:	fdiv
+   16:	ldc	#2; //float 0.25f
+   18:	fsub
+   19:	fstore	5
+   21:	fload	5
+   23:	fconst_0
+   24:	fcmpg
+   25:	ifge	34
+   28:	fload	5
+   30:	fconst_1
+   31:	fadd
+   32:	fstore	5
+   34:	fload	5
+   36:	fconst_1
+   37:	fcmpl
+   38:	ifle	47
+   41:	fload	5
+   43:	fconst_1
+   44:	fsub
+   45:	fstore	5
+   47:	fload	5
+   49:	fstore	6
+   51:	fconst_1
+   52:	fload	5
+   54:	f2d
+   55:	ldc2_w	#19; //double 3.141592653589793d
+   58:	dmul
+   59:	invokestatic	#40; //Method java/lang/Math.cos:(D)D
+   62:	dconst_1
+   63:	dadd
+   64:	ldc2_w	#17; //double 2.0d
+   67:	ddiv
+   68:	d2f
+   69:	fsub
+   70:	fstore	5
+   72:	fload	6
+   74:	fload	5
+   76:	fload	6
+   78:	fsub
+   79:	ldc	#3; //float 3.0f
+   81:	fdiv
+   82:	fadd
+   83:	fstore	5
+   85:	fload	5
+   87:	freturn
+
+public static ig a(int);
+  Code:
+   0:	iload_0
+   1:	ifne	12
+   4:	new	#10; //class ig
+   7:	dup
+   8:	invokespecial	#35; //Method "<init>":()V
+   11:	areturn
+   12:	iload_0
+   13:	iconst_m1
+   14:	if_icmpne	25
+   17:	new	#9; //class hm
+   20:	dup
+   21:	invokespecial	#34; //Method hm."<init>":()V
+   24:	areturn
+   25:	aconst_null
+   26:	areturn
+
+}
+

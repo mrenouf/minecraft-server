@@ -1,0 +1,129 @@
+Compiled from SourceFile
+public class gc extends iu{
+public gc(ij, double, double);
+  Code:
+   0:	aload_0
+   1:	invokespecial	#12; //Method iu."<init>":()V
+   4:	aload_0
+   5:	aload_1
+   6:	putfield	#8; //Field e:Lij;
+   9:	aload_0
+   10:	dload_2
+   11:	putfield	#9; //Field f:D
+   14:	aload_0
+   15:	dload	4
+   17:	putfield	#10; //Field g:D
+   20:	return
+
+public ij a(kc);
+  Code:
+   0:	aload_0
+   1:	getfield	#8; //Field e:Lij;
+   4:	areturn
+
+public ij a(int, int);
+  Code:
+   0:	aload_0
+   1:	getfield	#8; //Field e:Lij;
+   4:	areturn
+
+public ij[] a(int, int, int, int);
+  Code:
+   0:	aload_0
+   1:	aload_0
+   2:	aload_0
+   3:	getfield	#7; //Field d:[Lij;
+   6:	iload_1
+   7:	iload_2
+   8:	iload_3
+   9:	iload	4
+   11:	invokevirtual	#11; //Method a:([Lij;IIII)[Lij;
+   14:	putfield	#7; //Field d:[Lij;
+   17:	aload_0
+   18:	getfield	#7; //Field d:[Lij;
+   21:	areturn
+
+public double[] a(double[], int, int, int, int);
+  Code:
+   0:	aload_1
+   1:	ifnull	14
+   4:	aload_1
+   5:	arraylength
+   6:	iload	4
+   8:	iload	5
+   10:	imul
+   11:	if_icmpge	22
+   14:	iload	4
+   16:	iload	5
+   18:	imul
+   19:	newarray double
+   21:	astore_1
+   22:	aload_1
+   23:	iconst_0
+   24:	iload	4
+   26:	iload	5
+   28:	imul
+   29:	aload_0
+   30:	getfield	#9; //Field f:D
+   33:	invokestatic	#13; //Method java/util/Arrays.fill:([DIID)V
+   36:	aload_1
+   37:	areturn
+
+public ij[] a(ij[], int, int, int, int);
+  Code:
+   0:	aload_1
+   1:	ifnull	14
+   4:	aload_1
+   5:	arraylength
+   6:	iload	4
+   8:	iload	5
+   10:	imul
+   11:	if_icmpge	45
+   14:	iload	4
+   16:	iload	5
+   18:	imul
+   19:	anewarray	#2; //class ij
+   22:	astore_1
+   23:	aload_0
+   24:	iload	4
+   26:	iload	5
+   28:	imul
+   29:	newarray double
+   31:	putfield	#5; //Field a:[D
+   34:	aload_0
+   35:	iload	4
+   37:	iload	5
+   39:	imul
+   40:	newarray double
+   42:	putfield	#6; //Field b:[D
+   45:	aload_1
+   46:	iconst_0
+   47:	iload	4
+   49:	iload	5
+   51:	imul
+   52:	aload_0
+   53:	getfield	#8; //Field e:Lij;
+   56:	invokestatic	#14; //Method java/util/Arrays.fill:([Ljava/lang/Object;IILjava/lang/Object;)V
+   59:	aload_0
+   60:	getfield	#6; //Field b:[D
+   63:	iconst_0
+   64:	iload	4
+   66:	iload	5
+   68:	imul
+   69:	aload_0
+   70:	getfield	#10; //Field g:D
+   73:	invokestatic	#13; //Method java/util/Arrays.fill:([DIID)V
+   76:	aload_0
+   77:	getfield	#5; //Field a:[D
+   80:	iconst_0
+   81:	iload	4
+   83:	iload	5
+   85:	imul
+   86:	aload_0
+   87:	getfield	#9; //Field f:D
+   90:	invokestatic	#13; //Method java/util/Arrays.fill:([DIID)V
+   93:	aload_1
+   94:	areturn
+
+}
+

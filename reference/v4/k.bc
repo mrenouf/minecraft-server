@@ -1,0 +1,25 @@
+Compiled from SourceFile
+public class k extends fr{
+public k(int, int);
+  Code:
+   0:	aload_0
+   1:	iload_1
+   2:	iload_2
+   3:	invokespecial	#8; //Method fr."<init>":(II)V
+   6:	return
+
+public int a(int, java.util.Random);
+  Code:
+   0:	aload_2
+   1:	bipush	10
+   3:	invokevirtual	#9; //Method java/util/Random.nextInt:(I)I
+   6:	ifne	16
+   9:	getstatic	#6; //Field fs.an:Lfs;
+   12:	getfield	#5; //Field fs.aW:I
+   15:	ireturn
+   16:	aload_0
+   17:	getfield	#7; //Field bh:I
+   20:	ireturn
+
+}
+

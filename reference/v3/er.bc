@@ -1,0 +1,19 @@
+Compiled from SourceFile
+public class er extends hr{
+public er(int, int, jr, boolean);
+  Code:
+   0:	aload_0
+   1:	iload_1
+   2:	iload_2
+   3:	aload_3
+   4:	iload	4
+   6:	invokespecial	#3; //Method hr."<init>":(IILjr;Z)V
+   9:	return
+
+public int a(java.util.Random);
+  Code:
+   0:	iconst_0
+   1:	ireturn
+
+}
+

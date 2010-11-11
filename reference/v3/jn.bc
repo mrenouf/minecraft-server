@@ -1,0 +1,1615 @@
+Compiled from SourceFile
+public class jn extends java.lang.Object{
+public static boolean a;
+
+public byte[] b;
+
+public boolean c;
+
+public el d;
+
+public hm e;
+
+public hm f;
+
+public hm g;
+
+public byte[] h;
+
+public int i;
+
+public final int j;
+
+public final int k;
+
+public java.util.Map l;
+
+public java.util.List[] m;
+
+public boolean n;
+
+public boolean o;
+
+public boolean p;
+
+public boolean q;
+
+public boolean r;
+
+public long s;
+
+public jn(el, int, int);
+  Code:
+   0:	aload_0
+   1:	invokespecial	#97; //Method java/lang/Object."<init>":()V
+   4:	aload_0
+   5:	new	#23; //class java/util/HashMap
+   8:	dup
+   9:	invokespecial	#105; //Method java/util/HashMap."<init>":()V
+   12:	putfield	#73; //Field l:Ljava/util/Map;
+   15:	aload_0
+   16:	bipush	8
+   18:	anewarray	#24; //class java/util/List
+   21:	putfield	#74; //Field m:[Ljava/util/List;
+   24:	aload_0
+   25:	iconst_0
+   26:	putfield	#75; //Field n:Z
+   29:	aload_0
+   30:	iconst_0
+   31:	putfield	#76; //Field o:Z
+   34:	aload_0
+   35:	iconst_0
+   36:	putfield	#78; //Field q:Z
+   39:	aload_0
+   40:	iconst_0
+   41:	putfield	#79; //Field r:Z
+   44:	aload_0
+   45:	lconst_0
+   46:	putfield	#80; //Field s:J
+   49:	aload_0
+   50:	aload_1
+   51:	putfield	#65; //Field d:Lel;
+   54:	aload_0
+   55:	iload_2
+   56:	putfield	#71; //Field j:I
+   59:	aload_0
+   60:	iload_3
+   61:	putfield	#72; //Field k:I
+   64:	aload_0
+   65:	sipush	256
+   68:	newarray byte
+   70:	putfield	#69; //Field h:[B
+   73:	iconst_0
+   74:	istore	4
+   76:	iload	4
+   78:	aload_0
+   79:	getfield	#74; //Field m:[Ljava/util/List;
+   82:	arraylength
+   83:	if_icmpge	106
+   86:	aload_0
+   87:	getfield	#74; //Field m:[Ljava/util/List;
+   90:	iload	4
+   92:	new	#22; //class java/util/ArrayList
+   95:	dup
+   96:	invokespecial	#104; //Method java/util/ArrayList."<init>":()V
+   99:	aastore
+   100:	iinc	4, 1
+   103:	goto	76
+   106:	return
+
+public jn(el, byte[], int, int);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	iload_3
+   3:	iload	4
+   5:	invokespecial	#107; //Method "<init>":(Lel;II)V
+   8:	aload_0
+   9:	aload_2
+   10:	putfield	#63; //Field b:[B
+   13:	aload_0
+   14:	new	#15; //class hm
+   17:	dup
+   18:	aload_2
+   19:	arraylength
+   20:	invokespecial	#92; //Method hm."<init>":(I)V
+   23:	putfield	#66; //Field e:Lhm;
+   26:	aload_0
+   27:	new	#15; //class hm
+   30:	dup
+   31:	aload_2
+   32:	arraylength
+   33:	invokespecial	#92; //Method hm."<init>":(I)V
+   36:	putfield	#67; //Field f:Lhm;
+   39:	aload_0
+   40:	new	#15; //class hm
+   43:	dup
+   44:	aload_2
+   45:	arraylength
+   46:	invokespecial	#92; //Method hm."<init>":(I)V
+   49:	putfield	#68; //Field g:Lhm;
+   52:	return
+
+public boolean a(int, int);
+  Code:
+   0:	iload_1
+   1:	aload_0
+   2:	getfield	#71; //Field j:I
+   5:	if_icmpne	20
+   8:	iload_2
+   9:	aload_0
+   10:	getfield	#72; //Field k:I
+   13:	if_icmpne	20
+   16:	iconst_1
+   17:	goto	21
+   20:	iconst_0
+   21:	ireturn
+
+public int b(int, int);
+  Code:
+   0:	aload_0
+   1:	getfield	#69; //Field h:[B
+   4:	iload_2
+   5:	iconst_4
+   6:	ishl
+   7:	iload_1
+   8:	ior
+   9:	baload
+   10:	sipush	255
+   13:	iand
+   14:	ireturn
+
+public void a();
+  Code:
+   0:	return
+
+public void b();
+  Code:
+   0:	bipush	127
+   2:	istore_1
+   3:	iconst_0
+   4:	istore_2
+   5:	iload_2
+   6:	bipush	16
+   8:	if_icmpge	84
+   11:	iconst_0
+   12:	istore_3
+   13:	iload_3
+   14:	bipush	16
+   16:	if_icmpge	78
+   19:	aload_0
+   20:	getfield	#69; //Field h:[B
+   23:	iload_3
+   24:	iconst_4
+   25:	ishl
+   26:	iload_2
+   27:	ior
+   28:	bipush	-128
+   30:	bastore
+   31:	aload_0
+   32:	iload_2
+   33:	bipush	127
+   35:	iload_3
+   36:	invokespecial	#114; //Method g:(III)V
+   39:	aload_0
+   40:	getfield	#69; //Field h:[B
+   43:	iload_3
+   44:	iconst_4
+   45:	ishl
+   46:	iload_2
+   47:	ior
+   48:	baload
+   49:	sipush	255
+   52:	iand
+   53:	iload_1
+   54:	if_icmpge	72
+   57:	aload_0
+   58:	getfield	#69; //Field h:[B
+   61:	iload_3
+   62:	iconst_4
+   63:	ishl
+   64:	iload_2
+   65:	ior
+   66:	baload
+   67:	sipush	255
+   70:	iand
+   71:	istore_1
+   72:	iinc	3, 1
+   75:	goto	13
+   78:	iinc	2, 1
+   81:	goto	5
+   84:	aload_0
+   85:	iload_1
+   86:	putfield	#70; //Field i:I
+   89:	iconst_0
+   90:	istore_2
+   91:	iload_2
+   92:	bipush	16
+   94:	if_icmpge	123
+   97:	iconst_0
+   98:	istore_3
+   99:	iload_3
+   100:	bipush	16
+   102:	if_icmpge	117
+   105:	aload_0
+   106:	iload_2
+   107:	iload_3
+   108:	invokespecial	#112; //Method c:(II)V
+   111:	iinc	3, 1
+   114:	goto	99
+   117:	iinc	2, 1
+   120:	goto	91
+   123:	aload_0
+   124:	iconst_1
+   125:	putfield	#76; //Field o:Z
+   128:	return
+
+public void c();
+  Code:
+   0:	bipush	32
+   2:	istore_1
+   3:	iconst_0
+   4:	istore_2
+   5:	iload_2
+   6:	bipush	16
+   8:	if_icmpge	196
+   11:	iconst_0
+   12:	istore_3
+   13:	iload_3
+   14:	bipush	16
+   16:	if_icmpge	190
+   19:	iload_2
+   20:	bipush	11
+   22:	ishl
+   23:	iload_3
+   24:	bipush	7
+   26:	ishl
+   27:	ior
+   28:	istore	4
+   30:	iconst_0
+   31:	istore	5
+   33:	iload	5
+   35:	sipush	128
+   38:	if_icmpge	81
+   41:	getstatic	#58; //Field fw.t:[I
+   44:	aload_0
+   45:	getfield	#63; //Field b:[B
+   48:	iload	4
+   50:	iload	5
+   52:	iadd
+   53:	baload
+   54:	iaload
+   55:	istore	6
+   57:	iload	6
+   59:	ifle	75
+   62:	aload_0
+   63:	getfield	#68; //Field g:Lhm;
+   66:	iload_2
+   67:	iload	5
+   69:	iload_3
+   70:	iload	6
+   72:	invokevirtual	#94; //Method hm.a:(IIII)V
+   75:	iinc	5, 1
+   78:	goto	33
+   81:	bipush	15
+   83:	istore	5
+   85:	iload_1
+   86:	iconst_2
+   87:	isub
+   88:	istore	6
+   90:	iload	6
+   92:	sipush	128
+   95:	if_icmpge	184
+   98:	iload	5
+   100:	ifle	184
+   103:	iinc	6, 1
+   106:	aload_0
+   107:	getfield	#63; //Field b:[B
+   110:	iload	4
+   112:	iload	6
+   114:	iadd
+   115:	baload
+   116:	istore	7
+   118:	getstatic	#57; //Field fw.r:[I
+   121:	iload	7
+   123:	iaload
+   124:	istore	8
+   126:	getstatic	#58; //Field fw.t:[I
+   129:	iload	7
+   131:	iaload
+   132:	istore	9
+   134:	iload	8
+   136:	ifne	142
+   139:	iconst_1
+   140:	istore	8
+   142:	iload	5
+   144:	iload	8
+   146:	isub
+   147:	istore	5
+   149:	iload	9
+   151:	iload	5
+   153:	if_icmple	160
+   156:	iload	9
+   158:	istore	5
+   160:	iload	5
+   162:	ifge	168
+   165:	iconst_0
+   166:	istore	5
+   168:	aload_0
+   169:	getfield	#68; //Field g:Lhm;
+   172:	iload_2
+   173:	iload	6
+   175:	iload_3
+   176:	iload	5
+   178:	invokevirtual	#94; //Method hm.a:(IIII)V
+   181:	goto	90
+   184:	iinc	3, 1
+   187:	goto	13
+   190:	iinc	2, 1
+   193:	goto	5
+   196:	aload_0
+   197:	getfield	#65; //Field d:Lel;
+   200:	getstatic	#39; //Field dj.b:Ldj;
+   203:	aload_0
+   204:	getfield	#71; //Field j:I
+   207:	bipush	16
+   209:	imul
+   210:	iload_1
+   211:	iconst_1
+   212:	isub
+   213:	aload_0
+   214:	getfield	#72; //Field k:I
+   217:	bipush	16
+   219:	imul
+   220:	aload_0
+   221:	getfield	#71; //Field j:I
+   224:	bipush	16
+   226:	imul
+   227:	bipush	16
+   229:	iadd
+   230:	iload_1
+   231:	iconst_1
+   232:	iadd
+   233:	aload_0
+   234:	getfield	#72; //Field k:I
+   237:	bipush	16
+   239:	imul
+   240:	bipush	16
+   242:	iadd
+   243:	invokevirtual	#83; //Method el.a:(Ldj;IIIIII)V
+   246:	aload_0
+   247:	iconst_1
+   248:	putfield	#76; //Field o:Z
+   251:	return
+
+public int a(int, int, int);
+  Code:
+   0:	aload_0
+   1:	getfield	#63; //Field b:[B
+   4:	iload_1
+   5:	bipush	11
+   7:	ishl
+   8:	iload_3
+   9:	bipush	7
+   11:	ishl
+   12:	ior
+   13:	iload_2
+   14:	ior
+   15:	baload
+   16:	ireturn
+
+public boolean a(int, int, int, int, int);
+  Code:
+   0:	iload	4
+   2:	i2b
+   3:	istore	6
+   5:	aload_0
+   6:	getfield	#69; //Field h:[B
+   9:	iload_3
+   10:	iconst_4
+   11:	ishl
+   12:	iload_1
+   13:	ior
+   14:	baload
+   15:	sipush	255
+   18:	iand
+   19:	istore	7
+   21:	aload_0
+   22:	getfield	#63; //Field b:[B
+   25:	iload_1
+   26:	bipush	11
+   28:	ishl
+   29:	iload_3
+   30:	bipush	7
+   32:	ishl
+   33:	ior
+   34:	iload_2
+   35:	ior
+   36:	baload
+   37:	sipush	255
+   40:	iand
+   41:	istore	8
+   43:	iload	8
+   45:	iload	4
+   47:	if_icmpne	67
+   50:	aload_0
+   51:	getfield	#66; //Field e:Lhm;
+   54:	iload_1
+   55:	iload_2
+   56:	iload_3
+   57:	invokevirtual	#93; //Method hm.a:(III)I
+   60:	iload	5
+   62:	if_icmpne	67
+   65:	iconst_0
+   66:	ireturn
+   67:	aload_0
+   68:	getfield	#71; //Field j:I
+   71:	bipush	16
+   73:	imul
+   74:	iload_1
+   75:	iadd
+   76:	istore	9
+   78:	aload_0
+   79:	getfield	#72; //Field k:I
+   82:	bipush	16
+   84:	imul
+   85:	iload_3
+   86:	iadd
+   87:	istore	10
+   89:	aload_0
+   90:	getfield	#63; //Field b:[B
+   93:	iload_1
+   94:	bipush	11
+   96:	ishl
+   97:	iload_3
+   98:	bipush	7
+   100:	ishl
+   101:	ior
+   102:	iload_2
+   103:	ior
+   104:	iload	6
+   106:	bastore
+   107:	iload	8
+   109:	ifeq	140
+   112:	aload_0
+   113:	getfield	#65; //Field d:Lel;
+   116:	getfield	#54; //Field el.z:Z
+   119:	ifne	140
+   122:	getstatic	#55; //Field fw.n:[Lfw;
+   125:	iload	8
+   127:	aaload
+   128:	aload_0
+   129:	getfield	#65; //Field d:Lel;
+   132:	iload	9
+   134:	iload_2
+   135:	iload	10
+   137:	invokevirtual	#88; //Method fw.b:(Lel;III)V
+   140:	aload_0
+   141:	getfield	#66; //Field e:Lhm;
+   144:	iload_1
+   145:	iload_2
+   146:	iload_3
+   147:	iload	5
+   149:	invokevirtual	#94; //Method hm.a:(IIII)V
+   152:	aload_0
+   153:	getfield	#65; //Field d:Lel;
+   156:	getfield	#52; //Field el.q:Lie;
+   159:	getfield	#60; //Field ie.c:Z
+   162:	ifne	227
+   165:	getstatic	#57; //Field fw.r:[I
+   168:	iload	6
+   170:	iaload
+   171:	ifeq	192
+   174:	iload_2
+   175:	iload	7
+   177:	if_icmplt	207
+   180:	aload_0
+   181:	iload_1
+   182:	iload_2
+   183:	iconst_1
+   184:	iadd
+   185:	iload_3
+   186:	invokespecial	#114; //Method g:(III)V
+   189:	goto	207
+   192:	iload_2
+   193:	iload	7
+   195:	iconst_1
+   196:	isub
+   197:	if_icmpne	207
+   200:	aload_0
+   201:	iload_1
+   202:	iload_2
+   203:	iload_3
+   204:	invokespecial	#114; //Method g:(III)V
+   207:	aload_0
+   208:	getfield	#65; //Field d:Lel;
+   211:	getstatic	#38; //Field dj.a:Ldj;
+   214:	iload	9
+   216:	iload_2
+   217:	iload	10
+   219:	iload	9
+   221:	iload_2
+   222:	iload	10
+   224:	invokevirtual	#83; //Method el.a:(Ldj;IIIIII)V
+   227:	aload_0
+   228:	getfield	#65; //Field d:Lel;
+   231:	getstatic	#39; //Field dj.b:Ldj;
+   234:	iload	9
+   236:	iload_2
+   237:	iload	10
+   239:	iload	9
+   241:	iload_2
+   242:	iload	10
+   244:	invokevirtual	#83; //Method el.a:(Ldj;IIIIII)V
+   247:	aload_0
+   248:	iload_1
+   249:	iload_3
+   250:	invokespecial	#112; //Method c:(II)V
+   253:	iload	4
+   255:	ifeq	276
+   258:	getstatic	#55; //Field fw.n:[Lfw;
+   261:	iload	4
+   263:	aaload
+   264:	aload_0
+   265:	getfield	#65; //Field d:Lel;
+   268:	iload	9
+   270:	iload_2
+   271:	iload	10
+   273:	invokevirtual	#89; //Method fw.e:(Lel;III)V
+   276:	aload_0
+   277:	iconst_1
+   278:	putfield	#76; //Field o:Z
+   281:	iconst_1
+   282:	ireturn
+
+public boolean a(int, int, int, int);
+  Code:
+   0:	iload	4
+   2:	i2b
+   3:	istore	5
+   5:	aload_0
+   6:	getfield	#69; //Field h:[B
+   9:	iload_3
+   10:	iconst_4
+   11:	ishl
+   12:	iload_1
+   13:	ior
+   14:	baload
+   15:	sipush	255
+   18:	iand
+   19:	istore	6
+   21:	aload_0
+   22:	getfield	#63; //Field b:[B
+   25:	iload_1
+   26:	bipush	11
+   28:	ishl
+   29:	iload_3
+   30:	bipush	7
+   32:	ishl
+   33:	ior
+   34:	iload_2
+   35:	ior
+   36:	baload
+   37:	sipush	255
+   40:	iand
+   41:	istore	7
+   43:	iload	7
+   45:	iload	4
+   47:	if_icmpne	52
+   50:	iconst_0
+   51:	ireturn
+   52:	aload_0
+   53:	getfield	#71; //Field j:I
+   56:	bipush	16
+   58:	imul
+   59:	iload_1
+   60:	iadd
+   61:	istore	8
+   63:	aload_0
+   64:	getfield	#72; //Field k:I
+   67:	bipush	16
+   69:	imul
+   70:	iload_3
+   71:	iadd
+   72:	istore	9
+   74:	aload_0
+   75:	getfield	#63; //Field b:[B
+   78:	iload_1
+   79:	bipush	11
+   81:	ishl
+   82:	iload_3
+   83:	bipush	7
+   85:	ishl
+   86:	ior
+   87:	iload_2
+   88:	ior
+   89:	iload	5
+   91:	bastore
+   92:	iload	7
+   94:	ifeq	115
+   97:	getstatic	#55; //Field fw.n:[Lfw;
+   100:	iload	7
+   102:	aaload
+   103:	aload_0
+   104:	getfield	#65; //Field d:Lel;
+   107:	iload	8
+   109:	iload_2
+   110:	iload	9
+   112:	invokevirtual	#88; //Method fw.b:(Lel;III)V
+   115:	aload_0
+   116:	getfield	#66; //Field e:Lhm;
+   119:	iload_1
+   120:	iload_2
+   121:	iload_3
+   122:	iconst_0
+   123:	invokevirtual	#94; //Method hm.a:(IIII)V
+   126:	getstatic	#57; //Field fw.r:[I
+   129:	iload	5
+   131:	iaload
+   132:	ifeq	153
+   135:	iload_2
+   136:	iload	6
+   138:	if_icmplt	168
+   141:	aload_0
+   142:	iload_1
+   143:	iload_2
+   144:	iconst_1
+   145:	iadd
+   146:	iload_3
+   147:	invokespecial	#114; //Method g:(III)V
+   150:	goto	168
+   153:	iload_2
+   154:	iload	6
+   156:	iconst_1
+   157:	isub
+   158:	if_icmpne	168
+   161:	aload_0
+   162:	iload_1
+   163:	iload_2
+   164:	iload_3
+   165:	invokespecial	#114; //Method g:(III)V
+   168:	aload_0
+   169:	getfield	#65; //Field d:Lel;
+   172:	getstatic	#38; //Field dj.a:Ldj;
+   175:	iload	8
+   177:	iload_2
+   178:	iload	9
+   180:	iload	8
+   182:	iload_2
+   183:	iload	9
+   185:	invokevirtual	#83; //Method el.a:(Ldj;IIIIII)V
+   188:	aload_0
+   189:	getfield	#65; //Field d:Lel;
+   192:	getstatic	#39; //Field dj.b:Ldj;
+   195:	iload	8
+   197:	iload_2
+   198:	iload	9
+   200:	iload	8
+   202:	iload_2
+   203:	iload	9
+   205:	invokevirtual	#83; //Method el.a:(Ldj;IIIIII)V
+   208:	aload_0
+   209:	iload_1
+   210:	iload_3
+   211:	invokespecial	#112; //Method c:(II)V
+   214:	iload	4
+   216:	ifeq	247
+   219:	aload_0
+   220:	getfield	#65; //Field d:Lel;
+   223:	getfield	#54; //Field el.z:Z
+   226:	ifne	247
+   229:	getstatic	#55; //Field fw.n:[Lfw;
+   232:	iload	4
+   234:	aaload
+   235:	aload_0
+   236:	getfield	#65; //Field d:Lel;
+   239:	iload	8
+   241:	iload_2
+   242:	iload	9
+   244:	invokevirtual	#89; //Method fw.e:(Lel;III)V
+   247:	aload_0
+   248:	iconst_1
+   249:	putfield	#76; //Field o:Z
+   252:	iconst_1
+   253:	ireturn
+
+public int b(int, int, int);
+  Code:
+   0:	aload_0
+   1:	getfield	#66; //Field e:Lhm;
+   4:	iload_1
+   5:	iload_2
+   6:	iload_3
+   7:	invokevirtual	#93; //Method hm.a:(III)I
+   10:	ireturn
+
+public void b(int, int, int, int);
+  Code:
+   0:	aload_0
+   1:	iconst_1
+   2:	putfield	#76; //Field o:Z
+   5:	aload_0
+   6:	getfield	#66; //Field e:Lhm;
+   9:	iload_1
+   10:	iload_2
+   11:	iload_3
+   12:	iload	4
+   14:	invokevirtual	#94; //Method hm.a:(IIII)V
+   17:	return
+
+public int a(dj, int, int, int);
+  Code:
+   0:	aload_1
+   1:	getstatic	#38; //Field dj.a:Ldj;
+   4:	if_acmpne	19
+   7:	aload_0
+   8:	getfield	#67; //Field f:Lhm;
+   11:	iload_2
+   12:	iload_3
+   13:	iload	4
+   15:	invokevirtual	#93; //Method hm.a:(III)I
+   18:	ireturn
+   19:	aload_1
+   20:	getstatic	#39; //Field dj.b:Ldj;
+   23:	if_acmpne	38
+   26:	aload_0
+   27:	getfield	#68; //Field g:Lhm;
+   30:	iload_2
+   31:	iload_3
+   32:	iload	4
+   34:	invokevirtual	#93; //Method hm.a:(III)I
+   37:	ireturn
+   38:	iconst_0
+   39:	ireturn
+
+public void a(dj, int, int, int, int);
+  Code:
+   0:	aload_0
+   1:	iconst_1
+   2:	putfield	#76; //Field o:Z
+   5:	aload_1
+   6:	getstatic	#38; //Field dj.a:Ldj;
+   9:	if_acmpne	28
+   12:	aload_0
+   13:	getfield	#67; //Field f:Lhm;
+   16:	iload_2
+   17:	iload_3
+   18:	iload	4
+   20:	iload	5
+   22:	invokevirtual	#94; //Method hm.a:(IIII)V
+   25:	goto	52
+   28:	aload_1
+   29:	getstatic	#39; //Field dj.b:Ldj;
+   32:	if_acmpne	51
+   35:	aload_0
+   36:	getfield	#68; //Field g:Lhm;
+   39:	iload_2
+   40:	iload_3
+   41:	iload	4
+   43:	iload	5
+   45:	invokevirtual	#94; //Method hm.a:(IIII)V
+   48:	goto	52
+   51:	return
+   52:	return
+
+public int c(int, int, int, int);
+  Code:
+   0:	aload_0
+   1:	getfield	#67; //Field f:Lhm;
+   4:	iload_1
+   5:	iload_2
+   6:	iload_3
+   7:	invokevirtual	#93; //Method hm.a:(III)I
+   10:	istore	5
+   12:	iload	5
+   14:	ifle	21
+   17:	iconst_1
+   18:	putstatic	#62; //Field a:Z
+   21:	iload	5
+   23:	iload	4
+   25:	isub
+   26:	istore	5
+   28:	aload_0
+   29:	getfield	#68; //Field g:Lhm;
+   32:	iload_1
+   33:	iload_2
+   34:	iload_3
+   35:	invokevirtual	#93; //Method hm.a:(III)I
+   38:	istore	6
+   40:	iload	6
+   42:	iload	5
+   44:	if_icmple	51
+   47:	iload	6
+   49:	istore	5
+   51:	iload	5
+   53:	ireturn
+
+public void a(dv);
+  Code:
+   0:	aload_0
+   1:	getfield	#78; //Field q:Z
+   4:	ifeq	8
+   7:	return
+   8:	aload_0
+   9:	iconst_1
+   10:	putfield	#79; //Field r:Z
+   13:	aload_1
+   14:	getfield	#46; //Field dv.p:D
+   17:	ldc2_w	#32; //double 16.0d
+   20:	ddiv
+   21:	invokestatic	#90; //Method hb.b:(D)I
+   24:	istore_2
+   25:	aload_1
+   26:	getfield	#48; //Field dv.r:D
+   29:	ldc2_w	#32; //double 16.0d
+   32:	ddiv
+   33:	invokestatic	#90; //Method hb.b:(D)I
+   36:	istore_3
+   37:	iload_2
+   38:	aload_0
+   39:	getfield	#71; //Field j:I
+   42:	if_icmpne	53
+   45:	iload_3
+   46:	aload_0
+   47:	getfield	#72; //Field k:I
+   50:	if_icmpeq	78
+   53:	getstatic	#61; //Field java/lang/System.out:Ljava/io/PrintStream;
+   56:	new	#20; //class java/lang/StringBuilder
+   59:	dup
+   60:	invokespecial	#99; //Method java/lang/StringBuilder."<init>":()V
+   63:	ldc	#5; //String Wrong location! 
+   65:	invokevirtual	#101; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   68:	aload_1
+   69:	invokevirtual	#100; //Method java/lang/StringBuilder.append:(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+   72:	invokevirtual	#102; //Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+   75:	invokevirtual	#95; //Method java/io/PrintStream.println:(Ljava/lang/String;)V
+   78:	aload_1
+   79:	getfield	#47; //Field dv.q:D
+   82:	ldc2_w	#32; //double 16.0d
+   85:	ddiv
+   86:	invokestatic	#90; //Method hb.b:(D)I
+   89:	istore	4
+   91:	iload	4
+   93:	ifge	99
+   96:	iconst_0
+   97:	istore	4
+   99:	iload	4
+   101:	aload_0
+   102:	getfield	#74; //Field m:[Ljava/util/List;
+   105:	arraylength
+   106:	if_icmplt	118
+   109:	aload_0
+   110:	getfield	#74; //Field m:[Ljava/util/List;
+   113:	arraylength
+   114:	iconst_1
+   115:	isub
+   116:	istore	4
+   118:	aload_1
+   119:	iconst_1
+   120:	putfield	#42; //Field dv.ae:Z
+   123:	aload_1
+   124:	aload_0
+   125:	getfield	#71; //Field j:I
+   128:	putfield	#43; //Field dv.af:I
+   131:	aload_1
+   132:	iload	4
+   134:	putfield	#44; //Field dv.ag:I
+   137:	aload_1
+   138:	aload_0
+   139:	getfield	#72; //Field k:I
+   142:	putfield	#45; //Field dv.ah:I
+   145:	aload_0
+   146:	getfield	#74; //Field m:[Ljava/util/List;
+   149:	iload	4
+   151:	aaload
+   152:	aload_1
+   153:	invokeinterface	#115,  2; //InterfaceMethod java/util/List.add:(Ljava/lang/Object;)Z
+   158:	pop
+   159:	return
+
+public void b(dv);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	aload_1
+   3:	getfield	#44; //Field dv.ag:I
+   6:	invokevirtual	#110; //Method a:(Ldv;I)V
+   9:	return
+
+public void a(dv, int);
+  Code:
+   0:	iload_2
+   1:	ifge	6
+   4:	iconst_0
+   5:	istore_2
+   6:	iload_2
+   7:	aload_0
+   8:	getfield	#74; //Field m:[Ljava/util/List;
+   11:	arraylength
+   12:	if_icmplt	23
+   15:	aload_0
+   16:	getfield	#74; //Field m:[Ljava/util/List;
+   19:	arraylength
+   20:	iconst_1
+   21:	isub
+   22:	istore_2
+   23:	aload_0
+   24:	getfield	#74; //Field m:[Ljava/util/List;
+   27:	iload_2
+   28:	aaload
+   29:	aload_1
+   30:	invokeinterface	#118,  2; //InterfaceMethod java/util/List.remove:(Ljava/lang/Object;)Z
+   35:	pop
+   36:	return
+
+public boolean c(int, int, int);
+  Code:
+   0:	iload_2
+   1:	aload_0
+   2:	getfield	#69; //Field h:[B
+   5:	iload_3
+   6:	iconst_4
+   7:	ishl
+   8:	iload_1
+   9:	ior
+   10:	baload
+   11:	sipush	255
+   14:	iand
+   15:	if_icmplt	22
+   18:	iconst_1
+   19:	goto	23
+   22:	iconst_0
+   23:	ireturn
+
+public av d(int, int, int);
+  Code:
+   0:	new	#14; //class hl
+   3:	dup
+   4:	iload_1
+   5:	iload_2
+   6:	iload_3
+   7:	invokespecial	#91; //Method hl."<init>":(III)V
+   10:	astore	4
+   12:	aload_0
+   13:	getfield	#73; //Field l:Ljava/util/Map;
+   16:	aload	4
+   18:	invokeinterface	#121,  2; //InterfaceMethod java/util/Map.get:(Ljava/lang/Object;)Ljava/lang/Object;
+   23:	checkcast	#6; //class av
+   26:	astore	5
+   28:	aload	5
+   30:	ifnonnull	108
+   33:	aload_0
+   34:	iload_1
+   35:	iload_2
+   36:	iload_3
+   37:	invokevirtual	#108; //Method a:(III)I
+   40:	istore	6
+   42:	getstatic	#56; //Field fw.q:[Z
+   45:	iload	6
+   47:	baload
+   48:	ifne	53
+   51:	aconst_null
+   52:	areturn
+   53:	getstatic	#55; //Field fw.n:[Lfw;
+   56:	iload	6
+   58:	aaload
+   59:	checkcast	#7; //class dd
+   62:	astore	7
+   64:	aload	7
+   66:	aload_0
+   67:	getfield	#65; //Field d:Lel;
+   70:	aload_0
+   71:	getfield	#71; //Field j:I
+   74:	bipush	16
+   76:	imul
+   77:	iload_1
+   78:	iadd
+   79:	iload_2
+   80:	aload_0
+   81:	getfield	#72; //Field k:I
+   84:	bipush	16
+   86:	imul
+   87:	iload_3
+   88:	iadd
+   89:	invokevirtual	#81; //Method dd.e:(Lel;III)V
+   92:	aload_0
+   93:	getfield	#73; //Field l:Ljava/util/Map;
+   96:	aload	4
+   98:	invokeinterface	#121,  2; //InterfaceMethod java/util/Map.get:(Ljava/lang/Object;)Ljava/lang/Object;
+   103:	checkcast	#6; //class av
+   106:	astore	5
+   108:	aload	5
+   110:	areturn
+
+public void a(av);
+  Code:
+   0:	aload_1
+   1:	getfield	#35; //Field av.b:I
+   4:	aload_0
+   5:	getfield	#71; //Field j:I
+   8:	bipush	16
+   10:	imul
+   11:	isub
+   12:	istore_2
+   13:	aload_1
+   14:	getfield	#36; //Field av.c:I
+   17:	istore_3
+   18:	aload_1
+   19:	getfield	#37; //Field av.d:I
+   22:	aload_0
+   23:	getfield	#72; //Field k:I
+   26:	bipush	16
+   28:	imul
+   29:	isub
+   30:	istore	4
+   32:	aload_0
+   33:	iload_2
+   34:	iload_3
+   35:	iload	4
+   37:	aload_1
+   38:	invokevirtual	#109; //Method a:(IIILav;)V
+   41:	return
+
+public void a(int, int, int, av);
+  Code:
+   0:	new	#14; //class hl
+   3:	dup
+   4:	iload_1
+   5:	iload_2
+   6:	iload_3
+   7:	invokespecial	#91; //Method hl."<init>":(III)V
+   10:	astore	5
+   12:	aload	4
+   14:	aload_0
+   15:	getfield	#65; //Field d:Lel;
+   18:	putfield	#34; //Field av.a:Lel;
+   21:	aload	4
+   23:	aload_0
+   24:	getfield	#71; //Field j:I
+   27:	bipush	16
+   29:	imul
+   30:	iload_1
+   31:	iadd
+   32:	putfield	#35; //Field av.b:I
+   35:	aload	4
+   37:	iload_2
+   38:	putfield	#36; //Field av.c:I
+   41:	aload	4
+   43:	aload_0
+   44:	getfield	#72; //Field k:I
+   47:	bipush	16
+   49:	imul
+   50:	iload_3
+   51:	iadd
+   52:	putfield	#37; //Field av.d:I
+   55:	aload_0
+   56:	iload_1
+   57:	iload_2
+   58:	iload_3
+   59:	invokevirtual	#108; //Method a:(III)I
+   62:	ifeq	82
+   65:	getstatic	#55; //Field fw.n:[Lfw;
+   68:	aload_0
+   69:	iload_1
+   70:	iload_2
+   71:	iload_3
+   72:	invokevirtual	#108; //Method a:(III)I
+   75:	aaload
+   76:	instanceof	#7; //class dd
+   79:	ifne	91
+   82:	getstatic	#61; //Field java/lang/System.out:Ljava/io/PrintStream;
+   85:	ldc	#4; //String Attempted to place a tile entity where there was no entity tile!
+   87:	invokevirtual	#95; //Method java/io/PrintStream.println:(Ljava/lang/String;)V
+   90:	return
+   91:	aload_0
+   92:	getfield	#64; //Field c:Z
+   95:	ifeq	151
+   98:	aload_0
+   99:	getfield	#73; //Field l:Ljava/util/Map;
+   102:	aload	5
+   104:	invokeinterface	#121,  2; //InterfaceMethod java/util/Map.get:(Ljava/lang/Object;)Ljava/lang/Object;
+   109:	ifnull	136
+   112:	aload_0
+   113:	getfield	#65; //Field d:Lel;
+   116:	getfield	#50; //Field el.c:Ljava/util/List;
+   119:	aload_0
+   120:	getfield	#73; //Field l:Ljava/util/Map;
+   123:	aload	5
+   125:	invokeinterface	#121,  2; //InterfaceMethod java/util/Map.get:(Ljava/lang/Object;)Ljava/lang/Object;
+   130:	invokeinterface	#118,  2; //InterfaceMethod java/util/List.remove:(Ljava/lang/Object;)Z
+   135:	pop
+   136:	aload_0
+   137:	getfield	#65; //Field d:Lel;
+   140:	getfield	#50; //Field el.c:Ljava/util/List;
+   143:	aload	4
+   145:	invokeinterface	#115,  2; //InterfaceMethod java/util/List.add:(Ljava/lang/Object;)Z
+   150:	pop
+   151:	aload_0
+   152:	getfield	#73; //Field l:Ljava/util/Map;
+   155:	aload	5
+   157:	aload	4
+   159:	invokeinterface	#122,  3; //InterfaceMethod java/util/Map.put:(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+   164:	pop
+   165:	return
+
+public void e(int, int, int);
+  Code:
+   0:	new	#14; //class hl
+   3:	dup
+   4:	iload_1
+   5:	iload_2
+   6:	iload_3
+   7:	invokespecial	#91; //Method hl."<init>":(III)V
+   10:	astore	4
+   12:	aload_0
+   13:	getfield	#64; //Field c:Z
+   16:	ifeq	43
+   19:	aload_0
+   20:	getfield	#65; //Field d:Lel;
+   23:	getfield	#50; //Field el.c:Ljava/util/List;
+   26:	aload_0
+   27:	getfield	#73; //Field l:Ljava/util/Map;
+   30:	aload	4
+   32:	invokeinterface	#123,  2; //InterfaceMethod java/util/Map.remove:(Ljava/lang/Object;)Ljava/lang/Object;
+   37:	invokeinterface	#118,  2; //InterfaceMethod java/util/List.remove:(Ljava/lang/Object;)Z
+   42:	pop
+   43:	return
+
+public void d();
+  Code:
+   0:	aload_0
+   1:	iconst_1
+   2:	putfield	#64; //Field c:Z
+   5:	aload_0
+   6:	getfield	#65; //Field d:Lel;
+   9:	getfield	#50; //Field el.c:Ljava/util/List;
+   12:	aload_0
+   13:	getfield	#73; //Field l:Ljava/util/Map;
+   16:	invokeinterface	#124,  1; //InterfaceMethod java/util/Map.values:()Ljava/util/Collection;
+   21:	invokeinterface	#116,  2; //InterfaceMethod java/util/List.addAll:(Ljava/util/Collection;)Z
+   26:	pop
+   27:	iconst_0
+   28:	istore_1
+   29:	iload_1
+   30:	aload_0
+   31:	getfield	#74; //Field m:[Ljava/util/List;
+   34:	arraylength
+   35:	if_icmpge	57
+   38:	aload_0
+   39:	getfield	#65; //Field d:Lel;
+   42:	aload_0
+   43:	getfield	#74; //Field m:[Ljava/util/List;
+   46:	iload_1
+   47:	aaload
+   48:	invokevirtual	#84; //Method el.a:(Ljava/util/List;)V
+   51:	iinc	1, 1
+   54:	goto	29
+   57:	return
+
+public void e();
+  Code:
+   0:	aload_0
+   1:	iconst_0
+   2:	putfield	#64; //Field c:Z
+   5:	aload_0
+   6:	getfield	#65; //Field d:Lel;
+   9:	getfield	#50; //Field el.c:Ljava/util/List;
+   12:	aload_0
+   13:	getfield	#73; //Field l:Ljava/util/Map;
+   16:	invokeinterface	#124,  1; //InterfaceMethod java/util/Map.values:()Ljava/util/Collection;
+   21:	invokeinterface	#119,  2; //InterfaceMethod java/util/List.removeAll:(Ljava/util/Collection;)Z
+   26:	pop
+   27:	iconst_0
+   28:	istore_1
+   29:	iload_1
+   30:	aload_0
+   31:	getfield	#74; //Field m:[Ljava/util/List;
+   34:	arraylength
+   35:	if_icmpge	57
+   38:	aload_0
+   39:	getfield	#65; //Field d:Lel;
+   42:	aload_0
+   43:	getfield	#74; //Field m:[Ljava/util/List;
+   46:	iload_1
+   47:	aaload
+   48:	invokevirtual	#85; //Method el.b:(Ljava/util/List;)V
+   51:	iinc	1, 1
+   54:	goto	29
+   57:	return
+
+public void f();
+  Code:
+   0:	aload_0
+   1:	iconst_1
+   2:	putfield	#76; //Field o:Z
+   5:	return
+
+public void a(dv, ds, java.util.List);
+  Code:
+   0:	aload_2
+   1:	getfield	#40; //Field ds.b:D
+   4:	ldc2_w	#30; //double 2.0d
+   7:	dsub
+   8:	ldc2_w	#32; //double 16.0d
+   11:	ddiv
+   12:	invokestatic	#90; //Method hb.b:(D)I
+   15:	istore	4
+   17:	aload_2
+   18:	getfield	#41; //Field ds.e:D
+   21:	ldc2_w	#30; //double 2.0d
+   24:	dadd
+   25:	ldc2_w	#32; //double 16.0d
+   28:	ddiv
+   29:	invokestatic	#90; //Method hb.b:(D)I
+   32:	istore	5
+   34:	iload	4
+   36:	ifge	42
+   39:	iconst_0
+   40:	istore	4
+   42:	iload	5
+   44:	aload_0
+   45:	getfield	#74; //Field m:[Ljava/util/List;
+   48:	arraylength
+   49:	if_icmplt	61
+   52:	aload_0
+   53:	getfield	#74; //Field m:[Ljava/util/List;
+   56:	arraylength
+   57:	iconst_1
+   58:	isub
+   59:	istore	5
+   61:	iload	4
+   63:	istore	6
+   65:	iload	6
+   67:	iload	5
+   69:	if_icmpgt	149
+   72:	aload_0
+   73:	getfield	#74; //Field m:[Ljava/util/List;
+   76:	iload	6
+   78:	aaload
+   79:	astore	7
+   81:	iconst_0
+   82:	istore	8
+   84:	iload	8
+   86:	aload	7
+   88:	invokeinterface	#120,  1; //InterfaceMethod java/util/List.size:()I
+   93:	if_icmpge	143
+   96:	aload	7
+   98:	iload	8
+   100:	invokeinterface	#117,  2; //InterfaceMethod java/util/List.get:(I)Ljava/lang/Object;
+   105:	checkcast	#10; //class dv
+   108:	astore	9
+   110:	aload	9
+   112:	aload_1
+   113:	if_acmpeq	137
+   116:	aload	9
+   118:	getfield	#49; //Field dv.z:Lds;
+   121:	aload_2
+   122:	invokevirtual	#82; //Method ds.a:(Lds;)Z
+   125:	ifeq	137
+   128:	aload_3
+   129:	aload	9
+   131:	invokeinterface	#115,  2; //InterfaceMethod java/util/List.add:(Ljava/lang/Object;)Z
+   136:	pop
+   137:	iinc	8, 1
+   140:	goto	84
+   143:	iinc	6, 1
+   146:	goto	65
+   149:	return
+
+public void a(java.lang.Class, ds, java.util.List);
+  Code:
+   0:	aload_2
+   1:	getfield	#40; //Field ds.b:D
+   4:	ldc2_w	#30; //double 2.0d
+   7:	dsub
+   8:	ldc2_w	#32; //double 16.0d
+   11:	ddiv
+   12:	invokestatic	#90; //Method hb.b:(D)I
+   15:	istore	4
+   17:	aload_2
+   18:	getfield	#41; //Field ds.e:D
+   21:	ldc2_w	#30; //double 2.0d
+   24:	dadd
+   25:	ldc2_w	#32; //double 16.0d
+   28:	ddiv
+   29:	invokestatic	#90; //Method hb.b:(D)I
+   32:	istore	5
+   34:	iload	4
+   36:	ifge	42
+   39:	iconst_0
+   40:	istore	4
+   42:	iload	5
+   44:	aload_0
+   45:	getfield	#74; //Field m:[Ljava/util/List;
+   48:	arraylength
+   49:	if_icmplt	61
+   52:	aload_0
+   53:	getfield	#74; //Field m:[Ljava/util/List;
+   56:	arraylength
+   57:	iconst_1
+   58:	isub
+   59:	istore	5
+   61:	iload	4
+   63:	istore	6
+   65:	iload	6
+   67:	iload	5
+   69:	if_icmpgt	155
+   72:	aload_0
+   73:	getfield	#74; //Field m:[Ljava/util/List;
+   76:	iload	6
+   78:	aaload
+   79:	astore	7
+   81:	iconst_0
+   82:	istore	8
+   84:	iload	8
+   86:	aload	7
+   88:	invokeinterface	#120,  1; //InterfaceMethod java/util/List.size:()I
+   93:	if_icmpge	149
+   96:	aload	7
+   98:	iload	8
+   100:	invokeinterface	#117,  2; //InterfaceMethod java/util/List.get:(I)Ljava/lang/Object;
+   105:	checkcast	#10; //class dv
+   108:	astore	9
+   110:	aload_1
+   111:	aload	9
+   113:	invokevirtual	#98; //Method java/lang/Object.getClass:()Ljava/lang/Class;
+   116:	invokevirtual	#96; //Method java/lang/Class.isAssignableFrom:(Ljava/lang/Class;)Z
+   119:	ifeq	143
+   122:	aload	9
+   124:	getfield	#49; //Field dv.z:Lds;
+   127:	aload_2
+   128:	invokevirtual	#82; //Method ds.a:(Lds;)Z
+   131:	ifeq	143
+   134:	aload_3
+   135:	aload	9
+   137:	invokeinterface	#115,  2; //InterfaceMethod java/util/List.add:(Ljava/lang/Object;)Z
+   142:	pop
+   143:	iinc	8, 1
+   146:	goto	84
+   149:	iinc	6, 1
+   152:	goto	65
+   155:	return
+
+public boolean a(boolean);
+  Code:
+   0:	aload_0
+   1:	getfield	#77; //Field p:Z
+   4:	ifeq	9
+   7:	iconst_0
+   8:	ireturn
+   9:	aload_0
+   10:	getfield	#79; //Field r:Z
+   13:	ifeq	33
+   16:	aload_0
+   17:	getfield	#65; //Field d:Lel;
+   20:	getfield	#51; //Field el.e:J
+   23:	aload_0
+   24:	getfield	#80; //Field s:J
+   27:	lcmp
+   28:	ifeq	33
+   31:	iconst_1
+   32:	ireturn
+   33:	aload_0
+   34:	getfield	#76; //Field o:Z
+   37:	ireturn
+
+public int a(byte[], int, int, int, int, int, int, int);
+  Code:
+   0:	iload_2
+   1:	istore	9
+   3:	iload	9
+   5:	iload	5
+   7:	if_icmpge	75
+   10:	iload	4
+   12:	istore	10
+   14:	iload	10
+   16:	iload	7
+   18:	if_icmpge	69
+   21:	iload	9
+   23:	bipush	11
+   25:	ishl
+   26:	iload	10
+   28:	bipush	7
+   30:	ishl
+   31:	ior
+   32:	iload_3
+   33:	ior
+   34:	istore	11
+   36:	iload	6
+   38:	iload_3
+   39:	isub
+   40:	istore	12
+   42:	aload_0
+   43:	getfield	#63; //Field b:[B
+   46:	iload	11
+   48:	aload_1
+   49:	iload	8
+   51:	iload	12
+   53:	invokestatic	#103; //Method java/lang/System.arraycopy:(Ljava/lang/Object;ILjava/lang/Object;II)V
+   56:	iload	8
+   58:	iload	12
+   60:	iadd
+   61:	istore	8
+   63:	iinc	10, 1
+   66:	goto	14
+   69:	iinc	9, 1
+   72:	goto	3
+   75:	iload_2
+   76:	istore	9
+   78:	iload	9
+   80:	iload	5
+   82:	if_icmpge	157
+   85:	iload	4
+   87:	istore	10
+   89:	iload	10
+   91:	iload	7
+   93:	if_icmpge	151
+   96:	iload	9
+   98:	bipush	11
+   100:	ishl
+   101:	iload	10
+   103:	bipush	7
+   105:	ishl
+   106:	ior
+   107:	iload_3
+   108:	ior
+   109:	iconst_1
+   110:	ishr
+   111:	istore	11
+   113:	iload	6
+   115:	iload_3
+   116:	isub
+   117:	iconst_2
+   118:	idiv
+   119:	istore	12
+   121:	aload_0
+   122:	getfield	#66; //Field e:Lhm;
+   125:	getfield	#59; //Field hm.a:[B
+   128:	iload	11
+   130:	aload_1
+   131:	iload	8
+   133:	iload	12
+   135:	invokestatic	#103; //Method java/lang/System.arraycopy:(Ljava/lang/Object;ILjava/lang/Object;II)V
+   138:	iload	8
+   140:	iload	12
+   142:	iadd
+   143:	istore	8
+   145:	iinc	10, 1
+   148:	goto	89
+   151:	iinc	9, 1
+   154:	goto	78
+   157:	iload_2
+   158:	istore	9
+   160:	iload	9
+   162:	iload	5
+   164:	if_icmpge	239
+   167:	iload	4
+   169:	istore	10
+   171:	iload	10
+   173:	iload	7
+   175:	if_icmpge	233
+   178:	iload	9
+   180:	bipush	11
+   182:	ishl
+   183:	iload	10
+   185:	bipush	7
+   187:	ishl
+   188:	ior
+   189:	iload_3
+   190:	ior
+   191:	iconst_1
+   192:	ishr
+   193:	istore	11
+   195:	iload	6
+   197:	iload_3
+   198:	isub
+   199:	iconst_2
+   200:	idiv
+   201:	istore	12
+   203:	aload_0
+   204:	getfield	#68; //Field g:Lhm;
+   207:	getfield	#59; //Field hm.a:[B
+   210:	iload	11
+   212:	aload_1
+   213:	iload	8
+   215:	iload	12
+   217:	invokestatic	#103; //Method java/lang/System.arraycopy:(Ljava/lang/Object;ILjava/lang/Object;II)V
+   220:	iload	8
+   222:	iload	12
+   224:	iadd
+   225:	istore	8
+   227:	iinc	10, 1
+   230:	goto	171
+   233:	iinc	9, 1
+   236:	goto	160
+   239:	iload_2
+   240:	istore	9
+   242:	iload	9
+   244:	iload	5
+   246:	if_icmpge	321
+   249:	iload	4
+   251:	istore	10
+   253:	iload	10
+   255:	iload	7
+   257:	if_icmpge	315
+   260:	iload	9
+   262:	bipush	11
+   264:	ishl
+   265:	iload	10
+   267:	bipush	7
+   269:	ishl
+   270:	ior
+   271:	iload_3
+   272:	ior
+   273:	iconst_1
+   274:	ishr
+   275:	istore	11
+   277:	iload	6
+   279:	iload_3
+   280:	isub
+   281:	iconst_2
+   282:	idiv
+   283:	istore	12
+   285:	aload_0
+   286:	getfield	#67; //Field f:Lhm;
+   289:	getfield	#59; //Field hm.a:[B
+   292:	iload	11
+   294:	aload_1
+   295:	iload	8
+   297:	iload	12
+   299:	invokestatic	#103; //Method java/lang/System.arraycopy:(Ljava/lang/Object;ILjava/lang/Object;II)V
+   302:	iload	8
+   304:	iload	12
+   306:	iadd
+   307:	istore	8
+   309:	iinc	10, 1
+   312:	goto	253
+   315:	iinc	9, 1
+   318:	goto	242
+   321:	iload	8
+   323:	ireturn
+
+public java.util.Random a(long);
+  Code:
+   0:	new	#26; //class java/util/Random
+   3:	dup
+   4:	aload_0
+   5:	getfield	#65; //Field d:Lel;
+   8:	getfield	#53; //Field el.u:J
+   11:	aload_0
+   12:	getfield	#71; //Field j:I
+   15:	aload_0
+   16:	getfield	#71; //Field j:I
+   19:	imul
+   20:	ldc	#2; //int 4987142
+   22:	imul
+   23:	i2l
+   24:	ladd
+   25:	aload_0
+   26:	getfield	#71; //Field j:I
+   29:	ldc	#3; //int 5947611
+   31:	imul
+   32:	i2l
+   33:	ladd
+   34:	aload_0
+   35:	getfield	#72; //Field k:I
+   38:	aload_0
+   39:	getfield	#72; //Field k:I
+   42:	imul
+   43:	i2l
+   44:	ldc2_w	#28; //long 4392871l
+   47:	lmul
+   48:	ladd
+   49:	aload_0
+   50:	getfield	#72; //Field k:I
+   53:	ldc	#1; //int 389711
+   55:	imul
+   56:	i2l
+   57:	ladd
+   58:	lload_1
+   59:	lxor
+   60:	invokespecial	#106; //Method java/util/Random."<init>":(J)V
+   63:	areturn
+
+}
+

@@ -1,0 +1,100 @@
+Compiled from SourceFile
+public class n extends hr{
+public n(int, int);
+  Code:
+   0:	aload_0
+   1:	iload_1
+   2:	iload_2
+   3:	getstatic	#13; //Field jr.r:Ljr;
+   6:	iconst_0
+   7:	invokespecial	#20; //Method hr."<init>":(IILjr;Z)V
+   10:	aload_0
+   11:	ldc	#1; //float 0.98f
+   13:	putfield	#15; //Field bu:F
+   16:	aload_0
+   17:	iconst_1
+   18:	invokevirtual	#24; //Method a:(Z)V
+   21:	return
+
+public boolean a(io, int, int, int, int);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	iload_2
+   3:	iload_3
+   4:	iload	4
+   6:	iconst_1
+   7:	iload	5
+   9:	isub
+   10:	invokespecial	#21; //Method hr.a:(Lio;IIII)Z
+   13:	ireturn
+
+public void b(el, int, int, int);
+  Code:
+   0:	aload_1
+   1:	iload_2
+   2:	iload_3
+   3:	iconst_1
+   4:	isub
+   5:	iload	4
+   7:	invokevirtual	#18; //Method el.c:(III)Ljr;
+   10:	astore	5
+   12:	aload	5
+   14:	invokevirtual	#22; //Method jr.c:()Z
+   17:	ifne	28
+   20:	aload	5
+   22:	invokevirtual	#23; //Method jr.d:()Z
+   25:	ifeq	43
+   28:	aload_1
+   29:	iload_2
+   30:	iload_3
+   31:	iload	4
+   33:	getstatic	#9; //Field fw.B:Lfw;
+   36:	getfield	#11; //Field fw.bi:I
+   39:	invokevirtual	#19; //Method el.d:(IIII)Z
+   42:	pop
+   43:	return
+
+public int a(java.util.Random);
+  Code:
+   0:	iconst_0
+   1:	ireturn
+
+public void a(el, int, int, int, java.util.Random);
+  Code:
+   0:	aload_1
+   1:	getstatic	#8; //Field dj.b:Ldj;
+   4:	iload_2
+   5:	iload_3
+   6:	iload	4
+   8:	invokevirtual	#16; //Method el.a:(Ldj;III)I
+   11:	bipush	11
+   13:	getstatic	#12; //Field fw.r:[I
+   16:	aload_0
+   17:	getfield	#14; //Field bi:I
+   20:	iaload
+   21:	isub
+   22:	if_icmple	57
+   25:	aload_0
+   26:	aload_1
+   27:	iload_2
+   28:	iload_3
+   29:	iload	4
+   31:	aload_1
+   32:	iload_2
+   33:	iload_3
+   34:	iload	4
+   36:	invokevirtual	#17; //Method el.b:(III)I
+   39:	invokevirtual	#25; //Method a_:(Lel;IIII)V
+   42:	aload_1
+   43:	iload_2
+   44:	iload_3
+   45:	iload	4
+   47:	getstatic	#10; //Field fw.C:Lfw;
+   50:	getfield	#11; //Field fw.bi:I
+   53:	invokevirtual	#19; //Method el.d:(IIII)Z
+   56:	pop
+   57:	return
+
+}
+

@@ -1,0 +1,10 @@
+Compiled from SourceFile
+public class en extends ih{
+public en();
+  Code:
+   0:	aload_0
+   1:	invokespecial	#3; //Method ih."<init>":()V
+   4:	return
+
+}
+

@@ -1,0 +1,55 @@
+Compiled from SourceFile
+class ik extends java.lang.Thread{
+final bh a;
+
+ik(bh);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	putfield	#8; //Field a:Lbh;
+   5:	aload_0
+   6:	invokespecial	#12; //Method java/lang/Thread."<init>":()V
+   9:	return
+
+public void run();
+  Code:
+   0:	ldc2_w	#6; //long 5000l
+   3:	invokestatic	#14; //Method java/lang/Thread.sleep:(J)V
+   6:	aload_0
+   7:	getfield	#8; //Field a:Lbh;
+   10:	invokestatic	#9; //Method bh.e:(Lbh;)Ljava/lang/Thread;
+   13:	invokevirtual	#13; //Method java/lang/Thread.isAlive:()Z
+   16:	ifeq	33
+   19:	aload_0
+   20:	getfield	#8; //Field a:Lbh;
+   23:	invokestatic	#9; //Method bh.e:(Lbh;)Ljava/lang/Thread;
+   26:	invokevirtual	#15; //Method java/lang/Thread.stop:()V
+   29:	goto	33
+   32:	astore_1
+   33:	aload_0
+   34:	getfield	#8; //Field a:Lbh;
+   37:	invokestatic	#10; //Method bh.f:(Lbh;)Ljava/lang/Thread;
+   40:	invokevirtual	#13; //Method java/lang/Thread.isAlive:()Z
+   43:	ifeq	60
+   46:	aload_0
+   47:	getfield	#8; //Field a:Lbh;
+   50:	invokestatic	#10; //Method bh.f:(Lbh;)Ljava/lang/Thread;
+   53:	invokevirtual	#15; //Method java/lang/Thread.stop:()V
+   56:	goto	60
+   59:	astore_1
+   60:	goto	68
+   63:	astore_1
+   64:	aload_1
+   65:	invokevirtual	#11; //Method java/lang/InterruptedException.printStackTrace:()V
+   68:	return
+  Exception table:
+   from   to  target type
+    19    29    32   Class java/lang/Throwable
+
+    46    56    59   Class java/lang/Throwable
+
+     0    60    63   Class java/lang/InterruptedException
+
+
+}
+

@@ -1,0 +1,147 @@
+Compiled from SourceFile
+public class js extends fy{
+public js(int, boolean);
+  Code:
+   0:	aload_0
+   1:	iload_1
+   2:	bipush	6
+   4:	getstatic	#13; //Field jt.d:Ljt;
+   7:	invokespecial	#16; //Method fy."<init>":(IILjt;)V
+   10:	aload_0
+   11:	iload_2
+   12:	putfield	#10; //Field a:Z
+   15:	iload_2
+   16:	ifne	30
+   19:	aload_0
+   20:	fconst_0
+   21:	fconst_0
+   22:	fconst_0
+   23:	fconst_1
+   24:	ldc	#1; //float 0.5f
+   26:	fconst_1
+   27:	invokevirtual	#19; //Method a:(FFFFFF)V
+   30:	aload_0
+   31:	sipush	255
+   34:	invokevirtual	#20; //Method c:(I)Lfy;
+   37:	pop
+   38:	return
+
+public int a(int);
+  Code:
+   0:	iload_1
+   1:	iconst_1
+   2:	if_icmpgt	8
+   5:	bipush	6
+   7:	ireturn
+   8:	iconst_5
+   9:	ireturn
+
+public boolean a();
+  Code:
+   0:	aload_0
+   1:	getfield	#10; //Field a:Z
+   4:	ireturn
+
+public void b(em, int, int, int, int);
+  Code:
+   0:	aload_0
+   1:	getstatic	#8; //Field fy.ak:Lfy;
+   4:	if_acmpeq	8
+   7:	return
+   8:	return
+
+public void e(em, int, int, int);
+  Code:
+   0:	aload_0
+   1:	getstatic	#8; //Field fy.ak:Lfy;
+   4:	if_acmpeq	16
+   7:	aload_0
+   8:	aload_1
+   9:	iload_2
+   10:	iload_3
+   11:	iload	4
+   13:	invokespecial	#18; //Method fy.e:(Lem;III)V
+   16:	aload_1
+   17:	iload_2
+   18:	iload_3
+   19:	iconst_1
+   20:	isub
+   21:	iload	4
+   23:	invokevirtual	#14; //Method em.a:(III)I
+   26:	istore	5
+   28:	iload	5
+   30:	getstatic	#11; //Field ak:Lfy;
+   33:	getfield	#9; //Field fy.bh:I
+   36:	if_icmpne	66
+   39:	aload_1
+   40:	iload_2
+   41:	iload_3
+   42:	iload	4
+   44:	iconst_0
+   45:	invokevirtual	#15; //Method em.d:(IIII)Z
+   48:	pop
+   49:	aload_1
+   50:	iload_2
+   51:	iload_3
+   52:	iconst_1
+   53:	isub
+   54:	iload	4
+   56:	getstatic	#7; //Field fy.aj:Lfy;
+   59:	getfield	#9; //Field fy.bh:I
+   62:	invokevirtual	#15; //Method em.d:(IIII)Z
+   65:	pop
+   66:	return
+
+public int a(int, java.util.Random);
+  Code:
+   0:	getstatic	#8; //Field fy.ak:Lfy;
+   3:	getfield	#9; //Field fy.bh:I
+   6:	ireturn
+
+public boolean a(iq, int, int, int, int);
+  Code:
+   0:	aload_0
+   1:	getstatic	#8; //Field fy.ak:Lfy;
+   4:	if_acmpeq	19
+   7:	aload_0
+   8:	aload_1
+   9:	iload_2
+   10:	iload_3
+   11:	iload	4
+   13:	iload	5
+   15:	invokespecial	#17; //Method fy.a:(Liq;IIII)Z
+   18:	pop
+   19:	iload	5
+   21:	iconst_1
+   22:	if_icmpne	27
+   25:	iconst_1
+   26:	ireturn
+   27:	aload_0
+   28:	aload_1
+   29:	iload_2
+   30:	iload_3
+   31:	iload	4
+   33:	iload	5
+   35:	invokespecial	#17; //Method fy.a:(Liq;IIII)Z
+   38:	ifne	43
+   41:	iconst_0
+   42:	ireturn
+   43:	iload	5
+   45:	ifne	50
+   48:	iconst_1
+   49:	ireturn
+   50:	aload_1
+   51:	iload_2
+   52:	iload_3
+   53:	iload	4
+   55:	invokeinterface	#21,  4; //InterfaceMethod iq.a:(III)I
+   60:	aload_0
+   61:	getfield	#12; //Field bh:I
+   64:	if_icmpeq	71
+   67:	iconst_1
+   68:	goto	72
+   71:	iconst_0
+   72:	ireturn
+
+}
+

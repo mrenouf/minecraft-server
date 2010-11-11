@@ -1,0 +1,82 @@
+Compiled from SourceFile
+public class cc extends q{
+protected cc(int, int);
+  Code:
+   0:	aload_0
+   1:	iload_1
+   2:	iload_2
+   3:	getstatic	#11; //Field jr.h:Ljr;
+   6:	iconst_0
+   7:	invokespecial	#14; //Method q."<init>":(IILjr;Z)V
+   10:	aload_0
+   11:	iconst_0
+   12:	putfield	#8; //Field c:I
+   15:	aload_0
+   16:	iload_2
+   17:	putfield	#7; //Field b:I
+   20:	return
+
+public void b(el, int, int, int, int);
+  Code:
+   0:	aload_0
+   1:	iconst_0
+   2:	putfield	#8; //Field c:I
+   5:	aload_0
+   6:	aload_1
+   7:	iload_2
+   8:	iload_3
+   9:	iload	4
+   11:	invokevirtual	#12; //Method g:(Lel;III)V
+   14:	aload_0
+   15:	aload_1
+   16:	iload_2
+   17:	iload_3
+   18:	iload	4
+   20:	iload	5
+   22:	invokespecial	#15; //Method q.b:(Lel;IIII)V
+   25:	return
+
+public void g(el, int, int, int);
+  Code:
+   0:	return
+
+public int a(java.util.Random);
+  Code:
+   0:	aload_1
+   1:	bipush	20
+   3:	invokevirtual	#13; //Method java/util/Random.nextInt:(I)I
+   6:	ifne	13
+   9:	iconst_1
+   10:	goto	14
+   13:	iconst_0
+   14:	ireturn
+
+public int a(int, java.util.Random);
+  Code:
+   0:	getstatic	#10; //Field fw.z:Lfw;
+   3:	getfield	#9; //Field fw.bi:I
+   6:	ireturn
+
+public boolean a();
+  Code:
+   0:	aload_0
+   1:	getfield	#6; //Field a:Z
+   4:	ifne	11
+   7:	iconst_1
+   8:	goto	12
+   11:	iconst_0
+   12:	ireturn
+
+public void b(el, int, int, int, dv);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	iload_2
+   3:	iload_3
+   4:	iload	4
+   6:	aload	5
+   8:	invokespecial	#16; //Method q.b:(Lel;IIILdv;)V
+   11:	return
+
+}
+

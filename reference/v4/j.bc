@@ -1,0 +1,23 @@
+Compiled from SourceFile
+public class j extends fy{
+public j(int, int);
+  Code:
+   0:	aload_0
+   1:	iload_1
+   2:	getstatic	#5; //Field jt.e:Ljt;
+   5:	invokespecial	#6; //Method fy."<init>":(ILjt;)V
+   8:	aload_0
+   9:	iload_2
+   10:	putfield	#4; //Field bg:I
+   13:	return
+
+public int a(int);
+  Code:
+   0:	aload_0
+   1:	getfield	#4; //Field bg:I
+   4:	bipush	16
+   6:	isub
+   7:	ireturn
+
+}
+

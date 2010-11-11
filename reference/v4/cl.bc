@@ -1,0 +1,46 @@
+Compiled from SourceFile
+public class cl extends fs{
+public cl(int);
+  Code:
+   0:	aload_0
+   1:	iload_1
+   2:	invokespecial	#19; //Method fs."<init>":(I)V
+   5:	aload_0
+   6:	iconst_1
+   7:	putfield	#11; //Field aX:I
+   10:	return
+
+public hj a(hj, em, fv);
+  Code:
+   0:	aload_3
+   1:	getfield	#15; //Field fv.ak:Lhg;
+   4:	getstatic	#14; //Field fs.j:Lfs;
+   7:	getfield	#13; //Field fs.aW:I
+   10:	invokevirtual	#20; //Method hg.b:(I)Z
+   13:	ifeq	52
+   16:	aload_2
+   17:	aload_3
+   18:	ldc	#3; //String random.bow
+   20:	fconst_1
+   21:	fconst_1
+   22:	getstatic	#12; //Field b:Ljava/util/Random;
+   25:	invokevirtual	#21; //Method java/util/Random.nextFloat:()F
+   28:	ldc	#1; //float 0.4f
+   30:	fmul
+   31:	ldc	#2; //float 0.8f
+   33:	fadd
+   34:	fdiv
+   35:	invokevirtual	#18; //Method em.a:(Ldw;Ljava/lang/String;FF)V
+   38:	aload_2
+   39:	new	#5; //class dv
+   42:	dup
+   43:	aload_2
+   44:	aload_3
+   45:	invokespecial	#16; //Method dv."<init>":(Lem;Ljv;)V
+   48:	invokevirtual	#17; //Method em.a:(Ldw;)Z
+   51:	pop
+   52:	aload_1
+   53:	areturn
+
+}
+

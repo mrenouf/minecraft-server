@@ -1,0 +1,94 @@
+Compiled from SourceFile
+public class fr extends fy{
+public static boolean a;
+
+public fr(int, int);
+  Code:
+   0:	aload_0
+   1:	iload_1
+   2:	iload_2
+   3:	getstatic	#17; //Field jt.m:Ljt;
+   6:	invokespecial	#23; //Method fy."<init>":(IILjt;)V
+   9:	return
+
+public void e(em, int, int, int);
+  Code:
+   0:	aload_1
+   1:	iload_2
+   2:	iload_3
+   3:	iload	4
+   5:	aload_0
+   6:	getfield	#9; //Field bh:I
+   9:	invokevirtual	#20; //Method em.h:(IIII)V
+   12:	return
+
+public void b(em, int, int, int, int);
+  Code:
+   0:	aload_1
+   1:	iload_2
+   2:	iload_3
+   3:	iload	4
+   5:	aload_0
+   6:	getfield	#9; //Field bh:I
+   9:	invokevirtual	#20; //Method em.h:(IIII)V
+   12:	return
+
+public void a(em, int, int, int, java.util.Random);
+  Code:
+   0:	aload_0
+   1:	aload_1
+   2:	iload_2
+   3:	iload_3
+   4:	iload	4
+   6:	invokespecial	#22; //Method h:(Lem;III)V
+   9:	return
+
+public int b();
+  Code:
+   0:	iconst_3
+   1:	ireturn
+
+public static boolean g(em, int, int, int);
+  Code:
+   0:	aload_0
+   1:	iload_1
+   2:	iload_2
+   3:	iload_3
+   4:	invokevirtual	#18; //Method em.a:(III)I
+   7:	istore	4
+   9:	iload	4
+   11:	ifne	16
+   14:	iconst_1
+   15:	ireturn
+   16:	iload	4
+   18:	getstatic	#10; //Field fy.ar:Ljo;
+   21:	getfield	#14; //Field jo.bh:I
+   24:	if_icmpne	29
+   27:	iconst_1
+   28:	ireturn
+   29:	getstatic	#12; //Field fy.m:[Lfy;
+   32:	iload	4
+   34:	aaload
+   35:	getfield	#11; //Field fy.bs:Ljt;
+   38:	astore	5
+   40:	aload	5
+   42:	getstatic	#15; //Field jt.f:Ljt;
+   45:	if_acmpne	50
+   48:	iconst_1
+   49:	ireturn
+   50:	aload	5
+   52:	getstatic	#16; //Field jt.g:Ljt;
+   55:	if_acmpne	60
+   58:	iconst_1
+   59:	ireturn
+   60:	iconst_0
+   61:	ireturn
+
+static {};
+  Code:
+   0:	iconst_0
+   1:	putstatic	#8; //Field a:Z
+   4:	return
+
+}
+

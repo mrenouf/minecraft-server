@@ -1,0 +1,409 @@
+Compiled from SourceFile
+public class ia extends java.lang.Object{
+public ia(net.minecraft.server.MinecraftServer);
+  Code:
+   0:	aload_0
+   1:	invokespecial	#42; //Method java/lang/Object."<init>":()V
+   4:	aload_0
+   5:	new	#12; //class java/util/ArrayList
+   8:	dup
+   9:	invokespecial	#46; //Method java/util/ArrayList."<init>":()V
+   12:	putfield	#24; //Field a:Ljava/util/List;
+   15:	aload_0
+   16:	new	#7; //class fa
+   19:	dup
+   20:	invokespecial	#36; //Method fa."<init>":()V
+   23:	putfield	#25; //Field b:Lfa;
+   26:	aload_0
+   27:	new	#12; //class java/util/ArrayList
+   30:	dup
+   31:	invokespecial	#46; //Method java/util/ArrayList."<init>":()V
+   34:	putfield	#26; //Field c:Ljava/util/List;
+   37:	aload_0
+   38:	aload_1
+   39:	putfield	#27; //Field d:Lnet/minecraft/server/MinecraftServer;
+   42:	return
+
+public void a();
+  Code:
+   0:	iconst_0
+   1:	istore_1
+   2:	iload_1
+   3:	aload_0
+   4:	getfield	#26; //Field c:Ljava/util/List;
+   7:	invokeinterface	#51,  1; //InterfaceMethod java/util/List.size:()I
+   12:	if_icmpge	37
+   15:	aload_0
+   16:	getfield	#26; //Field c:Ljava/util/List;
+   19:	iload_1
+   20:	invokeinterface	#49,  2; //InterfaceMethod java/util/List.get:(I)Ljava/lang/Object;
+   25:	checkcast	#4; //class ah
+   28:	invokevirtual	#30; //Method ah.a:()V
+   31:	iinc	1, 1
+   34:	goto	2
+   37:	aload_0
+   38:	getfield	#26; //Field c:Ljava/util/List;
+   41:	invokeinterface	#48,  1; //InterfaceMethod java/util/List.clear:()V
+   46:	return
+
+public void a(im, int, int, int);
+  Code:
+   0:	iload_2
+   1:	iconst_4
+   2:	ishr
+   3:	istore	5
+   5:	iload	4
+   7:	iconst_4
+   8:	ishr
+   9:	istore	6
+   11:	aload_0
+   12:	iload	5
+   14:	iload	6
+   16:	iconst_0
+   17:	invokespecial	#41; //Method a:(IIZ)Lah;
+   20:	astore	7
+   22:	aload	7
+   24:	ifnull	33
+   27:	aload	7
+   29:	aload_1
+   30:	invokevirtual	#33; //Method ah.a:(Lim;)V
+   33:	return
+
+public void a(int, int, int);
+  Code:
+   0:	iload_1
+   1:	iconst_4
+   2:	ishr
+   3:	istore	4
+   5:	iload_3
+   6:	iconst_4
+   7:	ishr
+   8:	istore	5
+   10:	aload_0
+   11:	iload	4
+   13:	iload	5
+   15:	iconst_0
+   16:	invokespecial	#41; //Method a:(IIZ)Lah;
+   19:	astore	6
+   21:	aload	6
+   23:	ifnull	40
+   26:	aload	6
+   28:	iload_1
+   29:	bipush	15
+   31:	iand
+   32:	iload_2
+   33:	iload_3
+   34:	bipush	15
+   36:	iand
+   37:	invokevirtual	#31; //Method ah.a:(III)V
+   40:	return
+
+public void a(eo);
+  Code:
+   0:	aload_0
+   1:	getfield	#27; //Field d:Lnet/minecraft/server/MinecraftServer;
+   4:	getfield	#28; //Field net/minecraft/server/MinecraftServer.f:Lgl;
+   7:	new	#5; //class be
+   10:	dup
+   11:	new	#11; //class java/lang/StringBuilder
+   14:	dup
+   15:	invokespecial	#43; //Method java/lang/StringBuilder."<init>":()V
+   18:	ldc	#3; //String §e
+   20:	invokevirtual	#44; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   23:	aload_1
+   24:	getfield	#19; //Field eo.ar:Ljava/lang/String;
+   27:	invokevirtual	#44; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   30:	ldc	#1; //String  joined the game.
+   32:	invokevirtual	#44; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   35:	invokevirtual	#45; //Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+   38:	invokespecial	#35; //Method be."<init>":(Ljava/lang/String;)V
+   41:	invokevirtual	#39; //Method gl.a:(Lim;)V
+   44:	aload_1
+   45:	getfield	#22; //Field eo.p:D
+   48:	d2i
+   49:	iconst_4
+   50:	ishr
+   51:	istore_2
+   52:	aload_1
+   53:	getfield	#23; //Field eo.r:D
+   56:	d2i
+   57:	iconst_4
+   58:	ishr
+   59:	istore_3
+   60:	aload_1
+   61:	aload_1
+   62:	getfield	#22; //Field eo.p:D
+   65:	putfield	#20; //Field eo.d:D
+   68:	aload_1
+   69:	aload_1
+   70:	getfield	#23; //Field eo.r:D
+   73:	putfield	#21; //Field eo.e:D
+   76:	iload_2
+   77:	bipush	10
+   79:	isub
+   80:	istore	4
+   82:	iload	4
+   84:	iload_2
+   85:	bipush	10
+   87:	iadd
+   88:	if_icmpgt	131
+   91:	iload_3
+   92:	bipush	10
+   94:	isub
+   95:	istore	5
+   97:	iload	5
+   99:	iload_3
+   100:	bipush	10
+   102:	iadd
+   103:	if_icmpgt	125
+   106:	aload_0
+   107:	iload	4
+   109:	iload	5
+   111:	iconst_1
+   112:	invokespecial	#41; //Method a:(IIZ)Lah;
+   115:	aload_1
+   116:	invokevirtual	#32; //Method ah.a:(Leo;)V
+   119:	iinc	5, 1
+   122:	goto	97
+   125:	iinc	4, 1
+   128:	goto	82
+   131:	aload_0
+   132:	getfield	#24; //Field a:Ljava/util/List;
+   135:	aload_1
+   136:	invokeinterface	#47,  2; //InterfaceMethod java/util/List.add:(Ljava/lang/Object;)Z
+   141:	pop
+   142:	return
+
+public void b(eo);
+  Code:
+   0:	aload_0
+   1:	getfield	#27; //Field d:Lnet/minecraft/server/MinecraftServer;
+   4:	getfield	#28; //Field net/minecraft/server/MinecraftServer.f:Lgl;
+   7:	new	#5; //class be
+   10:	dup
+   11:	new	#11; //class java/lang/StringBuilder
+   14:	dup
+   15:	invokespecial	#43; //Method java/lang/StringBuilder."<init>":()V
+   18:	ldc	#3; //String §e
+   20:	invokevirtual	#44; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   23:	aload_1
+   24:	getfield	#19; //Field eo.ar:Ljava/lang/String;
+   27:	invokevirtual	#44; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   30:	ldc	#2; //String  left the game.
+   32:	invokevirtual	#44; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   35:	invokevirtual	#45; //Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+   38:	invokespecial	#35; //Method be."<init>":(Ljava/lang/String;)V
+   41:	invokevirtual	#39; //Method gl.a:(Lim;)V
+   44:	aload_1
+   45:	getfield	#22; //Field eo.p:D
+   48:	d2i
+   49:	iconst_4
+   50:	ishr
+   51:	istore_2
+   52:	aload_1
+   53:	getfield	#23; //Field eo.r:D
+   56:	d2i
+   57:	iconst_4
+   58:	ishr
+   59:	istore_3
+   60:	iload_2
+   61:	bipush	10
+   63:	isub
+   64:	istore	4
+   66:	iload	4
+   68:	iload_2
+   69:	bipush	10
+   71:	iadd
+   72:	if_icmpgt	124
+   75:	iload_3
+   76:	bipush	10
+   78:	isub
+   79:	istore	5
+   81:	iload	5
+   83:	iload_3
+   84:	bipush	10
+   86:	iadd
+   87:	if_icmpgt	118
+   90:	aload_0
+   91:	iload	4
+   93:	iload	5
+   95:	iconst_0
+   96:	invokespecial	#41; //Method a:(IIZ)Lah;
+   99:	astore	6
+   101:	aload	6
+   103:	ifnull	112
+   106:	aload	6
+   108:	aload_1
+   109:	invokevirtual	#34; //Method ah.b:(Leo;)V
+   112:	iinc	5, 1
+   115:	goto	81
+   118:	iinc	4, 1
+   121:	goto	66
+   124:	aload_0
+   125:	getfield	#24; //Field a:Ljava/util/List;
+   128:	aload_1
+   129:	invokeinterface	#50,  2; //InterfaceMethod java/util/List.remove:(Ljava/lang/Object;)Z
+   134:	pop
+   135:	return
+
+public void c(eo);
+  Code:
+   0:	aload_1
+   1:	getfield	#22; //Field eo.p:D
+   4:	d2i
+   5:	iconst_4
+   6:	ishr
+   7:	istore_2
+   8:	aload_1
+   9:	getfield	#23; //Field eo.r:D
+   12:	d2i
+   13:	iconst_4
+   14:	ishr
+   15:	istore_3
+   16:	aload_1
+   17:	getfield	#20; //Field eo.d:D
+   20:	aload_1
+   21:	getfield	#22; //Field eo.p:D
+   24:	dsub
+   25:	dstore	4
+   27:	aload_1
+   28:	getfield	#21; //Field eo.e:D
+   31:	aload_1
+   32:	getfield	#23; //Field eo.r:D
+   35:	dsub
+   36:	dstore	6
+   38:	dload	4
+   40:	dload	4
+   42:	dmul
+   43:	dload	6
+   45:	dload	6
+   47:	dmul
+   48:	dadd
+   49:	dstore	8
+   51:	dload	8
+   53:	ldc2_w	#17; //double 64.0d
+   56:	dcmpg
+   57:	ifge	61
+   60:	return
+   61:	aload_1
+   62:	getfield	#20; //Field eo.d:D
+   65:	d2i
+   66:	iconst_4
+   67:	ishr
+   68:	istore	10
+   70:	aload_1
+   71:	getfield	#21; //Field eo.e:D
+   74:	d2i
+   75:	iconst_4
+   76:	ishr
+   77:	istore	11
+   79:	iload_2
+   80:	iload	10
+   82:	isub
+   83:	istore	12
+   85:	iload_3
+   86:	iload	11
+   88:	isub
+   89:	istore	13
+   91:	iload	12
+   93:	ifne	102
+   96:	iload	13
+   98:	ifne	102
+   101:	return
+   102:	iload_2
+   103:	bipush	10
+   105:	isub
+   106:	istore	14
+   108:	iload	14
+   110:	iload_2
+   111:	bipush	10
+   113:	iadd
+   114:	if_icmpgt	219
+   117:	iload_3
+   118:	bipush	10
+   120:	isub
+   121:	istore	15
+   123:	iload	15
+   125:	iload_3
+   126:	bipush	10
+   128:	iadd
+   129:	if_icmpgt	213
+   132:	aload_0
+   133:	iload	14
+   135:	iload	15
+   137:	iload	10
+   139:	iload	11
+   141:	invokespecial	#40; //Method a:(IIII)Z
+   144:	ifne	160
+   147:	aload_0
+   148:	iload	14
+   150:	iload	15
+   152:	iconst_1
+   153:	invokespecial	#41; //Method a:(IIZ)Lah;
+   156:	aload_1
+   157:	invokevirtual	#32; //Method ah.a:(Leo;)V
+   160:	aload_0
+   161:	iload	14
+   163:	iload	12
+   165:	isub
+   166:	iload	15
+   168:	iload	13
+   170:	isub
+   171:	iload_2
+   172:	iload_3
+   173:	invokespecial	#40; //Method a:(IIII)Z
+   176:	ifne	207
+   179:	aload_0
+   180:	iload	14
+   182:	iload	12
+   184:	isub
+   185:	iload	15
+   187:	iload	13
+   189:	isub
+   190:	iconst_0
+   191:	invokespecial	#41; //Method a:(IIZ)Lah;
+   194:	astore	16
+   196:	aload	16
+   198:	ifnull	207
+   201:	aload	16
+   203:	aload_1
+   204:	invokevirtual	#34; //Method ah.b:(Leo;)V
+   207:	iinc	15, 1
+   210:	goto	123
+   213:	iinc	14, 1
+   216:	goto	108
+   219:	aload_1
+   220:	aload_1
+   221:	getfield	#22; //Field eo.p:D
+   224:	putfield	#20; //Field eo.d:D
+   227:	aload_1
+   228:	aload_1
+   229:	getfield	#23; //Field eo.r:D
+   232:	putfield	#21; //Field eo.e:D
+   235:	return
+
+public int b();
+  Code:
+   0:	sipush	144
+   3:	ireturn
+
+static net.minecraft.server.MinecraftServer a(ia);
+  Code:
+   0:	aload_0
+   1:	getfield	#27; //Field d:Lnet/minecraft/server/MinecraftServer;
+   4:	areturn
+
+static fa b(ia);
+  Code:
+   0:	aload_0
+   1:	getfield	#25; //Field b:Lfa;
+   4:	areturn
+
+static java.util.List c(ia);
+  Code:
+   0:	aload_0
+   1:	getfield	#26; //Field c:Ljava/util/List;
+   4:	areturn
+
+}
+

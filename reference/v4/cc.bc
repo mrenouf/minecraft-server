@@ -1,0 +1,50 @@
+Compiled from SourceFile
+public class cc extends java.lang.Object{
+public final java.lang.String a;
+
+public final float b;
+
+public final float c;
+
+public cc(java.lang.String, float, float);
+  Code:
+   0:	aload_0
+   1:	invokespecial	#9; //Method java/lang/Object."<init>":()V
+   4:	aload_0
+   5:	aload_1
+   6:	putfield	#6; //Field a:Ljava/lang/String;
+   9:	aload_0
+   10:	fload_2
+   11:	putfield	#7; //Field b:F
+   14:	aload_0
+   15:	fload_3
+   16:	putfield	#8; //Field c:F
+   19:	return
+
+public float a();
+  Code:
+   0:	aload_0
+   1:	getfield	#7; //Field b:F
+   4:	freturn
+
+public float b();
+  Code:
+   0:	aload_0
+   1:	getfield	#8; //Field c:F
+   4:	freturn
+
+public java.lang.String c();
+  Code:
+   0:	new	#5; //class java/lang/StringBuilder
+   3:	dup
+   4:	invokespecial	#10; //Method java/lang/StringBuilder."<init>":()V
+   7:	ldc	#1; //String step.
+   9:	invokevirtual	#11; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   12:	aload_0
+   13:	getfield	#6; //Field a:Ljava/lang/String;
+   16:	invokevirtual	#11; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   19:	invokevirtual	#12; //Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+   22:	areturn
+
+}
+

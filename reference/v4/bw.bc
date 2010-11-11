@@ -1,0 +1,23 @@
+Compiled from SourceFile
+public final class bw extends java.lang.Thread{
+final net.minecraft.server.MinecraftServer a;
+
+public bw(java.lang.String, net.minecraft.server.MinecraftServer);
+  Code:
+   0:	aload_0
+   1:	aload_2
+   2:	putfield	#4; //Field a:Lnet/minecraft/server/MinecraftServer;
+   5:	aload_0
+   6:	aload_1
+   7:	invokespecial	#5; //Method java/lang/Thread."<init>":(Ljava/lang/String;)V
+   10:	return
+
+public void run();
+  Code:
+   0:	aload_0
+   1:	getfield	#4; //Field a:Lnet/minecraft/server/MinecraftServer;
+   4:	invokevirtual	#6; //Method net/minecraft/server/MinecraftServer.run:()V
+   7:	return
+
+}
+

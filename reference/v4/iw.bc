@@ -1,0 +1,550 @@
+Compiled from SourceFile
+public class iw extends java.lang.Object implements bt{
+int a;
+
+int b;
+
+public iw(em, av, bt);
+  Code:
+   0:	aload_0
+   1:	invokespecial	#34; //Method java/lang/Object."<init>":()V
+   4:	aload_0
+   5:	sipush	1024
+   8:	anewarray	#11; //class jp
+   11:	putfield	#18; //Field f:[Ljp;
+   14:	aload_0
+   15:	ldc	#1; //int -999999999
+   17:	putfield	#13; //Field a:I
+   20:	aload_0
+   21:	ldc	#1; //int -999999999
+   23:	putfield	#14; //Field b:I
+   26:	aload_0
+   27:	new	#11; //class jp
+   30:	dup
+   31:	aload_1
+   32:	ldc	#2; //int 32768
+   34:	newarray byte
+   36:	iconst_0
+   37:	iconst_0
+   38:	invokespecial	#35; //Method jp."<init>":(Lem;[BII)V
+   41:	putfield	#15; //Field c:Ljp;
+   44:	aload_0
+   45:	getfield	#15; //Field c:Ljp;
+   48:	iconst_1
+   49:	putfield	#24; //Field jp.q:Z
+   52:	aload_0
+   53:	getfield	#15; //Field c:Ljp;
+   56:	iconst_1
+   57:	putfield	#23; //Field jp.p:Z
+   60:	aload_0
+   61:	aload_1
+   62:	putfield	#19; //Field g:Lem;
+   65:	aload_0
+   66:	aload_2
+   67:	putfield	#17; //Field e:Lav;
+   70:	aload_0
+   71:	aload_3
+   72:	putfield	#16; //Field d:Lbt;
+   75:	return
+
+public boolean a(int, int);
+  Code:
+   0:	iload_1
+   1:	aload_0
+   2:	getfield	#13; //Field a:I
+   5:	if_icmpne	25
+   8:	iload_2
+   9:	aload_0
+   10:	getfield	#14; //Field b:I
+   13:	if_icmpne	25
+   16:	aload_0
+   17:	getfield	#20; //Field h:Ljp;
+   20:	ifnull	25
+   23:	iconst_1
+   24:	ireturn
+   25:	iload_1
+   26:	bipush	31
+   28:	iand
+   29:	istore_3
+   30:	iload_2
+   31:	bipush	31
+   33:	iand
+   34:	istore	4
+   36:	iload_3
+   37:	iload	4
+   39:	bipush	32
+   41:	imul
+   42:	iadd
+   43:	istore	5
+   45:	aload_0
+   46:	getfield	#18; //Field f:[Ljp;
+   49:	iload	5
+   51:	aaload
+   52:	ifnull	88
+   55:	aload_0
+   56:	getfield	#18; //Field f:[Ljp;
+   59:	iload	5
+   61:	aaload
+   62:	aload_0
+   63:	getfield	#15; //Field c:Ljp;
+   66:	if_acmpeq	84
+   69:	aload_0
+   70:	getfield	#18; //Field f:[Ljp;
+   73:	iload	5
+   75:	aaload
+   76:	iload_1
+   77:	iload_2
+   78:	invokevirtual	#36; //Method jp.a:(II)Z
+   81:	ifeq	88
+   84:	iconst_1
+   85:	goto	89
+   88:	iconst_0
+   89:	ireturn
+
+public jp b(int, int);
+  Code:
+   0:	iload_1
+   1:	aload_0
+   2:	getfield	#13; //Field a:I
+   5:	if_icmpne	28
+   8:	iload_2
+   9:	aload_0
+   10:	getfield	#14; //Field b:I
+   13:	if_icmpne	28
+   16:	aload_0
+   17:	getfield	#20; //Field h:Ljp;
+   20:	ifnull	28
+   23:	aload_0
+   24:	getfield	#20; //Field h:Ljp;
+   27:	areturn
+   28:	iload_1
+   29:	bipush	31
+   31:	iand
+   32:	istore_3
+   33:	iload_2
+   34:	bipush	31
+   36:	iand
+   37:	istore	4
+   39:	iload_3
+   40:	iload	4
+   42:	bipush	32
+   44:	imul
+   45:	iadd
+   46:	istore	5
+   48:	aload_0
+   49:	iload_1
+   50:	iload_2
+   51:	invokevirtual	#26; //Method a:(II)Z
+   54:	ifne	443
+   57:	aload_0
+   58:	getfield	#18; //Field f:[Ljp;
+   61:	iload	5
+   63:	aaload
+   64:	ifnull	99
+   67:	aload_0
+   68:	getfield	#18; //Field f:[Ljp;
+   71:	iload	5
+   73:	aaload
+   74:	invokevirtual	#40; //Method jp.e:()V
+   77:	aload_0
+   78:	aload_0
+   79:	getfield	#18; //Field f:[Ljp;
+   82:	iload	5
+   84:	aaload
+   85:	invokespecial	#30; //Method b:(Ljp;)V
+   88:	aload_0
+   89:	aload_0
+   90:	getfield	#18; //Field f:[Ljp;
+   93:	iload	5
+   95:	aaload
+   96:	invokespecial	#28; //Method a:(Ljp;)V
+   99:	aload_0
+   100:	iload_1
+   101:	iload_2
+   102:	invokespecial	#31; //Method c:(II)Ljp;
+   105:	astore	6
+   107:	aload	6
+   109:	ifnonnull	141
+   112:	aload_0
+   113:	getfield	#16; //Field d:Lbt;
+   116:	ifnonnull	128
+   119:	aload_0
+   120:	getfield	#15; //Field c:Ljp;
+   123:	astore	6
+   125:	goto	141
+   128:	aload_0
+   129:	getfield	#16; //Field d:Lbt;
+   132:	iload_1
+   133:	iload_2
+   134:	invokeinterface	#49,  3; //InterfaceMethod bt.b:(II)Ljp;
+   139:	astore	6
+   141:	aload_0
+   142:	getfield	#18; //Field f:[Ljp;
+   145:	iload	5
+   147:	aload	6
+   149:	aastore
+   150:	aload	6
+   152:	invokevirtual	#38; //Method jp.c:()V
+   155:	aload_0
+   156:	getfield	#18; //Field f:[Ljp;
+   159:	iload	5
+   161:	aaload
+   162:	ifnull	175
+   165:	aload_0
+   166:	getfield	#18; //Field f:[Ljp;
+   169:	iload	5
+   171:	aaload
+   172:	invokevirtual	#39; //Method jp.d:()V
+   175:	aload_0
+   176:	getfield	#18; //Field f:[Ljp;
+   179:	iload	5
+   181:	aaload
+   182:	getfield	#21; //Field jp.n:Z
+   185:	ifne	230
+   188:	aload_0
+   189:	iload_1
+   190:	iconst_1
+   191:	iadd
+   192:	iload_2
+   193:	iconst_1
+   194:	iadd
+   195:	invokevirtual	#26; //Method a:(II)Z
+   198:	ifeq	230
+   201:	aload_0
+   202:	iload_1
+   203:	iload_2
+   204:	iconst_1
+   205:	iadd
+   206:	invokevirtual	#26; //Method a:(II)Z
+   209:	ifeq	230
+   212:	aload_0
+   213:	iload_1
+   214:	iconst_1
+   215:	iadd
+   216:	iload_2
+   217:	invokevirtual	#26; //Method a:(II)Z
+   220:	ifeq	230
+   223:	aload_0
+   224:	aload_0
+   225:	iload_1
+   226:	iload_2
+   227:	invokevirtual	#27; //Method a:(Lbt;II)V
+   230:	aload_0
+   231:	iload_1
+   232:	iconst_1
+   233:	isub
+   234:	iload_2
+   235:	invokevirtual	#26; //Method a:(II)Z
+   238:	ifeq	299
+   241:	aload_0
+   242:	iload_1
+   243:	iconst_1
+   244:	isub
+   245:	iload_2
+   246:	invokevirtual	#29; //Method b:(II)Ljp;
+   249:	getfield	#21; //Field jp.n:Z
+   252:	ifne	299
+   255:	aload_0
+   256:	iload_1
+   257:	iconst_1
+   258:	isub
+   259:	iload_2
+   260:	iconst_1
+   261:	iadd
+   262:	invokevirtual	#26; //Method a:(II)Z
+   265:	ifeq	299
+   268:	aload_0
+   269:	iload_1
+   270:	iload_2
+   271:	iconst_1
+   272:	iadd
+   273:	invokevirtual	#26; //Method a:(II)Z
+   276:	ifeq	299
+   279:	aload_0
+   280:	iload_1
+   281:	iconst_1
+   282:	isub
+   283:	iload_2
+   284:	invokevirtual	#26; //Method a:(II)Z
+   287:	ifeq	299
+   290:	aload_0
+   291:	aload_0
+   292:	iload_1
+   293:	iconst_1
+   294:	isub
+   295:	iload_2
+   296:	invokevirtual	#27; //Method a:(Lbt;II)V
+   299:	aload_0
+   300:	iload_1
+   301:	iload_2
+   302:	iconst_1
+   303:	isub
+   304:	invokevirtual	#26; //Method a:(II)Z
+   307:	ifeq	368
+   310:	aload_0
+   311:	iload_1
+   312:	iload_2
+   313:	iconst_1
+   314:	isub
+   315:	invokevirtual	#29; //Method b:(II)Ljp;
+   318:	getfield	#21; //Field jp.n:Z
+   321:	ifne	368
+   324:	aload_0
+   325:	iload_1
+   326:	iconst_1
+   327:	iadd
+   328:	iload_2
+   329:	iconst_1
+   330:	isub
+   331:	invokevirtual	#26; //Method a:(II)Z
+   334:	ifeq	368
+   337:	aload_0
+   338:	iload_1
+   339:	iload_2
+   340:	iconst_1
+   341:	isub
+   342:	invokevirtual	#26; //Method a:(II)Z
+   345:	ifeq	368
+   348:	aload_0
+   349:	iload_1
+   350:	iconst_1
+   351:	iadd
+   352:	iload_2
+   353:	invokevirtual	#26; //Method a:(II)Z
+   356:	ifeq	368
+   359:	aload_0
+   360:	aload_0
+   361:	iload_1
+   362:	iload_2
+   363:	iconst_1
+   364:	isub
+   365:	invokevirtual	#27; //Method a:(Lbt;II)V
+   368:	aload_0
+   369:	iload_1
+   370:	iconst_1
+   371:	isub
+   372:	iload_2
+   373:	iconst_1
+   374:	isub
+   375:	invokevirtual	#26; //Method a:(II)Z
+   378:	ifeq	443
+   381:	aload_0
+   382:	iload_1
+   383:	iconst_1
+   384:	isub
+   385:	iload_2
+   386:	iconst_1
+   387:	isub
+   388:	invokevirtual	#29; //Method b:(II)Ljp;
+   391:	getfield	#21; //Field jp.n:Z
+   394:	ifne	443
+   397:	aload_0
+   398:	iload_1
+   399:	iconst_1
+   400:	isub
+   401:	iload_2
+   402:	iconst_1
+   403:	isub
+   404:	invokevirtual	#26; //Method a:(II)Z
+   407:	ifeq	443
+   410:	aload_0
+   411:	iload_1
+   412:	iload_2
+   413:	iconst_1
+   414:	isub
+   415:	invokevirtual	#26; //Method a:(II)Z
+   418:	ifeq	443
+   421:	aload_0
+   422:	iload_1
+   423:	iconst_1
+   424:	isub
+   425:	iload_2
+   426:	invokevirtual	#26; //Method a:(II)Z
+   429:	ifeq	443
+   432:	aload_0
+   433:	aload_0
+   434:	iload_1
+   435:	iconst_1
+   436:	isub
+   437:	iload_2
+   438:	iconst_1
+   439:	isub
+   440:	invokevirtual	#27; //Method a:(Lbt;II)V
+   443:	aload_0
+   444:	iload_1
+   445:	putfield	#13; //Field a:I
+   448:	aload_0
+   449:	iload_2
+   450:	putfield	#14; //Field b:I
+   453:	aload_0
+   454:	aload_0
+   455:	getfield	#18; //Field f:[Ljp;
+   458:	iload	5
+   460:	aaload
+   461:	putfield	#20; //Field h:Ljp;
+   464:	aload_0
+   465:	getfield	#18; //Field f:[Ljp;
+   468:	iload	5
+   470:	aaload
+   471:	areturn
+
+public void a(bt, int, int);
+  Code:
+   0:	aload_0
+   1:	iload_2
+   2:	iload_3
+   3:	invokevirtual	#29; //Method b:(II)Ljp;
+   6:	astore	4
+   8:	aload	4
+   10:	getfield	#21; //Field jp.n:Z
+   13:	ifne	46
+   16:	aload	4
+   18:	iconst_1
+   19:	putfield	#21; //Field jp.n:Z
+   22:	aload_0
+   23:	getfield	#16; //Field d:Lbt;
+   26:	ifnull	46
+   29:	aload_0
+   30:	getfield	#16; //Field d:Lbt;
+   33:	aload_1
+   34:	iload_2
+   35:	iload_3
+   36:	invokeinterface	#48,  4; //InterfaceMethod bt.a:(Lbt;II)V
+   41:	aload	4
+   43:	invokevirtual	#41; //Method jp.f:()V
+   46:	return
+
+public boolean a(boolean, ix);
+  Code:
+   0:	iconst_0
+   1:	istore_3
+   2:	iconst_0
+   3:	istore	4
+   5:	aload_2
+   6:	ifnull	55
+   9:	iconst_0
+   10:	istore	5
+   12:	iload	5
+   14:	aload_0
+   15:	getfield	#18; //Field f:[Ljp;
+   18:	arraylength
+   19:	if_icmpge	55
+   22:	aload_0
+   23:	getfield	#18; //Field f:[Ljp;
+   26:	iload	5
+   28:	aaload
+   29:	ifnull	49
+   32:	aload_0
+   33:	getfield	#18; //Field f:[Ljp;
+   36:	iload	5
+   38:	aaload
+   39:	iload_1
+   40:	invokevirtual	#37; //Method jp.a:(Z)Z
+   43:	ifeq	49
+   46:	iinc	4, 1
+   49:	iinc	5, 1
+   52:	goto	12
+   55:	iconst_0
+   56:	istore	5
+   58:	iconst_0
+   59:	istore	6
+   61:	iload	6
+   63:	aload_0
+   64:	getfield	#18; //Field f:[Ljp;
+   67:	arraylength
+   68:	if_icmpge	194
+   71:	aload_0
+   72:	getfield	#18; //Field f:[Ljp;
+   75:	iload	6
+   77:	aaload
+   78:	ifnull	188
+   81:	iload_1
+   82:	ifeq	109
+   85:	aload_0
+   86:	getfield	#18; //Field f:[Ljp;
+   89:	iload	6
+   91:	aaload
+   92:	getfield	#23; //Field jp.p:Z
+   95:	ifne	109
+   98:	aload_0
+   99:	aload_0
+   100:	getfield	#18; //Field f:[Ljp;
+   103:	iload	6
+   105:	aaload
+   106:	invokespecial	#28; //Method a:(Ljp;)V
+   109:	aload_0
+   110:	getfield	#18; //Field f:[Ljp;
+   113:	iload	6
+   115:	aaload
+   116:	iload_1
+   117:	invokevirtual	#37; //Method jp.a:(Z)Z
+   120:	ifeq	188
+   123:	aload_0
+   124:	aload_0
+   125:	getfield	#18; //Field f:[Ljp;
+   128:	iload	6
+   130:	aaload
+   131:	invokespecial	#30; //Method b:(Ljp;)V
+   134:	aload_0
+   135:	getfield	#18; //Field f:[Ljp;
+   138:	iload	6
+   140:	aaload
+   141:	iconst_0
+   142:	putfield	#22; //Field jp.o:Z
+   145:	iinc	3, 1
+   148:	iload_3
+   149:	iconst_2
+   150:	if_icmpne	159
+   153:	iload_1
+   154:	ifne	159
+   157:	iconst_0
+   158:	ireturn
+   159:	aload_2
+   160:	ifnull	188
+   163:	iinc	5, 1
+   166:	iload	5
+   168:	bipush	10
+   170:	irem
+   171:	ifne	188
+   174:	aload_2
+   175:	iload	5
+   177:	bipush	100
+   179:	imul
+   180:	iload	4
+   182:	idiv
+   183:	invokeinterface	#50,  2; //InterfaceMethod ix.a:(I)V
+   188:	iinc	6, 1
+   191:	goto	61
+   194:	iload_1
+   195:	ifeq	216
+   198:	aload_0
+   199:	getfield	#17; //Field e:Lav;
+   202:	ifnonnull	207
+   205:	iconst_1
+   206:	ireturn
+   207:	aload_0
+   208:	getfield	#17; //Field e:Lav;
+   211:	invokeinterface	#45,  1; //InterfaceMethod av.b:()V
+   216:	iconst_1
+   217:	ireturn
+
+public boolean a();
+  Code:
+   0:	aload_0
+   1:	getfield	#17; //Field e:Lav;
+   4:	ifnull	16
+   7:	aload_0
+   8:	getfield	#17; //Field e:Lav;
+   11:	invokeinterface	#42,  1; //InterfaceMethod av.a:()V
+   16:	aload_0
+   17:	getfield	#16; //Field d:Lbt;
+   20:	invokeinterface	#47,  1; //InterfaceMethod bt.a:()Z
+   25:	ireturn
+
+public boolean b();
+  Code:
+   0:	iconst_1
+   1:	ireturn
+
+}
+

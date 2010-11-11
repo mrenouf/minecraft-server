@@ -1,0 +1,1073 @@
+Compiled from SourceFile
+public class net.minecraft.server.MinecraftServer extends java.lang.Object implements et,java.lang.Runnable{
+public static java.util.logging.Logger a;
+
+public static java.util.HashMap b;
+
+public do c;
+
+public dc d;
+
+public es e;
+
+public gl f;
+
+public boolean g;
+
+int h;
+
+public java.lang.String i;
+
+public int j;
+
+public gp k;
+
+public boolean l;
+
+public net.minecraft.server.MinecraftServer();
+  Code:
+   0:	aload_0
+   1:	invokespecial	#264; //Method java/lang/Object."<init>":()V
+   4:	aload_0
+   5:	iconst_1
+   6:	putfield	#208; //Field m:Z
+   9:	aload_0
+   10:	iconst_0
+   11:	putfield	#202; //Field g:Z
+   14:	aload_0
+   15:	iconst_0
+   16:	putfield	#203; //Field h:I
+   19:	aload_0
+   20:	new	#155; //class java/util/ArrayList
+   23:	dup
+   24:	invokespecial	#286; //Method java/util/ArrayList."<init>":()V
+   27:	putfield	#209; //Field n:Ljava/util/List;
+   30:	aload_0
+   31:	new	#155; //class java/util/ArrayList
+   34:	dup
+   35:	invokespecial	#286; //Method java/util/ArrayList."<init>":()V
+   38:	invokestatic	#287; //Method java/util/Collections.synchronizedList:(Ljava/util/List;)Ljava/util/List;
+   41:	putfield	#210; //Field o:Ljava/util/List;
+   44:	new	#123; //class by
+   47:	dup
+   48:	aload_0
+   49:	invokespecial	#217; //Method by."<init>":(Lnet/minecraft/server/MinecraftServer;)V
+   52:	pop
+   53:	return
+
+public void a();
+  Code:
+   0:	aload_0
+   1:	iconst_0
+   2:	putfield	#208; //Field m:Z
+   5:	return
+
+public void run();
+  Code:
+   0:	aload_0
+   1:	invokespecial	#307; //Method d:()Z
+   4:	ifeq	110
+   7:	invokestatic	#280; //Method java/lang/System.currentTimeMillis:()J
+   10:	lstore_1
+   11:	lconst_0
+   12:	lstore_3
+   13:	aload_0
+   14:	getfield	#208; //Field m:Z
+   17:	ifeq	107
+   20:	invokestatic	#280; //Method java/lang/System.currentTimeMillis:()J
+   23:	lstore	5
+   25:	lload	5
+   27:	lload_1
+   28:	lsub
+   29:	lstore	7
+   31:	lload	7
+   33:	ldc2_w	#174; //long 2000l
+   36:	lcmp
+   37:	ifle	53
+   40:	getstatic	#196; //Field a:Ljava/util/logging/Logger;
+   43:	ldc	#43; //String Can't keep up! Did the system time change, or is the server overloaded?
+   45:	invokevirtual	#297; //Method java/util/logging/Logger.warning:(Ljava/lang/String;)V
+   48:	ldc2_w	#174; //long 2000l
+   51:	lstore	7
+   53:	lload	7
+   55:	lconst_0
+   56:	lcmp
+   57:	ifge	71
+   60:	getstatic	#196; //Field a:Ljava/util/logging/Logger;
+   63:	ldc	#77; //String Time ran backwards! Did the system time change?
+   65:	invokevirtual	#297; //Method java/util/logging/Logger.warning:(Ljava/lang/String;)V
+   68:	lconst_0
+   69:	lstore	7
+   71:	lload_3
+   72:	lload	7
+   74:	ladd
+   75:	lstore_3
+   76:	lload	5
+   78:	lstore_1
+   79:	lload_3
+   80:	ldc2_w	#168; //long 50l
+   83:	lcmp
+   84:	ifle	100
+   87:	lload_3
+   88:	ldc2_w	#168; //long 50l
+   91:	lsub
+   92:	lstore_3
+   93:	aload_0
+   94:	invokespecial	#311; //Method h:()V
+   97:	goto	79
+   100:	lconst_1
+   101:	invokestatic	#283; //Method java/lang/Thread.sleep:(J)V
+   104:	goto	13
+   107:	goto	138
+   110:	aload_0
+   111:	getfield	#208; //Field m:Z
+   114:	ifeq	138
+   117:	aload_0
+   118:	invokevirtual	#304; //Method b:()V
+   121:	ldc2_w	#166; //long 10l
+   124:	invokestatic	#283; //Method java/lang/Thread.sleep:(J)V
+   127:	goto	110
+   130:	astore_1
+   131:	aload_1
+   132:	invokevirtual	#263; //Method java/lang/InterruptedException.printStackTrace:()V
+   135:	goto	110
+   138:	aload_0
+   139:	invokespecial	#310; //Method g:()V
+   142:	aload_0
+   143:	iconst_1
+   144:	putfield	#202; //Field g:Z
+   147:	iconst_0
+   148:	invokestatic	#281; //Method java/lang/System.exit:(I)V
+   151:	goto	233
+   154:	astore_1
+   155:	aload_1
+   156:	invokevirtual	#259; //Method java/lang/Exception.printStackTrace:()V
+   159:	getstatic	#196; //Field a:Ljava/util/logging/Logger;
+   162:	getstatic	#194; //Field java/util/logging/Level.SEVERE:Ljava/util/logging/Level;
+   165:	ldc	#81; //String Unexpected exception
+   167:	aload_1
+   168:	invokevirtual	#296; //Method java/util/logging/Logger.log:(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/Throwable;)V
+   171:	aload_0
+   172:	getfield	#208; //Field m:Z
+   175:	ifeq	199
+   178:	aload_0
+   179:	invokevirtual	#304; //Method b:()V
+   182:	ldc2_w	#166; //long 10l
+   185:	invokestatic	#283; //Method java/lang/Thread.sleep:(J)V
+   188:	goto	171
+   191:	astore_2
+   192:	aload_2
+   193:	invokevirtual	#263; //Method java/lang/InterruptedException.printStackTrace:()V
+   196:	goto	171
+   199:	aload_0
+   200:	invokespecial	#310; //Method g:()V
+   203:	aload_0
+   204:	iconst_1
+   205:	putfield	#202; //Field g:Z
+   208:	iconst_0
+   209:	invokestatic	#281; //Method java/lang/System.exit:(I)V
+   212:	goto	233
+   215:	astore	9
+   217:	aload_0
+   218:	invokespecial	#310; //Method g:()V
+   221:	aload_0
+   222:	iconst_1
+   223:	putfield	#202; //Field g:Z
+   226:	iconst_0
+   227:	invokestatic	#281; //Method java/lang/System.exit:(I)V
+   230:	aload	9
+   232:	athrow
+   233:	return
+  Exception table:
+   from   to  target type
+   121   127   130   Class java/lang/InterruptedException
+
+     0   138   154   Class java/lang/Exception
+
+   182   188   191   Class java/lang/InterruptedException
+
+     0   138   215   any
+   154   199   215   any
+   215   217   215   any
+
+public void a(java.lang.String, et);
+  Code:
+   0:	aload_0
+   1:	getfield	#210; //Field o:Ljava/util/List;
+   4:	new	#118; //class al
+   7:	dup
+   8:	aload_1
+   9:	aload_2
+   10:	invokespecial	#211; //Method al."<init>":(Ljava/lang/String;Let;)V
+   13:	invokeinterface	#317,  2; //InterfaceMethod java/util/List.add:(Ljava/lang/Object;)Z
+   18:	pop
+   19:	return
+
+public void b();
+  Code:
+   0:	aload_0
+   1:	getfield	#210; //Field o:Ljava/util/List;
+   4:	invokeinterface	#320,  1; //InterfaceMethod java/util/List.size:()I
+   9:	ifle	1796
+   12:	aload_0
+   13:	getfield	#210; //Field o:Ljava/util/List;
+   16:	iconst_0
+   17:	invokeinterface	#319,  2; //InterfaceMethod java/util/List.remove:(I)Ljava/lang/Object;
+   22:	checkcast	#118; //class al
+   25:	astore_1
+   26:	aload_1
+   27:	getfield	#176; //Field al.a:Ljava/lang/String;
+   30:	astore_2
+   31:	aload_1
+   32:	getfield	#177; //Field al.b:Let;
+   35:	astore_3
+   36:	aload_3
+   37:	invokeinterface	#314,  1; //InterfaceMethod et.c:()Ljava/lang/String;
+   42:	astore	4
+   44:	aload_2
+   45:	invokevirtual	#274; //Method java/lang/String.toLowerCase:()Ljava/lang/String;
+   48:	ldc	#92; //String help
+   50:	invokevirtual	#272; //Method java/lang/String.startsWith:(Ljava/lang/String;)Z
+   53:	ifne	68
+   56:	aload_2
+   57:	invokevirtual	#274; //Method java/lang/String.toLowerCase:()Ljava/lang/String;
+   60:	ldc	#37; //String ?
+   62:	invokevirtual	#272; //Method java/lang/String.startsWith:(Ljava/lang/String;)Z
+   65:	ifeq	231
+   68:	aload_3
+   69:	ldc	#79; //String To run the server without a gui, start it like this:
+   71:	invokeinterface	#313,  2; //InterfaceMethod et.b:(Ljava/lang/String;)V
+   76:	aload_3
+   77:	ldc	#8; //String    java -Xmx1024M -Xms1024M -jar minecraft_server.jar nogui
+   79:	invokeinterface	#313,  2; //InterfaceMethod et.b:(Ljava/lang/String;)V
+   84:	aload_3
+   85:	ldc	#45; //String Console commands:
+   87:	invokeinterface	#313,  2; //InterfaceMethod et.b:(Ljava/lang/String;)V
+   92:	aload_3
+   93:	ldc	#7; //String    help  or  ?               shows this message
+   95:	invokeinterface	#313,  2; //InterfaceMethod et.b:(Ljava/lang/String;)V
+   100:	aload_3
+   101:	ldc	#9; //String    kick <player>             removes a player from the server
+   103:	invokeinterface	#313,  2; //InterfaceMethod et.b:(Ljava/lang/String;)V
+   108:	aload_3
+   109:	ldc	#3; //String    ban <player>              bans a player from the server
+   111:	invokeinterface	#313,  2; //InterfaceMethod et.b:(Ljava/lang/String;)V
+   116:	aload_3
+   117:	ldc	#12; //String    pardon <player>           pardons a banned player so that they can connect again
+   119:	invokeinterface	#313,  2; //InterfaceMethod et.b:(Ljava/lang/String;)V
+   124:	aload_3
+   125:	ldc	#4; //String    ban-ip <ip>               bans an IP address from the server
+   127:	invokeinterface	#313,  2; //InterfaceMethod et.b:(Ljava/lang/String;)V
+   132:	aload_3
+   133:	ldc	#13; //String    pardon-ip <ip>            pardons a banned IP address so that they can connect again
+   135:	invokeinterface	#313,  2; //InterfaceMethod et.b:(Ljava/lang/String;)V
+   140:	aload_3
+   141:	ldc	#11; //String    op <player>               turns a player into an op
+   143:	invokeinterface	#313,  2; //InterfaceMethod et.b:(Ljava/lang/String;)V
+   148:	aload_3
+   149:	ldc	#5; //String    deop <player>             removes op status from a player
+   151:	invokeinterface	#313,  2; //InterfaceMethod et.b:(Ljava/lang/String;)V
+   156:	aload_3
+   157:	ldc	#20; //String    tp <player1> <player2>    moves one player to the same location as another player
+   159:	invokeinterface	#313,  2; //InterfaceMethod et.b:(Ljava/lang/String;)V
+   164:	aload_3
+   165:	ldc	#6; //String    give <player> <id> [num]  gives a player a resource
+   167:	invokeinterface	#313,  2; //InterfaceMethod et.b:(Ljava/lang/String;)V
+   172:	aload_3
+   173:	ldc	#19; //String    tell <player> <message>   sends a private message to a player
+   175:	invokeinterface	#313,  2; //InterfaceMethod et.b:(Ljava/lang/String;)V
+   180:	aload_3
+   181:	ldc	#18; //String    stop                      gracefully stops the server
+   183:	invokeinterface	#313,  2; //InterfaceMethod et.b:(Ljava/lang/String;)V
+   188:	aload_3
+   189:	ldc	#14; //String    save-all                  forces a server-wide level save
+   191:	invokeinterface	#313,  2; //InterfaceMethod et.b:(Ljava/lang/String;)V
+   196:	aload_3
+   197:	ldc	#15; //String    save-off                  disables terrain saving (useful for backup scripts)
+   199:	invokeinterface	#313,  2; //InterfaceMethod et.b:(Ljava/lang/String;)V
+   204:	aload_3
+   205:	ldc	#16; //String    save-on                   re-enables terrain saving
+   207:	invokeinterface	#313,  2; //InterfaceMethod et.b:(Ljava/lang/String;)V
+   212:	aload_3
+   213:	ldc	#10; //String    list                      lists all currently connected players
+   215:	invokeinterface	#313,  2; //InterfaceMethod et.b:(Ljava/lang/String;)V
+   220:	aload_3
+   221:	ldc	#17; //String    say <message>             broadcasts a message to all players
+   223:	invokeinterface	#313,  2; //InterfaceMethod et.b:(Ljava/lang/String;)V
+   228:	goto	1793
+   231:	aload_2
+   232:	invokevirtual	#274; //Method java/lang/String.toLowerCase:()Ljava/lang/String;
+   235:	ldc	#95; //String list
+   237:	invokevirtual	#272; //Method java/lang/String.startsWith:(Ljava/lang/String;)Z
+   240:	ifeq	277
+   243:	aload_3
+   244:	new	#151; //class java/lang/StringBuilder
+   247:	dup
+   248:	invokespecial	#276; //Method java/lang/StringBuilder."<init>":()V
+   251:	ldc	#44; //String Connected players: 
+   253:	invokevirtual	#278; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   256:	aload_0
+   257:	getfield	#201; //Field f:Lgl;
+   260:	invokevirtual	#244; //Method gl.c:()Ljava/lang/String;
+   263:	invokevirtual	#278; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   266:	invokevirtual	#279; //Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+   269:	invokeinterface	#313,  2; //InterfaceMethod et.b:(Ljava/lang/String;)V
+   274:	goto	1793
+   277:	aload_2
+   278:	invokevirtual	#274; //Method java/lang/String.toLowerCase:()Ljava/lang/String;
+   281:	ldc	#109; //String stop
+   283:	invokevirtual	#272; //Method java/lang/String.startsWith:(Ljava/lang/String;)Z
+   286:	ifeq	305
+   289:	aload_0
+   290:	aload	4
+   292:	ldc	#70; //String Stopping the server..
+   294:	invokespecial	#303; //Method a:(Ljava/lang/String;Ljava/lang/String;)V
+   297:	aload_0
+   298:	iconst_0
+   299:	putfield	#208; //Field m:Z
+   302:	goto	1793
+   305:	aload_2
+   306:	invokevirtual	#274; //Method java/lang/String.toLowerCase:()Ljava/lang/String;
+   309:	ldc	#102; //String save-all
+   311:	invokevirtual	#272; //Method java/lang/String.startsWith:(Ljava/lang/String;)Z
+   314:	ifeq	345
+   317:	aload_0
+   318:	aload	4
+   320:	ldc	#51; //String Forcing save..
+   322:	invokespecial	#303; //Method a:(Ljava/lang/String;Ljava/lang/String;)V
+   325:	aload_0
+   326:	getfield	#200; //Field e:Les;
+   329:	iconst_1
+   330:	aconst_null
+   331:	invokevirtual	#229; //Method es.a:(ZLiv;)V
+   334:	aload_0
+   335:	aload	4
+   337:	ldc	#64; //String Save complete.
+   339:	invokespecial	#303; //Method a:(Ljava/lang/String;Ljava/lang/String;)V
+   342:	goto	1793
+   345:	aload_2
+   346:	invokevirtual	#274; //Method java/lang/String.toLowerCase:()Ljava/lang/String;
+   349:	ldc	#103; //String save-off
+   351:	invokevirtual	#272; //Method java/lang/String.startsWith:(Ljava/lang/String;)Z
+   354:	ifeq	376
+   357:	aload_0
+   358:	aload	4
+   360:	ldc	#47; //String Disabling level saving..
+   362:	invokespecial	#303; //Method a:(Ljava/lang/String;Ljava/lang/String;)V
+   365:	aload_0
+   366:	getfield	#200; //Field e:Les;
+   369:	iconst_1
+   370:	putfield	#186; //Field es.C:Z
+   373:	goto	1793
+   376:	aload_2
+   377:	invokevirtual	#274; //Method java/lang/String.toLowerCase:()Ljava/lang/String;
+   380:	ldc	#104; //String save-on
+   382:	invokevirtual	#272; //Method java/lang/String.startsWith:(Ljava/lang/String;)Z
+   385:	ifeq	407
+   388:	aload_0
+   389:	aload	4
+   391:	ldc	#49; //String Enabling level saving..
+   393:	invokespecial	#303; //Method a:(Ljava/lang/String;Ljava/lang/String;)V
+   396:	aload_0
+   397:	getfield	#200; //Field e:Les;
+   400:	iconst_0
+   401:	putfield	#186; //Field es.C:Z
+   404:	goto	1793
+   407:	aload_2
+   408:	invokevirtual	#274; //Method java/lang/String.toLowerCase:()Ljava/lang/String;
+   411:	ldc	#99; //String op 
+   413:	invokevirtual	#272; //Method java/lang/String.startsWith:(Ljava/lang/String;)Z
+   416:	ifeq	483
+   419:	aload_2
+   420:	aload_2
+   421:	ldc	#2; //String  
+   423:	invokevirtual	#269; //Method java/lang/String.indexOf:(Ljava/lang/String;)I
+   426:	invokevirtual	#273; //Method java/lang/String.substring:(I)Ljava/lang/String;
+   429:	invokevirtual	#275; //Method java/lang/String.trim:()Ljava/lang/String;
+   432:	astore	5
+   434:	aload_0
+   435:	getfield	#201; //Field f:Lgl;
+   438:	aload	5
+   440:	invokevirtual	#248; //Method gl.e:(Ljava/lang/String;)V
+   443:	aload_0
+   444:	aload	4
+   446:	new	#151; //class java/lang/StringBuilder
+   449:	dup
+   450:	invokespecial	#276; //Method java/lang/StringBuilder."<init>":()V
+   453:	ldc	#57; //String Opping 
+   455:	invokevirtual	#278; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   458:	aload	5
+   460:	invokevirtual	#278; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   463:	invokevirtual	#279; //Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+   466:	invokespecial	#303; //Method a:(Ljava/lang/String;Ljava/lang/String;)V
+   469:	aload_0
+   470:	getfield	#201; //Field f:Lgl;
+   473:	aload	5
+   475:	ldc	#117; //String §eYou are now op!
+   477:	invokevirtual	#241; //Method gl.a:(Ljava/lang/String;Ljava/lang/String;)V
+   480:	goto	1793
+   483:	aload_2
+   484:	invokevirtual	#274; //Method java/lang/String.toLowerCase:()Ljava/lang/String;
+   487:	ldc	#89; //String deop 
+   489:	invokevirtual	#272; //Method java/lang/String.startsWith:(Ljava/lang/String;)Z
+   492:	ifeq	559
+   495:	aload_2
+   496:	aload_2
+   497:	ldc	#2; //String  
+   499:	invokevirtual	#269; //Method java/lang/String.indexOf:(Ljava/lang/String;)I
+   502:	invokevirtual	#273; //Method java/lang/String.substring:(I)Ljava/lang/String;
+   505:	invokevirtual	#275; //Method java/lang/String.trim:()Ljava/lang/String;
+   508:	astore	5
+   510:	aload_0
+   511:	getfield	#201; //Field f:Lgl;
+   514:	aload	5
+   516:	invokevirtual	#249; //Method gl.f:(Ljava/lang/String;)V
+   519:	aload_0
+   520:	getfield	#201; //Field f:Lgl;
+   523:	aload	5
+   525:	ldc	#116; //String §eYou are no longer op!
+   527:	invokevirtual	#241; //Method gl.a:(Ljava/lang/String;Ljava/lang/String;)V
+   530:	aload_0
+   531:	aload	4
+   533:	new	#151; //class java/lang/StringBuilder
+   536:	dup
+   537:	invokespecial	#276; //Method java/lang/StringBuilder."<init>":()V
+   540:	ldc	#46; //String De-opping 
+   542:	invokevirtual	#278; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   545:	aload	5
+   547:	invokevirtual	#278; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   550:	invokevirtual	#279; //Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+   553:	invokespecial	#303; //Method a:(Ljava/lang/String;Ljava/lang/String;)V
+   556:	goto	1793
+   559:	aload_2
+   560:	invokevirtual	#274; //Method java/lang/String.toLowerCase:()Ljava/lang/String;
+   563:	ldc	#88; //String ban-ip 
+   565:	invokevirtual	#272; //Method java/lang/String.startsWith:(Ljava/lang/String;)Z
+   568:	ifeq	624
+   571:	aload_2
+   572:	aload_2
+   573:	ldc	#2; //String  
+   575:	invokevirtual	#269; //Method java/lang/String.indexOf:(Ljava/lang/String;)I
+   578:	invokevirtual	#273; //Method java/lang/String.substring:(I)Ljava/lang/String;
+   581:	invokevirtual	#275; //Method java/lang/String.trim:()Ljava/lang/String;
+   584:	astore	5
+   586:	aload_0
+   587:	getfield	#201; //Field f:Lgl;
+   590:	aload	5
+   592:	invokevirtual	#245; //Method gl.c:(Ljava/lang/String;)V
+   595:	aload_0
+   596:	aload	4
+   598:	new	#151; //class java/lang/StringBuilder
+   601:	dup
+   602:	invokespecial	#276; //Method java/lang/StringBuilder."<init>":()V
+   605:	ldc	#40; //String Banning ip 
+   607:	invokevirtual	#278; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   610:	aload	5
+   612:	invokevirtual	#278; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   615:	invokevirtual	#279; //Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+   618:	invokespecial	#303; //Method a:(Ljava/lang/String;Ljava/lang/String;)V
+   621:	goto	1793
+   624:	aload_2
+   625:	invokevirtual	#274; //Method java/lang/String.toLowerCase:()Ljava/lang/String;
+   628:	ldc	#101; //String pardon-ip 
+   630:	invokevirtual	#272; //Method java/lang/String.startsWith:(Ljava/lang/String;)Z
+   633:	ifeq	689
+   636:	aload_2
+   637:	aload_2
+   638:	ldc	#2; //String  
+   640:	invokevirtual	#269; //Method java/lang/String.indexOf:(Ljava/lang/String;)I
+   643:	invokevirtual	#273; //Method java/lang/String.substring:(I)Ljava/lang/String;
+   646:	invokevirtual	#275; //Method java/lang/String.trim:()Ljava/lang/String;
+   649:	astore	5
+   651:	aload_0
+   652:	getfield	#201; //Field f:Lgl;
+   655:	aload	5
+   657:	invokevirtual	#247; //Method gl.d:(Ljava/lang/String;)V
+   660:	aload_0
+   661:	aload	4
+   663:	new	#151; //class java/lang/StringBuilder
+   666:	dup
+   667:	invokespecial	#276; //Method java/lang/StringBuilder."<init>":()V
+   670:	ldc	#59; //String Pardoning ip 
+   672:	invokevirtual	#278; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   675:	aload	5
+   677:	invokevirtual	#278; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   680:	invokevirtual	#279; //Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+   683:	invokespecial	#303; //Method a:(Ljava/lang/String;Ljava/lang/String;)V
+   686:	goto	1793
+   689:	aload_2
+   690:	invokevirtual	#274; //Method java/lang/String.toLowerCase:()Ljava/lang/String;
+   693:	ldc	#87; //String ban 
+   695:	invokevirtual	#272; //Method java/lang/String.startsWith:(Ljava/lang/String;)Z
+   698:	ifeq	780
+   701:	aload_2
+   702:	aload_2
+   703:	ldc	#2; //String  
+   705:	invokevirtual	#269; //Method java/lang/String.indexOf:(Ljava/lang/String;)I
+   708:	invokevirtual	#273; //Method java/lang/String.substring:(I)Ljava/lang/String;
+   711:	invokevirtual	#275; //Method java/lang/String.trim:()Ljava/lang/String;
+   714:	astore	5
+   716:	aload_0
+   717:	getfield	#201; //Field f:Lgl;
+   720:	aload	5
+   722:	invokevirtual	#239; //Method gl.a:(Ljava/lang/String;)V
+   725:	aload_0
+   726:	aload	4
+   728:	new	#151; //class java/lang/StringBuilder
+   731:	dup
+   732:	invokespecial	#276; //Method java/lang/StringBuilder."<init>":()V
+   735:	ldc	#39; //String Banning 
+   737:	invokevirtual	#278; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   740:	aload	5
+   742:	invokevirtual	#278; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   745:	invokevirtual	#279; //Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+   748:	invokespecial	#303; //Method a:(Ljava/lang/String;Ljava/lang/String;)V
+   751:	aload_0
+   752:	getfield	#201; //Field f:Lgl;
+   755:	aload	5
+   757:	invokevirtual	#250; //Method gl.h:(Ljava/lang/String;)Leo;
+   760:	astore	6
+   762:	aload	6
+   764:	ifnull	777
+   767:	aload	6
+   769:	getfield	#178; //Field eo.a:Ljc;
+   772:	ldc	#38; //String Banned by admin
+   774:	invokevirtual	#299; //Method jc.c:(Ljava/lang/String;)V
+   777:	goto	1793
+   780:	aload_2
+   781:	invokevirtual	#274; //Method java/lang/String.toLowerCase:()Ljava/lang/String;
+   784:	ldc	#100; //String pardon 
+   786:	invokevirtual	#272; //Method java/lang/String.startsWith:(Ljava/lang/String;)Z
+   789:	ifeq	845
+   792:	aload_2
+   793:	aload_2
+   794:	ldc	#2; //String  
+   796:	invokevirtual	#269; //Method java/lang/String.indexOf:(Ljava/lang/String;)I
+   799:	invokevirtual	#273; //Method java/lang/String.substring:(I)Ljava/lang/String;
+   802:	invokevirtual	#275; //Method java/lang/String.trim:()Ljava/lang/String;
+   805:	astore	5
+   807:	aload_0
+   808:	getfield	#201; //Field f:Lgl;
+   811:	aload	5
+   813:	invokevirtual	#243; //Method gl.b:(Ljava/lang/String;)V
+   816:	aload_0
+   817:	aload	4
+   819:	new	#151; //class java/lang/StringBuilder
+   822:	dup
+   823:	invokespecial	#276; //Method java/lang/StringBuilder."<init>":()V
+   826:	ldc	#58; //String Pardoning 
+   828:	invokevirtual	#278; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   831:	aload	5
+   833:	invokevirtual	#278; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   836:	invokevirtual	#279; //Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+   839:	invokespecial	#303; //Method a:(Ljava/lang/String;Ljava/lang/String;)V
+   842:	goto	1793
+   845:	aload_2
+   846:	invokevirtual	#274; //Method java/lang/String.toLowerCase:()Ljava/lang/String;
+   849:	ldc	#93; //String kick 
+   851:	invokevirtual	#272; //Method java/lang/String.startsWith:(Ljava/lang/String;)Z
+   854:	ifeq	1018
+   857:	aload_2
+   858:	aload_2
+   859:	ldc	#2; //String  
+   861:	invokevirtual	#269; //Method java/lang/String.indexOf:(Ljava/lang/String;)I
+   864:	invokevirtual	#273; //Method java/lang/String.substring:(I)Ljava/lang/String;
+   867:	invokevirtual	#275; //Method java/lang/String.trim:()Ljava/lang/String;
+   870:	astore	5
+   872:	aconst_null
+   873:	astore	6
+   875:	iconst_0
+   876:	istore	7
+   878:	iload	7
+   880:	aload_0
+   881:	getfield	#201; //Field f:Lgl;
+   884:	getfield	#192; //Field gl.b:Ljava/util/List;
+   887:	invokeinterface	#320,  1; //InterfaceMethod java/util/List.size:()I
+   892:	if_icmpge	937
+   895:	aload_0
+   896:	getfield	#201; //Field f:Lgl;
+   899:	getfield	#192; //Field gl.b:Ljava/util/List;
+   902:	iload	7
+   904:	invokeinterface	#318,  2; //InterfaceMethod java/util/List.get:(I)Ljava/lang/Object;
+   909:	checkcast	#128; //class eo
+   912:	astore	8
+   914:	aload	8
+   916:	getfield	#179; //Field eo.ar:Ljava/lang/String;
+   919:	aload	5
+   921:	invokevirtual	#268; //Method java/lang/String.equalsIgnoreCase:(Ljava/lang/String;)Z
+   924:	ifeq	931
+   927:	aload	8
+   929:	astore	6
+   931:	iinc	7, 1
+   934:	goto	878
+   937:	aload	6
+   939:	ifnull	984
+   942:	aload	6
+   944:	getfield	#178; //Field eo.a:Ljc;
+   947:	ldc	#53; //String Kicked by admin
+   949:	invokevirtual	#299; //Method jc.c:(Ljava/lang/String;)V
+   952:	aload_0
+   953:	aload	4
+   955:	new	#151; //class java/lang/StringBuilder
+   958:	dup
+   959:	invokespecial	#276; //Method java/lang/StringBuilder."<init>":()V
+   962:	ldc	#54; //String Kicking 
+   964:	invokevirtual	#278; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   967:	aload	6
+   969:	getfield	#179; //Field eo.ar:Ljava/lang/String;
+   972:	invokevirtual	#278; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   975:	invokevirtual	#279; //Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+   978:	invokespecial	#303; //Method a:(Ljava/lang/String;Ljava/lang/String;)V
+   981:	goto	1015
+   984:	aload_3
+   985:	new	#151; //class java/lang/StringBuilder
+   988:	dup
+   989:	invokespecial	#276; //Method java/lang/StringBuilder."<init>":()V
+   992:	ldc	#42; //String Can't find user 
+   994:	invokevirtual	#278; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   997:	aload	5
+   999:	invokevirtual	#278; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   1002:	ldc	#33; //String . No kick.
+   1004:	invokevirtual	#278; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   1007:	invokevirtual	#279; //Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+   1010:	invokeinterface	#313,  2; //InterfaceMethod et.b:(Ljava/lang/String;)V
+   1015:	goto	1793
+   1018:	aload_2
+   1019:	invokevirtual	#274; //Method java/lang/String.toLowerCase:()Ljava/lang/String;
+   1022:	ldc	#111; //String tp 
+   1024:	invokevirtual	#272; //Method java/lang/String.startsWith:(Ljava/lang/String;)Z
+   1027:	ifeq	1245
+   1030:	aload_2
+   1031:	ldc	#2; //String  
+   1033:	invokevirtual	#271; //Method java/lang/String.split:(Ljava/lang/String;)[Ljava/lang/String;
+   1036:	astore	5
+   1038:	aload	5
+   1040:	arraylength
+   1041:	iconst_3
+   1042:	if_icmpne	1234
+   1045:	aload_0
+   1046:	getfield	#201; //Field f:Lgl;
+   1049:	aload	5
+   1051:	iconst_1
+   1052:	aaload
+   1053:	invokevirtual	#250; //Method gl.h:(Ljava/lang/String;)Leo;
+   1056:	astore	6
+   1058:	aload_0
+   1059:	getfield	#201; //Field f:Lgl;
+   1062:	aload	5
+   1064:	iconst_2
+   1065:	aaload
+   1066:	invokevirtual	#250; //Method gl.h:(Ljava/lang/String;)Leo;
+   1069:	astore	7
+   1071:	aload	6
+   1073:	ifnonnull	1112
+   1076:	aload_3
+   1077:	new	#151; //class java/lang/StringBuilder
+   1080:	dup
+   1081:	invokespecial	#276; //Method java/lang/StringBuilder."<init>":()V
+   1084:	ldc	#42; //String Can't find user 
+   1086:	invokevirtual	#278; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   1089:	aload	5
+   1091:	iconst_1
+   1092:	aaload
+   1093:	invokevirtual	#278; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   1096:	ldc	#34; //String . No tp.
+   1098:	invokevirtual	#278; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   1101:	invokevirtual	#279; //Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+   1104:	invokeinterface	#313,  2; //InterfaceMethod et.b:(Ljava/lang/String;)V
+   1109:	goto	1231
+   1112:	aload	7
+   1114:	ifnonnull	1153
+   1117:	aload_3
+   1118:	new	#151; //class java/lang/StringBuilder
+   1121:	dup
+   1122:	invokespecial	#276; //Method java/lang/StringBuilder."<init>":()V
+   1125:	ldc	#42; //String Can't find user 
+   1127:	invokevirtual	#278; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   1130:	aload	5
+   1132:	iconst_2
+   1133:	aaload
+   1134:	invokevirtual	#278; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   1137:	ldc	#34; //String . No tp.
+   1139:	invokevirtual	#278; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   1142:	invokevirtual	#279; //Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+   1145:	invokeinterface	#313,  2; //InterfaceMethod et.b:(Ljava/lang/String;)V
+   1150:	goto	1231
+   1153:	aload	6
+   1155:	getfield	#178; //Field eo.a:Ljc;
+   1158:	aload	7
+   1160:	getfield	#180; //Field eo.p:D
+   1163:	aload	7
+   1165:	getfield	#181; //Field eo.q:D
+   1168:	aload	7
+   1170:	getfield	#182; //Field eo.r:D
+   1173:	aload	7
+   1175:	getfield	#183; //Field eo.v:F
+   1178:	aload	7
+   1180:	getfield	#184; //Field eo.w:F
+   1183:	invokevirtual	#298; //Method jc.a:(DDDFF)V
+   1186:	aload_0
+   1187:	aload	4
+   1189:	new	#151; //class java/lang/StringBuilder
+   1192:	dup
+   1193:	invokespecial	#276; //Method java/lang/StringBuilder."<init>":()V
+   1196:	ldc	#72; //String Teleporting 
+   1198:	invokevirtual	#278; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   1201:	aload	5
+   1203:	iconst_1
+   1204:	aaload
+   1205:	invokevirtual	#278; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   1208:	ldc	#22; //String  to 
+   1210:	invokevirtual	#278; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   1213:	aload	5
+   1215:	iconst_2
+   1216:	aaload
+   1217:	invokevirtual	#278; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   1220:	ldc	#32; //String .
+   1222:	invokevirtual	#278; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   1225:	invokevirtual	#279; //Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+   1228:	invokespecial	#303; //Method a:(Ljava/lang/String;Ljava/lang/String;)V
+   1231:	goto	1242
+   1234:	aload_3
+   1235:	ldc	#71; //String Syntax error, please provice a source and a target.
+   1237:	invokeinterface	#313,  2; //InterfaceMethod et.b:(Ljava/lang/String;)V
+   1242:	goto	1793
+   1245:	aload_2
+   1246:	invokevirtual	#274; //Method java/lang/String.toLowerCase:()Ljava/lang/String;
+   1249:	ldc	#90; //String give 
+   1251:	invokevirtual	#272; //Method java/lang/String.startsWith:(Ljava/lang/String;)Z
+   1254:	ifeq	1510
+   1257:	aload_2
+   1258:	ldc	#2; //String  
+   1260:	invokevirtual	#271; //Method java/lang/String.split:(Ljava/lang/String;)[Ljava/lang/String;
+   1263:	astore	5
+   1265:	aload	5
+   1267:	arraylength
+   1268:	iconst_3
+   1269:	if_icmpeq	1280
+   1272:	aload	5
+   1274:	arraylength
+   1275:	iconst_4
+   1276:	if_icmpeq	1280
+   1279:	return
+   1280:	aload	5
+   1282:	iconst_1
+   1283:	aaload
+   1284:	astore	6
+   1286:	aload_0
+   1287:	getfield	#201; //Field f:Lgl;
+   1290:	aload	6
+   1292:	invokevirtual	#250; //Method gl.h:(Ljava/lang/String;)Leo;
+   1295:	astore	7
+   1297:	aload	7
+   1299:	ifnull	1481
+   1302:	aload	5
+   1304:	iconst_2
+   1305:	aaload
+   1306:	invokestatic	#261; //Method java/lang/Integer.parseInt:(Ljava/lang/String;)I
+   1309:	istore	8
+   1311:	getstatic	#191; //Field fq.c:[Lfq;
+   1314:	iload	8
+   1316:	aaload
+   1317:	ifnull	1419
+   1320:	aload_0
+   1321:	aload	4
+   1323:	new	#151; //class java/lang/StringBuilder
+   1326:	dup
+   1327:	invokespecial	#276; //Method java/lang/StringBuilder."<init>":()V
+   1330:	ldc	#52; //String Giving 
+   1332:	invokevirtual	#278; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   1335:	aload	7
+   1337:	getfield	#179; //Field eo.ar:Ljava/lang/String;
+   1340:	invokevirtual	#278; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   1343:	ldc	#21; //String  some 
+   1345:	invokevirtual	#278; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   1348:	iload	8
+   1350:	invokevirtual	#277; //Method java/lang/StringBuilder.append:(I)Ljava/lang/StringBuilder;
+   1353:	invokevirtual	#279; //Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+   1356:	invokespecial	#303; //Method a:(Ljava/lang/String;Ljava/lang/String;)V
+   1359:	iconst_1
+   1360:	istore	9
+   1362:	aload	5
+   1364:	arraylength
+   1365:	iconst_3
+   1366:	if_icmple	1380
+   1369:	aload_0
+   1370:	aload	5
+   1372:	iconst_3
+   1373:	aaload
+   1374:	iconst_1
+   1375:	invokespecial	#305; //Method b:(Ljava/lang/String;I)I
+   1378:	istore	9
+   1380:	iload	9
+   1382:	iconst_1
+   1383:	if_icmpge	1389
+   1386:	iconst_1
+   1387:	istore	9
+   1389:	iload	9
+   1391:	bipush	64
+   1393:	if_icmple	1400
+   1396:	bipush	64
+   1398:	istore	9
+   1400:	aload	7
+   1402:	new	#138; //class hh
+   1405:	dup
+   1406:	iload	8
+   1408:	iload	9
+   1410:	invokespecial	#254; //Method hh."<init>":(II)V
+   1413:	invokevirtual	#225; //Method eo.a:(Lhh;)V
+   1416:	goto	1445
+   1419:	aload_3
+   1420:	new	#151; //class java/lang/StringBuilder
+   1423:	dup
+   1424:	invokespecial	#276; //Method java/lang/StringBuilder."<init>":()V
+   1427:	ldc	#75; //String There's no item with id 
+   1429:	invokevirtual	#278; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   1432:	iload	8
+   1434:	invokevirtual	#277; //Method java/lang/StringBuilder.append:(I)Ljava/lang/StringBuilder;
+   1437:	invokevirtual	#279; //Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+   1440:	invokeinterface	#313,  2; //InterfaceMethod et.b:(Ljava/lang/String;)V
+   1445:	goto	1507
+   1448:	astore	8
+   1450:	aload_3
+   1451:	new	#151; //class java/lang/StringBuilder
+   1454:	dup
+   1455:	invokespecial	#276; //Method java/lang/StringBuilder."<init>":()V
+   1458:	ldc	#75; //String There's no item with id 
+   1460:	invokevirtual	#278; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   1463:	aload	5
+   1465:	iconst_2
+   1466:	aaload
+   1467:	invokevirtual	#278; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   1470:	invokevirtual	#279; //Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+   1473:	invokeinterface	#313,  2; //InterfaceMethod et.b:(Ljava/lang/String;)V
+   1478:	goto	1507
+   1481:	aload_3
+   1482:	new	#151; //class java/lang/StringBuilder
+   1485:	dup
+   1486:	invokespecial	#276; //Method java/lang/StringBuilder."<init>":()V
+   1489:	ldc	#42; //String Can't find user 
+   1491:	invokevirtual	#278; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   1494:	aload	6
+   1496:	invokevirtual	#278; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   1499:	invokevirtual	#279; //Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+   1502:	invokeinterface	#313,  2; //InterfaceMethod et.b:(Ljava/lang/String;)V
+   1507:	goto	1793
+   1510:	aload_2
+   1511:	invokevirtual	#274; //Method java/lang/String.toLowerCase:()Ljava/lang/String;
+   1514:	ldc	#105; //String say 
+   1516:	invokevirtual	#272; //Method java/lang/String.startsWith:(Ljava/lang/String;)Z
+   1519:	ifeq	1607
+   1522:	aload_2
+   1523:	aload_2
+   1524:	ldc	#2; //String  
+   1526:	invokevirtual	#269; //Method java/lang/String.indexOf:(Ljava/lang/String;)I
+   1529:	invokevirtual	#273; //Method java/lang/String.substring:(I)Ljava/lang/String;
+   1532:	invokevirtual	#275; //Method java/lang/String.trim:()Ljava/lang/String;
+   1535:	astore_2
+   1536:	getstatic	#196; //Field a:Ljava/util/logging/Logger;
+   1539:	new	#151; //class java/lang/StringBuilder
+   1542:	dup
+   1543:	invokespecial	#276; //Method java/lang/StringBuilder."<init>":()V
+   1546:	ldc	#85; //String [
+   1548:	invokevirtual	#278; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   1551:	aload	4
+   1553:	invokevirtual	#278; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   1556:	ldc	#86; //String ] 
+   1558:	invokevirtual	#278; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   1561:	aload_2
+   1562:	invokevirtual	#278; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   1565:	invokevirtual	#279; //Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+   1568:	invokevirtual	#294; //Method java/util/logging/Logger.info:(Ljava/lang/String;)V
+   1571:	aload_0
+   1572:	getfield	#201; //Field f:Lgl;
+   1575:	new	#120; //class be
+   1578:	dup
+   1579:	new	#151; //class java/lang/StringBuilder
+   1582:	dup
+   1583:	invokespecial	#276; //Method java/lang/StringBuilder."<init>":()V
+   1586:	ldc	#115; //String §d[Server] 
+   1588:	invokevirtual	#278; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   1591:	aload_2
+   1592:	invokevirtual	#278; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   1595:	invokevirtual	#279; //Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+   1598:	invokespecial	#213; //Method be."<init>":(Ljava/lang/String;)V
+   1601:	invokevirtual	#238; //Method gl.a:(Lim;)V
+   1604:	goto	1793
+   1607:	aload_2
+   1608:	invokevirtual	#274; //Method java/lang/String.toLowerCase:()Ljava/lang/String;
+   1611:	ldc	#110; //String tell 
+   1613:	invokevirtual	#272; //Method java/lang/String.startsWith:(Ljava/lang/String;)Z
+   1616:	ifeq	1785
+   1619:	aload_2
+   1620:	ldc	#2; //String  
+   1622:	invokevirtual	#271; //Method java/lang/String.split:(Ljava/lang/String;)[Ljava/lang/String;
+   1625:	astore	5
+   1627:	aload	5
+   1629:	arraylength
+   1630:	iconst_3
+   1631:	if_icmpge	1637
+   1634:	goto	1782
+   1637:	aload_2
+   1638:	aload_2
+   1639:	ldc	#2; //String  
+   1641:	invokevirtual	#269; //Method java/lang/String.indexOf:(Ljava/lang/String;)I
+   1644:	invokevirtual	#273; //Method java/lang/String.substring:(I)Ljava/lang/String;
+   1647:	invokevirtual	#275; //Method java/lang/String.trim:()Ljava/lang/String;
+   1650:	astore_2
+   1651:	aload_2
+   1652:	aload_2
+   1653:	ldc	#2; //String  
+   1655:	invokevirtual	#269; //Method java/lang/String.indexOf:(Ljava/lang/String;)I
+   1658:	invokevirtual	#273; //Method java/lang/String.substring:(I)Ljava/lang/String;
+   1661:	invokevirtual	#275; //Method java/lang/String.trim:()Ljava/lang/String;
+   1664:	astore_2
+   1665:	getstatic	#196; //Field a:Ljava/util/logging/Logger;
+   1668:	new	#151; //class java/lang/StringBuilder
+   1671:	dup
+   1672:	invokespecial	#276; //Method java/lang/StringBuilder."<init>":()V
+   1675:	ldc	#85; //String [
+   1677:	invokevirtual	#278; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   1680:	aload	4
+   1682:	invokevirtual	#278; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   1685:	ldc	#31; //String ->
+   1687:	invokevirtual	#278; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   1690:	aload	5
+   1692:	iconst_1
+   1693:	aaload
+   1694:	invokevirtual	#278; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   1697:	ldc	#86; //String ] 
+   1699:	invokevirtual	#278; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   1702:	aload_2
+   1703:	invokevirtual	#278; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   1706:	invokevirtual	#279; //Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+   1709:	invokevirtual	#294; //Method java/util/logging/Logger.info:(Ljava/lang/String;)V
+   1712:	new	#151; //class java/lang/StringBuilder
+   1715:	dup
+   1716:	invokespecial	#276; //Method java/lang/StringBuilder."<init>":()V
+   1719:	ldc	#113; //String §7
+   1721:	invokevirtual	#278; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   1724:	aload	4
+   1726:	invokevirtual	#278; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   1729:	ldc	#23; //String  whispers 
+   1731:	invokevirtual	#278; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   1734:	aload_2
+   1735:	invokevirtual	#278; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   1738:	invokevirtual	#279; //Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+   1741:	astore_2
+   1742:	getstatic	#196; //Field a:Ljava/util/logging/Logger;
+   1745:	aload_2
+   1746:	invokevirtual	#294; //Method java/util/logging/Logger.info:(Ljava/lang/String;)V
+   1749:	aload_0
+   1750:	getfield	#201; //Field f:Lgl;
+   1753:	aload	5
+   1755:	iconst_1
+   1756:	aaload
+   1757:	new	#120; //class be
+   1760:	dup
+   1761:	aload_2
+   1762:	invokespecial	#213; //Method be."<init>":(Ljava/lang/String;)V
+   1765:	invokevirtual	#240; //Method gl.a:(Ljava/lang/String;Lim;)Z
+   1768:	ifeq	1774
+   1771:	goto	1782
+   1774:	aload_3
+   1775:	ldc	#76; //String There's no player by that name online.
+   1777:	invokeinterface	#313,  2; //InterfaceMethod et.b:(Ljava/lang/String;)V
+   1782:	goto	1793
+   1785:	getstatic	#196; //Field a:Ljava/util/logging/Logger;
+   1788:	ldc	#83; //String Unknown console command. Type \"help\" for help.
+   1790:	invokevirtual	#294; //Method java/util/logging/Logger.info:(Ljava/lang/String;)V
+   1793:	goto	0
+   1796:	return
+  Exception table:
+   from   to  target type
+  1302  1445  1448   Class java/lang/NumberFormatException
+
+
+public void a(ei);
+  Code:
+   0:	aload_0
+   1:	getfield	#209; //Field n:Ljava/util/List;
+   4:	aload_1
+   5:	invokeinterface	#317,  2; //InterfaceMethod java/util/List.add:(Ljava/lang/Object;)Z
+   10:	pop
+   11:	return
+
+public static void main(java.lang.String[]);
+  Code:
+   0:	new	#165; //class net/minecraft/server/MinecraftServer
+   3:	dup
+   4:	invokespecial	#301; //Method "<init>":()V
+   7:	astore_1
+   8:	invokestatic	#255; //Method java/awt/GraphicsEnvironment.isHeadless:()Z
+   11:	ifne	37
+   14:	aload_0
+   15:	arraylength
+   16:	ifle	33
+   19:	aload_0
+   20:	iconst_0
+   21:	aaload
+   22:	ldc	#97; //String nogui
+   24:	invokevirtual	#267; //Method java/lang/String.equals:(Ljava/lang/Object;)Z
+   27:	ifeq	33
+   30:	goto	37
+   33:	aload_1
+   34:	invokestatic	#235; //Method gg.a:(Lnet/minecraft/server/MinecraftServer;)V
+   37:	new	#121; //class bv
+   40:	dup
+   41:	ldc	#66; //String Server thread
+   43:	aload_1
+   44:	invokespecial	#214; //Method bv."<init>":(Ljava/lang/String;Lnet/minecraft/server/MinecraftServer;)V
+   47:	invokevirtual	#215; //Method bv.start:()V
+   50:	goto	66
+   53:	astore_1
+   54:	getstatic	#196; //Field a:Ljava/util/logging/Logger;
+   57:	getstatic	#194; //Field java/util/logging/Level.SEVERE:Ljava/util/logging/Level;
+   60:	ldc	#50; //String Failed to start the minecraft server
+   62:	aload_1
+   63:	invokevirtual	#296; //Method java/util/logging/Logger.log:(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/Throwable;)V
+   66:	return
+  Exception table:
+   from   to  target type
+     0    50    53   Class java/lang/Exception
+
+
+public java.io.File a(java.lang.String);
+  Code:
+   0:	new	#140; //class java/io/File
+   3:	dup
+   4:	aload_1
+   5:	invokespecial	#256; //Method java/io/File."<init>":(Ljava/lang/String;)V
+   8:	areturn
+
+public void b(java.lang.String);
+  Code:
+   0:	getstatic	#196; //Field a:Ljava/util/logging/Logger;
+   3:	aload_1
+   4:	invokevirtual	#294; //Method java/util/logging/Logger.info:(Ljava/lang/String;)V
+   7:	return
+
+public java.lang.String c();
+  Code:
+   0:	ldc	#41; //String CONSOLE
+   2:	areturn
+
+public static boolean a(net.minecraft.server.MinecraftServer);
+  Code:
+   0:	aload_0
+   1:	getfield	#208; //Field m:Z
+   4:	ireturn
+
+static {};
+  Code:
+   0:	ldc	#56; //String Minecraft
+   2:	invokestatic	#293; //Method java/util/logging/Logger.getLogger:(Ljava/lang/String;)Ljava/util/logging/Logger;
+   5:	putstatic	#196; //Field a:Ljava/util/logging/Logger;
+   8:	new	#157; //class java/util/HashMap
+   11:	dup
+   12:	invokespecial	#288; //Method java/util/HashMap."<init>":()V
+   15:	putstatic	#197; //Field b:Ljava/util/HashMap;
+   18:	return
+
+}
+

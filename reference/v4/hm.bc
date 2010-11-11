@@ -1,0 +1,135 @@
+Compiled from SourceFile
+public class hm extends ig{
+public hm();
+  Code:
+   0:	aload_0
+   1:	invokespecial	#31; //Method ig."<init>":()V
+   4:	return
+
+public void a();
+  Code:
+   0:	aload_0
+   1:	new	#10; //class gc
+   4:	dup
+   5:	getstatic	#26; //Field ij.l:Lij;
+   8:	dconst_1
+   9:	dconst_0
+   10:	invokespecial	#30; //Method gc."<init>":(Lij;DD)V
+   13:	putfield	#20; //Field b:Liu;
+   16:	aload_0
+   17:	iconst_1
+   18:	putfield	#21; //Field c:Z
+   21:	aload_0
+   22:	iconst_1
+   23:	putfield	#22; //Field d:Z
+   26:	aload_0
+   27:	iconst_1
+   28:	putfield	#23; //Field e:Z
+   31:	aload_0
+   32:	iconst_m1
+   33:	putfield	#25; //Field g:I
+   36:	return
+
+protected void b();
+  Code:
+   0:	ldc	#1; //float 0.1f
+   2:	fstore_1
+   3:	iconst_0
+   4:	istore_2
+   5:	iload_2
+   6:	bipush	15
+   8:	if_icmpgt	47
+   11:	fconst_1
+   12:	iload_2
+   13:	i2f
+   14:	ldc	#4; //float 15.0f
+   16:	fdiv
+   17:	fsub
+   18:	fstore_3
+   19:	aload_0
+   20:	getfield	#24; //Field f:[F
+   23:	iload_2
+   24:	fconst_1
+   25:	fload_3
+   26:	fsub
+   27:	fload_3
+   28:	ldc	#3; //float 3.0f
+   30:	fmul
+   31:	fconst_1
+   32:	fadd
+   33:	fdiv
+   34:	fconst_1
+   35:	fload_1
+   36:	fsub
+   37:	fmul
+   38:	fload_1
+   39:	fadd
+   40:	fastore
+   41:	iinc	2, 1
+   44:	goto	5
+   47:	return
+
+public bt c();
+  Code:
+   0:	new	#6; //class bx
+   3:	dup
+   4:	aload_0
+   5:	getfield	#19; //Field a:Lem;
+   8:	aload_0
+   9:	getfield	#19; //Field a:Lem;
+   12:	getfield	#15; //Field em.u:J
+   15:	invokespecial	#27; //Method bx."<init>":(Lem;J)V
+   18:	areturn
+
+public av a(java.io.File);
+  Code:
+   0:	new	#14; //class java/io/File
+   3:	dup
+   4:	aload_1
+   5:	ldc	#5; //String DIM-1
+   7:	invokespecial	#32; //Method java/io/File."<init>":(Ljava/io/File;Ljava/lang/String;)V
+   10:	astore_2
+   11:	aload_2
+   12:	invokevirtual	#33; //Method java/io/File.mkdirs:()Z
+   15:	pop
+   16:	new	#8; //class ff
+   19:	dup
+   20:	aload_2
+   21:	iconst_1
+   22:	invokespecial	#29; //Method ff."<init>":(Ljava/io/File;Z)V
+   25:	areturn
+
+public boolean a(int, int);
+  Code:
+   0:	aload_0
+   1:	getfield	#19; //Field a:Lem;
+   4:	iload_1
+   5:	iload_2
+   6:	invokevirtual	#28; //Method em.a:(II)I
+   9:	istore_3
+   10:	iload_3
+   11:	getstatic	#18; //Field fy.z:Lfy;
+   14:	getfield	#16; //Field fy.bh:I
+   17:	if_icmpne	22
+   20:	iconst_0
+   21:	ireturn
+   22:	iload_3
+   23:	ifne	28
+   26:	iconst_0
+   27:	ireturn
+   28:	getstatic	#17; //Field fy.o:[Z
+   31:	iload_3
+   32:	baload
+   33:	ifne	38
+   36:	iconst_0
+   37:	ireturn
+   38:	iconst_1
+   39:	ireturn
+
+public float a(long, float);
+  Code:
+   0:	ldc	#2; //float 0.5f
+   2:	freturn
+
+}
+

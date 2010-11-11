@@ -1,0 +1,62 @@
+Compiled from SourceFile
+public class ge extends java.lang.Object{
+public static java.util.logging.Logger a;
+
+public ge();
+  Code:
+   0:	aload_0
+   1:	invokespecial	#18; //Method java/lang/Object."<init>":()V
+   4:	return
+
+public static void a();
+  Code:
+   0:	new	#5; //class hs
+   3:	dup
+   4:	invokespecial	#17; //Method hs."<init>":()V
+   7:	astore_0
+   8:	getstatic	#15; //Field a:Ljava/util/logging/Logger;
+   11:	iconst_0
+   12:	invokevirtual	#25; //Method java/util/logging/Logger.setUseParentHandlers:(Z)V
+   15:	new	#10; //class java/util/logging/ConsoleHandler
+   18:	dup
+   19:	invokespecial	#19; //Method java/util/logging/ConsoleHandler."<init>":()V
+   22:	astore_1
+   23:	aload_1
+   24:	aload_0
+   25:	invokevirtual	#21; //Method java/util/logging/Handler.setFormatter:(Ljava/util/logging/Formatter;)V
+   28:	getstatic	#15; //Field a:Ljava/util/logging/Logger;
+   31:	aload_1
+   32:	invokevirtual	#22; //Method java/util/logging/Logger.addHandler:(Ljava/util/logging/Handler;)V
+   35:	new	#11; //class java/util/logging/FileHandler
+   38:	dup
+   39:	ldc	#3; //String server.log
+   41:	invokespecial	#20; //Method java/util/logging/FileHandler."<init>":(Ljava/lang/String;)V
+   44:	astore_2
+   45:	aload_2
+   46:	aload_0
+   47:	invokevirtual	#21; //Method java/util/logging/Handler.setFormatter:(Ljava/util/logging/Formatter;)V
+   50:	getstatic	#15; //Field a:Ljava/util/logging/Logger;
+   53:	aload_2
+   54:	invokevirtual	#22; //Method java/util/logging/Logger.addHandler:(Ljava/util/logging/Handler;)V
+   57:	goto	73
+   60:	astore_2
+   61:	getstatic	#15; //Field a:Ljava/util/logging/Logger;
+   64:	getstatic	#16; //Field java/util/logging/Level.WARNING:Ljava/util/logging/Level;
+   67:	ldc	#1; //String Failed to log to server.log
+   69:	aload_2
+   70:	invokevirtual	#24; //Method java/util/logging/Logger.log:(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/Throwable;)V
+   73:	return
+  Exception table:
+   from   to  target type
+    35    57    60   Class java/lang/Exception
+
+
+static {};
+  Code:
+   0:	ldc	#2; //String Minecraft
+   2:	invokestatic	#23; //Method java/util/logging/Logger.getLogger:(Ljava/lang/String;)Ljava/util/logging/Logger;
+   5:	putstatic	#15; //Field a:Ljava/util/logging/Logger;
+   8:	return
+
+}
+

@@ -1,0 +1,66 @@
+Compiled from SourceFile
+public class cv extends fq{
+public int a;
+
+public cv(int, int);
+  Code:
+   0:	aload_0
+   1:	iload_1
+   2:	invokespecial	#15; //Method fq."<init>":(I)V
+   5:	aload_0
+   6:	iconst_1
+   7:	putfield	#9; //Field aX:I
+   10:	aload_0
+   11:	iload_2
+   12:	putfield	#8; //Field a:I
+   15:	return
+
+public boolean a(hh, ft, el, int, int, int, int);
+  Code:
+   0:	aload_3
+   1:	iload	4
+   3:	iload	5
+   5:	iload	6
+   7:	invokevirtual	#13; //Method el.a:(III)I
+   10:	istore	8
+   12:	iload	8
+   14:	getstatic	#10; //Field fw.aH:Lfw;
+   17:	getfield	#11; //Field fw.bi:I
+   20:	if_icmpne	73
+   23:	aload_3
+   24:	new	#7; //class jh
+   27:	dup
+   28:	aload_3
+   29:	iload	4
+   31:	i2f
+   32:	ldc	#1; //float 0.5f
+   34:	fadd
+   35:	f2d
+   36:	iload	5
+   38:	i2f
+   39:	ldc	#1; //float 0.5f
+   41:	fadd
+   42:	f2d
+   43:	iload	6
+   45:	i2f
+   46:	ldc	#1; //float 0.5f
+   48:	fadd
+   49:	f2d
+   50:	aload_0
+   51:	getfield	#8; //Field a:I
+   54:	invokespecial	#16; //Method jh."<init>":(Lel;DDDI)V
+   57:	invokevirtual	#14; //Method el.a:(Ldv;)Z
+   60:	pop
+   61:	aload_1
+   62:	dup
+   63:	getfield	#12; //Field hh.a:I
+   66:	iconst_1
+   67:	isub
+   68:	putfield	#12; //Field hh.a:I
+   71:	iconst_1
+   72:	ireturn
+   73:	iconst_0
+   74:	ireturn
+
+}
+

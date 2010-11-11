@@ -1,0 +1,68 @@
+Compiled from SourceFile
+public class gy extends fs{
+public gy(int);
+  Code:
+   0:	aload_0
+   1:	iload_1
+   2:	invokespecial	#11; //Method fs."<init>":(I)V
+   5:	return
+
+public boolean a(hj, fv, em, int, int, int, int);
+  Code:
+   0:	iload	7
+   2:	ifne	8
+   5:	iinc	5, -1
+   8:	iload	7
+   10:	iconst_1
+   11:	if_icmpne	17
+   14:	iinc	5, 1
+   17:	iload	7
+   19:	iconst_2
+   20:	if_icmpne	26
+   23:	iinc	6, -1
+   26:	iload	7
+   28:	iconst_3
+   29:	if_icmpne	35
+   32:	iinc	6, 1
+   35:	iload	7
+   37:	iconst_4
+   38:	if_icmpne	44
+   41:	iinc	4, -1
+   44:	iload	7
+   46:	iconst_5
+   47:	if_icmpne	53
+   50:	iinc	4, 1
+   53:	aload_3
+   54:	iload	4
+   56:	iload	5
+   58:	iload	6
+   60:	invokevirtual	#9; //Method em.a:(III)I
+   63:	ifeq	68
+   66:	iconst_0
+   67:	ireturn
+   68:	getstatic	#6; //Field fy.av:Lfy;
+   71:	aload_3
+   72:	iload	4
+   74:	iload	5
+   76:	iload	6
+   78:	invokevirtual	#12; //Method fy.a:(Lem;III)Z
+   81:	ifeq	111
+   84:	aload_1
+   85:	dup
+   86:	getfield	#8; //Field hj.a:I
+   89:	iconst_1
+   90:	isub
+   91:	putfield	#8; //Field hj.a:I
+   94:	aload_3
+   95:	iload	4
+   97:	iload	5
+   99:	iload	6
+   101:	getstatic	#6; //Field fy.av:Lfy;
+   104:	getfield	#7; //Field fy.bh:I
+   107:	invokevirtual	#10; //Method em.d:(IIII)Z
+   110:	pop
+   111:	iconst_1
+   112:	ireturn
+
+}
+

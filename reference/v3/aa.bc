@@ -1,0 +1,57 @@
+Compiled from SourceFile
+public class aa extends fw{
+public aa(int, int);
+  Code:
+   0:	aload_0
+   1:	iload_1
+   2:	iload_2
+   3:	getstatic	#11; //Field jr.m:Ljr;
+   6:	invokespecial	#13; //Method fw."<init>":(IILjr;)V
+   9:	return
+
+public ds d(el, int, int, int);
+  Code:
+   0:	ldc	#1; //float 0.125f
+   2:	fstore	5
+   4:	iload_2
+   5:	i2d
+   6:	iload_3
+   7:	i2d
+   8:	iload	4
+   10:	i2d
+   11:	iload_2
+   12:	iconst_1
+   13:	iadd
+   14:	i2d
+   15:	iload_3
+   16:	iconst_1
+   17:	iadd
+   18:	i2f
+   19:	fload	5
+   21:	fsub
+   22:	f2d
+   23:	iload	4
+   25:	iconst_1
+   26:	iadd
+   27:	i2d
+   28:	invokestatic	#12; //Method ds.b:(DDDDDD)Lds;
+   31:	areturn
+
+public void a(el, int, int, int, dv);
+  Code:
+   0:	aload	5
+   2:	dup
+   3:	getfield	#9; //Field dv.s:D
+   6:	ldc2_w	#7; //double 0.4d
+   9:	dmul
+   10:	putfield	#9; //Field dv.s:D
+   13:	aload	5
+   15:	dup
+   16:	getfield	#10; //Field dv.u:D
+   19:	ldc2_w	#7; //double 0.4d
+   22:	dmul
+   23:	putfield	#10; //Field dv.u:D
+   26:	return
+
+}
+
