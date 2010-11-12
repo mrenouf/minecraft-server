@@ -61,15 +61,16 @@ public class PendingConnection extends Connection {
    public void a(ClientHello var1) {
       this.clientId = var1.b;
       if(var1.a != 3) {
-         this.b("Outdated client!");
-      } else {
-         if(!this.e.l) {
-            this.checkLogin(var1);
-         } else {
-            (new dp(this, var1)).start();
-         }
-
+         Log.warning("Client version is {0}", var1.a);
+    	 //this.b("Outdated client!");
       }
+      
+      if(!this.e.l) {
+         this.checkLogin(var1);
+      } else {
+         (new dp(this, var1)).start();
+      }
+
    }
 
    public void checkLogin(ClientHello var1) {
