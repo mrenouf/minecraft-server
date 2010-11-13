@@ -41,7 +41,7 @@ for cls in $classes; do
   mkdir -p $orig/$(dirname $base)
   echo "Disassembling: ${cls}"
   javap -c ${base} > $orig/${base}.bc
-  echo "<a href=\"${base#./}\" target=\"source\">${base#./}</a>" >> $orig/index.html
+  echo "<a href=\"${base#./}.bc\" target=\"source\">${base#./}</a>" >> $orig/index.html
 done; 
 popd
 rm -rf $tmpdir
