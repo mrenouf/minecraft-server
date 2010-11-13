@@ -1,0 +1,5 @@
+#!/bin/bash
+kill -STOP $(jps | grep MinecraftServer | cut -d' ' -f -1)
+tar -cjvf world-$(date -u +%Y%m%d.%H%M).tar.bz2 world/
+kill -CONT $(jps | grep MinecraftServer | cut -d' ' -f -1)
+
