@@ -1,0 +1,31 @@
+#!/bin/bash
+shingle_size=4
+feature_count=4096
+if [[ ! -d $1 || ! -d $2 ]]; then
+  echo "Usage: <dir1> <dir2>"
+  exit 1
+fi;
+
+rm $1/*.sim
+rm $2/*.sim
+
+simhash -f $feature_count -s $shingle_size -w $1/*
+simhash -f $feature_count -s $shingle_size -w $2/*
+
+for A in $(ls $1/*.sim); do
+  match=""
+  maxresult=0
+  for B in $(ls $2/*.sim); do
+    if [[ "$A" != "$B" ]]; then
+      result=$(simhash -c $A $B)
+      if [[ $result > $maxresult ]]; then
+        maxresult=$result
+        match=$B
+      fi
+    fi
+  done;
+  echo "$maxresult ${A#.sim} --> ${match#.sim}"
+done;
+
+rm $1/*.sim
+rm $2/*.sim
