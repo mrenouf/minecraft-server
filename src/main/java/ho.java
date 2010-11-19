@@ -1,60 +1,42 @@
 // Decompiled by:       Fernflower v0.6
-// Date:                09.11.2010 14:07:07
+// Date:                15.11.2010 02:39:51
 // Copyright:           2008-2009, Stiver
 // Home page:           http://www.reversed-java.com
 
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
 
-public class ho extends im {
+public class ho {
 
-   public int a;
-   public byte b;
-   public int c;
-   public int d;
-   public int e;
-   public byte f;
-   public byte g;
+   public final byte[] a;
 
 
-   public ho() {
+   public ho(int var1) {
+      this.a = new byte[var1 >> 1];
    }
 
-   public ho(jt var1) {
-      this.a = var1.g;
-      this.b = (byte)hj.a(var1);
-      this.c = hb.b(var1.p * 32.0D);
-      this.d = hb.b(var1.q * 32.0D);
-      this.e = hb.b(var1.r * 32.0D);
-      this.f = (byte)((int)(var1.v * 256.0F / 360.0F));
-      this.g = (byte)((int)(var1.w * 256.0F / 360.0F));
+   public ho(byte[] var1) {
+      this.a = var1;
    }
 
-   public void a(DataInputStream var1) {
-      this.a = var1.readInt();
-      this.b = var1.readByte();
-      this.c = var1.readInt();
-      this.d = var1.readInt();
-      this.e = var1.readInt();
-      this.f = var1.readByte();
-      this.g = var1.readByte();
+   public int a(int var1, int var2, int var3) {
+      int var4 = var1 << 11 | var3 << 7 | var2;
+      int var5 = var4 >> 1;
+      int var6 = var4 & 1;
+      return var6 == 0?this.a[var5] & 15:this.a[var5] >> 4 & 15;
    }
 
-   public void a(DataOutputStream var1) {
-      var1.writeInt(this.a);
-      var1.writeByte(this.b);
-      var1.writeInt(this.c);
-      var1.writeInt(this.d);
-      var1.writeInt(this.e);
-      var1.writeByte(this.f);
-      var1.writeByte(this.g);
+   public void a(int var1, int var2, int var3, int var4) {
+      int var5 = var1 << 11 | var3 << 7 | var2;
+      int var6 = var5 >> 1;
+      int var7 = var5 & 1;
+      if(var7 == 0) {
+         this.a[var6] = (byte)(this.a[var6] & 240 | var4 & 15);
+      } else {
+         this.a[var6] = (byte)(this.a[var6] & 15 | (var4 & 15) << 4);
+      }
+
    }
 
-   public void a(ex var1) {
-      var1.a(this);
-   }
-
-   public int a() {
-      return 19;
+   public boolean a() {
+      return this.a != null;
    }
 }

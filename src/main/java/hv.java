@@ -1,63 +1,71 @@
 // Decompiled by:       Fernflower v0.6
-// Date:                09.11.2010 14:07:08
+// Date:                15.11.2010 02:39:52
 // Copyright:           2008-2009, Stiver
 // Home page:           http://www.reversed-java.com
 
 
-public class hv extends av implements jx {
+public class hv extends jv {
 
-   private hh[] e = new hh[36];
-
-
-   public int a() {
-      return 27;
+   public hv(em var1) {
+      super(var1);
    }
 
-   public hh a(int var1) {
-      return this.e[var1];
+   protected void a(float var1) {
    }
 
-   public void a(int var1, hh var2) {
-      this.e[var1] = var2;
-      if(var2 != null && var2.a > this.d()) {
-         var2.a = this.d();
-      }
-
-      this.c();
-   }
-
-   public void a(t var1) {
-      super.a(var1);
-      dy var2 = var1.k("Items");
-      this.e = new hh[this.a()];
-
-      for(int var3 = 0; var3 < var2.b(); ++var3) {
-         t var4 = (t)var2.a(var3);
-         int var5 = var4.b("Slot") & 255;
-         if(var5 >= 0 && var5 < this.e.length) {
-            this.e[var5] = new hh(var4);
+   public void c(float var1, float var2) {
+      if(this.r()) {
+         this.a(var1, var2, 0.02F);
+         this.c(this.s, this.t, this.u);
+         this.s *= 0.800000011920929D;
+         this.t *= 0.800000011920929D;
+         this.u *= 0.800000011920929D;
+      } else if(this.t()) {
+         this.a(var1, var2, 0.02F);
+         this.c(this.s, this.t, this.u);
+         this.s *= 0.5D;
+         this.t *= 0.5D;
+         this.u *= 0.5D;
+      } else {
+         float var3 = 0.91F;
+         if(this.A) {
+            var3 = 0.54600006F;
+            int var4 = this.l.a(hd.b(this.p), hd.b(this.z.b) - 1, hd.b(this.r));
+            if(var4 > 0) {
+               var3 = fy.m[var4].bt * 0.91F;
+            }
          }
-      }
 
-   }
-
-   public void b(t var1) {
-      super.b(var1);
-      dy var2 = new dy();
-
-      for(int var3 = 0; var3 < this.e.length; ++var3) {
-         if(this.e[var3] != null) {
-            t var4 = new t();
-            var4.a("Slot", (byte)var3);
-            this.e[var3].a(var4);
-            var2.a(var4);
+         float var8 = 0.16277136F / (var3 * var3 * var3);
+         this.a(var1, var2, this.A?0.1F * var8:0.02F);
+         var3 = 0.91F;
+         if(this.A) {
+            var3 = 0.54600006F;
+            int var5 = this.l.a(hd.b(this.p), hd.b(this.z.b) - 1, hd.b(this.r));
+            if(var5 > 0) {
+               var3 = fy.m[var5].bt * 0.91F;
+            }
          }
+
+         this.c(this.s, this.t, this.u);
+         this.s *= (double)var3;
+         this.t *= (double)var3;
+         this.u *= (double)var3;
       }
 
-      var1.a("Items", var2);
+      this.bb = this.bc;
+      double var9 = this.p - this.m;
+      double var10 = this.r - this.o;
+      float var7 = hd.a(var9 * var9 + var10 * var10) * 4.0F;
+      if(var7 > 1.0F) {
+         var7 = 1.0F;
+      }
+
+      this.bc += (var7 - this.bc) * 0.4F;
+      this.bd += this.bc;
    }
 
-   public int d() {
-      return 64;
+   public boolean d_() {
+      return false;
    }
 }

@@ -1,39 +1,33 @@
 // Decompiled by:       Fernflower v0.6
-// Date:                09.11.2010 14:06:50
+// Date:                15.11.2010 02:39:43
 // Copyright:           2008-2009, Stiver
 // Home page:           http://www.reversed-java.com
 
+import java.util.logging.ConsoleHandler;
+import java.util.logging.FileHandler;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
-public class ge extends fx {
+public class ge {
 
-   public ge(el var1) {
-      super(var1);
-   }
+   public static Logger a = Logger.getLogger("Minecraft");
 
-   public void D() {
-      if(this.l.b()) {
-         float var1 = this.b(1.0F);
-         if(var1 > 0.5F && this.l.g(hb.b(this.p), hb.b(this.q), hb.b(this.r)) && this.V.nextFloat() * 30.0F < (var1 - 0.4F) * 2.0F) {
-            this.Y = 300;
-         }
+
+   public static void a() {
+      hs var0 = new hs();
+      a.setUseParentHandlers(false);
+      ConsoleHandler var1 = new ConsoleHandler();
+      var1.setFormatter(var0);
+      a.addHandler(var1);
+
+      try {
+         FileHandler var2 = new FileHandler("server.log");
+         var2.setFormatter(var0);
+         a.addHandler(var2);
+      } catch (Exception var3) {
+         a.log(Level.WARNING, "Failed to log to server.log", var3);
       }
 
-      super.D();
    }
 
-   protected String d() {
-      return "mob.zombie";
-   }
-
-   protected String e() {
-      return "mob.zombiehurt";
-   }
-
-   protected String f() {
-      return "mob.zombiedeath";
-   }
-
-   protected int g() {
-      return fq.J.aW;
-   }
 }

@@ -1,60 +1,72 @@
 // Decompiled by:       Fernflower v0.6
-// Date:                09.11.2010 14:04:59
+// Date:                15.11.2010 02:38:51
 // Copyright:           2008-2009, Stiver
 // Home page:           http://www.reversed-java.com
 
+import java.util.Random;
 
-public class bq extends fq {
+public class bq extends bi {
 
    private int a;
 
 
    public bq(int var1) {
-      super(var1);
-      this.a = var1 + 256;
-      this.a(fw.n[var1 + 256].a(2));
+      this.a = var1;
    }
 
-   public boolean a(hh var1, ft var2, el var3, int var4, int var5, int var6, int var7) {
-      if(var3.a(var4, var5, var6) == fw.aT.bi) {
-         var7 = 0;
+   public boolean a(em var1, Random var2, int var3, int var4, int var5) {
+      if(var1.a(var3, var4 + 1, var5) != fy.bb.bh) {
+         return false;
+      } else if(var1.a(var3, var4, var5) != 0 && var1.a(var3, var4, var5) != fy.bb.bh) {
+         return false;
       } else {
-         if(var7 == 0) {
-            --var5;
-         }
-
-         if(var7 == 1) {
-            ++var5;
-         }
-
-         if(var7 == 2) {
-            --var6;
-         }
-
-         if(var7 == 3) {
+         int var6 = 0;
+         if(var1.a(var3 - 1, var4, var5) == fy.bb.bh) {
             ++var6;
          }
 
-         if(var7 == 4) {
-            --var4;
+         if(var1.a(var3 + 1, var4, var5) == fy.bb.bh) {
+            ++var6;
          }
 
-         if(var7 == 5) {
-            ++var4;
+         if(var1.a(var3, var4, var5 - 1) == fy.bb.bh) {
+            ++var6;
          }
-      }
 
-      if(var1.a == 0) {
-         return false;
-      } else {
-         if(var3.a(this.a, var4, var5, var6, false)) {
-            fw var8 = fw.n[this.a];
-            if(var3.d(var4, var5, var6, this.a)) {
-               fw.n[this.a].c(var3, var4, var5, var6, var7);
-               fw.n[this.a].a(var3, var4, var5, var6, var2);
-               var3.a((double)((float)var4 + 0.5F), (double)((float)var5 + 0.5F), (double)((float)var6 + 0.5F), var8.br.c(), (var8.br.a() + 1.0F) / 2.0F, var8.br.b() * 0.8F);
-               --var1.a;
-            }
+         if(var1.a(var3, var4, var5 + 1) == fy.bb.bh) {
+            ++var6;
+         }
+
+         if(var1.a(var3, var4 - 1, var5) == fy.bb.bh) {
+            ++var6;
+         }
+
+         int var7 = 0;
+         if(var1.a(var3 - 1, var4, var5) == 0) {
+            ++var7;
+         }
+
+         if(var1.a(var3 + 1, var4, var5) == 0) {
+            ++var7;
+         }
+
+         if(var1.a(var3, var4, var5 - 1) == 0) {
+            ++var7;
+         }
+
+         if(var1.a(var3, var4, var5 + 1) == 0) {
+            ++var7;
+         }
+
+         if(var1.a(var3, var4 - 1, var5) == 0) {
+            ++var7;
+         }
+
+         if(var6 == 4 && var7 == 1) {
+            var1.d(var3, var4, var5, this.a);
+            var1.a = true;
+            fy.m[this.a].a(var1, var3, var4, var5, var2);
+            var1.a = false;
          }
 
          return true;

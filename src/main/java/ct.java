@@ -1,31 +1,54 @@
 // Decompiled by:       Fernflower v0.6
-// Date:                09.11.2010 14:05:30
+// Date:                15.11.2010 02:39:08
 // Copyright:           2008-2009, Stiver
 // Home page:           http://www.reversed-java.com
 
 
-public class ct extends fq {
+public class ct extends ax {
 
-   private int a;
+   public boolean a = false;
 
 
-   public ct(int var1, int var2) {
+   public ct(em var1) {
       super(var1);
-      this.a = var2;
+      this.a(0.9F, 1.3F);
    }
 
-   public boolean a(hh var1, ft var2, el var3, int var4, int var5, int var6, int var7) {
-      if(var7 != 1) {
-         return false;
-      } else {
-         int var8 = var3.a(var4, var5, var6);
-         if(var8 == fw.aB.bi) {
-            var3.d(var4, var5 + 1, var6, this.a);
-            --var1.a;
-            return true;
-         } else {
-            return false;
+   public boolean a(dw var1, int var2) {
+      if(!this.a && var1 instanceof jv) {
+         this.a = true;
+         int var3 = 1 + this.V.nextInt(3);
+
+         for(int var4 = 0; var4 < var3; ++var4) {
+            gh var5 = this.a(fy.ab.bh, 1, 1.0F);
+            var5.t += (double)(this.V.nextFloat() * 0.05F);
+            var5.s += (double)((this.V.nextFloat() - this.V.nextFloat()) * 0.1F);
+            var5.u += (double)((this.V.nextFloat() - this.V.nextFloat()) * 0.1F);
          }
       }
+
+      return super.a(var1, var2);
+   }
+
+   public void a(v var1) {
+      super.a(var1);
+      var1.a("Sheared", this.a);
+   }
+
+   public void b(v var1) {
+      super.b(var1);
+      this.a = var1.l("Sheared");
+   }
+
+   protected String d() {
+      return "mob.sheep";
+   }
+
+   protected String e() {
+      return "mob.sheep";
+   }
+
+   protected String f() {
+      return "mob.sheep";
    }
 }

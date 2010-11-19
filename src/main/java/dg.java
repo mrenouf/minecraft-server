@@ -1,21 +1,32 @@
 // Decompiled by:       Fernflower v0.6
-// Date:                09.11.2010 14:05:32
+// Date:                15.11.2010 02:39:10
 // Copyright:           2008-2009, Stiver
 // Home page:           http://www.reversed-java.com
 
-import java.util.Random;
+import java.io.IOException;
+import java.net.Socket;
+import net.minecraft.server.MinecraftServer;
 
-public class dg extends fw {
+class dg extends Thread {
 
-   public dg(int var1, int var2) {
-      super(var1, var2, jr.v);
+   dg(dp var1, String var2, MinecraftServer var3) {
+      this.b = var1;
+      this.a = var3;
+      super(var2);
    }
 
-   public int a(int var1, Random var2) {
-      return fq.aG.aW;
-   }
+   public void run() {
+      while(this.b.b) {
+         try {
+            Socket var1 = dp.a(this.b).accept();
+            if(var1 != null) {
+               fo var2 = new fo(this.a, var1, "Connection #" + dp.b(this.b));
+               dp.a(this.b, var2);
+            }
+         } catch (IOException var3) {
+            var3.printStackTrace();
+         }
+      }
 
-   public int a(Random var1) {
-      return 4;
    }
 }

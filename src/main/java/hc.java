@@ -1,48 +1,106 @@
 // Decompiled by:       Fernflower v0.6
-// Date:                09.11.2010 14:07:04
+// Date:                15.11.2010 02:39:50
 // Copyright:           2008-2009, Stiver
 // Home page:           http://www.reversed-java.com
 
+import java.io.DataInput;
+import java.io.DataOutput;
 
-public enum hc {
+public abstract class hc {
 
-   a("Kebab", 0, "Kebab", 16, 16, 0, 0),
-   b("Aztec", 1, "Aztec", 16, 16, 16, 0),
-   c("Alban", 2, "Alban", 16, 16, 32, 0),
-   d("Aztec2", 3, "Aztec2", 16, 16, 48, 0),
-   e("Bomb", 4, "Bomb", 16, 16, 64, 0),
-   f("Plant", 5, "Plant", 16, 16, 80, 0),
-   g("Wasteland", 6, "Wasteland", 16, 16, 96, 0),
-   h("Pool", 7, "Pool", 32, 16, 0, 32),
-   i("Courbet", 8, "Courbet", 32, 16, 32, 32),
-   j("Sea", 9, "Sea", 32, 16, 64, 32),
-   k("Sunset", 10, "Sunset", 32, 16, 96, 32),
-   l("Creebet", 11, "Creebet", 32, 16, 128, 32),
-   m("Wanderer", 12, "Wanderer", 16, 32, 0, 64),
-   n("Graham", 13, "Graham", 16, 32, 16, 64),
-   o("Match", 14, "Match", 32, 32, 0, 128),
-   p("Bust", 15, "Bust", 32, 32, 32, 128),
-   q("Stage", 16, "Stage", 32, 32, 64, 128),
-   r("Void", 17, "Void", 32, 32, 96, 128),
-   s("SkullAndRoses", 18, "SkullAndRoses", 32, 32, 128, 128),
-   t("Fighters", 19, "Fighters", 64, 32, 0, 96),
-   u("Pointer", 20, "Pointer", 64, 64, 0, 192),
-   v("Pigscene", 21, "Pigscene", 64, 64, 64, 192),
-   w("Skeleton", 22, "Skeleton", 64, 48, 192, 64),
-   x("DonkeyKong", 23, "DonkeyKong", 64, 48, 192, 112);
-   public final String y;
-   public final int z;
-   public final int A;
-   public final int B;
-   public final int C;
+   private String a = null;
 
 
-   private hc(String var1, int var2, String var3, int var4, int var5, int var6, int var7) {
-      this.y = var3;
-      this.z = var4;
-      this.A = var5;
-      this.B = var6;
-      this.C = var7;
+   abstract void a(DataOutput var1);
+
+   abstract void a(DataInput var1);
+
+   public abstract byte a();
+
+   public String c() {
+      return this.a == null?"":this.a;
    }
 
+   public hc m(String var1) {
+      this.a = var1;
+      return this;
+   }
+
+   public static hc b(DataInput var0) {
+      byte var1 = var0.readByte();
+      if(var1 == 0) {
+         return new jk();
+      } else {
+         hc var2 = a(var1);
+         var2.a = var0.readUTF();
+         var2.a(var0);
+         return var2;
+      }
+   }
+
+   public static void a(hc var0, DataOutput var1) {
+      var1.writeByte(var0.a());
+      if(var0.a() != 0) {
+         var1.writeUTF(var0.c());
+         var0.a(var1);
+      }
+   }
+
+   public static hc a(byte var0) {
+      switch(var0) {
+      case 0:
+         return new jk();
+      case 1:
+         return new bz();
+      case 2:
+         return new fu();
+      case 3:
+         return new bn();
+      case 4:
+         return new e();
+      case 5:
+         return new m();
+      case 6:
+         return new eg();
+      case 7:
+         return new gk();
+      case 8:
+         return new ih();
+      case 9:
+         return new ea();
+      case 10:
+         return new v();
+      default:
+         return null;
+      }
+   }
+
+   public static String b(byte var0) {
+      switch(var0) {
+      case 0:
+         return "TAG_End";
+      case 1:
+         return "TAG_Byte";
+      case 2:
+         return "TAG_Short";
+      case 3:
+         return "TAG_Int";
+      case 4:
+         return "TAG_Long";
+      case 5:
+         return "TAG_Float";
+      case 6:
+         return "TAG_Double";
+      case 7:
+         return "TAG_Byte_Array";
+      case 8:
+         return "TAG_String";
+      case 9:
+         return "TAG_List";
+      case 10:
+         return "TAG_Compound";
+      default:
+         return "UNKNOWN";
+      }
+   }
 }

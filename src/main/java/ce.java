@@ -1,56 +1,99 @@
 // Decompiled by:       Fernflower v0.6
-// Date:                09.11.2010 14:05:19
+// Date:                15.11.2010 02:38:59
 // Copyright:           2008-2009, Stiver
 // Home page:           http://www.reversed-java.com
 
 
-class ce {
+public class ce extends ay {
 
-   final long a;
-   Object b;
-   ce c;
-   final int d;
+   public int e = -1;
+   public String f = "Pig";
+   public double g;
+   public double h = 0.0D;
 
 
-   ce(int var1, long var2, Object var4, ce var5) {
-      this.b = var4;
-      this.c = var5;
-      this.a = var2;
-      this.d = var1;
+   public ce() {
+      this.e = 20;
    }
 
-   public final long a() {
-      return this.a;
+   public boolean a() {
+      return this.a.a((double)this.b + 0.5D, (double)this.c + 0.5D, (double)this.d + 0.5D, 16.0D) != null;
    }
 
-   public final Object b() {
-      return this.b;
-   }
+   public void b() {
+      this.h = this.g;
+      if(this.a()) {
+         double var1 = (double)((float)this.b + this.a.l.nextFloat());
+         double var3 = (double)((float)this.c + this.a.l.nextFloat());
+         double var5 = (double)((float)this.d + this.a.l.nextFloat());
+         this.a.a("smoke", var1, var3, var5, 0.0D, 0.0D, 0.0D);
+         this.a.a("flame", var1, var3, var5, 0.0D, 0.0D, 0.0D);
 
-   public final boolean equals(Object var1) {
-      if(!(var1 instanceof ce)) {
-         return false;
-      } else {
-         ce var2 = (ce)var1;
-         Long var3 = Long.valueOf(this.a());
-         Long var4 = Long.valueOf(var2.a());
-         if(var3 == var4 || var3 != null && var3.equals(var4)) {
-            Object var5 = this.b();
-            Object var6 = var2.b();
-            if(var5 == var6 || var5 != null && var5.equals(var6)) {
-               return true;
-            }
+         for(this.g += (double)(1000.0F / ((float)this.e + 200.0F)); this.g > 360.0D; this.h -= 360.0D) {
+            this.g -= 360.0D;
          }
 
-         return false;
+         if(this.e == -1) {
+            this.d();
+         }
+
+         if(this.e > 0) {
+            --this.e;
+         } else {
+            byte var7 = 4;
+
+            for(int var8 = 0; var8 < var7; ++var8) {
+               jv var9 = (jv)((jv)hl.a(this.f, this.a));
+               if(var9 == null) {
+                  return;
+               }
+
+               int var10 = this.a.a(var9.getClass(), dt.b((double)this.b, (double)this.c, (double)this.d, (double)(this.b + 1), (double)(this.c + 1), (double)(this.d + 1)).b(8.0D, 4.0D, 8.0D)).size();
+               if(var10 >= 6) {
+                  this.d();
+                  return;
+               }
+
+               if(var9 != null) {
+                  double var11 = (double)this.b + (this.a.l.nextDouble() - this.a.l.nextDouble()) * 4.0D;
+                  double var13 = (double)(this.c + this.a.l.nextInt(3) - 1);
+                  double var15 = (double)this.d + (this.a.l.nextDouble() - this.a.l.nextDouble()) * 4.0D;
+                  var9.c(var11, var13, var15, this.a.l.nextFloat() * 360.0F, 0.0F);
+                  if(var9.a()) {
+                     this.a.a(var9);
+
+                     for(int var17 = 0; var17 < 20; ++var17) {
+                        var1 = (double)this.b + 0.5D + ((double)this.a.l.nextFloat() - 0.5D) * 2.0D;
+                        var3 = (double)this.c + 0.5D + ((double)this.a.l.nextFloat() - 0.5D) * 2.0D;
+                        var5 = (double)this.d + 0.5D + ((double)this.a.l.nextFloat() - 0.5D) * 2.0D;
+                        this.a.a("smoke", var1, var3, var5, 0.0D, 0.0D, 0.0D);
+                        this.a.a("flame", var1, var3, var5, 0.0D, 0.0D, 0.0D);
+                     }
+
+                     var9.I();
+                     this.d();
+                  }
+               }
+            }
+
+            super.b();
+         }
       }
    }
 
-   public final int hashCode() {
-      return fa.d(this.a);
+   private void d() {
+      this.e = 200 + this.a.l.nextInt(600);
    }
 
-   public final String toString() {
-      return this.a() + "=" + this.b();
+   public void a(v var1) {
+      super.a(var1);
+      this.f = var1.h("EntityId");
+      this.e = var1.c("Delay");
+   }
+
+   public void b(v var1) {
+      super.b(var1);
+      var1.a("EntityId", this.f);
+      var1.a("Delay", (short)this.e);
    }
 }

@@ -1,25 +1,40 @@
 // Decompiled by:       Fernflower v0.6
-// Date:                09.11.2010 14:08:06
+// Date:                15.11.2010 02:40:29
 // Copyright:           2008-2009, Stiver
 // Home page:           http://www.reversed-java.com
 
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
 
-public class q extends fw {
+public class q extends io {
 
-   protected boolean a;
+   public int a;
+   public int b;
 
 
-   protected q(int var1, int var2, jr var3, boolean var4) {
-      super(var1, var2, var3);
-      this.a = var4;
+   public q() {
    }
 
-   public boolean a() {
-      return false;
+   public q(dw var1, int var2) {
+      this.a = var1.g;
+      this.b = var2;
    }
 
-   public boolean a(io var1, int var2, int var3, int var4, int var5) {
-      int var6 = var1.a(var2, var3, var4);
-      return !this.a && var6 == this.bi?false:super.a(var1, var2, var3, var4, var5);
+   public void a(DataInputStream var1) {
+      this.a = var1.readInt();
+      this.b = var1.readByte();
+   }
+
+   public void a(DataOutputStream var1) {
+      var1.writeInt(this.a);
+      var1.writeByte(this.b);
+   }
+
+   public void a(ey var1) {
+      var1.a(this);
+   }
+
+   public int a() {
+      return 5;
    }
 }

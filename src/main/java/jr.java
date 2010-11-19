@@ -1,61 +1,36 @@
 // Decompiled by:       Fernflower v0.6
-// Date:                09.11.2010 14:07:55
+// Date:                15.11.2010 02:40:21
 // Copyright:           2008-2009, Stiver
 // Home page:           http://www.reversed-java.com
 
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
 
-public class jr {
+public class jr extends io {
 
-   public static final jr a = new jw();
-   public static final jr b = new jr();
-   public static final jr c = (new jr()).f();
-   public static final jr d = new jr();
-   public static final jr e = new jr();
-   public static final jr f = new dl();
-   public static final jr g = new dl();
-   public static final jr h = (new jr()).f();
-   public static final jr i = new aj();
-   public static final jr j = new jr();
-   public static final jr k = (new jr()).f();
-   public static final jr l = new jw();
-   public static final jr m = new jr();
-   public static final jr n = new aj();
-   public static final jr o = new jr();
-   public static final jr p = (new jr()).f();
-   public static final jr q = new jr();
-   public static final jr r = new jr();
-   public static final jr s = new aj();
-   public static final jr t = new jr();
-   public static final jr u = new jr();
-   public static final jr v = new jr();
-   public static final jr w = new jr();
-   public static final jr x = new jr();
-   private boolean y;
+   public String a;
 
 
-   public boolean d() {
-      return false;
+   public jr() {
    }
 
-   public boolean a() {
-      return true;
+   public jr(String var1) {
+      this.a = var1;
    }
 
-   public boolean b() {
-      return true;
+   public void a(DataInputStream var1) {
+      this.a = var1.readUTF();
    }
 
-   public boolean c() {
-      return true;
+   public void a(DataOutputStream var1) {
+      var1.writeUTF(this.a);
    }
 
-   private jr f() {
-      this.y = true;
-      return this;
+   public void a(ey var1) {
+      var1.a(this);
    }
 
-   public boolean e() {
-      return this.y;
+   public int a() {
+      return this.a.length();
    }
-
 }

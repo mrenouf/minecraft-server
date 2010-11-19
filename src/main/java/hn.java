@@ -1,43 +1,32 @@
 // Decompiled by:       Fernflower v0.6
-// Date:                09.11.2010 14:07:07
+// Date:                15.11.2010 02:39:51
 // Copyright:           2008-2009, Stiver
 // Home page:           http://www.reversed-java.com
 
 
-public class hn extends aw {
+public class hn {
 
-   public boolean a = false;
+   public final int a;
+   public final int b;
+   public final int c;
 
 
-   public hn(el var1) {
-      super(var1);
-      this.a(0.9F, 0.9F);
-      this.a = false;
+   public hn(int var1, int var2, int var3) {
+      this.a = var1;
+      this.b = var2;
+      this.c = var3;
    }
 
-   public void a(t var1) {
-      super.a(var1);
-      var1.a("Saddle", this.a);
+   public boolean equals(Object var1) {
+      if(!(var1 instanceof hn)) {
+         return false;
+      } else {
+         hn var2 = (hn)var1;
+         return var2.a == this.a && var2.b == this.b && var2.c == this.c;
+      }
    }
 
-   public void b(t var1) {
-      super.b(var1);
-      this.a = var1.l("Saddle");
-   }
-
-   protected String d() {
-      return "mob.pig";
-   }
-
-   protected String e() {
-      return "mob.pig";
-   }
-
-   protected String f() {
-      return "mob.pigdeath";
-   }
-
-   protected int g() {
-      return fq.ao.aW;
+   public int hashCode() {
+      return this.a * 8976890 + this.b * 981131 + this.c;
    }
 }

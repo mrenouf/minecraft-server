@@ -1,17 +1,20 @@
 // Decompiled by:       Fernflower v0.6
-// Date:                09.11.2010 14:04:35
+// Date:                15.11.2010 02:38:39
 // Copyright:           2008-2009, Stiver
 // Home page:           http://www.reversed-java.com
 
 
-public class al {
+public class al extends jt {
 
-   public final String a;
-   public final et b;
+   public boolean a() {
+      return false;
+   }
 
+   public boolean b() {
+      return false;
+   }
 
-   public al(String var1, et var2) {
-      this.a = var1;
-      this.b = var2;
+   public boolean c() {
+      return false;
    }
 }

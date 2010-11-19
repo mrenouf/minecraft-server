@@ -1,102 +1,144 @@
 // Decompiled by:       Fernflower v0.6
-// Date:                09.11.2010 14:04:39
+// Date:                15.11.2010 02:38:41
 // Copyright:           2008-2009, Stiver
 // Home page:           http://www.reversed-java.com
 
-import java.util.Random;
 
-public class az extends fw {
+public class az extends hv implements en {
 
-   private boolean a;
+   public int a = 0;
+   public double b;
+   public double c;
+   public double d;
+   private dw ai = null;
+   private int aj = 0;
+   public int e = 0;
+   public int f = 0;
 
 
-   public az(int var1, int var2, boolean var3) {
-      super(var1, var2, jr.d);
-      if(var3) {
-         this.a(true);
+   public az(em var1) {
+      super(var1);
+      this.a(4.0F, 4.0F);
+      this.ad = true;
+   }
+
+   protected void c() {
+      if(this.l.k == 0) {
+         this.l();
       }
 
-      this.a = var3;
-   }
-
-   public int b() {
-      return 30;
-   }
-
-   public void b(el var1, int var2, int var3, int var4, ft var5) {
-      this.g(var1, var2, var3, var4);
-      super.b(var1, var2, var3, var4, var5);
-   }
-
-   public void b(el var1, int var2, int var3, int var4, dv var5) {
-      this.g(var1, var2, var3, var4);
-      super.b(var1, var2, var3, var4, var5);
-   }
-
-   public boolean a(el var1, int var2, int var3, int var4, ft var5) {
-      this.g(var1, var2, var3, var4);
-      return super.a(var1, var2, var3, var4, var5);
-   }
-
-   private void g(el var1, int var2, int var3, int var4) {
-      this.h(var1, var2, var3, var4);
-      if(this.bi == fw.aO.bi) {
-         var1.d(var2, var3, var4, fw.aP.bi);
+      this.e = this.f;
+      double var1 = this.b - this.p;
+      double var3 = this.c - this.q;
+      double var5 = this.d - this.r;
+      double var7 = (double)hd.a(var1 * var1 + var3 * var3 + var5 * var5);
+      if(var7 < 1.0D || var7 > 60.0D) {
+         this.b = this.p + (double)((this.V.nextFloat() * 2.0F - 1.0F) * 16.0F);
+         this.c = this.q + (double)((this.V.nextFloat() * 2.0F - 1.0F) * 16.0F);
+         this.d = this.r + (double)((this.V.nextFloat() * 2.0F - 1.0F) * 16.0F);
       }
 
-   }
-
-   public void a(el var1, int var2, int var3, int var4, Random var5) {
-      if(this.bi == fw.aP.bi) {
-         var1.d(var2, var3, var4, fw.aO.bi);
-      }
-
-   }
-
-   public int a(int var1, Random var2) {
-      return fq.aA.aW;
-   }
-
-   public int a(Random var1) {
-      return 4 + var1.nextInt(2);
-   }
-
-   private void h(el var1, int var2, int var3, int var4) {
-      Random var5 = var1.l;
-      double var6 = 0.0625D;
-
-      for(int var8 = 0; var8 < 6; ++var8) {
-         double var9 = (double)((float)var2 + var5.nextFloat());
-         double var11 = (double)((float)var3 + var5.nextFloat());
-         double var13 = (double)((float)var4 + var5.nextFloat());
-         if(var8 == 0 && !var1.d(var2, var3 + 1, var4)) {
-            var11 = (double)(var3 + 1) + var6;
-         }
-
-         if(var8 == 1 && !var1.d(var2, var3 - 1, var4)) {
-            var11 = (double)(var3 + 0) - var6;
-         }
-
-         if(var8 == 2 && !var1.d(var2, var3, var4 + 1)) {
-            var13 = (double)(var4 + 1) + var6;
-         }
-
-         if(var8 == 3 && !var1.d(var2, var3, var4 - 1)) {
-            var13 = (double)(var4 + 0) - var6;
-         }
-
-         if(var8 == 4 && !var1.d(var2 + 1, var3, var4)) {
-            var9 = (double)(var2 + 1) + var6;
-         }
-
-         if(var8 == 5 && !var1.d(var2 - 1, var3, var4)) {
-            var9 = (double)(var2 + 0) - var6;
-         }
-
-         if(var9 < (double)var2 || var9 > (double)(var2 + 1) || var11 < 0.0D || var11 > (double)(var3 + 1) || var13 < (double)var4 || var13 > (double)(var4 + 1)) {
-            var1.a("reddust", var9, var11, var13, 0.0D, 0.0D, 0.0D);
+      if(this.a-- <= 0) {
+         this.a += this.V.nextInt(5) + 2;
+         if(this.a(this.b, this.c, this.d, var7)) {
+            this.s += var1 / var7 * 0.1D;
+            this.t += var3 / var7 * 0.1D;
+            this.u += var5 / var7 * 0.1D;
+         } else {
+            this.b = this.p;
+            this.c = this.q;
+            this.d = this.r;
          }
       }
 
+      if(this.ai != null && this.ai.F) {
+         this.ai = null;
+      }
+
+      if(this.ai == null || this.aj-- <= 0) {
+         this.ai = this.l.a(this, 100.0D);
+         if(this.ai != null) {
+            this.aj = 20;
+         }
+      }
+
+      double var9 = 64.0D;
+      if(this.ai != null && this.ai.b(this) < var9 * var9) {
+         double var11 = this.ai.p - this.p;
+         double var13 = this.ai.z.b + (double)(this.ai.I / 2.0F) - (this.q + (double)(this.I / 2.0F));
+         double var15 = this.ai.r - this.r;
+         this.ay = this.v = -((float)Math.atan2(var11, var15)) * 180.0F / 3.1415927F;
+         if(this.g(this.ai)) {
+            if(this.f == 10) {
+               this.l.a(this, "mob.ghast.charge", this.h(), (this.V.nextFloat() - this.V.nextFloat()) * 0.2F + 1.0F);
+            }
+
+            ++this.f;
+            if(this.f == 20) {
+               this.l.a(this, "mob.ghast.fireball", this.h(), (this.V.nextFloat() - this.V.nextFloat()) * 0.2F + 1.0F);
+               bo var17 = new bo(this.l, this, var11, var13, var15);
+               double var18 = 4.0D;
+               bc var20 = this.d(1.0F);
+               var17.p = this.p + var20.a * var18;
+               var17.q = this.q + (double)(this.I / 2.0F) + 0.5D;
+               var17.r = this.r + var20.c * var18;
+               this.l.a(var17);
+               this.f = -40;
+            }
+         } else if(this.f > 0) {
+            --this.f;
+         }
+      } else {
+         this.ay = this.v = -((float)Math.atan2(this.s, this.u)) * 180.0F / 3.1415927F;
+         if(this.f > 0) {
+            --this.f;
+         }
+      }
+
+      this.aF = this.f > 10?"/mob/ghast_fire.png":"/mob/ghast.png";
+   }
+
+   private boolean a(double var1, double var3, double var5, double var7) {
+      double var9 = (this.b - this.p) / var7;
+      double var11 = (this.c - this.q) / var7;
+      double var13 = (this.d - this.r) / var7;
+      dt var15 = this.z.b();
+
+      for(int var16 = 1; (double)var16 < var7; ++var16) {
+         var15.d(var9, var11, var13);
+         if(this.l.a(this, var15).size() > 0) {
+            return false;
+         }
+      }
+
+      return true;
+   }
+
+   protected String d() {
+      return "mob.ghast.moan";
+   }
+
+   protected String e() {
+      return "mob.ghast.scream";
+   }
+
+   protected String f() {
+      return "mob.ghast.death";
+   }
+
+   protected int g() {
+      return fs.K.aW;
+   }
+
+   protected float h() {
+      return 10.0F;
+   }
+
+   public boolean a() {
+      return this.V.nextInt(20) == 0 && super.a() && this.l.k > 0;
+   }
+
+   public int i() {
+      return 1;
    }
 }

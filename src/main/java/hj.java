@@ -1,92 +1,117 @@
 // Decompiled by:       Fernflower v0.6
-// Date:                09.11.2010 14:07:07
+// Date:                15.11.2010 02:39:51
 // Copyright:           2008-2009, Stiver
 // Home page:           http://www.reversed-java.com
 
-import java.util.HashMap;
-import java.util.Map;
 
-public class hj {
+public final class hj {
 
-   private static Map a = new HashMap();
-   private static Map b = new HashMap();
-   private static Map c = new HashMap();
-   private static Map d = new HashMap();
+   public int a;
+   public int b;
+   public int c;
+   public int d;
 
 
-   private static void a(Class var0, String var1, int var2) {
-      a.put(var1, var0);
-      b.put(var0, var1);
-      c.put(Integer.valueOf(var2), var0);
-      d.put(var0, Integer.valueOf(var2));
+   public hj(fy var1) {
+      this(var1, 1);
    }
 
-   public static dv a(String var0, el var1) {
-      dv var2 = null;
+   public hj(fy var1, int var2) {
+      this(var1.bh, var2);
+   }
 
-      try {
-         Class var3 = (Class)a.get(var0);
-         if(var3 != null) {
-            var2 = (dv)var3.getConstructor(new Class[]{el.class}).newInstance(new Object[]{var1});
+   public hj(fs var1) {
+      this(var1, 1);
+   }
+
+   public hj(fs var1, int var2) {
+      this(var1.aW, var2);
+   }
+
+   public hj(int var1) {
+      this(var1, 1);
+   }
+
+   public hj(int var1, int var2) {
+      this.a = 0;
+      this.c = var1;
+      this.a = var2;
+   }
+
+   public hj(int var1, int var2, int var3) {
+      this.a = 0;
+      this.c = var1;
+      this.a = var2;
+      this.d = var3;
+   }
+
+   public hj(v var1) {
+      this.a = 0;
+      this.b(var1);
+   }
+
+   public fs a() {
+      return fs.c[this.c];
+   }
+
+   public boolean a(fv var1, em var2, int var3, int var4, int var5, int var6) {
+      return this.a().a(this, var1, var2, var3, var4, var5, var6);
+   }
+
+   public float a(fy var1) {
+      return this.a().a(this, var1);
+   }
+
+   public hj a(em var1, fv var2) {
+      return this.a().a(this, var1, var2);
+   }
+
+   public v a(v var1) {
+      var1.a("id", (short)this.c);
+      var1.a("Count", (byte)this.a);
+      var1.a("Damage", (short)this.d);
+      return var1;
+   }
+
+   public void b(v var1) {
+      this.c = var1.c("id");
+      this.a = var1.b("Count");
+      this.d = var1.c("Damage");
+   }
+
+   public int b() {
+      return this.a().a();
+   }
+
+   public int c() {
+      return fs.c[this.c].b();
+   }
+
+   public void a(int var1) {
+      this.d += var1;
+      if(this.d > this.c()) {
+         --this.a;
+         if(this.a < 0) {
+            this.a = 0;
          }
-      } catch (Exception var4) {
-         var4.printStackTrace();
+
+         this.d = 0;
       }
 
-      return var2;
    }
 
-   public static dv a(t var0, el var1) {
-      dv var2 = null;
-
-      try {
-         Class var3 = (Class)a.get(var0.h("id"));
-         if(var3 != null) {
-            var2 = (dv)var3.getConstructor(new Class[]{el.class}).newInstance(new Object[]{var1});
-         }
-      } catch (Exception var4) {
-         var4.printStackTrace();
-      }
-
-      if(var2 != null) {
-         var2.e(var0);
-      } else {
-         System.out.println("Skipping Entity with id " + var0.h("id"));
-      }
-
-      return var2;
+   public void a(int var1, int var2, int var3, int var4) {
+      fs.c[this.c].a(this, var1, var2, var3, var4);
    }
 
-   public static int a(dv var0) {
-      return ((Integer)d.get(var0.getClass())).intValue();
+   public boolean b(fy var1) {
+      return fs.c[this.c].a(var1);
    }
 
-   public static String b(dv var0) {
-      return (String)b.get(var0.getClass());
+   public void a(fv var1) {
    }
 
-   static {
-      a(du.class, "Arrow", 10);
-      a(bd.class, "Snowball", 11);
-      a(gf.class, "Item", 1);
-      a(cf.class, "Painting", 9);
-      a(jt.class, "Mob", 48);
-      a(fx.class, "Monster", 49);
-      a(fj.class, "Creeper", 50);
-      a(ey.class, "Skeleton", 51);
-      a(bs.class, "Spider", 52);
-      a(r.class, "Giant", 53);
-      a(ge.class, "Zombie", 54);
-      a(fz.class, "Slime", 55);
-      a(ax.class, "Ghast", 56);
-      a(it.class, "PigZombie", 57);
-      a(hn.class, "Pig", 90);
-      a(cs.class, "Sheep", 91);
-      a(bc.class, "Cow", 91);
-      a(id.class, "Chicken", 91);
-      a(ch.class, "PrimedTnt", 20);
-      a(hw.class, "FallingSand", 21);
-      a(jh.class, "Minecart", 40);
-      a(fh.class, "Boat", 41);
+   public hj d() {
+      return new hj(this.c, this.a, this.d);
    }
 }

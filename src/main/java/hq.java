@@ -1,49 +1,60 @@
 // Decompiled by:       Fernflower v0.6
-// Date:                09.11.2010 14:07:08
+// Date:                15.11.2010 02:39:51
 // Copyright:           2008-2009, Stiver
 // Home page:           http://www.reversed-java.com
 
-import java.io.PrintWriter;
-import java.io.StringWriter;
-import java.text.SimpleDateFormat;
-import java.util.logging.Formatter;
-import java.util.logging.Level;
-import java.util.logging.LogRecord;
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
 
-final class hq extends Formatter {
+public class hq extends io {
 
-   private SimpleDateFormat a = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+   public int a;
+   public byte b;
+   public int c;
+   public int d;
+   public int e;
+   public byte f;
+   public byte g;
 
 
-   public String format(LogRecord var1) {
-      StringBuilder var2 = new StringBuilder();
-      var2.append(this.a.format(Long.valueOf(var1.getMillis())));
-      Level var3 = var1.getLevel();
-      if(var3 == Level.FINEST) {
-         var2.append(" [FINEST] ");
-      } else if(var3 == Level.FINER) {
-         var2.append(" [FINER] ");
-      } else if(var3 == Level.FINE) {
-         var2.append(" [FINE] ");
-      } else if(var3 == Level.INFO) {
-         var2.append(" [INFO] ");
-      } else if(var3 == Level.WARNING) {
-         var2.append(" [WARNING] ");
-      } else if(var3 == Level.SEVERE) {
-         var2.append(" [SEVERE] ");
-      } else if(var3 == Level.SEVERE) {
-         var2.append(" [" + var3.getLocalizedName() + "] ");
-      }
+   public hq() {
+   }
 
-      var2.append(var1.getMessage());
-      var2.append('\n');
-      Throwable var4 = var1.getThrown();
-      if(var4 != null) {
-         StringWriter var5 = new StringWriter();
-         var4.printStackTrace(new PrintWriter(var5));
-         var2.append(var5.toString());
-      }
+   public hq(jv var1) {
+      this.a = var1.g;
+      this.b = (byte)hl.a(var1);
+      this.c = hd.b(var1.p * 32.0D);
+      this.d = hd.b(var1.q * 32.0D);
+      this.e = hd.b(var1.r * 32.0D);
+      this.f = (byte)((int)(var1.v * 256.0F / 360.0F));
+      this.g = (byte)((int)(var1.w * 256.0F / 360.0F));
+   }
 
-      return var2.toString();
+   public void a(DataInputStream var1) {
+      this.a = var1.readInt();
+      this.b = var1.readByte();
+      this.c = var1.readInt();
+      this.d = var1.readInt();
+      this.e = var1.readInt();
+      this.f = var1.readByte();
+      this.g = var1.readByte();
+   }
+
+   public void a(DataOutputStream var1) {
+      var1.writeInt(this.a);
+      var1.writeByte(this.b);
+      var1.writeInt(this.c);
+      var1.writeInt(this.d);
+      var1.writeInt(this.e);
+      var1.writeByte(this.f);
+      var1.writeByte(this.g);
+   }
+
+   public void a(ey var1) {
+      var1.a(this);
+   }
+
+   public int a() {
+      return 19;
    }
 }

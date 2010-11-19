@@ -1,104 +1,58 @@
 // Decompiled by:       Fernflower v0.6
-// Date:                09.11.2010 14:06:43
+// Date:                15.11.2010 02:39:40
 // Copyright:           2008-2009, Stiver
 // Home page:           http://www.reversed-java.com
 
-import java.net.Socket;
 import java.util.Random;
-import java.util.logging.Logger;
-import net.minecraft.server.MinecraftServer;
 
-public class fn extends ex {
+public class fn extends co {
 
-   public static Logger a = Logger.getLogger("Minecraft");
-   private static Random d = new Random();
-   public bf b;
-   public boolean c = false;
-   private MinecraftServer e;
-   private int f = 0;
-   private String g = null;
-   private ab h = null;
-   private String i = "";
+   private ak[] a;
+   private int b;
 
 
-   public fn(MinecraftServer var1, Socket var2, String var3) {
-      this.e = var1;
-      this.b = new bf(var2, var3, this);
-   }
+   public fn(Random var1, int var2) {
+      this.b = var2;
+      this.a = new ak[var2];
 
-   public void a() {
-      if(this.h != null) {
-         this.b(this.h);
-         this.h = null;
-      }
-
-      if(this.f++ == 100) {
-         this.b("Took too long to log in");
-      } else {
-         this.b.a();
+      for(int var3 = 0; var3 < var2; ++var3) {
+         this.a[var3] = new ak(var1);
       }
 
    }
 
-   public void b(String var1) {
-      a.info("Disconnecting " + this.b() + ": " + var1);
-      this.b.a(new jp(var1));
-      this.b.c();
-      this.c = true;
-   }
+   public double a(double var1, double var3) {
+      double var5 = 0.0D;
+      double var7 = 1.0D;
 
-   public void a(e var1) {
-      if(this.e.l) {
-         this.i = Long.toHexString(d.nextLong());
-         this.b.a(new e(this.i));
-      } else {
-         this.b.a(new e("-"));
+      for(int var9 = 0; var9 < this.b; ++var9) {
+         var5 += this.a[var9].a(var1 * var7, var3 * var7) / var7;
+         var7 /= 2.0D;
       }
 
+      return var5;
    }
 
-   public void a(ab var1) {
-      this.g = var1.b;
-      if(var1.a != 3) {
-         this.b("Outdated client!");
+   public double[] a(double[] var1, double var2, double var4, double var6, int var8, int var9, int var10, double var11, double var13, double var15) {
+      if(var1 == null) {
+         var1 = new double[var8 * var9 * var10];
       } else {
-         if(!this.e.l) {
-            this.b(var1);
-         } else {
-            (new dp(this, var1)).start();
+         for(int var17 = 0; var17 < var1.length; ++var17) {
+            var1[var17] = 0.0D;
          }
-
-      }
-   }
-
-   public void b(ab var1) {
-      eo var2 = this.e.f.a(this, var1.b, var1.c);
-      if(var2 != null) {
-         a.info(this.b() + " logged in");
-         jc var3 = new jc(this.e, this.b, var2);
-         var3.b(new ab("", "", 0, this.e.e.u, (byte)this.e.e.q.e));
-         var3.b(new cm(this.e.e.m, this.e.e.n, this.e.e.o));
-         this.e.f.a(var2);
-         var3.a(var2.p, var2.q, var2.r, var2.v, var2.w);
-         var3.d();
-         this.e.c.a(var3);
-         var3.b(new gd(this.e.e.e));
       }
 
-      this.c = true;
+      double var20 = 1.0D;
+
+      for(int var19 = 0; var19 < this.b; ++var19) {
+         this.a[var19].a(var1, var2, var4, var6, var8, var9, var10, var11 * var20, var13 * var20, var15 * var20, var20);
+         var20 /= 2.0D;
+      }
+
+      return var1;
    }
 
-   public void a(String var1) {
-      a.info(this.b() + " lost connection");
-      this.c = true;
+   public double[] a(double[] var1, int var2, int var3, int var4, int var5, double var6, double var8, double var10) {
+      return this.a(var1, (double)var2, 10.0D, (double)var3, var4, 1, var5, var6, 1.0D, var8);
    }
-
-   public void a(im var1) {
-      this.b("Protocol error");
-   }
-
-   public String b() {
-      return this.g != null?this.g + " [" + this.b.b().toString() + "]":this.b.b().toString();
-   }
-
 }

@@ -1,59 +1,42 @@
 // Decompiled by:       Fernflower v0.6
-// Date:                09.11.2010 14:06:43
+// Date:                15.11.2010 02:39:40
 // Copyright:           2008-2009, Stiver
 // Home page:           http://www.reversed-java.com
 
-import java.util.Random;
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
 
-public class fp extends fw {
+public class fp extends io {
 
-   public static boolean a = false;
+   public int a;
+   public byte b;
+   public byte c;
+   public byte d;
+   public byte e;
+   public byte f;
+   public boolean g = false;
 
 
-   public fp(int var1, int var2) {
-      super(var1, var2, jr.m);
+   public fp() {
    }
 
-   public void e(el var1, int var2, int var3, int var4) {
-      var1.h(var2, var3, var4, this.bi);
+   public fp(int var1) {
+      this.a = var1;
    }
 
-   public void b(el var1, int var2, int var3, int var4, int var5) {
-      var1.h(var2, var3, var4, this.bi);
+   public void a(DataInputStream var1) {
+      this.a = var1.readInt();
    }
 
-   public void a(el var1, int var2, int var3, int var4, Random var5) {
-      this.h(var1, var2, var3, var4);
+   public void a(DataOutputStream var1) {
+      var1.writeInt(this.a);
    }
 
-   private void h(el var1, int var2, int var3, int var4) {
-      if(g(var1, var2, var3 - 1, var4) && var3 >= 0) {
-         hw var8 = new hw(var1, (float)var2 + 0.5F, (float)var3 + 0.5F, (float)var4 + 0.5F, this.bi);
-         if(a) {
-            while(!var8.F) {
-               var8.b_();
-            }
-         } else {
-            var1.a(var8);
-         }
-      }
-
+   public void a(ey var1) {
+      var1.a(this);
    }
 
-   public int b() {
-      return 3;
+   public int a() {
+      return 4;
    }
-
-   public static boolean g(el var0, int var1, int var2, int var3) {
-      int var4 = var0.a(var1, var2, var3);
-      if(var4 == 0) {
-         return true;
-      } else if(var4 == fw.as.bi) {
-         return true;
-      } else {
-         jr var5 = fw.n[var4].bt;
-         return var5 == jr.f?true:var5 == jr.g;
-      }
-   }
-
 }

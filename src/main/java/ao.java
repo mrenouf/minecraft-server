@@ -1,22 +1,82 @@
 // Decompiled by:       Fernflower v0.6
-// Date:                09.11.2010 14:04:36
+// Date:                15.11.2010 02:38:39
 // Copyright:           2008-2009, Stiver
 // Home page:           http://www.reversed-java.com
 
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.DataInput;
+import java.io.DataInputStream;
+import java.io.DataOutput;
+import java.io.DataOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.util.zip.GZIPInputStream;
+import java.util.zip.GZIPOutputStream;
 
-public class ao extends da {
+public class ao {
 
-   private static fw[] bb = new fw[]{fw.x, fw.ak, fw.al, fw.u, fw.ap, fw.I, fw.aj, fw.J, fw.ai, fw.H, fw.ax, fw.ay, fw.aU, fw.bc};
-   private int bc;
+   public static v a(InputStream var0) {
+      DataInputStream var1 = new DataInputStream(new GZIPInputStream(var0));
 
+      v var2;
+      try {
+         var2 = a(var1);
+      } finally {
+         var1.close();
+      }
 
-   public ao(int var1, int var2) {
-      super(var1, 2, var2, bb);
-      this.bc = var2;
+      return var2;
    }
 
-   public boolean a(fw var1) {
-      return var1 == fw.aq?this.bc == 3:(var1 != fw.ay && var1 != fw.ax?(var1 != fw.ai && var1 != fw.H?(var1 != fw.aj && var1 != fw.I?(var1 != fw.aO && var1 != fw.aP?(var1.bt == jr.d?true:var1.bt == jr.e):this.bc >= 2):this.bc >= 1):this.bc >= 2):this.bc >= 2);
+   public static void a(v var0, OutputStream var1) {
+      DataOutputStream var2 = new DataOutputStream(new GZIPOutputStream(var1));
+
+      try {
+         a(var0, var2);
+      } finally {
+         var2.close();
+      }
+
    }
 
+   public static v a(byte[] var0) {
+      DataInputStream var1 = new DataInputStream(new GZIPInputStream(new ByteArrayInputStream(var0)));
+
+      v var2;
+      try {
+         var2 = a(var1);
+      } finally {
+         var1.close();
+      }
+
+      return var2;
+   }
+
+   public static byte[] a(v var0) {
+      ByteArrayOutputStream var1 = new ByteArrayOutputStream();
+      DataOutputStream var2 = new DataOutputStream(new GZIPOutputStream(var1));
+
+      try {
+         a(var0, var2);
+      } finally {
+         var2.close();
+      }
+
+      return var1.toByteArray();
+   }
+
+   public static v a(DataInput var0) {
+      hc var1 = hc.b(var0);
+      if(var1 instanceof v) {
+         return (v)var1;
+      } else {
+         throw new IOException("Root tag must be a named compound tag");
+      }
+   }
+
+   public static void a(v var0, DataOutput var1) {
+      hc.a(var0, var1);
+   }
 }

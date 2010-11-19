@@ -1,93 +1,80 @@
 // Decompiled by:       Fernflower v0.6
-// Date:                09.11.2010 14:04:39
+// Date:                15.11.2010 02:38:41
 // Copyright:           2008-2009, Stiver
 // Home page:           http://www.reversed-java.com
 
-import java.util.Random;
+import java.util.HashMap;
+import java.util.Map;
 
-public class ay extends fw {
+public class ay {
 
-   protected ay(int var1, int var2) {
-      super(var1, var2, jr.n);
-      this.a(0.0F, 0.0F, 0.0F, 1.0F, 0.125F, 1.0F);
-   }
+   private static Map e = new HashMap();
+   private static Map f = new HashMap();
+   public em a;
+   public int b;
+   public int c;
+   public int d;
 
-   public ds d(el var1, int var2, int var3, int var4) {
-      return null;
-   }
 
-   public boolean a() {
-      return false;
-   }
-
-   public gk a(el var1, int var2, int var3, int var4, ba var5, ba var6) {
-      this.a(var1, var2, var3, var4);
-      return super.a(var1, var2, var3, var4, var5, var6);
-   }
-
-   public void a(io var1, int var2, int var3, int var4) {
-      int var5 = var1.b(var2, var3, var4);
-      if(var5 >= 2 && var5 <= 5) {
-         this.a(0.0F, 0.0F, 0.0F, 1.0F, 0.625F, 1.0F);
+   private static void a(Class var0, String var1) {
+      if(f.containsKey(var1)) {
+         throw new IllegalArgumentException("Duplicate id: " + var1);
       } else {
-         this.a(0.0F, 0.0F, 0.0F, 1.0F, 0.125F, 1.0F);
-      }
-
-   }
-
-   public int a(Random var1) {
-      return 1;
-   }
-
-   public boolean a(el var1, int var2, int var3, int var4) {
-      return var1.d(var2, var3 - 1, var4);
-   }
-
-   public void e(el var1, int var2, int var3, int var4) {
-      if(!var1.z) {
-         var1.b(var2, var3, var4, 15);
-         this.g(var1, var2, var3, var4);
-      }
-
-   }
-
-   public void b(el var1, int var2, int var3, int var4, int var5) {
-      if(!var1.z) {
-         int var6 = var1.b(var2, var3, var4);
-         boolean var7 = false;
-         if(!var1.d(var2, var3 - 1, var4)) {
-            var7 = true;
-         }
-
-         if(var6 == 2 && !var1.d(var2 + 1, var3, var4)) {
-            var7 = true;
-         }
-
-         if(var6 == 3 && !var1.d(var2 - 1, var3, var4)) {
-            var7 = true;
-         }
-
-         if(var6 == 4 && !var1.d(var2, var3, var4 - 1)) {
-            var7 = true;
-         }
-
-         if(var6 == 5 && !var1.d(var2, var3, var4 + 1)) {
-            var7 = true;
-         }
-
-         if(var7) {
-            this.a_(var1, var2, var3, var4, var1.b(var2, var3, var4));
-            var1.d(var2, var3, var4, 0);
-         } else if(var5 > 0 && fw.n[var5].c() && gv.a(new gv(this, var1, var2, var3, var4)) == 3) {
-            this.g(var1, var2, var3, var4);
-         }
-
+         e.put(var1, var0);
+         f.put(var0, var1);
       }
    }
 
-   private void g(el var1, int var2, int var3, int var4) {
-      if(!var1.z) {
-         (new gv(this, var1, var2, var3, var4)).a(var1.n(var2, var3, var4));
+   public void a(v var1) {
+      this.b = var1.d("x");
+      this.c = var1.d("y");
+      this.d = var1.d("z");
+   }
+
+   public void b(v var1) {
+      String var2 = (String)f.get(this.getClass());
+      if(var2 == null) {
+         throw new RuntimeException(this.getClass() + " is missing a mapping! This is a bug!");
+      } else {
+         var1.a("id", var2);
+         var1.a("x", this.b);
+         var1.a("y", this.c);
+         var1.a("z", this.d);
       }
+   }
+
+   public void b() {
+   }
+
+   public static ay c(v var0) {
+      ay var1 = null;
+
+      try {
+         Class var2 = (Class)e.get(var0.h("id"));
+         if(var2 != null) {
+            var1 = (ay)var2.newInstance();
+         }
+      } catch (Exception var3) {
+         var3.printStackTrace();
+      }
+
+      if(var1 != null) {
+         var1.a(var0);
+      } else {
+         System.out.println("Skipping TileEntity with id " + var0.h("id"));
+      }
+
+      return var1;
+   }
+
+   public void c() {
+      this.a.b(this.b, this.c, this.d, this);
+   }
+
+   static {
+      a(ds.class, "Furnace");
+      a(hx.class, "Chest");
+      a(ji.class, "Sign");
+      a(ce.class, "MobSpawner");
    }
 }

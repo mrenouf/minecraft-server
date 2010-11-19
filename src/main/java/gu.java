@@ -1,136 +1,78 @@
 // Decompiled by:       Fernflower v0.6
-// Date:                09.11.2010 14:06:56
+// Date:                15.11.2010 02:39:46
 // Copyright:           2008-2009, Stiver
 // Home page:           http://www.reversed-java.com
 
-import java.util.Random;
 
-public class gu extends fw {
+public class gu extends fs {
 
-   protected gu(int var1, int var2) {
-      super(var1, var2, jr.n);
-      this.a(true);
+   private jt a;
+
+
+   public gu(int var1, jt var2) {
+      super(var1);
+      this.a = var2;
+      this.aY = 64;
+      this.aX = 1;
    }
 
-   public ds d(el var1, int var2, int var3, int var4) {
-      return null;
-   }
-
-   public boolean a() {
-      return false;
-   }
-
-   public boolean a(el var1, int var2, int var3, int var4) {
-      return var1.d(var2 - 1, var3, var4)?true:(var1.d(var2 + 1, var3, var4)?true:(var1.d(var2, var3, var4 - 1)?true:(var1.d(var2, var3, var4 + 1)?true:var1.d(var2, var3 - 1, var4))));
-   }
-
-   public void c(el var1, int var2, int var3, int var4, int var5) {
-      int var6 = var1.b(var2, var3, var4);
-      if(var5 == 1 && var1.d(var2, var3 - 1, var4)) {
-         var6 = 5;
-      }
-
-      if(var5 == 2 && var1.d(var2, var3, var4 + 1)) {
-         var6 = 4;
-      }
-
-      if(var5 == 3 && var1.d(var2, var3, var4 - 1)) {
-         var6 = 3;
-      }
-
-      if(var5 == 4 && var1.d(var2 + 1, var3, var4)) {
-         var6 = 2;
-      }
-
-      if(var5 == 5 && var1.d(var2 - 1, var3, var4)) {
-         var6 = 1;
-      }
-
-      var1.b(var2, var3, var4, var6);
-   }
-
-   public void a(el var1, int var2, int var3, int var4, Random var5) {
-      super.a(var1, var2, var3, var4, var5);
-      if(var1.b(var2, var3, var4) == 0) {
-         this.e(var1, var2, var3, var4);
-      }
-
-   }
-
-   public void e(el var1, int var2, int var3, int var4) {
-      if(var1.d(var2 - 1, var3, var4)) {
-         var1.b(var2, var3, var4, 1);
-      } else if(var1.d(var2 + 1, var3, var4)) {
-         var1.b(var2, var3, var4, 2);
-      } else if(var1.d(var2, var3, var4 - 1)) {
-         var1.b(var2, var3, var4, 3);
-      } else if(var1.d(var2, var3, var4 + 1)) {
-         var1.b(var2, var3, var4, 4);
-      } else if(var1.d(var2, var3 - 1, var4)) {
-         var1.b(var2, var3, var4, 5);
-      }
-
-      this.g(var1, var2, var3, var4);
-   }
-
-   public void b(el var1, int var2, int var3, int var4, int var5) {
-      if(this.g(var1, var2, var3, var4)) {
-         int var6 = var1.b(var2, var3, var4);
-         boolean var7 = false;
-         if(!var1.d(var2 - 1, var3, var4) && var6 == 1) {
-            var7 = true;
-         }
-
-         if(!var1.d(var2 + 1, var3, var4) && var6 == 2) {
-            var7 = true;
-         }
-
-         if(!var1.d(var2, var3, var4 - 1) && var6 == 3) {
-            var7 = true;
-         }
-
-         if(!var1.d(var2, var3, var4 + 1) && var6 == 4) {
-            var7 = true;
-         }
-
-         if(!var1.d(var2, var3 - 1, var4) && var6 == 5) {
-            var7 = true;
-         }
-
-         if(var7) {
-            this.a_(var1, var2, var3, var4, var1.b(var2, var3, var4));
-            var1.d(var2, var3, var4, 0);
-         }
-      }
-
-   }
-
-   private boolean g(el var1, int var2, int var3, int var4) {
-      if(!this.a(var1, var2, var3, var4)) {
-         this.a_(var1, var2, var3, var4, var1.b(var2, var3, var4));
-         var1.d(var2, var3, var4, 0);
+   public boolean a(hj var1, fv var2, em var3, int var4, int var5, int var6, int var7) {
+      if(var7 != 1) {
          return false;
       } else {
-         return true;
-      }
-   }
+         ++var5;
+         fy var8;
+         if(this.a == jt.c) {
+            var8 = fy.aE;
+         } else {
+            var8 = fy.aL;
+         }
 
-   public gk a(el var1, int var2, int var3, int var4, ba var5, ba var6) {
-      int var7 = var1.b(var2, var3, var4) & 7;
-      float var8 = 0.15F;
-      if(var7 == 1) {
-         this.a(0.0F, 0.2F, 0.5F - var8, var8 * 2.0F, 0.8F, 0.5F + var8);
-      } else if(var7 == 2) {
-         this.a(1.0F - var8 * 2.0F, 0.2F, 0.5F - var8, 1.0F, 0.8F, 0.5F + var8);
-      } else if(var7 == 3) {
-         this.a(0.5F - var8, 0.2F, 0.0F, 0.5F + var8, 0.8F, var8 * 2.0F);
-      } else if(var7 == 4) {
-         this.a(0.5F - var8, 0.2F, 1.0F - var8 * 2.0F, 0.5F + var8, 0.8F, 1.0F);
-      } else {
-         var8 = 0.1F;
-         this.a(0.5F - var8, 0.0F, 0.5F - var8, 0.5F + var8, 0.6F, 0.5F + var8);
-      }
+         if(!var8.a(var3, var4, var5, var6)) {
+            return false;
+         } else {
+            int var9 = hd.b((double)((var2.v + 180.0F) * 4.0F / 360.0F) - 0.5D) & 3;
+            byte var10 = 0;
+            byte var11 = 0;
+            if(var9 == 0) {
+               var11 = 1;
+            }
 
-      return super.a(var1, var2, var3, var4, var5, var6);
+            if(var9 == 1) {
+               var10 = -1;
+            }
+
+            if(var9 == 2) {
+               var11 = -1;
+            }
+
+            if(var9 == 3) {
+               var10 = 1;
+            }
+
+            int var12 = (var3.d(var4 - var10, var5, var6 - var11)?1:0) + (var3.d(var4 - var10, var5 + 1, var6 - var11)?1:0);
+            int var13 = (var3.d(var4 + var10, var5, var6 + var11)?1:0) + (var3.d(var4 + var10, var5 + 1, var6 + var11)?1:0);
+            boolean var14 = var3.a(var4 - var10, var5, var6 - var11) == var8.bh || var3.a(var4 - var10, var5 + 1, var6 - var11) == var8.bh;
+            boolean var15 = var3.a(var4 + var10, var5, var6 + var11) == var8.bh || var3.a(var4 + var10, var5 + 1, var6 + var11) == var8.bh;
+            boolean var16 = false;
+            if(var14 && !var15) {
+               var16 = true;
+            } else if(var13 > var12) {
+               var16 = true;
+            }
+
+            if(var16) {
+               var9 = var9 - 1 & 3;
+               var9 += 4;
+            }
+
+            var3.d(var4, var5, var6, var8.bh);
+            var3.b(var4, var5, var6, var9);
+            var3.d(var4, var5 + 1, var6, var8.bh);
+            var3.b(var4, var5 + 1, var6, var9 + 8);
+            --var1.a;
+            return true;
+         }
+      }
    }
 }

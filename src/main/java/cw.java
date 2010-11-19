@@ -1,55 +1,30 @@
 // Decompiled by:       Fernflower v0.6
-// Date:                09.11.2010 14:05:30
+// Date:                15.11.2010 02:39:08
 // Copyright:           2008-2009, Stiver
 // Home page:           http://www.reversed-java.com
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.util.logging.Logger;
 
-public class cw {
+public class cw extends fs {
 
-   public static Logger a = Logger.getLogger("Minecraft");
-   private File b;
+   public int a;
 
 
-   public cw(File var1) {
-      this.b = var1;
-      var1.mkdir();
+   public cw(int var1, int var2) {
+      super(var1);
+      this.a = var2;
    }
 
-   public void a(eo var1) {
-      try {
-         t var2 = new t();
-         var1.d(var2);
-         File var3 = new File(this.b, "_tmp_.dat");
-         File var4 = new File(this.b, var1.ar + ".dat");
-         am.a(var2, new FileOutputStream(var3));
-         if(var4.exists()) {
-            var4.delete();
+   public boolean a(hj var1, fv var2, em var3, int var4, int var5, int var6, int var7) {
+      int var8 = var3.a(var4, var5, var6);
+      if(var8 == fy.aG.bh) {
+         if(!var3.z) {
+            var3.a(new jj(var3, (double)((float)var4 + 0.5F), (double)((float)var5 + 0.5F), (double)((float)var6 + 0.5F), this.a));
          }
 
-         var3.renameTo(var4);
-      } catch (Exception var5) {
-         a.warning("Failed to save player data for " + var1.ar);
+         --var1.a;
+         return true;
+      } else {
+         return false;
       }
-
    }
-
-   public void b(eo var1) {
-      try {
-         File var2 = new File(this.b, var1.ar + ".dat");
-         if(var2.exists()) {
-            t var3 = am.a(new FileInputStream(var2));
-            if(var3 != null) {
-               var1.e(var3);
-            }
-         }
-      } catch (Exception var4) {
-         a.warning("Failed to load player data for " + var1.ar);
-      }
-
-   }
-
 }

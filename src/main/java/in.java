@@ -1,69 +1,46 @@
 // Decompiled by:       Fernflower v0.6
-// Date:                09.11.2010 14:07:13
+// Date:                15.11.2010 02:39:54
 // Copyright:           2008-2009, Stiver
 // Home page:           http://www.reversed-java.com
 
-import java.util.Random;
 
-public class in extends bg {
+class in extends Thread {
 
-   private int a;
-
-
-   public in(int var1) {
+   in(bh var1, String var2) {
       this.a = var1;
+      super(var2);
    }
 
-   public boolean a(el var1, Random var2, int var3, int var4, int var5) {
-      if(var1.a(var3, var4 + 1, var5) != fw.u.bi) {
-         return false;
-      } else if(var1.a(var3, var4 - 1, var5) != fw.u.bi) {
-         return false;
-      } else if(var1.a(var3, var4, var5) != 0 && var1.a(var3, var4, var5) != fw.u.bi) {
-         return false;
-      } else {
-         int var6 = 0;
-         if(var1.a(var3 - 1, var4, var5) == fw.u.bi) {
-            ++var6;
-         }
+   public void run() {
+      Object var1 = bh.a;
+      synchronized(bh.a) {
+         ++bh.c;
+      }
 
-         if(var1.a(var3 + 1, var4, var5) == fw.u.bi) {
-            ++var6;
-         }
+      while(true) {
+         boolean var11 = false;
 
-         if(var1.a(var3, var4, var5 - 1) == fw.u.bi) {
-            ++var6;
-         }
+         try {
+            var11 = true;
+            if(!bh.a(this.a)) {
+               var11 = false;
+               break;
+            }
 
-         if(var1.a(var3, var4, var5 + 1) == fw.u.bi) {
-            ++var6;
+            bh.d(this.a);
+         } finally {
+            if(var11) {
+               Object var5 = bh.a;
+               synchronized(bh.a) {
+                  --bh.c;
+               }
+            }
          }
+      }
 
-         int var7 = 0;
-         if(var1.a(var3 - 1, var4, var5) == 0) {
-            ++var7;
-         }
-
-         if(var1.a(var3 + 1, var4, var5) == 0) {
-            ++var7;
-         }
-
-         if(var1.a(var3, var4, var5 - 1) == 0) {
-            ++var7;
-         }
-
-         if(var1.a(var3, var4, var5 + 1) == 0) {
-            ++var7;
-         }
-
-         if(var6 == 3 && var7 == 1) {
-            var1.d(var3, var4, var5, this.a);
-            var1.a = true;
-            fw.n[this.a].a(var1, var3, var4, var5, var2);
-            var1.a = false;
-         }
-
-         return true;
+      var1 = bh.a;
+      synchronized(bh.a) {
+         --bh.c;
       }
    }
 }

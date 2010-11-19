@@ -1,26 +1,30 @@
 // Decompiled by:       Fernflower v0.6
-// Date:                09.11.2010 14:08:07
+// Date:                15.11.2010 02:40:30
 // Copyright:           2008-2009, Stiver
 // Home page:           http://www.reversed-java.com
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import javax.swing.JTextField;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+import net.minecraft.server.MinecraftServer;
 
-class w implements ActionListener {
+final class w extends WindowAdapter {
 
-   w(gg var1, JTextField var2) {
-      this.b = var1;
-      this.a = var2;
+   w(MinecraftServer var1) {
+      this.a = var1;
       super();
    }
 
-   public void actionPerformed(ActionEvent var1) {
-      String var2 = this.a.getText().trim();
-      if(var2.length() > 0) {
-         gg.a(this.b).a(var2, this.b);
+   public void windowClosing(WindowEvent var1) {
+      this.a.a();
+
+      while(!this.a.g) {
+         try {
+            Thread.sleep(100L);
+         } catch (InterruptedException var3) {
+            var3.printStackTrace();
+         }
       }
 
-      this.a.setText("");
+      System.exit(0);
    }
 }

@@ -1,57 +1,206 @@
 // Decompiled by:       Fernflower v0.6
-// Date:                09.11.2010 14:07:16
+// Date:                15.11.2010 02:39:56
 // Copyright:           2008-2009, Stiver
 // Home page:           http://www.reversed-java.com
 
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.Graphics;
-import javax.swing.JComponent;
-import javax.swing.Timer;
+import java.io.IOException;
 
-public class iw extends JComponent {
+public class iw implements bt {
 
-   private int[] a = new int[256];
-   private int b = 0;
-   private String[] c = new String[10];
+   private jp c;
+   private bt d;
+   private av e;
+   private jp[] f = new jp[1024];
+   private em g;
+   int a = -999999999;
+   int b = -999999999;
+   private jp h;
 
 
-   public iw() {
-      this.setPreferredSize(new Dimension(256, 196));
-      this.setMinimumSize(new Dimension(256, 196));
-      this.setMaximumSize(new Dimension(256, 196));
-      (new Timer(500, new ju(this))).start();
-      this.setBackground(Color.BLACK);
+   public iw(em var1, av var2, bt var3) {
+      this.c = new jp(var1, new byte['\u8000'], 0, 0);
+      this.c.q = true;
+      this.c.p = true;
+      this.g = var1;
+      this.e = var2;
+      this.d = var3;
    }
 
-   private void a() {
-      long var1 = Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
-      System.gc();
-      this.c[0] = "Memory use: " + var1 / 1024L / 1024L + " mb (" + Runtime.getRuntime().freeMemory() * 100L / Runtime.getRuntime().maxMemory() + "% free)";
-      this.c[1] = "Threads: " + bf.b + " + " + bf.c;
-      this.a[this.b++ & 255] = (int)(var1 * 100L / Runtime.getRuntime().maxMemory());
-      this.repaint();
-   }
-
-   public void paint(Graphics var1) {
-      var1.setColor(new Color(16777215));
-      var1.fillRect(0, 0, 256, 192);
-
-      int var2;
-      for(var2 = 0; var2 < 256; ++var2) {
-         int var3 = this.a[var2 + this.b & 255];
-         var1.setColor(new Color(var3 + 28 << 16));
-         var1.fillRect(var2, 100 - var3, 1, var3);
+   public boolean a(int var1, int var2) {
+      if(var1 == this.a && var2 == this.b && this.h != null) {
+         return true;
+      } else {
+         int var3 = var1 & 31;
+         int var4 = var2 & 31;
+         int var5 = var3 + var4 * 32;
+         return this.f[var5] != null && (this.f[var5] == this.c || this.f[var5].a(var1, var2));
       }
+   }
 
-      var1.setColor(Color.BLACK);
+   public jp b(int var1, int var2) {
+      if(var1 == this.a && var2 == this.b && this.h != null) {
+         return this.h;
+      } else {
+         int var3 = var1 & 31;
+         int var4 = var2 & 31;
+         int var5 = var3 + var4 * 32;
+         if(!this.a(var1, var2)) {
+            if(this.f[var5] != null) {
+               this.f[var5].e();
+               this.b(this.f[var5]);
+               this.a(this.f[var5]);
+            }
 
-      for(var2 = 0; var2 < this.c.length; ++var2) {
-         String var4 = this.c[var2];
-         if(var4 != null) {
-            var1.drawString(var4, 32, 116 + var2 * 16);
+            jp var6 = this.c(var1, var2);
+            if(var6 == null) {
+               if(this.d == null) {
+                  var6 = this.c;
+               } else {
+                  var6 = this.d.b(var1, var2);
+               }
+            }
+
+            this.f[var5] = var6;
+            var6.c();
+            if(this.f[var5] != null) {
+               this.f[var5].d();
+            }
+
+            if(!this.f[var5].n && this.a(var1 + 1, var2 + 1) && this.a(var1, var2 + 1) && this.a(var1 + 1, var2)) {
+               this.a(this, var1, var2);
+            }
+
+            if(this.a(var1 - 1, var2) && !this.b(var1 - 1, var2).n && this.a(var1 - 1, var2 + 1) && this.a(var1, var2 + 1) && this.a(var1 - 1, var2)) {
+               this.a(this, var1 - 1, var2);
+            }
+
+            if(this.a(var1, var2 - 1) && !this.b(var1, var2 - 1).n && this.a(var1 + 1, var2 - 1) && this.a(var1, var2 - 1) && this.a(var1 + 1, var2)) {
+               this.a(this, var1, var2 - 1);
+            }
+
+            if(this.a(var1 - 1, var2 - 1) && !this.b(var1 - 1, var2 - 1).n && this.a(var1 - 1, var2 - 1) && this.a(var1, var2 - 1) && this.a(var1 - 1, var2)) {
+               this.a(this, var1 - 1, var2 - 1);
+            }
+         }
+
+         this.a = var1;
+         this.b = var2;
+         this.h = this.f[var5];
+         return this.f[var5];
+      }
+   }
+
+   private jp c(int var1, int var2) {
+      if(this.e == null) {
+         return null;
+      } else {
+         try {
+            jp var3 = this.e.a(this.g, var1, var2);
+            if(var3 != null) {
+               var3.s = this.g.e;
+            }
+
+            return var3;
+         } catch (Exception var4) {
+            var4.printStackTrace();
+            return null;
+         }
+      }
+   }
+
+   private void a(jp var1) {
+      if(this.e != null) {
+         try {
+            this.e.b(this.g, var1);
+         } catch (Exception var3) {
+            var3.printStackTrace();
+         }
+
+      }
+   }
+
+   private void b(jp var1) {
+      if(this.e != null) {
+         try {
+            var1.s = this.g.e;
+            this.e.a(this.g, var1);
+         } catch (IOException var3) {
+            var3.printStackTrace();
+         }
+
+      }
+   }
+
+   public void a(bt var1, int var2, int var3) {
+      jp var4 = this.b(var2, var3);
+      if(!var4.n) {
+         var4.n = true;
+         if(this.d != null) {
+            this.d.a(var1, var2, var3);
+            var4.f();
          }
       }
 
+   }
+
+   public boolean a(boolean var1, ix var2) {
+      int var3 = 0;
+      int var4 = 0;
+      int var5;
+      if(var2 != null) {
+         for(var5 = 0; var5 < this.f.length; ++var5) {
+            if(this.f[var5] != null && this.f[var5].a(var1)) {
+               ++var4;
+            }
+         }
+      }
+
+      var5 = 0;
+
+      for(int var6 = 0; var6 < this.f.length; ++var6) {
+         if(this.f[var6] != null) {
+            if(var1 && !this.f[var6].p) {
+               this.a(this.f[var6]);
+            }
+
+            if(this.f[var6].a(var1)) {
+               this.b(this.f[var6]);
+               this.f[var6].o = false;
+               ++var3;
+               if(var3 == 2 && !var1) {
+                  return false;
+               }
+
+               if(var2 != null) {
+                  ++var5;
+                  if(var5 % 10 == 0) {
+                     var2.a(var5 * 100 / var4);
+                  }
+               }
+            }
+         }
+      }
+
+      if(var1) {
+         if(this.e == null) {
+            return true;
+         }
+
+         this.e.b();
+      }
+
+      return true;
+   }
+
+   public boolean a() {
+      if(this.e != null) {
+         this.e.a();
+      }
+
+      return this.d.a();
+   }
+
+   public boolean b() {
+      return true;
    }
 }

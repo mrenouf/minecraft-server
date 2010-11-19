@@ -1,133 +1,93 @@
 // Decompiled by:       Fernflower v0.6
-// Date:                09.11.2010 14:04:41
+// Date:                15.11.2010 02:38:42
 // Copyright:           2008-2009, Stiver
 // Home page:           http://www.reversed-java.com
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Random;
 
-public class ba {
+public class ba extends fy {
 
-   private static List d = new ArrayList();
-   private static int e = 0;
-   public double a;
-   public double b;
-   public double c;
-
-
-   public static ba a(double var0, double var2, double var4) {
-      return new ba(var0, var2, var4);
+   protected ba(int var1, int var2) {
+      super(var1, var2, jt.n);
+      this.a(0.0F, 0.0F, 0.0F, 1.0F, 0.125F, 1.0F);
    }
 
-   public static void a() {
-      e = 0;
+   public dt d(em var1, int var2, int var3, int var4) {
+      return null;
    }
 
-   public static ba b(double var0, double var2, double var4) {
-      if(e >= d.size()) {
-         d.add(a(0.0D, 0.0D, 0.0D));
-      }
-
-      return ((ba)d.get(e++)).e(var0, var2, var4);
+   public boolean a() {
+      return false;
    }
 
-   private ba(double var1, double var3, double var5) {
-      if(var1 == -0.0D) {
-         var1 = 0.0D;
-      }
-
-      if(var3 == -0.0D) {
-         var3 = 0.0D;
-      }
-
-      if(var5 == -0.0D) {
-         var5 = 0.0D;
-      }
-
-      this.a = var1;
-      this.b = var3;
-      this.c = var5;
+   public gm a(em var1, int var2, int var3, int var4, bc var5, bc var6) {
+      this.a(var1, var2, var3, var4);
+      return super.a(var1, var2, var3, var4, var5, var6);
    }
 
-   private ba e(double var1, double var3, double var5) {
-      this.a = var1;
-      this.b = var3;
-      this.c = var5;
-      return this;
-   }
-
-   public ba b() {
-      double var1 = (double)hb.a(this.a * this.a + this.b * this.b + this.c * this.c);
-      return var1 < 1.0E-4D?b(0.0D, 0.0D, 0.0D):b(this.a / var1, this.b / var1, this.c / var1);
-   }
-
-   public ba c(double var1, double var3, double var5) {
-      return b(this.a + var1, this.b + var3, this.c + var5);
-   }
-
-   public double a(ba var1) {
-      double var2 = var1.a - this.a;
-      double var4 = var1.b - this.b;
-      double var6 = var1.c - this.c;
-      return (double)hb.a(var2 * var2 + var4 * var4 + var6 * var6);
-   }
-
-   public double b(ba var1) {
-      double var2 = var1.a - this.a;
-      double var4 = var1.b - this.b;
-      double var6 = var1.c - this.c;
-      return var2 * var2 + var4 * var4 + var6 * var6;
-   }
-
-   public double d(double var1, double var3, double var5) {
-      double var7 = var1 - this.a;
-      double var9 = var3 - this.b;
-      double var11 = var5 - this.c;
-      return var7 * var7 + var9 * var9 + var11 * var11;
-   }
-
-   public double c() {
-      return (double)hb.a(this.a * this.a + this.b * this.b + this.c * this.c);
-   }
-
-   public ba a(ba var1, double var2) {
-      double var4 = var1.a - this.a;
-      double var6 = var1.b - this.b;
-      double var8 = var1.c - this.c;
-      if(var4 * var4 < 1.0000000116860974E-7D) {
-         return null;
+   public void a(iq var1, int var2, int var3, int var4) {
+      int var5 = var1.b(var2, var3, var4);
+      if(var5 >= 2 && var5 <= 5) {
+         this.a(0.0F, 0.0F, 0.0F, 1.0F, 0.625F, 1.0F);
       } else {
-         double var10 = (var2 - this.a) / var4;
-         return var10 >= 0.0D && var10 <= 1.0D?b(this.a + var4 * var10, this.b + var6 * var10, this.c + var8 * var10):null;
+         this.a(0.0F, 0.0F, 0.0F, 1.0F, 0.125F, 1.0F);
+      }
+
+   }
+
+   public int a(Random var1) {
+      return 1;
+   }
+
+   public boolean a(em var1, int var2, int var3, int var4) {
+      return var1.d(var2, var3 - 1, var4);
+   }
+
+   public void e(em var1, int var2, int var3, int var4) {
+      if(!var1.z) {
+         var1.b(var2, var3, var4, 15);
+         this.g(var1, var2, var3, var4);
+      }
+
+   }
+
+   public void b(em var1, int var2, int var3, int var4, int var5) {
+      if(!var1.z) {
+         int var6 = var1.b(var2, var3, var4);
+         boolean var7 = false;
+         if(!var1.d(var2, var3 - 1, var4)) {
+            var7 = true;
+         }
+
+         if(var6 == 2 && !var1.d(var2 + 1, var3, var4)) {
+            var7 = true;
+         }
+
+         if(var6 == 3 && !var1.d(var2 - 1, var3, var4)) {
+            var7 = true;
+         }
+
+         if(var6 == 4 && !var1.d(var2, var3, var4 - 1)) {
+            var7 = true;
+         }
+
+         if(var6 == 5 && !var1.d(var2, var3, var4 + 1)) {
+            var7 = true;
+         }
+
+         if(var7) {
+            this.a_(var1, var2, var3, var4, var1.b(var2, var3, var4));
+            var1.d(var2, var3, var4, 0);
+         } else if(var5 > 0 && fy.m[var5].c() && gx.a(new gx(this, var1, var2, var3, var4)) == 3) {
+            this.g(var1, var2, var3, var4);
+         }
+
       }
    }
 
-   public ba b(ba var1, double var2) {
-      double var4 = var1.a - this.a;
-      double var6 = var1.b - this.b;
-      double var8 = var1.c - this.c;
-      if(var6 * var6 < 1.0000000116860974E-7D) {
-         return null;
-      } else {
-         double var10 = (var2 - this.b) / var6;
-         return var10 >= 0.0D && var10 <= 1.0D?b(this.a + var4 * var10, this.b + var6 * var10, this.c + var8 * var10):null;
+   private void g(em var1, int var2, int var3, int var4) {
+      if(!var1.z) {
+         (new gx(this, var1, var2, var3, var4)).a(var1.n(var2, var3, var4));
       }
    }
-
-   public ba c(ba var1, double var2) {
-      double var4 = var1.a - this.a;
-      double var6 = var1.b - this.b;
-      double var8 = var1.c - this.c;
-      if(var8 * var8 < 1.0000000116860974E-7D) {
-         return null;
-      } else {
-         double var10 = (var2 - this.c) / var8;
-         return var10 >= 0.0D && var10 <= 1.0D?b(this.a + var4 * var10, this.b + var6 * var10, this.c + var8 * var10):null;
-      }
-   }
-
-   public String toString() {
-      return "(" + this.a + ", " + this.b + ", " + this.c + ")";
-   }
-
 }

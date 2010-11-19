@@ -1,14 +1,36 @@
 // Decompiled by:       Fernflower v0.6
-// Date:                09.11.2010 14:04:44
+// Date:                15.11.2010 02:38:43
 // Copyright:           2008-2009, Stiver
 // Home page:           http://www.reversed-java.com
 
-import java.util.Random;
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
 
-public abstract class bg {
+public class bg extends io {
 
-   public abstract boolean a(el var1, Random var2, int var3, int var4, int var5);
+   public String a;
 
-   public void a(double var1, double var3, double var5) {
+
+   public bg() {
+   }
+
+   public bg(String var1) {
+      this.a = var1;
+   }
+
+   public void a(DataInputStream var1) {
+      this.a = var1.readUTF();
+   }
+
+   public void a(DataOutputStream var1) {
+      var1.writeUTF(this.a);
+   }
+
+   public void a(ey var1) {
+      var1.a(this);
+   }
+
+   public int a() {
+      return this.a.length();
    }
 }

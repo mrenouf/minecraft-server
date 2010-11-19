@@ -1,73 +1,63 @@
 // Decompiled by:       Fernflower v0.6
-// Date:                09.11.2010 14:05:00
+// Date:                15.11.2010 02:38:51
 // Copyright:           2008-2009, Stiver
 // Home page:           http://www.reversed-java.com
 
 
-public class bs extends fx {
+public class bs extends fs {
 
-   public bs(el var1) {
+   private int a;
+
+
+   public bs(int var1) {
       super(var1);
-      this.a(1.4F, 0.9F);
-      this.bl = 0.8F;
+      this.a = var1 + 256;
+      this.a(fy.m[var1 + 256].a(2));
    }
 
-   public double j() {
-      return (double)this.I * 0.75D - 0.5D;
-   }
-
-   protected dv k() {
-      float var1 = this.b(1.0F);
-      if(var1 < 0.5F) {
-         double var2 = 16.0D;
-         return this.l.a(this, var2);
+   public boolean a(hj var1, fv var2, em var3, int var4, int var5, int var6, int var7) {
+      if(var3.a(var4, var5, var6) == fy.aS.bh) {
+         var7 = 0;
       } else {
-         return null;
-      }
-   }
-
-   protected String d() {
-      return "mob.spider";
-   }
-
-   protected String e() {
-      return "mob.spider";
-   }
-
-   protected String f() {
-      return "mob.spiderdeath";
-   }
-
-   protected void a(dv var1, float var2) {
-      float var3 = this.b(1.0F);
-      if(var3 > 0.5F && this.V.nextInt(100) == 0) {
-         this.f = null;
-      } else {
-         if(var2 > 2.0F && var2 < 6.0F && this.V.nextInt(10) == 0) {
-            if(this.A) {
-               double var4 = var1.p - this.p;
-               double var6 = var1.r - this.r;
-               float var8 = hb.a(var4 * var4 + var6 * var6);
-               this.s = var4 / (double)var8 * 0.5D * 0.800000011920929D + this.s * 0.20000000298023224D;
-               this.u = var6 / (double)var8 * 0.5D * 0.800000011920929D + this.u * 0.20000000298023224D;
-               this.t = 0.4000000059604645D;
-            }
-         } else {
-            super.a(var1, var2);
+         if(var7 == 0) {
+            --var5;
          }
 
+         if(var7 == 1) {
+            ++var5;
+         }
+
+         if(var7 == 2) {
+            --var6;
+         }
+
+         if(var7 == 3) {
+            ++var6;
+         }
+
+         if(var7 == 4) {
+            --var4;
+         }
+
+         if(var7 == 5) {
+            ++var4;
+         }
       }
-   }
 
-   public void a(t var1) {
-      super.a(var1);
-   }
+      if(var1.a == 0) {
+         return false;
+      } else {
+         if(var3.a(this.a, var4, var5, var6, false)) {
+            fy var8 = fy.m[this.a];
+            if(var3.d(var4, var5, var6, this.a)) {
+               fy.m[this.a].c(var3, var4, var5, var6, var7);
+               fy.m[this.a].a(var3, var4, var5, var6, var2);
+               var3.a((double)((float)var4 + 0.5F), (double)((float)var5 + 0.5F), (double)((float)var6 + 0.5F), var8.bq.c(), (var8.bq.a() + 1.0F) / 2.0F, var8.bq.b() * 0.8F);
+               --var1.a;
+            }
+         }
 
-   public void b(t var1) {
-      super.b(var1);
-   }
-
-   protected int g() {
-      return fq.I.aW;
+         return true;
+      }
    }
 }

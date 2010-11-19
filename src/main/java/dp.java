@@ -1,36 +1,80 @@
 // Decompiled by:       Fernflower v0.6
-// Date:                09.11.2010 14:05:34
+// Date:                15.11.2010 02:39:10
 // Copyright:           2008-2009, Stiver
 // Home page:           http://www.reversed-java.com
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.net.URL;
+import java.net.InetAddress;
+import java.net.ServerSocket;
+import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import net.minecraft.server.MinecraftServer;
 
-class dp extends Thread {
+public class dp {
 
-   dp(fn var1, ab var2) {
-      this.b = var1;
-      this.a = var2;
-      super();
+   public static Logger a = Logger.getLogger("Minecraft");
+   private ServerSocket d;
+   private Thread e;
+   public volatile boolean b = false;
+   private int f = 0;
+   private ArrayList g = new ArrayList();
+   private ArrayList h = new ArrayList();
+   public MinecraftServer c;
+
+
+   public dp(MinecraftServer var1, InetAddress var2, int var3) {
+      this.c = var1;
+      this.d = new ServerSocket(var3, 0, var2);
+      this.d.setPerformancePreferences(0, 2, 1);
+      this.b = true;
+      this.e = new dg(this, "Listen thread", var1);
+      this.e.start();
    }
 
-   public void run() {
-      try {
-         String var1 = fn.a(this.b);
-         URL var2 = new URL("http://www.minecraft.net/game/checkserver.jsp?user=" + this.a.b + "&serverId=" + var1);
-         BufferedReader var3 = new BufferedReader(new InputStreamReader(var2.openStream()));
-         String var4 = var3.readLine();
-         var3.close();
-         System.out.println("THE REPLY IS " + var4);
-         if(var4.equals("YES")) {
-            fn.a(this.b, this.a);
-         } else {
-            this.b.b("Failed to verify username!");
+   public void a(je var1) {
+      this.h.add(var1);
+   }
+
+   private void a(fo var1) {
+      if(var1 == null) {
+         throw new IllegalArgumentException("Got null pendingconnection!");
+      } else {
+         this.g.add(var1);
+      }
+   }
+
+   public void a() {
+      int var1;
+      for(var1 = 0; var1 < this.g.size(); ++var1) {
+         fo var2 = (fo)this.g.get(var1);
+
+         try {
+            var2.a();
+         } catch (Exception var5) {
+            var2.b("Internal server error");
+            a.log(Level.WARNING, "Failed to handle packet: " + var5, var5);
          }
-      } catch (Exception var5) {
-         var5.printStackTrace();
+
+         if(var2.c) {
+            this.g.remove(var1--);
+         }
+      }
+
+      for(var1 = 0; var1 < this.h.size(); ++var1) {
+         je var6 = (je)this.h.get(var1);
+
+         try {
+            var6.a();
+         } catch (Exception var4) {
+            var6.c("Internal server error");
+            a.log(Level.WARNING, "Failed to handle packet: " + var4, var4);
+         }
+
+         if(var6.c) {
+            this.h.remove(var1--);
+         }
       }
 
    }
+
 }

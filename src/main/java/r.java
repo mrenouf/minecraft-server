@@ -1,17 +1,25 @@
 // Decompiled by:       Fernflower v0.6
-// Date:                09.11.2010 14:08:06
+// Date:                15.11.2010 02:40:29
 // Copyright:           2008-2009, Stiver
 // Home page:           http://www.reversed-java.com
 
 
-public class r extends fx {
+public class r extends fy {
 
-   public r(el var1) {
-      super(var1);
-      this.a(this.H * 6.0F, this.I * 6.0F);
+   protected boolean a;
+
+
+   protected r(int var1, int var2, jt var3, boolean var4) {
+      super(var1, var2, var3);
+      this.a = var4;
    }
 
-   protected float a(int var1, int var2, int var3) {
-      return this.l.j(var1, var2, var3) - 0.5F;
+   public boolean a() {
+      return false;
+   }
+
+   public boolean a(iq var1, int var2, int var3, int var4, int var5) {
+      int var6 = var1.a(var2, var3, var4);
+      return !this.a && var6 == this.bh?false:super.a(var1, var2, var3, var4, var5);
    }
 }

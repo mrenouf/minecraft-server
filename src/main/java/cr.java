@@ -1,70 +1,65 @@
 // Decompiled by:       Fernflower v0.6
-// Date:                09.11.2010 14:05:29
+// Date:                15.11.2010 02:39:08
 // Copyright:           2008-2009, Stiver
 // Home page:           http://www.reversed-java.com
 
-import java.util.Random;
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
 
-public class cr extends fw {
+public class cr extends io {
 
-   protected cr(int var1, int var2) {
-      super(var1, jr.i);
-      this.bh = var2;
-      float var3 = 0.375F;
-      this.a(0.5F - var3, 0.0F, 0.5F - var3, 0.5F + var3, 1.0F, 0.5F + var3);
-      this.a(true);
+   public int a;
+   public int b;
+   public int c;
+   public int d;
+   public byte e;
+   public byte f;
+
+
+   public cr() {
    }
 
-   public void a(el var1, int var2, int var3, int var4, Random var5) {
-      if(var1.a(var2, var3 + 1, var4) == 0) {
-         int var6;
-         for(var6 = 1; var1.a(var2, var3 - var6, var4) == this.bi; ++var6) {
-            ;
-         }
-
-         if(var6 < 3) {
-            int var7 = var1.b(var2, var3, var4);
-            if(var7 == 15) {
-               var1.d(var2, var3 + 1, var4, this.bi);
-               var1.b(var2, var3, var4, 0);
-            } else {
-               var1.b(var2, var3, var4, var7 + 1);
-            }
-         }
-      }
-
+   public cr(dw var1) {
+      this.a = var1.g;
+      this.b = hd.b(var1.p * 32.0D);
+      this.c = hd.b(var1.q * 32.0D);
+      this.d = hd.b(var1.r * 32.0D);
+      this.e = (byte)((int)(var1.v * 256.0F / 360.0F));
+      this.f = (byte)((int)(var1.w * 256.0F / 360.0F));
    }
 
-   public boolean a(el var1, int var2, int var3, int var4) {
-      int var5 = var1.a(var2, var3 - 1, var4);
-      return var5 == this.bi?true:(var5 != fw.v.bi && var5 != fw.w.bi?false:(var1.c(var2 - 1, var3 - 1, var4) == jr.f?true:(var1.c(var2 + 1, var3 - 1, var4) == jr.f?true:(var1.c(var2, var3 - 1, var4 - 1) == jr.f?true:var1.c(var2, var3 - 1, var4 + 1) == jr.f))));
+   public cr(int var1, int var2, int var3, int var4, byte var5, byte var6) {
+      this.a = var1;
+      this.b = var2;
+      this.c = var3;
+      this.d = var4;
+      this.e = var5;
+      this.f = var6;
    }
 
-   public void b(el var1, int var2, int var3, int var4, int var5) {
-      this.g(var1, var2, var3, var4);
+   public void a(DataInputStream var1) {
+      this.a = var1.readInt();
+      this.b = var1.readInt();
+      this.c = var1.readInt();
+      this.d = var1.readInt();
+      this.e = (byte)var1.read();
+      this.f = (byte)var1.read();
    }
 
-   protected final void g(el var1, int var2, int var3, int var4) {
-      if(!this.f(var1, var2, var3, var4)) {
-         this.a_(var1, var2, var3, var4, var1.b(var2, var3, var4));
-         var1.d(var2, var3, var4, 0);
-      }
-
+   public void a(DataOutputStream var1) {
+      var1.writeInt(this.a);
+      var1.writeInt(this.b);
+      var1.writeInt(this.c);
+      var1.writeInt(this.d);
+      var1.write(this.e);
+      var1.write(this.f);
    }
 
-   public boolean f(el var1, int var2, int var3, int var4) {
-      return this.a(var1, var2, var3, var4);
+   public void a(ey var1) {
+      var1.a(this);
    }
 
-   public ds d(el var1, int var2, int var3, int var4) {
-      return null;
-   }
-
-   public int a(int var1, Random var2) {
-      return fq.aH.aW;
-   }
-
-   public boolean a() {
-      return false;
+   public int a() {
+      return 34;
    }
 }

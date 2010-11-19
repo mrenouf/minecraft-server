@@ -1,55 +1,21 @@
 // Decompiled by:       Fernflower v0.6
-// Date:                09.11.2010 14:06:50
+// Date:                15.11.2010 02:39:43
 // Copyright:           2008-2009, Stiver
 // Home page:           http://www.reversed-java.com
 
-import java.util.Arrays;
+import java.util.Random;
 
-public class ga extends is {
+public class ga extends fy {
 
-   private ih e;
-   private double f;
-   private double g;
-
-
-   public ga(ih var1, double var2, double var4) {
-      this.e = var1;
-      this.f = var2;
-      this.g = var4;
+   public ga(int var1, int var2) {
+      super(var1, var2, jt.c);
    }
 
-   public ih a(ka var1) {
-      return this.e;
+   public int a(int var1) {
+      return var1 <= 1?4:this.bg;
    }
 
-   public ih a(int var1, int var2) {
-      return this.e;
-   }
-
-   public ih[] a(int var1, int var2, int var3, int var4) {
-      this.d = this.a(this.d, var1, var2, var3, var4);
-      return this.d;
-   }
-
-   public double[] a(double[] var1, int var2, int var3, int var4, int var5) {
-      if(var1 == null || var1.length < var4 * var5) {
-         var1 = new double[var4 * var5];
-      }
-
-      Arrays.fill(var1, 0, var4 * var5, this.f);
-      return var1;
-   }
-
-   public ih[] a(ih[] var1, int var2, int var3, int var4, int var5) {
-      if(var1 == null || var1.length < var4 * var5) {
-         var1 = new ih[var4 * var5];
-         this.a = new double[var4 * var5];
-         this.b = new double[var4 * var5];
-      }
-
-      Arrays.fill(var1, 0, var4 * var5, this.e);
-      Arrays.fill(this.b, 0, var4 * var5, this.g);
-      Arrays.fill(this.a, 0, var4 * var5, this.f);
-      return var1;
+   public int a(Random var1) {
+      return 0;
    }
 }

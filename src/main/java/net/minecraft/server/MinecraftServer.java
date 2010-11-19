@@ -1,5 +1,5 @@
 // Decompiled by:       Fernflower v0.6
-// Date:                09.11.2010 14:08:14
+// Date:                15.11.2010 02:40:33
 // Copyright:           2008-2009, Stiver
 // Home page:           http://www.reversed-java.com
 
@@ -17,44 +17,46 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class MinecraftServer implements et, Runnable {
+public class MinecraftServer implements eu, Runnable {
 
    public static Logger a = Logger.getLogger("Minecraft");
    public static HashMap b = new HashMap();
-   public do c;
-   public dc d;
-   public es e;
-   public gl f;
-   private boolean m = true;
+   public dp c;
+   public dd d;
+   public et e;
+   public gn f;
+   private boolean n = true;
    public boolean g = false;
    int h = 0;
    public String i;
    public int j;
-   private List n = new ArrayList();
-   private List o = Collections.synchronizedList(new ArrayList());
-   public gp k;
+   private List o = new ArrayList();
+   private List p = Collections.synchronizedList(new ArrayList());
+   public gr k;
    public boolean l;
+   public boolean m;
 
 
    public MinecraftServer() {
-      new by(this);
+      new ca(this);
    }
 
    private boolean d() {
-      bw var1 = new bw(this);
+      by var1 = new by(this);
       var1.setDaemon(true);
       var1.start();
-      gc.a();
-      a.info("Starting minecraft server version 0.2.3");
+      ge.a();
+      a.info("Starting minecraft server version 0.2.4");
       if(Runtime.getRuntime().maxMemory() / 1024L / 1024L < 512L) {
          a.warning("**** NOT ENOUGH RAM!");
          a.warning("To start the server with more ram, launch it as \"java -Xmx1024M -Xms1024M -jar minecraft_server.jar\"");
       }
 
       a.info("Loading properties");
-      this.d = new dc(new File("server.properties"));
+      this.d = new dd(new File("server.properties"));
       String var2 = this.d.a("server-ip", "");
       this.l = this.d.a("online-mode", true);
+      this.m = this.d.a("no-animals", false);
       InetAddress var3 = null;
       if(var2.length() > 0) {
          var3 = InetAddress.getByName(var2);
@@ -64,7 +66,7 @@ public class MinecraftServer implements et, Runnable {
       a.info("Starting Minecraft server on " + (var2.length() == 0?"*":var2) + ":" + var4);
 
       try {
-         this.c = new do(this, var3, var4);
+         this.c = new dp(this, var3, var4);
       } catch (IOException var6) {
          a.warning("**** FAILED TO BIND TO PORT!");
          a.log(Level.WARNING, "The exception was: " + var6.toString());
@@ -79,8 +81,8 @@ public class MinecraftServer implements et, Runnable {
          a.warning("To change this, set \"online-mode\" to \"true\" in the server.settings file.");
       }
 
-      this.f = new gl(this);
-      this.k = new gp(this);
+      this.f = new gn(this);
+      this.k = new gr(this);
       String var5 = this.d.a("level-name", "world");
       a.info("Preparing level \"" + var5 + "\"");
       this.c(var5);
@@ -90,8 +92,8 @@ public class MinecraftServer implements et, Runnable {
 
    private void c(String var1) {
       a.info("Preparing start region");
-      this.e = new es(new File("."), var1, this.d.a("hellworld", false)?-1:0);
-      this.e.a(new ep(this));
+      this.e = new et(this, new File("."), var1, this.d.a("hellworld", false)?-1:0);
+      this.e.a(new eq(this));
       this.e.k = this.d.a("monsters", false)?1:0;
       this.f.a(this.e);
       byte var2 = 10;
@@ -100,7 +102,7 @@ public class MinecraftServer implements et, Runnable {
          this.a("Preparing spawn area", (var3 + var2) * 100 / (var2 + var2 + 1));
 
          for(int var4 = -var2; var4 <= var2; ++var4) {
-            if(!this.m) {
+            if(!this.n) {
                return;
             }
 
@@ -124,7 +126,7 @@ public class MinecraftServer implements et, Runnable {
 
    private void f() {
       a.info("Saving chunks");
-      this.e.a(true, (iv)null);
+      this.e.a(true, (ix)null);
    }
 
    private void g() {
@@ -140,7 +142,7 @@ public class MinecraftServer implements et, Runnable {
    }
 
    public void a() {
-      this.m = false;
+      this.n = false;
    }
 
    public void run() {
@@ -149,7 +151,7 @@ public class MinecraftServer implements et, Runnable {
             long var1 = System.currentTimeMillis();
             long var3 = 0L;
 
-            while(this.m) {
+            while(this.n) {
                long var5 = System.currentTimeMillis();
                long var7 = var5 - var1;
                if(var7 > 2000L) {
@@ -173,7 +175,7 @@ public class MinecraftServer implements et, Runnable {
                Thread.sleep(1L);
             }
          } else {
-            while(this.m) {
+            while(this.n) {
                this.b();
 
                try {
@@ -187,7 +189,7 @@ public class MinecraftServer implements et, Runnable {
          var16.printStackTrace();
          a.log(Level.SEVERE, "Unexpected exception", var16);
 
-         while(this.m) {
+         while(this.n) {
             this.b();
 
             try {
@@ -223,11 +225,11 @@ public class MinecraftServer implements et, Runnable {
          b.remove(var1.get(var6));
       }
 
-      ds.a();
-      ba.a();
+      dt.a();
+      bc.a();
       ++this.h;
       if(this.h % 20 == 0) {
-         this.f.a(new gd(this.e.e));
+         this.f.a(new gf(this.e.e));
       }
 
       this.e.f();
@@ -241,8 +243,8 @@ public class MinecraftServer implements et, Runnable {
       this.f.b();
       this.k.a();
 
-      for(var6 = 0; var6 < this.n.size(); ++var6) {
-         ((ei)this.n.get(var6)).a();
+      for(var6 = 0; var6 < this.o.size(); ++var6) {
+         ((ej)this.o.get(var6)).a();
       }
 
       try {
@@ -253,25 +255,25 @@ public class MinecraftServer implements et, Runnable {
 
    }
 
-   public void a(String var1, et var2) {
-      this.o.add(new al(var1, var2));
+   public void a(String var1, eu var2) {
+      this.p.add(new an(var1, var2));
    }
 
    public void b() {
-      while(this.o.size() > 0) {
-         al var1 = (al)this.o.remove(0);
+      while(this.p.size() > 0) {
+         an var1 = (an)this.p.remove(0);
          String var2 = var1.a;
-         et var3 = var1.b;
+         eu var3 = var1.b;
          String var4 = var3.c();
          if(!var2.toLowerCase().startsWith("help") && !var2.toLowerCase().startsWith("?")) {
             if(var2.toLowerCase().startsWith("list")) {
                var3.b("Connected players: " + this.f.c());
             } else if(var2.toLowerCase().startsWith("stop")) {
                this.a(var4, "Stopping the server..");
-               this.m = false;
+               this.n = false;
             } else if(var2.toLowerCase().startsWith("save-all")) {
                this.a(var4, "Forcing save..");
-               this.e.a(true, (iv)null);
+               this.e.a(true, (ix)null);
                this.a(var4, "Save complete.");
             } else if(var2.toLowerCase().startsWith("save-off")) {
                this.a(var4, "Disabling level saving..");
@@ -300,7 +302,7 @@ public class MinecraftServer implements et, Runnable {
                   this.f.d(var11);
                   this.a(var4, "Pardoning ip " + var11);
                } else {
-                  eo var12;
+                  ep var12;
                   if(var2.toLowerCase().startsWith("ban ")) {
                      var11 = var2.substring(var2.indexOf(" ")).trim();
                      this.f.a(var11);
@@ -318,7 +320,7 @@ public class MinecraftServer implements et, Runnable {
                      var12 = null;
 
                      for(int var14 = 0; var14 < this.f.b.size(); ++var14) {
-                        eo var13 = (eo)this.f.b.get(var14);
+                        ep var13 = (ep)this.f.b.get(var14);
                         if(var13.ar.equalsIgnoreCase(var11)) {
                            var12 = var13;
                         }
@@ -332,7 +334,7 @@ public class MinecraftServer implements et, Runnable {
                      }
                   } else {
                      String[] var5;
-                     eo var7;
+                     ep var7;
                      if(var2.toLowerCase().startsWith("tp ")) {
                         var5 = var2.split(" ");
                         if(var5.length == 3) {
@@ -360,7 +362,7 @@ public class MinecraftServer implements et, Runnable {
                         if(var7 != null) {
                            try {
                               int var8 = Integer.parseInt(var5[2]);
-                              if(fq.c[var8] != null) {
+                              if(fs.c[var8] != null) {
                                  this.a(var4, "Giving " + var7.ar + " some " + var8);
                                  int var9 = 1;
                                  if(var5.length > 3) {
@@ -375,7 +377,7 @@ public class MinecraftServer implements et, Runnable {
                                     var9 = 64;
                                  }
 
-                                 var7.a(new hh(var8, var9));
+                                 var7.a(new hj(var8, var9));
                               } else {
                                  var3.b("There\'s no item with id " + var8);
                               }
@@ -388,7 +390,7 @@ public class MinecraftServer implements et, Runnable {
                      } else if(var2.toLowerCase().startsWith("say ")) {
                         var2 = var2.substring(var2.indexOf(" ")).trim();
                         a.info("[" + var4 + "] " + var2);
-                        this.f.a(new be("\u00a7d[Server] " + var2));
+                        this.f.a(new bg("\u00a7d[Server] " + var2));
                      } else if(var2.toLowerCase().startsWith("tell ")) {
                         var5 = var2.split(" ");
                         if(var5.length >= 3) {
@@ -397,7 +399,7 @@ public class MinecraftServer implements et, Runnable {
                            a.info("[" + var4 + "->" + var5[1] + "] " + var2);
                            var2 = "\u00a77" + var4 + " whispers " + var2;
                            a.info(var2);
-                           if(!this.f.a(var5[1], new be(var2))) {
+                           if(!this.f.a(var5[1], new bg(var2))) {
                               var3.b("There\'s no player by that name online.");
                            }
                         }
@@ -447,18 +449,18 @@ public class MinecraftServer implements et, Runnable {
       }
    }
 
-   public void a(ei var1) {
-      this.n.add(var1);
+   public void a(ej var1) {
+      this.o.add(var1);
    }
 
    public static void main(String[] var0) {
       try {
          MinecraftServer var1 = new MinecraftServer();
          if(!GraphicsEnvironment.isHeadless() && (var0.length <= 0 || !var0[0].equals("nogui"))) {
-            gg.a(var1);
+            gi.a(var1);
          }
 
-         new bv("Server thread", var1).start();
+         (new bw("Server thread", var1)).start();
       } catch (Exception var2) {
          a.log(Level.SEVERE, "Failed to start the minecraft server", var2);
       }

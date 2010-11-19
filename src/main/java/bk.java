@@ -1,121 +1,177 @@
 // Decompiled by:       Fernflower v0.6
-// Date:                09.11.2010 14:04:57
+// Date:                15.11.2010 02:38:49
 // Copyright:           2008-2009, Stiver
 // Home page:           http://www.reversed-java.com
 
 import java.util.Random;
 
-public class bk {
+public class bk extends fc {
 
-   private static int[][] d = new int[][]{{1, 1, 0}, {-1, 1, 0}, {1, -1, 0}, {-1, -1, 0}, {1, 0, 1}, {-1, 0, 1}, {1, 0, -1}, {-1, 0, -1}, {0, 1, 1}, {0, -1, 1}, {0, 1, -1}, {0, -1, -1}};
-   private int[] e;
-   public double a;
-   public double b;
-   public double c;
-   private static final double f = 0.5D * (Math.sqrt(3.0D) - 1.0D);
-   private static final double g = (3.0D - Math.sqrt(3.0D)) / 6.0D;
-
-
-   public bk() {
-      this(new Random());
+   protected void a(int var1, int var2, byte[] var3, double var4, double var6, double var8) {
+      this.a(var1, var2, var3, var4, var6, var8, 1.0F + this.b.nextFloat() * 6.0F, 0.0F, 0.0F, -1, -1, 0.5D);
    }
 
-   public bk(Random var1) {
-      this.e = new int[512];
-      this.a = var1.nextDouble() * 256.0D;
-      this.b = var1.nextDouble() * 256.0D;
-      this.c = var1.nextDouble() * 256.0D;
-
-      int var2;
-      for(var2 = 0; var2 < 256; this.e[var2] = var2++) {
-         ;
+   protected void a(int var1, int var2, byte[] var3, double var4, double var6, double var8, float var10, float var11, float var12, int var13, int var14, double var15) {
+      double var17 = (double)(var1 * 16 + 8);
+      double var19 = (double)(var2 * 16 + 8);
+      float var21 = 0.0F;
+      float var22 = 0.0F;
+      Random var23 = new Random(this.b.nextLong());
+      if(var14 <= 0) {
+         int var24 = this.a * 16 - 16;
+         var14 = var24 - var23.nextInt(var24 / 4);
       }
 
-      for(var2 = 0; var2 < 256; ++var2) {
-         int var3 = var1.nextInt(256 - var2) + var2;
-         int var4 = this.e[var2];
-         this.e[var2] = this.e[var3];
-         this.e[var3] = var4;
-         this.e[var2 + 256] = this.e[var2];
+      boolean var54 = false;
+      if(var13 == -1) {
+         var13 = var14 / 2;
+         var54 = true;
       }
 
-   }
+      int var25 = var23.nextInt(var14 / 2) + var14 / 4;
 
-   private static int a(double var0) {
-      return var0 > 0.0D?(int)var0:(int)var0 - 1;
-   }
+      for(boolean var26 = var23.nextInt(6) == 0; var13 < var14; ++var13) {
+         double var27 = 1.5D + (double)(hd.a((float)var13 * 3.1415927F / (float)var14) * var10 * 1.0F);
+         double var29 = var27 * var15;
+         float var31 = hd.b(var12);
+         float var32 = hd.a(var12);
+         var4 += (double)(hd.b(var11) * var31);
+         var6 += (double)var32;
+         var8 += (double)(hd.a(var11) * var31);
+         if(var26) {
+            var12 *= 0.92F;
+         } else {
+            var12 *= 0.7F;
+         }
 
-   private static double a(int[] var0, double var1, double var3) {
-      return (double)var0[0] * var1 + (double)var0[1] * var3;
-   }
+         var12 += var22 * 0.1F;
+         var11 += var21 * 0.1F;
+         var22 *= 0.9F;
+         var21 *= 0.75F;
+         var22 += (var23.nextFloat() - var23.nextFloat()) * var23.nextFloat() * 2.0F;
+         var21 += (var23.nextFloat() - var23.nextFloat()) * var23.nextFloat() * 4.0F;
+         if(!var54 && var13 == var25 && var10 > 1.0F) {
+            this.a(var1, var2, var3, var4, var6, var8, var23.nextFloat() * 0.5F + 0.5F, var11 - 1.5707964F, var12 / 3.0F, var13, var14, 1.0D);
+            this.a(var1, var2, var3, var4, var6, var8, var23.nextFloat() * 0.5F + 0.5F, var11 + 1.5707964F, var12 / 3.0F, var13, var14, 1.0D);
+            return;
+         }
 
-   public void a(double[] var1, double var2, double var4, int var6, int var7, double var8, double var10, double var12) {
-      int var14 = 0;
-
-      for(int var15 = 0; var15 < var6; ++var15) {
-         double var16 = (var2 + (double)var15) * var8 + this.a;
-
-         for(int var18 = 0; var18 < var7; ++var18) {
-            double var19 = (var4 + (double)var18) * var10 + this.b;
-            double var27 = (var16 + var19) * f;
-            int var29 = a(var16 + var27);
-            int var30 = a(var19 + var27);
-            double var31 = (double)(var29 + var30) * g;
-            double var33 = (double)var29 - var31;
-            double var35 = (double)var30 - var31;
-            double var37 = var16 - var33;
-            double var39 = var19 - var35;
-            byte var42;
-            byte var41;
-            if(var37 > var39) {
-               var41 = 1;
-               var42 = 0;
-            } else {
-               var41 = 0;
-               var42 = 1;
+         if(var54 || var23.nextInt(4) != 0) {
+            double var33 = var4 - var17;
+            double var35 = var8 - var19;
+            double var37 = (double)(var14 - var13);
+            double var39 = (double)(var10 + 2.0F + 16.0F);
+            if(var33 * var33 + var35 * var35 - var37 * var37 > var39 * var39) {
+               return;
             }
 
-            double var43 = var37 - (double)var41 + g;
-            double var45 = var39 - (double)var42 + g;
-            double var47 = var37 - 1.0D + 2.0D * g;
-            double var49 = var39 - 1.0D + 2.0D * g;
-            int var51 = var29 & 255;
-            int var52 = var30 & 255;
-            int var53 = this.e[var51 + this.e[var52]] % 12;
-            int var54 = this.e[var51 + var41 + this.e[var52 + var42]] % 12;
-            int var55 = this.e[var51 + 1 + this.e[var52 + 1]] % 12;
-            double var56 = 0.5D - var37 * var37 - var39 * var39;
-            double var21;
-            if(var56 < 0.0D) {
-               var21 = 0.0D;
-            } else {
-               var56 *= var56;
-               var21 = var56 * var56 * a(d[var53], var37, var39);
-            }
+            if(var4 >= var17 - 16.0D - var27 * 2.0D && var8 >= var19 - 16.0D - var27 * 2.0D && var4 <= var17 + 16.0D + var27 * 2.0D && var8 <= var19 + 16.0D + var27 * 2.0D) {
+               int var52 = hd.b(var4 - var27) - var1 * 16 - 1;
+               int var34 = hd.b(var4 + var27) - var1 * 16 + 1;
+               int var55 = hd.b(var6 - var29) - 1;
+               int var36 = hd.b(var6 + var29) + 1;
+               int var53 = hd.b(var8 - var27) - var2 * 16 - 1;
+               int var38 = hd.b(var8 + var27) - var2 * 16 + 1;
+               if(var52 < 0) {
+                  var52 = 0;
+               }
 
-            double var58 = 0.5D - var43 * var43 - var45 * var45;
-            double var23;
-            if(var58 < 0.0D) {
-               var23 = 0.0D;
-            } else {
-               var58 *= var58;
-               var23 = var58 * var58 * a(d[var54], var43, var45);
-            }
+               if(var34 > 16) {
+                  var34 = 16;
+               }
 
-            double var60 = 0.5D - var47 * var47 - var49 * var49;
-            double var25;
-            if(var60 < 0.0D) {
-               var25 = 0.0D;
-            } else {
-               var60 *= var60;
-               var25 = var60 * var60 * a(d[var55], var47, var49);
-            }
+               if(var55 < 1) {
+                  var55 = 1;
+               }
 
-            int var10001 = var14++;
-            var1[var10001] += 70.0D * (var21 + var23 + var25) * var12;
+               if(var36 > 120) {
+                  var36 = 120;
+               }
+
+               if(var53 < 0) {
+                  var53 = 0;
+               }
+
+               if(var38 > 16) {
+                  var38 = 16;
+               }
+
+               boolean var56 = false;
+
+               int var43;
+               int var40;
+               for(var40 = var52; !var56 && var40 < var34; ++var40) {
+                  for(int var41 = var53; !var56 && var41 < var38; ++var41) {
+                     for(int var42 = var36 + 1; !var56 && var42 >= var55 - 1; --var42) {
+                        var43 = (var40 * 16 + var41) * 128 + var42;
+                        if(var42 >= 0 && var42 < 128) {
+                           if(var3[var43] == fy.C.bh || var3[var43] == fy.D.bh) {
+                              var56 = true;
+                           }
+
+                           if(var42 != var55 - 1 && var40 != var52 && var40 != var34 - 1 && var41 != var53 && var41 != var38 - 1) {
+                              var42 = var55;
+                           }
+                        }
+                     }
+                  }
+               }
+
+               if(!var56) {
+                  for(var40 = var52; var40 < var34; ++var40) {
+                     double var51 = ((double)(var40 + var1 * 16) + 0.5D - var4) / var27;
+
+                     for(var43 = var53; var43 < var38; ++var43) {
+                        double var44 = ((double)(var43 + var2 * 16) + 0.5D - var8) / var27;
+                        int var46 = (var40 * 16 + var43) * 128 + var36;
+
+                        for(int var47 = var36 - 1; var47 >= var55; --var47) {
+                           double var48 = ((double)var47 + 0.5D - var6) / var29;
+                           if(var48 > -0.7D && var51 * var51 + var48 * var48 + var44 * var44 < 1.0D) {
+                              byte var50 = var3[var46];
+                              if(var50 == fy.bb.bh || var50 == fy.v.bh || var50 == fy.u.bh) {
+                                 var3[var46] = 0;
+                              }
+                           }
+
+                           --var46;
+                        }
+                     }
+                  }
+
+                  if(var54) {
+                     break;
+                  }
+               }
+            }
          }
       }
 
    }
 
+   protected void a(em var1, int var2, int var3, int var4, int var5, byte[] var6) {
+      int var7 = this.b.nextInt(this.b.nextInt(this.b.nextInt(10) + 1) + 1);
+      if(this.b.nextInt(5) != 0) {
+         var7 = 0;
+      }
+
+      for(int var8 = 0; var8 < var7; ++var8) {
+         double var9 = (double)(var2 * 16 + this.b.nextInt(16));
+         double var11 = (double)this.b.nextInt(128);
+         double var13 = (double)(var3 * 16 + this.b.nextInt(16));
+         int var15 = 1;
+         if(this.b.nextInt(4) == 0) {
+            this.a(var4, var5, var6, var9, var11, var13);
+            var15 += this.b.nextInt(4);
+         }
+
+         for(int var16 = 0; var16 < var15; ++var16) {
+            float var17 = this.b.nextFloat() * 3.1415927F * 2.0F;
+            float var18 = (this.b.nextFloat() - 0.5F) * 2.0F / 8.0F;
+            float var19 = this.b.nextFloat() * 2.0F + this.b.nextFloat();
+            this.a(var4, var5, var6, var9, var11, var13, var19 * 2.0F, var17, var18, 0, 0, 0.5D);
+         }
+      }
+
+   }
 }

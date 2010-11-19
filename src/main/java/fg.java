@@ -1,28 +1,28 @@
 // Decompiled by:       Fernflower v0.6
-// Date:                09.11.2010 14:06:39
+// Date:                15.11.2010 02:39:37
 // Copyright:           2008-2009, Stiver
 // Home page:           http://www.reversed-java.com
 
+import java.util.Random;
 
-public class fg extends fq {
+public class fg extends bi {
 
-   private String a;
+   public boolean a(em var1, Random var2, int var3, int var4, int var5) {
+      for(int var6 = 0; var6 < 10; ++var6) {
+         int var7 = var3 + var2.nextInt(8) - var2.nextInt(8);
+         int var8 = var4 + var2.nextInt(4) - var2.nextInt(4);
+         int var9 = var5 + var2.nextInt(8) - var2.nextInt(8);
+         if(var1.a(var7, var8, var9) == 0) {
+            int var10 = 1 + var2.nextInt(var2.nextInt(3) + 1);
 
-
-   protected fg(int var1, String var2) {
-      super(var1);
-      this.a = var2;
-      this.aX = 1;
-   }
-
-   public boolean a(hh var1, ft var2, el var3, int var4, int var5, int var6, int var7) {
-      if(var3.a(var4, var5, var6) == fw.aZ.bi && var3.b(var4, var5, var6) == 0) {
-         var3.b(var4, var5, var6, this.aW - fq.aU.aW + 1);
-         var3.a(this.a, var4, var5, var6);
-         --var1.a;
-         return true;
-      } else {
-         return false;
+            for(int var11 = 0; var11 < var10; ++var11) {
+               if(fy.aV.f(var1, var7, var8 + var11, var9)) {
+                  var1.a(var7, var8 + var11, var9, fy.aV.bh);
+               }
+            }
+         }
       }
+
+      return true;
    }
 }

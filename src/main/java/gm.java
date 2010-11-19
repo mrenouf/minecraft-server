@@ -1,25 +1,32 @@
 // Decompiled by:       Fernflower v0.6
-// Date:                09.11.2010 14:06:52
+// Date:                15.11.2010 02:39:44
 // Copyright:           2008-2009, Stiver
 // Home page:           http://www.reversed-java.com
 
-import java.util.Random;
 
-public class gm extends fw {
+public class gm {
 
-   protected gm(int var1) {
-      super(var1, jr.c);
+   public int a;
+   public int b;
+   public int c;
+   public int d;
+   public int e;
+   public bc f;
+   public dw g;
+
+
+   public gm(int var1, int var2, int var3, int var4, bc var5) {
+      this.a = 0;
+      this.b = var1;
+      this.c = var2;
+      this.d = var3;
+      this.e = var4;
+      this.f = bc.b(var5.a, var5.b, var5.c);
    }
 
-   public int a(Random var1) {
-      return 1;
-   }
-
-   public int a(int var1, Random var2) {
-      return fw.K.bi;
-   }
-
-   public int a(int var1) {
-      return var1 == 1?21:(var1 == 0?21:20);
+   public gm(dw var1) {
+      this.a = 1;
+      this.g = var1;
+      this.f = bc.b(var1.p, var1.q, var1.r);
    }
 }

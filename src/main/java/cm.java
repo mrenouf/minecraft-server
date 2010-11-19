@@ -1,44 +1,29 @@
 // Decompiled by:       Fernflower v0.6
-// Date:                09.11.2010 14:05:29
+// Date:                15.11.2010 02:39:08
 // Copyright:           2008-2009, Stiver
 // Home page:           http://www.reversed-java.com
 
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
+import java.util.Random;
 
-public class cm extends im {
+public class cm extends de {
 
-   public int a;
-   public int b;
-   public int c;
-
-
-   public cm() {
+   protected cm(int var1, int var2) {
+      super(var1, var2, jt.d);
    }
 
-   public cm(int var1, int var2, int var3) {
-      this.a = var1;
-      this.b = var2;
-      this.c = var3;
+   protected ay a_() {
+      return new ce();
    }
 
-   public void a(DataInputStream var1) {
-      this.a = var1.readInt();
-      this.b = var1.readInt();
-      this.c = var1.readInt();
+   public int a(int var1, Random var2) {
+      return 0;
    }
 
-   public void a(DataOutputStream var1) {
-      var1.writeInt(this.a);
-      var1.writeInt(this.b);
-      var1.writeInt(this.c);
+   public int a(Random var1) {
+      return 0;
    }
 
-   public void a(ex var1) {
-      var1.a(this);
-   }
-
-   public int a() {
-      return 12;
+   public boolean a() {
+      return false;
    }
 }

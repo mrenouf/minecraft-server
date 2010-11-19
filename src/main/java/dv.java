@@ -1,830 +1,223 @@
 // Decompiled by:       Fernflower v0.6
-// Date:                09.11.2010 14:05:50
+// Date:                15.11.2010 02:39:13
 // Copyright:           2008-2009, Stiver
 // Home page:           http://www.reversed-java.com
 
 import java.util.List;
-import java.util.Random;
 
-public abstract class dv {
+public class dv extends dw {
 
-   private static int a = 0;
-   public int g;
-   public double h;
-   public boolean i;
-   public dv j;
-   public dv k;
-   public el l;
-   public double m;
-   public double n;
-   public double o;
-   public double p;
-   public double q;
-   public double r;
-   public double s;
-   public double t;
-   public double u;
-   public float v;
-   public float w;
-   public float x;
-   public float y;
-   public final ds z;
-   public boolean A;
-   public boolean B;
-   public boolean C;
-   public boolean D;
-   public boolean E;
-   public boolean F;
-   public float G;
-   public float H;
-   public float I;
-   public float J;
-   public float K;
-   protected boolean L;
-   protected float M;
-   private int b;
-   public double N;
-   public double O;
-   public double P;
-   public float Q;
-   public float R;
-   public boolean S;
-   public float T;
-   public boolean U;
-   protected Random V;
-   public int W;
-   public int X;
-   public int Y;
-   protected int Z;
-   protected boolean aa;
-   public int ab;
-   public int ac;
-   private boolean c;
-   protected boolean ad;
-   private double d;
-   private double e;
-   public boolean ae;
-   public int af;
-   public int ag;
-   public int ah;
+   private int b = -1;
+   private int c = -1;
+   private int d = -1;
+   private int e = 0;
+   private boolean f = false;
+   public int a = 0;
+   private jv ai;
+   private int aj;
+   private int ak = 0;
 
 
-   public dv(el var1) {
-      this.g = a++;
-      this.h = 1.0D;
-      this.i = false;
-      this.z = ds.a(0.0D, 0.0D, 0.0D, 0.0D, 0.0D, 0.0D);
-      this.A = false;
-      this.D = false;
-      this.E = true;
-      this.F = false;
+   public dv(em var1) {
+      super(var1);
+      this.a(0.5F, 0.5F);
+   }
+
+   public dv(em var1, jv var2) {
+      super(var1);
+      this.ai = var2;
+      this.a(0.5F, 0.5F);
+      this.c(var2.p, var2.q, var2.r, var2.v, var2.w);
+      this.p -= (double)(hd.b(this.v / 180.0F * 3.1415927F) * 0.16F);
+      this.q -= 0.10000000149011612D;
+      this.r -= (double)(hd.a(this.v / 180.0F * 3.1415927F) * 0.16F);
+      this.a(this.p, this.q, this.r);
       this.G = 0.0F;
-      this.H = 0.6F;
-      this.I = 1.8F;
-      this.J = 0.0F;
-      this.K = 0.0F;
-      this.L = true;
-      this.M = 0.0F;
-      this.b = 1;
-      this.Q = 0.0F;
-      this.R = 0.0F;
-      this.S = false;
-      this.T = 0.0F;
-      this.U = false;
-      this.V = new Random();
-      this.W = 0;
-      this.X = 1;
-      this.Y = 0;
-      this.Z = 300;
-      this.aa = false;
-      this.ab = 0;
-      this.ac = 300;
-      this.c = true;
-      this.ad = false;
-      this.ae = false;
-      this.l = var1;
-      this.a(0.0D, 0.0D, 0.0D);
+      this.s = (double)(-hd.a(this.v / 180.0F * 3.1415927F) * hd.b(this.w / 180.0F * 3.1415927F));
+      this.u = (double)(hd.b(this.v / 180.0F * 3.1415927F) * hd.b(this.w / 180.0F * 3.1415927F));
+      this.t = (double)(-hd.a(this.w / 180.0F * 3.1415927F));
+      this.a(this.s, this.t, this.u, 1.5F, 1.0F);
    }
 
-   public boolean equals(Object var1) {
-      return var1 instanceof dv?((dv)var1).g == this.g:false;
-   }
-
-   public int hashCode() {
-      return this.g;
-   }
-
-   public void l() {
-      this.F = true;
-   }
-
-   protected void a(float var1, float var2) {
-      this.H = var1;
-      this.I = var2;
-   }
-
-   protected void b(float var1, float var2) {
-      this.v = var1;
-      this.w = var2;
-   }
-
-   public void a(double var1, double var3, double var5) {
-      this.p = var1;
-      this.q = var3;
-      this.r = var5;
-      float var7 = this.H / 2.0F;
-      float var8 = this.I;
-      this.z.c(var1 - (double)var7, var3 - (double)this.G + (double)this.Q, var5 - (double)var7, var1 + (double)var7, var3 - (double)this.G + (double)this.Q + (double)var8, var5 + (double)var7);
+   public void a(double var1, double var3, double var5, float var7, float var8) {
+      float var9 = hd.a(var1 * var1 + var3 * var3 + var5 * var5);
+      var1 /= (double)var9;
+      var3 /= (double)var9;
+      var5 /= (double)var9;
+      var1 += this.V.nextGaussian() * 0.007499999832361937D * (double)var8;
+      var3 += this.V.nextGaussian() * 0.007499999832361937D * (double)var8;
+      var5 += this.V.nextGaussian() * 0.007499999832361937D * (double)var8;
+      var1 *= (double)var7;
+      var3 *= (double)var7;
+      var5 *= (double)var7;
+      this.s = var1;
+      this.t = var3;
+      this.u = var5;
+      float var10 = hd.a(var1 * var1 + var5 * var5);
+      this.x = this.v = (float)(Math.atan2(var1, var5) * 180.0D / 3.1415927410125732D);
+      this.y = this.w = (float)(Math.atan2(var3, (double)var10) * 180.0D / 3.1415927410125732D);
+      this.aj = 0;
    }
 
    public void b_() {
-      this.m();
-   }
-
-   public void m() {
-      if(this.k != null && this.k.F) {
-         this.k = null;
+      super.b_();
+      if(this.a > 0) {
+         --this.a;
       }
 
-      ++this.W;
-      this.J = this.K;
-      this.m = this.p;
-      this.n = this.q;
-      this.o = this.r;
-      this.y = this.w;
-      this.x = this.v;
-      if(this.r()) {
-         if(!this.aa && !this.c) {
-            float var1 = hb.a(this.s * this.s * 0.20000000298023224D + this.t * this.t + this.u * this.u * 0.20000000298023224D) * 0.2F;
-            if(var1 > 1.0F) {
-               var1 = 1.0F;
+      if(this.f) {
+         int var1 = this.l.a(this.b, this.c, this.d);
+         if(var1 == this.e) {
+            ++this.aj;
+            if(this.aj == 1200) {
+               this.l();
             }
 
-            this.l.a(this, "random.splash", var1, 1.0F + (this.V.nextFloat() - this.V.nextFloat()) * 0.4F);
-            float var2 = (float)hb.b(this.z.b);
-
-            int var3;
-            float var4;
-            float var5;
-            for(var3 = 0; (float)var3 < 1.0F + this.H * 20.0F; ++var3) {
-               var4 = (this.V.nextFloat() * 2.0F - 1.0F) * this.H;
-               var5 = (this.V.nextFloat() * 2.0F - 1.0F) * this.H;
-               this.l.a("bubble", this.p + (double)var4, (double)(var2 + 1.0F), this.r + (double)var5, this.s, this.t - (double)(this.V.nextFloat() * 0.2F), this.u);
-            }
-
-            for(var3 = 0; (float)var3 < 1.0F + this.H * 20.0F; ++var3) {
-               var4 = (this.V.nextFloat() * 2.0F - 1.0F) * this.H;
-               var5 = (this.V.nextFloat() * 2.0F - 1.0F) * this.H;
-               this.l.a("splash", this.p + (double)var4, (double)(var2 + 1.0F), this.r + (double)var5, this.s, this.t, this.u);
-            }
+            return;
          }
 
-         this.M = 0.0F;
-         this.aa = true;
-         this.Y = 0;
+         this.f = false;
+         this.s *= (double)(this.V.nextFloat() * 0.2F);
+         this.t *= (double)(this.V.nextFloat() * 0.2F);
+         this.u *= (double)(this.V.nextFloat() * 0.2F);
+         this.aj = 0;
+         this.ak = 0;
       } else {
-         this.aa = false;
+         ++this.ak;
       }
 
-      if(this.Y > 0) {
-         if(this.ad) {
-            this.Y -= 4;
-            if(this.Y < 0) {
-               this.Y = 0;
+      bc var16 = bc.b(this.p, this.q, this.r);
+      bc var2 = bc.b(this.p + this.s, this.q + this.t, this.r + this.u);
+      gm var3 = this.l.a(var16, var2);
+      var16 = bc.b(this.p, this.q, this.r);
+      var2 = bc.b(this.p + this.s, this.q + this.t, this.r + this.u);
+      if(var3 != null) {
+         var2 = bc.b(var3.f.a, var3.f.b, var3.f.c);
+      }
+
+      dw var4 = null;
+      List var5 = this.l.b(this, this.z.a(this.s, this.t, this.u).b(1.0D, 1.0D, 1.0D));
+      double var6 = 0.0D;
+
+      float var10;
+      for(int var8 = 0; var8 < var5.size(); ++var8) {
+         dw var9 = (dw)var5.get(var8);
+         if(var9.c_() && (var9 != this.ai || this.ak >= 5)) {
+            var10 = 0.3F;
+            dt var11 = var9.z.b((double)var10, (double)var10, (double)var10);
+            gm var12 = var11.a(var16, var2);
+            if(var12 != null) {
+               double var13 = var16.a(var12.f);
+               if(var13 < var6 || var6 == 0.0D) {
+                  var4 = var9;
+                  var6 = var13;
+               }
+            }
+         }
+      }
+
+      if(var4 != null) {
+         var3 = new gm(var4);
+      }
+
+      float var15;
+      if(var3 != null) {
+         if(var3.g != null) {
+            if(var3.g.a(this.ai, 4)) {
+               this.l.a(this, "random.drr", 1.0F, 1.2F / (this.V.nextFloat() * 0.2F + 0.9F));
+               this.l();
+            } else {
+               this.s *= -0.10000000149011612D;
+               this.t *= -0.10000000149011612D;
+               this.u *= -0.10000000149011612D;
+               this.v += 180.0F;
+               this.x += 180.0F;
+               this.ak = 0;
             }
          } else {
-            if(this.Y % 20 == 0) {
-               this.a((dv)null, 1);
-            }
-
-            --this.Y;
+            this.b = var3.b;
+            this.c = var3.c;
+            this.d = var3.d;
+            this.e = this.l.a(this.b, this.c, this.d);
+            this.s = (double)((float)(var3.f.a - this.p));
+            this.t = (double)((float)(var3.f.b - this.q));
+            this.u = (double)((float)(var3.f.c - this.r));
+            var15 = hd.a(this.s * this.s + this.t * this.t + this.u * this.u);
+            this.p -= this.s / (double)var15 * 0.05000000074505806D;
+            this.q -= this.t / (double)var15 * 0.05000000074505806D;
+            this.r -= this.u / (double)var15 * 0.05000000074505806D;
+            this.l.a(this, "random.drr", 1.0F, 1.2F / (this.V.nextFloat() * 0.2F + 0.9F));
+            this.f = true;
+            this.a = 7;
          }
       }
 
-      if(this.t()) {
-         this.n();
+      this.p += this.s;
+      this.q += this.t;
+      this.r += this.u;
+      var15 = hd.a(this.s * this.s + this.u * this.u);
+      this.v = (float)(Math.atan2(this.s, this.u) * 180.0D / 3.1415927410125732D);
+
+      for(this.w = (float)(Math.atan2(this.t, (double)var15) * 180.0D / 3.1415927410125732D); this.w - this.y < -180.0F; this.y -= 360.0F) {
+         ;
       }
 
-      if(this.q < -64.0D) {
-         this.o();
+      while(this.w - this.y >= 180.0F) {
+         this.y += 360.0F;
       }
 
-      this.c = false;
-   }
-
-   protected void n() {
-      if(this.ad) {
-         this.Y = 600;
-      } else {
-         this.a((dv)null, 4);
-         this.Y = 600;
-      }
-
-   }
-
-   protected void o() {
-      this.l();
-   }
-
-   public boolean b(double var1, double var3, double var5) {
-      ds var7 = this.z.c(var1, var3, var5);
-      List var8 = this.l.a(this, var7);
-      return var8.size() > 0?false:!this.l.b(var7);
-   }
-
-   public void c(double var1, double var3, double var5) {
-      if(this.S) {
-         this.z.d(var1, var3, var5);
-         this.p = (this.z.a + this.z.d) / 2.0D;
-         this.q = this.z.b + (double)this.G - (double)this.Q;
-         this.r = (this.z.c + this.z.f) / 2.0D;
-      } else {
-         double var7 = this.p;
-         double var9 = this.r;
-         double var11 = var1;
-         double var13 = var3;
-         double var15 = var5;
-         ds var17 = this.z.b();
-         boolean var18 = this.A && this.p();
-         if(var18) {
-            double var19;
-            for(var19 = 0.05D; var1 != 0.0D && this.l.a(this, this.z.c(var1, -1.0D, 0.0D)).size() == 0; var11 = var1) {
-               if(var1 < var19 && var1 >= -var19) {
-                  var1 = 0.0D;
-               } else if(var1 > 0.0D) {
-                  var1 -= var19;
-               } else {
-                  var1 += var19;
-               }
-            }
-
-            for(; var5 != 0.0D && this.l.a(this, this.z.c(0.0D, -1.0D, var5)).size() == 0; var15 = var5) {
-               if(var5 < var19 && var5 >= -var19) {
-                  var5 = 0.0D;
-               } else if(var5 > 0.0D) {
-                  var5 -= var19;
-               } else {
-                  var5 += var19;
-               }
-            }
-         }
-
-         List var38 = this.l.a(this, this.z.a(var1, var3, var5));
-
-         for(int var20 = 0; var20 < var38.size(); ++var20) {
-            var3 = ((ds)var38.get(var20)).b(this.z, var3);
-         }
-
-         this.z.d(0.0D, var3, 0.0D);
-         if(!this.E && var13 != var3) {
-            var5 = 0.0D;
-            var3 = 0.0D;
-            var1 = 0.0D;
-         }
-
-         boolean var37 = this.A || var13 != var3 && var13 < 0.0D;
-
-         int var21;
-         for(var21 = 0; var21 < var38.size(); ++var21) {
-            var1 = ((ds)var38.get(var21)).a(this.z, var1);
-         }
-
-         this.z.d(var1, 0.0D, 0.0D);
-         if(!this.E && var11 != var1) {
-            var5 = 0.0D;
-            var3 = 0.0D;
-            var1 = 0.0D;
-         }
-
-         for(var21 = 0; var21 < var38.size(); ++var21) {
-            var5 = ((ds)var38.get(var21)).c(this.z, var5);
-         }
-
-         this.z.d(0.0D, 0.0D, var5);
-         if(!this.E && var15 != var5) {
-            var5 = 0.0D;
-            var3 = 0.0D;
-            var1 = 0.0D;
-         }
-
-         double var23;
-         int var28;
-         double var40;
-         if(this.R > 0.0F && var37 && this.Q < 0.05F && (var11 != var1 || var15 != var5)) {
-            var40 = var1;
-            var23 = var3;
-            double var25 = var5;
-            var1 = var11;
-            var3 = (double)this.R;
-            var5 = var15;
-            ds var27 = this.z.b();
-            this.z.b(var17);
-            var38 = this.l.a(this, this.z.a(var11, var3, var15));
-
-            for(var28 = 0; var28 < var38.size(); ++var28) {
-               var3 = ((ds)var38.get(var28)).b(this.z, var3);
-            }
-
-            this.z.d(0.0D, var3, 0.0D);
-            if(!this.E && var13 != var3) {
-               var5 = 0.0D;
-               var3 = 0.0D;
-               var1 = 0.0D;
-            }
-
-            for(var28 = 0; var28 < var38.size(); ++var28) {
-               var1 = ((ds)var38.get(var28)).a(this.z, var1);
-            }
-
-            this.z.d(var1, 0.0D, 0.0D);
-            if(!this.E && var11 != var1) {
-               var5 = 0.0D;
-               var3 = 0.0D;
-               var1 = 0.0D;
-            }
-
-            for(var28 = 0; var28 < var38.size(); ++var28) {
-               var5 = ((ds)var38.get(var28)).c(this.z, var5);
-            }
-
-            this.z.d(0.0D, 0.0D, var5);
-            if(!this.E && var15 != var5) {
-               var5 = 0.0D;
-               var3 = 0.0D;
-               var1 = 0.0D;
-            }
-
-            if(var40 * var40 + var25 * var25 >= var1 * var1 + var5 * var5) {
-               var1 = var40;
-               var3 = var23;
-               var5 = var25;
-               this.z.b(var27);
-            } else {
-               this.Q = (float)((double)this.Q + 0.5D);
-            }
-         }
-
-         this.p = (this.z.a + this.z.d) / 2.0D;
-         this.q = this.z.b + (double)this.G - (double)this.Q;
-         this.r = (this.z.c + this.z.f) / 2.0D;
-         this.B = var11 != var1 || var15 != var5;
-         this.C = var13 != var3;
-         this.A = var13 != var3 && var13 < 0.0D;
-         this.D = this.B || this.C;
-         if(this.A) {
-            if(this.M > 0.0F) {
-               this.a(this.M);
-               this.M = 0.0F;
-            }
-         } else if(var3 < 0.0D) {
-            this.M = (float)((double)this.M - var3);
-         }
-
-         if(var11 != var1) {
-            this.s = 0.0D;
-         }
-
-         if(var13 != var3) {
-            this.t = 0.0D;
-         }
-
-         if(var15 != var5) {
-            this.u = 0.0D;
-         }
-
-         var40 = this.p - var7;
-         var23 = this.r - var9;
-         this.K = (float)((double)this.K + (double)hb.a(var40 * var40 + var23 * var23) * 0.6D);
-         int var26;
-         int var35;
-         int var41;
-         if(this.L && !var18) {
-            var41 = hb.b(this.p);
-            var26 = hb.b(this.q - 0.20000000298023224D - (double)this.G);
-            var35 = hb.b(this.r);
-            var28 = this.l.a(var41, var26, var35);
-            if(this.K > (float)this.b && var28 > 0) {
-               ++this.b;
-               ca var29 = fw.n[var28].br;
-               if(this.l.a(var41, var26 + 1, var35) == fw.aT.bi) {
-                  var29 = fw.aT.br;
-                  this.l.a(this, var29.c(), var29.a() * 0.15F, var29.b());
-               } else if(!fw.n[var28].bt.d()) {
-                  this.l.a(this, var29.c(), var29.a() * 0.15F, var29.b());
-               }
-
-               fw.n[var28].b(this.l, var41, var26, var35, this);
-            }
-         }
-
-         var41 = hb.b(this.z.a);
-         var26 = hb.b(this.z.b);
-         var35 = hb.b(this.z.c);
-         var28 = hb.b(this.z.d);
-         int var39 = hb.b(this.z.e);
-         int var30 = hb.b(this.z.f);
-
-         for(int var31 = var41; var31 <= var28; ++var31) {
-            for(int var32 = var26; var32 <= var39; ++var32) {
-               for(int var33 = var35; var33 <= var30; ++var33) {
-                  int var34 = this.l.a(var31, var32, var33);
-                  if(var34 > 0) {
-                     fw.n[var34].a(this.l, var31, var32, var33, this);
-                  }
-               }
-            }
-         }
-
-         this.Q *= 0.4F;
-         boolean var36 = this.r();
-         if(this.l.c(this.z)) {
-            this.b(1);
-            if(!var36) {
-               ++this.Y;
-               if(this.Y == 0) {
-                  this.Y = 300;
-               }
-            }
-         } else if(this.Y <= 0) {
-            this.Y = -this.X;
-         }
-
-         if(var36 && this.Y > 0) {
-            this.l.a(this, "random.fizz", 0.7F, 1.6F + (this.V.nextFloat() - this.V.nextFloat()) * 0.4F);
-            this.Y = -this.X;
-         }
-
-      }
-   }
-
-   public boolean p() {
-      return false;
-   }
-
-   public ds q() {
-      return null;
-   }
-
-   protected void b(int var1) {
-      this.a((dv)null, var1);
-   }
-
-   protected void a(float var1) {
-   }
-
-   public boolean r() {
-      return this.l.a(this.z.b(0.0D, -0.4000000059604645D, 0.0D), jr.f, this);
-   }
-
-   public boolean a(jr var1) {
-      double var2 = this.q + (double)this.s();
-      int var4 = hb.b(this.p);
-      int var5 = hb.d((float)hb.b(var2));
-      int var6 = hb.b(this.r);
-      int var7 = this.l.a(var4, var5, var6);
-      if(var7 != 0 && fw.n[var7].bt == var1) {
-         float var8 = cx.b(this.l.b(var4, var5, var6)) - 0.11111111F;
-         float var9 = (float)(var5 + 1) - var8;
-         return var2 < (double)var9;
-      } else {
-         return false;
-      }
-   }
-
-   protected float s() {
-      return 0.0F;
-   }
-
-   public boolean t() {
-      return this.l.a(this.z.b(0.0D, -0.4000000059604645D, 0.0D), jr.g);
-   }
-
-   public void a(float var1, float var2, float var3) {
-      float var4 = hb.c(var1 * var1 + var2 * var2);
-      if(var4 >= 0.01F) {
-         if(var4 < 1.0F) {
-            var4 = 1.0F;
-         }
-
-         var4 = var3 / var4;
-         var1 *= var4;
-         var2 *= var4;
-         float var5 = hb.a(this.v * 3.1415927F / 180.0F);
-         float var6 = hb.b(this.v * 3.1415927F / 180.0F);
-         this.s += (double)(var1 * var6 - var2 * var5);
-         this.u += (double)(var2 * var6 + var1 * var5);
-      }
-   }
-
-   public float b(float var1) {
-      int var2 = hb.b(this.p);
-      double var3 = (this.z.e - this.z.b) * 0.66D;
-      int var5 = hb.b(this.q - (double)this.G + var3);
-      int var6 = hb.b(this.r);
-      return this.l.j(var2, var5, var6);
-   }
-
-   public void b(double var1, double var3, double var5, float var7, float var8) {
-      this.m = this.p = var1;
-      this.n = this.q = var3;
-      this.o = this.r = var5;
-      this.v = var7;
-      this.w = var8;
-      this.Q = 0.0F;
-      double var9 = (double)(this.x - var7);
-      if(var9 < -180.0D) {
-         this.x += 360.0F;
-      }
-
-      if(var9 >= 180.0D) {
+      while(this.v - this.x < -180.0F) {
          this.x -= 360.0F;
       }
 
+      while(this.v - this.x >= 180.0F) {
+         this.x += 360.0F;
+      }
+
+      this.w = this.y + (this.w - this.y) * 0.2F;
+      this.v = this.x + (this.v - this.x) * 0.2F;
+      float var17 = 0.99F;
+      var10 = 0.03F;
+      if(this.r()) {
+         for(int var18 = 0; var18 < 4; ++var18) {
+            float var19 = 0.25F;
+            this.l.a("bubble", this.p - this.s * (double)var19, this.q - this.t * (double)var19, this.r - this.u * (double)var19, this.s, this.t, this.u);
+         }
+
+         var17 = 0.8F;
+      }
+
+      this.s *= (double)var17;
+      this.t *= (double)var17;
+      this.u *= (double)var17;
+      this.t -= (double)var10;
       this.a(this.p, this.q, this.r);
    }
 
-   public void c(double var1, double var3, double var5, float var7, float var8) {
-      this.m = this.p = var1;
-      this.n = this.q = var3 + (double)this.G;
-      this.o = this.r = var5;
-      this.v = var7;
-      this.w = var8;
-      this.a(this.p, this.q, this.r);
+   public void a(v var1) {
+      var1.a("xTile", (short)this.b);
+      var1.a("yTile", (short)this.c);
+      var1.a("zTile", (short)this.d);
+      var1.a("inTile", (byte)this.e);
+      var1.a("shake", (byte)this.a);
+      var1.a("inGround", (byte)(this.f?1:0));
    }
 
-   public float a(dv var1) {
-      float var2 = (float)(this.p - var1.p);
-      float var3 = (float)(this.q - var1.q);
-      float var4 = (float)(this.r - var1.r);
-      return hb.c(var2 * var2 + var3 * var3 + var4 * var4);
+   public void b(v var1) {
+      this.b = var1.c("xTile");
+      this.c = var1.c("yTile");
+      this.d = var1.c("zTile");
+      this.e = var1.b("inTile") & 255;
+      this.a = var1.b("shake") & 255;
+      this.f = var1.b("inGround") == 1;
    }
 
-   public double d(double var1, double var3, double var5) {
-      double var7 = this.p - var1;
-      double var9 = this.q - var3;
-      double var11 = this.r - var5;
-      return var7 * var7 + var9 * var9 + var11 * var11;
-   }
-
-   public double e(double var1, double var3, double var5) {
-      double var7 = this.p - var1;
-      double var9 = this.q - var3;
-      double var11 = this.r - var5;
-      return (double)hb.a(var7 * var7 + var9 * var9 + var11 * var11);
-   }
-
-   public double b(dv var1) {
-      double var2 = this.p - var1.p;
-      double var4 = this.q - var1.q;
-      double var6 = this.r - var1.r;
-      return var2 * var2 + var4 * var4 + var6 * var6;
-   }
-
-   public void a(ft var1) {
-   }
-
-   public void c(dv var1) {
-      if(var1.j != this && var1.k != this) {
-         double var2 = var1.p - this.p;
-         double var4 = var1.r - this.r;
-         double var6 = hb.a(var2, var4);
-         if(var6 >= 0.009999999776482582D) {
-            var6 = (double)hb.a(var6);
-            var2 /= var6;
-            var4 /= var6;
-            double var8 = 1.0D / var6;
-            if(var8 > 1.0D) {
-               var8 = 1.0D;
-            }
-
-            var2 *= var8;
-            var4 *= var8;
-            var2 *= 0.05000000074505806D;
-            var4 *= 0.05000000074505806D;
-            var2 *= (double)(1.0F - this.T);
-            var4 *= (double)(1.0F - this.T);
-            this.f(-var2, 0.0D, -var4);
-            var1.f(var2, 0.0D, var4);
-         }
-
-      }
-   }
-
-   public void f(double var1, double var3, double var5) {
-      this.s += var1;
-      this.t += var3;
-      this.u += var5;
-   }
-
-   public boolean a(dv var1, int var2) {
-      return false;
-   }
-
-   public boolean c_() {
-      return false;
-   }
-
-   public boolean u() {
-      return false;
-   }
-
-   public void b(dv var1, int var2) {
-   }
-
-   public boolean c(t var1) {
-      String var2 = this.v();
-      if(!this.F && var2 != null) {
-         var1.a("id", var2);
-         this.d(var1);
-         return true;
-      } else {
-         return false;
-      }
-   }
-
-   public void d(t var1) {
-      var1.a("Pos", this.a(new double[]{this.p, this.q, this.r}));
-      var1.a("Motion", this.a(new double[]{this.s, this.t, this.u}));
-      var1.a("Rotation", this.a(new float[]{this.v, this.w}));
-      var1.a("FallDistance", this.M);
-      var1.a("Fire", (short)this.Y);
-      var1.a("Air", (short)this.ac);
-      var1.a("OnGround", this.A);
-      this.a(var1);
-   }
-
-   public void e(t var1) {
-      dy var2 = var1.k("Pos");
-      dy var3 = var1.k("Motion");
-      dy var4 = var1.k("Rotation");
-      this.a(0.0D, 0.0D, 0.0D);
-      this.s = ((ef)var3.a(0)).a;
-      this.t = ((ef)var3.a(1)).a;
-      this.u = ((ef)var3.a(2)).a;
-      this.m = this.N = this.p = ((ef)var2.a(0)).a;
-      this.n = this.O = this.q = ((ef)var2.a(1)).a;
-      this.o = this.P = this.r = ((ef)var2.a(2)).a;
-      this.x = this.v = ((l)var4.a(0)).a;
-      this.y = this.w = ((l)var4.a(1)).a;
-      this.M = var1.f("FallDistance");
-      this.Y = var1.c("Fire");
-      this.ac = var1.c("Air");
-      this.A = var1.l("OnGround");
-      this.a(this.p, this.q, this.r);
-      this.b(var1);
-   }
-
-   protected final String v() {
-      return hj.b(this);
-   }
-
-   protected abstract void b(t var1);
-
-   protected abstract void a(t var1);
-
-   protected dy a(double ... var1) {
-      dy var2 = new dy();
-      double[] var3 = var1;
-      int var4 = var1.length;
-
-      for(int var5 = 0; var5 < var4; ++var5) {
-         double var6 = var3[var5];
-         var2.a(new ef(var6));
+   public void b(fv var1) {
+      if(this.f && this.ai == var1 && this.a <= 0 && var1.ak.a(new hj(fs.j.aW, 1))) {
+         this.l.a(this, "random.pop", 0.2F, ((this.V.nextFloat() - this.V.nextFloat()) * 0.7F + 1.0F) * 2.0F);
+         var1.c(this, 1);
+         this.l();
       }
 
-      return var2;
    }
-
-   protected dy a(float ... var1) {
-      dy var2 = new dy();
-      float[] var3 = var1;
-      int var4 = var1.length;
-
-      for(int var5 = 0; var5 < var4; ++var5) {
-         float var6 = var3[var5];
-         var2.a(new l(var6));
-      }
-
-      return var2;
-   }
-
-   public gf a(int var1, int var2) {
-      return this.a(var1, var2, 0.0F);
-   }
-
-   public gf a(int var1, int var2, float var3) {
-      gf var4 = new gf(this.l, this.p, this.q + (double)var3, this.r, new hh(var1, var2));
-      var4.c = 10;
-      this.l.a(var4);
-      return var4;
-   }
-
-   public boolean w() {
-      return !this.F;
-   }
-
-   public boolean x() {
-      int var1 = hb.b(this.p);
-      int var2 = hb.b(this.q + (double)this.s());
-      int var3 = hb.b(this.r);
-      return this.l.d(var1, var2, var3);
-   }
-
-   public ds d(dv var1) {
-      return null;
-   }
-
-   public void y() {
-      if(this.k.F) {
-         this.k = null;
-      } else {
-         this.s = 0.0D;
-         this.t = 0.0D;
-         this.u = 0.0D;
-         this.b_();
-         this.k.z();
-         this.e += (double)(this.k.v - this.k.x);
-
-         for(this.d += (double)(this.k.w - this.k.y); this.e >= 180.0D; this.e -= 360.0D) {
-            ;
-         }
-
-         while(this.e < -180.0D) {
-            this.e += 360.0D;
-         }
-
-         while(this.d >= 180.0D) {
-            this.d -= 360.0D;
-         }
-
-         while(this.d < -180.0D) {
-            this.d += 360.0D;
-         }
-
-         double var1 = this.e * 0.5D;
-         double var3 = this.d * 0.5D;
-         float var5 = 10.0F;
-         if(var1 > (double)var5) {
-            var1 = (double)var5;
-         }
-
-         if(var1 < (double)(-var5)) {
-            var1 = (double)(-var5);
-         }
-
-         if(var3 > (double)var5) {
-            var3 = (double)var5;
-         }
-
-         if(var3 < (double)(-var5)) {
-            var3 = (double)(-var5);
-         }
-
-         this.e -= var1;
-         this.d -= var3;
-         this.v = (float)((double)this.v + var1);
-         this.w = (float)((double)this.w + var3);
-      }
-   }
-
-   protected void z() {
-      this.j.a(this.p, this.q + this.j() + this.j.A(), this.r);
-   }
-
-   public double A() {
-      return (double)this.G;
-   }
-
-   public double j() {
-      return (double)this.I * 0.75D;
-   }
-
-   public void e(dv var1) {
-      this.d = 0.0D;
-      this.e = 0.0D;
-      if(this.k == var1) {
-         this.k.j = null;
-         this.k = null;
-         this.c(var1.p, var1.z.b + (double)var1.I, var1.r, this.v, this.w);
-      } else {
-         if(this.k != null) {
-            this.k.j = null;
-         }
-
-         if(var1.j != null) {
-            var1.j.k = null;
-         }
-
-         this.k = var1;
-         var1.j = this;
-      }
-   }
-
-   public ba B() {
-      return null;
-   }
-
-   public void C() {
-   }
-
 }

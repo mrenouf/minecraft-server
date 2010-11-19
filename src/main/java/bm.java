@@ -1,203 +1,121 @@
 // Decompiled by:       Fernflower v0.6
-// Date:                09.11.2010 14:04:59
+// Date:                15.11.2010 02:38:50
 // Copyright:           2008-2009, Stiver
 // Home page:           http://www.reversed-java.com
 
-import java.util.List;
+import java.util.Random;
 
-public class bm extends dv {
+public class bm {
 
-   private int e = -1;
-   private int f = -1;
-   private int ai = -1;
-   private int aj = 0;
-   private boolean ak = false;
-   public int a = 0;
-   private jt al;
-   private int am;
-   private int an = 0;
+   private static int[][] d = new int[][]{{1, 1, 0}, {-1, 1, 0}, {1, -1, 0}, {-1, -1, 0}, {1, 0, 1}, {-1, 0, 1}, {1, 0, -1}, {-1, 0, -1}, {0, 1, 1}, {0, -1, 1}, {0, 1, -1}, {0, -1, -1}};
+   private int[] e;
+   public double a;
    public double b;
    public double c;
-   public double d;
+   private static final double f = 0.5D * (Math.sqrt(3.0D) - 1.0D);
+   private static final double g = (3.0D - Math.sqrt(3.0D)) / 6.0D;
 
 
-   public bm(el var1) {
-      super(var1);
-      this.a(1.0F, 1.0F);
+   public bm() {
+      this(new Random());
    }
 
-   public bm(el var1, jt var2, double var3, double var5, double var7) {
-      super(var1);
-      this.al = var2;
-      this.a(1.0F, 1.0F);
-      this.c(var2.p, var2.q, var2.r, var2.v, var2.w);
-      this.a(this.p, this.q, this.r);
-      this.G = 0.0F;
-      this.s = this.t = this.u = 0.0D;
-      var3 += this.V.nextGaussian() * 0.4D;
-      var5 += this.V.nextGaussian() * 0.4D;
-      var7 += this.V.nextGaussian() * 0.4D;
-      double var9 = (double)hb.a(var3 * var3 + var5 * var5 + var7 * var7);
-      this.b = var3 / var9 * 0.1D;
-      this.c = var5 / var9 * 0.1D;
-      this.d = var7 / var9 * 0.1D;
-   }
+   public bm(Random var1) {
+      this.e = new int[512];
+      this.a = var1.nextDouble() * 256.0D;
+      this.b = var1.nextDouble() * 256.0D;
+      this.c = var1.nextDouble() * 256.0D;
 
-   public void b_() {
-      super.b_();
-      this.Y = 10;
-      if(this.a > 0) {
-         --this.a;
-      }
-
-      if(this.ak) {
-         int var1 = this.l.a(this.e, this.f, this.ai);
-         if(var1 == this.aj) {
-            ++this.am;
-            if(this.am == 1200) {
-               this.l();
-            }
-
-            return;
-         }
-
-         this.ak = false;
-         this.s *= (double)(this.V.nextFloat() * 0.2F);
-         this.t *= (double)(this.V.nextFloat() * 0.2F);
-         this.u *= (double)(this.V.nextFloat() * 0.2F);
-         this.am = 0;
-         this.an = 0;
-      } else {
-         ++this.an;
-      }
-
-      ba var16 = ba.b(this.p, this.q, this.r);
-      ba var2 = ba.b(this.p + this.s, this.q + this.t, this.r + this.u);
-      gk var3 = this.l.a(var16, var2);
-      var16 = ba.b(this.p, this.q, this.r);
-      var2 = ba.b(this.p + this.s, this.q + this.t, this.r + this.u);
-      if(var3 != null) {
-         var2 = ba.b(var3.f.a, var3.f.b, var3.f.c);
-      }
-
-      dv var4 = null;
-      List var5 = this.l.b(this, this.z.a(this.s, this.t, this.u).b(1.0D, 1.0D, 1.0D));
-      double var6 = 0.0D;
-
-      float var10;
-      for(int var8 = 0; var8 < var5.size(); ++var8) {
-         dv var9 = (dv)var5.get(var8);
-         if(var9.c_() && (var9 != this.al || this.an >= 25)) {
-            var10 = 0.3F;
-            ds var11 = var9.z.b((double)var10, (double)var10, (double)var10);
-            gk var12 = var11.a(var16, var2);
-            if(var12 != null) {
-               double var13 = var16.a(var12.f);
-               if(var13 < var6 || var6 == 0.0D) {
-                  var4 = var9;
-                  var6 = var13;
-               }
-            }
-         }
-      }
-
-      if(var4 != null) {
-         var3 = new gk(var4);
-      }
-
-      if(var3 != null) {
-         if(var3.g != null && var3.g.a(this.al, 0)) {
-            ;
-         }
-
-         cg var15 = new cg();
-         var15.a = true;
-         var15.a(this.l, this, this.p, this.q, this.r, 1.0F);
-         this.l();
-      }
-
-      this.p += this.s;
-      this.q += this.t;
-      this.r += this.u;
-      float var17 = hb.a(this.s * this.s + this.u * this.u);
-      this.v = (float)(Math.atan2(this.s, this.u) * 180.0D / 3.1415927410125732D);
-
-      for(this.w = (float)(Math.atan2(this.t, (double)var17) * 180.0D / 3.1415927410125732D); this.w - this.y < -180.0F; this.y -= 360.0F) {
+      int var2;
+      for(var2 = 0; var2 < 256; this.e[var2] = var2++) {
          ;
       }
 
-      while(this.w - this.y >= 180.0F) {
-         this.y += 360.0F;
+      for(var2 = 0; var2 < 256; ++var2) {
+         int var3 = var1.nextInt(256 - var2) + var2;
+         int var4 = this.e[var2];
+         this.e[var2] = this.e[var3];
+         this.e[var3] = var4;
+         this.e[var2 + 256] = this.e[var2];
       }
 
-      while(this.v - this.x < -180.0F) {
-         this.x -= 360.0F;
-      }
+   }
 
-      while(this.v - this.x >= 180.0F) {
-         this.x += 360.0F;
-      }
+   private static int a(double var0) {
+      return var0 > 0.0D?(int)var0:(int)var0 - 1;
+   }
 
-      this.w = this.y + (this.w - this.y) * 0.2F;
-      this.v = this.x + (this.v - this.x) * 0.2F;
-      float var18 = 0.95F;
-      var10 = 0.0060F;
-      if(this.r()) {
-         for(int var19 = 0; var19 < 4; ++var19) {
-            float var20 = 0.25F;
-            this.l.a("bubble", this.p - this.s * (double)var20, this.q - this.t * (double)var20, this.r - this.u * (double)var20, this.s, this.t, this.u);
+   private static double a(int[] var0, double var1, double var3) {
+      return (double)var0[0] * var1 + (double)var0[1] * var3;
+   }
+
+   public void a(double[] var1, double var2, double var4, int var6, int var7, double var8, double var10, double var12) {
+      int var14 = 0;
+
+      for(int var15 = 0; var15 < var6; ++var15) {
+         double var16 = (var2 + (double)var15) * var8 + this.a;
+
+         for(int var18 = 0; var18 < var7; ++var18) {
+            double var19 = (var4 + (double)var18) * var10 + this.b;
+            double var27 = (var16 + var19) * f;
+            int var29 = a(var16 + var27);
+            int var30 = a(var19 + var27);
+            double var31 = (double)(var29 + var30) * g;
+            double var33 = (double)var29 - var31;
+            double var35 = (double)var30 - var31;
+            double var37 = var16 - var33;
+            double var39 = var19 - var35;
+            byte var42;
+            byte var41;
+            if(var37 > var39) {
+               var41 = 1;
+               var42 = 0;
+            } else {
+               var41 = 0;
+               var42 = 1;
+            }
+
+            double var43 = var37 - (double)var41 + g;
+            double var45 = var39 - (double)var42 + g;
+            double var47 = var37 - 1.0D + 2.0D * g;
+            double var49 = var39 - 1.0D + 2.0D * g;
+            int var51 = var29 & 255;
+            int var52 = var30 & 255;
+            int var53 = this.e[var51 + this.e[var52]] % 12;
+            int var54 = this.e[var51 + var41 + this.e[var52 + var42]] % 12;
+            int var55 = this.e[var51 + 1 + this.e[var52 + 1]] % 12;
+            double var56 = 0.5D - var37 * var37 - var39 * var39;
+            double var21;
+            if(var56 < 0.0D) {
+               var21 = 0.0D;
+            } else {
+               var56 *= var56;
+               var21 = var56 * var56 * a(d[var53], var37, var39);
+            }
+
+            double var58 = 0.5D - var43 * var43 - var45 * var45;
+            double var23;
+            if(var58 < 0.0D) {
+               var23 = 0.0D;
+            } else {
+               var58 *= var58;
+               var23 = var58 * var58 * a(d[var54], var43, var45);
+            }
+
+            double var60 = 0.5D - var47 * var47 - var49 * var49;
+            double var25;
+            if(var60 < 0.0D) {
+               var25 = 0.0D;
+            } else {
+               var60 *= var60;
+               var25 = var60 * var60 * a(d[var55], var47, var49);
+            }
+
+            int var10001 = var14++;
+            var1[var10001] += 70.0D * (var21 + var23 + var25) * var12;
          }
-
-         var18 = 0.8F;
       }
 
-      this.s += this.b;
-      this.t += this.c;
-      this.u += this.d;
-      this.s *= (double)var18;
-      this.t *= (double)var18;
-      this.u *= (double)var18;
-      this.l.a("smoke", this.p, this.q + 0.5D, this.r, 0.0D, 0.0D, 0.0D);
-      this.a(this.p, this.q, this.r);
    }
 
-   public void a(t var1) {
-      var1.a("xTile", (short)this.e);
-      var1.a("yTile", (short)this.f);
-      var1.a("zTile", (short)this.ai);
-      var1.a("inTile", (byte)this.aj);
-      var1.a("shake", (byte)this.a);
-      var1.a("inGround", (byte)(this.ak?1:0));
-   }
-
-   public void b(t var1) {
-      this.e = var1.c("xTile");
-      this.f = var1.c("yTile");
-      this.ai = var1.c("zTile");
-      this.aj = var1.b("inTile") & 255;
-      this.a = var1.b("shake") & 255;
-      this.ak = var1.b("inGround") == 1;
-   }
-
-   public boolean c_() {
-      return true;
-   }
-
-   public boolean a(dv var1, int var2) {
-      if(var1 != null) {
-         ba var3 = var1.B();
-         if(var3 != null) {
-            this.s = var3.a;
-            this.t = var3.b;
-            this.u = var3.c;
-            this.b = this.s * 0.1D;
-            this.c = this.t * 0.1D;
-            this.d = this.u * 0.1D;
-         }
-
-         return true;
-      } else {
-         return false;
-      }
-   }
 }

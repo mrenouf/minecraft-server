@@ -1,206 +1,117 @@
 // Decompiled by:       Fernflower v0.6
-// Date:                09.11.2010 14:07:16
+// Date:                15.11.2010 02:39:55
 // Copyright:           2008-2009, Stiver
 // Home page:           http://www.reversed-java.com
 
-import java.io.IOException;
+import java.util.Random;
 
-public class iu implements br {
+public class iu {
 
-   private jn c;
-   private br d;
-   private at e;
-   private jn[] f = new jn[1024];
-   private el g;
-   int a = -999999999;
-   int b = -999999999;
-   private jn h;
+   private fm e;
+   private fm f;
+   private fm g;
+   public double[] a;
+   public double[] b;
+   public double[] c;
+   public ij[] d;
 
 
-   public iu(el var1, at var2, br var3) {
-      this.c = new jn(var1, new byte['\u8000'], 0, 0);
-      this.c.q = true;
-      this.c.p = true;
-      this.g = var1;
-      this.e = var2;
-      this.d = var3;
+   protected iu() {
    }
 
-   public boolean a(int var1, int var2) {
-      if(var1 == this.a && var2 == this.b && this.h != null) {
-         return true;
-      } else {
-         int var3 = var1 & 31;
-         int var4 = var2 & 31;
-         int var5 = var3 + var4 * 32;
-         return this.f[var5] != null && (this.f[var5] == this.c || this.f[var5].a(var1, var2));
+   public iu(em var1) {
+      this.e = new fm(new Random(var1.u * 9871L), 4);
+      this.f = new fm(new Random(var1.u * 39811L), 4);
+      this.g = new fm(new Random(var1.u * 543321L), 2);
+   }
+
+   public ij a(kc var1) {
+      return this.a(var1.a, var1.b);
+   }
+
+   public ij a(int var1, int var2) {
+      return this.a(var1, var2, 1, 1)[0];
+   }
+
+   public ij[] a(int var1, int var2, int var3, int var4) {
+      this.d = this.a(this.d, var1, var2, var3, var4);
+      return this.d;
+   }
+
+   public double[] a(double[] var1, int var2, int var3, int var4, int var5) {
+      if(var1 == null || var1.length < var4 * var5) {
+         var1 = new double[var4 * var5];
       }
-   }
 
-   public jn b(int var1, int var2) {
-      if(var1 == this.a && var2 == this.b && this.h != null) {
-         return this.h;
-      } else {
-         int var3 = var1 & 31;
-         int var4 = var2 & 31;
-         int var5 = var3 + var4 * 32;
-         if(!this.a(var1, var2)) {
-            if(this.f[var5] != null) {
-               this.f[var5].e();
-               this.b(this.f[var5]);
-               this.a(this.f[var5]);
+      var1 = this.e.a(var1, (double)var2, (double)var3, var4, var4, 0.02500000037252903D, 0.02500000037252903D, 0.25D);
+      this.c = this.g.a(this.c, (double)var2, (double)var3, var4, var4, 0.25D, 0.25D, 0.5882352941176471D);
+      int var6 = 0;
+
+      for(int var7 = 0; var7 < var4; ++var7) {
+         for(int var8 = 0; var8 < var5; ++var8) {
+            double var9 = this.c[var6] * 1.1D + 0.5D;
+            double var11 = 0.01D;
+            double var13 = 1.0D - var11;
+            double var15 = (var1[var6] * 0.15D + 0.7D) * var13 + var9 * var11;
+            var15 = 1.0D - (1.0D - var15) * (1.0D - var15);
+            if(var15 < 0.0D) {
+               var15 = 0.0D;
             }
 
-            jn var6 = this.c(var1, var2);
-            if(var6 == null) {
-               if(this.d == null) {
-                  var6 = this.c;
-               } else {
-                  var6 = this.d.b(var1, var2);
-               }
+            if(var15 > 1.0D) {
+               var15 = 1.0D;
             }
 
-            this.f[var5] = var6;
-            var6.c();
-            if(this.f[var5] != null) {
-               this.f[var5].d();
-            }
-
-            if(!this.f[var5].n && this.a(var1 + 1, var2 + 1) && this.a(var1, var2 + 1) && this.a(var1 + 1, var2)) {
-               this.a(this, var1, var2);
-            }
-
-            if(this.a(var1 - 1, var2) && !this.b(var1 - 1, var2).n && this.a(var1 - 1, var2 + 1) && this.a(var1, var2 + 1) && this.a(var1 - 1, var2)) {
-               this.a(this, var1 - 1, var2);
-            }
-
-            if(this.a(var1, var2 - 1) && !this.b(var1, var2 - 1).n && this.a(var1 + 1, var2 - 1) && this.a(var1, var2 - 1) && this.a(var1 + 1, var2)) {
-               this.a(this, var1, var2 - 1);
-            }
-
-            if(this.a(var1 - 1, var2 - 1) && !this.b(var1 - 1, var2 - 1).n && this.a(var1 - 1, var2 - 1) && this.a(var1, var2 - 1) && this.a(var1 - 1, var2)) {
-               this.a(this, var1 - 1, var2 - 1);
-            }
-         }
-
-         this.a = var1;
-         this.b = var2;
-         this.h = this.f[var5];
-         return this.f[var5];
-      }
-   }
-
-   private jn c(int var1, int var2) {
-      if(this.e == null) {
-         return null;
-      } else {
-         try {
-            jn var3 = this.e.a(this.g, var1, var2);
-            if(var3 != null) {
-               var3.s = this.g.e;
-            }
-
-            return var3;
-         } catch (Exception var4) {
-            var4.printStackTrace();
-            return null;
-         }
-      }
-   }
-
-   private void a(jn var1) {
-      if(this.e != null) {
-         try {
-            this.e.b(this.g, var1);
-         } catch (Exception var3) {
-            var3.printStackTrace();
-         }
-
-      }
-   }
-
-   private void b(jn var1) {
-      if(this.e != null) {
-         try {
-            var1.s = this.g.e;
-            this.e.a(this.g, var1);
-         } catch (IOException var3) {
-            var3.printStackTrace();
-         }
-
-      }
-   }
-
-   public void a(br var1, int var2, int var3) {
-      jn var4 = this.b(var2, var3);
-      if(!var4.n) {
-         var4.n = true;
-         if(this.d != null) {
-            this.d.a(var1, var2, var3);
-            var4.f();
+            var1[var6] = var15;
+            ++var6;
          }
       }
 
+      return var1;
    }
 
-   public boolean a(boolean var1, iv var2) {
-      int var3 = 0;
-      int var4 = 0;
-      int var5;
-      if(var2 != null) {
-         for(var5 = 0; var5 < this.f.length; ++var5) {
-            if(this.f[var5] != null && this.f[var5].a(var1)) {
-               ++var4;
+   public ij[] a(ij[] var1, int var2, int var3, int var4, int var5) {
+      if(var1 == null || var1.length < var4 * var5) {
+         var1 = new ij[var4 * var5];
+      }
+
+      this.a = this.e.a(this.a, (double)var2, (double)var3, var4, var4, 0.02500000037252903D, 0.02500000037252903D, 0.25D);
+      this.b = this.f.a(this.b, (double)var2, (double)var3, var4, var4, 0.05000000074505806D, 0.05000000074505806D, 0.3333333333333333D);
+      this.c = this.g.a(this.c, (double)var2, (double)var3, var4, var4, 0.25D, 0.25D, 0.5882352941176471D);
+      int var6 = 0;
+
+      for(int var7 = 0; var7 < var4; ++var7) {
+         for(int var8 = 0; var8 < var5; ++var8) {
+            double var9 = this.c[var6] * 1.1D + 0.5D;
+            double var11 = 0.01D;
+            double var13 = 1.0D - var11;
+            double var15 = (this.a[var6] * 0.15D + 0.7D) * var13 + var9 * var11;
+            var11 = 0.0020D;
+            var13 = 1.0D - var11;
+            double var17 = (this.b[var6] * 0.15D + 0.5D) * var13 + var9 * var11;
+            var15 = 1.0D - (1.0D - var15) * (1.0D - var15);
+            if(var15 < 0.0D) {
+               var15 = 0.0D;
             }
+
+            if(var17 < 0.0D) {
+               var17 = 0.0D;
+            }
+
+            if(var15 > 1.0D) {
+               var15 = 1.0D;
+            }
+
+            if(var17 > 1.0D) {
+               var17 = 1.0D;
+            }
+
+            this.a[var6] = var15;
+            this.b[var6] = var17;
+            var1[var6++] = ij.a(var15, var17);
          }
       }
 
-      var5 = 0;
-
-      for(int var6 = 0; var6 < this.f.length; ++var6) {
-         if(this.f[var6] != null) {
-            if(var1 && !this.f[var6].p) {
-               this.a(this.f[var6]);
-            }
-
-            if(this.f[var6].a(var1)) {
-               this.b(this.f[var6]);
-               this.f[var6].o = false;
-               ++var3;
-               if(var3 == 2 && !var1) {
-                  return false;
-               }
-
-               if(var2 != null) {
-                  ++var5;
-                  if(var5 % 10 == 0) {
-                     var2.a(var5 * 100 / var4);
-                  }
-               }
-            }
-         }
-      }
-
-      if(var1) {
-         if(this.e == null) {
-            return true;
-         }
-
-         this.e.b();
-      }
-
-      return true;
-   }
-
-   public boolean a() {
-      if(this.e != null) {
-         this.e.a();
-      }
-
-      return this.d.a();
-   }
-
-   public boolean b() {
-      return true;
+      return var1;
    }
 }

@@ -1,42 +1,46 @@
 // Decompiled by:       Fernflower v0.6
-// Date:                09.11.2010 14:07:07
+// Date:                15.11.2010 02:39:51
 // Copyright:           2008-2009, Stiver
 // Home page:           http://www.reversed-java.com
 
+import java.io.File;
 
-public class hm {
+public class hm extends ig {
 
-   public final byte[] a;
-
-
-   public hm(int var1) {
-      this.a = new byte[var1 >> 1];
+   public void a() {
+      this.b = new gc(ij.l, 1.0D, 0.0D);
+      this.c = true;
+      this.d = true;
+      this.e = true;
+      this.g = -1;
    }
 
-   public hm(byte[] var1) {
-      this.a = var1;
-   }
+   protected void b() {
+      float var1 = 0.1F;
 
-   public int a(int var1, int var2, int var3) {
-      int var4 = var1 << 11 | var3 << 7 | var2;
-      int var5 = var4 >> 1;
-      int var6 = var4 & 1;
-      return var6 == 0?this.a[var5] & 15:this.a[var5] >> 4 & 15;
-   }
-
-   public void a(int var1, int var2, int var3, int var4) {
-      int var5 = var1 << 11 | var3 << 7 | var2;
-      int var6 = var5 >> 1;
-      int var7 = var5 & 1;
-      if(var7 == 0) {
-         this.a[var6] = (byte)(this.a[var6] & 240 | var4 & 15);
-      } else {
-         this.a[var6] = (byte)(this.a[var6] & 15 | (var4 & 15) << 4);
+      for(int var2 = 0; var2 <= 15; ++var2) {
+         float var3 = 1.0F - (float)var2 / 15.0F;
+         this.f[var2] = (1.0F - var3) / (var3 * 3.0F + 1.0F) * (1.0F - var1) + var1;
       }
 
    }
 
-   public boolean a() {
-      return this.a != null;
+   public bt c() {
+      return new bx(this.a, this.a.u);
+   }
+
+   public av a(File var1) {
+      File var2 = new File(var1, "DIM-1");
+      var2.mkdirs();
+      return new ff(var2, true);
+   }
+
+   public boolean a(int var1, int var2) {
+      int var3 = this.a.a(var1, var2);
+      return var3 == fy.z.bh?false:(var3 == 0?false:fy.o[var3]);
+   }
+
+   public float a(long var1, float var3) {
+      return 0.5F;
    }
 }

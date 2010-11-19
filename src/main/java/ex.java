@@ -1,121 +1,22 @@
 // Decompiled by:       Fernflower v0.6
-// Date:                09.11.2010 14:06:33
+// Date:                15.11.2010 02:39:36
 // Copyright:           2008-2009, Stiver
 // Home page:           http://www.reversed-java.com
 
 
-public class ex {
+public class ex extends hi {
 
-   public void a(dk var1) {
+   protected ex(int var1, int var2) {
+      super(var1, var2);
+      float var3 = 0.2F;
+      this.a(0.5F - var3, 0.0F, 0.5F - var3, 0.5F + var3, var3 * 2.0F, 0.5F + var3);
    }
 
-   public void a(im var1) {
+   protected boolean b(int var1) {
+      return fy.o[var1];
    }
 
-   public void a(String var1) {
-   }
-
-   public void a(jp var1) {
-      this.a(var1);
-   }
-
-   public void a(ab var1) {
-      this.a(var1);
-   }
-
-   public void a(gx var1) {
-      this.a(var1);
-   }
-
-   public void a(ic var1) {
-      this.a(var1);
-   }
-
-   public void a(hx var1) {
-      this.a(var1);
-   }
-
-   public void a(fi var1) {
-      this.a(var1);
-   }
-
-   public void a(dm var1) {
-      this.a(var1);
-   }
-
-   public void a(c var1) {
-      this.a(var1);
-   }
-
-   public void a(fo var1) {
-      this.a(var1);
-   }
-
-   public void a(cq var1) {
-      this.a(var1);
-   }
-
-   public void a(fv var1) {
-      this.a(var1);
-   }
-
-   public void a(gn var1) {
-      this.a(var1);
-   }
-
-   public void a(de var1) {
-      this.a(var1);
-   }
-
-   public void a(k var1) {
-      this.a(var1);
-   }
-
-   public void a(cp var1) {
-      this.a(var1);
-   }
-
-   public void a(be var1) {
-      this.a(var1);
-   }
-
-   public void a(fc var1) {
-      this.a(var1);
-   }
-
-   public void a(dx var1) {
-      this.a(var1);
-   }
-
-   public void a(p var1) {
-      this.a(var1);
-   }
-
-   public void a(e var1) {
-      this.a(var1);
-   }
-
-   public void a(ho var1) {
-      this.a(var1);
-   }
-
-   public void a(gd var1) {
-      this.a(var1);
-   }
-
-   public void a(s var1) {
-      this.a(var1);
-   }
-
-   public void a(ja var1) {
-      this.a(var1);
-   }
-
-   public void a(cm var1) {
-      this.a(var1);
-   }
-
-   public void a(cb var1) {
-      this.a(var1);
+   public boolean f(em var1, int var2, int var3, int var4) {
+      return var1.h(var2, var3, var4) <= 13 && this.b(var1.a(var2, var3 - 1, var4));
    }
 }

@@ -1,58 +1,50 @@
 // Decompiled by:       Fernflower v0.6
-// Date:                09.11.2010 14:06:43
+// Date:                15.11.2010 02:39:39
 // Copyright:           2008-2009, Stiver
 // Home page:           http://www.reversed-java.com
 
 import java.util.Random;
 
-public class fm extends cn {
+public class fm extends co {
 
-   private ai[] a;
+   private bm[] a;
    private int b;
 
 
    public fm(Random var1, int var2) {
       this.b = var2;
-      this.a = new ai[var2];
+      this.a = new bm[var2];
 
       for(int var3 = 0; var3 < var2; ++var3) {
-         this.a[var3] = new ai(var1);
+         this.a[var3] = new bm(var1);
       }
 
    }
 
-   public double a(double var1, double var3) {
-      double var5 = 0.0D;
-      double var7 = 1.0D;
-
-      for(int var9 = 0; var9 < this.b; ++var9) {
-         var5 += this.a[var9].a(var1 * var7, var3 * var7) / var7;
-         var7 /= 2.0D;
-      }
-
-      return var5;
+   public double[] a(double[] var1, double var2, double var4, int var6, int var7, double var8, double var10, double var12) {
+      return this.a(var1, var2, var4, var6, var7, var8, var10, var12, 0.5D);
    }
 
-   public double[] a(double[] var1, double var2, double var4, double var6, int var8, int var9, int var10, double var11, double var13, double var15) {
-      if(var1 == null) {
-         var1 = new double[var8 * var9 * var10];
-      } else {
-         for(int var17 = 0; var17 < var1.length; ++var17) {
-            var1[var17] = 0.0D;
+   public double[] a(double[] var1, double var2, double var4, int var6, int var7, double var8, double var10, double var12, double var14) {
+      var8 /= 1.5D;
+      var10 /= 1.5D;
+      if(var1 != null && var1.length >= var6 * var7) {
+         for(int var16 = 0; var16 < var1.length; ++var16) {
+            var1[var16] = 0.0D;
          }
+      } else {
+         var1 = new double[var6 * var7];
       }
 
-      double var20 = 1.0D;
+      double var21 = 1.0D;
+      double var18 = 1.0D;
 
-      for(int var19 = 0; var19 < this.b; ++var19) {
-         this.a[var19].a(var1, var2, var4, var6, var8, var9, var10, var11 * var20, var13 * var20, var15 * var20, var20);
-         var20 /= 2.0D;
+      for(int var20 = 0; var20 < this.b; ++var20) {
+         this.a[var20].a(var1, var2, var4, var6, var7, var8 * var18, var10 * var18, 0.55D / var21);
+         var18 *= var12;
+         var21 *= var14;
       }
 
       return var1;
-   }
-
-   public double[] a(double[] var1, int var2, int var3, int var4, int var5, double var6, double var8, double var10) {
-      return this.a(var1, (double)var2, 10.0D, (double)var3, var4, 1, var5, var6, 1.0D, var8);
    }
 }

@@ -1,35 +1,29 @@
 // Decompiled by:       Fernflower v0.6
-// Date:                09.11.2010 14:04:38
+// Date:                15.11.2010 02:38:41
 // Copyright:           2008-2009, Stiver
 // Home page:           http://www.reversed-java.com
 
+import java.util.Random;
 
-public abstract class aw extends gz implements ad {
+public class aw extends bi {
 
-   public aw(el var1) {
-      super(var1);
+   private int a;
+
+
+   public aw(int var1) {
+      this.a = var1;
    }
 
-   protected float a(int var1, int var2, int var3) {
-      return this.l.a(var1, var2 - 1, var3) == fw.v.bi?10.0F:this.l.j(var1, var2, var3) - 0.5F;
-   }
+   public boolean a(em var1, Random var2, int var3, int var4, int var5) {
+      for(int var6 = 0; var6 < 64; ++var6) {
+         int var7 = var3 + var2.nextInt(8) - var2.nextInt(8);
+         int var8 = var4 + var2.nextInt(4) - var2.nextInt(4);
+         int var9 = var5 + var2.nextInt(8) - var2.nextInt(8);
+         if(var1.a(var7, var8, var9) == 0 && ((hi)fy.m[this.a]).f(var1, var7, var8, var9)) {
+            var1.a(var7, var8, var9, this.a);
+         }
+      }
 
-   public void a(t var1) {
-      super.a(var1);
-   }
-
-   public void b(t var1) {
-      super.b(var1);
-   }
-
-   public boolean a() {
-      int var1 = hb.b(this.p);
-      int var2 = hb.b(this.z.b);
-      int var3 = hb.b(this.r);
-      return this.l.a(var1, var2 - 1, var3) == fw.v.bi && this.l.h(var1, var2, var3) > 8 && super.a();
-   }
-
-   public int b() {
-      return 120;
+      return true;
    }
 }

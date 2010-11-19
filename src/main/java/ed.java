@@ -1,64 +1,51 @@
 // Decompiled by:       Fernflower v0.6
-// Date:                09.11.2010 14:06:14
+// Date:                15.11.2010 02:39:28
 // Copyright:           2008-2009, Stiver
 // Home page:           http://www.reversed-java.com
 
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
 
-public class ed implements io {
+public class ed extends gz {
 
-   private int a;
-   private int b;
-   private jn[][] c;
-   private el d;
-
-
-   public ed(el var1, int var2, int var3, int var4, int var5, int var6, int var7) {
-      this.d = var1;
-      this.a = var2 >> 4;
-      this.b = var4 >> 4;
-      int var8 = var5 >> 4;
-      int var9 = var7 >> 4;
-      this.c = new jn[var8 - this.a + 1][var9 - this.b + 1];
-
-      for(int var10 = this.a; var10 <= var8; ++var10) {
-         for(int var11 = this.b; var11 <= var9; ++var11) {
-            this.c[var10 - this.a][var11 - this.b] = var1.c(var10, var11);
-         }
-      }
-
+   public ed() {
+      this.i = true;
+      this.h = true;
    }
 
-   public int a(int var1, int var2, int var3) {
-      if(var2 < 0) {
-         return 0;
-      } else if(var2 >= 128) {
-         return 0;
-      } else {
-         int var4 = (var1 >> 4) - this.a;
-         int var5 = (var3 >> 4) - this.b;
-         return this.c[var4][var5].a(var1 & 15, var2, var3 & 15);
-      }
+   public ed(double var1, double var3, double var5, double var7, float var9, float var10, boolean var11) {
+      this.a = var1;
+      this.b = var3;
+      this.d = var5;
+      this.c = var7;
+      this.e = var9;
+      this.f = var10;
+      this.g = var11;
+      this.i = true;
+      this.h = true;
    }
 
-   public int b(int var1, int var2, int var3) {
-      if(var2 < 0) {
-         return 0;
-      } else if(var2 >= 128) {
-         return 0;
-      } else {
-         int var4 = (var1 >> 4) - this.a;
-         int var5 = (var3 >> 4) - this.b;
-         return this.c[var4][var5].b(var1 & 15, var2, var3 & 15);
-      }
+   public void a(DataInputStream var1) {
+      this.a = var1.readDouble();
+      this.b = var1.readDouble();
+      this.d = var1.readDouble();
+      this.c = var1.readDouble();
+      this.e = var1.readFloat();
+      this.f = var1.readFloat();
+      super.a(var1);
    }
 
-   public jr c(int var1, int var2, int var3) {
-      int var4 = this.a(var1, var2, var3);
-      return var4 == 0?jr.a:fw.n[var4].bt;
+   public void a(DataOutputStream var1) {
+      var1.writeDouble(this.a);
+      var1.writeDouble(this.b);
+      var1.writeDouble(this.d);
+      var1.writeDouble(this.c);
+      var1.writeFloat(this.e);
+      var1.writeFloat(this.f);
+      super.a(var1);
    }
 
-   public boolean d(int var1, int var2, int var3) {
-      fw var4 = fw.n[this.a(var1, var2, var3)];
-      return var4 == null?false:var4.a();
+   public int a() {
+      return 41;
    }
 }

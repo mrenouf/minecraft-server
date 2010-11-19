@@ -1,48 +1,74 @@
 // Decompiled by:       Fernflower v0.6
-// Date:                09.11.2010 14:05:28
+// Date:                15.11.2010 02:39:07
 // Copyright:           2008-2009, Stiver
 // Home page:           http://www.reversed-java.com
 
 
-public class ci implements Comparable {
+public class ci extends dw {
 
-   private static long f = 0L;
    public int a;
-   public int b;
-   public int c;
-   public int d;
-   public long e;
-   private long g;
 
 
-   public ci(int var1, int var2, int var3, int var4) {
-      this.g = (long)(f++);
-      this.a = var1;
-      this.b = var2;
-      this.c = var3;
-      this.d = var4;
+   public ci(em var1) {
+      super(var1);
+      this.a = 0;
+      this.i = true;
+      this.a(0.98F, 0.98F);
+      this.G = this.I / 2.0F;
    }
 
-   public boolean equals(Object var1) {
-      if(!(var1 instanceof ci)) {
-         return false;
-      } else {
-         ci var2 = (ci)var1;
-         return this.a == var2.a && this.b == var2.b && this.c == var2.c && this.d == var2.d;
+   public ci(em var1, float var2, float var3, float var4) {
+      this(var1);
+      this.a((double)var2, (double)var3, (double)var4);
+      float var5 = (float)(Math.random() * 3.1415927410125732D * 2.0D);
+      this.s = (double)(-hd.a(var5 * 3.1415927F / 180.0F) * 0.02F);
+      this.t = 0.20000000298023224D;
+      this.u = (double)(-hd.b(var5 * 3.1415927F / 180.0F) * 0.02F);
+      this.L = false;
+      this.a = 80;
+      this.m = (double)var2;
+      this.n = (double)var3;
+      this.o = (double)var4;
+   }
+
+   public boolean c_() {
+      return !this.F;
+   }
+
+   public void b_() {
+      this.m = this.p;
+      this.n = this.q;
+      this.o = this.r;
+      this.t -= 0.03999999910593033D;
+      this.c(this.s, this.t, this.u);
+      this.s *= 0.9800000190734863D;
+      this.t *= 0.9800000190734863D;
+      this.u *= 0.9800000190734863D;
+      if(this.A) {
+         this.s *= 0.699999988079071D;
+         this.u *= 0.699999988079071D;
+         this.t *= -0.5D;
       }
+
+      if(this.a-- <= 0) {
+         this.l();
+         this.c();
+      } else {
+         this.l.a("smoke", this.p, this.q + 0.5D, this.r, 0.0D, 0.0D, 0.0D);
+      }
+
    }
 
-   public int hashCode() {
-      return (this.a * 128 * 1024 + this.c * 128 + this.b) * 256 + this.d;
+   private void c() {
+      float var1 = 4.0F;
+      this.l.a((dw)null, this.p, this.q, this.r, var1);
    }
 
-   public ci a(long var1) {
-      this.e = var1;
-      return this;
+   protected void a(v var1) {
+      var1.a("Fuse", (byte)this.a);
    }
 
-   public int a(ci var1) {
-      return this.e < var1.e?-1:(this.e > var1.e?1:(this.g < var1.g?-1:(this.g > var1.g?1:0)));
+   protected void b(v var1) {
+      this.a = var1.b("Fuse");
    }
-
 }

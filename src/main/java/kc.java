@@ -1,23 +1,34 @@
 // Decompiled by:       Fernflower v0.6
-// Date:                09.11.2010 14:08:05
+// Date:                15.11.2010 02:40:27
 // Copyright:           2008-2009, Stiver
 // Home page:           http://www.reversed-java.com
 
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
 
-public class kc extends im {
+public class kc {
 
-   public void a(ex var1) {
+   public int a;
+   public int b;
+
+
+   public kc(int var1, int var2) {
+      this.a = var1;
+      this.b = var2;
    }
 
-   public void a(DataInputStream var1) {
+   public int hashCode() {
+      return this.a << 8 | this.b;
    }
 
-   public void a(DataOutputStream var1) {
+   public boolean equals(Object var1) {
+      kc var2 = (kc)var1;
+      return var2.a == this.a && var2.b == this.b;
    }
 
-   public int a() {
-      return 0;
+   public double a(dw var1) {
+      double var2 = (double)(this.a * 16 + 8);
+      double var4 = (double)(this.b * 16 + 8);
+      double var6 = var2 - var1.p;
+      double var8 = var4 - var1.r;
+      return var6 * var6 + var8 * var8;
    }
 }

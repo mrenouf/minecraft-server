@@ -1,25 +1,80 @@
 // Decompiled by:       Fernflower v0.6
-// Date:                09.11.2010 14:07:09
+// Date:                15.11.2010 02:39:52
 // Copyright:           2008-2009, Stiver
 // Home page:           http://www.reversed-java.com
 
-import java.util.ArrayList;
 
-public class hy extends fw {
+public class hy extends dw {
 
-   public hy(int var1, int var2) {
-      super(var1, var2, jr.c);
+   public int a;
+   public int b = 0;
+
+
+   public hy(em var1) {
+      super(var1);
    }
 
-   public void a(el var1, int var2, int var3, int var4, ds var5, ArrayList var6) {
-      var6.add(ds.b((double)var2, (double)var3, (double)var4, (double)(var2 + 1), (double)var3 + 1.5D, (double)(var4 + 1)));
+   public hy(em var1, float var2, float var3, float var4, int var5) {
+      super(var1);
+      this.a = var5;
+      this.i = true;
+      this.a(0.98F, 0.98F);
+      this.G = this.I / 2.0F;
+      this.a((double)var2, (double)var3, (double)var4);
+      this.s = 0.0D;
+      this.t = 0.0D;
+      this.u = 0.0D;
+      this.L = false;
+      this.m = (double)var2;
+      this.n = (double)var3;
+      this.o = (double)var4;
    }
 
-   public boolean a(el var1, int var2, int var3, int var4) {
-      return var1.a(var2, var3 - 1, var4) == this.bi?false:(!var1.c(var2, var3 - 1, var4).a()?false:super.a(var1, var2, var3, var4));
+   public boolean c_() {
+      return !this.F;
    }
 
-   public boolean a() {
-      return false;
+   public void b_() {
+      if(this.a == 0) {
+         this.l();
+      } else {
+         this.m = this.p;
+         this.n = this.q;
+         this.o = this.r;
+         ++this.b;
+         this.t -= 0.03999999910593033D;
+         this.c(this.s, this.t, this.u);
+         this.s *= 0.9800000190734863D;
+         this.t *= 0.9800000190734863D;
+         this.u *= 0.9800000190734863D;
+         int var1 = hd.b(this.p);
+         int var2 = hd.b(this.q);
+         int var3 = hd.b(this.r);
+         if(this.l.a(var1, var2, var3) == this.a) {
+            this.l.d(var1, var2, var3, 0);
+         }
+
+         if(this.A) {
+            this.s *= 0.699999988079071D;
+            this.u *= 0.699999988079071D;
+            this.t *= -0.5D;
+            this.l();
+            if(!this.l.a(this.a, var1, var2, var3, true) || !this.l.d(var1, var2, var3, this.a)) {
+               this.a(this.a, 1);
+            }
+         } else if(this.b > 100) {
+            this.a(this.a, 1);
+            this.l();
+         }
+
+      }
+   }
+
+   protected void a(v var1) {
+      var1.a("Tile", (byte)this.a);
+   }
+
+   protected void b(v var1) {
+      this.a = var1.b("Tile") & 255;
    }
 }

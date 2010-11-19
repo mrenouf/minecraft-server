@@ -1,36 +1,38 @@
 // Decompiled by:       Fernflower v0.6
-// Date:                09.11.2010 14:06:14
+// Date:                15.11.2010 02:39:28
 // Copyright:           2008-2009, Stiver
 // Home page:           http://www.reversed-java.com
 
-import java.io.DataInput;
-import java.io.DataOutput;
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
 
-public class ef extends ha {
-
-   public double a;
-
+public class ef extends fp {
 
    public ef() {
    }
 
-   public ef(double var1) {
-      this.a = var1;
+   public ef(int var1, byte var2, byte var3, byte var4) {
+      super(var1);
+      this.b = var2;
+      this.c = var3;
+      this.d = var4;
    }
 
-   void a(DataOutput var1) {
-      var1.writeDouble(this.a);
+   public void a(DataInputStream var1) {
+      super.a(var1);
+      this.b = var1.readByte();
+      this.c = var1.readByte();
+      this.d = var1.readByte();
    }
 
-   void a(DataInput var1) {
-      this.a = var1.readDouble();
+   public void a(DataOutputStream var1) {
+      super.a(var1);
+      var1.writeByte(this.b);
+      var1.writeByte(this.c);
+      var1.writeByte(this.d);
    }
 
-   public byte a() {
-      return (byte)6;
-   }
-
-   public String toString() {
-      return "" + this.a;
+   public int a() {
+      return 7;
    }
 }

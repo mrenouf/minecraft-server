@@ -1,181 +1,161 @@
 // Decompiled by:       Fernflower v0.6
-// Date:                09.11.2010 14:06:13
+// Date:                15.11.2010 02:39:26
 // Copyright:           2008-2009, Stiver
 // Home page:           http://www.reversed-java.com
 
+import java.util.ArrayList;
+import java.util.Random;
 
-public class eb {
+public class eb extends fy {
 
-   public final dj a;
-   public int b;
-   public int c;
-   public int d;
-   public int e;
-   public int f;
-   public int g;
+   private fy a;
 
 
-   public eb(dj var1, int var2, int var3, int var4, int var5, int var6, int var7) {
-      this.a = var1;
-      this.b = var2;
-      this.c = var3;
-      this.d = var4;
-      this.e = var5;
-      this.f = var6;
-      this.g = var7;
+   protected eb(int var1, fy var2) {
+      super(var1, var2.bg, var2.bs);
+      this.a = var2;
+      this.c(var2.bi);
+      this.b(var2.bj / 3.0F);
+      this.a(var2.bq);
    }
 
-   public void a(el var1) {
-      int var2 = this.e - this.b + 1;
-      int var3 = this.f - this.c + 1;
-      int var4 = this.g - this.d + 1;
-      int var5 = var2 * var3 * var4;
-      if(var5 <= '\u8000') {
-         for(int var6 = this.b; var6 <= this.e; ++var6) {
-            for(int var7 = this.d; var7 <= this.g; ++var7) {
-               if(var1.e(var6, 0, var7)) {
-                  for(int var8 = this.c; var8 <= this.f; ++var8) {
-                     if(var8 >= 0 && var8 < 128) {
-                        int var9 = var1.a(this.a, var6, var8, var7);
-                        boolean var10 = false;
-                        int var11 = var1.a(var6, var8, var7);
-                        int var12 = fw.r[var11];
-                        if(var12 == 0) {
-                           var12 = 1;
-                        }
-
-                        int var13 = 0;
-                        if(this.a == dj.a) {
-                           if(var1.i(var6, var8, var7)) {
-                              var13 = 15;
-                           }
-                        } else if(this.a == dj.b) {
-                           var13 = fw.t[var11];
-                        }
-
-                        int var14;
-                        int var20;
-                        if(var12 >= 15 && var13 == 0) {
-                           var20 = 0;
-                        } else {
-                           var14 = var1.a(this.a, var6 - 1, var8, var7);
-                           int var15 = var1.a(this.a, var6 + 1, var8, var7);
-                           int var16 = var1.a(this.a, var6, var8 - 1, var7);
-                           int var17 = var1.a(this.a, var6, var8 + 1, var7);
-                           int var18 = var1.a(this.a, var6, var8, var7 - 1);
-                           int var19 = var1.a(this.a, var6, var8, var7 + 1);
-                           var20 = var14;
-                           if(var15 > var14) {
-                              var20 = var15;
-                           }
-
-                           if(var16 > var20) {
-                              var20 = var16;
-                           }
-
-                           if(var17 > var20) {
-                              var20 = var17;
-                           }
-
-                           if(var18 > var20) {
-                              var20 = var18;
-                           }
-
-                           if(var19 > var20) {
-                              var20 = var19;
-                           }
-
-                           var20 -= var12;
-                           if(var20 < 0) {
-                              var20 = 0;
-                           }
-
-                           if(var13 > var20) {
-                              var20 = var13;
-                           }
-                        }
-
-                        if(var9 != var20) {
-                           var1.b(this.a, var6, var8, var7, var20);
-                           var14 = var20 - 1;
-                           if(var14 < 0) {
-                              var14 = 0;
-                           }
-
-                           var1.a(this.a, var6 - 1, var8, var7, var14);
-                           var1.a(this.a, var6, var8 - 1, var7, var14);
-                           var1.a(this.a, var6, var8, var7 - 1, var14);
-                           if(var6 + 1 >= this.e) {
-                              var1.a(this.a, var6 + 1, var8, var7, var14);
-                           }
-
-                           if(var8 + 1 >= this.f) {
-                              var1.a(this.a, var6, var8 + 1, var7, var14);
-                           }
-
-                           if(var7 + 1 >= this.g) {
-                              var1.a(this.a, var6, var8, var7 + 1, var14);
-                           }
-                        }
-                     }
-                  }
-               }
-            }
-         }
-
-      }
+   public void a(iq var1, int var2, int var3, int var4) {
+      this.a(0.0F, 0.0F, 0.0F, 1.0F, 1.0F, 1.0F);
    }
 
-   public boolean a(int var1, int var2, int var3, int var4, int var5, int var6) {
-      if(var1 >= this.b && var2 >= this.c && var3 >= this.d && var4 <= this.e && var5 <= this.f && var6 <= this.g) {
-         return true;
-      } else {
-         byte var7 = 1;
-         if(var1 >= this.b - var7 && var2 >= this.c - var7 && var3 >= this.d - var7 && var4 <= this.e + var7 && var5 <= this.f + var7 && var6 <= this.g + var7) {
-            int var8 = this.e - this.b;
-            int var9 = this.f - this.c;
-            int var10 = this.g - this.d;
-            if(var1 > this.b) {
-               var1 = this.b;
-            }
+   public dt d(em var1, int var2, int var3, int var4) {
+      return super.d(var1, var2, var3, var4);
+   }
 
-            if(var2 > this.c) {
-               var2 = this.c;
-            }
+   public boolean a() {
+      return false;
+   }
 
-            if(var3 > this.d) {
-               var3 = this.d;
-            }
+   public boolean a(iq var1, int var2, int var3, int var4, int var5) {
+      return super.a(var1, var2, var3, var4, var5);
+   }
 
-            if(var4 < this.e) {
-               var4 = this.e;
-            }
-
-            if(var5 < this.f) {
-               var5 = this.f;
-            }
-
-            if(var6 < this.g) {
-               var6 = this.g;
-            }
-
-            int var11 = var4 - var1;
-            int var12 = var5 - var2;
-            int var13 = var6 - var3;
-            int var14 = var8 * var9 * var10;
-            int var15 = var11 * var12 * var13;
-            if(var15 - var14 <= 2) {
-               this.b = var1;
-               this.c = var2;
-               this.d = var3;
-               this.e = var4;
-               this.f = var5;
-               this.g = var6;
-               return true;
-            }
-         }
-
-         return false;
+   public void a(em var1, int var2, int var3, int var4, dt var5, ArrayList var6) {
+      int var7 = var1.b(var2, var3, var4);
+      if(var7 == 0) {
+         this.a(0.0F, 0.0F, 0.0F, 0.5F, 0.5F, 1.0F);
+         super.a(var1, var2, var3, var4, var5, var6);
+         this.a(0.5F, 0.0F, 0.0F, 1.0F, 1.0F, 1.0F);
+         super.a(var1, var2, var3, var4, var5, var6);
+      } else if(var7 == 1) {
+         this.a(0.0F, 0.0F, 0.0F, 0.5F, 1.0F, 1.0F);
+         super.a(var1, var2, var3, var4, var5, var6);
+         this.a(0.5F, 0.0F, 0.0F, 1.0F, 0.5F, 1.0F);
+         super.a(var1, var2, var3, var4, var5, var6);
+      } else if(var7 == 2) {
+         this.a(0.0F, 0.0F, 0.0F, 1.0F, 0.5F, 0.5F);
+         super.a(var1, var2, var3, var4, var5, var6);
+         this.a(0.0F, 0.0F, 0.5F, 1.0F, 1.0F, 1.0F);
+         super.a(var1, var2, var3, var4, var5, var6);
+      } else if(var7 == 3) {
+         this.a(0.0F, 0.0F, 0.0F, 1.0F, 1.0F, 0.5F);
+         super.a(var1, var2, var3, var4, var5, var6);
+         this.a(0.0F, 0.0F, 0.5F, 1.0F, 0.5F, 1.0F);
+         super.a(var1, var2, var3, var4, var5, var6);
       }
+
+      this.a(0.0F, 0.0F, 0.0F, 1.0F, 1.0F, 1.0F);
+   }
+
+   public void b(em var1, int var2, int var3, int var4, fv var5) {
+      this.a.b(var1, var2, var3, var4, var5);
+   }
+
+   public void a(em var1, int var2, int var3, int var4, int var5) {
+      this.a.a(var1, var2, var3, var4, var5);
+   }
+
+   public float a(dw var1) {
+      return this.a.a(var1);
+   }
+
+   public int a(int var1, Random var2) {
+      return this.a.a(var1, var2);
+   }
+
+   public int a(Random var1) {
+      return this.a.a(var1);
+   }
+
+   public int a(int var1) {
+      return this.a.a(var1);
+   }
+
+   public int b() {
+      return this.a.b();
+   }
+
+   public void a(em var1, int var2, int var3, int var4, dw var5, bc var6) {
+      this.a.a(var1, var2, var3, var4, var5, var6);
+   }
+
+   public boolean d() {
+      return this.a.d();
+   }
+
+   public boolean a(int var1, boolean var2) {
+      return this.a.a(var1, var2);
+   }
+
+   public boolean a(em var1, int var2, int var3, int var4) {
+      return this.a.a(var1, var2, var3, var4);
+   }
+
+   public void e(em var1, int var2, int var3, int var4) {
+      this.b(var1, var2, var3, var4, 0);
+      this.a.e(var1, var2, var3, var4);
+   }
+
+   public void b(em var1, int var2, int var3, int var4) {
+      this.a.b(var1, var2, var3, var4);
+   }
+
+   public void a(em var1, int var2, int var3, int var4, int var5, float var6) {
+      this.a.a(var1, var2, var3, var4, var5, var6);
+   }
+
+   public void a_(em var1, int var2, int var3, int var4, int var5) {
+      this.a.a_(var1, var2, var3, var4, var5);
+   }
+
+   public void b(em var1, int var2, int var3, int var4, dw var5) {
+      this.a.b(var1, var2, var3, var4, var5);
+   }
+
+   public void a(em var1, int var2, int var3, int var4, Random var5) {
+      this.a.a(var1, var2, var3, var4, var5);
+   }
+
+   public boolean a(em var1, int var2, int var3, int var4, fv var5) {
+      return this.a.a(var1, var2, var3, var4, var5);
+   }
+
+   public void c(em var1, int var2, int var3, int var4) {
+      this.a.c(var1, var2, var3, var4);
+   }
+
+   public void a(em var1, int var2, int var3, int var4, jv var5) {
+      int var6 = hd.b((double)(var5.v * 4.0F / 360.0F) + 0.5D) & 3;
+      if(var6 == 0) {
+         var1.b(var2, var3, var4, 2);
+      }
+
+      if(var6 == 1) {
+         var1.b(var2, var3, var4, 1);
+      }
+
+      if(var6 == 2) {
+         var1.b(var2, var3, var4, 3);
+      }
+
+      if(var6 == 3) {
+         var1.b(var2, var3, var4, 0);
+      }
+
    }
 }

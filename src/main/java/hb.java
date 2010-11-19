@@ -1,60 +1,156 @@
 // Decompiled by:       Fernflower v0.6
-// Date:                09.11.2010 14:07:04
+// Date:                15.11.2010 02:39:49
 // Copyright:           2008-2009, Stiver
 // Home page:           http://www.reversed-java.com
 
 
-public class hb {
+public class hb extends jv {
 
-   private static float[] a = new float[65536];
+   private cp a;
+   protected dw f;
+   protected boolean ai = false;
 
 
-   public static final float a(float var0) {
-      return a[(int)(var0 * 10430.378F) & '\uffff'];
+   public hb(em var1) {
+      super(var1);
    }
 
-   public static final float b(float var0) {
-      return a[(int)(var0 * 10430.378F + 16384.0F) & '\uffff'];
-   }
-
-   public static final float c(float var0) {
-      return (float)Math.sqrt((double)var0);
-   }
-
-   public static final float a(double var0) {
-      return (float)Math.sqrt(var0);
-   }
-
-   public static int d(float var0) {
-      int var1 = (int)var0;
-      return var0 < (float)var1?var1 - 1:var1;
-   }
-
-   public static int b(double var0) {
-      int var2 = (int)var0;
-      return var0 < (double)var2?var2 - 1:var2;
-   }
-
-   public static float e(float var0) {
-      return var0 >= 0.0F?var0:-var0;
-   }
-
-   public static double a(double var0, double var2) {
-      if(var0 < 0.0D) {
-         var0 = -var0;
+   protected void c() {
+      this.ai = false;
+      float var1 = 16.0F;
+      if(this.f == null) {
+         this.f = this.k();
+         if(this.f != null) {
+            this.a = this.l.a(this, this.f, var1);
+         }
+      } else if(!this.f.w()) {
+         this.f = null;
+      } else {
+         float var2 = this.f.a(this);
+         if(this.g(this.f)) {
+            this.a(this.f, var2);
+         }
       }
 
-      if(var2 < 0.0D) {
-         var2 = -var2;
+      if(!this.ai && this.f != null && (this.a == null || this.V.nextInt(20) == 0)) {
+         this.a = this.l.a(this, this.f, var1);
+      } else if(this.a == null && this.V.nextInt(80) == 0 || this.V.nextInt(80) == 0) {
+         boolean var21 = false;
+         int var3 = -1;
+         int var4 = -1;
+         int var5 = -1;
+         float var6 = -99999.0F;
+
+         for(int var7 = 0; var7 < 10; ++var7) {
+            int var8 = hd.b(this.p + (double)this.V.nextInt(13) - 6.0D);
+            int var9 = hd.b(this.q + (double)this.V.nextInt(7) - 3.0D);
+            int var10 = hd.b(this.r + (double)this.V.nextInt(13) - 6.0D);
+            float var11 = this.a(var8, var9, var10);
+            if(var11 > var6) {
+               var6 = var11;
+               var3 = var8;
+               var4 = var9;
+               var5 = var10;
+               var21 = true;
+            }
+         }
+
+         if(var21) {
+            this.a = this.l.a(this, var3, var4, var5, 10.0F);
+         }
       }
 
-      return var0 > var2?var0:var2;
+      int var25 = hd.b(this.z.b);
+      boolean var22 = this.r();
+      boolean var24 = this.t();
+      this.w = 0.0F;
+      if(this.a != null && this.V.nextInt(100) != 0) {
+         bc var27 = this.a.a(this);
+         double var28 = (double)(this.H * 2.0F);
+
+         while(var27 != null && var27.d(this.p, var27.b, this.r) < var28 * var28) {
+            this.a.a();
+            if(this.a.b()) {
+               var27 = null;
+               this.a = null;
+            } else {
+               var27 = this.a.a(this);
+            }
+         }
+
+         this.bp = false;
+         if(var27 != null) {
+            double var23 = var27.a - this.p;
+            double var26 = var27.c - this.r;
+            double var12 = var27.b - (double)var25;
+            float var14 = (float)(Math.atan2(var26, var23) * 180.0D / 3.1415927410125732D) - 90.0F;
+            float var15 = var14 - this.v;
+
+            for(this.bn = this.br; var15 < -180.0F; var15 += 360.0F) {
+               ;
+            }
+
+            while(var15 >= 180.0F) {
+               var15 -= 360.0F;
+            }
+
+            if(var15 > 30.0F) {
+               var15 = 30.0F;
+            }
+
+            if(var15 < -30.0F) {
+               var15 = -30.0F;
+            }
+
+            this.v += var15;
+            if(this.ai && this.f != null) {
+               double var16 = this.f.p - this.p;
+               double var18 = this.f.r - this.r;
+               float var20 = this.v;
+               this.v = (float)(Math.atan2(var18, var16) * 180.0D / 3.1415927410125732D) - 90.0F;
+               var15 = (var20 - this.v + 90.0F) * 3.1415927F / 180.0F;
+               this.bm = -hd.a(var15) * this.bn * 1.0F;
+               this.bn = hd.b(var15) * this.bn * 1.0F;
+            }
+
+            if(var12 > 0.0D) {
+               this.bp = true;
+            }
+         }
+
+         if(this.f != null) {
+            this.b(this.f, 30.0F);
+         }
+
+         if(this.B) {
+            this.bp = true;
+         }
+
+         if(this.V.nextFloat() < 0.8F && (var22 || var24)) {
+            this.bp = true;
+         }
+
+      } else {
+         super.c();
+         this.a = null;
+      }
    }
 
-   static {
-      for(int var0 = 0; var0 < 65536; ++var0) {
-         a[var0] = (float)Math.sin((double)var0 * 3.141592653589793D * 2.0D / 65536.0D);
-      }
+   protected void a(dw var1, float var2) {
+   }
 
+   protected float a(int var1, int var2, int var3) {
+      return 0.0F;
+   }
+
+   protected dw k() {
+      return null;
+   }
+
+   public boolean a() {
+      int var1 = hd.b(this.p);
+      int var2 = hd.b(this.z.b);
+      int var3 = hd.b(this.r);
+      return super.a() && this.a(var1, var2, var3) >= 0.0F;
    }
 }

@@ -1,56 +1,52 @@
 // Decompiled by:       Fernflower v0.6
-// Date:                09.11.2010 14:07:07
+// Date:                15.11.2010 02:39:51
 // Copyright:           2008-2009, Stiver
 // Home page:           http://www.reversed-java.com
 
 
-class hp {
+public class hp extends ax {
 
-   final int a;
-   Object b;
-   hp c;
-   final int d;
+   public boolean a = false;
 
 
-   hp(int var1, int var2, Object var3, hp var4) {
-      this.b = var3;
-      this.c = var4;
-      this.a = var2;
-      this.d = var1;
+   public hp(em var1) {
+      super(var1);
+      this.a(0.9F, 0.9F);
+      this.a = false;
    }
 
-   public final int a() {
-      return this.a;
+   public void a(v var1) {
+      super.a(var1);
+      var1.a("Saddle", this.a);
    }
 
-   public final Object b() {
-      return this.b;
+   public void b(v var1) {
+      super.b(var1);
+      this.a = var1.l("Saddle");
    }
 
-   public final boolean equals(Object var1) {
-      if(!(var1 instanceof hp)) {
-         return false;
+   protected String d() {
+      return "mob.pig";
+   }
+
+   protected String e() {
+      return "mob.pig";
+   }
+
+   protected String f() {
+      return "mob.pigdeath";
+   }
+
+   public boolean a(fv var1) {
+      if(this.a) {
+         var1.e(this);
+         return true;
       } else {
-         hp var2 = (hp)var1;
-         Integer var3 = Integer.valueOf(this.a());
-         Integer var4 = Integer.valueOf(var2.a());
-         if(var3 == var4 || var3 != null && var3.equals(var4)) {
-            Object var5 = this.b();
-            Object var6 = var2.b();
-            if(var5 == var6 || var5 != null && var5.equals(var6)) {
-               return true;
-            }
-         }
-
          return false;
       }
    }
 
-   public final int hashCode() {
-      return hz.f(this.a);
-   }
-
-   public final String toString() {
-      return this.a() + "=" + this.b();
+   protected int g() {
+      return fs.ao.aW;
    }
 }

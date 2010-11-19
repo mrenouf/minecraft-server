@@ -1,27 +1,28 @@
 // Decompiled by:       Fernflower v0.6
-// Date:                09.11.2010 14:07:06
+// Date:                15.11.2010 02:39:50
 // Copyright:           2008-2009, Stiver
 // Home page:           http://www.reversed-java.com
 
+import java.util.Random;
 
-public class hf extends fq {
+public class hf extends bi {
 
-   private static final int[] be = new int[]{3, 8, 6, 3};
-   private static final int[] bf = new int[]{11, 16, 15, 13};
-   public final int a;
-   public final int bb;
-   public final int bc;
-   public final int bd;
+   public boolean a(em var1, Random var2, int var3, int var4, int var5) {
+      for(int var6 = 0; var6 < 20; ++var6) {
+         int var7 = var3 + var2.nextInt(4) - var2.nextInt(4);
+         int var8 = var4;
+         int var9 = var5 + var2.nextInt(4) - var2.nextInt(4);
+         if(var1.a(var7, var4, var9) == 0 && (var1.c(var7 - 1, var4 - 1, var9) == jt.f || var1.c(var7 + 1, var4 - 1, var9) == jt.f || var1.c(var7, var4 - 1, var9 - 1) == jt.f || var1.c(var7, var4 - 1, var9 + 1) == jt.f)) {
+            int var10 = 2 + var2.nextInt(var2.nextInt(3) + 1);
 
+            for(int var11 = 0; var11 < var10; ++var11) {
+               if(fy.aX.f(var1, var7, var8 + var11, var9)) {
+                  var1.a(var7, var8 + var11, var9, fy.aX.bh);
+               }
+            }
+         }
+      }
 
-   public hf(int var1, int var2, int var3, int var4) {
-      super(var1);
-      this.a = var2;
-      this.bb = var4;
-      this.bd = var3;
-      this.bc = be[var4];
-      this.aY = bf[var4] * 3 << var2;
-      this.aX = 1;
+      return true;
    }
-
 }

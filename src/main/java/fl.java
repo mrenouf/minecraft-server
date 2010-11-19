@@ -1,50 +1,65 @@
 // Decompiled by:       Fernflower v0.6
-// Date:                09.11.2010 14:06:42
+// Date:                15.11.2010 02:39:39
 // Copyright:           2008-2009, Stiver
 // Home page:           http://www.reversed-java.com
 
 import java.util.Random;
 
-public class fl extends cn {
+public class fl extends bi {
 
-   private bk[] a;
-   private int b;
-
-
-   public fl(Random var1, int var2) {
-      this.b = var2;
-      this.a = new bk[var2];
-
-      for(int var3 = 0; var3 < var2; ++var3) {
-         this.a[var3] = new bk(var1);
-      }
-
-   }
-
-   public double[] a(double[] var1, double var2, double var4, int var6, int var7, double var8, double var10, double var12) {
-      return this.a(var1, var2, var4, var6, var7, var8, var10, var12, 0.5D);
-   }
-
-   public double[] a(double[] var1, double var2, double var4, int var6, int var7, double var8, double var10, double var12, double var14) {
-      var8 /= 1.5D;
-      var10 /= 1.5D;
-      if(var1 != null && var1.length >= var6 * var7) {
-         for(int var16 = 0; var16 < var1.length; ++var16) {
-            var1[var16] = 0.0D;
-         }
+   public boolean a(em var1, Random var2, int var3, int var4, int var5) {
+      if(var1.a(var3, var4, var5) != 0) {
+         return false;
+      } else if(var1.a(var3, var4 + 1, var5) != fy.bb.bh) {
+         return false;
       } else {
-         var1 = new double[var6 * var7];
+         var1.d(var3, var4, var5, fy.bd.bh);
+
+         for(int var6 = 0; var6 < 1500; ++var6) {
+            int var7 = var3 + var2.nextInt(8) - var2.nextInt(8);
+            int var8 = var4 - var2.nextInt(12);
+            int var9 = var5 + var2.nextInt(8) - var2.nextInt(8);
+            if(var1.a(var7, var8, var9) == 0) {
+               int var10 = 0;
+
+               for(int var11 = 0; var11 < 6; ++var11) {
+                  int var12 = 0;
+                  if(var11 == 0) {
+                     var12 = var1.a(var7 - 1, var8, var9);
+                  }
+
+                  if(var11 == 1) {
+                     var12 = var1.a(var7 + 1, var8, var9);
+                  }
+
+                  if(var11 == 2) {
+                     var12 = var1.a(var7, var8 - 1, var9);
+                  }
+
+                  if(var11 == 3) {
+                     var12 = var1.a(var7, var8 + 1, var9);
+                  }
+
+                  if(var11 == 4) {
+                     var12 = var1.a(var7, var8, var9 - 1);
+                  }
+
+                  if(var11 == 5) {
+                     var12 = var1.a(var7, var8, var9 + 1);
+                  }
+
+                  if(var12 == fy.bd.bh) {
+                     ++var10;
+                  }
+               }
+
+               if(var10 == 1) {
+                  var1.d(var7, var8, var9, fy.bd.bh);
+               }
+            }
+         }
+
+         return true;
       }
-
-      double var21 = 1.0D;
-      double var18 = 1.0D;
-
-      for(int var20 = 0; var20 < this.b; ++var20) {
-         this.a[var20].a(var1, var2, var4, var6, var7, var8 * var18, var10 * var18, 0.55D / var21);
-         var18 *= var12;
-         var21 *= var14;
-      }
-
-      return var1;
    }
 }

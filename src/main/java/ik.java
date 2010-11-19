@@ -1,52 +1,37 @@
 // Decompiled by:       Fernflower v0.6
-// Date:                09.11.2010 14:07:12
+// Date:                15.11.2010 02:39:54
 // Copyright:           2008-2009, Stiver
 // Home page:           http://www.reversed-java.com
 
 
 class ik extends Thread {
 
-   ik(bf var1, String var2) {
+   ik(bh var1) {
       this.a = var1;
-      super(var2);
+      super();
    }
 
    public void run() {
-      Object var1 = bf.a;
-      synchronized(bf.a) {
-         ++bf.b;
-      }
-
-      while(true) {
-         boolean var11 = false;
-
-         try {
-            var11 = true;
-            if(bf.a(this.a)) {
-               if(!bf.b(this.a)) {
-                  bf.c(this.a);
-                  continue;
-               }
-
-               var11 = false;
-               break;
-            }
-
-            var11 = false;
-            break;
-         } finally {
-            if(var11) {
-               Object var5 = bf.a;
-               synchronized(bf.a) {
-                  --bf.b;
-               }
+      try {
+         Thread.sleep(5000L);
+         if(bh.e(this.a).isAlive()) {
+            try {
+               bh.e(this.a).stop();
+            } catch (Throwable var3) {
+               ;
             }
          }
+
+         if(bh.f(this.a).isAlive()) {
+            try {
+               bh.f(this.a).stop();
+            } catch (Throwable var2) {
+               ;
+            }
+         }
+      } catch (InterruptedException var4) {
+         var4.printStackTrace();
       }
 
-      var1 = bf.a;
-      synchronized(bf.a) {
-         --bf.b;
-      }
    }
 }

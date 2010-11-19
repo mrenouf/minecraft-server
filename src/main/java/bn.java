@@ -1,46 +1,36 @@
 // Decompiled by:       Fernflower v0.6
-// Date:                09.11.2010 14:04:59
+// Date:                15.11.2010 02:38:50
 // Copyright:           2008-2009, Stiver
 // Home page:           http://www.reversed-java.com
 
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
+import java.io.DataInput;
+import java.io.DataOutput;
 
-public class bn extends fo {
+public class bn extends hc {
+
+   public int a;
+
 
    public bn() {
-      this.g = true;
    }
 
-   public bn(int var1, byte var2, byte var3, byte var4, byte var5, byte var6) {
-      super(var1);
-      this.b = var2;
-      this.c = var3;
-      this.d = var4;
-      this.e = var5;
-      this.f = var6;
-      this.g = true;
+   public bn(int var1) {
+      this.a = var1;
    }
 
-   public void a(DataInputStream var1) {
-      super.a(var1);
-      this.b = var1.readByte();
-      this.c = var1.readByte();
-      this.d = var1.readByte();
-      this.e = var1.readByte();
-      this.f = var1.readByte();
+   void a(DataOutput var1) {
+      var1.writeInt(this.a);
    }
 
-   public void a(DataOutputStream var1) {
-      super.a(var1);
-      var1.writeByte(this.b);
-      var1.writeByte(this.c);
-      var1.writeByte(this.d);
-      var1.writeByte(this.e);
-      var1.writeByte(this.f);
+   void a(DataInput var1) {
+      this.a = var1.readInt();
    }
 
-   public int a() {
-      return 9;
+   public byte a() {
+      return (byte)3;
+   }
+
+   public String toString() {
+      return "" + this.a;
    }
 }

@@ -1,36 +1,26 @@
 // Decompiled by:       Fernflower v0.6
-// Date:                09.11.2010 14:04:57
+// Date:                15.11.2010 02:38:49
 // Copyright:           2008-2009, Stiver
 // Home page:           http://www.reversed-java.com
 
-import java.io.DataInput;
-import java.io.DataOutput;
 
-public class bl extends ha {
+public interface bl {
 
-   public int a;
+   void a(int var1, int var2, int var3);
 
+   void a(int var1, int var2, int var3, int var4, int var5, int var6);
 
-   public bl() {
-   }
+   void a(String var1, double var2, double var4, double var6, float var8, float var9);
 
-   public bl(int var1) {
-      this.a = var1;
-   }
+   void a(String var1, double var2, double var4, double var6, double var8, double var10, double var12);
 
-   void a(DataOutput var1) {
-      var1.writeInt(this.a);
-   }
+   void a(dw var1);
 
-   void a(DataInput var1) {
-      this.a = var1.readInt();
-   }
+   void b(dw var1);
 
-   public byte a() {
-      return (byte)3;
-   }
+   void a();
 
-   public String toString() {
-      return "" + this.a;
-   }
+   void a(String var1, int var2, int var3, int var4);
+
+   void a(int var1, int var2, int var3, ay var4);
 }

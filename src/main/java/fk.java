@@ -1,65 +1,81 @@
 // Decompiled by:       Fernflower v0.6
-// Date:                09.11.2010 14:06:42
+// Date:                15.11.2010 02:39:39
 // Copyright:           2008-2009, Stiver
 // Home page:           http://www.reversed-java.com
 
-import java.util.Random;
 
-public class fk extends bg {
+public class fk extends fz {
 
-   public boolean a(el var1, Random var2, int var3, int var4, int var5) {
-      if(var1.a(var3, var4, var5) != 0) {
-         return false;
-      } else if(var1.a(var3, var4 + 1, var5) != fw.bc.bi) {
-         return false;
-      } else {
-         var1.d(var3, var4, var5, fw.be.bi);
+   int a;
+   int b;
+   int c = 30;
+   int d = -1;
 
-         for(int var6 = 0; var6 < 1500; ++var6) {
-            int var7 = var3 + var2.nextInt(8) - var2.nextInt(8);
-            int var8 = var4 - var2.nextInt(12);
-            int var9 = var5 + var2.nextInt(8) - var2.nextInt(8);
-            if(var1.a(var7, var8, var9) == 0) {
-               int var10 = 0;
 
-               for(int var11 = 0; var11 < 6; ++var11) {
-                  int var12 = 0;
-                  if(var11 == 0) {
-                     var12 = var1.a(var7 - 1, var8, var9);
-                  }
+   public fk(em var1) {
+      super(var1);
+   }
 
-                  if(var11 == 1) {
-                     var12 = var1.a(var7 + 1, var8, var9);
-                  }
+   public void a(v var1) {
+      super.a(var1);
+   }
 
-                  if(var11 == 2) {
-                     var12 = var1.a(var7, var8 - 1, var9);
-                  }
+   public void b(v var1) {
+      super.b(var1);
+   }
 
-                  if(var11 == 3) {
-                     var12 = var1.a(var7, var8 + 1, var9);
-                  }
+   protected void c() {
+      this.b = this.a;
+      if(this.a > 0 && this.d < 0) {
+         --this.a;
+      }
 
-                  if(var11 == 4) {
-                     var12 = var1.a(var7, var8, var9 - 1);
-                  }
+      if(this.d >= 0) {
+         this.d = 2;
+      }
 
-                  if(var11 == 5) {
-                     var12 = var1.a(var7, var8, var9 + 1);
-                  }
+      super.c();
+      if(this.d != 1) {
+         this.d = -1;
+      }
 
-                  if(var12 == fw.be.bi) {
-                     ++var10;
-                  }
-               }
+   }
 
-               if(var10 == 1) {
-                  var1.d(var7, var8, var9, fw.be.bi);
-               }
-            }
+   protected String e() {
+      return "mob.creeper";
+   }
+
+   protected String f() {
+      return "mob.creeperdeath";
+   }
+
+   public void f(dw var1) {
+      super.f(var1);
+      if(var1 instanceof ez) {
+         this.a(fs.aU.aW + this.V.nextInt(2), 1);
+      }
+
+   }
+
+   protected void a(dw var1, float var2) {
+      if(this.d <= 0 && var2 < 3.0F || this.d > 0 && var2 < 7.0F) {
+         if(this.a == 0) {
+            this.l.a(this, "random.fuse", 1.0F, 0.5F);
          }
 
-         return true;
+         this.d = 1;
+         ++this.a;
+         if(this.a == this.c) {
+            this.l.a(this, this.p, this.q, this.r, 3.0F);
+            this.l();
+         }
+
+         this.ai = true;
       }
+
+   }
+
+   protected int g() {
+      return fs.K.aW;
    }
 }

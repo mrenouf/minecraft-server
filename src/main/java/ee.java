@@ -1,38 +1,64 @@
 // Decompiled by:       Fernflower v0.6
-// Date:                09.11.2010 14:06:14
+// Date:                15.11.2010 02:39:28
 // Copyright:           2008-2009, Stiver
 // Home page:           http://www.reversed-java.com
 
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
 
-public class ee extends fo {
+public class ee implements iq {
 
-   public ee() {
+   private int a;
+   private int b;
+   private jp[][] c;
+   private em d;
+
+
+   public ee(em var1, int var2, int var3, int var4, int var5, int var6, int var7) {
+      this.d = var1;
+      this.a = var2 >> 4;
+      this.b = var4 >> 4;
+      int var8 = var5 >> 4;
+      int var9 = var7 >> 4;
+      this.c = new jp[var8 - this.a + 1][var9 - this.b + 1];
+
+      for(int var10 = this.a; var10 <= var8; ++var10) {
+         for(int var11 = this.b; var11 <= var9; ++var11) {
+            this.c[var10 - this.a][var11 - this.b] = var1.c(var10, var11);
+         }
+      }
+
    }
 
-   public ee(int var1, byte var2, byte var3, byte var4) {
-      super(var1);
-      this.b = var2;
-      this.c = var3;
-      this.d = var4;
+   public int a(int var1, int var2, int var3) {
+      if(var2 < 0) {
+         return 0;
+      } else if(var2 >= 128) {
+         return 0;
+      } else {
+         int var4 = (var1 >> 4) - this.a;
+         int var5 = (var3 >> 4) - this.b;
+         return this.c[var4][var5].a(var1 & 15, var2, var3 & 15);
+      }
    }
 
-   public void a(DataInputStream var1) {
-      super.a(var1);
-      this.b = var1.readByte();
-      this.c = var1.readByte();
-      this.d = var1.readByte();
+   public int b(int var1, int var2, int var3) {
+      if(var2 < 0) {
+         return 0;
+      } else if(var2 >= 128) {
+         return 0;
+      } else {
+         int var4 = (var1 >> 4) - this.a;
+         int var5 = (var3 >> 4) - this.b;
+         return this.c[var4][var5].b(var1 & 15, var2, var3 & 15);
+      }
    }
 
-   public void a(DataOutputStream var1) {
-      super.a(var1);
-      var1.writeByte(this.b);
-      var1.writeByte(this.c);
-      var1.writeByte(this.d);
+   public jt c(int var1, int var2, int var3) {
+      int var4 = this.a(var1, var2, var3);
+      return var4 == 0?jt.a:fy.m[var4].bs;
    }
 
-   public int a() {
-      return 7;
+   public boolean d(int var1, int var2, int var3) {
+      fy var4 = fy.m[this.a(var1, var2, var3)];
+      return var4 == null?false:var4.a();
    }
 }

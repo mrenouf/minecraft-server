@@ -1,17 +1,20 @@
 // Decompiled by:       Fernflower v0.6
-// Date:                09.11.2010 14:07:59
+// Date:                15.11.2010 02:40:25
 // Copyright:           2008-2009, Stiver
 // Home page:           http://www.reversed-java.com
 
 
-public class jy extends fq {
+public class jy extends jt {
 
-   private int a;
+   public boolean a() {
+      return false;
+   }
 
+   public boolean b() {
+      return false;
+   }
 
-   public jy(int var1, int var2) {
-      super(var1);
-      this.a = var2;
-      this.aX = 1;
+   public boolean c() {
+      return false;
    }
 }

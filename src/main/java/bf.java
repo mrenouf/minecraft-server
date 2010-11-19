@@ -1,199 +1,205 @@
 // Decompiled by:       Fernflower v0.6
-// Date:                09.11.2010 14:04:44
+// Date:                15.11.2010 02:38:43
 // Copyright:           2008-2009, Stiver
 // Home page:           http://www.reversed-java.com
 
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
-import java.net.Socket;
-import java.net.SocketAddress;
-import java.util.Collections;
-import java.util.LinkedList;
 import java.util.List;
 
-public class bf {
+public class bf extends dw {
 
-   public static final Object a = new Object();
-   public static int b;
-   public static int c;
-   private Object d = new Object();
-   private Socket e;
-   private DataInputStream f;
-   private DataOutputStream g;
-   private boolean h = true;
-   private List i = Collections.synchronizedList(new LinkedList());
-   private List j = Collections.synchronizedList(new LinkedList());
-   private List k = Collections.synchronizedList(new LinkedList());
-   private ex l;
-   private boolean m = false;
-   private Thread n;
-   private Thread o;
-   private boolean p = false;
-   private String q = "";
-   private int r = 0;
-   private int s = 0;
-   private int t = 0;
+   private int b = -1;
+   private int c = -1;
+   private int d = -1;
+   private int e = 0;
+   private boolean f = false;
+   public int a = 0;
+   private jv ai;
+   private int aj;
+   private int ak = 0;
 
 
-   public bf(Socket var1, String var2, ex var3) {
-      this.e = var1;
-      this.l = var3;
-      var1.setTrafficClass(24);
-      this.f = new DataInputStream(var1.getInputStream());
-      this.g = new DataOutputStream(var1.getOutputStream());
-      this.o = new ik(this, var2 + " read thread");
-      this.n = new il(this, var2 + " write thread");
-      this.o.start();
-      this.n.start();
+   public bf(em var1) {
+      super(var1);
+      this.a(0.25F, 0.25F);
    }
 
-   public void a(ex var1) {
-      this.l = var1;
+   public bf(em var1, jv var2) {
+      super(var1);
+      this.ai = var2;
+      this.a(0.25F, 0.25F);
+      this.c(var2.p, var2.q, var2.r, var2.v, var2.w);
+      this.p -= (double)(hd.b(this.v / 180.0F * 3.1415927F) * 0.16F);
+      this.q -= 0.10000000149011612D;
+      this.r -= (double)(hd.a(this.v / 180.0F * 3.1415927F) * 0.16F);
+      this.a(this.p, this.q, this.r);
+      this.G = 0.0F;
+      float var3 = 0.4F;
+      this.s = (double)(-hd.a(this.v / 180.0F * 3.1415927F) * hd.b(this.w / 180.0F * 3.1415927F) * var3);
+      this.u = (double)(hd.b(this.v / 180.0F * 3.1415927F) * hd.b(this.w / 180.0F * 3.1415927F) * var3);
+      this.t = (double)(-hd.a(this.w / 180.0F * 3.1415927F) * var3);
+      this.a(this.s, this.t, this.u, 1.5F, 1.0F);
    }
 
-   public void a(im var1) {
-      if(!this.m) {
-         Object var2 = this.d;
-         synchronized(this.d) {
-            this.s += var1.a() + 1;
-            if(var1.j) {
-               this.k.add(var1);
-            } else {
-               this.j.add(var1);
+   public void a(double var1, double var3, double var5, float var7, float var8) {
+      float var9 = hd.a(var1 * var1 + var3 * var3 + var5 * var5);
+      var1 /= (double)var9;
+      var3 /= (double)var9;
+      var5 /= (double)var9;
+      var1 += this.V.nextGaussian() * 0.007499999832361937D * (double)var8;
+      var3 += this.V.nextGaussian() * 0.007499999832361937D * (double)var8;
+      var5 += this.V.nextGaussian() * 0.007499999832361937D * (double)var8;
+      var1 *= (double)var7;
+      var3 *= (double)var7;
+      var5 *= (double)var7;
+      this.s = var1;
+      this.t = var3;
+      this.u = var5;
+      float var10 = hd.a(var1 * var1 + var5 * var5);
+      this.x = this.v = (float)(Math.atan2(var1, var5) * 180.0D / 3.1415927410125732D);
+      this.y = this.w = (float)(Math.atan2(var3, (double)var10) * 180.0D / 3.1415927410125732D);
+      this.aj = 0;
+   }
+
+   public void b_() {
+      super.b_();
+      if(this.a > 0) {
+         --this.a;
+      }
+
+      if(this.f) {
+         int var1 = this.l.a(this.b, this.c, this.d);
+         if(var1 == this.e) {
+            ++this.aj;
+            if(this.aj == 1200) {
+               this.l();
             }
 
-         }
-      }
-   }
-
-   private void e() {
-      try {
-         boolean var1 = true;
-         im var2;
-         Object var3;
-         if(!this.j.isEmpty()) {
-            var1 = false;
-            var3 = this.d;
-            synchronized(this.d) {
-               var2 = (im)this.j.remove(0);
-               this.s -= var2.a() + 1;
-            }
-
-            im.a(var2, this.g);
+            return;
          }
 
-         if((var1 || this.t-- <= 0) && !this.k.isEmpty()) {
-            var1 = false;
-            var3 = this.d;
-            synchronized(this.d) {
-               var2 = (im)this.k.remove(0);
-               this.s -= var2.a() + 1;
-            }
-
-            im.a(var2, this.g);
-            this.t = 50;
-         }
-
-         if(var1) {
-            Thread.sleep(10L);
-         }
-      } catch (InterruptedException var8) {
-         ;
-      } catch (Exception var9) {
-         if(!this.p) {
-            this.a(var9);
-         }
-      }
-
-   }
-
-   private void f() {
-      try {
-         im var1 = im.b(this.f);
-         if(var1 != null) {
-            this.i.add(var1);
-         } else {
-            this.a("End of stream");
-         }
-      } catch (Exception var2) {
-         if(!this.p) {
-            this.a(var2);
-         }
-      }
-
-   }
-
-   private void a(Exception var1) {
-      var1.printStackTrace();
-      this.a("Internal exception: " + var1.toString());
-   }
-
-   public void a(String var1) {
-      if(this.h) {
-         this.p = true;
-         this.q = var1;
-         (new ii(this)).start();
-         this.h = false;
-
-         try {
-            this.f.close();
-         } catch (Throwable var5) {
-            ;
-         }
-
-         try {
-            this.g.close();
-         } catch (Throwable var4) {
-            ;
-         }
-
-         try {
-            this.e.close();
-         } catch (Throwable var3) {
-            ;
-         }
-
-      }
-   }
-
-   public void a() {
-      if(this.s > 1048576) {
-         this.a("Send buffer overflow");
-      }
-
-      if(this.i.isEmpty()) {
-         if(this.r++ == 1200) {
-            this.a("Timed out");
-         }
+         this.f = false;
+         this.s *= (double)(this.V.nextFloat() * 0.2F);
+         this.t *= (double)(this.V.nextFloat() * 0.2F);
+         this.u *= (double)(this.V.nextFloat() * 0.2F);
+         this.aj = 0;
+         this.ak = 0;
       } else {
-         this.r = 0;
+         ++this.ak;
       }
 
-      int var1 = 100;
-
-      while(!this.i.isEmpty() && var1-- >= 0) {
-         im var2 = (im)this.i.remove(0);
-         var2.a(this.l);
+      bc var15 = bc.b(this.p, this.q, this.r);
+      bc var2 = bc.b(this.p + this.s, this.q + this.t, this.r + this.u);
+      gm var3 = this.l.a(var15, var2);
+      var15 = bc.b(this.p, this.q, this.r);
+      var2 = bc.b(this.p + this.s, this.q + this.t, this.r + this.u);
+      if(var3 != null) {
+         var2 = bc.b(var3.f.a, var3.f.b, var3.f.c);
       }
 
-      if(this.p && this.i.isEmpty()) {
-         this.l.a(this.q);
+      dw var4 = null;
+      List var5 = this.l.b(this, this.z.a(this.s, this.t, this.u).b(1.0D, 1.0D, 1.0D));
+      double var6 = 0.0D;
+
+      int var8;
+      float var10;
+      for(var8 = 0; var8 < var5.size(); ++var8) {
+         dw var9 = (dw)var5.get(var8);
+         if(var9.c_() && (var9 != this.ai || this.ak >= 5)) {
+            var10 = 0.3F;
+            dt var11 = var9.z.b((double)var10, (double)var10, (double)var10);
+            gm var12 = var11.a(var15, var2);
+            if(var12 != null) {
+               double var13 = var15.a(var12.f);
+               if(var13 < var6 || var6 == 0.0D) {
+                  var4 = var9;
+                  var6 = var13;
+               }
+            }
+         }
+      }
+
+      if(var4 != null) {
+         var3 = new gm(var4);
+      }
+
+      if(var3 != null) {
+         if(var3.g != null && var3.g.a(this.ai, 0)) {
+            ;
+         }
+
+         for(var8 = 0; var8 < 8; ++var8) {
+            this.l.a("snowballpoof", this.p, this.q, this.r, 0.0D, 0.0D, 0.0D);
+         }
+
+         this.l();
+      }
+
+      this.p += this.s;
+      this.q += this.t;
+      this.r += this.u;
+      float var17 = hd.a(this.s * this.s + this.u * this.u);
+      this.v = (float)(Math.atan2(this.s, this.u) * 180.0D / 3.1415927410125732D);
+
+      for(this.w = (float)(Math.atan2(this.t, (double)var17) * 180.0D / 3.1415927410125732D); this.w - this.y < -180.0F; this.y -= 360.0F) {
+         ;
+      }
+
+      while(this.w - this.y >= 180.0F) {
+         this.y += 360.0F;
+      }
+
+      while(this.v - this.x < -180.0F) {
+         this.x -= 360.0F;
+      }
+
+      while(this.v - this.x >= 180.0F) {
+         this.x += 360.0F;
+      }
+
+      this.w = this.y + (this.w - this.y) * 0.2F;
+      this.v = this.x + (this.v - this.x) * 0.2F;
+      float var16 = 0.99F;
+      var10 = 0.03F;
+      if(this.r()) {
+         for(int var18 = 0; var18 < 4; ++var18) {
+            float var19 = 0.25F;
+            this.l.a("bubble", this.p - this.s * (double)var19, this.q - this.t * (double)var19, this.r - this.u * (double)var19, this.s, this.t, this.u);
+         }
+
+         var16 = 0.8F;
+      }
+
+      this.s *= (double)var16;
+      this.t *= (double)var16;
+      this.u *= (double)var16;
+      this.t -= (double)var10;
+      this.a(this.p, this.q, this.r);
+   }
+
+   public void a(v var1) {
+      var1.a("xTile", (short)this.b);
+      var1.a("yTile", (short)this.c);
+      var1.a("zTile", (short)this.d);
+      var1.a("inTile", (byte)this.e);
+      var1.a("shake", (byte)this.a);
+      var1.a("inGround", (byte)(this.f?1:0));
+   }
+
+   public void b(v var1) {
+      this.b = var1.c("xTile");
+      this.c = var1.c("yTile");
+      this.d = var1.c("zTile");
+      this.e = var1.b("inTile") & 255;
+      this.a = var1.b("shake") & 255;
+      this.f = var1.b("inGround") == 1;
+   }
+
+   public void b(fv var1) {
+      if(this.f && this.ai == var1 && this.a <= 0 && var1.ak.a(new hj(fs.j.aW, 1))) {
+         this.l.a(this, "random.pop", 0.2F, ((this.V.nextFloat() - this.V.nextFloat()) * 0.7F + 1.0F) * 2.0F);
+         var1.c(this, 1);
+         this.l();
       }
 
    }
-
-   public SocketAddress b() {
-      return this.e.getRemoteSocketAddress();
-   }
-
-   public void c() {
-      this.m = true;
-      this.o.interrupt();
-      (new ij(this)).start();
-   }
-
-   public int d() {
-      return this.k.size();
-   }
-
 }

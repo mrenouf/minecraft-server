@@ -1,65 +1,113 @@
 // Decompiled by:       Fernflower v0.6
-// Date:                09.11.2010 14:05:18
+// Date:                15.11.2010 02:38:58
 // Copyright:           2008-2009, Stiver
 // Home page:           http://www.reversed-java.com
 
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
+import java.util.Random;
 
-public class c extends im {
+public class c extends de {
 
-   public int a;
-   public String b;
-   public int c;
-   public int d;
-   public int e;
-   public byte f;
-   public byte g;
-   public int h;
+   private Random a = new Random();
 
 
-   public c() {
+   protected c(int var1) {
+      super(var1, jt.c);
    }
 
-   public c(ft var1) {
-      this.a = var1.g;
-      this.b = var1.ar;
-      this.c = hb.b(var1.p * 32.0D);
-      this.d = hb.b(var1.q * 32.0D);
-      this.e = hb.b(var1.r * 32.0D);
-      this.f = (byte)((int)(var1.v * 256.0F / 360.0F));
-      this.g = (byte)((int)(var1.w * 256.0F / 360.0F));
-      hh var2 = var1.ak.b();
-      this.h = var2 == null?0:var2.c;
+   public int a(int var1) {
+      return var1 == 1?this.bg - 1:(var1 == 0?this.bg - 1:(var1 == 3?this.bg + 1:this.bg));
    }
 
-   public void a(DataInputStream var1) {
-      this.a = var1.readInt();
-      this.b = var1.readUTF();
-      this.c = var1.readInt();
-      this.d = var1.readInt();
-      this.e = var1.readInt();
-      this.f = var1.readByte();
-      this.g = var1.readByte();
-      this.h = var1.readShort();
+   public boolean a(em var1, int var2, int var3, int var4) {
+      int var5 = 0;
+      if(var1.a(var2 - 1, var3, var4) == this.bh) {
+         ++var5;
+      }
+
+      if(var1.a(var2 + 1, var3, var4) == this.bh) {
+         ++var5;
+      }
+
+      if(var1.a(var2, var3, var4 - 1) == this.bh) {
+         ++var5;
+      }
+
+      if(var1.a(var2, var3, var4 + 1) == this.bh) {
+         ++var5;
+      }
+
+      return var5 > 1?false:(this.g(var1, var2 - 1, var3, var4)?false:(this.g(var1, var2 + 1, var3, var4)?false:(this.g(var1, var2, var3, var4 - 1)?false:!this.g(var1, var2, var3, var4 + 1))));
    }
 
-   public void a(DataOutputStream var1) {
-      var1.writeInt(this.a);
-      var1.writeUTF(this.b);
-      var1.writeInt(this.c);
-      var1.writeInt(this.d);
-      var1.writeInt(this.e);
-      var1.writeByte(this.f);
-      var1.writeByte(this.g);
-      var1.writeShort(this.h);
+   private boolean g(em var1, int var2, int var3, int var4) {
+      return var1.a(var2, var3, var4) != this.bh?false:(var1.a(var2 - 1, var3, var4) == this.bh?true:(var1.a(var2 + 1, var3, var4) == this.bh?true:(var1.a(var2, var3, var4 - 1) == this.bh?true:var1.a(var2, var3, var4 + 1) == this.bh)));
    }
 
-   public void a(ex var1) {
-      var1.a(this);
+   public void b(em var1, int var2, int var3, int var4) {
+      hx var5 = (hx)var1.k(var2, var3, var4);
+
+      for(int var6 = 0; var6 < var5.a(); ++var6) {
+         hj var7 = var5.a(var6);
+         if(var7 != null) {
+            float var8 = this.a.nextFloat() * 0.8F + 0.1F;
+            float var9 = this.a.nextFloat() * 0.8F + 0.1F;
+            float var10 = this.a.nextFloat() * 0.8F + 0.1F;
+
+            while(var7.a > 0) {
+               int var11 = this.a.nextInt(21) + 10;
+               if(var11 > var7.a) {
+                  var11 = var7.a;
+               }
+
+               var7.a -= var11;
+               gh var12 = new gh(var1, (double)((float)var2 + var8), (double)((float)var3 + var9), (double)((float)var4 + var10), new hj(var7.c, var11, var7.d));
+               float var13 = 0.05F;
+               var12.s = (double)((float)this.a.nextGaussian() * var13);
+               var12.t = (double)((float)this.a.nextGaussian() * var13 + 0.2F);
+               var12.u = (double)((float)this.a.nextGaussian() * var13);
+               var1.a(var12);
+            }
+         }
+      }
+
+      super.b(var1, var2, var3, var4);
    }
 
-   public int a() {
-      return 28;
+   public boolean a(em var1, int var2, int var3, int var4, fv var5) {
+      Object var6 = (hx)var1.k(var2, var3, var4);
+      if(var1.d(var2, var3 + 1, var4)) {
+         return true;
+      } else if(var1.a(var2 - 1, var3, var4) == this.bh && var1.d(var2 - 1, var3 + 1, var4)) {
+         return true;
+      } else if(var1.a(var2 + 1, var3, var4) == this.bh && var1.d(var2 + 1, var3 + 1, var4)) {
+         return true;
+      } else if(var1.a(var2, var3, var4 - 1) == this.bh && var1.d(var2, var3 + 1, var4 - 1)) {
+         return true;
+      } else if(var1.a(var2, var3, var4 + 1) == this.bh && var1.d(var2, var3 + 1, var4 + 1)) {
+         return true;
+      } else {
+         if(var1.a(var2 - 1, var3, var4) == this.bh) {
+            var6 = new am("Large chest", (hx)var1.k(var2 - 1, var3, var4), (jz)var6);
+         }
+
+         if(var1.a(var2 + 1, var3, var4) == this.bh) {
+            var6 = new am("Large chest", (jz)var6, (hx)var1.k(var2 + 1, var3, var4));
+         }
+
+         if(var1.a(var2, var3, var4 - 1) == this.bh) {
+            var6 = new am("Large chest", (hx)var1.k(var2, var3, var4 - 1), (jz)var6);
+         }
+
+         if(var1.a(var2, var3, var4 + 1) == this.bh) {
+            var6 = new am("Large chest", (jz)var6, (hx)var1.k(var2, var3, var4 + 1));
+         }
+
+         var5.a((jz)var6);
+         return true;
+      }
+   }
+
+   protected ay a_() {
+      return new hx();
    }
 }

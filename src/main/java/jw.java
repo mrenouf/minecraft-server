@@ -1,20 +1,19 @@
 // Decompiled by:       Fernflower v0.6
-// Date:                09.11.2010 14:07:59
+// Date:                15.11.2010 02:40:24
 // Copyright:           2008-2009, Stiver
 // Home page:           http://www.reversed-java.com
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class jw extends jr {
+class jw implements ActionListener {
 
-   public boolean a() {
-      return false;
+   jw(iy var1) {
+      this.a = var1;
+      super();
    }
 
-   public boolean b() {
-      return false;
-   }
-
-   public boolean c() {
-      return false;
+   public void actionPerformed(ActionEvent var1) {
+      iy.a(this.a);
    }
 }

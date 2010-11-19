@@ -1,346 +1,149 @@
 // Decompiled by:       Fernflower v0.6
-// Date:                09.11.2010 14:05:35
+// Date:                15.11.2010 02:39:11
 // Copyright:           2008-2009, Stiver
 // Home page:           http://www.reversed-java.com
 
-import java.util.ArrayList;
-import java.util.List;
 
-public class ds {
+public class ds extends ay implements jz {
 
-   private static List g = new ArrayList();
-   private static int h = 0;
-   public double a;
-   public double b;
-   public double c;
-   public double d;
-   public double e;
-   public double f;
+   private hj[] e = new hj[3];
+   private int f = 0;
+   private int g = 0;
+   private int h = 0;
 
 
-   public static ds a(double var0, double var2, double var4, double var6, double var8, double var10) {
-      return new ds(var0, var2, var4, var6, var8, var10);
+   public int a() {
+      return this.e.length;
    }
 
-   public static void a() {
-      h = 0;
+   public hj a(int var1) {
+      return this.e[var1];
    }
 
-   public static ds b(double var0, double var2, double var4, double var6, double var8, double var10) {
-      if(h >= g.size()) {
-         g.add(a(0.0D, 0.0D, 0.0D, 0.0D, 0.0D, 0.0D));
+   public void a(v var1) {
+      super.a(var1);
+      ea var2 = var1.k("Items");
+      this.e = new hj[this.a()];
+
+      for(int var3 = 0; var3 < var2.b(); ++var3) {
+         v var4 = (v)var2.a(var3);
+         byte var5 = var4.b("Slot");
+         if(var5 >= 0 && var5 < this.e.length) {
+            this.e[var5] = new hj(var4);
+         }
       }
 
-      return ((ds)g.get(h++)).c(var0, var2, var4, var6, var8, var10);
+      this.f = var1.c("BurnTime");
+      this.h = var1.c("CookTime");
+      this.g = this.a(this.e[1]);
    }
 
-   private ds(double var1, double var3, double var5, double var7, double var9, double var11) {
-      this.a = var1;
-      this.b = var3;
-      this.c = var5;
-      this.d = var7;
-      this.e = var9;
-      this.f = var11;
+   public void b(v var1) {
+      super.b(var1);
+      var1.a("BurnTime", (short)this.f);
+      var1.a("CookTime", (short)this.h);
+      ea var2 = new ea();
+
+      for(int var3 = 0; var3 < this.e.length; ++var3) {
+         if(this.e[var3] != null) {
+            v var4 = new v();
+            var4.a("Slot", (byte)var3);
+            this.e[var3].a(var4);
+            var2.a(var4);
+         }
+      }
+
+      var1.a("Items", var2);
    }
 
-   public ds c(double var1, double var3, double var5, double var7, double var9, double var11) {
-      this.a = var1;
-      this.b = var3;
-      this.c = var5;
-      this.d = var7;
-      this.e = var9;
-      this.f = var11;
-      return this;
+   public int d() {
+      return 64;
    }
 
-   public ds a(double var1, double var3, double var5) {
-      double var7 = this.a;
-      double var9 = this.b;
-      double var11 = this.c;
-      double var13 = this.d;
-      double var15 = this.e;
-      double var17 = this.f;
-      if(var1 < 0.0D) {
-         var7 += var1;
-      }
-
-      if(var1 > 0.0D) {
-         var13 += var1;
-      }
-
-      if(var3 < 0.0D) {
-         var9 += var3;
-      }
-
-      if(var3 > 0.0D) {
-         var15 += var3;
-      }
-
-      if(var5 < 0.0D) {
-         var11 += var5;
-      }
-
-      if(var5 > 0.0D) {
-         var17 += var5;
-      }
-
-      return b(var7, var9, var11, var13, var15, var17);
+   public boolean e() {
+      return this.f > 0;
    }
 
-   public ds b(double var1, double var3, double var5) {
-      double var7 = this.a - var1;
-      double var9 = this.b - var3;
-      double var11 = this.c - var5;
-      double var13 = this.d + var1;
-      double var15 = this.e + var3;
-      double var17 = this.f + var5;
-      return b(var7, var9, var11, var13, var15, var17);
-   }
+   public void b() {
+      boolean var1 = this.f > 0;
+      boolean var2 = false;
+      if(this.f > 0) {
+         --this.f;
+      }
 
-   public ds c(double var1, double var3, double var5) {
-      return b(this.a + var1, this.b + var3, this.c + var5, this.d + var1, this.e + var3, this.f + var5);
-   }
-
-   public double a(ds var1, double var2) {
-      if(var1.e > this.b && var1.b < this.e) {
-         if(var1.f > this.c && var1.c < this.f) {
-            double var4;
-            if(var2 > 0.0D && var1.d <= this.a) {
-               var4 = this.a - var1.d;
-               if(var4 < var2) {
-                  var2 = var4;
+      if(!this.a.z) {
+         if(this.f == 0 && this.g()) {
+            this.g = this.f = this.a(this.e[1]);
+            if(this.f > 0) {
+               var2 = true;
+               if(this.e[1] != null) {
+                  --this.e[1].a;
+                  if(this.e[1].a == 0) {
+                     this.e[1] = null;
+                  }
                }
             }
+         }
 
-            if(var2 < 0.0D && var1.a >= this.d) {
-               var4 = this.d - var1.a;
-               if(var4 > var2) {
-                  var2 = var4;
-               }
+         if(this.e() && this.g()) {
+            ++this.h;
+            if(this.h == 200) {
+               this.h = 0;
+               this.f();
+               var2 = true;
             }
-
-            return var2;
          } else {
-            return var2;
+            this.h = 0;
          }
+
+         if(var1 != this.f > 0) {
+            var2 = true;
+            ei.a(this.f > 0, this.a, this.b, this.c, this.d);
+         }
+      }
+
+      if(var2) {
+         this.c();
+      }
+
+   }
+
+   private boolean g() {
+      if(this.e[0] == null) {
+         return false;
       } else {
-         return var2;
+         int var1 = this.b(this.e[0].a().aW);
+         return var1 < 0?false:(this.e[2] == null?true:(this.e[2].c != var1?false:(this.e[2].a < this.d() && this.e[2].a < this.e[2].b()?true:this.e[2].a < fs.c[var1].a())));
       }
    }
 
-   public double b(ds var1, double var2) {
-      if(var1.d > this.a && var1.a < this.d) {
-         if(var1.f > this.c && var1.c < this.f) {
-            double var4;
-            if(var2 > 0.0D && var1.e <= this.b) {
-               var4 = this.b - var1.e;
-               if(var4 < var2) {
-                  var2 = var4;
-               }
-            }
-
-            if(var2 < 0.0D && var1.b >= this.e) {
-               var4 = this.e - var1.b;
-               if(var4 > var2) {
-                  var2 = var4;
-               }
-            }
-
-            return var2;
-         } else {
-            return var2;
+   public void f() {
+      if(this.g()) {
+         int var1 = this.b(this.e[0].a().aW);
+         if(this.e[2] == null) {
+            this.e[2] = new hj(var1, 1);
+         } else if(this.e[2].c == var1) {
+            ++this.e[2].a;
          }
+
+         --this.e[0].a;
+         if(this.e[0].a <= 0) {
+            this.e[0] = null;
+         }
+
+      }
+   }
+
+   private int b(int var1) {
+      return var1 == fy.H.bh?fs.m.aW:(var1 == fy.G.bh?fs.n.aW:(var1 == fy.aw.bh?fs.l.aW:(var1 == fy.E.bh?fy.M.bh:(var1 == fs.ao.aW?fs.ap.aW:(var1 == fs.aS.aW?fs.aT.aW:(var1 == fy.w.bh?fy.t.bh:(var1 == fs.aG.aW?fs.aF.aW:-1)))))));
+   }
+
+   private int a(hj var1) {
+      if(var1 == null) {
+         return 0;
       } else {
-         return var2;
+         int var2 = var1.a().aW;
+         return var2 < 256 && fy.m[var2].bs == jt.c?300:(var2 == fs.B.aW?100:(var2 == fs.k.aW?1600:(var2 == fs.aw.aW?20000:0)));
       }
    }
-
-   public double c(ds var1, double var2) {
-      if(var1.d > this.a && var1.a < this.d) {
-         if(var1.e > this.b && var1.b < this.e) {
-            double var4;
-            if(var2 > 0.0D && var1.f <= this.c) {
-               var4 = this.c - var1.f;
-               if(var4 < var2) {
-                  var2 = var4;
-               }
-            }
-
-            if(var2 < 0.0D && var1.c >= this.f) {
-               var4 = this.f - var1.c;
-               if(var4 > var2) {
-                  var2 = var4;
-               }
-            }
-
-            return var2;
-         } else {
-            return var2;
-         }
-      } else {
-         return var2;
-      }
-   }
-
-   public boolean a(ds var1) {
-      return var1.d > this.a && var1.a < this.d?(var1.e > this.b && var1.b < this.e?var1.f > this.c && var1.c < this.f:false):false;
-   }
-
-   public ds d(double var1, double var3, double var5) {
-      this.a += var1;
-      this.b += var3;
-      this.c += var5;
-      this.d += var1;
-      this.e += var3;
-      this.f += var5;
-      return this;
-   }
-
-   public ds e(double var1, double var3, double var5) {
-      double var7 = this.a;
-      double var9 = this.b;
-      double var11 = this.c;
-      double var13 = this.d;
-      double var15 = this.e;
-      double var17 = this.f;
-      if(var1 < 0.0D) {
-         var7 -= var1;
-      }
-
-      if(var1 > 0.0D) {
-         var13 -= var1;
-      }
-
-      if(var3 < 0.0D) {
-         var9 -= var3;
-      }
-
-      if(var3 > 0.0D) {
-         var15 -= var3;
-      }
-
-      if(var5 < 0.0D) {
-         var11 -= var5;
-      }
-
-      if(var5 > 0.0D) {
-         var17 -= var5;
-      }
-
-      return b(var7, var9, var11, var13, var15, var17);
-   }
-
-   public ds b() {
-      return b(this.a, this.b, this.c, this.d, this.e, this.f);
-   }
-
-   public gk a(ba var1, ba var2) {
-      ba var3 = var1.a(var2, this.a);
-      ba var4 = var1.a(var2, this.d);
-      ba var5 = var1.b(var2, this.b);
-      ba var6 = var1.b(var2, this.e);
-      ba var7 = var1.c(var2, this.c);
-      ba var8 = var1.c(var2, this.f);
-      if(!this.a(var3)) {
-         var3 = null;
-      }
-
-      if(!this.a(var4)) {
-         var4 = null;
-      }
-
-      if(!this.b(var5)) {
-         var5 = null;
-      }
-
-      if(!this.b(var6)) {
-         var6 = null;
-      }
-
-      if(!this.c(var7)) {
-         var7 = null;
-      }
-
-      if(!this.c(var8)) {
-         var8 = null;
-      }
-
-      ba var9 = null;
-      if(var3 != null && (var9 == null || var1.b(var3) < var1.b(var9))) {
-         var9 = var3;
-      }
-
-      if(var4 != null && (var9 == null || var1.b(var4) < var1.b(var9))) {
-         var9 = var4;
-      }
-
-      if(var5 != null && (var9 == null || var1.b(var5) < var1.b(var9))) {
-         var9 = var5;
-      }
-
-      if(var6 != null && (var9 == null || var1.b(var6) < var1.b(var9))) {
-         var9 = var6;
-      }
-
-      if(var7 != null && (var9 == null || var1.b(var7) < var1.b(var9))) {
-         var9 = var7;
-      }
-
-      if(var8 != null && (var9 == null || var1.b(var8) < var1.b(var9))) {
-         var9 = var8;
-      }
-
-      if(var9 == null) {
-         return null;
-      } else {
-         byte var10 = -1;
-         if(var9 == var3) {
-            var10 = 4;
-         }
-
-         if(var9 == var4) {
-            var10 = 5;
-         }
-
-         if(var9 == var5) {
-            var10 = 0;
-         }
-
-         if(var9 == var6) {
-            var10 = 1;
-         }
-
-         if(var9 == var7) {
-            var10 = 2;
-         }
-
-         if(var9 == var8) {
-            var10 = 3;
-         }
-
-         return new gk(0, 0, 0, var10, var9);
-      }
-   }
-
-   private boolean a(ba var1) {
-      return var1 == null?false:var1.b >= this.b && var1.b <= this.e && var1.c >= this.c && var1.c <= this.f;
-   }
-
-   private boolean b(ba var1) {
-      return var1 == null?false:var1.a >= this.a && var1.a <= this.d && var1.c >= this.c && var1.c <= this.f;
-   }
-
-   private boolean c(ba var1) {
-      return var1 == null?false:var1.a >= this.a && var1.a <= this.d && var1.b >= this.b && var1.b <= this.e;
-   }
-
-   public void b(ds var1) {
-      this.a = var1.a;
-      this.b = var1.b;
-      this.c = var1.c;
-      this.d = var1.d;
-      this.e = var1.e;
-      this.f = var1.f;
-   }
-
 }

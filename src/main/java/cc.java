@@ -1,43 +1,31 @@
 // Decompiled by:       Fernflower v0.6
-// Date:                09.11.2010 14:05:18
+// Date:                15.11.2010 02:38:58
 // Copyright:           2008-2009, Stiver
 // Home page:           http://www.reversed-java.com
 
-import java.util.Random;
 
-public class cc extends q {
+public class cc {
 
-   private int b;
-   private int c = 0;
+   public final String a;
+   public final float b;
+   public final float c;
 
 
-   protected cc(int var1, int var2) {
-      super(var1, var2, jr.h, false);
+   public cc(String var1, float var2, float var3) {
+      this.a = var1;
       this.b = var2;
+      this.c = var3;
    }
 
-   public void b(el var1, int var2, int var3, int var4, int var5) {
-      this.c = 0;
-      this.g(var1, var2, var3, var4);
-      super.b(var1, var2, var3, var4, var5);
+   public float a() {
+      return this.b;
    }
 
-   public void g(el var1, int var2, int var3, int var4) {
+   public float b() {
+      return this.c;
    }
 
-   public int a(Random var1) {
-      return var1.nextInt(20) == 0?1:0;
-   }
-
-   public int a(int var1, Random var2) {
-      return fw.z.bi;
-   }
-
-   public boolean a() {
-      return !this.a;
-   }
-
-   public void b(el var1, int var2, int var3, int var4, dv var5) {
-      super.b(var1, var2, var3, var4, var5);
+   public String c() {
+      return "step." + this.a;
    }
 }

@@ -1,32 +1,165 @@
 // Decompiled by:       Fernflower v0.6
-// Date:                09.11.2010 14:07:40
+// Date:                15.11.2010 02:40:12
 // Copyright:           2008-2009, Stiver
 // Home page:           http://www.reversed-java.com
 
+import java.util.Random;
 
-public class jg extends av {
+public class jg extends fy {
 
-   public String[] e = new String[]{"", "", "", ""};
-   public int f = -1;
+   protected jg(int var1, jt var2) {
+      super(var1, var2);
+      if(var2 == jt.e) {
+         ++this.bg;
+      }
 
-
-   public void b(t var1) {
-      super.b(var1);
-      var1.a("Text1", this.e[0]);
-      var1.a("Text2", this.e[1]);
-      var1.a("Text3", this.e[2]);
-      var1.a("Text4", this.e[3]);
+      float var3 = 0.5F;
+      float var4 = 1.0F;
+      this.a(0.5F - var3, 0.0F, 0.5F - var3, 0.5F + var3, var4, 0.5F + var3);
    }
 
-   public void a(t var1) {
-      super.a(var1);
+   public boolean a() {
+      return false;
+   }
 
-      for(int var2 = 0; var2 < 4; ++var2) {
-         this.e[var2] = var1.h("Text" + (var2 + 1));
-         if(this.e[var2].length() > 15) {
-            this.e[var2] = this.e[var2].substring(0, 15);
+   public dt d(em var1, int var2, int var3, int var4) {
+      this.a(var1, var2, var3, var4);
+      return super.d(var1, var2, var3, var4);
+   }
+
+   public void a(iq var1, int var2, int var3, int var4) {
+      this.b(this.d(var1.b(var2, var3, var4)));
+   }
+
+   public void b(int var1) {
+      float var2 = 0.1875F;
+      this.a(0.0F, 0.0F, 0.0F, 1.0F, 2.0F, 1.0F);
+      if(var1 == 0) {
+         this.a(0.0F, 0.0F, 0.0F, 1.0F, 1.0F, var2);
+      }
+
+      if(var1 == 1) {
+         this.a(1.0F - var2, 0.0F, 0.0F, 1.0F, 1.0F, 1.0F);
+      }
+
+      if(var1 == 2) {
+         this.a(0.0F, 0.0F, 1.0F - var2, 1.0F, 1.0F, 1.0F);
+      }
+
+      if(var1 == 3) {
+         this.a(0.0F, 0.0F, 0.0F, var2, 1.0F, 1.0F);
+      }
+
+   }
+
+   public void b(em var1, int var2, int var3, int var4, fv var5) {
+      this.a(var1, var2, var3, var4, var5);
+   }
+
+   public boolean a(em var1, int var2, int var3, int var4, fv var5) {
+      if(this.bs == jt.e) {
+         return true;
+      } else {
+         int var6 = var1.b(var2, var3, var4);
+         if((var6 & 8) != 0) {
+            if(var1.a(var2, var3 - 1, var4) == this.bh) {
+               this.a(var1, var2, var3 - 1, var4, var5);
+            }
+
+            return true;
+         } else {
+            if(var1.a(var2, var3 + 1, var4) == this.bh) {
+               var1.b(var2, var3 + 1, var4, (var6 ^ 4) + 8);
+            }
+
+            var1.b(var2, var3, var4, var6 ^ 4);
+            var1.b(var2, var3 - 1, var4, var2, var3, var4);
+            if(Math.random() < 0.5D) {
+               var1.a((double)var2 + 0.5D, (double)var3 + 0.5D, (double)var4 + 0.5D, "random.door_open", 1.0F, var1.l.nextFloat() * 0.1F + 0.9F);
+            } else {
+               var1.a((double)var2 + 0.5D, (double)var3 + 0.5D, (double)var4 + 0.5D, "random.door_close", 1.0F, var1.l.nextFloat() * 0.1F + 0.9F);
+            }
+
+            return true;
+         }
+      }
+   }
+
+   public void a(em var1, int var2, int var3, int var4, boolean var5) {
+      int var6 = var1.b(var2, var3, var4);
+      if((var6 & 8) != 0) {
+         if(var1.a(var2, var3 - 1, var4) == this.bh) {
+            this.a(var1, var2, var3 - 1, var4, var5);
+         }
+
+      } else {
+         boolean var7 = (var1.b(var2, var3, var4) & 4) > 0;
+         if(var7 != var5) {
+            if(var1.a(var2, var3 + 1, var4) == this.bh) {
+               var1.b(var2, var3 + 1, var4, (var6 ^ 4) + 8);
+            }
+
+            var1.b(var2, var3, var4, var6 ^ 4);
+            var1.b(var2, var3 - 1, var4, var2, var3, var4);
+            if(Math.random() < 0.5D) {
+               var1.a((double)var2 + 0.5D, (double)var3 + 0.5D, (double)var4 + 0.5D, "random.door_open", 1.0F, var1.l.nextFloat() * 0.1F + 0.9F);
+            } else {
+               var1.a((double)var2 + 0.5D, (double)var3 + 0.5D, (double)var4 + 0.5D, "random.door_close", 1.0F, var1.l.nextFloat() * 0.1F + 0.9F);
+            }
+
+         }
+      }
+   }
+
+   public void b(em var1, int var2, int var3, int var4, int var5) {
+      int var6 = var1.b(var2, var3, var4);
+      if((var6 & 8) != 0) {
+         if(var1.a(var2, var3 - 1, var4) != this.bh) {
+            var1.d(var2, var3, var4, 0);
+         }
+
+         if(var5 > 0 && fy.m[var5].c()) {
+            this.b(var1, var2, var3 - 1, var4, var5);
+         }
+      } else {
+         boolean var7 = false;
+         if(var1.a(var2, var3 + 1, var4) != this.bh) {
+            var1.d(var2, var3, var4, 0);
+            var7 = true;
+         }
+
+         if(!var1.d(var2, var3 - 1, var4)) {
+            var1.d(var2, var3, var4, 0);
+            var7 = true;
+            if(var1.a(var2, var3 + 1, var4) == this.bh) {
+               var1.d(var2, var3 + 1, var4, 0);
+            }
+         }
+
+         if(var7) {
+            this.a_(var1, var2, var3, var4, var6);
+         } else if(var5 > 0 && fy.m[var5].c()) {
+            boolean var8 = var1.n(var2, var3, var4) || var1.n(var2, var3 + 1, var4);
+            this.a(var1, var2, var3, var4, var8);
          }
       }
 
+   }
+
+   public int a(int var1, Random var2) {
+      return (var1 & 8) != 0?0:(this.bs == jt.e?fs.az.aW:fs.at.aW);
+   }
+
+   public gm a(em var1, int var2, int var3, int var4, bc var5, bc var6) {
+      this.a(var1, var2, var3, var4);
+      return super.a(var1, var2, var3, var4, var5, var6);
+   }
+
+   public int d(int var1) {
+      return (var1 & 4) == 0?var1 - 1 & 3:var1 & 3;
+   }
+
+   public boolean a(em var1, int var2, int var3, int var4) {
+      return var3 >= 127?false:var1.d(var2, var3 - 1, var4) && super.a(var1, var2, var3, var4) && super.a(var1, var2, var3 + 1, var4);
    }
 }

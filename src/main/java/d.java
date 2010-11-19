@@ -1,36 +1,65 @@
 // Decompiled by:       Fernflower v0.6
-// Date:                09.11.2010 14:05:32
+// Date:                15.11.2010 02:39:09
 // Copyright:           2008-2009, Stiver
 // Home page:           http://www.reversed-java.com
 
-import java.io.DataInput;
-import java.io.DataOutput;
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
 
-public class d extends ha {
+public class d extends io {
 
-   public long a;
+   public int a;
+   public String b;
+   public int c;
+   public int d;
+   public int e;
+   public byte f;
+   public byte g;
+   public int h;
 
 
    public d() {
    }
 
-   public d(long var1) {
-      this.a = var1;
+   public d(fv var1) {
+      this.a = var1.g;
+      this.b = var1.ar;
+      this.c = hd.b(var1.p * 32.0D);
+      this.d = hd.b(var1.q * 32.0D);
+      this.e = hd.b(var1.r * 32.0D);
+      this.f = (byte)((int)(var1.v * 256.0F / 360.0F));
+      this.g = (byte)((int)(var1.w * 256.0F / 360.0F));
+      hj var2 = var1.ak.b();
+      this.h = var2 == null?0:var2.c;
    }
 
-   void a(DataOutput var1) {
-      var1.writeLong(this.a);
+   public void a(DataInputStream var1) {
+      this.a = var1.readInt();
+      this.b = var1.readUTF();
+      this.c = var1.readInt();
+      this.d = var1.readInt();
+      this.e = var1.readInt();
+      this.f = var1.readByte();
+      this.g = var1.readByte();
+      this.h = var1.readShort();
    }
 
-   void a(DataInput var1) {
-      this.a = var1.readLong();
+   public void a(DataOutputStream var1) {
+      var1.writeInt(this.a);
+      var1.writeUTF(this.b);
+      var1.writeInt(this.c);
+      var1.writeInt(this.d);
+      var1.writeInt(this.e);
+      var1.writeByte(this.f);
+      var1.writeByte(this.g);
+      var1.writeShort(this.h);
    }
 
-   public byte a() {
-      return (byte)4;
+   public void a(ey var1) {
+      var1.a(this);
    }
 
-   public String toString() {
-      return "" + this.a;
+   public int a() {
+      return 28;
    }
 }

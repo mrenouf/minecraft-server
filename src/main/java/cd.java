@@ -1,99 +1,119 @@
 // Decompiled by:       Fernflower v0.6
-// Date:                09.11.2010 14:05:19
+// Date:                15.11.2010 02:38:59
 // Copyright:           2008-2009, Stiver
 // Home page:           http://www.reversed-java.com
 
+import java.util.Random;
 
-public class cd extends av {
+public class cd extends r {
 
-   public int e = -1;
-   public String f = "Pig";
-   public double g;
-   public double h = 0.0D;
+   private int b;
+   private int c = 0;
 
 
-   public cd() {
-      this.e = 20;
+   protected cd(int var1, int var2) {
+      super(var1, var2, jt.h, false);
+      this.b = var2;
    }
 
-   public boolean a() {
-      return this.a.a((double)this.b + 0.5D, (double)this.c + 0.5D, (double)this.d + 0.5D, 16.0D) != null;
+   public void b(em var1, int var2, int var3, int var4, int var5) {
+      this.c = 0;
+      this.g(var1, var2, var3, var4);
+      super.b(var1, var2, var3, var4, var5);
    }
 
-   public void b() {
-      this.h = this.g;
-      if(this.a()) {
-         double var1 = (double)((float)this.b + this.a.l.nextFloat());
-         double var3 = (double)((float)this.c + this.a.l.nextFloat());
-         double var5 = (double)((float)this.d + this.a.l.nextFloat());
-         this.a.a("smoke", var1, var3, var5, 0.0D, 0.0D, 0.0D);
-         this.a.a("flame", var1, var3, var5, 0.0D, 0.0D, 0.0D);
-
-         for(this.g += (double)(1000.0F / ((float)this.e + 200.0F)); this.g > 360.0D; this.h -= 360.0D) {
-            this.g -= 360.0D;
-         }
-
-         if(this.e == -1) {
-            this.d();
-         }
-
-         if(this.e > 0) {
-            --this.e;
-         } else {
-            byte var7 = 4;
-
-            for(int var8 = 0; var8 < var7; ++var8) {
-               jt var9 = (jt)((jt)hj.a(this.f, this.a));
-               if(var9 == null) {
-                  return;
-               }
-
-               int var10 = this.a.a(var9.getClass(), ds.b((double)this.b, (double)this.c, (double)this.d, (double)(this.b + 1), (double)(this.c + 1), (double)(this.d + 1)).b(8.0D, 4.0D, 8.0D)).size();
-               if(var10 >= 6) {
-                  this.d();
-                  return;
-               }
-
-               if(var9 != null) {
-                  double var11 = (double)this.b + (this.a.l.nextDouble() - this.a.l.nextDouble()) * 4.0D;
-                  double var13 = (double)(this.c + this.a.l.nextInt(3) - 1);
-                  double var15 = (double)this.d + (this.a.l.nextDouble() - this.a.l.nextDouble()) * 4.0D;
-                  var9.c(var11, var13, var15, this.a.l.nextFloat() * 360.0F, 0.0F);
-                  if(var9.a()) {
-                     this.a.a(var9);
-
-                     for(int var17 = 0; var17 < 20; ++var17) {
-                        var1 = (double)this.b + 0.5D + ((double)this.a.l.nextFloat() - 0.5D) * 2.0D;
-                        var3 = (double)this.c + 0.5D + ((double)this.a.l.nextFloat() - 0.5D) * 2.0D;
-                        var5 = (double)this.d + 0.5D + ((double)this.a.l.nextFloat() - 0.5D) * 2.0D;
-                        this.a.a("smoke", var1, var3, var5, 0.0D, 0.0D, 0.0D);
-                        this.a.a("flame", var1, var3, var5, 0.0D, 0.0D, 0.0D);
-                     }
-
-                     var9.I();
-                     this.d();
-                  }
-               }
-            }
-
-            super.b();
+   public void e(em var1, int var2, int var3, int var4, int var5) {
+      if(var1.a(var2, var3, var4) == this.bh) {
+         int var6 = var1.b(var2, var3, var4);
+         if(var6 != 0 && var6 == var5 - 1) {
+            this.g(var1, var2, var3, var4);
          }
       }
    }
 
-   private void d() {
-      this.e = 200 + this.a.l.nextInt(600);
+   public void g(em var1, int var2, int var3, int var4) {
+      if(this == null) {
+         if(this.c++ < 100) {
+            int var5 = var1.c(var2, var3 - 1, var4).a()?16:0;
+            int var6 = var1.b(var2, var3, var4);
+            if(var6 == 0) {
+               var6 = 1;
+               var1.b(var2, var3, var4, 1);
+            }
+
+            var5 = this.f(var1, var2, var3 - 1, var4, var5);
+            var5 = this.f(var1, var2, var3, var4 - 1, var5);
+            var5 = this.f(var1, var2, var3, var4 + 1, var5);
+            var5 = this.f(var1, var2 - 1, var3, var4, var5);
+            var5 = this.f(var1, var2 + 1, var3, var4, var5);
+            int var7 = var5 - 1;
+            if(var7 < 10) {
+               var7 = 1;
+            }
+
+            if(var7 != var6) {
+               var1.b(var2, var3, var4, var7);
+               this.e(var1, var2, var3 - 1, var4, var6);
+               this.e(var1, var2, var3 + 1, var4, var6);
+               this.e(var1, var2, var3, var4 - 1, var6);
+               this.e(var1, var2, var3, var4 + 1, var6);
+               this.e(var1, var2 - 1, var3, var4, var6);
+               this.e(var1, var2 + 1, var3, var4, var6);
+            }
+
+         }
+      }
    }
 
-   public void a(t var1) {
-      super.a(var1);
-      this.f = var1.h("EntityId");
-      this.e = var1.c("Delay");
+   private int f(em var1, int var2, int var3, int var4, int var5) {
+      int var6 = var1.a(var2, var3, var4);
+      if(var6 == fy.J.bh) {
+         return 16;
+      } else {
+         if(var6 == this.bh) {
+            int var7 = var1.b(var2, var3, var4);
+            if(var7 != 0 && var7 > var5) {
+               return var7;
+            }
+         }
+
+         return var5;
+      }
    }
 
-   public void b(t var1) {
-      super.b(var1);
-      var1.a("EntityId", this.f);
-      var1.a("Delay", (short)this.e);
+   public void a(em var1, int var2, int var3, int var4, Random var5) {
+      if(this == null) {
+         int var6 = var1.b(var2, var3, var4);
+         if(var6 == 0) {
+            this.c = 0;
+            this.g(var1, var2, var3, var4);
+         } else if(var6 == 1) {
+            this.h(var1, var2, var3, var4);
+         } else if(var5.nextInt(10) == 0) {
+            this.g(var1, var2, var3, var4);
+         }
+
+      }
+   }
+
+   private void h(em var1, int var2, int var3, int var4) {
+      this.a_(var1, var2, var3, var4, var1.b(var2, var3, var4));
+      var1.d(var2, var3, var4, 0);
+   }
+
+   public int a(Random var1) {
+      return var1.nextInt(20) == 0?1:0;
+   }
+
+   public int a(int var1, Random var2) {
+      return fy.y.bh;
+   }
+
+   public boolean a() {
+      return !this.a;
+   }
+
+   public void b(em var1, int var2, int var3, int var4, dw var5) {
+      super.b(var1, var2, var3, var4, var5);
    }
 }

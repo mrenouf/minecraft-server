@@ -1,168 +1,141 @@
 // Decompiled by:       Fernflower v0.6
-// Date:                09.11.2010 14:04:43
+// Date:                15.11.2010 02:38:42
 // Copyright:           2008-2009, Stiver
 // Home page:           http://www.reversed-java.com
 
 import java.util.List;
+import java.util.Random;
 
-public class bd extends dv {
+public class bd extends fy {
 
-   private int b = -1;
-   private int c = -1;
-   private int d = -1;
-   private int e = 0;
-   private boolean f = false;
-   public int a = 0;
-   private jt ai;
-   private int aj;
-   private int ak = 0;
+   private dc a;
 
 
-   public bd(el var1) {
-      super(var1);
-      this.a(0.25F, 0.25F);
+   protected bd(int var1, int var2, dc var3) {
+      super(var1, var2, jt.d);
+      this.a = var3;
+      this.a(true);
+      float var4 = 0.0625F;
+      this.a(var4, 0.0F, var4, 1.0F - var4, 0.03125F, 1.0F - var4);
    }
 
-   public void b_() {
-      super.b_();
-      if(this.a > 0) {
-         --this.a;
+   public int b() {
+      return 20;
+   }
+
+   public dt d(em var1, int var2, int var3, int var4) {
+      return null;
+   }
+
+   public boolean a() {
+      return false;
+   }
+
+   public boolean a(em var1, int var2, int var3, int var4) {
+      return var1.d(var2, var3 - 1, var4);
+   }
+
+   public void e(em var1, int var2, int var3, int var4) {
+   }
+
+   public void b(em var1, int var2, int var3, int var4, int var5) {
+      boolean var6 = false;
+      if(!var1.d(var2, var3 - 1, var4)) {
+         var6 = true;
       }
 
-      if(this.f) {
-         int var1 = this.l.a(this.b, this.c, this.d);
-         if(var1 == this.e) {
-            ++this.aj;
-            if(this.aj == 1200) {
-               this.l();
-            }
+      if(var6) {
+         this.a_(var1, var2, var3, var4, var1.b(var2, var3, var4));
+         var1.d(var2, var3, var4, 0);
+      }
 
-            return;
-         }
+   }
 
-         this.f = false;
-         this.s *= (double)(this.V.nextFloat() * 0.2F);
-         this.t *= (double)(this.V.nextFloat() * 0.2F);
-         this.u *= (double)(this.V.nextFloat() * 0.2F);
-         this.aj = 0;
-         this.ak = 0;
+   public void a(em var1, int var2, int var3, int var4, Random var5) {
+      if(var1.b(var2, var3, var4) != 0) {
+         this.g(var1, var2, var3, var4);
+      }
+   }
+
+   public void a(em var1, int var2, int var3, int var4, dw var5) {
+      if(var1.b(var2, var3, var4) != 1) {
+         this.g(var1, var2, var3, var4);
+      }
+   }
+
+   private void g(em var1, int var2, int var3, int var4) {
+      boolean var5 = var1.b(var2, var3, var4) == 1;
+      boolean var6 = false;
+      float var7 = 0.125F;
+      List var8 = null;
+      if(this.a == dc.a) {
+         var8 = var1.b((dw)null, dt.b((double)((float)var2 + var7), (double)var3, (double)((float)var4 + var7), (double)((float)(var2 + 1) - var7), (double)var3 + 0.25D, (double)((float)(var4 + 1) - var7)));
+      }
+
+      if(this.a == dc.b) {
+         var8 = var1.a(jv.class, dt.b((double)((float)var2 + var7), (double)var3, (double)((float)var4 + var7), (double)((float)(var2 + 1) - var7), (double)var3 + 0.25D, (double)((float)(var4 + 1) - var7)));
+      }
+
+      if(this.a == dc.c) {
+         var8 = var1.a(fv.class, dt.b((double)((float)var2 + var7), (double)var3, (double)((float)var4 + var7), (double)((float)(var2 + 1) - var7), (double)var3 + 0.25D, (double)((float)(var4 + 1) - var7)));
+      }
+
+      if(var8.size() > 0) {
+         var6 = true;
+      }
+
+      if(var6 && !var5) {
+         var1.b(var2, var3, var4, 1);
+         var1.g(var2, var3, var4, this.bh);
+         var1.g(var2, var3 - 1, var4, this.bh);
+         var1.b(var2, var3, var4, var2, var3, var4);
+         var1.a((double)var2 + 0.5D, (double)var3 + 0.1D, (double)var4 + 0.5D, "random.click", 0.3F, 0.6F);
+      }
+
+      if(!var6 && var5) {
+         var1.b(var2, var3, var4, 0);
+         var1.g(var2, var3, var4, this.bh);
+         var1.g(var2, var3 - 1, var4, this.bh);
+         var1.b(var2, var3, var4, var2, var3, var4);
+         var1.a((double)var2 + 0.5D, (double)var3 + 0.1D, (double)var4 + 0.5D, "random.click", 0.3F, 0.5F);
+      }
+
+      if(var6) {
+         var1.h(var2, var3, var4, this.bh);
+      }
+
+   }
+
+   public void b(em var1, int var2, int var3, int var4) {
+      int var5 = var1.b(var2, var3, var4);
+      if(var5 > 0) {
+         var1.g(var2, var3, var4, this.bh);
+         var1.g(var2, var3 - 1, var4, this.bh);
+      }
+
+      super.b(var1, var2, var3, var4);
+   }
+
+   public void a(iq var1, int var2, int var3, int var4) {
+      boolean var5 = var1.b(var2, var3, var4) == 1;
+      float var6 = 0.0625F;
+      if(var5) {
+         this.a(var6, 0.0F, var6, 1.0F - var6, 0.03125F, 1.0F - var6);
       } else {
-         ++this.ak;
+         this.a(var6, 0.0F, var6, 1.0F - var6, 0.0625F, 1.0F - var6);
       }
 
-      ba var15 = ba.b(this.p, this.q, this.r);
-      ba var2 = ba.b(this.p + this.s, this.q + this.t, this.r + this.u);
-      gk var3 = this.l.a(var15, var2);
-      var15 = ba.b(this.p, this.q, this.r);
-      var2 = ba.b(this.p + this.s, this.q + this.t, this.r + this.u);
-      if(var3 != null) {
-         var2 = ba.b(var3.f.a, var3.f.b, var3.f.c);
-      }
-
-      dv var4 = null;
-      List var5 = this.l.b(this, this.z.a(this.s, this.t, this.u).b(1.0D, 1.0D, 1.0D));
-      double var6 = 0.0D;
-
-      int var8;
-      float var10;
-      for(var8 = 0; var8 < var5.size(); ++var8) {
-         dv var9 = (dv)var5.get(var8);
-         if(var9.c_() && (var9 != this.ai || this.ak >= 5)) {
-            var10 = 0.3F;
-            ds var11 = var9.z.b((double)var10, (double)var10, (double)var10);
-            gk var12 = var11.a(var15, var2);
-            if(var12 != null) {
-               double var13 = var15.a(var12.f);
-               if(var13 < var6 || var6 == 0.0D) {
-                  var4 = var9;
-                  var6 = var13;
-               }
-            }
-         }
-      }
-
-      if(var4 != null) {
-         var3 = new gk(var4);
-      }
-
-      if(var3 != null) {
-         if(var3.g != null && var3.g.a(this.ai, 0)) {
-            ;
-         }
-
-         for(var8 = 0; var8 < 8; ++var8) {
-            this.l.a("snowballpoof", this.p, this.q, this.r, 0.0D, 0.0D, 0.0D);
-         }
-
-         this.l();
-      }
-
-      this.p += this.s;
-      this.q += this.t;
-      this.r += this.u;
-      float var17 = hb.a(this.s * this.s + this.u * this.u);
-      this.v = (float)(Math.atan2(this.s, this.u) * 180.0D / 3.1415927410125732D);
-
-      for(this.w = (float)(Math.atan2(this.t, (double)var17) * 180.0D / 3.1415927410125732D); this.w - this.y < -180.0F; this.y -= 360.0F) {
-         ;
-      }
-
-      while(this.w - this.y >= 180.0F) {
-         this.y += 360.0F;
-      }
-
-      while(this.v - this.x < -180.0F) {
-         this.x -= 360.0F;
-      }
-
-      while(this.v - this.x >= 180.0F) {
-         this.x += 360.0F;
-      }
-
-      this.w = this.y + (this.w - this.y) * 0.2F;
-      this.v = this.x + (this.v - this.x) * 0.2F;
-      float var16 = 0.99F;
-      var10 = 0.03F;
-      if(this.r()) {
-         for(int var18 = 0; var18 < 4; ++var18) {
-            float var19 = 0.25F;
-            this.l.a("bubble", this.p - this.s * (double)var19, this.q - this.t * (double)var19, this.r - this.u * (double)var19, this.s, this.t, this.u);
-         }
-
-         var16 = 0.8F;
-      }
-
-      this.s *= (double)var16;
-      this.t *= (double)var16;
-      this.u *= (double)var16;
-      this.t -= (double)var10;
-      this.a(this.p, this.q, this.r);
    }
 
-   public void a(t var1) {
-      var1.a("xTile", (short)this.b);
-      var1.a("yTile", (short)this.c);
-      var1.a("zTile", (short)this.d);
-      var1.a("inTile", (byte)this.e);
-      var1.a("shake", (byte)this.a);
-      var1.a("inGround", (byte)(this.f?1:0));
+   public boolean b(iq var1, int var2, int var3, int var4, int var5) {
+      return var1.b(var2, var3, var4) > 0;
    }
 
-   public void b(t var1) {
-      this.b = var1.c("xTile");
-      this.c = var1.c("yTile");
-      this.d = var1.c("zTile");
-      this.e = var1.b("inTile") & 255;
-      this.a = var1.b("shake") & 255;
-      this.f = var1.b("inGround") == 1;
+   public boolean d(em var1, int var2, int var3, int var4, int var5) {
+      return var1.b(var2, var3, var4) == 0?false:var5 == 1;
    }
 
-   public void a(ft var1) {
-      if(this.f && this.ai == var1 && this.a <= 0 && var1.ak.a(new hh(fq.j.aW, 1))) {
-         this.l.a(this, "random.pop", 0.2F, ((this.V.nextFloat() - this.V.nextFloat()) * 0.7F + 1.0F) * 2.0F);
-         var1.c(this, 1);
-         this.l();
-      }
-
+   public boolean c() {
+      return true;
    }
 }
