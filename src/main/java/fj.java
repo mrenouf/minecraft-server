@@ -5,6 +5,7 @@
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
+import java.io.IOException;
 
 public class fj extends io {
 
@@ -26,7 +27,7 @@ public class fj extends io {
       this.e = var4.b(var1, var2, var3);
    }
 
-   public void a(DataInputStream var1) {
+   public void a(DataInputStream var1) throws IOException {
       this.a = var1.readInt();
       this.b = var1.read();
       this.c = var1.readInt();
@@ -34,7 +35,7 @@ public class fj extends io {
       this.e = var1.read();
    }
 
-   public void a(DataOutputStream var1) {
+   public void a(DataOutputStream var1) throws IOException {
       var1.writeInt(this.a);
       var1.write(this.b);
       var1.writeInt(this.c);

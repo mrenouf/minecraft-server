@@ -5,13 +5,15 @@
 
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
-import net.minecraft.server.MinecraftServer;
+
 
 final class w extends WindowAdapter {
 
-   w(MinecraftServer var1) {
+   private MinecraftServer a;
+
+w(MinecraftServer var1) {
+	   super();
       this.a = var1;
-      super();
    }
 
    public void windowClosing(WindowEvent var1) {

@@ -5,10 +5,11 @@
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
+import java.io.IOException;
 
 public class ae extends gz {
 
-   public void a(DataInputStream var1) {
+   public void a(DataInputStream var1) throws IOException {
       this.a = var1.readDouble();
       this.b = var1.readDouble();
       this.d = var1.readDouble();
@@ -16,7 +17,7 @@ public class ae extends gz {
       super.a(var1);
    }
 
-   public void a(DataOutputStream var1) {
+   public void a(DataOutputStream var1) throws IOException {
       var1.writeDouble(this.a);
       var1.writeDouble(this.b);
       var1.writeDouble(this.d);

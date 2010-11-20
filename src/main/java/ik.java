@@ -6,9 +6,11 @@
 
 class ik extends Thread {
 
-   ik(bh var1) {
+   private bh a;
+
+ik(bh var1) {
+	   super();
       this.a = var1;
-      super();
    }
 
    public void run() {

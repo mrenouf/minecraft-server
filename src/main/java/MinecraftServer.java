@@ -3,12 +3,13 @@
 // Copyright:           2008-2009, Stiver
 // Home page:           http://www.reversed-java.com
 
-package net.minecraft.server;
+
 
 import java.awt.GraphicsEnvironment;
 import java.io.File;
 import java.io.IOException;
 import java.net.InetAddress;
+import java.net.UnknownHostException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -41,7 +42,7 @@ public class MinecraftServer implements eu, Runnable {
       new ca(this);
    }
 
-   private boolean d() {
+   private boolean d() throws UnknownHostException {
       by var1 = new by(this);
       var1.setDaemon(true);
       var1.start();
@@ -478,5 +479,9 @@ public class MinecraftServer implements eu, Runnable {
    public String c() {
       return "CONSOLE";
    }
+
+public static boolean a(MinecraftServer var1) {
+	return var1.n;
+}
 
 }

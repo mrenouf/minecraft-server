@@ -93,7 +93,7 @@ public class kb extends dw {
       } else {
          if(!this.l.z) {
             hj var1 = this.b.G();
-            if(this.b.F || !this.b.w() || var1 == null || var1.a() != fs.aP || this.b(this.b) > 1024.0D) {
+            if(this.b.F || !this.b.w() || var1 == null || var1.a() != fs.aP || this.b((dw)this.b) > 1024.0D) {
                this.l();
                this.b.at = null;
                return;

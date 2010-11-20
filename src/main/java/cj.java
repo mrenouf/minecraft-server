@@ -45,4 +45,7 @@ public class cj implements Comparable {
       return this.e < var1.e?-1:(this.e > var1.e?1:(this.g < var1.g?-1:(this.g > var1.g?1:0)));
    }
 
+   public int compareTo(Object o) {
+      return a((cj)o);
+   }
 }

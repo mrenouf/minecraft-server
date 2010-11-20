@@ -153,7 +153,7 @@ public abstract class cy extends fy {
    }
 
    public void a(em var1, int var2, int var3, int var4, dw var5, bc var6) {
-      bc var7 = this.c(var1, var2, var3, var4);
+      bc var7 = this.c((iq)var1, var2, var3, var4);
       var6.a += var7.a;
       var6.b += var7.b;
       var6.c += var7.c;

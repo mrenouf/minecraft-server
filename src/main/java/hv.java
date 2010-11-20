@@ -53,7 +53,7 @@ public class hv extends jv {
          this.u *= (double)var3;
       }
 
-      this.bb = this.bc;
+      this.bb = this.bc_;
       double var9 = this.p - this.m;
       double var10 = this.r - this.o;
       float var7 = hd.a(var9 * var9 + var10 * var10) * 4.0F;
@@ -61,8 +61,8 @@ public class hv extends jv {
          var7 = 1.0F;
       }
 
-      this.bc += (var7 - this.bc) * 0.4F;
-      this.bd += this.bc;
+      this.bc_ += (var7 - this.bc_) * 0.4F;
+      this.bd += this.bc_;
    }
 
    public boolean d_() {

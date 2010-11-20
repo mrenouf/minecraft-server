@@ -54,4 +54,9 @@ public class iy extends JComponent {
       }
 
    }
+
+public static void a(iy var1) {
+	var1.a();
+	
+}
 }

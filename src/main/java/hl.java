@@ -83,7 +83,7 @@ public class hl {
       a(hp.class, "Pig", 90);
       a(ct.class, "Sheep", 91);
       a(be.class, "Cow", 92);
-      a(if.class, "Chicken", 93);
+      a(if_.class, "Chicken", 93);
       a(ci.class, "PrimedTnt", 20);
       a(hy.class, "FallingSand", 21);
       a(jj.class, "Minecart", 40);

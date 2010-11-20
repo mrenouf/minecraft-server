@@ -17,12 +17,12 @@ import java.util.zip.GZIPOutputStream;
 
 public class ao {
 
-   public static v a(InputStream var0) {
+   public static v a(InputStream var0) throws IOException {
       DataInputStream var1 = new DataInputStream(new GZIPInputStream(var0));
 
       v var2;
       try {
-         var2 = a(var1);
+         var2 = a((DataInput)var1);
       } finally {
          var1.close();
       }
@@ -30,23 +30,23 @@ public class ao {
       return var2;
    }
 
-   public static void a(v var0, OutputStream var1) {
+   public static void a(v var0, OutputStream var1) throws IOException {
       DataOutputStream var2 = new DataOutputStream(new GZIPOutputStream(var1));
 
       try {
-         a(var0, var2);
+         a(var0, (DataOutput) var2);
       } finally {
          var2.close();
       }
 
    }
 
-   public static v a(byte[] var0) {
+   public static v a(byte[] var0) throws IOException {
       DataInputStream var1 = new DataInputStream(new GZIPInputStream(new ByteArrayInputStream(var0)));
 
       v var2;
       try {
-         var2 = a(var1);
+         var2 = a((DataInput)var1);
       } finally {
          var1.close();
       }
@@ -54,12 +54,12 @@ public class ao {
       return var2;
    }
 
-   public static byte[] a(v var0) {
+   public static byte[] a(v var0) throws IOException {
       ByteArrayOutputStream var1 = new ByteArrayOutputStream();
       DataOutputStream var2 = new DataOutputStream(new GZIPOutputStream(var1));
 
       try {
-         a(var0, var2);
+         a(var0, (DataOutput) var2);
       } finally {
          var2.close();
       }
@@ -67,7 +67,7 @@ public class ao {
       return var1.toByteArray();
    }
 
-   public static v a(DataInput var0) {
+   public static v a(DataInput var0) throws IOException {
       hc var1 = hc.b(var0);
       if(var1 instanceof v) {
          return (v)var1;
@@ -76,7 +76,7 @@ public class ao {
       }
    }
 
-   public static void a(v var0, DataOutput var1) {
+   public static void a(v var0, DataOutput var1) throws IOException {
       hc.a(var0, var1);
    }
 }

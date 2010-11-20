@@ -42,7 +42,7 @@ public class jv extends dw {
    public int aZ = -1;
    public float ba = (float)(Math.random() * 0.8999999761581421D + 0.10000000149011612D);
    public float bb;
-   public float bc;
+   public float bc_;
    public float bd;
    protected int be;
    protected double bf;
@@ -298,7 +298,7 @@ public class jv extends dw {
       if(this.aP <= 0) {
          return false;
       } else {
-         this.bc = 1.5F;
+         this.bc_ = 1.5F;
          boolean var3 = true;
          if((float)this.ab > (float)this.au / 2.0F) {
             if(var2 <= this.b) {
@@ -479,7 +479,7 @@ public class jv extends dw {
          this.u *= (double)var10;
       }
 
-      this.bb = this.bc;
+      this.bb = this.bc_;
       var3 = this.p - this.m;
       double var9 = this.r - this.o;
       float var7 = hd.a(var3 * var3 + var9 * var9) * 4.0F;
@@ -487,8 +487,8 @@ public class jv extends dw {
          var7 = 1.0F;
       }
 
-      this.bc += (var7 - this.bc) * 0.4F;
-      this.bd += this.bc;
+      this.bc_ += (var7 - this.bc_) * 0.4F;
+      this.bd += this.bc_;
    }
 
    public boolean d_() {

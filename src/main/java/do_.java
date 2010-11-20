@@ -5,7 +5,7 @@
 
 import java.util.Random;
 
-public class do extends bi {
+public class do_ extends bi {
 
    public boolean a(em var1, Random var2, int var3, int var4, int var5) {
       if(var1.a(var3, var4, var5) != 0) {

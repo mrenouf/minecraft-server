@@ -46,7 +46,7 @@ public class dl extends io {
 
    }
 
-   public void a(DataInputStream var1) {
+   public void a(DataInputStream var1) throws IOException {
       this.a = var1.readInt();
       this.b = var1.readShort();
       this.c = var1.readInt();
@@ -70,7 +70,7 @@ public class dl extends io {
 
    }
 
-   public void a(DataOutputStream var1) {
+   public void a(DataOutputStream var1) throws IOException {
       var1.writeInt(this.a);
       var1.writeShort(this.b);
       var1.writeInt(this.c);

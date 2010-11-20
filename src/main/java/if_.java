@@ -4,7 +4,7 @@
 // Home page:           http://www.reversed-java.com
 
 
-public class if extends ax {
+public class if_ extends ax {
 
    public boolean a = false;
    public float b = 0.0F;
@@ -15,7 +15,7 @@ public class if extends ax {
    public int ak;
 
 
-   public if(em var1) {
+   public if_(em var1) {
       super(var1);
       this.a(0.3F, 0.4F);
       this.aP = 4;

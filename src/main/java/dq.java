@@ -9,10 +9,13 @@ import java.net.URL;
 
 class dq extends Thread {
 
-   dq(fo var1, ad var2) {
+   private fo b;
+   private ad a;
+
+dq(fo var1, ad var2) {
+	   super();
       this.b = var1;
       this.a = var2;
-      super();
    }
 
    public void run() {

@@ -21,10 +21,12 @@ class aj {
    private int l;
    private int m;
 
+   private ic a;
+
 
    public aj(ic var1, int var2, int var3) {
+	   super();
       this.a = var1;
-      super();
       this.b = new ArrayList();
       this.f = new short[10];
       this.g = 0;

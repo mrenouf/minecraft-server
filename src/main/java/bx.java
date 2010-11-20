@@ -148,11 +148,11 @@ public class bx implements bt {
                            }
 
                            if(var9) {
-                              var13 = (byte)fy.bc.bh;
+                              var13 = (byte)fy.bc_.bh;
                            }
 
                            if(var9) {
-                              var14 = (byte)fy.bc.bh;
+                              var14 = (byte)fy.bc_.bh;
                            }
                         }
 
@@ -341,7 +341,7 @@ public class bx implements bt {
          var8 = var4 + this.h.nextInt(16) + 8;
          var9 = this.h.nextInt(128);
          var10 = var5 + this.h.nextInt(16) + 8;
-         (new do()).a(this.n, this.h, var8, var9, var10);
+         (new do_()).a(this.n, this.h, var8, var9, var10);
       }
 
       if(this.h.nextInt(1) == 0) {

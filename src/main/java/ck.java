@@ -118,7 +118,7 @@ public class ck extends gw {
    }
 
    public boolean d(em var1, int var2, int var3, int var4, int var5) {
-      return var5 == 0?this.b(var1, var2, var3, var4, var5):false;
+      return var5 == 0?this.b((iq)var1, var2, var3, var4, var5):false;
    }
 
    public int a(int var1, Random var2) {

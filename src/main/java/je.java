@@ -4,7 +4,7 @@
 // Home page:           http://www.reversed-java.com
 
 import java.util.logging.Logger;
-import net.minecraft.server.MinecraftServer;
+
 
 public class je extends ey implements eu {
 

@@ -8,9 +8,11 @@ import java.awt.event.ActionListener;
 
 class jw implements ActionListener {
 
-   jw(iy var1) {
+   private iy a;
+
+jw(iy var1) {
+	   super();
       this.a = var1;
-      super();
    }
 
    public void actionPerformed(ActionEvent var1) {

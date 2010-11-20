@@ -105,7 +105,7 @@ public class gb extends jv implements en {
    }
 
    public void b(fv var1) {
-      if(this.c > 1 && this.g(var1) && (double)this.a(var1) < 0.6D * (double)this.c && var1.a(this, this.c)) {
+      if(this.c > 1 && this.g(var1) && (double)this.a((dw)var1) < 0.6D * (double)this.c && var1.a(this, this.c)) {
          this.l.a(this, "mob.slimeattack", 1.0F, (this.V.nextFloat() - this.V.nextFloat()) * 0.2F + 1.0F);
       }
 

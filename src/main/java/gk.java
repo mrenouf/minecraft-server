@@ -5,6 +5,7 @@
 
 import java.io.DataInput;
 import java.io.DataOutput;
+import java.io.IOException;
 
 public class gk extends hc {
 
@@ -18,12 +19,12 @@ public class gk extends hc {
       this.a = var1;
    }
 
-   void a(DataOutput var1) {
+   void a(DataOutput var1) throws IOException {
       var1.writeInt(this.a.length);
       var1.write(this.a);
    }
 
-   void a(DataInput var1) {
+   void a(DataInput var1) throws IOException {
       int var2 = var1.readInt();
       this.a = new byte[var2];
       var1.readFully(this.a);

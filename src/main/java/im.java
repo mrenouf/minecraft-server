@@ -6,9 +6,11 @@
 
 class im extends Thread {
 
-   im(bh var1, String var2) {
+   private bh a;
+
+im(bh var1, String var2) {
+	   super(var2);
       this.a = var1;
-      super(var2);
    }
 
    public void run() {

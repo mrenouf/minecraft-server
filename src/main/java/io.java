@@ -42,7 +42,7 @@ public abstract class io {
       return ((Integer)b.get(this.getClass())).intValue();
    }
 
-   public static io b(DataInputStream var0) {
+   public static io b(DataInputStream var0) throws IOException {
       int var1 = var0.read();
       if(var1 == -1) {
          return null;
@@ -57,14 +57,14 @@ public abstract class io {
       }
    }
 
-   public static void a(io var0, DataOutputStream var1) {
+   public static void a(io var0, DataOutputStream var1) throws IOException {
       var1.write(var0.b());
       var0.a(var1);
    }
 
-   public abstract void a(DataInputStream var1);
+   public abstract void a(DataInputStream var1) throws IOException;
 
-   public abstract void a(DataOutputStream var1);
+   public abstract void a(DataOutputStream var1) throws IOException;
 
    public abstract void a(ey var1);
 

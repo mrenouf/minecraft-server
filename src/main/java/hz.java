@@ -5,6 +5,7 @@
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
+import java.io.IOException;
 
 public class hz extends io {
 
@@ -15,7 +16,7 @@ public class hz extends io {
    public int e;
 
 
-   public void a(DataInputStream var1) {
+   public void a(DataInputStream var1) throws IOException {
       this.e = var1.read();
       this.a = var1.readInt();
       this.b = var1.read();
@@ -23,7 +24,7 @@ public class hz extends io {
       this.d = var1.read();
    }
 
-   public void a(DataOutputStream var1) {
+   public void a(DataOutputStream var1) throws IOException {
       var1.write(this.e);
       var1.writeInt(this.a);
       var1.write(this.b);

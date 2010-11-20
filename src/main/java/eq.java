@@ -3,7 +3,7 @@
 // Copyright:           2008-2009, Stiver
 // Home page:           http://www.reversed-java.com
 
-import net.minecraft.server.MinecraftServer;
+
 
 public class eq implements bl {
 

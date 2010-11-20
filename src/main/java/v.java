@@ -5,6 +5,7 @@
 
 import java.io.DataInput;
 import java.io.DataOutput;
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
@@ -14,7 +15,7 @@ public class v extends hc {
    private Map a = new HashMap();
 
 
-   void a(DataOutput var1) {
+   void a(DataOutput var1) throws IOException {
       Iterator var2 = this.a.values().iterator();
 
       while(var2.hasNext()) {
@@ -25,7 +26,7 @@ public class v extends hc {
       var1.writeByte(0);
    }
 
-   void a(DataInput var1) {
+   void a(DataInput var1) throws IOException {
       this.a.clear();
 
       hc var2;

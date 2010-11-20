@@ -14,11 +14,12 @@ class gx {
    private int e;
    private int f;
    private List g;
+private ba a;
 
 
    public gx(ba var1, em var2, int var3, int var4, int var5) {
+	   super();
       this.a = var1;
-      super();
       this.g = new ArrayList();
       this.b = var2;
       this.c = var3;
@@ -321,4 +322,8 @@ class gx {
       }
 
    }
+
+public static int a(gx var1) {
+	return var1.c;
+}
 }

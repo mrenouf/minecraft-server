@@ -6,13 +6,15 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import net.minecraft.server.MinecraftServer;
+
 
 public class by extends Thread {
 
-   public by(MinecraftServer var1) {
+   private MinecraftServer a;
+
+public by(MinecraftServer var1) {
+	   super();
       this.a = var1;
-      super();
    }
 
    public void run() {

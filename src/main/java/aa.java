@@ -8,9 +8,11 @@ import java.awt.event.FocusEvent;
 
 class aa extends FocusAdapter {
 
-   aa(gi var1) {
+   private gi a;
+
+aa(gi var1) {
+	   super();
       this.a = var1;
-      super();
    }
 
    public void focusGained(FocusEvent var1) {

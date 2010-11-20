@@ -5,20 +5,23 @@
 
 import java.io.IOException;
 import java.net.Socket;
-import net.minecraft.server.MinecraftServer;
+
 
 class dg extends Thread {
 
-   dg(dp var1, String var2, MinecraftServer var3) {
+   private dp b;
+private MinecraftServer a;
+
+dg(dp var1, String var2, MinecraftServer var3) {
+	   super(var2);
       this.b = var1;
       this.a = var3;
-      super(var2);
    }
 
    public void run() {
       while(this.b.b) {
          try {
-            Socket var1 = dp.a(this.b).accept();
+        	 Socket var1 = dp.a(this.b).accept();
             if(var1 != null) {
                fo var2 = new fo(this.a, var1, "Connection #" + dp.b(this.b));
                dp.a(this.b, var2);

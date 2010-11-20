@@ -587,7 +587,7 @@ public class jj extends dw implements jz {
             var1.e(this);
          }
       } else if(this.d == 1) {
-         var1.a(this);
+         var1.a((jz)this);
       } else if(this.d == 2) {
          hj var2 = var1.ak.b();
          if(var2 != null && var2.c == fs.k.aW) {

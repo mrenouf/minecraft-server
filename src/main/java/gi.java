@@ -16,7 +16,7 @@ import javax.swing.JTextField;
 import javax.swing.UIManager;
 import javax.swing.border.EtchedBorder;
 import javax.swing.border.TitledBorder;
-import net.minecraft.server.MinecraftServer;
+
 
 public class gi extends JComponent implements eu {
 
@@ -91,5 +91,9 @@ public class gi extends JComponent implements eu {
    public String c() {
       return "CONSOLE";
    }
+
+public static MinecraftServer a(gi var1) {
+	return var1.b;
+}
 
 }

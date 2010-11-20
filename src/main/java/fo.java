@@ -3,10 +3,11 @@
 // Copyright:           2008-2009, Stiver
 // Home page:           http://www.reversed-java.com
 
+import java.io.IOException;
 import java.net.Socket;
 import java.util.Random;
 import java.util.logging.Logger;
-import net.minecraft.server.MinecraftServer;
+
 
 public class fo extends ey {
 
@@ -21,7 +22,7 @@ public class fo extends ey {
    private String i = "";
 
 
-   public fo(MinecraftServer var1, Socket var2, String var3) {
+   public fo(MinecraftServer var1, Socket var2, String var3) throws IOException {
       this.e = var1;
       this.b = new bh(var2, var3, this);
    }
@@ -100,5 +101,15 @@ public class fo extends ey {
    public String b() {
       return this.g != null?this.g + " [" + this.b.b().toString() + "]":this.b.b().toString();
    }
+
+public static String a(fo var1) {
+	return var1.i;
+}
+
+public static ad a(fo var1, ad var2) {
+	var1.h = var2;
+	return var2;
+	
+}
 
 }

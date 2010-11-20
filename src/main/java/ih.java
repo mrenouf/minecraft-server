@@ -5,6 +5,7 @@
 
 import java.io.DataInput;
 import java.io.DataOutput;
+import java.io.IOException;
 
 public class ih extends hc {
 
@@ -21,11 +22,11 @@ public class ih extends hc {
       }
    }
 
-   void a(DataOutput var1) {
+   void a(DataOutput var1) throws IOException {
       var1.writeUTF(this.a);
    }
 
-   void a(DataInput var1) {
+   void a(DataInput var1) throws IOException {
       this.a = var1.readUTF();
    }
 

@@ -111,7 +111,7 @@ public class fy {
    public static final fy aZ = (new ia(85, 4)).c(2.0F).b(5.0F).a(e);
    public static final fy ba = (new ek(86, 102, false)).c(1.0F).a(e);
    public static final fy bb = (new jf(87, 103)).c(0.4F).a(h);
-   public static final fy bc = (new ac(88, 104)).c(0.5F).a(l);
+   public static final fy bc_ = (new ac(88, 104)).c(0.5F).a(l);
    public static final fy bd = (new kd(89, 105, jt.o)).c(0.3F).a(j).a(1.0F);
    public static final ai be = (ai)((ai)(new ai(90, 14)).c(-1.0F).a(j).a(0.75F));
    public static final fy bf = (new ek(91, 102, true)).c(1.0F).a(e).a(1.0F);

@@ -150,4 +150,8 @@ public class ib {
       }
 
    }
+
+public static int f(int var1) {
+	return g(var1);
+}
 }

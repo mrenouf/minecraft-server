@@ -6,9 +6,11 @@
 
 class il extends Thread {
 
-   il(bh var1) {
-      this.a = var1;
+   private bh a;
+
+il(bh var1) {
       super();
+      this.a = var1;
    }
 
    public void run() {

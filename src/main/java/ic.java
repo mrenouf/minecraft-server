@@ -5,7 +5,7 @@
 
 import java.util.ArrayList;
 import java.util.List;
-import net.minecraft.server.MinecraftServer;
+
 
 public class ic {
 
@@ -133,4 +133,17 @@ public class ic {
    public int b() {
       return 144;
    }
+
+public static MinecraftServer a(ic var1) {
+	return var1.d;
+}
+
+public static fb b(ic var1) {
+
+	return var1.b;
+}
+
+public static List c(ic var1) {
+	return var1.c;
+}
 }

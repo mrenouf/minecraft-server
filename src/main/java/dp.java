@@ -3,12 +3,13 @@
 // Copyright:           2008-2009, Stiver
 // Home page:           http://www.reversed-java.com
 
+import java.io.IOException;
 import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import net.minecraft.server.MinecraftServer;
+
 
 public class dp {
 
@@ -22,7 +23,7 @@ public class dp {
    public MinecraftServer c;
 
 
-   public dp(MinecraftServer var1, InetAddress var2, int var3) {
+   public dp(MinecraftServer var1, InetAddress var2, int var3) throws IOException {
       this.c = var1;
       this.d = new ServerSocket(var3, 0, var2);
       this.d.setPerformancePreferences(0, 2, 1);
@@ -76,5 +77,18 @@ public class dp {
       }
 
    }
+
+public static void a(dp var1, fo var2) {
+	var1.a(var2);
+}
+
+public static ServerSocket a(dp var1) {
+	return var1.d;
+}
+
+public static int b(dp var1) {
+	var1.f++;
+	return var1.f;
+}
 
 }

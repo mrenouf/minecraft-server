@@ -33,7 +33,7 @@ public class ij {
       this.p = (byte)fy.v.bh;
       this.q = 5169201;
       this.r = new Class[]{bu.class, gg.class, ez.class, fk.class};
-      this.s = new Class[]{ct.class, hp.class, if.class, be.class};
+      this.s = new Class[]{ct.class, hp.class, if_.class, be.class};
    }
 
    public static void a() {

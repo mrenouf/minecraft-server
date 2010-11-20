@@ -3,13 +3,15 @@
 // Copyright:           2008-2009, Stiver
 // Home page:           http://www.reversed-java.com
 
-import net.minecraft.server.MinecraftServer;
+
 
 public class ca extends Thread {
 
-   public ca(MinecraftServer var1) {
+   private MinecraftServer a;
+
+public ca(MinecraftServer var1) {
+	   super();
       this.a = var1;
-      super();
       this.setDaemon(true);
       this.start();
    }

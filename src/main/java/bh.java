@@ -5,6 +5,7 @@
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
+import java.io.IOException;
 import java.net.Socket;
 import java.net.SocketAddress;
 import java.util.Collections;
@@ -35,7 +36,7 @@ public class bh {
    private int t = 0;
 
 
-   public bh(Socket var1, String var2, ey var3) {
+   public bh(Socket var1, String var2, ey var3) throws IOException {
       this.e = var1;
       this.l = var3;
       var1.setTrafficClass(24);
@@ -195,5 +196,31 @@ public class bh {
    public int d() {
       return this.k.size();
    }
+
+public static boolean a(bh var1) {
+	return var1.h;
+}
+
+public static Thread f(bh var1) {
+	return var1.n;
+}
+
+public static boolean b(bh var1) {
+	return var1.m;
+}
+
+public static void c(bh var1) {
+	var1.f();
+	
+}
+
+public static void d(bh var1) {
+	var1.e();
+	
+}
+
+public static Thread e(bh var1) {
+	return var1.o;
+}
 
 }
